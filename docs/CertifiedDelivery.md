@@ -1,0 +1,51 @@
+# CertifiedDelivery
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**access_code** | **str** | If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account’s access code format setting.  If blank, but the signer &#x60;accessCode&#x60; property is set in the envelope, then that value is used.  If blank and the signer &#x60;accessCode&#x60; property is not set, then the access code is not required. | [optional] 
+**add_access_code_to_email** | **str** | This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient. | [optional] 
+**client_user_id** | **str** | Specifies whether the recipient is embedded or remote.   If the &#x60;clientUserId&#x60; property is not null then the recipient is embedded. Note that if the &#x60;ClientUserId&#x60; property is set and either &#x60;SignerMustHaveAccount&#x60; or &#x60;SignerMustLoginToSign&#x60; property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters.  | [optional] 
+**custom_fields** | **list[str]** | An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters. | [optional] 
+**declined_date_time** | **str** | The date and time the recipient declined the document. | [optional] 
+**declined_reason** | **str** | The reason the recipient declined the document. | [optional] 
+**delivered_date_time** | **str** | Reserved: For DocuSign use only. | [optional] 
+**delivery_method** | **str** | Reserved: For DocuSign use only. | [optional] 
+**document_visibility** | [**list[DocumentVisibility]**](DocumentVisibility.md) |  | [optional] 
+**email** | **str** |  | [optional] 
+**email_notification** | [**RecipientEmailNotification**](RecipientEmailNotification.md) |  | [optional] 
+**email_recipient_post_signing_url** | **str** |  | [optional] 
+**embedded_recipient_start_url** | **str** | Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender’s system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to &#x60;SIGN_AT_DOCUSIGN&#x60;, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient’s identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets &#x60;EmbeddedRecipientStartURL&#x3D;SIGN_AT_DOCUSIGN&#x60;, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the &#x60;clientUserId&#x60; property is NOT set, and the &#x60;embeddedRecipientStartURL&#x60; is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The &#x60;customFields&#x60; property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   &#x60;http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&amp;[[mergeField3]]&#x60;  | [optional] 
+**error_details** | [**ErrorDetails**](ErrorDetails.md) |  | [optional] 
+**excluded_documents** | **list[str]** | Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the &#x60;enforceSignerVisibility&#x60; property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent. | [optional] 
+**fax_number** | **str** | Reserved: | [optional] 
+**id_check_configuration_name** | **str** | Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as &#39;ID Check $&#39; and &#39;SMS Auth $&#39;. To use ID check in an envelope, the idCheckConfigurationName should be &#39;ID Check &#39;. If you wanted to use SMS, it would be &#39;SMS Auth $&#39; and you would need to add you would need to add phone number information to the &#x60;smsAuthentication&#x60; node. | [optional] 
+**id_check_information_input** | [**IdCheckInformationInput**](IdCheckInformationInput.md) |  | [optional] 
+**inherit_email_notification_configuration** | **str** | When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient&#39;s account.  | [optional] 
+**name** | **str** |  | [optional] 
+**note** | **str** | Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters. | [optional] 
+**phone_authentication** | [**RecipientPhoneAuthentication**](RecipientPhoneAuthentication.md) |  | [optional] 
+**recipient_attachments** | [**list[RecipientAttachment]**](RecipientAttachment.md) | Reserved: | [optional] 
+**recipient_authentication_status** | [**AuthenticationStatus**](AuthenticationStatus.md) |  | [optional] 
+**recipient_id** | **str** | Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document. | [optional] 
+**recipient_id_guid** | **str** |  | [optional] 
+**require_id_lookup** | **str** | When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity.  | [optional] 
+**role_name** | **str** | Optional element. Specifies the role name associated with the recipient.&lt;br/&gt;&lt;br/&gt;This is required when working with template recipients. | [optional] 
+**routing_order** | **str** | Specifies the routing order of the recipient in the envelope.  | [optional] 
+**saml_authentication** | [**RecipientSAMLAuthentication**](RecipientSAMLAuthentication.md) |  | [optional] 
+**sent_date_time** | **str** | The date and time the envelope was sent. | [optional] 
+**signed_date_time** | **str** | Reserved: For DocuSign use only.  | [optional] 
+**signing_group_id** | **str** | When set to **true** and the feature is enabled in the sender&#39;s account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once). | [optional] 
+**signing_group_name** | **str** | The display name for the signing group.   Maximum Length: 100 characters.  | [optional] 
+**signing_group_users** | [**list[UserInfo]**](UserInfo.md) | A complex type that contains information about users in the signing group. | [optional] 
+**sms_authentication** | [**RecipientSMSAuthentication**](RecipientSMSAuthentication.md) |  | [optional] 
+**social_authentications** | [**list[SocialAuthentication]**](SocialAuthentication.md) |  Lists the social ID type that can be used for recipient authentication. | [optional] 
+**status** | **str** | Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later. | [optional] 
+**template_locked** | **str** | When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients.  | [optional] 
+**template_required** | **str** | When set to **true**, the sender may not remove the recipient. Used only when working with template recipients. | [optional] 
+**total_tab_count** | **str** |  | [optional] 
+**user_id** | **str** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

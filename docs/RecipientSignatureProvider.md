@@ -1,0 +1,11 @@
+# RecipientSignatureProvider
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**signature_provider_name** | **str** |  | [optional] 
+**signature_provider_options** | [**RecipientSignatureProviderOptions**](RecipientSignatureProviderOptions.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
