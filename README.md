@@ -13,7 +13,7 @@ You can sign up for a free [developer sandbox](https://www.docusign.com/develope
 Requirements
 ============
 
-Python 2.7 or 3.4+.
+Python 2.7.
 
 Installation
 ============
