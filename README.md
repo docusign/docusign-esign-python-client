@@ -1,7 +1,7 @@
-# The Official DocuSign Python Client 
+# The Official DocuSign Python Client [BETA]
 
 [![PyPI version][pypi-image]][pypi-url]
-[![PyPI downloads][downloads-image]][downloads-url]
+<!---[![PyPI downloads][downloads-image]][downloads-url]--->
 [![Build status][travis-image]][travis-url]
 
 [PyPI module](https://pypi.python.org/pypi/docusign_esign) that wraps the <a href="https://www.docusign.com">DocuSign</a> API
