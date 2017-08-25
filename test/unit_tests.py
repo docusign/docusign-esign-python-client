@@ -75,7 +75,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # add a document to the envelope
         doc = docusign.Document()
-        base64_doc = base64.b64encode(file_contents)
+        base64_doc = base64.b64encode(file_contents).decode("utf-8")
         doc.document_base64 = base64_doc
         doc.name = 'TestFile.pdf'
         doc.document_id = '1'
@@ -192,7 +192,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # add a document to the envelope
         doc = docusign.Document()
-        base64_doc = base64.b64encode(file_contents)
+        base64_doc = base64.b64encode(file_contents).decode("utf-8")
         doc.document_base64 = base64_doc
         doc.name = 'TestFile.pdf'
         doc.document_id = '1'
@@ -283,8 +283,9 @@ class SdkUnitTests(unittest.TestCase):
 
         # add a document to the template
         doc = docusign.Document()
-        base64_doc = base64.b64encode(file_contents)
+        base64_doc = base64.b64encode(file_contents).decode("utf-8")
         doc.document_base64 = base64_doc
+        pprint(doc.document_base64)
         doc.name = 'TestFile.pdf'
         doc.document_id = '1'
         envelope_template.documents = [doc]
@@ -351,7 +352,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # add a document to the envelope
         doc = docusign.Document()
-        base64_doc = base64.b64encode(file_contents)
+        base64_doc = base64.b64encode(file_contents).decode("utf-8")
         doc.document_base64 = base64_doc
         doc.name = 'TestFile.pdf'
         doc.document_id = '1'
@@ -452,7 +453,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # add a document to the envelope
         doc = docusign.Document()
-        base64_doc = base64.b64encode(file_contents)
+        base64_doc = base64.b64encode(file_contents).decode("utf-8")
         doc.document_base64 = base64_doc
         doc.name = 'TestFile.pdf'
         doc.document_id = '1'
@@ -530,7 +531,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # add a document to the envelope
         doc = docusign.Document()
-        base64_doc = base64.b64encode(file_contents)
+        base64_doc = base64.b64encode(file_contents).decode("utf-8")
         doc.document_base64 = base64_doc
         doc.name = 'TestFile.pdf'
         doc.document_id = '1'
