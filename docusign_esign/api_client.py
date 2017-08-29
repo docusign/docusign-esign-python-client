@@ -105,7 +105,7 @@ class ApiClient(object):
         file = open(private_key_filename, 'rb')
         token = jwt.JWT(header={"alg": "RS256"},
                         claims={"iss": client_id, "sub": user_id, "aud": oauth_base_path, "iat": now, "exp": later, "scope": "signature"})
-        priv_key = jwk.JWK.from_pem(file.read().encode())
+        priv_key = jwk.JWK.from_pem(file.read())
         token.make_signed_token(priv_key)
         assertion = token.serialize()
 
