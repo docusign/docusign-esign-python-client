@@ -17,8 +17,10 @@ import json
 import mimetypes
 import tempfile
 import threading
+import math
 
 from datetime import date, datetime
+from time import time
 
 # python 2 and python 3 compatibility library
 from six import PY3, integer_types, iteritems, text_type
@@ -27,6 +29,8 @@ from six.moves.urllib.parse import quote
 from . import models
 from .configuration import Configuration
 from .rest import ApiException, RESTClientObject
+
+from jwcrypto import jwt, jwk
 
 
 class ApiClient(object):
@@ -91,6 +95,27 @@ class ApiClient(object):
 
     def set_default_header(self, header_name, header_value):
         self.default_headers[header_name] = header_value
+
+    def get_jwt_uri(self, client_id, redirect_uri, oauth_base_path):
+        return "https://" + oauth_base_path + "/oauth/auth" + "?" + "response_type=code&" + "client_id=" + quote(client_id, safe="") + "&" + "scope=" + quote("signature+impersonation", safe="") + "&" + "redirect_uri=" + quote(redirect_uri, safe="")
+
+    def configure_jwt_authorization_flow(self, private_key_filename, oauth_base_path, client_id, user_id, expires_in):
+        now = math.floor(time())
+        later = now + (expires_in * 1000)
+        file = open(private_key_filename, 'rb')
+        token = jwt.JWT(header={"alg": "RS256"},
+                        claims={"iss": client_id, "sub": user_id, "aud": oauth_base_path, "iat": now, "exp": later, "scope": "signature"})
+        priv_key = jwk.JWK.from_pem(file.read())
+        token.make_signed_token(priv_key)
+        assertion = token.serialize()
+
+        # perform request and return response
+        response = self.request("POST", "https://" + oauth_base_path + "/oauth/token",
+                                headers=self.sanitize_for_serialization({"Content-Type": "application/x-www-form-urlencoded"}),
+                                post_params=self.sanitize_for_serialization({"assertion": assertion, "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer"}))
+        response_data = json.loads(response.data.decode('utf-8'))
+        if 'token_type' in response_data and 'access_token' in response_data:
+            self.set_default_header("Authorization", response_data['token_type'] + " " + response_data['access_token'])
 
     def __call_api(self, resource_path, method,
                    path_params=None, query_params=None, header_params=None,
