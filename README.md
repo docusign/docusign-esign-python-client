@@ -33,6 +33,7 @@ This client has the following external dependencies:
 * python_dateutil >= 2.5.3
 * setuptools >= 21.0.0
 * urllib3 >= 1.15.1
+* jwcrypto >= 0.4.2
 
 Usage
 =====
@@ -44,20 +45,36 @@ Run this script using python command
 from __future__ import absolute_import, print_function
 from pprint import pprint
 import unittest
+import webbrowser
 
 import docusign_esign as docusign
 from docusign_esign import AuthenticationApi, TemplatesApi
 from docusign_esign.rest import ApiException
 
-Username = "[USERNAME]"
-Password = "[PASSWORD]"
-IntegratorKey = "[INTEGRATOR_KEY]"
-BaseUrl = "https://demo.docusign.net/restapi"
-TemplateId = "[TEMPLATE_ID]"
+user_name = "[USERNAME]"
+integrator_key = "[INTEGRATOR_KEY]"
+base_url = "https://demo.docusign.net/restapi"
+oauth_base_url = "account-d.docusign.com" # use account.docusign.com for Live/Production
+redirect_uri = "https://www.docusign.com/api"
+private_key_filename = "keys/docusign_private_key.txt"
+user_id = "[USER_ID]"
+template_id = "[TEMPLATE_ID]"
 
-creds = '{' + '\"Username\": \"{Username}\", \"Password\": \"{Password}\", \"IntegratorKey\": \"{IntegratorKey}\"'.format(Username=Username, Password=Password, IntegratorKey=IntegratorKey) + '}'
-api_client = docusign.ApiClient(BaseUrl)
-api_client.set_default_header('X-DocuSign-Authentication', creds)
+api_client = docusign.ApiClient(base_url)
+
+# IMPORTANT NOTE:
+# the first time you ask for a JWT access token, you should grant access by making the following call
+# get DocuSign OAuth authorization url:
+oauth_login_url = api_client.get_jwt_uri(integrator_key, redirect_uri, oauth_base_url)
+# open DocuSign OAuth authorization url in the browser, login and grant access
+# webbrowser.open_new_tab(oauth_login_url)
+print(oauth_login_url)
+
+# END OF NOTE
+
+# configure the ApiClient to asynchronously get an access to token and store it
+api_client.configure_jwt_authorization_flow(private_key_filename, oauth_base_url, integrator_key, user_id, 3600)
+
 docusign.configuration.api_client = api_client
 
 template_role_name = 'Needs to sign'
@@ -68,13 +85,13 @@ envelope_definition.email_subject = 'Please Sign my Python SDK Envelope'
 envelope_definition.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
 
 # assign template information including ID and role(s)
-envelope_definition.template_id = TemplateId
+envelope_definition.template_id = template_id
 
-# create a template role with a valid templateId and roleName and assign signer info
+# create a template role with a valid template_id and role_name and assign signer info
 t_role = docusign.TemplateRole()
 t_role.role_name = template_role_name
 t_role.name ='Pat Developer'
-t_role.email = Username
+t_role.email = user_name
 
 # create a list of template roles and add our newly created role
 # assign template role(s) to the envelope

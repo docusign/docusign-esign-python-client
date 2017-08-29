@@ -16,26 +16,42 @@ import base64
 import subprocess
 from pprint import pprint
 import unittest
+import webbrowser
 
 import docusign_esign as docusign
 from docusign_esign import AuthenticationApi, EnvelopesApi, TemplatesApi, DiagnosticsApi
 from docusign_esign.rest import ApiException
 
-Username = "node_sdk@mailinator.com"
-Password = "{PASSWORD}"
-IntegratorKey = "ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df"
-BaseUrl = "https://demo.docusign.net/restapi"
+username = "node_sdk@mailinator.com"
+password = "{PASSWORD}"
+integrator_key = "ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df"
+base_url = "https://demo.docusign.net/restapi"
 
-SignTest1File = "test/docs/SignTest1.pdf"
-TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419"
-EnvelopeId = "df3242e8-9b24-4c3f-861f-125d99957384"
+sign_test1_file = "test/docs/SignTest1.pdf"
+template_id = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419"
+envelope_id = "0e14d320-45e0-4104-9a97-03c48134541a"
+user_id = "fcc5726c-xxxx-xxxx-xxxx-40bbbe6ca126"
+oauth_base_url = "account-d.docusign.com" # use account.docusign.com for Live/Production
+redirect_uri = "https://www.docusign.com/api"
+private_key_filename = "test/keys/docusign_private_key.txt"
 
 
 class SdkUnitTests(unittest.TestCase):
     def setUp(self):
-        creds = '{' + '\"Username\": \"{Username}\", \"Password\": \"{Password}\", \"IntegratorKey\": \"{IntegratorKey}\"'.format(Username=Username, Password=Password, IntegratorKey=IntegratorKey) + '}'
-        self.api_client = docusign.ApiClient(BaseUrl)
-        self.api_client.set_default_header('X-DocuSign-Authentication', creds)
+        self.api_client = docusign.ApiClient(base_url)
+
+        # IMPORTANT NOTE:
+        # the first time you ask for a JWT access token, you should grant access by making the following call
+        # get DocuSign OAuth authorization url:
+        oauth_login_url = self.api_client.get_jwt_uri(integrator_key, redirect_uri, oauth_base_url)
+        # open DocuSign OAuth authorization url in the browser, login and grant access
+        # webbrowser.open_new_tab(oauth_login_url)
+        print(oauth_login_url)
+        # END OF NOTE
+
+        # configure the ApiClient to asynchronously get an access to token and store it
+        self.api_client.configure_jwt_authorization_flow(private_key_filename, oauth_base_url, integrator_key, user_id, 3600)
+
         docusign.configuration.api_client = self.api_client
 
     def tearDown(self):
@@ -66,7 +82,7 @@ class SdkUnitTests(unittest.TestCase):
             assert e is None # make the test case fail in case of an API exception
 
     def testRequestASignature(self):
-        file_contents = open(SignTest1File, 'rb').read()
+        file_contents = open(sign_test1_file, 'rb').read()
 
         # create an envelope to be signed
         envelope_definition = docusign.EnvelopeDefinition()
@@ -83,7 +99,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # Add a recipient to sign the document
         signer = docusign.Signer()
-        signer.email = Username
+        signer.email = username
         signer.name = 'Pat Developer'
         signer.recipient_id = '1'
 
@@ -141,13 +157,13 @@ class SdkUnitTests(unittest.TestCase):
         envelope_definition.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
 
         # assign template information including ID and role(s)
-        envelope_definition.template_id = TemplateId
+        envelope_definition.template_id = template_id
 
         # create a template role with a valid templateId and roleName and assign signer info
         t_role = docusign.TemplateRole()
         t_role.role_name = template_role_name
         t_role.name ='Pat Developer'
-        t_role.email = Username
+        t_role.email = username
 
         # create a list of template roles and add our newly created role
         # assign template role(s) to the envelope
@@ -183,7 +199,7 @@ class SdkUnitTests(unittest.TestCase):
             assert e is None # make the test case fail in case of an API exception
 
     def testEmbeddedSigning(self):
-        file_contents = open(SignTest1File, 'rb').read()
+        file_contents = open(sign_test1_file, 'rb').read()
 
         # create an envelope to be signed
         envelope_definition = docusign.EnvelopeDefinition()
@@ -200,7 +216,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # Add a recipient to sign the document
         signer = docusign.Signer()
-        signer.email = Username
+        signer.email = username
         signer.name = 'Pat Developer'
         signer.recipient_id = '1'
 
@@ -256,7 +272,7 @@ class SdkUnitTests(unittest.TestCase):
             recipient_view_request.client_user_id = client_user_id
             recipient_view_request.authentication_method = 'email'
             recipient_view_request.user_name = 'Pat Developer'
-            recipient_view_request.email = Username
+            recipient_view_request.email = username
 
             view_url = envelopes_api.create_recipient_view(login_accounts[0].account_id, envelope_summary.envelope_id, recipient_view_request=recipient_view_request)
 
@@ -273,7 +289,7 @@ class SdkUnitTests(unittest.TestCase):
 
 
     def testCreateTemplate(self):
-        file_contents = open(SignTest1File, 'rb').read()
+        file_contents = open(sign_test1_file, 'rb').read()
 
         # create an envelope to be signed
 
@@ -291,7 +307,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # Add a recipient to sign the document
         signer = docusign.Signer()
-        signer.email = Username
+        signer.email = username
         signer.name = 'Pat Developer'
         signer.recipient_id = '1'
 
@@ -342,7 +358,7 @@ class SdkUnitTests(unittest.TestCase):
             assert e is None # make the test case fail in case of an API exception
 
     def testDownLoadEnvelopeDocuments(self):
-        file_contents = open(SignTest1File, 'rb').read()
+        file_contents = open(sign_test1_file, 'rb').read()
 
         # create an envelope to be signed
         envelope_definition = docusign.EnvelopeDefinition()
@@ -359,7 +375,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # Add a recipient to sign the document
         signer = docusign.Signer()
-        signer.email = Username
+        signer.email = username
         signer.name = 'Pat Developer'
         signer.recipient_id = '1'
 
@@ -431,9 +447,9 @@ class SdkUnitTests(unittest.TestCase):
             self.api_client.host = base_url
             docusign.configuration.api_client = self.api_client
 
-            docs_list = envelopes_api.list_documents(login_accounts[0].account_id, EnvelopeId)
+            docs_list = envelopes_api.list_documents(login_accounts[0].account_id, envelope_id)
             assert docs_list is not None
-            assert (docs_list.envelope_id == EnvelopeId)
+            assert (docs_list.envelope_id == envelope_id)
 
             print("EnvelopeDocumentsResult: ", end="")
             pprint(docs_list)
@@ -443,7 +459,7 @@ class SdkUnitTests(unittest.TestCase):
             assert e is None  # make the test case fail in case of an API exception
 
     def testResendEnvelope(self):
-        file_contents = open(SignTest1File, 'rb').read()
+        file_contents = open(sign_test1_file, 'rb').read()
 
         # create an envelope to be signed
         envelope_definition = docusign.EnvelopeDefinition()
@@ -460,7 +476,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # Add a recipient to sign the document
         signer = docusign.Signer()
-        signer.email = Username
+        signer.email = username
         signer.name = 'Pat Developer'
         signer.recipient_id = '1'
 
@@ -521,7 +537,7 @@ class SdkUnitTests(unittest.TestCase):
             assert e is None # make the test case fail in case of an API exception
 
     def testGetDiagnosticLogs(self):
-        file_contents = open(SignTest1File, 'rb').read()
+        file_contents = open(sign_test1_file, 'rb').read()
 
         # create an envelope to be signed
         envelope_definition = docusign.EnvelopeDefinition()
@@ -538,7 +554,7 @@ class SdkUnitTests(unittest.TestCase):
 
         # Add a recipient to sign the document
         signer = docusign.Signer()
-        signer.email = Username
+        signer.email = username
         signer.name = 'Pat Developer'
         signer.recipient_id = '1'
 
