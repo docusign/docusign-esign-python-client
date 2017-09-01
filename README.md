@@ -1,4 +1,4 @@
-# The Official DocuSign Python Client [BETA]
+# The Official DocuSign Python Client
 
 [![PyPI version][pypi-image]][pypi-url]
 <!---[![PyPI downloads][downloads-image]][downloads-url]--->

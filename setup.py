@@ -23,7 +23,7 @@ VERSION = "1.0.0"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "jwcrypto >= 0.4.2"]
+REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "jwcrypto >= 0.4.2", "py-oauth2>=0.0.10"]
 
 setup(
     name=NAME,

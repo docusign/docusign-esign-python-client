@@ -25,7 +25,7 @@ from docusign_esign.rest import ApiException
 username = "node_sdk@mailinator.com"
 password = "{PASSWORD}"
 integrator_key = "ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df"
-base_url = "https://demo.docusign.net/restapi"
+BASE_URL = "https://demo.docusign.net/restapi"
 
 sign_test1_file = "test/docs/SignTest1.pdf"
 template_id = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419"
@@ -35,10 +35,12 @@ oauth_base_url = "account-d.docusign.com" # use account.docusign.com for Live/Pr
 redirect_uri = "https://www.docusign.com/api"
 private_key_filename = "test/keys/docusign_private_key.txt"
 
+client_secret = "b4dccdbe-xxxx-xxxx-xxxx-b2f0f7448f8f"
+
 
 class SdkUnitTests(unittest.TestCase):
     def setUp(self):
-        self.api_client = docusign.ApiClient(base_url)
+        self.api_client = docusign.ApiClient(BASE_URL)
 
         # IMPORTANT NOTE:
         # the first time you ask for a JWT access token, you should grant access by making the following call
@@ -80,6 +82,49 @@ class SdkUnitTests(unittest.TestCase):
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None # make the test case fail in case of an API exception
+
+    def testOAuthLogin(self):
+        # create a separate api client for this test case
+        api_client = docusign.ApiClient(BASE_URL)
+        # make sure to pass the redirect uri
+        api_client.configure_authorization_flow(integrator_key, client_secret, redirect_uri)
+
+        # get DocuSign OAuth authorization url
+        oauth_login_url = api_client.get_authorization_uri()
+        # open DocuSign OAuth login in the browser
+        print(oauth_login_url)
+        # webbrowser.open_new_tab(oauth_login_url)
+
+        # IMPORTANT NOTE: after the login, DocuSign will send back a fresh authorization code as a query param of the redirect URI.
+        # You should set up a route that handles the redirect call to get that code and pass it to token endpoint as shown in the next lines:
+
+        '''
+        code = raw_input("Enter the authorization code here:")
+        api_client.authenticate_with_code(code)
+
+        auth_api = AuthenticationApi(api_client)
+
+        try:
+            login_info = auth_api.login(api_password='true', include_account_id_guid='true')
+            assert login_info is not None
+            assert len(login_info.login_accounts) > 0
+            login_accounts = login_info.login_accounts
+            assert login_accounts[0].account_id is not None
+
+            print("LoginInformation: ", end="")
+            pprint(login_info)
+
+            # parse first account's baseUrl
+            base_url, _ = login_accounts[0].base_url.split('/v2')
+
+            # below code required for production, no effect in demo (same domain)
+            self.api_client.host = base_url
+            docusign.configuration.api_client = self.api_client
+
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None # make the test case fail in case of an API exception
+        '''
 
     def testRequestASignature(self):
         file_contents = open(sign_test1_file, 'rb').read()
