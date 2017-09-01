@@ -34,6 +34,7 @@ This client has the following external dependencies:
 * setuptools >= 21.0.0
 * urllib3 >= 1.15.1
 * jwcrypto >= 0.4.2
+* py-oauth2 >= 0.0.10
 
 Usage
 =====
