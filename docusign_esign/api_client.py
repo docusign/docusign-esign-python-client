@@ -31,6 +31,7 @@ from .configuration import Configuration
 from .rest import ApiException, RESTClientObject
 
 from jwcrypto import jwt, jwk
+from pyoauth2 import Client, AccessToken
 
 
 class ApiClient(object):
@@ -62,6 +63,8 @@ class ApiClient(object):
         'datetime': datetime,
         'object': object,
     }
+    TOKEN_PATH = '/oauth/token'
+    AUTHORIZE_PATH = '/oauth/auth'
 
     def __init__(self, host=None, header_name=None, header_value=None, cookie=None):
         """
@@ -116,6 +119,28 @@ class ApiClient(object):
         response_data = json.loads(response.data.decode('utf-8'))
         if 'token_type' in response_data and 'access_token' in response_data:
             self.set_default_header("Authorization", response_data['token_type'] + " " + response_data['access_token'])
+
+    def configure_authorization_flow(self, client_id, client_secret, redirect_uri, oauth_base_url='https://account-d.docusign.com', scope='signature'):
+        self.redirect_uri = redirect_uri
+        self.scope = scope
+        self.oauth_client = Client(client_id, client_secret,
+                             site=self.host,
+                             authorize_url=(oauth_base_url + self.AUTHORIZE_PATH),
+                             token_url=(oauth_base_url + self.TOKEN_PATH))
+
+    def get_authorization_uri(self):
+        return self.oauth_client.auth_code.authorize_url(redirect_uri=self.redirect_uri, scope=self.scope)
+
+    def authenticate_with_code(self, code):
+        access_token = self.oauth_client.auth_code.get_token(code, redirect_uri=self.redirect_uri)
+        if access_token is not None:
+            self.set_default_header("Authorization", "Bearer " + access_token.token)
+
+    def refresh_token(self, refresh_token=None):
+        if refresh_token is not None:
+            self.access_token.refresh_token = refresh_token
+        access_token = AccessToken(self.oauth_client, token='', refresh_token=self.access_token.refresh_token)
+        self.access_token = access_token.refresh()
 
     def __call_api(self, resource_path, method,
                    path_params=None, query_params=None, header_params=None,
