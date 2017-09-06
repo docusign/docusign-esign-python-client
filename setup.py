@@ -12,7 +12,8 @@
 
 
 import sys
-from setuptools import setup, find_packages
+import os
+from setuptools import setup, find_packages, Command
 
 NAME = "docusign_esign"
 VERSION = "1.0.1"
@@ -25,6 +26,16 @@ VERSION = "1.0.1"
 
 REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "jwcrypto >= 0.4.2", "py-oauth2>=0.0.10"]
 
+class CleanCommand(Command):
+    """Custom clean command to tidy up the project root."""
+    user_options = []
+    def initialize_options(self):
+        pass
+    def finalize_options(self):
+        pass
+    def run(self):
+        os.system('rm -vrf ./build ./dist ./*.pyc ./*.tgz ./*.egg-info')
+
 setup(
     name=NAME,
     version=VERSION,
@@ -35,6 +46,9 @@ setup(
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
+    cmdclass={
+        'clean': CleanCommand,
+    },
     long_description="""\
     The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
     """

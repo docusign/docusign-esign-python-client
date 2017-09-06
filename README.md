@@ -1,7 +1,7 @@
 # The Official DocuSign Python Client
 
 [![PyPI version][pypi-image]][pypi-url]
-<!---[![PyPI downloads][downloads-image]][downloads-url]--->
+<!--[![PyPI downloads][downloads-image]][downloads-url]-->
 [![Build status][travis-image]][travis-url]
 
 [PyPI module](https://pypi.python.org/pypi/docusign_esign) that wraps the <a href="https://www.docusign.com">DocuSign</a> API
@@ -155,7 +155,7 @@ The url for the Userinfo method is account-d.docusign.com for the demo/developer
 Testing
 =======
 
-Unit tests are available in the [Test](https://github.com/docusign/docusign-node-client/tree/master/test) folder.
+Unit tests are available in the [Test](https://github.com/docusign/docusign-python-client/tree/master/test/unit_tests.py) folder.
 
 Contributing
 ============
