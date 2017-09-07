@@ -15,6 +15,25 @@ Requirements
 
 Python 2.7 and 3.6+.
 
+## PYTHONPATH set up
+### *nix
+- Find the path to site-packages folders, for your python version. Usually it's under "/usr/lib/python2.7" (Unix) or "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7" (Mac)
+- export PYTHONPATH = ${PYTHONPATH}:.:/path/to/site-packages
+
+Ideally you want this last line to be executed each time python command is launched. So you have to add it to ~/.bash_profile, ~/.bashrc or ~/.profile.
+
+### Windows
+- Find the path to site-packages folders, for your python version. Usually it's under "C:\Python27".
+- Go to your Windows "Control Panel"
+- Open "System Settings"
+- Under "Advanced" tab, click on the "Environment Variables" button.
+- Check if "PYTHONPATH" variable is defined under the "System Variables" section.
+- If not defined yet, click on the "New" button and add it. The value of the varibale should be the path to site-packages (something like "C:\Python27").
+
+
+Now that you've added the site-packages folder, to the list of modules python command scans, when it starts, it time to verify it's working:
+- open python command prompt and type "help('modules')". Your should now see the list of modules installed under site-packages.
+
 Installation
 ============
 
