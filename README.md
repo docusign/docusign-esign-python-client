@@ -68,7 +68,7 @@ import unittest
 import webbrowser
 
 import docusign_esign as docusign
-from docusign_esign import AuthenticationApi, TemplatesApi
+from docusign_esign import AuthenticationApi, TemplatesApi, EnvelopesApi
 from docusign_esign.rest import ApiException
 
 user_name = "[USERNAME]"
