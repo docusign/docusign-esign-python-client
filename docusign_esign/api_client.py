@@ -100,7 +100,7 @@ class ApiClient(object):
         self.default_headers[header_name] = header_value
 
     def get_jwt_uri(self, client_id, redirect_uri, oauth_base_path):
-        return "https://" + oauth_base_path + "/oauth/auth" + "?" + "response_type=code&" + "client_id=" + quote(client_id, safe="") + "&" + "scope=" + quote("signature+impersonation", safe="") + "&" + "redirect_uri=" + quote(redirect_uri, safe="")
+        return "https://" + oauth_base_path + "/oauth/auth" + "?" + "response_type=code&" + "client_id=" + quote(client_id, safe="") + "&" + "scope=" + quote("signature impersonation", safe="") + "&" + "redirect_uri=" + quote(redirect_uri, safe="")
 
     def configure_jwt_authorization_flow(self, private_key_filename, oauth_base_path, client_id, user_id, expires_in):
         now = math.floor(time())
