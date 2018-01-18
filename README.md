@@ -92,7 +92,7 @@ print(oauth_login_url)
 
 # END OF NOTE
 
-# configure the ApiClient to asynchronously get an access to token and store it
+# configure the ApiClient to asynchronously get an access token and store it
 api_client.configure_jwt_authorization_flow(private_key_filename, oauth_base_url, integrator_key, user_id, 3600)
 
 docusign.configuration.api_client = api_client
