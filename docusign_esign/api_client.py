@@ -102,15 +102,21 @@ class ApiClient(object):
     def get_jwt_uri(self, client_id, redirect_uri, oauth_base_path):
         return "https://" + oauth_base_path + "/oauth/auth" + "?" + "response_type=code&" + "client_id=" + quote(client_id, safe="") + "&" + "scope=" + quote("signature impersonation", safe="") + "&" + "redirect_uri=" + quote(redirect_uri, safe="")
 
-    def configure_jwt_authorization_flow(self, private_key_filename, oauth_base_path, client_id, user_id, expires_in):
+    def configure_jwt_authorization_flow(self, private_key_filename, oauth_base_path, client_id, user_id, expires_in,
+                                         key_bytes=None):
         now = math.floor(time())
         later = now + (expires_in * 1000)
         token = jwt.JWT(header={"alg": "RS256"},
                         claims={"iss": client_id, "sub": user_id, "aud": oauth_base_path, "iat": now, "exp": later, "scope": "signature"})
 
-        with open(private_key_filename, 'rb') as f:
-            priv_key = jwk.JWK.from_pem(f.read())
-            token.make_signed_token(priv_key)
+        if not key_bytes:
+            with open(private_key_filename, 'rb') as f:
+                priv_key = jwk.JWK.from_pem(f.read())
+                token.make_signed_token(priv_key)
+        else:
+            # If key_bytes supplied right from database, if any, after decrypting (if encrypted-at-rest),
+            # base64 decoded, etc.
+            token.make_signed_token(key_bytes)
 
         assertion = token.serialize()
 
