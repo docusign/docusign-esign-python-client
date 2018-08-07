@@ -45,7 +45,7 @@ class Configuration(object):
         Constructor
         """
         # Default Base url
-        self.host = "https://www.docusign_esign.net/restapi"
+        self.host = "https://www.docusign.net/restapi"
         # Default api client
         self.api_client = None
         # Temp file folder for downloading files
