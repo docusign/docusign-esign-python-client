@@ -43,13 +43,13 @@ This open-source SDK is provided for cases where you would like to make addition
 **Windows:**
 
 <ol>
-   <li>Open the Windows **Control Panel.**</li>
-   <li>Under the System and Security category, open the **System**</li>
-   <li>Select **Advanced System Settings** to open the **System Properties** dialog box.</li>
-   <li>On the **Advanced** tab, select the **Environmental Variables** button at the lower-right corner.
+   <li>Open the Windows <b>Control Panel.</b></li>
+   <li>Under the System and Security category, open the <b>System</b></li>
+   <li>Select <b>Advanced System Settings</b> to open the <b>System Properties</b> dialog box.</li>
+   <li>On the <b>Advanced</b> tab, select the <b>Environmental Variables</b> button at the lower-right corner.
        <ol style="list-style-type: lower-alpha">
-           <li>Check if **PYTHONPATH** has been added as a **system variable.**</li>
-           <li>If it has not, select **New** to add it. The variable you add is the path to the **site-packages**</li>
+           <li>Check if <b>PYTHONPATH</b> has been added as a <b>system variable.</b></li>
+           <li>If it has not, select <b>New</b> to add it. The variable you add is the path to the <b>site-packages</b></li>
        </ol>
    </li>
 </ol>
