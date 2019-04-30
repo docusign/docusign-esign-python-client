@@ -37,8 +37,9 @@ This open-source SDK is provided for cases where you would like to make addition
 
 **Unix/Linux:**
 
-- export PYTHONPATH = &quot;${PYTHONPATH}:.:/path/to/site-packages&quot;
-- Optionally, you can add this command to your **system profile** , which will run the command each time Python is launched.
+- Type the following command into your console:  
+   **export PYTHONPATH = "${PYTHONPATH}:.:/path/to/site-packages"**
+- Optionally, you can add this command to your system profile, which will run the command each time Python is launched.
 
 **Windows:**
 
