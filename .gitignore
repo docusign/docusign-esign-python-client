@@ -62,3 +62,9 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+#Idea IDEs
+.idea
+
+# Local files
+*.DS_Store
