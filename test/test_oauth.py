@@ -35,7 +35,7 @@ class TestConfig(object):
         self.user_id = user_id if user_id else "fcc5726c-xxxx-xxxx-xxxx-40bbbe6ca126"
         self.redirect_uri = redirect_uri if redirect_uri else "http://38a36d7b.ngrok.io"
 
-        self.oauth_base_path = "account-d.docusign.com"
+        self.oauth_host_name = "account-d.docusign.com"
         self.private_key_file_name = "{}/keys/private.pem".format(os.path.dirname(os.path.abspath(__file__)))
         self.expires_in_hours = 1
 
@@ -48,12 +48,12 @@ class TestOauth(unittest.TestCase):
 
     def setUp(self):
         self.test_config = TestConfig()
-        self.api_client = ApiClient(oauth_base_path=self.test_config.oauth_base_path)
+        self.api_client = ApiClient(oauth_host_name=self.test_config.oauth_host_name)
         self.api_client.set_base_path("https://demo.docusign.net")
-        self.api_client.set_oauth_base_path(self.test_config.oauth_base_path)
+        self.api_client.set_oauth_host_name(self.test_config.oauth_host_name)
 
     def test_oauth_uri(self):
-        self.api_client.get_oauth_base_path()
+        self.api_client.get_oauth_host_name()
         uri = self.api_client.get_authorization_uri(client_id=self.test_config.integrator_key,
                                                 redirect_uri=self.test_config.redirect_uri,
                                                 scopes=["signature", "impersonation"],
@@ -64,7 +64,7 @@ class TestOauth(unittest.TestCase):
     def test_jwt_application(self):
         with open(self.test_config.private_key_file_name, 'r') as private_key:
             token_obj = self.api_client.request_jwt_application_token(client_id=self.test_config.integrator_key,
-                                                               oauth_base_path=self.test_config.oauth_base_path,
+                                                               oauth_host_name=self.test_config.oauth_host_name,
                                                                private_key_bytes=private_key.read(),
                                                                expires_in=self.test_config.expires_in_hours)
             self.assertTrue(isinstance(token_obj, OAuthToken))
@@ -74,7 +74,7 @@ class TestOauth(unittest.TestCase):
         with open(self.test_config.private_key_file_name, 'r') as private_key:
             token_obj = self.api_client.request_jwt_user_token(client_id=self.test_config.integrator_key,
                                                                user_id=self.test_config.user_id,
-                                                               oauth_base_path=self.api_client.get_oauth_base_path(),
+                                                               oauth_host_name=self.api_client.get_oauth_host_name(),
                                                                private_key_bytes=private_key.read(),
                                                                expires_in=self.test_config.expires_in_hours
                                                                )
@@ -82,7 +82,7 @@ class TestOauth(unittest.TestCase):
             self.api_client.rest_client.pool_manager.clear()
 
     def test_authorization_code_login(self):
-        self.api_client.get_oauth_base_path()
+        self.api_client.get_oauth_host_name()
         uri = self.api_client.get_authorization_uri(client_id=self.test_config.integrator_key,
                                                     redirect_uri=self.test_config.redirect_uri,
                                                     scopes=["signature"],
