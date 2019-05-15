@@ -7,6 +7,7 @@ import os
 import subprocess
 import unittest
 from pprint import pprint
+from time import sleep
 
 import docusign_esign as docusign
 from docusign_esign import AuthenticationApi, EnvelopesApi, TemplatesApi, DiagnosticsApi, FoldersApi, ApiException
@@ -607,18 +608,20 @@ class SdkUnitTests(unittest.TestCase):
             folders_api.move_envelopes(self.user_info.accounts[0].account_id, to_folder_id,
                                        folders_request=folders_request)
 
+            # Wait for 1 second to make sure the newly created envelope was moved to the 'sentitems' folder
+            # Note: It's discouraged to use sleep statement or to poll DocuSign for envelope status or folder id
+            # In production, use DocuSign Connect to get notified when the status of the envelope have changed.
+            sleep(1)
             # Test if we moved the envelope to the correct folder
             list_from_drafts_folder = folders_api.list_items(self.user_info.accounts[0].account_id, to_folder_id)
 
             assert list_from_drafts_folder is not None
 
-            does_exist = False
             for item in list_from_drafts_folder.folder_items:
                 if item.envelope_id == envelope_summary.envelope_id:
-                    does_exist = True
-                    break
+                    return
 
-            assert does_exist
+            assert False
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
