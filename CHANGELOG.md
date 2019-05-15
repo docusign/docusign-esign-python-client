@@ -3,9 +3,22 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [Unreleased]
+## [2.0.0rc1] - eSignature API v19.1.02 - 2019-05-13
+### Removed
+* configure_jwt_authorization_flow has been removed. Update to use either request_jwt_user_token or request_jwt_application_token
+* empty test placeholder files
 ### Changed
-- Updated the package with the latest API monthly release.
+* The SDK now supports version 19.1.02 of the DocuSign eSignature API.
+* SDK Release Version updated.
+* ApiException, ApiClient and Configuration classes have moved under client folder. New import statement was simplified. Example: from docusign_esign import ApiException
+* Using PyJWT and cryptography libraries for OAuth, instead of jwcrypto and py-oauth2
+### Added
+* Added a new *tabGroupLabels* field to all Tabs models
+* Added a new *Witnesses* field to all Recipients models
+* Implemented models for Smart Sections feature
+* Implemented initial support of HMAC for DocuSign Connect
+### Fixed
+* A bug with that could cause the *moveEnvelopes* method call to return a response without a *Content-Type* header. (DCM-2871)
 
 ## [1.0.3] - 2018-03-22
 ### Fixed
