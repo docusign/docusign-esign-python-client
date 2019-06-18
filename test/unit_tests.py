@@ -13,7 +13,7 @@ import docusign_esign as docusign
 from docusign_esign import AuthenticationApi, EnvelopesApi, TemplatesApi, DiagnosticsApi, FoldersApi, ApiException
 
 Username = "node_sdk@mailinator.com"
-Password = "{PASSWORD}"
+Password = "[PASSWORD]"
 IntegratorKey = "ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df"
 BaseUrl = "https://demo.docusign.net/restapi"
 OauthHostName = "account-d.docusign.com"

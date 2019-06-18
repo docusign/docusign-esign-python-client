@@ -23,7 +23,7 @@ class TestConfig(object):
     def __init__(self, user_name=None, client_secret =None, user_id=None, password=None, integrator_key=None, host=None, recipient_email=None,
                  recipient_name=None, template_role_name=None, template_id=None, return_url=None, redirect_uri=None):
         self.user_name = user_name if user_name else "node_sdk@mailinator.com"
-        self.password = password if password else "{PASSWORD}"
+        self.password = password if password else "[PASSWORD]"
         self.client_secret = client_secret if client_secret else "3b61ffcf-xxxx-xxxx-xxxx-d49f7d82cb55"
         self.integrator_key = integrator_key if integrator_key else "ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df"
         self.host = host if host else "https://demo.docusign.net/restapi"
