@@ -12,14 +12,14 @@ from time import sleep
 import docusign_esign as docusign
 from docusign_esign import AuthenticationApi, EnvelopesApi, TemplatesApi, DiagnosticsApi, FoldersApi, ApiException
 
-Username = "node_sdk@mailinator.com"
-Password = "[PASSWORD]"
-IntegratorKey = "ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df"
+Username = os.environ.get("USER_NAME")
+IntegratorKey = os.environ.get("INTEGRATOR_KEY_JWT")
 BaseUrl = "https://demo.docusign.net/restapi"
 OauthHostName = "account-d.docusign.com"
 SignTest1File = "{}/docs/SignTest1.pdf".format(os.path.dirname(os.path.abspath(__file__)))
-TemplateId = "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419"
-UserId = "fcc5726c-xxxx-xxxx-xxxx-40bbbe6ca126"
+TemplateId = os.environ.get("TEMPLATE_ID")
+UserId = os.environ.get("USER_ID")
+PrivateKeyBytes = base64.b64decode(os.environ.get("PRIVATE_KEY"))
 
 
 class SdkUnitTests(unittest.TestCase):
@@ -29,7 +29,6 @@ class SdkUnitTests(unittest.TestCase):
         self.api_client.rest_client.pool_manager.clear()
 
         docusign.configuration.api_client = self.api_client
-        self.private_key_file_name = "{}/keys/private.pem".format(os.path.dirname(os.path.abspath(__file__)))
         try:
             envelope_definition = docusign.EnvelopeDefinition()
             envelope_definition.email_subject = 'Please Sign my Python SDK Envelope'
@@ -45,13 +44,12 @@ class SdkUnitTests(unittest.TestCase):
             envelope_definition.status = 'sent'
             envelopes_api = EnvelopesApi()
 
-            with open(self.private_key_file_name, 'r') as private_key:
-                self.api_client.host = BaseUrl
-                token = (self.api_client.request_jwt_user_token(client_id=IntegratorKey,
-                                                                user_id=UserId,
-                                                                oauth_host_name=OauthHostName,
-                                                                private_key_bytes=private_key.read(),
-                                                                expires_in=1))
+            self.api_client.host = BaseUrl
+            token = (self.api_client.request_jwt_user_token(client_id=IntegratorKey,
+                                                            user_id=UserId,
+                                                            oauth_host_name=OauthHostName,
+                                                            private_key_bytes=PrivateKeyBytes,
+                                                            expires_in=3600))
             self.user_info = self.api_client.get_user_info(token.access_token)
             self.api_client.rest_client.pool_manager.clear()
             docusign.configuration.api_client = self.api_client
