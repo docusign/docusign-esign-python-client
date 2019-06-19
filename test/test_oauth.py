@@ -12,6 +12,7 @@
 
 from __future__ import absolute_import
 
+import base64
 import os
 import unittest
 
@@ -20,27 +21,23 @@ from docusign_esign.client.auth.oauth import OAuthToken
 
 
 class TestConfig(object):
-    def __init__(self, user_name=None, client_secret =None, user_id=None, password=None, integrator_key=None, host=None, recipient_email=None,
+    def __init__(self, user_name=None, client_secret =None, user_id=None, integrator_key=None, host=None, recipient_email=None,
                  recipient_name=None, template_role_name=None, template_id=None, return_url=None, redirect_uri=None):
-        self.user_name = user_name if user_name else "node_sdk@mailinator.com"
-        self.password = password if password else "{PASSWORD}
-        self.client_secret = client_secret if client_secret else "3b61ffcf-xxxx-xxxx-xxxx-d49f7d82cb55"
-        self.integrator_key = integrator_key if integrator_key else "ae30ea4e-xxxx-xxxx-xxxx-fcb57d2dc4df"
+        self.user_name = user_name if user_name else os.environ.get("USER_NAME")
+        self.client_secret = client_secret if client_secret else os.environ.get("CLIENT_SECRET")
+        self.integrator_key = integrator_key if integrator_key else os.environ.get("INTEGRATOR_KEY_JWT")
         self.host = host if host else "https://demo.docusign.net/restapi"
-        self.recipient_email = recipient_email if recipient_email else "node_sdk@mailinator.com"
-        self.recipient_name = recipient_name if recipient_name else "node_sdk@mailinator.com"
-        self.template_role_name = template_role_name if template_role_name else "node_sdk@mailinator.com"
-        self.template_id = template_id if template_id else "cf2a46c2-xxxx-xxxx-xxxx-752547b1a419"
-        self.return_url = return_url if return_url else "node_sdk@mailinator.com"
-        self.user_id = user_id if user_id else "fcc5726c-xxxx-xxxx-xxxx-40bbbe6ca126"
-        self.redirect_uri = redirect_uri if redirect_uri else "http://38a36d7b.ngrok.io"
+        self.recipient_email = recipient_email if recipient_email else os.environ.get("USER_NAME")
+        self.recipient_name = recipient_name if recipient_name else os.environ.get("USER_NAME")
+        self.template_role_name = template_role_name if template_role_name else os.environ.get("USER_NAME")
+        self.template_id = template_id if template_id else os.environ.get("TEMPLATE_ID")
+        self.return_url = return_url if return_url else os.environ.get("REDIRECT_URI")
+        self.user_id = user_id if user_id else os.environ.get("USER_ID")
+        self.redirect_uri = redirect_uri if redirect_uri else os.environ.get("REDIRECT_URI")
 
         self.oauth_host_name = "account-d.docusign.com"
-        self.private_key_file_name = "{}/keys/private.pem".format(os.path.dirname(os.path.abspath(__file__)))
-        self.expires_in_hours = 1
-
-        # this.IntegratorKeyNoConsent = "66750331-xxxx-xxxx-xxxx-6c1a413a6096";
-        # this.PrivateKeyNoConsentFilename = "../../docs/privateKeyConsentReq.pem";
+        self.private_key_bytes = base64.b64decode(os.environ.get("PRIVATE_KEY"))
+        self.expires_in = 3600
 
 
 class TestOauth(unittest.TestCase):
@@ -62,24 +59,22 @@ class TestOauth(unittest.TestCase):
         self.api_client.rest_client.pool_manager.clear()
 
     def test_jwt_application(self):
-        with open(self.test_config.private_key_file_name, 'r') as private_key:
-            token_obj = self.api_client.request_jwt_application_token(client_id=self.test_config.integrator_key,
-                                                               oauth_host_name=self.test_config.oauth_host_name,
-                                                               private_key_bytes=private_key.read(),
-                                                               expires_in=self.test_config.expires_in_hours)
-            self.assertTrue(isinstance(token_obj, OAuthToken))
-            self.api_client.rest_client.pool_manager.clear()
+        token_obj = self.api_client.request_jwt_application_token(client_id=self.test_config.integrator_key,
+                                                           oauth_host_name=self.test_config.oauth_host_name,
+                                                           private_key_bytes=self.test_config.private_key_bytes,
+                                                           expires_in=self.test_config.expires_in)
+        self.assertTrue(isinstance(token_obj, OAuthToken))
+        self.api_client.rest_client.pool_manager.clear()
 
     def test_jwt_user(self):
-        with open(self.test_config.private_key_file_name, 'r') as private_key:
-            token_obj = self.api_client.request_jwt_user_token(client_id=self.test_config.integrator_key,
-                                                               user_id=self.test_config.user_id,
-                                                               oauth_host_name=self.api_client.get_oauth_host_name(),
-                                                               private_key_bytes=private_key.read(),
-                                                               expires_in=self.test_config.expires_in_hours
-                                                               )
-            self.assertTrue(isinstance(token_obj, OAuthToken))
-            self.api_client.rest_client.pool_manager.clear()
+        token_obj = self.api_client.request_jwt_user_token(client_id=self.test_config.integrator_key,
+                                                           user_id=self.test_config.user_id,
+                                                           oauth_host_name=self.api_client.get_oauth_host_name(),
+                                                           private_key_bytes=self.test_config.private_key_bytes,
+                                                           expires_in=self.test_config.expires_in
+                                                           )
+        self.assertTrue(isinstance(token_obj, OAuthToken))
+        self.api_client.rest_client.pool_manager.clear()
 
     def test_authorization_code_login(self):
         self.api_client.get_oauth_host_name()
@@ -100,7 +95,7 @@ class TestOauth(unittest.TestCase):
         # # lines:
         # #
         # code = "code"
-        # token_obj = self.api_client.generate_access_token(self.test_config.integrator_key, self.test_config.client_secret, code)
+        # token_obj = self.api_client.generate_access_token(self.test_config.integrator_key,self.test_config.client_secret, code)
         # self.assertTrue(isinstance(token_obj, OAuthToken))
         #
         # self.api_client.set_access_token(token_obj)

@@ -69,7 +69,7 @@ Note: This may require the command console be elevated. You can accomplish this 
 This client has the following external dependencies:
 
 - certifi v14.05.14+
-- six v1.8.0
+- six v1.8.0+
 - python\_dateutil v2.5.3+
 - setuptools v21.0.0+
 - urllib3 v1.15.1+
