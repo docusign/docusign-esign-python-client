@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [2.0.1] - 2019-06-24
+### Removed
+* Removed harcoded test config values from the test cases. Now getting test config values from the environment variables.
+### Changed
+* Made dependencies versions broader (using '>=' to specify minimum supported versions).
+
 ## [2.0.0] - eSignature API v19.1.02 - 2019-05-24
 ### Removed
 * configure_jwt_authorization_flow has been removed. Update to use either request_jwt_user_token or request_jwt_application_token
