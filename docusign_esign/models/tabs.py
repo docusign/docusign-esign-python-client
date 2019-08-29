@@ -35,7 +35,7 @@ class Tabs(object):
             'checkbox_tabs': 'list[Checkbox]',
             'company_tabs': 'list[Company]',
             'date_signed_tabs': 'list[DateSigned]',
-            'date_tabs': 'list[date]',
+            'date_tabs': 'list[Date]',
             'decline_tabs': 'list[Decline]',
             'email_address_tabs': 'list[EmailAddress]',
             'email_tabs': 'list[Email]',
@@ -48,7 +48,7 @@ class Tabs(object):
             'list_tabs': 'list[List]',
             'notarize_tabs': 'list[Notarize]',
             'note_tabs': 'list[Note]',
-            'number_tabs': 'list[float]',
+            'number_tabs': 'list[Number]',
             'radio_group_tabs': 'list[RadioGroup]',
             'signer_attachment_tabs': 'list[SignerAttachment]',
             'sign_here_tabs': 'list[SignHere]',
@@ -217,7 +217,7 @@ class Tabs(object):
         Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.
 
         :return: The date_tabs of this Tabs.
-        :rtype: list[date]
+        :rtype: list[Date]
         """
         return self._date_tabs
 
@@ -228,7 +228,7 @@ class Tabs(object):
         Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.
 
         :param date_tabs: The date_tabs of this Tabs.
-        :type: list[date]
+        :type: list[Date]
         """
 
         self._date_tabs = date_tabs
@@ -516,7 +516,7 @@ class Tabs(object):
         Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. 
 
         :return: The number_tabs of this Tabs.
-        :rtype: list[float]
+        :rtype: list[Number]
         """
         return self._number_tabs
 
@@ -527,7 +527,7 @@ class Tabs(object):
         Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. 
 
         :param number_tabs: The number_tabs of this Tabs.
-        :type: list[float]
+        :type: list[Number]
         """
 
         self._number_tabs = number_tabs
