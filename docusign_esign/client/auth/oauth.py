@@ -38,149 +38,150 @@ class OAuth(object):
     #   JWT Grant Type
     GRANT_TYPE_JWT = "urn:ietf:params:oauth:grant-type:jwt-bearer"
 
-    class UserInfo(object):
 
-        def __init__(self, sub=None, email=None, accounts=None, name=None, given_name=None, family_name=None,
-                     created=None):
+class OAuthUserInfo(object):
 
-            self.swagger_types = {
-                'sub': 'str',
-                'email': 'str',
-                'accounts': 'list[Account]',
-                'name': 'str',
-                'given_name': 'str',
-                'family_name': 'str',
-                'created': 'str'
-            }
+    def __init__(self, sub=None, email=None, accounts=None, name=None, given_name=None, family_name=None,
+                 created=None):
 
-            self.attribute_map = {
-                'sub': 'sub',
-                'email': 'email',
-                'accounts': 'accounts',
-                'name': 'name',
-                'given_name': 'given_name',
-                'family_name': 'family_name',
-                'created': 'created'
-            }
-            self._sub = sub
-            self._email = email
-            self._accounts = accounts
-            self._name = name
-            self._given_name = given_name
-            self._family_name = family_name
-            self._created = created
+        self.swagger_types = {
+            'sub': 'str',
+            'email': 'str',
+            'accounts': 'list[Account]',
+            'name': 'str',
+            'given_name': 'str',
+            'family_name': 'str',
+            'created': 'str'
+        }
 
-        @property
-        def sub(self):
-            return self._sub
+        self.attribute_map = {
+            'sub': 'sub',
+            'email': 'email',
+            'accounts': 'accounts',
+            'name': 'name',
+            'given_name': 'given_name',
+            'family_name': 'family_name',
+            'created': 'created'
+        }
+        self._sub = sub
+        self._email = email
+        self._accounts = accounts
+        self._name = name
+        self._given_name = given_name
+        self._family_name = family_name
+        self._created = created
 
-        @sub.setter
-        def sub(self, sub):
-            self._sub = sub
+    @property
+    def sub(self):
+        return self._sub
 
-        @property
-        def created(self):
-            return self._created
+    @sub.setter
+    def sub(self, sub):
+        self._sub = sub
 
-        @created.setter
-        def created(self, created):
-            self._created = created
+    @property
+    def created(self):
+        return self._created
 
-        @property
-        def email(self):
-            return self._email
+    @created.setter
+    def created(self, created):
+        self._created = created
 
-        @email.setter
-        def email(self, email):
-            self._email = email
+    @property
+    def email(self):
+        return self._email
 
-        @property
-        def name(self):
-            return self._name
+    @email.setter
+    def email(self, email):
+        self._email = email
 
-        @name.setter
-        def name(self, name):
-            self._name = name
+    @property
+    def name(self):
+        return self._name
 
-        @property
-        def given_name(self):
-            return self._given_name
+    @name.setter
+    def name(self, name):
+        self._name = name
 
-        @given_name.setter
-        def given_name(self, given_name):
-            self._given_name = given_name
+    @property
+    def given_name(self):
+        return self._given_name
 
-        @property
-        def family_name(self):
-            return self._family_name
+    @given_name.setter
+    def given_name(self, given_name):
+        self._given_name = given_name
 
-        @family_name.setter
-        def family_name(self, family_name):
-            self._family_name = family_name
+    @property
+    def family_name(self):
+        return self._family_name
 
-        def list(self):
-            return self._accounts
+    @family_name.setter
+    def family_name(self, family_name):
+        self._family_name = family_name
 
-        @property
-        def accounts(self):
-            return self._accounts
+    def list(self):
+        return self._accounts
 
-        @accounts.setter
-        def accounts(self, accounts):
-            self._accounts = accounts
+    @property
+    def accounts(self):
+        return self._accounts
 
-        def add_account(self, account):
-            if not self.accounts:
-                self._accounts = list()
-            self._accounts.append(account)
+    @accounts.setter
+    def accounts(self, accounts):
+        self._accounts = accounts
 
-        def get_accounts(self):
-            if not self.accounts:
-                self._accounts = list()
-            return self._accounts
+    def add_account(self, account):
+        if not self.accounts:
+            self._accounts = list()
+        self._accounts.append(account)
 
-        def to_dict(self):
-            """
-            Returns the model properties as a dict
-            """
-            result = {}
+    def get_accounts(self):
+        if not self.accounts:
+            self._accounts = list()
+        return self._accounts
 
-            for attr, _ in iteritems(self.swagger_types):
-                value = getattr(self, attr)
-                if isinstance(value, list):
-                    result[attr] = list(map(
-                        lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
-                        value
-                    ))
-                elif hasattr(value, "to_dict"):
-                    result[attr] = value.to_dict()
-                elif isinstance(value, dict):
-                    result[attr] = dict(map(
-                        lambda item: (item[0], item[1].to_dict())
-                        if hasattr(item[1], "to_dict") else item,
-                        value.items()
-                    ))
-                else:
-                    result[attr] = value
+    def to_dict(self):
+        """
+        Returns the model properties as a dict
+        """
+        result = {}
 
-            return result
+        for attr, _ in iteritems(self.swagger_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[attr] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
+                    value
+                ))
+            elif hasattr(value, "to_dict"):
+                result[attr] = value.to_dict()
+            elif isinstance(value, dict):
+                result[attr] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], "to_dict") else item,
+                    value.items()
+                ))
+            else:
+                result[attr] = value
 
-        def __str__(self):
-            """
-            Returns the string representation of the model
-            """
-            return pformat(self.to_dict())
+        return result
 
-        def to_indented_string(self, obj):
-            """
-             Convert the given object to string with each line indented by 4
-             spaces (except the first line).
-            :param obj: 
-            :return: 
-            """
-            if obj:
-                return str(obj).replace("\n", "\n    ")
-            return ""
+    def __str__(self):
+        """
+        Returns the string representation of the model
+        """
+        return pformat(self.to_dict())
+
+    def to_indented_string(self, obj):
+        """
+         Convert the given object to string with each line indented by 4
+         spaces (except the first line).
+        :param obj:
+        :return:
+        """
+        if obj:
+            return str(obj).replace("\n", "\n    ")
+        return ""
 
 
 class Account(object):
