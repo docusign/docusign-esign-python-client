@@ -6,3 +6,4 @@ from .auth.oauth import Organization
 from .auth.oauth import Link
 from .auth.oauth import OAuth
 from .auth.oauth import OAuthToken
+from .auth.oauth import OAuthUserInfo

@@ -32,7 +32,7 @@ from docusign_esign import models
 from .configuration import Configuration
 from .api_exception import ApiException, ArgumentException
 from .api_response import RESTClientObject, RESTResponse
-from .auth.oauth import OAuthToken, OAuth, Account, Organization, Link
+from .auth.oauth import OAuthUserInfo, OAuthToken, OAuth, Account, Organization, Link
 
 
 class ApiClient(object):
@@ -64,7 +64,7 @@ class ApiClient(object):
         'datetime': datetime,
         'object': object,
     }
-    OAUTH_TYPES = (OAuthToken.__name__, OAuth.UserInfo.__name__, Account.__name__, Organization.__name__, Link.__name__)
+    OAUTH_TYPES = (OAuthToken.__name__, OAuthUserInfo.__name__, Account.__name__, Organization.__name__, Link.__name__)
 
     def __init__(self, host=None, header_name=None, header_value=None, cookie=None, oauth_host_name=None,
                  base_path=None):
@@ -758,7 +758,7 @@ class ApiClient(object):
         headers = {"Authorization": "Bearer " + access_token}
 
         response = self.request("GET", "https://" + self.oauth_host_name + resource_path, headers=headers)
-        return self.deserialize(response=response, response_type=OAuth.UserInfo)
+        return self.deserialize(response=response, response_type=OAuthUserInfo)
 
     def generate_access_token(self, client_id, client_secret, code):
         """

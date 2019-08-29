@@ -30,18 +30,25 @@ class SdkUnitTests(unittest.TestCase):
 
         docusign.configuration.api_client = self.api_client
         try:
-            envelope_definition = docusign.EnvelopeDefinition()
-            envelope_definition.email_subject = 'Please Sign my Python SDK Envelope'
-            envelope_definition.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
-            envelope_definition.template_id = TemplateId
-            t_role = docusign.TemplateRole()
-            t_role.role_name = 'Needs to sign'
-            t_role.name = 'Pat Developer'
-            t_role.email = Username
-            envelope_definition.template_roles = [t_role]
+            email_subject = 'Please Sign my Python SDK Envelope'
+            email_blurb = 'Hello, Please sign my Python SDK Envelope.'
+            template_id = TemplateId
 
+            role_name = 'Needs to sign'
+            name = 'Pat Developer'
+            email = Username
+            t_role = docusign.TemplateRole(role_name=role_name,
+                                           name=name,
+                                           email=email)
             # send the envelope by setting |status| to "sent". To save as a draft set to "created"
-            envelope_definition.status = 'sent'
+            status = 'sent'
+            # create an envelope definition
+            envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
+                                                              email_blurb=email_blurb,
+                                                              template_id=template_id,
+                                                              template_roles=[t_role],
+                                                              status=status)
+
             envelopes_api = EnvelopesApi()
 
             self.api_client.host = BaseUrl
@@ -92,10 +99,9 @@ class SdkUnitTests(unittest.TestCase):
         with open(SignTest1File, 'rb') as sign_file:
             file_contents = sign_file.read()
 
-        # create an envelope to be signed
-        envelope_definition = docusign.EnvelopeDefinition()
-        envelope_definition.email_subject = 'Please Sign my Python SDK Envelope'
-        envelope_definition.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
+        # Set properties and create an envelope later on
+        email_subject = 'Please Sign my Python SDK Envelope'
+        email_blurb = 'Hello, Please sign my Python SDK Envelope.'
 
         # add a document to the envelope
         doc = docusign.Document()
@@ -103,32 +109,43 @@ class SdkUnitTests(unittest.TestCase):
         doc.document_base64 = base64_doc
         doc.name = 'TestFile.pdf'
         doc.document_id = '1'
-        envelope_definition.documents = [doc]
-
-        # Add a recipient to sign the document
-        signer = docusign.Signer()
-        signer.email = Username
-        signer.name = 'Pat Developer'
-        signer.recipient_id = '1'
+        documents = [doc]
 
         # Create a SignHere tab somewhere on the document for the signer to sign
-        sign_here = docusign.SignHere()
-        sign_here.document_id = '1'
-        sign_here.page_number = '1'
-        sign_here.recipient_id = '1'
-        sign_here.x_position = '100'
-        sign_here.y_position = '100'
-        sign_here.scale_value = '0.5'
+        document_id = '1'
+        page_number = '1'
+        recipient_id = '1'
+        x_position = '100'
+        y_position = '100'
+        scale_value = '0.5'
+        sign_here = docusign.SignHere(document_id=document_id,
+                                      page_number=page_number,
+                                      recipient_id=recipient_id,
+                                      x_position=x_position,
+                                      y_position=y_position,
+                                      scale_value=scale_value)
+        sign_here_tabs = [sign_here]
+        tabs = docusign.Tabs(sign_here_tabs=sign_here_tabs)
 
-        tabs = docusign.Tabs()
-        tabs.sign_here_tabs = [sign_here]
-        signer.tabs = tabs
+        # Add a recipient to sign the document
+        email = Username
+        name = 'Pat Developer'
+        recipient_id = '1'
+        signer = docusign.Signer(email=email,
+                                 name=name,
+                                 recipient_id=recipient_id,
+                                 tabs=tabs)
+        signers = [signer]
+        recipients = docusign.Recipients(signers=signers)
 
-        recipients = docusign.Recipients()
-        recipients.signers = [signer]
-        envelope_definition.recipients = recipients
+        status = 'sent'
 
-        envelope_definition.status = 'sent'
+        # create the envelope definition with the properties set
+        envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
+                                                          email_blurb=email_blurb,
+                                                          documents=documents,
+                                                          recipients=recipients,
+                                                          status=status)
 
         envelopes_api = EnvelopesApi()
 
@@ -149,26 +166,34 @@ class SdkUnitTests(unittest.TestCase):
     def testRequestSignatureFromTemplate(self):
         template_role_name = 'Needs to sign'
 
-        # create an envelope to be signed
-        envelope_definition = docusign.EnvelopeDefinition()
-        envelope_definition.email_subject = 'Please Sign my Python SDK Envelope'
-        envelope_definition.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
+        # Set properties and create an envelope later on
+        email_subject = 'Please Sign my Python SDK Envelope'
+        email_blurb = 'Hello, Please sign my Python SDK Envelope.'
 
         # assign template information including ID and role(s)
-        envelope_definition.template_id = TemplateId
+        template_id = TemplateId
 
         # create a template role with a valid templateId and roleName and assign signer info
-        t_role = docusign.TemplateRole()
-        t_role.role_name = template_role_name
-        t_role.name = 'Pat Developer'
-        t_role.email = Username
+        role_name = template_role_name
+        name = 'Pat Developer'
+        email = Username
+        t_role = docusign.TemplateRole(role_name=role_name,
+                                       name=name,
+                                       email=email)
 
         # create a list of template roles and add our newly created role
         # assign template role(s) to the envelope
-        envelope_definition.template_roles = [t_role]
+        template_roles = [t_role]
 
         # send the envelope by setting |status| to "sent". To save as a draft set to "created"
-        envelope_definition.status = 'sent'
+        status = 'sent'
+
+        # create the envelope definition with the properties set
+        envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
+                                                          email_blurb=email_blurb,
+                                                          template_id=template_id,
+                                                          template_roles=template_roles,
+                                                          status=status)
 
         envelopes_api = EnvelopesApi()
 
@@ -190,47 +215,62 @@ class SdkUnitTests(unittest.TestCase):
         with open(SignTest1File, 'rb') as sign_file:
             file_contents = sign_file.read()
 
-        # create an envelope to be signed
-        envelope_definition = docusign.EnvelopeDefinition()
-        envelope_definition.email_subject = 'Please Sign my Python SDK Envelope'
-        envelope_definition.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
+        # Set properties and create an envelope later on
+        email_subject = 'Please Sign my Python SDK Envelope'
+        email_blurb = 'Hello, Please sign my Python SDK Envelope.'
 
         # add a document to the envelope
-        doc = docusign.Document()
         base64_doc = base64.b64encode(file_contents).decode("utf-8")
-        doc.document_base64 = base64_doc
-        doc.name = 'TestFile.pdf'
-        doc.document_id = '1'
-        envelope_definition.documents = [doc]
+        name = 'TestFile.pdf'
+        document_id = '1'
+        doc = docusign.Document(document_base64=base64_doc,
+                                name=name,
+                                document_id=document_id)
+        documents = [doc]
 
         # Add a recipient to sign the document
-        signer = docusign.Signer()
-        signer.email = Username
-        signer.name = 'Pat Developer'
-        signer.recipient_id = '1'
+        email = Username
+        name = 'Pat Developer'
+        recipient_id_for_doc = '1'
 
         # this value represents the client's unique identifier for the signer
         client_user_id = '2939'
-        signer.client_user_id = client_user_id
 
         # Create a SignHere tab somewhere on the document for the signer to sign
-        sign_here = docusign.SignHere()
-        sign_here.document_id = '1'
-        sign_here.page_number = '1'
-        sign_here.recipient_id = '1'
-        sign_here.x_position = '100'
-        sign_here.y_position = '100'
-        sign_here.scale_value = '0.5'
+        document_id = '1'
+        page_number = '1'
+        recipient_id = '1'
+        x_position = '100'
+        y_position = '100'
+        scale_value = '0.5'
 
-        tabs = docusign.Tabs()
-        tabs.sign_here_tabs = [sign_here]
-        signer.tabs = tabs
+        # create sign here object with the properties
+        sign_here = docusign.SignHere(document_id=document_id,
+                                      page_number=page_number,
+                                      recipient_id=recipient_id,
+                                      x_position=x_position,
+                                      y_position=y_position,
+                                      scale_value=scale_value)
 
-        recipients = docusign.Recipients()
-        recipients.signers = [signer]
-        envelope_definition.recipients = recipients
+        sign_here_tabs = [sign_here]
+        tabs = docusign.Tabs(sign_here_tabs=sign_here_tabs)
 
-        envelope_definition.status = 'sent'
+        signer = docusign.Signer(email=email,
+                                 name=name,
+                                 recipient_id=recipient_id_for_doc,
+                                 client_user_id=client_user_id,
+                                 tabs=tabs)
+
+        signers = [signer]
+        recipients = docusign.Recipients(signers=signers)
+
+        status = 'sent'
+        # create the envelope definition with the properties set
+        envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
+                                                          email_blurb=email_blurb,
+                                                          documents=documents,
+                                                          recipients=recipients,
+                                                          status=status)
 
         envelopes_api = EnvelopesApi()
 
@@ -265,46 +305,56 @@ class SdkUnitTests(unittest.TestCase):
     def testCreateTemplate(self):
         with open(SignTest1File, 'rb') as sign_file:
             file_contents = sign_file.read()
-        # create an envelope to be signed
 
-        envelope_template = docusign.EnvelopeTemplate()
-        envelope_template.email_subject = 'Please Sign my Python SDK Envelope (Embedded Signer)'
-        envelope_template.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
+        # Set properties
+        email_subject = 'Please Sign my Python SDK Envelope (Embedded Signer)'
+        email_blurb = 'Hello, Please sign my Python SDK Envelope.'
 
         # add a document to the template
-        doc = docusign.Document()
         base64_doc = base64.b64encode(file_contents).decode("utf-8")
-        doc.document_base64 = base64_doc
-        doc.name = 'TestFile.pdf'
-        doc.document_id = '1'
-        envelope_template.documents = [doc]
+        name = 'TestFile.pdf'
+        document_id = '1'
+        doc = docusign.Document(document_base64=base64_doc,
+                                name=name,
+                                document_id=document_id)
+        documents = [doc]
 
         # Add a recipient to sign the document
-        signer = docusign.Signer()
-        signer.email = Username
-        signer.name = 'Pat Developer'
-        signer.recipient_id = '1'
+        email = Username
+        name = 'Pat Developer'
+        recipient_id = '1'
 
         # Create a SignHere tab somewhere on the document for the signer to sign
-        sign_here = docusign.SignHere()
-        sign_here.document_id = '1'
-        sign_here.page_number = '1'
-        sign_here.recipient_id = '1'
-        sign_here.x_position = '100'
-        sign_here.y_position = '100'
-        sign_here.scale_value = '0.5'
+        sign_document_id = '1'
+        sign_page_number = '1'
+        sign_recipient_id = '1'
+        sign_x_position = '100'
+        sign_y_position = '100'
+        sign_scale_value = '0.5'
+        sign_here = docusign.SignHere(document_id=sign_document_id,
+                                      page_number=sign_page_number,
+                                      recipient_id=sign_recipient_id,
+                                      x_position=sign_x_position,
+                                      y_position=sign_y_position,
+                                      scale_value=sign_scale_value)
 
-        tabs = docusign.Tabs()
-        tabs.sign_here_tabs = [sign_here]
-        signer.tabs = tabs
+        sign_here_tabs = [sign_here]
+        tabs = docusign.Tabs(sign_here_tabs=sign_here_tabs)
+        signer = docusign.Signer(email=email,
+                                 name=name,
+                                 recipient_id=recipient_id,
+                                 tabs=tabs)
 
-        recipients = docusign.Recipients()
-        recipients.signers = [signer]
-        envelope_template.recipients = recipients
+        signers = [signer]
+        recipients = docusign.Recipients(signers=signers)
+        template_name = 'myTemplate'
 
-        env_template_definition = docusign.EnvelopeTemplateDefinition()
-        env_template_definition.name = 'myTemplate'
-        envelope_template.envelope_template_definition = env_template_definition
+        # Create the Envelope template
+        envelope_template = docusign.EnvelopeTemplate(email_subject=email_subject,
+                                                      email_blurb=email_blurb,
+                                                      documents=documents,
+                                                      recipients=recipients,
+                                                      name=template_name)
 
         templates_api = TemplatesApi()
 
@@ -313,10 +363,10 @@ class SdkUnitTests(unittest.TestCase):
             template_summary = templates_api.create_template(self.user_info.accounts[0].account_id,
                                                              envelope_template=envelope_template)
             assert template_summary is not None
-            assert template_summary.template_id is not None
+            assert template_summary.templates[0].template_id is not None
 
             print("TemplateSummary: ", end="")
-            pprint(template_summary)
+            pprint(template_summary.templates[0])
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
@@ -326,48 +376,59 @@ class SdkUnitTests(unittest.TestCase):
         with open(SignTest1File, 'rb') as sign_file:
             file_contents = sign_file.read()
 
-        # create an envelope to be signed
-        envelope_definition = docusign.EnvelopeDefinition()
-        envelope_definition.email_subject = 'Please Sign my Python SDK Envelope'
-        envelope_definition.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
+        # Set properties and create an envelope to be signed
+        email_subject = 'Please Sign my Python SDK Envelope'
+        email_blurb = 'Hello, Please sign my Python SDK Envelope.'
 
         # add a document to the envelope
-        doc = docusign.Document()
         base64_doc = base64.b64encode(file_contents).decode("utf-8")
-        doc.document_base64 = base64_doc
-        doc.name = 'TestFile.pdf'
-        doc.document_id = '1'
-        envelope_definition.documents = [doc]
-
-        # Add a recipient to sign the document
-        signer = docusign.Signer()
-        signer.email = Username
-        signer.name = 'Pat Developer'
-        signer.recipient_id = '1'
+        document_name = 'TestFile.pdf'
+        document_id = '1'
+        doc = docusign.Document(document_base64=base64_doc,
+                                name=document_name,
+                                document_id=document_id)
+        documents = [doc]
 
         # this value represents the client's unique identifier for the signer
         client_user_id = '2939'
-        signer.client_user_id = client_user_id
 
         # Create a Text tab somewhere on the document for the signer to sign
-        text = docusign.Text()
-        text.document_id = '1'
-        text.page_number = '1'
-        text.recipient_id = '1'
-        text.x_position = '100'
-        text.y_position = '100'
-        text.scale_value = '0.5'
+        text_document_id = '1'
+        page_number = '1'
+        recipient_id = '1'
+        x_position = '100'
+        y_position = '100'
+        text = docusign.Text(document_id=text_document_id,
+                             page_number=page_number,
+                             recipient_id=recipient_id,
+                             x_position=x_position,
+                             y_position=y_position)
 
-        tabs = docusign.Tabs()
-        tabs.text_tabs = [text]
-        signer.tabs = tabs
+        text_tabs = [text]
+        tabs = docusign.Tabs(text_tabs=text_tabs)
 
-        recipients = docusign.Recipients()
-        recipients.signers = [signer]
-        envelope_definition.recipients = recipients
+        # Add a recipient to sign the document
+        email = Username
+        name = 'Pat Developer'
+        recipient_id = '1'
+        signer = docusign.Signer(email=email,
+                                 name=name,
+                                 recipient_id=recipient_id,
+                                 client_user_id=client_user_id,
+                                 tabs=tabs)
+
+        signers = [signer]
+        recipients = docusign.Recipients(signers=signers)
 
         # send the envelope (otherwise it will be "created" in the Draft folder)
-        envelope_definition.status = 'sent'
+        status = 'sent'
+
+        # create an envelope to be signed
+        envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
+                                                          email_blurb=email_blurb,
+                                                          documents=documents,
+                                                          recipients=recipients,
+                                                          status=status)
 
         envelopes_api = EnvelopesApi()
         try:
@@ -412,48 +473,61 @@ class SdkUnitTests(unittest.TestCase):
         with open(SignTest1File, 'rb') as sign_file:
             file_contents = sign_file.read()
 
-        # create an envelope to be signed
-        envelope_definition = docusign.EnvelopeDefinition()
-        envelope_definition.email_subject = 'Please Sign my Python SDK Envelope'
-        envelope_definition.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
+        # Set properties and create an envelope to be signed later on
+        email_subject = 'Please Sign my Python SDK Envelope'
+        email_blurb = 'Hello, Please sign my Python SDK Envelope.'
 
         # add a document to the envelope
-        doc = docusign.Document()
         base64_doc = base64.b64encode(file_contents).decode("utf-8")
-        doc.document_base64 = base64_doc
-        doc.name = 'TestFile.pdf'
-        doc.document_id = '1'
-        envelope_definition.documents = [doc]
-
-        # Add a recipient to sign the document
-        signer = docusign.Signer()
-        signer.email = Username
-        signer.name = 'Pat Developer'
-        signer.recipient_id = '1'
+        name = 'TestFile.pdf'
+        document_id = '1'
+        doc = docusign.Document(document_base64=base64_doc,
+                                name=name,
+                                document_id=document_id)
+        documents = [doc]
 
         # this value represents the client's unique identifier for the signer
         client_user_id = '2939'
-        signer.client_user_id = client_user_id
 
         # Create a SignHere tab somewhere on the document for the signer to sign
-        sign_here = docusign.SignHere()
-        sign_here.document_id = '1'
-        sign_here.page_number = '1'
-        sign_here.recipient_id = '1'
-        sign_here.x_position = '100'
-        sign_here.y_position = '100'
-        sign_here.scale_value = '0.5'
+        document_id = '1'
+        page_number = '1'
+        recipient_id = '1'
+        x_position = '100'
+        y_position = '100'
+        scale_value = '0.5'
 
-        tabs = docusign.Tabs()
-        tabs.sign_here_tabs = [sign_here]
-        signer.tabs = tabs
+        sign_here = docusign.SignHere(document_id=document_id,
+                                      page_number=page_number,
+                                      recipient_id=recipient_id,
+                                      x_position=x_position,
+                                      y_position=y_position,
+                                      scale_value=scale_value)
+        sign_here_tabs = [sign_here]
+        tabs = docusign.Tabs(sign_here_tabs=sign_here_tabs)
 
-        recipients = docusign.Recipients()
-        recipients.signers = [signer]
-        envelope_definition.recipients = recipients
+        # Add a recipient to sign the document
+        email = Username
+        name = 'Pat Developer'
+        signer_recipient_id = '1'
+        # Create the signer with the information created previous
+        signer = docusign.Signer(tabs=tabs,
+                                 email=email,
+                                 name=name,
+                                 recipient_id=signer_recipient_id,
+                                 client_user_id=client_user_id)
+        signers = [signer]
+        recipients = docusign.Recipients(signers=signers)
 
         # send the envelope (otherwise it will be "created" in the Draft folder)
-        envelope_definition.status = 'sent'
+        status = 'sent'
+
+        # create an envelope to be signed
+        envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
+                                                          email_blurb=email_blurb,
+                                                          documents=documents,
+                                                          recipients=recipients,
+                                                          status=status)
 
         envelopes_api = EnvelopesApi()
 
@@ -465,7 +539,7 @@ class SdkUnitTests(unittest.TestCase):
                                                                         resend_envelope='true')
             assert recipients_update_summary is not None
             assert len(recipients_update_summary.recipient_update_results) > 0
-            assert ("SUCCESS" == recipients_update_summary.recipient_update_results[0].error_details.error_code)
+            assert ( None == recipients_update_summary.recipient_update_results[0].error_details)
             print("RecipientsUpdateSummary: ", end="")
             pprint(recipients_update_summary)
 
@@ -477,48 +551,62 @@ class SdkUnitTests(unittest.TestCase):
         with open(SignTest1File, 'rb') as sign_file:
             file_contents = sign_file.read()
 
-        # create an envelope to be signed
-        envelope_definition = docusign.EnvelopeDefinition()
-        envelope_definition.email_subject = 'Please Sign my Python SDK Envelope'
-        envelope_definition.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
+        # Set properties for envelope and create an envelope to be signed later on
+        email_subject = 'Please Sign my Python SDK Envelope'
+        email_blurb = 'Hello, Please sign my Python SDK Envelope.'
 
         # add a document to the envelope
-        doc = docusign.Document()
         base64_doc = base64.b64encode(file_contents).decode("utf-8")
-        doc.document_base64 = base64_doc
-        doc.name = 'TestFile.pdf'
-        doc.document_id = '1'
-        envelope_definition.documents = [doc]
-
-        # Add a recipient to sign the document
-        signer = docusign.Signer()
-        signer.email = Username
-        signer.name = 'Pat Developer'
-        signer.recipient_id = '1'
-
-        # this value represents the client's unique identifier for the signer
-        client_user_id = '2939'
-        signer.client_user_id = client_user_id
+        name = 'TestFile.pdf'
+        document_id = '1'
+        doc = docusign.Document(document_base64=base64_doc,
+                                name=name,
+                                document_id=document_id)
+        documents = [doc]
 
         # Create a SignHere tab somewhere on the document for the signer to sign
-        sign_here = docusign.SignHere()
-        sign_here.document_id = '1'
-        sign_here.page_number = '1'
-        sign_here.recipient_id = '1'
-        sign_here.x_position = '100'
-        sign_here.y_position = '100'
-        sign_here.scale_value = '0.5'
+        document_id = '1'
+        page_number = '1'
+        recipient_id = '1'
+        x_position = '100'
+        y_position = '100'
+        scale_value = '0.5'
 
-        tabs = docusign.Tabs()
-        tabs.sign_here_tabs = [sign_here]
-        signer.tabs = tabs
+        sign_here = docusign.SignHere(document_id=document_id,
+                                      page_number=page_number,
+                                      recipient_id=recipient_id,
+                                      x_position=x_position,
+                                      y_position=y_position,
+                                      scale_value=scale_value)
+        sign_here_tabs = [sign_here]
+        tabs = docusign.Tabs(sign_here_tabs=sign_here_tabs)
 
-        recipients = docusign.Recipients()
-        recipients.signers = [signer]
-        envelope_definition.recipients = recipients
+        # Add a recipient to sign the document
+        signer_email = Username
+        signer_name = 'Pat Developer'
+        signer_recipient_id = '1'
+
+        # this value represents the client's unique identifier for the signer
+        signer_client_user_id = '2939'
+        signer_tabs = tabs
+
+        signer = docusign.Signer(email=signer_email,
+                                 name=signer_name,
+                                 recipient_id=signer_recipient_id,
+                                 client_user_id=signer_client_user_id,
+                                 tabs=signer_tabs)
+        signers = [signer]
+        recipients = docusign.Recipients(signers=signers)
 
         # send the envelope (otherwise it will be "created" in the Draft folder)
-        envelope_definition.status = 'sent'
+        status = 'sent'
+
+        # create an envelope to be signed
+        envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
+                                                          email_blurb=email_blurb,
+                                                          documents=documents,
+                                                          recipients=recipients,
+                                                          status=status)
 
         envelopes_api = EnvelopesApi()
         diag_api = DiagnosticsApi()
@@ -551,44 +639,55 @@ class SdkUnitTests(unittest.TestCase):
         with open(SignTest1File, 'rb') as sign_file:
             file_contents = sign_file.read()
 
-        # create an envelope to be signed
-        envelope_definition = docusign.EnvelopeDefinition()
-        envelope_definition.email_subject = 'Please Sign my Python SDK Envelope'
-        envelope_definition.email_blurb = 'Hello, Please sign my Python SDK Envelope.'
+        # Set properties for envelope and create an envelope to be signed later on
+        email_subject = 'Please Sign my Python SDK Envelope'
+        email_blurb = 'Hello, Please sign my Python SDK Envelope.'
 
         # add a document to the envelope
-        doc = docusign.Document()
         base64_doc = base64.b64encode(file_contents).decode("utf-8")
-        doc.document_base64 = base64_doc
-        doc.name = 'TestFile.pdf'
-        doc.document_id = '1'
-        envelope_definition.documents = [doc]
+        name = 'TestFile.pdf'
+        document_id = '1'
+        doc = docusign.Document(document_base64=base64_doc,
+                                name=name,
+                                document_id=document_id)
+        documents = [doc]
 
         # Add a recipient to sign the document
-        signer = docusign.Signer()
-        signer.email = Username
-        signer.name = 'Pat Developer'
-        signer.recipient_id = '1'
+        email = Username
+        name = 'Pat Developer'
+        recipient_id = '1'
+        signer = docusign.Signer(email=email,
+                                 name=name,
+                                 recipient_id=recipient_id)
 
         # Create a SignHere tab somewhere on the document for the signer to sign
-        sign_here = docusign.SignHere()
-        sign_here.document_id = '1'
-        sign_here.page_number = '1'
-        sign_here.recipient_id = '1'
-        sign_here.x_position = '100'
-        sign_here.y_position = '100'
-        sign_here.scale_value = '0.5'
+        document_id = '1'
+        page_number = '1'
+        recipient_id = '1'
+        x_position = '100'
+        y_position = '100'
+        scale_value = '0.5'
+        sign_here = docusign.SignHere(document_id=document_id,
+                                      page_number=page_number,
+                                      recipient_id=recipient_id,
+                                      x_position=x_position,
+                                      y_position=y_position,
+                                      scale_value=scale_value)
 
-        tabs = docusign.Tabs()
-        tabs.sign_here_tabs = [sign_here]
+        sign_here_tabs = [sign_here]
+        tabs = docusign.Tabs(sign_here_tabs=sign_here_tabs)
         signer.tabs = tabs
 
-        recipients = docusign.Recipients()
-        recipients.signers = [signer]
-        envelope_definition.recipients = recipients
+        signers = [signer]
+        recipients = docusign.Recipients(signers=signers)
 
-        envelope_definition.status = 'sent'
-
+        status = 'sent'
+        # Now setting all the properties in previous steps create the envelope now
+        envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
+                                                          email_blurb=email_blurb,
+                                                          documents=documents,
+                                                          recipients=recipients,
+                                                          status=status)
         envelopes_api = EnvelopesApi()
 
         try:
@@ -611,13 +710,16 @@ class SdkUnitTests(unittest.TestCase):
             # In production, use DocuSign Connect to get notified when the status of the envelope have changed.
             sleep(1)
             # Test if we moved the envelope to the correct folder
-            list_from_drafts_folder = folders_api.list_items(self.user_info.accounts[0].account_id, to_folder_id)
+
+            search_options = "true"
+            list_from_drafts_folder = folders_api.list_items(self.user_info.accounts[0].account_id, to_folder_id, include_items=search_options)
 
             assert list_from_drafts_folder is not None
 
-            for item in list_from_drafts_folder.folder_items:
-                if item.envelope_id == envelope_summary.envelope_id:
-                    return
+            for folder in list_from_drafts_folder.folders:
+                for list_item in folder.folder_items:
+                    if list_item.envelope_id == envelope_summary.envelope_id:
+                        return
 
             assert False
 
