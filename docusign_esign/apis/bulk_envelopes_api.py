@@ -519,7 +519,7 @@ class BulkEnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_recipients(self, account_id, envelope_id, recipient_id, **kwargs):
+    def update_recipients(self, account_id, envelope_id, recipient_id, bulk_recipients_request, **kwargs):
         """
         Adds or replaces envelope bulk recipients.
         Updates the bulk recipients in a draft envelope using a file upload. The Content-Type supported for uploading a bulk recipient file is CSV (text/csv).  The REST API does not support modifying individual rows or values in the bulk recipients file. It only allows the entire file to be added or replaced with a new file.
@@ -529,26 +529,26 @@ class BulkEnvelopesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_recipients(account_id, envelope_id, recipient_id, callback=callback_function)
+        >>> thread = api.update_recipients(account_id, envelope_id, recipient_id, bulk_recipients_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
-        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :param str recipient_id: The ID of the recipient being accessed. (required)
-        :param BulkRecipientsRequest bulk_recipients_request:
+        :param str envelope_id: The envelope's GUID. Eg 93be49ab-afa0-4adf-933c-f752070d71ec  (required)
+        :param str recipient_id: The `recipientId` used when the envelope or template was created. (required)
+        :param str bulk_recipients_request:  (required)
         :return: BulkRecipientsSummaryResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_recipients_with_http_info(account_id, envelope_id, recipient_id, **kwargs)
+            return self.update_recipients_with_http_info(account_id, envelope_id, recipient_id, bulk_recipients_request, **kwargs)
         else:
-            (data) = self.update_recipients_with_http_info(account_id, envelope_id, recipient_id, **kwargs)
+            (data) = self.update_recipients_with_http_info(account_id, envelope_id, recipient_id, bulk_recipients_request, **kwargs)
             return data
 
-    def update_recipients_with_http_info(self, account_id, envelope_id, recipient_id, **kwargs):
+    def update_recipients_with_http_info(self, account_id, envelope_id, recipient_id, bulk_recipients_request, **kwargs):
         """
         Adds or replaces envelope bulk recipients.
         Updates the bulk recipients in a draft envelope using a file upload. The Content-Type supported for uploading a bulk recipient file is CSV (text/csv).  The REST API does not support modifying individual rows or values in the bulk recipients file. It only allows the entire file to be added or replaced with a new file.
@@ -558,14 +558,14 @@ class BulkEnvelopesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_recipients_with_http_info(account_id, envelope_id, recipient_id, callback=callback_function)
+        >>> thread = api.update_recipients_with_http_info(account_id, envelope_id, recipient_id, bulk_recipients_request, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
-        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :param str recipient_id: The ID of the recipient being accessed. (required)
-        :param BulkRecipientsRequest bulk_recipients_request:
+        :param str envelope_id: The envelope's GUID. Eg 93be49ab-afa0-4adf-933c-f752070d71ec  (required)
+        :param str recipient_id: The `recipientId` used when the envelope or template was created. (required)
+        :param str bulk_recipients_request:  (required)
         :return: BulkRecipientsSummaryResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -595,6 +595,9 @@ class BulkEnvelopesApi(object):
         # verify the required parameter 'recipient_id' is set
         if ('recipient_id' not in params) or (params['recipient_id'] is None):
             raise ValueError("Missing the required parameter `recipient_id` when calling `update_recipients`")
+        # verify the required parameter 'bulk_recipients_request' is set
+        if ('bulk_recipients_request' not in params) or (params['bulk_recipients_request'] is None):
+            raise ValueError("Missing the required parameter `bulk_recipients_request` when calling `update_recipients`")
 
 
         collection_formats = {}
