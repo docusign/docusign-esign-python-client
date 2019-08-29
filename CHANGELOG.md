@@ -5,9 +5,9 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ## [2.1.0rc1] - eSignature API v2-19.2.02 - 2019-08-28
 ### Changed
-* Updated the way the models and classes are initialized. Now using constructor parameters to initialize the classes. Updates to unit tests.
+* Updated the way the models and classes are initialized. Now using constructor parameters to initialize the classes. Updates to unit tests. (DCM-1788)
 ### Fixed
-* A bug in model mapping where instead of mapping to custom DocuSign `Date` class, was mapping to python `date` class. Causing the functions such as `envelope_api.list_tabs()` to raise exception. (DCM-1788)
+* A bug in model mapping where instead of mapping to custom DocuSign `Date` class, was mapping to python `date` class. Causing the functions such as `envelope_api.list_tabs()` to raise exception. (DCM-3102)
 
 ## [2.0.1] - 2019-06-24
 ### Removed
