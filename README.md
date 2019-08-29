@@ -10,7 +10,7 @@
 
 ## Requirements
 
-- Python 2.7 (3.6+ recommended)
+- Python 2.7 (3.7+ recommended)
 - Free [Developer Sandbox](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
 
 ## Compatibility
