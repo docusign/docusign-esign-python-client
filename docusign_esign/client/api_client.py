@@ -689,7 +689,10 @@ class ApiClient(object):
                                 post_params=self.sanitize_for_serialization(
                                     {"assertion": token, "grant_type": OAuth.GRANT_TYPE_JWT}))
 
-        response_data = json.loads(response.data)
+        if PY3:
+            response_data = json.loads(response.data.decode('utf8', 'replace'))
+        else:
+            response_data = json.loads(response.data)
 
         if 'token_type' in response_data and 'access_token' in response_data:
             self.set_default_header("Authorization", response_data['token_type'] + " " + response_data['access_token'])
@@ -730,7 +733,11 @@ class ApiClient(object):
                                     {"Content-Type": "application/x-www-form-urlencoded"}),
                                 post_params=self.sanitize_for_serialization(
                                     {"assertion": token, "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer"}))
-        response_data = json.loads(response.data)
+
+        if PY3:
+            response_data = json.loads(response.data.decode('utf8', 'replace'))
+        else:
+            response_data = json.loads(response.data)
 
         if 'token_type' in response_data and 'access_token' in response_data:
             self.set_default_header("Authorization", response_data['token_type'] + " " + response_data['access_token'])
