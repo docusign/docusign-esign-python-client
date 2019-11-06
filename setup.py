@@ -16,7 +16,7 @@ import os
 from setuptools import setup, find_packages, Command
 
 NAME = "docusign_esign"
-VERSION = "3.0.0"
+VERSION = "3.0.1a"
 # To install the library, run the following
 #
 # python setup.py install
