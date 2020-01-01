@@ -565,6 +565,9 @@ class ApiClient(object):
             filename = re. \
                 search(r'filename=[\'"]?([^\'"\s]+)[\'"]?', content_disposition). \
                 group(1)
+            curr_time = datetime.now()
+            formatted_time = curr_time.strftime('%m%d%Y_%H%M%S_%f')
+            filename = "{}_{}".format(formatted_time, filename)
             path = os.path.join(os.path.dirname(path), filename)
 
         with open(path, "wb") as f:
