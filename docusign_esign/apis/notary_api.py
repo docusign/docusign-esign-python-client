@@ -40,6 +40,696 @@ class NotaryApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
+    def create_notary(self, **kwargs):
+        """
+        Add a notary to the system
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_notary(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param Notary notary:
+        :return: Notary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_notary_with_http_info(**kwargs)
+        else:
+            (data) = self.create_notary_with_http_info(**kwargs)
+            return data
+
+    def create_notary_with_http_info(self, **kwargs):
+        """
+        Add a notary to the system
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_notary_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param Notary notary:
+        :return: Notary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['notary']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_notary" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/current_user/notary'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'notary' in params:
+            body_params = params['notary']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Notary',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_notary_jurisdictions(self, **kwargs):
+        """
+        Add a notary jurisdiction to the system
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_notary_jurisdictions(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param NotaryJurisdiction notary_jurisdiction:
+        :return: NotaryJurisdiction
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_notary_jurisdictions_with_http_info(**kwargs)
+        else:
+            (data) = self.create_notary_jurisdictions_with_http_info(**kwargs)
+            return data
+
+    def create_notary_jurisdictions_with_http_info(self, **kwargs):
+        """
+        Add a notary jurisdiction to the system
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_notary_jurisdictions_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param NotaryJurisdiction notary_jurisdiction:
+        :return: NotaryJurisdiction
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['notary_jurisdiction']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_notary_jurisdictions" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/current_user/notary/jurisdictions'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'notary_jurisdiction' in params:
+            body_params = params['notary_jurisdiction']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='NotaryJurisdiction',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_notary_jurisdiction(self, jurisdiction_id, **kwargs):
+        """
+        Delete a notary jurisdiction a specified user.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_notary_jurisdiction(jurisdiction_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str jurisdiction_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_notary_jurisdiction_with_http_info(jurisdiction_id, **kwargs)
+        else:
+            (data) = self.delete_notary_jurisdiction_with_http_info(jurisdiction_id, **kwargs)
+            return data
+
+    def delete_notary_jurisdiction_with_http_info(self, jurisdiction_id, **kwargs):
+        """
+        Delete a notary jurisdiction a specified user.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_notary_jurisdiction_with_http_info(jurisdiction_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str jurisdiction_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['jurisdiction_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_notary_jurisdiction" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'jurisdiction_id' is set
+        if ('jurisdiction_id' not in params) or (params['jurisdiction_id'] is None):
+            raise ValueError("Missing the required parameter `jurisdiction_id` when calling `delete_notary_jurisdiction`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/current_user/notary/jurisdictions/{jurisdictionId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'jurisdiction_id' in params:
+            path_params['jurisdictionId'] = params['jurisdiction_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_notary(self, **kwargs):
+        """
+        Get notary settings for a user
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_notary(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str include_jurisdictions:
+        :return: NotaryResult
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_notary_with_http_info(**kwargs)
+        else:
+            (data) = self.get_notary_with_http_info(**kwargs)
+            return data
+
+    def get_notary_with_http_info(self, **kwargs):
+        """
+        Get notary settings for a user
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_notary_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str include_jurisdictions:
+        :return: NotaryResult
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['include_jurisdictions']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_notary" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/current_user/notary'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+        if 'include_jurisdictions' in params:
+            query_params['include_jurisdictions'] = params['include_jurisdictions']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='NotaryResult',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_notary_jurisdiction(self, jurisdiction_id, **kwargs):
+        """
+        Get notary a jurisdiction for a user
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_notary_jurisdiction(jurisdiction_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str jurisdiction_id: (required)
+        :return: NotaryJurisdiction
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_notary_jurisdiction_with_http_info(jurisdiction_id, **kwargs)
+        else:
+            (data) = self.get_notary_jurisdiction_with_http_info(jurisdiction_id, **kwargs)
+            return data
+
+    def get_notary_jurisdiction_with_http_info(self, jurisdiction_id, **kwargs):
+        """
+        Get notary a jurisdiction for a user
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_notary_jurisdiction_with_http_info(jurisdiction_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str jurisdiction_id: (required)
+        :return: NotaryJurisdiction
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['jurisdiction_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_notary_jurisdiction" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'jurisdiction_id' is set
+        if ('jurisdiction_id' not in params) or (params['jurisdiction_id'] is None):
+            raise ValueError("Missing the required parameter `jurisdiction_id` when calling `get_notary_jurisdiction`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/current_user/notary/jurisdictions/{jurisdictionId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'jurisdiction_id' in params:
+            path_params['jurisdictionId'] = params['jurisdiction_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='NotaryJurisdiction',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_notary_jurisdiction_seal(self, jurisdiction_id, **kwargs):
+        """
+        Get notary seal for a jurisdiction
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_notary_jurisdiction_seal(jurisdiction_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str jurisdiction_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_notary_jurisdiction_seal_with_http_info(jurisdiction_id, **kwargs)
+        else:
+            (data) = self.get_notary_jurisdiction_seal_with_http_info(jurisdiction_id, **kwargs)
+            return data
+
+    def get_notary_jurisdiction_seal_with_http_info(self, jurisdiction_id, **kwargs):
+        """
+        Get notary seal for a jurisdiction
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_notary_jurisdiction_seal_with_http_info(jurisdiction_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str jurisdiction_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['jurisdiction_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_notary_jurisdiction_seal" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'jurisdiction_id' is set
+        if ('jurisdiction_id' not in params) or (params['jurisdiction_id'] is None):
+            raise ValueError("Missing the required parameter `jurisdiction_id` when calling `get_notary_jurisdiction_seal`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/current_user/notary/jurisdictions/{jurisdictionId}/seal'.replace('{format}', 'json')
+        path_params = {}
+        if 'jurisdiction_id' in params:
+            path_params['jurisdictionId'] = params['jurisdiction_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_notary_jurisdictions(self, **kwargs):
+        """
+        Get notary jurisdictions for a user
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_notary_jurisdictions(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: NotaryJurisdictionList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_notary_jurisdictions_with_http_info(**kwargs)
+        else:
+            (data) = self.get_notary_jurisdictions_with_http_info(**kwargs)
+            return data
+
+    def get_notary_jurisdictions_with_http_info(self, **kwargs):
+        """
+        Get notary jurisdictions for a user
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_notary_jurisdictions_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: NotaryJurisdictionList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_notary_jurisdictions" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/current_user/notary/jurisdictions'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='NotaryJurisdictionList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def list_notary_journals(self, **kwargs):
         """
         Get notary jurisdictions for a user
@@ -139,6 +829,209 @@ class NotaryApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='NotaryJournalList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_notary(self, **kwargs):
+        """
+        Update a notary
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_notary(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param Notary notary:
+        :return: Notary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_notary_with_http_info(**kwargs)
+        else:
+            (data) = self.update_notary_with_http_info(**kwargs)
+            return data
+
+    def update_notary_with_http_info(self, **kwargs):
+        """
+        Update a notary
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_notary_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param Notary notary:
+        :return: Notary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['notary']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_notary" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/current_user/notary'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'notary' in params:
+            body_params = params['notary']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Notary',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_notary_jurisdiction(self, jurisdiction_id, **kwargs):
+        """
+        Update a notary jurisdiction
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_notary_jurisdiction(jurisdiction_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str jurisdiction_id: (required)
+        :param NotaryJurisdiction notary_jurisdiction:
+        :return: NotaryJurisdiction
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_notary_jurisdiction_with_http_info(jurisdiction_id, **kwargs)
+        else:
+            (data) = self.update_notary_jurisdiction_with_http_info(jurisdiction_id, **kwargs)
+            return data
+
+    def update_notary_jurisdiction_with_http_info(self, jurisdiction_id, **kwargs):
+        """
+        Update a notary jurisdiction
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_notary_jurisdiction_with_http_info(jurisdiction_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str jurisdiction_id: (required)
+        :param NotaryJurisdiction notary_jurisdiction:
+        :return: NotaryJurisdiction
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['jurisdiction_id', 'notary_jurisdiction']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_notary_jurisdiction" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'jurisdiction_id' is set
+        if ('jurisdiction_id' not in params) or (params['jurisdiction_id'] is None):
+            raise ValueError("Missing the required parameter `jurisdiction_id` when calling `update_notary_jurisdiction`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/current_user/notary/jurisdictions/{jurisdictionId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'jurisdiction_id' in params:
+            path_params['jurisdictionId'] = params['jurisdiction_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'notary_jurisdiction' in params:
+            body_params = params['notary_jurisdiction']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='NotaryJurisdiction',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
