@@ -14,9 +14,10 @@ from .envelopes_api import EnvelopesApi
 from .folders_api import FoldersApi
 from .groups_api import GroupsApi
 from .notary_api import NotaryApi
+from .organizations_api import OrganizationsApi
 from .power_forms_api import PowerFormsApi
 from .signing_groups_api import SigningGroupsApi
+from .tsps_api import TSPsApi
 from .templates_api import TemplatesApi
-from .trust_service_providers_api import TrustServiceProvidersApi
 from .users_api import UsersApi
 from .workspaces_api import WorkspacesApi
