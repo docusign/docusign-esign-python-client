@@ -12,3 +12,6 @@ install:
     - pip install -r test-requirements.txt
 # command to run tests
 script: nosetests -s
+matrix:
+  allow_failures:
+    - python: nightly # Allow all tests to fail for nightly
