@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [2.2.0] - eSignature API v2-19.4.01 - 2020-02-10
+### Fixed
+* A bug in deserialize file with the same name, if downloaded multiple times on different thread or during parallel processing, wrong files are overwritten or served. (DCM-3631)
+* Unit test updated to handle delays in moving Envelopes.
+
 ## [2.2.0rc2] - eSignature API v2-19.4.01 - 2019-12-31
 ### Fixed
 * A bug in deserialize file with the same name, if downloaded multiple times on different thread or during parallel processing, wrong files are overwritten or served. (DCM-3631)
