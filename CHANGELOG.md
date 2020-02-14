@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [3.1.0] - eSignature API v2.1-19.4.01 - 2020-02-10
+### Changed
+* Changed the way the model takes in the parameters where the size of the parameters exceeded 255 arguments, now works with python3 versions which were limiting it. (DCM-3701)
+### Fixed
+* A bug in deserialize file with the same name, if downloaded multiple times on different thread or during parallel processing, wrong files are overwritten or served. (DCM-3631)
+* Unit test updated to handle delays in moving Envelopes.
+* Changed the return type of model to `TemplateInformation` to fix deserialization.
+
 ## [3.1.0rc2] - eSignature API v2.1-19.4.01 - 2019-12-31
 ### Changed
 * Changed the way the model takes in the parameters where the size of the parameters exceeded 255 arguments, now works with python3 versions which were limiting it. (DCM-3701)
