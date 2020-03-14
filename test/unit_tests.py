@@ -363,10 +363,10 @@ class SdkUnitTests(unittest.TestCase):
             template_summary = templates_api.create_template(self.user_info.accounts[0].account_id,
                                                              envelope_template=envelope_template)
             assert template_summary is not None
-            assert template_summary.templates[0].template_id is not None
+            assert template_summary.template_id is not None
 
             print("TemplateSummary: ", end="")
-            pprint(template_summary.templates[0])
+            pprint(template_summary)
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)

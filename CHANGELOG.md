@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [3.2.0rc1] - eSignature API v2.1-20.1.00 - 2020-03-13
+### Changed
+* The SDK now supports version v20.1.00 of the DocuSign eSignature API.
+* SDK Release Version updated.
+
 ## [3.1.0] - eSignature API v2.1-19.4.01 - 2020-02-10
 ### Changed
 * Changed the way the model takes in the parameters where the size of the parameters exceeded 255 arguments, now works with python3 versions which were limiting it. (DCM-3701)
