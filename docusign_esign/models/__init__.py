@@ -18,6 +18,7 @@ from .access_code_format import AccessCodeFormat
 from .account_address import AccountAddress
 from .account_billing_plan import AccountBillingPlan
 from .account_billing_plan_response import AccountBillingPlanResponse
+from .account_identity_input_option import AccountIdentityInputOption
 from .account_identity_verification_response import AccountIdentityVerificationResponse
 from .account_identity_verification_step import AccountIdentityVerificationStep
 from .account_identity_verification_workflow import AccountIdentityVerificationWorkflow
@@ -130,6 +131,7 @@ from .composite_template import CompositeTemplate
 from .connect_config_results import ConnectConfigResults
 from .connect_custom_configuration import ConnectCustomConfiguration
 from .connect_debug_log import ConnectDebugLog
+from .connect_event_data import ConnectEventData
 from .connect_failure_filter import ConnectFailureFilter
 from .connect_failure_result import ConnectFailureResult
 from .connect_failure_results import ConnectFailureResults
@@ -162,16 +164,6 @@ from .date_stamp_properties import DateStampProperties
 from .decline import Decline
 from .diagnostics_settings_information import DiagnosticsSettingsInformation
 from .direct_debit_processor_information import DirectDebitProcessorInformation
-from .display_appliance_account import DisplayApplianceAccount
-from .display_appliance_custom_field import DisplayApplianceCustomField
-from .display_appliance_document import DisplayApplianceDocument
-from .display_appliance_document_page import DisplayApplianceDocumentPage
-from .display_appliance_envelope import DisplayApplianceEnvelope
-from .display_appliance_info import DisplayApplianceInfo
-from .display_appliance_page import DisplayAppliancePage
-from .display_appliance_pdf import DisplayAppliancePdf
-from .display_appliance_recipient import DisplayApplianceRecipient
-from .display_appliance_signer_attachment import DisplayApplianceSignerAttachment
 from .dob_information_input import DobInformationInput
 from .document import Document
 from .document_fields_information import DocumentFieldsInformation
@@ -188,6 +180,9 @@ from .document_template_list import DocumentTemplateList
 from .document_update_info import DocumentUpdateInfo
 from .document_visibility import DocumentVisibility
 from .document_visibility_list import DocumentVisibilityList
+from .downgrade_billing_plan_information import DowngradeBillingPlanInformation
+from .downgrade_plan_update_response import DowngradePlanUpdateResponse
+from .draw import Draw
 from .e_note_configuration import ENoteConfiguration
 from .editor import Editor
 from .email import Email
@@ -338,6 +333,8 @@ from .recipient_domain import RecipientDomain
 from .recipient_email_notification import RecipientEmailNotification
 from .recipient_event import RecipientEvent
 from .recipient_form_data import RecipientFormData
+from .recipient_identity_input_option import RecipientIdentityInputOption
+from .recipient_identity_phone_number import RecipientIdentityPhoneNumber
 from .recipient_identity_verification import RecipientIdentityVerification
 from .recipient_names_response import RecipientNamesResponse
 from .recipient_phone_authentication import RecipientPhoneAuthentication

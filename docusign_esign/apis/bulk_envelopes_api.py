@@ -611,7 +611,7 @@ class BulkEnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str batch_id: (required)
         :param str count: Specifies the number of entries to return.
-        :param str include: Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=Ã¢â¬Âfailed,queuedÃ¢â¬Â)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent Ã¢â¬â This only returns entries with a sent status.  
+        :param str include: Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=\"failed,queued\")   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.  
         :param str start_position: Specifies the location in the list of envelopes from which to start.
         :return: BulkEnvelopeStatus
                  If the method is called asynchronously,
@@ -641,7 +641,7 @@ class BulkEnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str batch_id: (required)
         :param str count: Specifies the number of entries to return.
-        :param str include: Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=Ã¢â¬Âfailed,queuedÃ¢â¬Â)   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent Ã¢â¬â This only returns entries with a sent status.  
+        :param str include: Specifies which entries are included in the response. Multiple entries can be included by using commas in the query string (example: ?include=\"failed,queued\")   Valid values are:   * all - Returns all entries. If present, overrides all other query settings. This is the default if no query string is provided. * failed - This only returns entries with a failed status. * queued - This only returns entries with a queued status. * sent - This only returns entries with a sent status.  
         :param str start_position: Specifies the location in the list of envelopes from which to start.
         :return: BulkEnvelopeStatus
                  If the method is called asynchronously,

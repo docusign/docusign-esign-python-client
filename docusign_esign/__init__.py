@@ -395,7 +395,6 @@ from .apis.notary_api import NotaryApi
 from .apis.power_forms_api import PowerFormsApi
 from .apis.signing_groups_api import SigningGroupsApi
 from .apis.templates_api import TemplatesApi
-from .apis.trust_service_providers_api import TrustServiceProvidersApi
 from .apis.users_api import UsersApi
 from .apis.workspaces_api import WorkspacesApi
 
