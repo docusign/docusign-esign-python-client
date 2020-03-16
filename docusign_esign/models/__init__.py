@@ -272,6 +272,8 @@ from .recipient_domain import RecipientDomain
 from .recipient_email_notification import RecipientEmailNotification
 from .recipient_event import RecipientEvent
 from .recipient_form_data import RecipientFormData
+from .recipient_identity_input_option import RecipientIdentityInputOption
+from .recipient_identity_phone_number import RecipientIdentityPhoneNumber
 from .recipient_identity_verification import RecipientIdentityVerification
 from .recipient_names_response import RecipientNamesResponse
 from .recipient_phone_authentication import RecipientPhoneAuthentication
