@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [2.3.0rc1] - eSignature API v2-20.1.00 - 2020-03-13
+### Changed
+* The SDK now supports version 20.1.00 of the DocuSign eSignature API.
+* SDK Release Version updated.
+
 ## [2.2.0] - eSignature API v2-19.4.01 - 2020-02-10
 ### Fixed
 * A bug in deserialize file with the same name, if downloaded multiple times on different thread or during parallel processing, wrong files are overwritten or served. (DCM-3631)
