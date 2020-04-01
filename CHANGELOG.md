@@ -3,6 +3,16 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [3.2.0] - eSignature API v2.1-20.1.00 - 2020-03-27
+### Changed
+*   Added support for version v2.1-20.1.00 of the DocuSign eSignature API.
+*   Updated the SDK release version.
+### Added
+*   Added the new property `copy_recipient_data` to envelopes. When set to **true**, the information that recipients enter is retained when you clone an envelope. For example, if you resend an envelope that was declined or voided after one or more recipients entered data, that data is retained. Note that this functionality must be enabled for the account.
+*   Added `RecipientIdentityInputOption` and `input_options` to support Identity Verification workflows: Reserved for DocuSign.
+### Deleted
+*   Deleted the GET methods for account seals providers, which returned the seals for an account.
+
 ## [3.2.0rc2] - eSignature API v2.1-20.1.00 - 2020-03-13
 ### Changed
 * The SDK now supports version v20.1.00 of the DocuSign eSignature API.
