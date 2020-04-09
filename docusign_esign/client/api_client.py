@@ -774,16 +774,44 @@ class ApiClient(object):
         """
         if not client_id or not client_secret or not code:
             raise ArgumentException
+        post_params = self.sanitize_for_serialization({
+            "grant_type": "authorization_code",
+            "code": code
+        })
+        return self.__auth_request(client_id, client_secret, post_params)
+
+    def refresh_access_token(self, client_id, client_secret, refresh_token):
+        """
+        RefreshAccessToken will refresh the access token.
+        :param client_id: DocuSign OAuth Client Id(AKA Integrator Key)
+        :param client_secret: The secret key you generated when you set up the integration in DocuSign Admin console.
+        :param refresh_token: The refresh token
+        :return: OAuthToken object
+        """
+        if not client_id or not client_secret or not refresh_token:
+            raise ArgumentException
+
+        post_params = self.sanitize_for_serialization({
+            "grant_type": "refresh_token",
+            "refresh_token": refresh_token
+        })
+        return self.__auth_request(client_id, client_secret, post_params)
+
+    def __auth_request(self, client_id, client_secret, post_params):
+        """
+        :param client_id: DocuSign OAuth Client Id(AKA Integrator Key)
+        :param client_secret: The secret key you generated when you set up the integration in DocuSign Admin console.
+        :param post_params: Post of request
+        :return: OAuthToken object
+        """
+        if not client_id or not client_secret or not post_params:
+            raise ArgumentException
         url = "https://{0}/oauth/token".format(self.oauth_host_name)
         integrator_and_secret_key = b"Basic " + base64.b64encode(str.encode("{}:{}".format(client_id, client_secret)))
         headers = {
             "Authorization": integrator_and_secret_key.decode("utf-8"),
             "Content-Type": "application/x-www-form-urlencoded",
         }
-        post_params = self.sanitize_for_serialization({
-            "grant_type": "authorization_code",
-            "code": code
-        })
         response = self.rest_client.POST(url, headers=headers, post_params=post_params)
 
         return self.deserialize(response=response, response_type=OAuthToken)
