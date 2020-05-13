@@ -3,7 +3,7 @@
 """
     DocuSign REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
 
     OpenAPI spec version: v2.1
     Contact: devcenter@docusign.com
@@ -56,6 +56,7 @@ class EnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str preserve_template_recipient:
         :param DocumentTemplateList document_template_list:
         :return: DocumentTemplateList
                  If the method is called asynchronously,
@@ -84,13 +85,14 @@ class EnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str preserve_template_recipient:
         :param DocumentTemplateList document_template_list:
         :return: DocumentTemplateList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'envelope_id', 'document_template_list']
+        all_params = ['account_id', 'envelope_id', 'preserve_template_recipient', 'document_template_list']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -123,6 +125,8 @@ class EnvelopesApi(object):
             path_params['envelopeId'] = params['envelope_id']
 
         query_params = {}
+        if 'preserve_template_recipient' in params:
+            query_params['preserve_template_recipient'] = params['preserve_template_recipient']
 
         header_params = {}
 
@@ -171,6 +175,7 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str document_id: The ID of the document being accessed. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str preserve_template_recipient:
         :param DocumentTemplateList document_template_list:
         :return: DocumentTemplateList
                  If the method is called asynchronously,
@@ -200,13 +205,14 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str document_id: The ID of the document being accessed. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str preserve_template_recipient:
         :param DocumentTemplateList document_template_list:
         :return: DocumentTemplateList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'document_id', 'envelope_id', 'document_template_list']
+        all_params = ['account_id', 'document_id', 'envelope_id', 'preserve_template_recipient', 'document_template_list']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -244,6 +250,8 @@ class EnvelopesApi(object):
             path_params['envelopeId'] = params['envelope_id']
 
         query_params = {}
+        if 'preserve_template_recipient' in params:
+            query_params['preserve_template_recipient'] = params['preserve_template_recipient']
 
         header_params = {}
 
