@@ -3,7 +3,7 @@
 """
     DocuSign REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
 
     OpenAPI spec version: v2
     Contact: devcenter@docusign.com
