@@ -3,7 +3,7 @@
 """
     DocuSign REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
 
     OpenAPI spec version: v2
     Contact: devcenter@docusign.com
@@ -535,7 +535,7 @@ class BulkEnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account id GUID. (required)
         :param str envelope_id: The envelope's GUID. Eg 93be49ab-afa0-4adf-933c-f752070d71ec  (required)
-        :param str recipient_id: The `recipientId` used when the envelope or template was created. (required)
+        :param str recipient_id: A local reference that senders use to map recipients to other objects, such as specific document tabs. Within an envelope, each `recipientId` must be unique, but there is no uniqueness requirement across envelopes. For example, many envelopes assign the first recipient a `recipientId` of `1`. (required)
         :param str bulk_recipients_request:  (required)
         :return: BulkRecipientsSummaryResponse
                  If the method is called asynchronously,
@@ -564,7 +564,7 @@ class BulkEnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account id GUID. (required)
         :param str envelope_id: The envelope's GUID. Eg 93be49ab-afa0-4adf-933c-f752070d71ec  (required)
-        :param str recipient_id: The `recipientId` used when the envelope or template was created. (required)
+        :param str recipient_id: A local reference that senders use to map recipients to other objects, such as specific document tabs. Within an envelope, each `recipientId` must be unique, but there is no uniqueness requirement across envelopes. For example, many envelopes assign the first recipient a `recipientId` of `1`. (required)
         :param str bulk_recipients_request:  (required)
         :return: BulkRecipientsSummaryResponse
                  If the method is called asynchronously,
