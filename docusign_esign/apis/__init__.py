@@ -19,5 +19,6 @@ from .organizations_api import OrganizationsApi
 from .power_forms_api import PowerFormsApi
 from .signing_groups_api import SigningGroupsApi
 from .templates_api import TemplatesApi
+from .trust_service_providers_api import TrustServiceProvidersApi
 from .users_api import UsersApi
 from .workspaces_api import WorkspacesApi
