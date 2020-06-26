@@ -32,35 +32,50 @@ class BulkSendResponse(object):
     """
     swagger_types = {
         'batch_id': 'str',
+        'batch_size': 'str',
         'envelope_or_template_id': 'str',
         'error_details': 'list[str]',
-        'errors': 'list[str]'
+        'errors': 'list[str]',
+        'queue_limit': 'str',
+        'total_queued': 'str'
     }
 
     attribute_map = {
         'batch_id': 'batchId',
+        'batch_size': 'batchSize',
         'envelope_or_template_id': 'envelopeOrTemplateId',
         'error_details': 'errorDetails',
-        'errors': 'errors'
+        'errors': 'errors',
+        'queue_limit': 'queueLimit',
+        'total_queued': 'totalQueued'
     }
 
-    def __init__(self, batch_id=None, envelope_or_template_id=None, error_details=None, errors=None):  # noqa: E501
+    def __init__(self, batch_id=None, batch_size=None, envelope_or_template_id=None, error_details=None, errors=None, queue_limit=None, total_queued=None):  # noqa: E501
         """BulkSendResponse - a model defined in Swagger"""  # noqa: E501
 
         self._batch_id = None
+        self._batch_size = None
         self._envelope_or_template_id = None
         self._error_details = None
         self._errors = None
+        self._queue_limit = None
+        self._total_queued = None
         self.discriminator = None
 
         if batch_id is not None:
             self.batch_id = batch_id
+        if batch_size is not None:
+            self.batch_size = batch_size
         if envelope_or_template_id is not None:
             self.envelope_or_template_id = envelope_or_template_id
         if error_details is not None:
             self.error_details = error_details
         if errors is not None:
             self.errors = errors
+        if queue_limit is not None:
+            self.queue_limit = queue_limit
+        if total_queued is not None:
+            self.total_queued = total_queued
 
     @property
     def batch_id(self):
@@ -84,6 +99,29 @@ class BulkSendResponse(object):
         """
 
         self._batch_id = batch_id
+
+    @property
+    def batch_size(self):
+        """Gets the batch_size of this BulkSendResponse.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The batch_size of this BulkSendResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._batch_size
+
+    @batch_size.setter
+    def batch_size(self, batch_size):
+        """Sets the batch_size of this BulkSendResponse.
+
+          # noqa: E501
+
+        :param batch_size: The batch_size of this BulkSendResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._batch_size = batch_size
 
     @property
     def envelope_or_template_id(self):
@@ -153,6 +191,52 @@ class BulkSendResponse(object):
         """
 
         self._errors = errors
+
+    @property
+    def queue_limit(self):
+        """Gets the queue_limit of this BulkSendResponse.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The queue_limit of this BulkSendResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._queue_limit
+
+    @queue_limit.setter
+    def queue_limit(self, queue_limit):
+        """Sets the queue_limit of this BulkSendResponse.
+
+          # noqa: E501
+
+        :param queue_limit: The queue_limit of this BulkSendResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._queue_limit = queue_limit
+
+    @property
+    def total_queued(self):
+        """Gets the total_queued of this BulkSendResponse.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The total_queued of this BulkSendResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._total_queued
+
+    @total_queued.setter
+    def total_queued(self, total_queued):
+        """Sets the total_queued of this BulkSendResponse.
+
+          # noqa: E501
+
+        :param total_queued: The total_queued of this BulkSendResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._total_queued = total_queued
 
     def to_dict(self):
         """Returns the model properties as a dict"""
