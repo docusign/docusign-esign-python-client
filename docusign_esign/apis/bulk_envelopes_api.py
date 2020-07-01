@@ -1292,7 +1292,7 @@ class BulkEnvelopesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID GUID. (required)
-        :param str envelope_id: The envelope's GUID.   Example: `93be49ab-xxxx-xxxx-xxxx-f752070d71ec` (required)
+        :param str envelope_id: The envelope's GUID.   Example: `93be49ab-xxxx-xxxx-xxxx-f752070d71ec`  (required)
         :param str recipient_id: A local reference that senders use to map recipients to other objects, such as specific document tabs. Within an envelope, each `recipientId` must be unique, but there is no uniqueness requirement across envelopes. For example, many envelopes assign the first recipient a `recipientId` of `1`. (required)
         :param str bulk_recipients_request:  (required)
         :return: BulkRecipientsSummaryResponse
@@ -1321,7 +1321,7 @@ class BulkEnvelopesApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID GUID. (required)
-        :param str envelope_id: The envelope's GUID.   Example: `93be49ab-xxxx-xxxx-xxxx-f752070d71ec` (required)
+        :param str envelope_id: The envelope's GUID.   Example: `93be49ab-xxxx-xxxx-xxxx-f752070d71ec`  (required)
         :param str recipient_id: A local reference that senders use to map recipients to other objects, such as specific document tabs. Within an envelope, each `recipientId` must be unique, but there is no uniqueness requirement across envelopes. For example, many envelopes assign the first recipient a `recipientId` of `1`. (required)
         :param str bulk_recipients_request:  (required)
         :return: BulkRecipientsSummaryResponse

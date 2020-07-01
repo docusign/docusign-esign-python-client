@@ -3,7 +3,7 @@
 """
     DocuSign REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
 
     OpenAPI spec version: v2.1
     Contact: devcenter@docusign.com
@@ -11,11 +11,10 @@
 """
 
 
-import os
-from setuptools import setup, find_packages, Command
+from setuptools import setup, find_packages, Command  # noqa: H301
 
-NAME = "docusign_esign"
-VERSION = "3.3.0"
+NAME = "docusign-esign"
+VERSION = "3.4.0rc1"
 # To install the library, run the following
 #
 # python setup.py install
