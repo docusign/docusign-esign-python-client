@@ -15,6 +15,8 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 ### Added
 *   Added the new property `copy_recipient_data` to envelopes. When set to **true**, the information that recipients enter is retained when you clone an envelope. For example, if you resend an envelope that was declined or voided after one or more recipients entered data, that data is retained. Note that this functionality must be enabled for the account.
 *   Added `RecipientIdentityInputOption` and `input_options` to support Identity Verification workflows: Reserved for DocuSign.
+### Deleted
+*   Deleted the GET methods for account seals providers, which returned the seals for an account.
 
 ## [2.3.0rc1] - eSignature API v2-20.1.00 - 2020-03-13
 ### Changed
@@ -33,9 +35,9 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ## [2.1.0] - eSignature API v2-19.2.02 - 2019-10-09
 ### Changed
-* Updated the way the models and classes are initialized. Now using constructor parameters to initialize the classes. Updates to unit tests.
+* Updated the way the models and classes are initialized. Now using constructor parameters to initialize the classes. Updates to unit tests. (DCM-1788)
 ### Fixed
-* A bug in model mapping where instead of mapping to custom DocuSign `Date` class, was mapping to python `date` class. Causing the functions such as `envelope_api.list_tabs()` to raise exception. (DCM-1788)
+* A bug in model mapping where instead of mapping to custom DocuSign `Date` class, was mapping to python `date` class. Causing the functions such as `envelope_api.list_tabs()` to raise exception. (DCM-3102)
 
 ## [2.1.0rc1] - eSignature API v2-19.2.02 - 2019-08-28
 ### Changed
