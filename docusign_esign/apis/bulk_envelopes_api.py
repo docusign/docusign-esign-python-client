@@ -420,7 +420,6 @@ class BulkEnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str count: The number of results to return. This can be 1 to 20.
-        :param str include:
         :param str start_position: The position of the bulk envelope items in the response. This is used for repeated calls, when the number of bulk envelopes returned is too large for one return. The default value is 0.
         :return: BulkEnvelopesResponse
                  If the method is called asynchronously,
@@ -449,14 +448,13 @@ class BulkEnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str count: The number of results to return. This can be 1 to 20.
-        :param str include:
         :param str start_position: The position of the bulk envelope items in the response. This is used for repeated calls, when the number of bulk envelopes returned is too large for one return. The default value is 0.
         :return: BulkEnvelopesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'count', 'include', 'start_position']
+        all_params = ['account_id', 'count', 'start_position']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -486,8 +484,6 @@ class BulkEnvelopesApi(object):
         query_params = {}
         if 'count' in params:
             query_params['count'] = params['count']
-        if 'include' in params:
-            query_params['include'] = params['include']
         if 'start_position' in params:
             query_params['start_position'] = params['start_position']
 
