@@ -65,7 +65,9 @@ class TabMetadata(object):
         'payment_item_code': 'str',
         'payment_item_description': 'str',
         'payment_item_name': 'str',
+        'require_all': 'str',
         'required': 'str',
+        'require_initial_on_shared_change': 'str',
         'scale_value': 'str',
         'selected': 'str',
         'shared': 'str',
@@ -114,7 +116,9 @@ class TabMetadata(object):
         'payment_item_code': 'paymentItemCode',
         'payment_item_description': 'paymentItemDescription',
         'payment_item_name': 'paymentItemName',
+        'require_all': 'requireAll',
         'required': 'required',
+        'require_initial_on_shared_change': 'requireInitialOnSharedChange',
         'scale_value': 'scaleValue',
         'selected': 'selected',
         'shared': 'shared',
@@ -128,7 +132,7 @@ class TabMetadata(object):
         'width': 'width'
     }
 
-    def __init__(self, anchor=None, anchor_case_sensitive=None, anchor_horizontal_alignment=None, anchor_ignore_if_not_present=None, anchor_match_whole_word=None, anchor_units=None, anchor_x_offset=None, anchor_y_offset=None, bold=None, collaborative=None, conceal_value_on_document=None, created_by_display_name=None, created_by_user_id=None, custom_tab_id=None, disable_auto_size=None, editable=None, font=None, font_color=None, font_size=None, height=None, included_in_email=None, initial_value=None, italic=None, items=None, last_modified=None, last_modified_by_display_name=None, last_modified_by_user_id=None, locked=None, maximum_length=None, merge_field=None, name=None, payment_item_code=None, payment_item_description=None, payment_item_name=None, required=None, scale_value=None, selected=None, shared=None, stamp_type=None, stamp_type_metadata=None, tab_label=None, type=None, underline=None, validation_message=None, validation_pattern=None, width=None):  # noqa: E501
+    def __init__(self, anchor=None, anchor_case_sensitive=None, anchor_horizontal_alignment=None, anchor_ignore_if_not_present=None, anchor_match_whole_word=None, anchor_units=None, anchor_x_offset=None, anchor_y_offset=None, bold=None, collaborative=None, conceal_value_on_document=None, created_by_display_name=None, created_by_user_id=None, custom_tab_id=None, disable_auto_size=None, editable=None, font=None, font_color=None, font_size=None, height=None, included_in_email=None, initial_value=None, italic=None, items=None, last_modified=None, last_modified_by_display_name=None, last_modified_by_user_id=None, locked=None, maximum_length=None, merge_field=None, name=None, payment_item_code=None, payment_item_description=None, payment_item_name=None, require_all=None, required=None, require_initial_on_shared_change=None, scale_value=None, selected=None, shared=None, stamp_type=None, stamp_type_metadata=None, tab_label=None, type=None, underline=None, validation_message=None, validation_pattern=None, width=None):  # noqa: E501
         """TabMetadata - a model defined in Swagger"""  # noqa: E501
 
         self._anchor = None
@@ -165,7 +169,9 @@ class TabMetadata(object):
         self._payment_item_code = None
         self._payment_item_description = None
         self._payment_item_name = None
+        self._require_all = None
         self._required = None
+        self._require_initial_on_shared_change = None
         self._scale_value = None
         self._selected = None
         self._shared = None
@@ -247,8 +253,12 @@ class TabMetadata(object):
             self.payment_item_description = payment_item_description
         if payment_item_name is not None:
             self.payment_item_name = payment_item_name
+        if require_all is not None:
+            self.require_all = require_all
         if required is not None:
             self.required = required
+        if require_initial_on_shared_change is not None:
+            self.require_initial_on_shared_change = require_initial_on_shared_change
         if scale_value is not None:
             self.scale_value = scale_value
         if selected is not None:
@@ -1053,6 +1063,29 @@ class TabMetadata(object):
         self._payment_item_name = payment_item_name
 
     @property
+    def require_all(self):
+        """Gets the require_all of this TabMetadata.  # noqa: E501
+
+        When set to **true** and shared is true, information must be entered in this field to complete the envelope.   # noqa: E501
+
+        :return: The require_all of this TabMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._require_all
+
+    @require_all.setter
+    def require_all(self, require_all):
+        """Sets the require_all of this TabMetadata.
+
+        When set to **true** and shared is true, information must be entered in this field to complete the envelope.   # noqa: E501
+
+        :param require_all: The require_all of this TabMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._require_all = require_all
+
+    @property
     def required(self):
         """Gets the required of this TabMetadata.  # noqa: E501
 
@@ -1074,6 +1107,29 @@ class TabMetadata(object):
         """
 
         self._required = required
+
+    @property
+    def require_initial_on_shared_change(self):
+        """Gets the require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+
+        Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.  # noqa: E501
+
+        :return: The require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._require_initial_on_shared_change
+
+    @require_initial_on_shared_change.setter
+    def require_initial_on_shared_change(self, require_initial_on_shared_change):
+        """Sets the require_initial_on_shared_change of this TabMetadata.
+
+        Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.  # noqa: E501
+
+        :param require_initial_on_shared_change: The require_initial_on_shared_change of this TabMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._require_initial_on_shared_change = require_initial_on_shared_change
 
     @property
     def scale_value(self):

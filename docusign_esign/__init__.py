@@ -384,7 +384,6 @@ from .apis.authentication_api import AuthenticationApi
 from .apis.billing_api import BillingApi
 from .apis.bulk_envelopes_api import BulkEnvelopesApi
 from .apis.cloud_storage_api import CloudStorageApi
-from .apis.comments_api import CommentsApi
 from .apis.connect_api import ConnectApi
 from .apis.custom_tabs_api import CustomTabsApi
 from .apis.diagnostics_api import DiagnosticsApi

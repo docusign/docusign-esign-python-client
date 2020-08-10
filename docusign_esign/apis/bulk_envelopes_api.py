@@ -716,6 +716,231 @@ class BulkEnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_bulk_send_batch_status(self, account_id, bulk_send_batch_id, **kwargs):
+        """
+        Gets a specific bulk send batch status
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_bulk_send_batch_status(account_id, bulk_send_batch_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str bulk_send_batch_id: (required)
+        :return: BulkSendBatchStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_bulk_send_batch_status_with_http_info(account_id, bulk_send_batch_id, **kwargs)
+        else:
+            (data) = self.get_bulk_send_batch_status_with_http_info(account_id, bulk_send_batch_id, **kwargs)
+            return data
+
+    def get_bulk_send_batch_status_with_http_info(self, account_id, bulk_send_batch_id, **kwargs):
+        """
+        Gets a specific bulk send batch status
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_bulk_send_batch_status_with_http_info(account_id, bulk_send_batch_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str bulk_send_batch_id: (required)
+        :return: BulkSendBatchStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'bulk_send_batch_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_bulk_send_batch_status" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_bulk_send_batch_status`")
+        # verify the required parameter 'bulk_send_batch_id' is set
+        if ('bulk_send_batch_id' not in params) or (params['bulk_send_batch_id'] is None):
+            raise ValueError("Missing the required parameter `bulk_send_batch_id` when calling `get_bulk_send_batch_status`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'bulk_send_batch_id' in params:
+            path_params['bulkSendBatchId'] = params['bulk_send_batch_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='BulkSendBatchStatus',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_bulk_send_batches(self, account_id, **kwargs):
+        """
+        Returns a list of bulk send batch satuses initiated by account.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_bulk_send_batches(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str batch_ids:
+        :param str count:
+        :param str start_position:
+        :param str status:
+        :return: BulkSendBatchSummaries
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_bulk_send_batches_with_http_info(account_id, **kwargs)
+        else:
+            (data) = self.get_bulk_send_batches_with_http_info(account_id, **kwargs)
+            return data
+
+    def get_bulk_send_batches_with_http_info(self, account_id, **kwargs):
+        """
+        Returns a list of bulk send batch satuses initiated by account.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_bulk_send_batches_with_http_info(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str batch_ids:
+        :param str count:
+        :param str start_position:
+        :param str status:
+        :return: BulkSendBatchSummaries
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'batch_ids', 'count', 'start_position', 'status']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_bulk_send_batches" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_bulk_send_batches`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/bulk_send_batch'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+
+        query_params = {}
+        if 'batch_ids' in params:
+            query_params['batch_ids'] = params['batch_ids']
+        if 'count' in params:
+            query_params['count'] = params['count']
+        if 'start_position' in params:
+            query_params['start_position'] = params['start_position']
+        if 'status' in params:
+            query_params['status'] = params['status']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='BulkSendBatchSummaries',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_bulk_send_list(self, account_id, bulk_send_list_id, **kwargs):
         """
         Gets a specific bulk send list
@@ -1066,7 +1291,6 @@ class BulkEnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str count: The number of results to return. This can be 1 to 20.
-        :param str include:
         :param str start_position: The position of the bulk envelope items in the response. This is used for repeated calls, when the number of bulk envelopes returned is too large for one return. The default value is 0.
         :return: BulkEnvelopesResponse
                  If the method is called asynchronously,
@@ -1095,14 +1319,13 @@ class BulkEnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str count: The number of results to return. This can be 1 to 20.
-        :param str include:
         :param str start_position: The position of the bulk envelope items in the response. This is used for repeated calls, when the number of bulk envelopes returned is too large for one return. The default value is 0.
         :return: BulkEnvelopesResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'count', 'include', 'start_position']
+        all_params = ['account_id', 'count', 'start_position']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1132,8 +1355,6 @@ class BulkEnvelopesApi(object):
         query_params = {}
         if 'count' in params:
             query_params['count'] = params['count']
-        if 'include' in params:
-            query_params['include'] = params['include']
         if 'start_position' in params:
             query_params['start_position'] = params['start_position']
 

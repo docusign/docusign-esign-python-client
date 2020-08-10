@@ -33,21 +33,24 @@ class RecipientAdditionalNotification(object):
     swagger_types = {
         'phone_number': 'RecipientPhoneNumber',
         'secondary_delivery_method': 'str',
-        'secondary_delivery_method_metadata': 'PropertyMetadata'
+        'secondary_delivery_method_metadata': 'PropertyMetadata',
+        'secondary_delivery_status': 'str'
     }
 
     attribute_map = {
         'phone_number': 'phoneNumber',
         'secondary_delivery_method': 'secondaryDeliveryMethod',
-        'secondary_delivery_method_metadata': 'secondaryDeliveryMethodMetadata'
+        'secondary_delivery_method_metadata': 'secondaryDeliveryMethodMetadata',
+        'secondary_delivery_status': 'secondaryDeliveryStatus'
     }
 
-    def __init__(self, phone_number=None, secondary_delivery_method=None, secondary_delivery_method_metadata=None):  # noqa: E501
+    def __init__(self, phone_number=None, secondary_delivery_method=None, secondary_delivery_method_metadata=None, secondary_delivery_status=None):  # noqa: E501
         """RecipientAdditionalNotification - a model defined in Swagger"""  # noqa: E501
 
         self._phone_number = None
         self._secondary_delivery_method = None
         self._secondary_delivery_method_metadata = None
+        self._secondary_delivery_status = None
         self.discriminator = None
 
         if phone_number is not None:
@@ -56,6 +59,8 @@ class RecipientAdditionalNotification(object):
             self.secondary_delivery_method = secondary_delivery_method
         if secondary_delivery_method_metadata is not None:
             self.secondary_delivery_method_metadata = secondary_delivery_method_metadata
+        if secondary_delivery_status is not None:
+            self.secondary_delivery_status = secondary_delivery_status
 
     @property
     def phone_number(self):
@@ -121,6 +126,29 @@ class RecipientAdditionalNotification(object):
         """
 
         self._secondary_delivery_method_metadata = secondary_delivery_method_metadata
+
+    @property
+    def secondary_delivery_status(self):
+        """Gets the secondary_delivery_status of this RecipientAdditionalNotification.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The secondary_delivery_status of this RecipientAdditionalNotification.  # noqa: E501
+        :rtype: str
+        """
+        return self._secondary_delivery_status
+
+    @secondary_delivery_status.setter
+    def secondary_delivery_status(self, secondary_delivery_status):
+        """Sets the secondary_delivery_status of this RecipientAdditionalNotification.
+
+          # noqa: E501
+
+        :param secondary_delivery_status: The secondary_delivery_status of this RecipientAdditionalNotification.  # noqa: E501
+        :type: str
+        """
+
+        self._secondary_delivery_status = secondary_delivery_status
 
     def to_dict(self):
         """Returns the model properties as a dict"""
