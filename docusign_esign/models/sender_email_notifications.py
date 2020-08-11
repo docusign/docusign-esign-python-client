@@ -37,6 +37,7 @@ class SenderEmailNotifications(object):
         'delivery_failed': 'str',
         'envelope_complete': 'str',
         'offline_signing_failed': 'str',
+        'powerform_responses_limit_notification_email': 'str',
         'recipient_viewed': 'str',
         'sender_envelope_declined': 'str',
         'withdrawn_consent': 'str'
@@ -49,12 +50,13 @@ class SenderEmailNotifications(object):
         'delivery_failed': 'deliveryFailed',
         'envelope_complete': 'envelopeComplete',
         'offline_signing_failed': 'offlineSigningFailed',
+        'powerform_responses_limit_notification_email': 'powerformResponsesLimitNotificationEmail',
         'recipient_viewed': 'recipientViewed',
         'sender_envelope_declined': 'senderEnvelopeDeclined',
         'withdrawn_consent': 'withdrawnConsent'
     }
 
-    def __init__(self, changed_signer=None, comments_only_private_and_mention=None, comments_receive_all=None, delivery_failed=None, envelope_complete=None, offline_signing_failed=None, recipient_viewed=None, sender_envelope_declined=None, withdrawn_consent=None):  # noqa: E501
+    def __init__(self, changed_signer=None, comments_only_private_and_mention=None, comments_receive_all=None, delivery_failed=None, envelope_complete=None, offline_signing_failed=None, powerform_responses_limit_notification_email=None, recipient_viewed=None, sender_envelope_declined=None, withdrawn_consent=None):  # noqa: E501
         """SenderEmailNotifications - a model defined in Swagger"""  # noqa: E501
 
         self._changed_signer = None
@@ -63,6 +65,7 @@ class SenderEmailNotifications(object):
         self._delivery_failed = None
         self._envelope_complete = None
         self._offline_signing_failed = None
+        self._powerform_responses_limit_notification_email = None
         self._recipient_viewed = None
         self._sender_envelope_declined = None
         self._withdrawn_consent = None
@@ -80,6 +83,8 @@ class SenderEmailNotifications(object):
             self.envelope_complete = envelope_complete
         if offline_signing_failed is not None:
             self.offline_signing_failed = offline_signing_failed
+        if powerform_responses_limit_notification_email is not None:
+            self.powerform_responses_limit_notification_email = powerform_responses_limit_notification_email
         if recipient_viewed is not None:
             self.recipient_viewed = recipient_viewed
         if sender_envelope_declined is not None:
@@ -224,6 +229,29 @@ class SenderEmailNotifications(object):
         """
 
         self._offline_signing_failed = offline_signing_failed
+
+    @property
+    def powerform_responses_limit_notification_email(self):
+        """Gets the powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        """
+        return self._powerform_responses_limit_notification_email
+
+    @powerform_responses_limit_notification_email.setter
+    def powerform_responses_limit_notification_email(self, powerform_responses_limit_notification_email):
+        """Sets the powerform_responses_limit_notification_email of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param powerform_responses_limit_notification_email: The powerform_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        """
+
+        self._powerform_responses_limit_notification_email = powerform_responses_limit_notification_email
 
     @property
     def recipient_viewed(self):

@@ -35,6 +35,7 @@ class NewUser(object):
         'created_date_time': 'str',
         'email': 'str',
         'error_details': 'ErrorDetails',
+        'membership_id': 'str',
         'permission_profile_id': 'str',
         'permission_profile_name': 'str',
         'uri': 'str',
@@ -48,6 +49,7 @@ class NewUser(object):
         'created_date_time': 'createdDateTime',
         'email': 'email',
         'error_details': 'errorDetails',
+        'membership_id': 'membershipId',
         'permission_profile_id': 'permissionProfileId',
         'permission_profile_name': 'permissionProfileName',
         'uri': 'uri',
@@ -56,13 +58,14 @@ class NewUser(object):
         'user_status': 'userStatus'
     }
 
-    def __init__(self, api_password=None, created_date_time=None, email=None, error_details=None, permission_profile_id=None, permission_profile_name=None, uri=None, user_id=None, user_name=None, user_status=None):  # noqa: E501
+    def __init__(self, api_password=None, created_date_time=None, email=None, error_details=None, membership_id=None, permission_profile_id=None, permission_profile_name=None, uri=None, user_id=None, user_name=None, user_status=None):  # noqa: E501
         """NewUser - a model defined in Swagger"""  # noqa: E501
 
         self._api_password = None
         self._created_date_time = None
         self._email = None
         self._error_details = None
+        self._membership_id = None
         self._permission_profile_id = None
         self._permission_profile_name = None
         self._uri = None
@@ -79,6 +82,8 @@ class NewUser(object):
             self.email = email
         if error_details is not None:
             self.error_details = error_details
+        if membership_id is not None:
+            self.membership_id = membership_id
         if permission_profile_id is not None:
             self.permission_profile_id = permission_profile_id
         if permission_profile_name is not None:
@@ -181,6 +186,29 @@ class NewUser(object):
         """
 
         self._error_details = error_details
+
+    @property
+    def membership_id(self):
+        """Gets the membership_id of this NewUser.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The membership_id of this NewUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._membership_id
+
+    @membership_id.setter
+    def membership_id(self, membership_id):
+        """Sets the membership_id of this NewUser.
+
+          # noqa: E501
+
+        :param membership_id: The membership_id of this NewUser.  # noqa: E501
+        :type: str
+        """
+
+        self._membership_id = membership_id
 
     @property
     def permission_profile_id(self):
