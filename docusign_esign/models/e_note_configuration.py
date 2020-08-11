@@ -31,6 +31,7 @@ class ENoteConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'api_key': 'str',
         'connect_configured': 'str',
         'e_note_configured': 'str',
         'organization': 'str',
@@ -39,6 +40,7 @@ class ENoteConfiguration(object):
     }
 
     attribute_map = {
+        'api_key': 'apiKey',
         'connect_configured': 'connectConfigured',
         'e_note_configured': 'eNoteConfigured',
         'organization': 'organization',
@@ -46,9 +48,10 @@ class ENoteConfiguration(object):
         'user_name': 'userName'
     }
 
-    def __init__(self, connect_configured=None, e_note_configured=None, organization=None, password=None, user_name=None):  # noqa: E501
+    def __init__(self, api_key=None, connect_configured=None, e_note_configured=None, organization=None, password=None, user_name=None):  # noqa: E501
         """ENoteConfiguration - a model defined in Swagger"""  # noqa: E501
 
+        self._api_key = None
         self._connect_configured = None
         self._e_note_configured = None
         self._organization = None
@@ -56,6 +59,8 @@ class ENoteConfiguration(object):
         self._user_name = None
         self.discriminator = None
 
+        if api_key is not None:
+            self.api_key = api_key
         if connect_configured is not None:
             self.connect_configured = connect_configured
         if e_note_configured is not None:
@@ -66,6 +71,29 @@ class ENoteConfiguration(object):
             self.password = password
         if user_name is not None:
             self.user_name = user_name
+
+    @property
+    def api_key(self):
+        """Gets the api_key of this ENoteConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The api_key of this ENoteConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._api_key
+
+    @api_key.setter
+    def api_key(self, api_key):
+        """Sets the api_key of this ENoteConfiguration.
+
+          # noqa: E501
+
+        :param api_key: The api_key of this ENoteConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._api_key = api_key
 
     @property
     def connect_configured(self):

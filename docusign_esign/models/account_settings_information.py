@@ -65,6 +65,7 @@ class AccountSettingsInformation(object):
         'allow_connect_http_listener_configs': 'str',
         'allow_connect_send_finish_later': 'str',
         'allow_connect_send_finish_later_metadata': 'SettingsMetadata',
+        'allow_connect_unified_payload_ui': 'str',
         'allow_consumer_disclosure_override': 'str',
         'allow_consumer_disclosure_override_metadata': 'SettingsMetadata',
         'allow_data_download': 'str',
@@ -582,6 +583,7 @@ class AccountSettingsInformation(object):
         'allow_connect_http_listener_configs': 'allowConnectHttpListenerConfigs',
         'allow_connect_send_finish_later': 'allowConnectSendFinishLater',
         'allow_connect_send_finish_later_metadata': 'allowConnectSendFinishLaterMetadata',
+        'allow_connect_unified_payload_ui': 'allowConnectUnifiedPayloadUI',
         'allow_consumer_disclosure_override': 'allowConsumerDisclosureOverride',
         'allow_consumer_disclosure_override_metadata': 'allowConsumerDisclosureOverrideMetadata',
         'allow_data_download': 'allowDataDownload',
@@ -1101,6 +1103,7 @@ class AccountSettingsInformation(object):
         self._allow_connect_http_listener_configs = None
         self._allow_connect_send_finish_later = None
         self._allow_connect_send_finish_later_metadata = None
+        self._allow_connect_unified_payload_ui = None
         self._allow_consumer_disclosure_override = None
         self._allow_consumer_disclosure_override_metadata = None
         self._allow_data_download = None
@@ -2332,6 +2335,29 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_connect_send_finish_later_metadata = allow_connect_send_finish_later_metadata
+
+    @property
+    def allow_connect_unified_payload_ui(self):
+        """Gets the allow_connect_unified_payload_ui of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_connect_unified_payload_ui of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_connect_unified_payload_ui
+
+    @allow_connect_unified_payload_ui.setter
+    def allow_connect_unified_payload_ui(self, allow_connect_unified_payload_ui):
+        """Sets the allow_connect_unified_payload_ui of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_connect_unified_payload_ui: The allow_connect_unified_payload_ui of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_connect_unified_payload_ui = allow_connect_unified_payload_ui
 
     @property
     def allow_consumer_disclosure_override(self):

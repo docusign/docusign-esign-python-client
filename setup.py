@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages, Command, os  # noqa: H301
 
 NAME = "docusign-esign"
-VERSION = "3.4.0"
+VERSION = "3.5.0rc1"
 # To install the library, run the following
 #
 # python setup.py install
@@ -44,10 +44,10 @@ setup(
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
-    cmdclass={
-        'clean': CleanCommand,
+    cmdclass={	
+        'clean': CleanCommand,	
     },
     long_description="""\
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
     """
 )
