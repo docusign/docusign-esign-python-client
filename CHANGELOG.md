@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [3.5.0] - eSignature API v2.1-20.2.02.02 - 2020-08-21
+### Changed
+* Added support for version v2.1-20.2.02.02 of the DocuSign eSignature API.
+* Updated the SDK release version.
+* Updated/added properties for bulk send & advanced recipient routing.
+
 ## [3.4.0] - eSignature API v2.1-20.2.00 - 2020-07-09
 ### Changed
 * Added support for version v2.1-20.2.00 of the DocuSign eSignature API.
