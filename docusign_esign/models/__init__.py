@@ -38,9 +38,12 @@ from docusign_esign.models.account_role_settings import AccountRoleSettings
 from docusign_esign.models.account_seals import AccountSeals
 from docusign_esign.models.account_settings_information import AccountSettingsInformation
 from docusign_esign.models.account_shared_access import AccountSharedAccess
+from docusign_esign.models.account_signature import AccountSignature
+from docusign_esign.models.account_signature_definition import AccountSignatureDefinition
 from docusign_esign.models.account_signature_provider import AccountSignatureProvider
 from docusign_esign.models.account_signature_provider_option import AccountSignatureProviderOption
 from docusign_esign.models.account_signature_providers import AccountSignatureProviders
+from docusign_esign.models.account_signatures_information import AccountSignaturesInformation
 from docusign_esign.models.account_ui_settings import AccountUISettings
 from docusign_esign.models.add_on import AddOn
 from docusign_esign.models.address_information import AddressInformation
@@ -281,6 +284,7 @@ from docusign_esign.models.new_users_definition import NewUsersDefinition
 from docusign_esign.models.new_users_summary import NewUsersSummary
 from docusign_esign.models.notarize import Notarize
 from docusign_esign.models.notary import Notary
+from docusign_esign.models.notary_certificate import NotaryCertificate
 from docusign_esign.models.notary_host import NotaryHost
 from docusign_esign.models.notary_journal import NotaryJournal
 from docusign_esign.models.notary_journal_credible_witness import NotaryJournalCredibleWitness
@@ -288,7 +292,9 @@ from docusign_esign.models.notary_journal_list import NotaryJournalList
 from docusign_esign.models.notary_journal_meta_data import NotaryJournalMetaData
 from docusign_esign.models.notary_jurisdiction import NotaryJurisdiction
 from docusign_esign.models.notary_jurisdiction_list import NotaryJurisdictionList
+from docusign_esign.models.notary_recipient import NotaryRecipient
 from docusign_esign.models.notary_result import NotaryResult
+from docusign_esign.models.notary_seal import NotarySeal
 from docusign_esign.models.note import Note
 from docusign_esign.models.notification import Notification
 from docusign_esign.models.notification_default_settings import NotificationDefaultSettings
@@ -380,8 +386,12 @@ from docusign_esign.models.service_version import ServiceVersion
 from docusign_esign.models.settings_metadata import SettingsMetadata
 from docusign_esign.models.shared_item import SharedItem
 from docusign_esign.models.sign_here import SignHere
+from docusign_esign.models.signature_group import SignatureGroup
+from docusign_esign.models.signature_group_def import SignatureGroupDef
 from docusign_esign.models.signature_provider_required_option import SignatureProviderRequiredOption
 from docusign_esign.models.signature_type import SignatureType
+from docusign_esign.models.signature_user import SignatureUser
+from docusign_esign.models.signature_user_def import SignatureUserDef
 from docusign_esign.models.signer import Signer
 from docusign_esign.models.signer_attachment import SignerAttachment
 from docusign_esign.models.signer_email_notifications import SignerEmailNotifications

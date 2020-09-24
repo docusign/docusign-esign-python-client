@@ -49,6 +49,8 @@ class TemplateTabs(object):
         'last_name_tabs': 'list[LastName]',
         'list_tabs': 'list[List]',
         'notarize_tabs': 'list[Notarize]',
+        'notary_certificate_tabs': 'list[NotaryCertificate]',
+        'notary_seal_tabs': 'list[NotarySeal]',
         'note_tabs': 'list[Note]',
         'number_tabs': 'list[Number]',
         'poly_line_overlay_tabs': 'list[PolyLineOverlay]',
@@ -83,6 +85,8 @@ class TemplateTabs(object):
         'last_name_tabs': 'lastNameTabs',
         'list_tabs': 'listTabs',
         'notarize_tabs': 'notarizeTabs',
+        'notary_certificate_tabs': 'notaryCertificateTabs',
+        'notary_seal_tabs': 'notarySealTabs',
         'note_tabs': 'noteTabs',
         'number_tabs': 'numberTabs',
         'poly_line_overlay_tabs': 'polyLineOverlayTabs',
@@ -98,7 +102,7 @@ class TemplateTabs(object):
         'zip_tabs': 'zipTabs'
     }
 
-    def __init__(self, approve_tabs=None, checkbox_tabs=None, comment_thread_tabs=None, company_tabs=None, date_signed_tabs=None, date_tabs=None, decline_tabs=None, draw_tabs=None, email_address_tabs=None, email_tabs=None, envelope_id_tabs=None, first_name_tabs=None, formula_tabs=None, full_name_tabs=None, initial_here_tabs=None, last_name_tabs=None, list_tabs=None, notarize_tabs=None, note_tabs=None, number_tabs=None, poly_line_overlay_tabs=None, radio_group_tabs=None, signer_attachment_tabs=None, sign_here_tabs=None, smart_section_tabs=None, ssn_tabs=None, tab_groups=None, text_tabs=None, title_tabs=None, view_tabs=None, zip_tabs=None):  # noqa: E501
+    def __init__(self, approve_tabs=None, checkbox_tabs=None, comment_thread_tabs=None, company_tabs=None, date_signed_tabs=None, date_tabs=None, decline_tabs=None, draw_tabs=None, email_address_tabs=None, email_tabs=None, envelope_id_tabs=None, first_name_tabs=None, formula_tabs=None, full_name_tabs=None, initial_here_tabs=None, last_name_tabs=None, list_tabs=None, notarize_tabs=None, notary_certificate_tabs=None, notary_seal_tabs=None, note_tabs=None, number_tabs=None, poly_line_overlay_tabs=None, radio_group_tabs=None, signer_attachment_tabs=None, sign_here_tabs=None, smart_section_tabs=None, ssn_tabs=None, tab_groups=None, text_tabs=None, title_tabs=None, view_tabs=None, zip_tabs=None):  # noqa: E501
         """TemplateTabs - a model defined in Swagger"""  # noqa: E501
 
         self._approve_tabs = None
@@ -119,6 +123,8 @@ class TemplateTabs(object):
         self._last_name_tabs = None
         self._list_tabs = None
         self._notarize_tabs = None
+        self._notary_certificate_tabs = None
+        self._notary_seal_tabs = None
         self._note_tabs = None
         self._number_tabs = None
         self._poly_line_overlay_tabs = None
@@ -170,6 +176,10 @@ class TemplateTabs(object):
             self.list_tabs = list_tabs
         if notarize_tabs is not None:
             self.notarize_tabs = notarize_tabs
+        if notary_certificate_tabs is not None:
+            self.notary_certificate_tabs = notary_certificate_tabs
+        if notary_seal_tabs is not None:
+            self.notary_seal_tabs = notary_seal_tabs
         if note_tabs is not None:
             self.note_tabs = note_tabs
         if number_tabs is not None:
@@ -610,6 +620,52 @@ class TemplateTabs(object):
         """
 
         self._notarize_tabs = notarize_tabs
+
+    @property
+    def notary_certificate_tabs(self):
+        """Gets the notary_certificate_tabs of this TemplateTabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notary_certificate_tabs of this TemplateTabs.  # noqa: E501
+        :rtype: list[NotaryCertificate]
+        """
+        return self._notary_certificate_tabs
+
+    @notary_certificate_tabs.setter
+    def notary_certificate_tabs(self, notary_certificate_tabs):
+        """Sets the notary_certificate_tabs of this TemplateTabs.
+
+          # noqa: E501
+
+        :param notary_certificate_tabs: The notary_certificate_tabs of this TemplateTabs.  # noqa: E501
+        :type: list[NotaryCertificate]
+        """
+
+        self._notary_certificate_tabs = notary_certificate_tabs
+
+    @property
+    def notary_seal_tabs(self):
+        """Gets the notary_seal_tabs of this TemplateTabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notary_seal_tabs of this TemplateTabs.  # noqa: E501
+        :rtype: list[NotarySeal]
+        """
+        return self._notary_seal_tabs
+
+    @notary_seal_tabs.setter
+    def notary_seal_tabs(self, notary_seal_tabs):
+        """Sets the notary_seal_tabs of this TemplateTabs.
+
+          # noqa: E501
+
+        :param notary_seal_tabs: The notary_seal_tabs of this TemplateTabs.  # noqa: E501
+        :type: list[NotarySeal]
+        """
+
+        self._notary_seal_tabs = notary_seal_tabs
 
     @property
     def note_tabs(self):

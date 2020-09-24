@@ -37,6 +37,8 @@ class UserAccountManagementGranularInformation(object):
         'can_manage_account_settings_metadata': 'SettingsMetadata',
         'can_manage_admins': 'str',
         'can_manage_admins_metadata': 'SettingsMetadata',
+        'can_manage_envelope_transfer': 'str',
+        'can_manage_envelope_transfer_metadata': 'SettingsMetadata',
         'can_manage_reporting': 'str',
         'can_manage_reporting_metadata': 'SettingsMetadata',
         'can_manage_sharing': 'str',
@@ -55,6 +57,8 @@ class UserAccountManagementGranularInformation(object):
         'can_manage_account_settings_metadata': 'canManageAccountSettingsMetadata',
         'can_manage_admins': 'canManageAdmins',
         'can_manage_admins_metadata': 'canManageAdminsMetadata',
+        'can_manage_envelope_transfer': 'canManageEnvelopeTransfer',
+        'can_manage_envelope_transfer_metadata': 'canManageEnvelopeTransferMetadata',
         'can_manage_reporting': 'canManageReporting',
         'can_manage_reporting_metadata': 'canManageReportingMetadata',
         'can_manage_sharing': 'canManageSharing',
@@ -66,7 +70,7 @@ class UserAccountManagementGranularInformation(object):
         'can_view_users': 'canViewUsers'
     }
 
-    def __init__(self, can_manage_account_security_settings=None, can_manage_account_security_settings_metadata=None, can_manage_account_settings=None, can_manage_account_settings_metadata=None, can_manage_admins=None, can_manage_admins_metadata=None, can_manage_reporting=None, can_manage_reporting_metadata=None, can_manage_sharing=None, can_manage_sharing_metadata=None, can_manage_signing_groups=None, can_manage_signing_groups_metadata=None, can_manage_users=None, can_manage_users_metadata=None, can_view_users=None):  # noqa: E501
+    def __init__(self, can_manage_account_security_settings=None, can_manage_account_security_settings_metadata=None, can_manage_account_settings=None, can_manage_account_settings_metadata=None, can_manage_admins=None, can_manage_admins_metadata=None, can_manage_envelope_transfer=None, can_manage_envelope_transfer_metadata=None, can_manage_reporting=None, can_manage_reporting_metadata=None, can_manage_sharing=None, can_manage_sharing_metadata=None, can_manage_signing_groups=None, can_manage_signing_groups_metadata=None, can_manage_users=None, can_manage_users_metadata=None, can_view_users=None):  # noqa: E501
         """UserAccountManagementGranularInformation - a model defined in Swagger"""  # noqa: E501
 
         self._can_manage_account_security_settings = None
@@ -75,6 +79,8 @@ class UserAccountManagementGranularInformation(object):
         self._can_manage_account_settings_metadata = None
         self._can_manage_admins = None
         self._can_manage_admins_metadata = None
+        self._can_manage_envelope_transfer = None
+        self._can_manage_envelope_transfer_metadata = None
         self._can_manage_reporting = None
         self._can_manage_reporting_metadata = None
         self._can_manage_sharing = None
@@ -98,6 +104,10 @@ class UserAccountManagementGranularInformation(object):
             self.can_manage_admins = can_manage_admins
         if can_manage_admins_metadata is not None:
             self.can_manage_admins_metadata = can_manage_admins_metadata
+        if can_manage_envelope_transfer is not None:
+            self.can_manage_envelope_transfer = can_manage_envelope_transfer
+        if can_manage_envelope_transfer_metadata is not None:
+            self.can_manage_envelope_transfer_metadata = can_manage_envelope_transfer_metadata
         if can_manage_reporting is not None:
             self.can_manage_reporting = can_manage_reporting
         if can_manage_reporting_metadata is not None:
@@ -248,6 +258,50 @@ class UserAccountManagementGranularInformation(object):
         """
 
         self._can_manage_admins_metadata = can_manage_admins_metadata
+
+    @property
+    def can_manage_envelope_transfer(self):
+        """Gets the can_manage_envelope_transfer of this UserAccountManagementGranularInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_manage_envelope_transfer of this UserAccountManagementGranularInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_manage_envelope_transfer
+
+    @can_manage_envelope_transfer.setter
+    def can_manage_envelope_transfer(self, can_manage_envelope_transfer):
+        """Sets the can_manage_envelope_transfer of this UserAccountManagementGranularInformation.
+
+          # noqa: E501
+
+        :param can_manage_envelope_transfer: The can_manage_envelope_transfer of this UserAccountManagementGranularInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._can_manage_envelope_transfer = can_manage_envelope_transfer
+
+    @property
+    def can_manage_envelope_transfer_metadata(self):
+        """Gets the can_manage_envelope_transfer_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+
+
+        :return: The can_manage_envelope_transfer_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_manage_envelope_transfer_metadata
+
+    @can_manage_envelope_transfer_metadata.setter
+    def can_manage_envelope_transfer_metadata(self, can_manage_envelope_transfer_metadata):
+        """Sets the can_manage_envelope_transfer_metadata of this UserAccountManagementGranularInformation.
+
+
+        :param can_manage_envelope_transfer_metadata: The can_manage_envelope_transfer_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_manage_envelope_transfer_metadata = can_manage_envelope_transfer_metadata
 
     @property
     def can_manage_reporting(self):
