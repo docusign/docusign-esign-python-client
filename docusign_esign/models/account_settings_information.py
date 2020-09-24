@@ -34,6 +34,8 @@ class AccountSettingsInformation(object):
         'access_code_format': 'AccessCodeFormat',
         'account_date_time_format': 'str',
         'account_date_time_format_metadata': 'SettingsMetadata',
+        'account_default_language': 'str',
+        'account_default_language_metadata': 'SettingsMetadata',
         'account_name': 'str',
         'account_name_metadata': 'SettingsMetadata',
         'account_notification': 'AccountNotification',
@@ -552,6 +554,8 @@ class AccountSettingsInformation(object):
         'access_code_format': 'accessCodeFormat',
         'account_date_time_format': 'accountDateTimeFormat',
         'account_date_time_format_metadata': 'accountDateTimeFormatMetadata',
+        'account_default_language': 'accountDefaultLanguage',
+        'account_default_language_metadata': 'accountDefaultLanguageMetadata',
         'account_name': 'accountName',
         'account_name_metadata': 'accountNameMetadata',
         'account_notification': 'accountNotification',
@@ -1072,6 +1076,8 @@ class AccountSettingsInformation(object):
         self._access_code_format = None
         self._account_date_time_format = None
         self._account_date_time_format_metadata = None
+        self._account_default_language = None
+        self._account_default_language_metadata = None
         self._account_name = None
         self._account_name_metadata = None
         self._account_notification = None
@@ -1654,6 +1660,50 @@ class AccountSettingsInformation(object):
         """
 
         self._account_date_time_format_metadata = account_date_time_format_metadata
+
+    @property
+    def account_default_language(self):
+        """Gets the account_default_language of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The account_default_language of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._account_default_language
+
+    @account_default_language.setter
+    def account_default_language(self, account_default_language):
+        """Sets the account_default_language of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param account_default_language: The account_default_language of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._account_default_language = account_default_language
+
+    @property
+    def account_default_language_metadata(self):
+        """Gets the account_default_language_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The account_default_language_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._account_default_language_metadata
+
+    @account_default_language_metadata.setter
+    def account_default_language_metadata(self, account_default_language_metadata):
+        """Sets the account_default_language_metadata of this AccountSettingsInformation.
+
+
+        :param account_default_language_metadata: The account_default_language_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._account_default_language_metadata = account_default_language_metadata
 
     @property
     def account_name(self):

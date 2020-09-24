@@ -80,6 +80,7 @@ class Signer(object):
         'locked_recipient_sms_editable': 'str',
         'name': 'str',
         'name_metadata': 'PropertyMetadata',
+        'notary_id': 'str',
         'note': 'str',
         'note_metadata': 'PropertyMetadata',
         'offline_attributes': 'OfflineAttributes',
@@ -173,6 +174,7 @@ class Signer(object):
         'locked_recipient_sms_editable': 'lockedRecipientSmsEditable',
         'name': 'name',
         'name_metadata': 'nameMetadata',
+        'notary_id': 'notaryId',
         'note': 'note',
         'note_metadata': 'noteMetadata',
         'offline_attributes': 'offlineAttributes',
@@ -216,7 +218,7 @@ class Signer(object):
         'user_id': 'userId'
     }
 
-    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, additional_notifications_metadata=None, agent_can_edit_email=None, agent_can_edit_name=None, allow_system_override_for_locked_recipient=None, auto_navigation=None, bulk_recipients_uri=None, can_sign_offline=None, client_user_id=None, completed_count=None, creation_reason=None, custom_fields=None, declined_date_time=None, declined_reason=None, default_recipient=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, is_bulk_recipient=None, is_bulk_recipient_metadata=None, last_name=None, last_name_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, note=None, note_metadata=None, offline_attributes=None, phone_authentication=None, proof_file=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_signature_providers=None, recipient_supplies_tabs=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, require_signer_certificate=None, require_sign_on_paper=None, require_upload_signature=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signature_info=None, signed_date_time=None, sign_in_each_location=None, sign_in_each_location_metadata=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
+    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, additional_notifications_metadata=None, agent_can_edit_email=None, agent_can_edit_name=None, allow_system_override_for_locked_recipient=None, auto_navigation=None, bulk_recipients_uri=None, can_sign_offline=None, client_user_id=None, completed_count=None, creation_reason=None, custom_fields=None, declined_date_time=None, declined_reason=None, default_recipient=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, is_bulk_recipient=None, is_bulk_recipient_metadata=None, last_name=None, last_name_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, notary_id=None, note=None, note_metadata=None, offline_attributes=None, phone_authentication=None, proof_file=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_signature_providers=None, recipient_supplies_tabs=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, require_signer_certificate=None, require_sign_on_paper=None, require_upload_signature=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signature_info=None, signed_date_time=None, sign_in_each_location=None, sign_in_each_location_metadata=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
         """Signer - a model defined in Swagger"""  # noqa: E501
 
         self._access_code = None
@@ -268,6 +270,7 @@ class Signer(object):
         self._locked_recipient_sms_editable = None
         self._name = None
         self._name_metadata = None
+        self._notary_id = None
         self._note = None
         self._note_metadata = None
         self._offline_attributes = None
@@ -409,6 +412,8 @@ class Signer(object):
             self.name = name
         if name_metadata is not None:
             self.name_metadata = name_metadata
+        if notary_id is not None:
+            self.notary_id = notary_id
         if note is not None:
             self.note = note
         if note_metadata is not None:
@@ -1588,6 +1593,29 @@ class Signer(object):
         """
 
         self._name_metadata = name_metadata
+
+    @property
+    def notary_id(self):
+        """Gets the notary_id of this Signer.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notary_id of this Signer.  # noqa: E501
+        :rtype: str
+        """
+        return self._notary_id
+
+    @notary_id.setter
+    def notary_id(self, notary_id):
+        """Sets the notary_id of this Signer.
+
+          # noqa: E501
+
+        :param notary_id: The notary_id of this Signer.  # noqa: E501
+        :type: str
+        """
+
+        self._notary_id = notary_id
 
     @property
     def note(self):

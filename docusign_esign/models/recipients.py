@@ -39,6 +39,7 @@ class Recipients(object):
         'error_details': 'ErrorDetails',
         'in_person_signers': 'list[InPersonSigner]',
         'intermediaries': 'list[Intermediary]',
+        'notaries': 'list[NotaryRecipient]',
         'recipient_count': 'str',
         'seals': 'list[SealSign]',
         'signers': 'list[Signer]',
@@ -54,13 +55,14 @@ class Recipients(object):
         'error_details': 'errorDetails',
         'in_person_signers': 'inPersonSigners',
         'intermediaries': 'intermediaries',
+        'notaries': 'notaries',
         'recipient_count': 'recipientCount',
         'seals': 'seals',
         'signers': 'signers',
         'witnesses': 'witnesses'
     }
 
-    def __init__(self, agents=None, carbon_copies=None, certified_deliveries=None, current_routing_order=None, editors=None, error_details=None, in_person_signers=None, intermediaries=None, recipient_count=None, seals=None, signers=None, witnesses=None):  # noqa: E501
+    def __init__(self, agents=None, carbon_copies=None, certified_deliveries=None, current_routing_order=None, editors=None, error_details=None, in_person_signers=None, intermediaries=None, notaries=None, recipient_count=None, seals=None, signers=None, witnesses=None):  # noqa: E501
         """Recipients - a model defined in Swagger"""  # noqa: E501
 
         self._agents = None
@@ -71,6 +73,7 @@ class Recipients(object):
         self._error_details = None
         self._in_person_signers = None
         self._intermediaries = None
+        self._notaries = None
         self._recipient_count = None
         self._seals = None
         self._signers = None
@@ -93,6 +96,8 @@ class Recipients(object):
             self.in_person_signers = in_person_signers
         if intermediaries is not None:
             self.intermediaries = intermediaries
+        if notaries is not None:
+            self.notaries = notaries
         if recipient_count is not None:
             self.recipient_count = recipient_count
         if seals is not None:
@@ -283,6 +288,29 @@ class Recipients(object):
         """
 
         self._intermediaries = intermediaries
+
+    @property
+    def notaries(self):
+        """Gets the notaries of this Recipients.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notaries of this Recipients.  # noqa: E501
+        :rtype: list[NotaryRecipient]
+        """
+        return self._notaries
+
+    @notaries.setter
+    def notaries(self, notaries):
+        """Sets the notaries of this Recipients.
+
+          # noqa: E501
+
+        :param notaries: The notaries of this Recipients.  # noqa: E501
+        :type: list[NotaryRecipient]
+        """
+
+        self._notaries = notaries
 
     @property
     def recipient_count(self):
