@@ -32,25 +32,30 @@ class CorrectViewRequest(object):
     """
     swagger_types = {
         'return_url': 'str',
-        'suppress_navigation': 'str'
+        'suppress_navigation': 'str',
+        'view_url': 'str'
     }
 
     attribute_map = {
         'return_url': 'returnUrl',
-        'suppress_navigation': 'suppressNavigation'
+        'suppress_navigation': 'suppressNavigation',
+        'view_url': 'viewUrl'
     }
 
-    def __init__(self, return_url=None, suppress_navigation=None):  # noqa: E501
+    def __init__(self, return_url=None, suppress_navigation=None, view_url=None):  # noqa: E501
         """CorrectViewRequest - a model defined in Swagger"""  # noqa: E501
 
         self._return_url = None
         self._suppress_navigation = None
+        self._view_url = None
         self.discriminator = None
 
         if return_url is not None:
             self.return_url = return_url
         if suppress_navigation is not None:
             self.suppress_navigation = suppress_navigation
+        if view_url is not None:
+            self.view_url = view_url
 
     @property
     def return_url(self):
@@ -97,6 +102,29 @@ class CorrectViewRequest(object):
         """
 
         self._suppress_navigation = suppress_navigation
+
+    @property
+    def view_url(self):
+        """Gets the view_url of this CorrectViewRequest.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The view_url of this CorrectViewRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_url
+
+    @view_url.setter
+    def view_url(self, view_url):
+        """Sets the view_url of this CorrectViewRequest.
+
+          # noqa: E501
+
+        :param view_url: The view_url of this CorrectViewRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._view_url = view_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""
