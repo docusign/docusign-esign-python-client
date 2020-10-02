@@ -36,7 +36,7 @@ LICENSE
 requirements.txt
 test-requirements.txt
 setup.cfg
-setup.py
+#setup.py
 
 
 # Specific src and test files

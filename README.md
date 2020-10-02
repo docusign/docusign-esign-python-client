@@ -10,7 +10,7 @@
 
 ## Requirements
 
-- Python 2.7 (3.6+ recommended)
+- Python 2.7 (3.7+ recommended)
 - Free [Developer Sandbox](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
 
 ## Compatibility
@@ -37,7 +37,7 @@ This open-source SDK is provided for cases where you would like to make addition
 
 **Unix/Linux:**
 
-- Type the following command into your console:  
+- Type the following command into your console:
    **export PYTHONPATH = "${PYTHONPATH}:.:/path/to/site-packages"**
 - Optionally, you can add this command to your system profile, which will run the command each time Python is launched.
 
@@ -80,7 +80,7 @@ This client has the following external dependencies:
 
 ### Launchers
 
-DocuSign provides a sample application referred to as a [Launcher](https://github.com/docusign/eg-03-python-auth-code-grant). The Launcher contains a set of 14 common use cases and associated source files. These examples use DocuSign&#39;s [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) flow.
+DocuSign provides a sample application code referred to as a [Launcher](https://github.com/docusign/code-examples-python). The Launcher contains a set of 31 common use cases and associated source files. These examples use either DocuSign&#39;s [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) or [JSON Web Tokens (JWT)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) flows.
 
 ## Proof-of-concept applications
 
@@ -92,10 +92,6 @@ For details regarding which type of OAuth grant will work best for your DocuSign
 
 For security purposes, DocuSign recommends using the [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) flow.
 
-There are other use-case scenarios, such as **single-page applications** (SPA) that use **Cross-Origin Resource Sharing** (CORS), or where there may not be a user to interact with your Service Account. For these use cases, DocuSign also supports [JWT](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) and [Implicit](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-implicit) grants. For code examples, see the links below:
-
-- [JWT (JSON Web Token)](https://github.com/docusign/eg-01-python-jwt)
-- Implicit Grant (coming soon)
 
 ## Support
 
@@ -112,3 +108,9 @@ The DocuSign Python Client is licensed under the [MIT License](https://github.co
 [downloads-url]: https://pypi.python.org/pypi/docusign_esign
 [travis-image]: https://img.shields.io/travis/docusign/docusign-python-client.svg?style=flat
 [travis-url]: https://travis-ci.org/docusign/docusign-python-client
+
+### Additional Resources
+* [DocuSign Developer Center](https://developers.docusign.com)
+* [DocuSign API on Twitter](https://twitter.com/docusignapi)
+* [DocuSign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)
+* [DocuSign For Developers on YouTube](https://www.youtube.com/channel/UCJSJ2kMs_qeQotmw4-lX2NQ)
