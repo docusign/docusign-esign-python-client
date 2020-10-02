@@ -707,10 +707,10 @@ class SdkUnitTests(unittest.TestCase):
             folders_api.move_envelopes(self.user_info.accounts[0].account_id, to_folder_id,
                                        folders_request=folders_request)
 
-            # Wait for 3 second to make sure the newly created envelope was moved to the 'sentitems' folder
+            # Wait for 5 second to make sure the newly created envelope was moved to the 'sentitems' folder
             # Note: It's discouraged to use sleep statement or to poll DocuSign for envelope status or folder id
             # In production, use DocuSign Connect to get notified when the status of the envelope have changed.
-            sleep(3)
+            sleep(5)
             # Test if we moved the envelope to the correct folder
             list_from_drafts_folder = folders_api.list_items(self.user_info.accounts[0].account_id, to_folder_id)
 

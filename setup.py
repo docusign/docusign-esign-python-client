@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages, Command, os  # noqa: H301
 
 NAME = "docusign_esign"
-VERSION = "2.7.0rc1"
+VERSION = "2.7.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -22,7 +22,8 @@ VERSION = "2.7.0rc1"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.8.0", "certifi >= 14.05.14", "python-dateutil >= 2.5.3", "setuptools >= 21.0.0", "PyJWT>=1.7.1", "cryptography>=2.5", "nose>=1.3.7"]
+REQUIRES = ["urllib3 >= 1.15", "six >= 1.8.0", "certifi >= 14.05.14", "python-dateutil >= 2.5.3",
+            "setuptools >= 21.0.0", "PyJWT>=1.7.1", "cryptography>=2.5", "nose>=1.3.7", "importlib-metadata<2,>=0.12"]
 
 class CleanCommand(Command):
     """Custom clean command to tidy up the project root."""
