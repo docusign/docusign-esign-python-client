@@ -31,21 +31,49 @@ class BulkSendRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'batch_name': 'str',
         'envelope_or_template_id': 'str'
     }
 
     attribute_map = {
+        'batch_name': 'batchName',
         'envelope_or_template_id': 'envelopeOrTemplateId'
     }
 
-    def __init__(self, envelope_or_template_id=None):  # noqa: E501
+    def __init__(self, batch_name=None, envelope_or_template_id=None):  # noqa: E501
         """BulkSendRequest - a model defined in Swagger"""  # noqa: E501
 
+        self._batch_name = None
         self._envelope_or_template_id = None
         self.discriminator = None
 
+        if batch_name is not None:
+            self.batch_name = batch_name
         if envelope_or_template_id is not None:
             self.envelope_or_template_id = envelope_or_template_id
+
+    @property
+    def batch_name(self):
+        """Gets the batch_name of this BulkSendRequest.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The batch_name of this BulkSendRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._batch_name
+
+    @batch_name.setter
+    def batch_name(self, batch_name):
+        """Sets the batch_name of this BulkSendRequest.
+
+          # noqa: E501
+
+        :param batch_name: The batch_name of this BulkSendRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._batch_name = batch_name
 
     @property
     def envelope_or_template_id(self):

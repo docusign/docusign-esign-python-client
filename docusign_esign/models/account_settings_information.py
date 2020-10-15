@@ -140,6 +140,8 @@ class AccountSettingsInformation(object):
         'allow_private_signing_groups_metadata': 'SettingsMetadata',
         'allow_reminders': 'str',
         'allow_reminders_metadata': 'SettingsMetadata',
+        'allow_remote_notary': 'str',
+        'allow_remote_notary_metadata': 'SettingsMetadata',
         'allow_resource_file_branding': 'str',
         'allow_resource_file_branding_metadata': 'SettingsMetadata',
         'allow_safe_bio_pharma_signer_certificate': 'str',
@@ -266,6 +268,10 @@ class AccountSettingsInformation(object):
         'enable_advanced_payments_metadata': 'SettingsMetadata',
         'enable_advanced_power_forms': 'str',
         'enable_advanced_power_forms_metadata': 'SettingsMetadata',
+        'enable_agreement_actions_for_clm': 'str',
+        'enable_agreement_actions_for_clm_metadata': 'SettingsMetadata',
+        'enable_agreement_actions_for_e_sign': 'str',
+        'enable_agreement_actions_for_e_sign_metadata': 'SettingsMetadata',
         'enable_auto_nav': 'str',
         'enable_auto_nav_metadata': 'SettingsMetadata',
         'enable_calculated_fields': 'str',
@@ -660,6 +666,8 @@ class AccountSettingsInformation(object):
         'allow_private_signing_groups_metadata': 'allowPrivateSigningGroupsMetadata',
         'allow_reminders': 'allowReminders',
         'allow_reminders_metadata': 'allowRemindersMetadata',
+        'allow_remote_notary': 'allowRemoteNotary',
+        'allow_remote_notary_metadata': 'allowRemoteNotaryMetadata',
         'allow_resource_file_branding': 'allowResourceFileBranding',
         'allow_resource_file_branding_metadata': 'allowResourceFileBrandingMetadata',
         'allow_safe_bio_pharma_signer_certificate': 'allowSafeBioPharmaSignerCertificate',
@@ -786,6 +794,10 @@ class AccountSettingsInformation(object):
         'enable_advanced_payments_metadata': 'enableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms': 'enableAdvancedPowerForms',
         'enable_advanced_power_forms_metadata': 'enableAdvancedPowerFormsMetadata',
+        'enable_agreement_actions_for_clm': 'enableAgreementActionsForCLM',
+        'enable_agreement_actions_for_clm_metadata': 'enableAgreementActionsForCLMMetadata',
+        'enable_agreement_actions_for_e_sign': 'enableAgreementActionsForESign',
+        'enable_agreement_actions_for_e_sign_metadata': 'enableAgreementActionsForESignMetadata',
         'enable_auto_nav': 'enableAutoNav',
         'enable_auto_nav_metadata': 'enableAutoNavMetadata',
         'enable_calculated_fields': 'enableCalculatedFields',
@@ -1070,7 +1082,7 @@ class AccountSettingsInformation(object):
         'wurfl_min_allowable_screen_size_metadata': 'wurflMinAllowableScreenSizeMetadata'
     }
 
-    def __init__(self, **kwargs):
+    def __init__(self, access_code_format=None, account_date_time_format=None, account_date_time_format_metadata=None, account_default_language=None, account_default_language_metadata=None, account_name=None, account_name_metadata=None, account_notification=None, account_ui_settings=None, adopt_sig_config=None, adopt_sig_config_metadata=None, advanced_correct=None, advanced_correct_metadata=None, allow_access_code_format=None, allow_access_code_format_metadata=None, allow_account_management_granular=None, allow_account_management_granular_metadata=None, allow_account_member_name_change=None, allow_account_member_name_change_metadata=None, allow_advanced_recipient_routing_conditional=None, allow_advanced_recipient_routing_conditional_metadata=None, allow_agent_name_email_edit=None, allow_agent_name_email_edit_metadata=None, allow_agreement_actions=None, allow_agreement_actions_metadata=None, allow_auto_nav_settings=None, allow_auto_nav_settings_metadata=None, allow_auto_tagging=None, allow_auto_tagging_metadata=None, allow_bulk_send=None, allow_bulk_send_metadata=None, allow_cd_withdraw=None, allow_cd_withdraw_metadata=None, allow_connect_http_listener_configs=None, allow_connect_send_finish_later=None, allow_connect_send_finish_later_metadata=None, allow_connect_unified_payload_ui=None, allow_consumer_disclosure_override=None, allow_consumer_disclosure_override_metadata=None, allow_data_download=None, allow_data_download_metadata=None, allow_document_disclosures=None, allow_document_disclosures_metadata=None, allow_documents_on_signed_envelopes=None, allow_documents_on_signed_envelopes_metadata=None, allow_document_visibility=None, allow_document_visibility_metadata=None, allow_e_hanko_stamps=None, allow_e_hanko_stamps_metadata=None, allow_e_note_e_original=None, allow_e_note_e_original_metadata=None, allow_envelope_correct=None, allow_envelope_correct_metadata=None, allow_envelope_custody_transfer=None, allow_envelope_custody_transfer_metadata=None, allow_envelope_custom_fields=None, allow_envelope_custom_fields_metadata=None, allow_envelope_publish_reporting=None, allow_envelope_publish_reporting_metadata=None, allow_envelope_reporting=None, allow_envelope_reporting_metadata=None, allow_expression=None, allow_expression_metadata=None, allow_express_signer_certificate=None, allow_express_signer_certificate_metadata=None, allow_extended_sending_resource_file=None, allow_extended_sending_resource_file_metadata=None, allow_external_signature_pad=None, allow_external_signature_pad_metadata=None, allow_idv_level1=None, allow_idv_level1_metadata=None, allow_idv_platform=None, allow_idv_platform_metadata=None, allow_in_person=None, allow_in_person_metadata=None, allow_managed_stamps=None, allow_managed_stamps_metadata=None, allow_markup=None, allow_markup_metadata=None, allow_member_time_zone=None, allow_member_time_zone_metadata=None, allow_merge_fields=None, allow_merge_fields_metadata=None, allow_multiple_brand_profiles=None, allow_multiple_brand_profiles_metadata=None, allow_multiple_signer_attachments=None, allow_multiple_signer_attachments_metadata=None, allow_non_us_phone_auth=None, allow_non_us_phone_auth_metadata=None, allow_ocr_of_envelope_documents=None, allow_ocr_of_envelope_documents_metadata=None, allow_offline_signing=None, allow_offline_signing_metadata=None, allow_open_trust_signer_certificate=None, allow_open_trust_signer_certificate_metadata=None, allow_organizations=None, allow_organizations_metadata=None, allow_payment_processing=None, allow_payment_processing_metadata=None, allow_personal_signer_certificate=None, allow_personal_signer_certificate_metadata=None, allow_phone_authentication=None, allow_phone_authentication_metadata=None, allow_phone_auth_override=None, allow_phone_auth_override_metadata=None, allow_private_signing_groups=None, allow_private_signing_groups_metadata=None, allow_reminders=None, allow_reminders_metadata=None, allow_remote_notary=None, allow_remote_notary_metadata=None, allow_resource_file_branding=None, allow_resource_file_branding_metadata=None, allow_safe_bio_pharma_signer_certificate=None, allow_safe_bio_pharma_signer_certificate_metadata=None, allow_security_appliance=None, allow_security_appliance_metadata=None, allow_send_to_certified_delivery=None, allow_send_to_certified_delivery_metadata=None, allow_send_to_intermediary=None, allow_send_to_intermediary_metadata=None, allow_server_templates=None, allow_server_templates_metadata=None, allow_set_embedded_recipient_start_url=None, allow_set_embedded_recipient_start_url_metadata=None, allow_shared_tabs=None, allow_shared_tabs_metadata=None, allow_signature_stamps=None, allow_signature_stamps_metadata=None, allow_sign_document_from_home_page=None, allow_sign_document_from_home_page_metadata=None, allow_signer_reassign=None, allow_signer_reassign_metadata=None, allow_signer_reassign_override=None, allow_signer_reassign_override_metadata=None, allow_signing_extensions=None, allow_signing_extensions_metadata=None, allow_signing_groups=None, allow_signing_groups_metadata=None, allow_signing_radio_deselect=None, allow_signing_radio_deselect_metadata=None, allow_sign_now=None, allow_sign_now_metadata=None, allow_sms_delivery=None, allow_sms_delivery_metadata=None, allow_social_id_login=None, allow_social_id_login_metadata=None, allow_supplemental_documents=None, allow_supplemental_documents_metadata=None, allow_users_to_access_directory=None, allow_users_to_access_directory_metadata=None, allow_value_insights=None, allow_value_insights_metadata=None, anchor_population_scope=None, anchor_population_scope_metadata=None, anchor_tag_versioned_placement_enabled=None, anchor_tag_versioned_placement_metadata_enabled=None, attach_completed_envelope=None, attach_completed_envelope_metadata=None, authentication_check=None, authentication_check_metadata=None, auto_nav_rule=None, auto_nav_rule_metadata=None, auto_provision_signer_account=None, auto_provision_signer_account_metadata=None, bcc_email_archive=None, bcc_email_archive_metadata=None, beta_switch_configuration=None, beta_switch_configuration_metadata=None, billing_address=None, billing_address_metadata=None, bulk_send=None, bulk_send_max_copies_in_batch=None, bulk_send_max_unprocessed_envelopes_count=None, bulk_send_metadata=None, can_self_brand_send=None, can_self_brand_send_metadata=None, can_self_brand_sign=None, can_self_brand_sign_metadata=None, can_use_salesforce_o_auth=None, can_use_salesforce_o_auth_metadata=None, capture_voice_recording=None, capture_voice_recording_metadata=None, cfr_use_wide_image=None, cfr_use_wide_image_metadata=None, check_for_multiple_admins_on_account=None, check_for_multiple_admins_on_account_metadata=None, chrome_signature_enabled=None, chrome_signature_enabled_metadata=None, comment_email_show_message_text=None, comment_email_show_message_text_metadata=None, comments_allow_envelope_override=None, comments_allow_envelope_override_metadata=None, conditional_fields_enabled=None, conditional_fields_enabled_metadata=None, consumer_disclosure_frequency=None, consumer_disclosure_frequency_metadata=None, convert_pdf_fields=None, convert_pdf_fields_metadata=None, data_population_scope=None, data_population_scope_metadata=None, disable_mobile_app=None, disable_mobile_app_metadata=None, disable_mobile_push_notifications=None, disable_mobile_push_notifications_metadata=None, disable_mobile_sending=None, disable_mobile_sending_metadata=None, disable_multiple_sessions=None, disable_multiple_sessions_metadata=None, disable_purge_notifications_for_sender_metadata=None, disable_signer_cert_view=None, disable_signer_cert_view_metadata=None, disable_signer_history_view=None, disable_signer_history_view_metadata=None, disable_style_signature=None, disable_style_signature_metadata=None, disable_upload_signature=None, disable_upload_signature_metadata=None, disable_user_sharing=None, disable_user_sharing_metadata=None, display_beta_switch=None, display_beta_switch_metadata=None, document_conversion_restrictions=None, document_conversion_restrictions_metadata=None, document_retention=None, document_retention_metadata=None, document_retention_purge_tabs=None, document_visibility=None, document_visibility_metadata=None, email_template_version=None, email_template_version_metadata=None, enable_access_code_generator=None, enable_access_code_generator_metadata=None, enable_advanced_payments=None, enable_advanced_payments_metadata=None, enable_advanced_power_forms=None, enable_advanced_power_forms_metadata=None, enable_agreement_actions_for_clm=None, enable_agreement_actions_for_clm_metadata=None, enable_agreement_actions_for_e_sign=None, enable_agreement_actions_for_e_sign_metadata=None, enable_auto_nav=None, enable_auto_nav_metadata=None, enable_calculated_fields=None, enable_calculated_fields_metadata=None, enable_clickwraps=None, enable_clickwraps_metadata=None, enable_comments_history_download_in_signing=None, enable_comments_history_download_in_signing_metadata=None, enable_customer_satisfaction_metric_tracking=None, enable_customer_satisfaction_metric_tracking_metadata=None, enable_ds_pro=None, enable_ds_pro_metadata=None, enable_envelope_stamping_by_account_admin=None, enable_envelope_stamping_by_account_admin_metadata=None, enable_envelope_stamping_by_ds_admin=None, enable_envelope_stamping_by_ds_admin_metadata=None, enable_in_browser_editor=None, enable_in_browser_editor_metadata=None, enable_payment_processing=None, enable_payment_processing_metadata=None, enable_power_form=None, enable_power_form_direct=None, enable_power_form_direct_metadata=None, enable_power_form_metadata=None, enable_recipient_domain_validation=None, enable_recipient_domain_validation_metadata=None, enable_report_links=None, enable_report_links_metadata=None, enable_require_sign_on_paper=None, enable_require_sign_on_paper_metadata=None, enable_reserved_domain=None, enable_reserved_domain_metadata=None, enable_responsive_signing=None, enable_responsive_signing_metadata=None, enable_scheduled_release=None, enable_scheduled_release_metadata=None, enable_search_ui=None, enable_search_ui_metadata=None, enable_sending_tags_font_settings=None, enable_sending_tags_font_settings_metadata=None, enable_send_to_agent=None, enable_send_to_agent_metadata=None, enable_send_to_intermediary=None, enable_send_to_intermediary_metadata=None, enable_send_to_manage=None, enable_send_to_manage_metadata=None, enable_sequential_signing_api=None, enable_sequential_signing_api_metadata=None, enable_sequential_signing_ui=None, enable_sequential_signing_ui_metadata=None, enable_signer_attachments=None, enable_signer_attachments_metadata=None, enable_signing_extension_comments=None, enable_signing_extension_comments_metadata=None, enable_signing_extension_conversations=None, enable_signing_extension_conversations_metadata=None, enable_signing_order_settings_for_account=None, enable_signing_order_settings_for_account_metadata=None, enable_sign_on_paper=None, enable_sign_on_paper_metadata=None, enable_sign_on_paper_override=None, enable_sign_on_paper_override_metadata=None, enable_sign_with_notary=None, enable_sign_with_notary_metadata=None, enable_smart_contracts=None, enable_smart_contracts_metadata=None, enable_sms_authentication=None, enable_sms_authentication_metadata=None, enable_social_id_login=None, enable_social_id_login_metadata=None, enable_strike_through=None, enable_strike_through_metadata=None, enable_transaction_point=None, enable_transaction_point_metadata=None, enable_vaulting=None, enable_vaulting_metadata=None, enable_witnessing=None, enable_witnessing_metadata=None, enforce_template_name_uniqueness=None, enforce_template_name_uniqueness_metadata=None, envelope_integration_allowed=None, envelope_integration_allowed_metadata=None, envelope_integration_enabled=None, envelope_integration_enabled_metadata=None, envelope_stamping_default_value=None, envelope_stamping_default_value_metadata=None, express_send=None, express_send_allow_tabs=None, express_send_allow_tabs_metadata=None, express_send_metadata=None, external_document_sources=None, external_signature_pad_type=None, external_signature_pad_type_metadata=None, fax_out_enabled=None, fax_out_enabled_metadata=None, guided_forms_html_allowed=None, guided_forms_html_allowed_metadata=None, hide_account_address_in_co_c=None, hide_account_address_in_co_c_metadata=None, hide_pricing=None, hide_pricing_metadata=None, id_check_configurations=None, id_check_expire=None, id_check_expire_days=None, id_check_expire_days_metadata=None, id_check_expire_metadata=None, id_check_expire_minutes=None, id_check_expire_minutes_metadata=None, id_check_required=None, id_check_required_metadata=None, identity_verification=None, identity_verification_metadata=None, ignore_error_if_anchor_tab_not_found=None, ignore_error_if_anchor_tab_not_found_metadata_enabled=None, in_person_id_check_question=None, in_person_id_check_question_metadata=None, in_person_signing_enabled=None, in_person_signing_enabled_metadata=None, in_session_enabled=None, in_session_enabled_metadata=None, in_session_suppress_emails=None, in_session_suppress_emails_metadata=None, maximum_signing_groups=None, maximum_signing_groups_metadata=None, maximum_users_per_signing_group=None, maximum_users_per_signing_group_metadata=None, max_number_of_custom_stamps=None, mobile_session_timeout=None, mobile_session_timeout_metadata=None, number_of_active_custom_stamps=None, opt_in_mobile_signing_v02=None, opt_in_mobile_signing_v02_metadata=None, opt_out_auto_nav_text_and_tab_color_updates=None, opt_out_auto_nav_text_and_tab_color_updates_metadata=None, opt_out_new_platform_seal=None, opt_out_new_platform_seal_platform_metadata=None, phone_auth_recipient_may_provide_phone_number=None, phone_auth_recipient_may_provide_phone_number_metadata=None, pki_sign_downloaded_pdf_docs=None, pki_sign_downloaded_pdf_docs_metadata=None, recipients_can_sign_offline=None, recipients_can_sign_offline_metadata=None, recipient_signing_auto_navigation_control=None, recipient_signing_auto_navigation_control_metadata=None, require21_cf_rpt11_compliance=None, require21_cf_rpt11_compliance_metadata=None, require_decline_reason=None, require_decline_reason_metadata=None, require_external_user_management=None, require_external_user_management_metadata=None, require_signer_certificate_type=None, require_signer_certificate_type_metadata=None, rsa_verid_account_name=None, rsa_verid_password=None, rsa_verid_ruleset=None, rsa_verid_user_id=None, self_signed_recipient_email_document=None, self_signed_recipient_email_document_metadata=None, self_signed_recipient_email_document_user_override=None, self_signed_recipient_email_document_user_override_metadata=None, sender_can_sign_in_each_location=None, sender_can_sign_in_each_location_metadata=None, sender_must_authenticate_signing=None, sender_must_authenticate_signing_metadata=None, sending_tags_font_color=None, sending_tags_font_color_metadata=None, sending_tags_font_name=None, sending_tags_font_name_metadata=None, sending_tags_font_size=None, sending_tags_font_size_metadata=None, send_to_certified_delivery_enabled=None, send_to_certified_delivery_enabled_metadata=None, session_timeout=None, session_timeout_metadata=None, set_recip_email_lang=None, set_recip_email_lang_metadata=None, set_recip_sign_lang=None, set_recip_sign_lang_metadata=None, shared_template_folders=None, shared_template_folders_metadata=None, show_complete_dialog_in_embedded_session=None, show_complete_dialog_in_embedded_session_metadata=None, show_conditional_routing_on_send=None, show_conditional_routing_on_send_metadata=None, show_initial_conditional_fields=None, show_initial_conditional_fields_metadata=None, show_localized_watermarks=None, show_localized_watermarks_metadata=None, show_tutorials=None, show_tutorials_metadata=None, signature_providers=None, signature_providers_metadata=None, sign_date_format=None, sign_date_format_metadata=None, signer_attach_certificate_to_envelope_pdf=None, signer_attach_certificate_to_envelope_pdf_metadata=None, signer_attach_concat=None, signer_attach_concat_metadata=None, signer_can_create_account=None, signer_can_create_account_metadata=None, signer_can_sign_on_mobile=None, signer_can_sign_on_mobile_metadata=None, signer_in_session_use_envelope_complete_email=None, signer_in_session_use_envelope_complete_email_metadata=None, signer_login_requirements=None, signer_login_requirements_metadata=None, signer_must_have_account=None, signer_must_have_account_metadata=None, signer_must_login_to_sign=None, signer_must_login_to_sign_metadata=None, signer_show_secure_field_initial_values=None, signer_show_secure_field_initial_values_metadata=None, signing_session_timeout=None, signing_session_timeout_metadata=None, signing_ui_version=None, signing_ui_version_metadata=None, sign_time_format=None, sign_time_format_metadata=None, sign_time_show_am_pm=None, sign_time_show_am_pm_metadata=None, simplified_sending_enabled=None, simplified_sending_enabled_metadata=None, single_sign_on_enabled=None, single_sign_on_enabled_metadata=None, skip_auth_completed_envelopes=None, skip_auth_completed_envelopes_metadata=None, social_id_recip_auth=None, social_id_recip_auth_metadata=None, specify_document_visibility=None, specify_document_visibility_metadata=None, start_in_advanced_correct=None, start_in_advanced_correct_metadata=None, supplemental_documents_must_accept=None, supplemental_documents_must_accept_metadata=None, supplemental_documents_must_read=None, supplemental_documents_must_read_metadata=None, supplemental_documents_must_view=None, supplemental_documents_must_view_metadata=None, suppress_certificate_enforcement=None, suppress_certificate_enforcement_metadata=None, tab_account_settings=None, timezone_offset_api=None, timezone_offset_api_metadata=None, timezone_offset_ui=None, timezone_offset_ui_metadata=None, universal_signature_opt_in=None, use_account_level_email=None, use_account_level_email_metadata=None, use_consumer_disclosure=None, use_consumer_disclosure_metadata=None, use_consumer_disclosure_within_account=None, use_consumer_disclosure_within_account_metadata=None, use_derived_keys=None, use_derived_keys_metadata=None, use_docu_sign_express_signer_certificate=None, use_docu_sign_express_signer_certificate_metadata=None, use_multi_app_groups_data=None, use_multi_app_groups_data_metadata=None, use_new_blob_for_pdf=None, use_new_blob_for_pdf_metadata=None, use_safe_signer_certificates=None, use_safe_signer_certificates_metadata=None, uses_api=None, uses_api_metadata=None, use_signature_provider_platform=None, use_signature_provider_platform_metadata=None, validations_allowed=None, validations_allowed_metadata=None, validations_brand=None, validations_brand_metadata=None, validations_cadence=None, validations_cadence_metadata=None, validations_enabled=None, validations_enabled_metadata=None, validations_report=None, validations_report_metadata=None, water_mark_enabled=None, water_mark_enabled_metadata=None, write_reminder_to_envelope_history=None, write_reminder_to_envelope_history_metadata=None, wurfl_min_allowable_screen_size=None, wurfl_min_allowable_screen_size_metadata=None):  # noqa: E501
         """AccountSettingsInformation - a model defined in Swagger"""  # noqa: E501
 
         self._access_code_format = None
@@ -1182,6 +1194,8 @@ class AccountSettingsInformation(object):
         self._allow_private_signing_groups_metadata = None
         self._allow_reminders = None
         self._allow_reminders_metadata = None
+        self._allow_remote_notary = None
+        self._allow_remote_notary_metadata = None
         self._allow_resource_file_branding = None
         self._allow_resource_file_branding_metadata = None
         self._allow_safe_bio_pharma_signer_certificate = None
@@ -1308,6 +1322,10 @@ class AccountSettingsInformation(object):
         self._enable_advanced_payments_metadata = None
         self._enable_advanced_power_forms = None
         self._enable_advanced_power_forms_metadata = None
+        self._enable_agreement_actions_for_clm = None
+        self._enable_agreement_actions_for_clm_metadata = None
+        self._enable_agreement_actions_for_e_sign = None
+        self._enable_agreement_actions_for_e_sign_metadata = None
         self._enable_auto_nav = None
         self._enable_auto_nav_metadata = None
         self._enable_calculated_fields = None
@@ -1592,9 +1610,1052 @@ class AccountSettingsInformation(object):
         self._wurfl_min_allowable_screen_size_metadata = None
         self.discriminator = None
 
-        for key in self.swagger_types:
-            param_val = kwargs.get(key, None)
-            setattr(self, "_{}".format(key), param_val)
+        if access_code_format is not None:
+            self.access_code_format = access_code_format
+        if account_date_time_format is not None:
+            self.account_date_time_format = account_date_time_format
+        if account_date_time_format_metadata is not None:
+            self.account_date_time_format_metadata = account_date_time_format_metadata
+        if account_default_language is not None:
+            self.account_default_language = account_default_language
+        if account_default_language_metadata is not None:
+            self.account_default_language_metadata = account_default_language_metadata
+        if account_name is not None:
+            self.account_name = account_name
+        if account_name_metadata is not None:
+            self.account_name_metadata = account_name_metadata
+        if account_notification is not None:
+            self.account_notification = account_notification
+        if account_ui_settings is not None:
+            self.account_ui_settings = account_ui_settings
+        if adopt_sig_config is not None:
+            self.adopt_sig_config = adopt_sig_config
+        if adopt_sig_config_metadata is not None:
+            self.adopt_sig_config_metadata = adopt_sig_config_metadata
+        if advanced_correct is not None:
+            self.advanced_correct = advanced_correct
+        if advanced_correct_metadata is not None:
+            self.advanced_correct_metadata = advanced_correct_metadata
+        if allow_access_code_format is not None:
+            self.allow_access_code_format = allow_access_code_format
+        if allow_access_code_format_metadata is not None:
+            self.allow_access_code_format_metadata = allow_access_code_format_metadata
+        if allow_account_management_granular is not None:
+            self.allow_account_management_granular = allow_account_management_granular
+        if allow_account_management_granular_metadata is not None:
+            self.allow_account_management_granular_metadata = allow_account_management_granular_metadata
+        if allow_account_member_name_change is not None:
+            self.allow_account_member_name_change = allow_account_member_name_change
+        if allow_account_member_name_change_metadata is not None:
+            self.allow_account_member_name_change_metadata = allow_account_member_name_change_metadata
+        if allow_advanced_recipient_routing_conditional is not None:
+            self.allow_advanced_recipient_routing_conditional = allow_advanced_recipient_routing_conditional
+        if allow_advanced_recipient_routing_conditional_metadata is not None:
+            self.allow_advanced_recipient_routing_conditional_metadata = allow_advanced_recipient_routing_conditional_metadata
+        if allow_agent_name_email_edit is not None:
+            self.allow_agent_name_email_edit = allow_agent_name_email_edit
+        if allow_agent_name_email_edit_metadata is not None:
+            self.allow_agent_name_email_edit_metadata = allow_agent_name_email_edit_metadata
+        if allow_agreement_actions is not None:
+            self.allow_agreement_actions = allow_agreement_actions
+        if allow_agreement_actions_metadata is not None:
+            self.allow_agreement_actions_metadata = allow_agreement_actions_metadata
+        if allow_auto_nav_settings is not None:
+            self.allow_auto_nav_settings = allow_auto_nav_settings
+        if allow_auto_nav_settings_metadata is not None:
+            self.allow_auto_nav_settings_metadata = allow_auto_nav_settings_metadata
+        if allow_auto_tagging is not None:
+            self.allow_auto_tagging = allow_auto_tagging
+        if allow_auto_tagging_metadata is not None:
+            self.allow_auto_tagging_metadata = allow_auto_tagging_metadata
+        if allow_bulk_send is not None:
+            self.allow_bulk_send = allow_bulk_send
+        if allow_bulk_send_metadata is not None:
+            self.allow_bulk_send_metadata = allow_bulk_send_metadata
+        if allow_cd_withdraw is not None:
+            self.allow_cd_withdraw = allow_cd_withdraw
+        if allow_cd_withdraw_metadata is not None:
+            self.allow_cd_withdraw_metadata = allow_cd_withdraw_metadata
+        if allow_connect_http_listener_configs is not None:
+            self.allow_connect_http_listener_configs = allow_connect_http_listener_configs
+        if allow_connect_send_finish_later is not None:
+            self.allow_connect_send_finish_later = allow_connect_send_finish_later
+        if allow_connect_send_finish_later_metadata is not None:
+            self.allow_connect_send_finish_later_metadata = allow_connect_send_finish_later_metadata
+        if allow_connect_unified_payload_ui is not None:
+            self.allow_connect_unified_payload_ui = allow_connect_unified_payload_ui
+        if allow_consumer_disclosure_override is not None:
+            self.allow_consumer_disclosure_override = allow_consumer_disclosure_override
+        if allow_consumer_disclosure_override_metadata is not None:
+            self.allow_consumer_disclosure_override_metadata = allow_consumer_disclosure_override_metadata
+        if allow_data_download is not None:
+            self.allow_data_download = allow_data_download
+        if allow_data_download_metadata is not None:
+            self.allow_data_download_metadata = allow_data_download_metadata
+        if allow_document_disclosures is not None:
+            self.allow_document_disclosures = allow_document_disclosures
+        if allow_document_disclosures_metadata is not None:
+            self.allow_document_disclosures_metadata = allow_document_disclosures_metadata
+        if allow_documents_on_signed_envelopes is not None:
+            self.allow_documents_on_signed_envelopes = allow_documents_on_signed_envelopes
+        if allow_documents_on_signed_envelopes_metadata is not None:
+            self.allow_documents_on_signed_envelopes_metadata = allow_documents_on_signed_envelopes_metadata
+        if allow_document_visibility is not None:
+            self.allow_document_visibility = allow_document_visibility
+        if allow_document_visibility_metadata is not None:
+            self.allow_document_visibility_metadata = allow_document_visibility_metadata
+        if allow_e_hanko_stamps is not None:
+            self.allow_e_hanko_stamps = allow_e_hanko_stamps
+        if allow_e_hanko_stamps_metadata is not None:
+            self.allow_e_hanko_stamps_metadata = allow_e_hanko_stamps_metadata
+        if allow_e_note_e_original is not None:
+            self.allow_e_note_e_original = allow_e_note_e_original
+        if allow_e_note_e_original_metadata is not None:
+            self.allow_e_note_e_original_metadata = allow_e_note_e_original_metadata
+        if allow_envelope_correct is not None:
+            self.allow_envelope_correct = allow_envelope_correct
+        if allow_envelope_correct_metadata is not None:
+            self.allow_envelope_correct_metadata = allow_envelope_correct_metadata
+        if allow_envelope_custody_transfer is not None:
+            self.allow_envelope_custody_transfer = allow_envelope_custody_transfer
+        if allow_envelope_custody_transfer_metadata is not None:
+            self.allow_envelope_custody_transfer_metadata = allow_envelope_custody_transfer_metadata
+        if allow_envelope_custom_fields is not None:
+            self.allow_envelope_custom_fields = allow_envelope_custom_fields
+        if allow_envelope_custom_fields_metadata is not None:
+            self.allow_envelope_custom_fields_metadata = allow_envelope_custom_fields_metadata
+        if allow_envelope_publish_reporting is not None:
+            self.allow_envelope_publish_reporting = allow_envelope_publish_reporting
+        if allow_envelope_publish_reporting_metadata is not None:
+            self.allow_envelope_publish_reporting_metadata = allow_envelope_publish_reporting_metadata
+        if allow_envelope_reporting is not None:
+            self.allow_envelope_reporting = allow_envelope_reporting
+        if allow_envelope_reporting_metadata is not None:
+            self.allow_envelope_reporting_metadata = allow_envelope_reporting_metadata
+        if allow_expression is not None:
+            self.allow_expression = allow_expression
+        if allow_expression_metadata is not None:
+            self.allow_expression_metadata = allow_expression_metadata
+        if allow_express_signer_certificate is not None:
+            self.allow_express_signer_certificate = allow_express_signer_certificate
+        if allow_express_signer_certificate_metadata is not None:
+            self.allow_express_signer_certificate_metadata = allow_express_signer_certificate_metadata
+        if allow_extended_sending_resource_file is not None:
+            self.allow_extended_sending_resource_file = allow_extended_sending_resource_file
+        if allow_extended_sending_resource_file_metadata is not None:
+            self.allow_extended_sending_resource_file_metadata = allow_extended_sending_resource_file_metadata
+        if allow_external_signature_pad is not None:
+            self.allow_external_signature_pad = allow_external_signature_pad
+        if allow_external_signature_pad_metadata is not None:
+            self.allow_external_signature_pad_metadata = allow_external_signature_pad_metadata
+        if allow_idv_level1 is not None:
+            self.allow_idv_level1 = allow_idv_level1
+        if allow_idv_level1_metadata is not None:
+            self.allow_idv_level1_metadata = allow_idv_level1_metadata
+        if allow_idv_platform is not None:
+            self.allow_idv_platform = allow_idv_platform
+        if allow_idv_platform_metadata is not None:
+            self.allow_idv_platform_metadata = allow_idv_platform_metadata
+        if allow_in_person is not None:
+            self.allow_in_person = allow_in_person
+        if allow_in_person_metadata is not None:
+            self.allow_in_person_metadata = allow_in_person_metadata
+        if allow_managed_stamps is not None:
+            self.allow_managed_stamps = allow_managed_stamps
+        if allow_managed_stamps_metadata is not None:
+            self.allow_managed_stamps_metadata = allow_managed_stamps_metadata
+        if allow_markup is not None:
+            self.allow_markup = allow_markup
+        if allow_markup_metadata is not None:
+            self.allow_markup_metadata = allow_markup_metadata
+        if allow_member_time_zone is not None:
+            self.allow_member_time_zone = allow_member_time_zone
+        if allow_member_time_zone_metadata is not None:
+            self.allow_member_time_zone_metadata = allow_member_time_zone_metadata
+        if allow_merge_fields is not None:
+            self.allow_merge_fields = allow_merge_fields
+        if allow_merge_fields_metadata is not None:
+            self.allow_merge_fields_metadata = allow_merge_fields_metadata
+        if allow_multiple_brand_profiles is not None:
+            self.allow_multiple_brand_profiles = allow_multiple_brand_profiles
+        if allow_multiple_brand_profiles_metadata is not None:
+            self.allow_multiple_brand_profiles_metadata = allow_multiple_brand_profiles_metadata
+        if allow_multiple_signer_attachments is not None:
+            self.allow_multiple_signer_attachments = allow_multiple_signer_attachments
+        if allow_multiple_signer_attachments_metadata is not None:
+            self.allow_multiple_signer_attachments_metadata = allow_multiple_signer_attachments_metadata
+        if allow_non_us_phone_auth is not None:
+            self.allow_non_us_phone_auth = allow_non_us_phone_auth
+        if allow_non_us_phone_auth_metadata is not None:
+            self.allow_non_us_phone_auth_metadata = allow_non_us_phone_auth_metadata
+        if allow_ocr_of_envelope_documents is not None:
+            self.allow_ocr_of_envelope_documents = allow_ocr_of_envelope_documents
+        if allow_ocr_of_envelope_documents_metadata is not None:
+            self.allow_ocr_of_envelope_documents_metadata = allow_ocr_of_envelope_documents_metadata
+        if allow_offline_signing is not None:
+            self.allow_offline_signing = allow_offline_signing
+        if allow_offline_signing_metadata is not None:
+            self.allow_offline_signing_metadata = allow_offline_signing_metadata
+        if allow_open_trust_signer_certificate is not None:
+            self.allow_open_trust_signer_certificate = allow_open_trust_signer_certificate
+        if allow_open_trust_signer_certificate_metadata is not None:
+            self.allow_open_trust_signer_certificate_metadata = allow_open_trust_signer_certificate_metadata
+        if allow_organizations is not None:
+            self.allow_organizations = allow_organizations
+        if allow_organizations_metadata is not None:
+            self.allow_organizations_metadata = allow_organizations_metadata
+        if allow_payment_processing is not None:
+            self.allow_payment_processing = allow_payment_processing
+        if allow_payment_processing_metadata is not None:
+            self.allow_payment_processing_metadata = allow_payment_processing_metadata
+        if allow_personal_signer_certificate is not None:
+            self.allow_personal_signer_certificate = allow_personal_signer_certificate
+        if allow_personal_signer_certificate_metadata is not None:
+            self.allow_personal_signer_certificate_metadata = allow_personal_signer_certificate_metadata
+        if allow_phone_authentication is not None:
+            self.allow_phone_authentication = allow_phone_authentication
+        if allow_phone_authentication_metadata is not None:
+            self.allow_phone_authentication_metadata = allow_phone_authentication_metadata
+        if allow_phone_auth_override is not None:
+            self.allow_phone_auth_override = allow_phone_auth_override
+        if allow_phone_auth_override_metadata is not None:
+            self.allow_phone_auth_override_metadata = allow_phone_auth_override_metadata
+        if allow_private_signing_groups is not None:
+            self.allow_private_signing_groups = allow_private_signing_groups
+        if allow_private_signing_groups_metadata is not None:
+            self.allow_private_signing_groups_metadata = allow_private_signing_groups_metadata
+        if allow_reminders is not None:
+            self.allow_reminders = allow_reminders
+        if allow_reminders_metadata is not None:
+            self.allow_reminders_metadata = allow_reminders_metadata
+        if allow_remote_notary is not None:
+            self.allow_remote_notary = allow_remote_notary
+        if allow_remote_notary_metadata is not None:
+            self.allow_remote_notary_metadata = allow_remote_notary_metadata
+        if allow_resource_file_branding is not None:
+            self.allow_resource_file_branding = allow_resource_file_branding
+        if allow_resource_file_branding_metadata is not None:
+            self.allow_resource_file_branding_metadata = allow_resource_file_branding_metadata
+        if allow_safe_bio_pharma_signer_certificate is not None:
+            self.allow_safe_bio_pharma_signer_certificate = allow_safe_bio_pharma_signer_certificate
+        if allow_safe_bio_pharma_signer_certificate_metadata is not None:
+            self.allow_safe_bio_pharma_signer_certificate_metadata = allow_safe_bio_pharma_signer_certificate_metadata
+        if allow_security_appliance is not None:
+            self.allow_security_appliance = allow_security_appliance
+        if allow_security_appliance_metadata is not None:
+            self.allow_security_appliance_metadata = allow_security_appliance_metadata
+        if allow_send_to_certified_delivery is not None:
+            self.allow_send_to_certified_delivery = allow_send_to_certified_delivery
+        if allow_send_to_certified_delivery_metadata is not None:
+            self.allow_send_to_certified_delivery_metadata = allow_send_to_certified_delivery_metadata
+        if allow_send_to_intermediary is not None:
+            self.allow_send_to_intermediary = allow_send_to_intermediary
+        if allow_send_to_intermediary_metadata is not None:
+            self.allow_send_to_intermediary_metadata = allow_send_to_intermediary_metadata
+        if allow_server_templates is not None:
+            self.allow_server_templates = allow_server_templates
+        if allow_server_templates_metadata is not None:
+            self.allow_server_templates_metadata = allow_server_templates_metadata
+        if allow_set_embedded_recipient_start_url is not None:
+            self.allow_set_embedded_recipient_start_url = allow_set_embedded_recipient_start_url
+        if allow_set_embedded_recipient_start_url_metadata is not None:
+            self.allow_set_embedded_recipient_start_url_metadata = allow_set_embedded_recipient_start_url_metadata
+        if allow_shared_tabs is not None:
+            self.allow_shared_tabs = allow_shared_tabs
+        if allow_shared_tabs_metadata is not None:
+            self.allow_shared_tabs_metadata = allow_shared_tabs_metadata
+        if allow_signature_stamps is not None:
+            self.allow_signature_stamps = allow_signature_stamps
+        if allow_signature_stamps_metadata is not None:
+            self.allow_signature_stamps_metadata = allow_signature_stamps_metadata
+        if allow_sign_document_from_home_page is not None:
+            self.allow_sign_document_from_home_page = allow_sign_document_from_home_page
+        if allow_sign_document_from_home_page_metadata is not None:
+            self.allow_sign_document_from_home_page_metadata = allow_sign_document_from_home_page_metadata
+        if allow_signer_reassign is not None:
+            self.allow_signer_reassign = allow_signer_reassign
+        if allow_signer_reassign_metadata is not None:
+            self.allow_signer_reassign_metadata = allow_signer_reassign_metadata
+        if allow_signer_reassign_override is not None:
+            self.allow_signer_reassign_override = allow_signer_reassign_override
+        if allow_signer_reassign_override_metadata is not None:
+            self.allow_signer_reassign_override_metadata = allow_signer_reassign_override_metadata
+        if allow_signing_extensions is not None:
+            self.allow_signing_extensions = allow_signing_extensions
+        if allow_signing_extensions_metadata is not None:
+            self.allow_signing_extensions_metadata = allow_signing_extensions_metadata
+        if allow_signing_groups is not None:
+            self.allow_signing_groups = allow_signing_groups
+        if allow_signing_groups_metadata is not None:
+            self.allow_signing_groups_metadata = allow_signing_groups_metadata
+        if allow_signing_radio_deselect is not None:
+            self.allow_signing_radio_deselect = allow_signing_radio_deselect
+        if allow_signing_radio_deselect_metadata is not None:
+            self.allow_signing_radio_deselect_metadata = allow_signing_radio_deselect_metadata
+        if allow_sign_now is not None:
+            self.allow_sign_now = allow_sign_now
+        if allow_sign_now_metadata is not None:
+            self.allow_sign_now_metadata = allow_sign_now_metadata
+        if allow_sms_delivery is not None:
+            self.allow_sms_delivery = allow_sms_delivery
+        if allow_sms_delivery_metadata is not None:
+            self.allow_sms_delivery_metadata = allow_sms_delivery_metadata
+        if allow_social_id_login is not None:
+            self.allow_social_id_login = allow_social_id_login
+        if allow_social_id_login_metadata is not None:
+            self.allow_social_id_login_metadata = allow_social_id_login_metadata
+        if allow_supplemental_documents is not None:
+            self.allow_supplemental_documents = allow_supplemental_documents
+        if allow_supplemental_documents_metadata is not None:
+            self.allow_supplemental_documents_metadata = allow_supplemental_documents_metadata
+        if allow_users_to_access_directory is not None:
+            self.allow_users_to_access_directory = allow_users_to_access_directory
+        if allow_users_to_access_directory_metadata is not None:
+            self.allow_users_to_access_directory_metadata = allow_users_to_access_directory_metadata
+        if allow_value_insights is not None:
+            self.allow_value_insights = allow_value_insights
+        if allow_value_insights_metadata is not None:
+            self.allow_value_insights_metadata = allow_value_insights_metadata
+        if anchor_population_scope is not None:
+            self.anchor_population_scope = anchor_population_scope
+        if anchor_population_scope_metadata is not None:
+            self.anchor_population_scope_metadata = anchor_population_scope_metadata
+        if anchor_tag_versioned_placement_enabled is not None:
+            self.anchor_tag_versioned_placement_enabled = anchor_tag_versioned_placement_enabled
+        if anchor_tag_versioned_placement_metadata_enabled is not None:
+            self.anchor_tag_versioned_placement_metadata_enabled = anchor_tag_versioned_placement_metadata_enabled
+        if attach_completed_envelope is not None:
+            self.attach_completed_envelope = attach_completed_envelope
+        if attach_completed_envelope_metadata is not None:
+            self.attach_completed_envelope_metadata = attach_completed_envelope_metadata
+        if authentication_check is not None:
+            self.authentication_check = authentication_check
+        if authentication_check_metadata is not None:
+            self.authentication_check_metadata = authentication_check_metadata
+        if auto_nav_rule is not None:
+            self.auto_nav_rule = auto_nav_rule
+        if auto_nav_rule_metadata is not None:
+            self.auto_nav_rule_metadata = auto_nav_rule_metadata
+        if auto_provision_signer_account is not None:
+            self.auto_provision_signer_account = auto_provision_signer_account
+        if auto_provision_signer_account_metadata is not None:
+            self.auto_provision_signer_account_metadata = auto_provision_signer_account_metadata
+        if bcc_email_archive is not None:
+            self.bcc_email_archive = bcc_email_archive
+        if bcc_email_archive_metadata is not None:
+            self.bcc_email_archive_metadata = bcc_email_archive_metadata
+        if beta_switch_configuration is not None:
+            self.beta_switch_configuration = beta_switch_configuration
+        if beta_switch_configuration_metadata is not None:
+            self.beta_switch_configuration_metadata = beta_switch_configuration_metadata
+        if billing_address is not None:
+            self.billing_address = billing_address
+        if billing_address_metadata is not None:
+            self.billing_address_metadata = billing_address_metadata
+        if bulk_send is not None:
+            self.bulk_send = bulk_send
+        if bulk_send_max_copies_in_batch is not None:
+            self.bulk_send_max_copies_in_batch = bulk_send_max_copies_in_batch
+        if bulk_send_max_unprocessed_envelopes_count is not None:
+            self.bulk_send_max_unprocessed_envelopes_count = bulk_send_max_unprocessed_envelopes_count
+        if bulk_send_metadata is not None:
+            self.bulk_send_metadata = bulk_send_metadata
+        if can_self_brand_send is not None:
+            self.can_self_brand_send = can_self_brand_send
+        if can_self_brand_send_metadata is not None:
+            self.can_self_brand_send_metadata = can_self_brand_send_metadata
+        if can_self_brand_sign is not None:
+            self.can_self_brand_sign = can_self_brand_sign
+        if can_self_brand_sign_metadata is not None:
+            self.can_self_brand_sign_metadata = can_self_brand_sign_metadata
+        if can_use_salesforce_o_auth is not None:
+            self.can_use_salesforce_o_auth = can_use_salesforce_o_auth
+        if can_use_salesforce_o_auth_metadata is not None:
+            self.can_use_salesforce_o_auth_metadata = can_use_salesforce_o_auth_metadata
+        if capture_voice_recording is not None:
+            self.capture_voice_recording = capture_voice_recording
+        if capture_voice_recording_metadata is not None:
+            self.capture_voice_recording_metadata = capture_voice_recording_metadata
+        if cfr_use_wide_image is not None:
+            self.cfr_use_wide_image = cfr_use_wide_image
+        if cfr_use_wide_image_metadata is not None:
+            self.cfr_use_wide_image_metadata = cfr_use_wide_image_metadata
+        if check_for_multiple_admins_on_account is not None:
+            self.check_for_multiple_admins_on_account = check_for_multiple_admins_on_account
+        if check_for_multiple_admins_on_account_metadata is not None:
+            self.check_for_multiple_admins_on_account_metadata = check_for_multiple_admins_on_account_metadata
+        if chrome_signature_enabled is not None:
+            self.chrome_signature_enabled = chrome_signature_enabled
+        if chrome_signature_enabled_metadata is not None:
+            self.chrome_signature_enabled_metadata = chrome_signature_enabled_metadata
+        if comment_email_show_message_text is not None:
+            self.comment_email_show_message_text = comment_email_show_message_text
+        if comment_email_show_message_text_metadata is not None:
+            self.comment_email_show_message_text_metadata = comment_email_show_message_text_metadata
+        if comments_allow_envelope_override is not None:
+            self.comments_allow_envelope_override = comments_allow_envelope_override
+        if comments_allow_envelope_override_metadata is not None:
+            self.comments_allow_envelope_override_metadata = comments_allow_envelope_override_metadata
+        if conditional_fields_enabled is not None:
+            self.conditional_fields_enabled = conditional_fields_enabled
+        if conditional_fields_enabled_metadata is not None:
+            self.conditional_fields_enabled_metadata = conditional_fields_enabled_metadata
+        if consumer_disclosure_frequency is not None:
+            self.consumer_disclosure_frequency = consumer_disclosure_frequency
+        if consumer_disclosure_frequency_metadata is not None:
+            self.consumer_disclosure_frequency_metadata = consumer_disclosure_frequency_metadata
+        if convert_pdf_fields is not None:
+            self.convert_pdf_fields = convert_pdf_fields
+        if convert_pdf_fields_metadata is not None:
+            self.convert_pdf_fields_metadata = convert_pdf_fields_metadata
+        if data_population_scope is not None:
+            self.data_population_scope = data_population_scope
+        if data_population_scope_metadata is not None:
+            self.data_population_scope_metadata = data_population_scope_metadata
+        if disable_mobile_app is not None:
+            self.disable_mobile_app = disable_mobile_app
+        if disable_mobile_app_metadata is not None:
+            self.disable_mobile_app_metadata = disable_mobile_app_metadata
+        if disable_mobile_push_notifications is not None:
+            self.disable_mobile_push_notifications = disable_mobile_push_notifications
+        if disable_mobile_push_notifications_metadata is not None:
+            self.disable_mobile_push_notifications_metadata = disable_mobile_push_notifications_metadata
+        if disable_mobile_sending is not None:
+            self.disable_mobile_sending = disable_mobile_sending
+        if disable_mobile_sending_metadata is not None:
+            self.disable_mobile_sending_metadata = disable_mobile_sending_metadata
+        if disable_multiple_sessions is not None:
+            self.disable_multiple_sessions = disable_multiple_sessions
+        if disable_multiple_sessions_metadata is not None:
+            self.disable_multiple_sessions_metadata = disable_multiple_sessions_metadata
+        if disable_purge_notifications_for_sender_metadata is not None:
+            self.disable_purge_notifications_for_sender_metadata = disable_purge_notifications_for_sender_metadata
+        if disable_signer_cert_view is not None:
+            self.disable_signer_cert_view = disable_signer_cert_view
+        if disable_signer_cert_view_metadata is not None:
+            self.disable_signer_cert_view_metadata = disable_signer_cert_view_metadata
+        if disable_signer_history_view is not None:
+            self.disable_signer_history_view = disable_signer_history_view
+        if disable_signer_history_view_metadata is not None:
+            self.disable_signer_history_view_metadata = disable_signer_history_view_metadata
+        if disable_style_signature is not None:
+            self.disable_style_signature = disable_style_signature
+        if disable_style_signature_metadata is not None:
+            self.disable_style_signature_metadata = disable_style_signature_metadata
+        if disable_upload_signature is not None:
+            self.disable_upload_signature = disable_upload_signature
+        if disable_upload_signature_metadata is not None:
+            self.disable_upload_signature_metadata = disable_upload_signature_metadata
+        if disable_user_sharing is not None:
+            self.disable_user_sharing = disable_user_sharing
+        if disable_user_sharing_metadata is not None:
+            self.disable_user_sharing_metadata = disable_user_sharing_metadata
+        if display_beta_switch is not None:
+            self.display_beta_switch = display_beta_switch
+        if display_beta_switch_metadata is not None:
+            self.display_beta_switch_metadata = display_beta_switch_metadata
+        if document_conversion_restrictions is not None:
+            self.document_conversion_restrictions = document_conversion_restrictions
+        if document_conversion_restrictions_metadata is not None:
+            self.document_conversion_restrictions_metadata = document_conversion_restrictions_metadata
+        if document_retention is not None:
+            self.document_retention = document_retention
+        if document_retention_metadata is not None:
+            self.document_retention_metadata = document_retention_metadata
+        if document_retention_purge_tabs is not None:
+            self.document_retention_purge_tabs = document_retention_purge_tabs
+        if document_visibility is not None:
+            self.document_visibility = document_visibility
+        if document_visibility_metadata is not None:
+            self.document_visibility_metadata = document_visibility_metadata
+        if email_template_version is not None:
+            self.email_template_version = email_template_version
+        if email_template_version_metadata is not None:
+            self.email_template_version_metadata = email_template_version_metadata
+        if enable_access_code_generator is not None:
+            self.enable_access_code_generator = enable_access_code_generator
+        if enable_access_code_generator_metadata is not None:
+            self.enable_access_code_generator_metadata = enable_access_code_generator_metadata
+        if enable_advanced_payments is not None:
+            self.enable_advanced_payments = enable_advanced_payments
+        if enable_advanced_payments_metadata is not None:
+            self.enable_advanced_payments_metadata = enable_advanced_payments_metadata
+        if enable_advanced_power_forms is not None:
+            self.enable_advanced_power_forms = enable_advanced_power_forms
+        if enable_advanced_power_forms_metadata is not None:
+            self.enable_advanced_power_forms_metadata = enable_advanced_power_forms_metadata
+        if enable_agreement_actions_for_clm is not None:
+            self.enable_agreement_actions_for_clm = enable_agreement_actions_for_clm
+        if enable_agreement_actions_for_clm_metadata is not None:
+            self.enable_agreement_actions_for_clm_metadata = enable_agreement_actions_for_clm_metadata
+        if enable_agreement_actions_for_e_sign is not None:
+            self.enable_agreement_actions_for_e_sign = enable_agreement_actions_for_e_sign
+        if enable_agreement_actions_for_e_sign_metadata is not None:
+            self.enable_agreement_actions_for_e_sign_metadata = enable_agreement_actions_for_e_sign_metadata
+        if enable_auto_nav is not None:
+            self.enable_auto_nav = enable_auto_nav
+        if enable_auto_nav_metadata is not None:
+            self.enable_auto_nav_metadata = enable_auto_nav_metadata
+        if enable_calculated_fields is not None:
+            self.enable_calculated_fields = enable_calculated_fields
+        if enable_calculated_fields_metadata is not None:
+            self.enable_calculated_fields_metadata = enable_calculated_fields_metadata
+        if enable_clickwraps is not None:
+            self.enable_clickwraps = enable_clickwraps
+        if enable_clickwraps_metadata is not None:
+            self.enable_clickwraps_metadata = enable_clickwraps_metadata
+        if enable_comments_history_download_in_signing is not None:
+            self.enable_comments_history_download_in_signing = enable_comments_history_download_in_signing
+        if enable_comments_history_download_in_signing_metadata is not None:
+            self.enable_comments_history_download_in_signing_metadata = enable_comments_history_download_in_signing_metadata
+        if enable_customer_satisfaction_metric_tracking is not None:
+            self.enable_customer_satisfaction_metric_tracking = enable_customer_satisfaction_metric_tracking
+        if enable_customer_satisfaction_metric_tracking_metadata is not None:
+            self.enable_customer_satisfaction_metric_tracking_metadata = enable_customer_satisfaction_metric_tracking_metadata
+        if enable_ds_pro is not None:
+            self.enable_ds_pro = enable_ds_pro
+        if enable_ds_pro_metadata is not None:
+            self.enable_ds_pro_metadata = enable_ds_pro_metadata
+        if enable_envelope_stamping_by_account_admin is not None:
+            self.enable_envelope_stamping_by_account_admin = enable_envelope_stamping_by_account_admin
+        if enable_envelope_stamping_by_account_admin_metadata is not None:
+            self.enable_envelope_stamping_by_account_admin_metadata = enable_envelope_stamping_by_account_admin_metadata
+        if enable_envelope_stamping_by_ds_admin is not None:
+            self.enable_envelope_stamping_by_ds_admin = enable_envelope_stamping_by_ds_admin
+        if enable_envelope_stamping_by_ds_admin_metadata is not None:
+            self.enable_envelope_stamping_by_ds_admin_metadata = enable_envelope_stamping_by_ds_admin_metadata
+        if enable_in_browser_editor is not None:
+            self.enable_in_browser_editor = enable_in_browser_editor
+        if enable_in_browser_editor_metadata is not None:
+            self.enable_in_browser_editor_metadata = enable_in_browser_editor_metadata
+        if enable_payment_processing is not None:
+            self.enable_payment_processing = enable_payment_processing
+        if enable_payment_processing_metadata is not None:
+            self.enable_payment_processing_metadata = enable_payment_processing_metadata
+        if enable_power_form is not None:
+            self.enable_power_form = enable_power_form
+        if enable_power_form_direct is not None:
+            self.enable_power_form_direct = enable_power_form_direct
+        if enable_power_form_direct_metadata is not None:
+            self.enable_power_form_direct_metadata = enable_power_form_direct_metadata
+        if enable_power_form_metadata is not None:
+            self.enable_power_form_metadata = enable_power_form_metadata
+        if enable_recipient_domain_validation is not None:
+            self.enable_recipient_domain_validation = enable_recipient_domain_validation
+        if enable_recipient_domain_validation_metadata is not None:
+            self.enable_recipient_domain_validation_metadata = enable_recipient_domain_validation_metadata
+        if enable_report_links is not None:
+            self.enable_report_links = enable_report_links
+        if enable_report_links_metadata is not None:
+            self.enable_report_links_metadata = enable_report_links_metadata
+        if enable_require_sign_on_paper is not None:
+            self.enable_require_sign_on_paper = enable_require_sign_on_paper
+        if enable_require_sign_on_paper_metadata is not None:
+            self.enable_require_sign_on_paper_metadata = enable_require_sign_on_paper_metadata
+        if enable_reserved_domain is not None:
+            self.enable_reserved_domain = enable_reserved_domain
+        if enable_reserved_domain_metadata is not None:
+            self.enable_reserved_domain_metadata = enable_reserved_domain_metadata
+        if enable_responsive_signing is not None:
+            self.enable_responsive_signing = enable_responsive_signing
+        if enable_responsive_signing_metadata is not None:
+            self.enable_responsive_signing_metadata = enable_responsive_signing_metadata
+        if enable_scheduled_release is not None:
+            self.enable_scheduled_release = enable_scheduled_release
+        if enable_scheduled_release_metadata is not None:
+            self.enable_scheduled_release_metadata = enable_scheduled_release_metadata
+        if enable_search_ui is not None:
+            self.enable_search_ui = enable_search_ui
+        if enable_search_ui_metadata is not None:
+            self.enable_search_ui_metadata = enable_search_ui_metadata
+        if enable_sending_tags_font_settings is not None:
+            self.enable_sending_tags_font_settings = enable_sending_tags_font_settings
+        if enable_sending_tags_font_settings_metadata is not None:
+            self.enable_sending_tags_font_settings_metadata = enable_sending_tags_font_settings_metadata
+        if enable_send_to_agent is not None:
+            self.enable_send_to_agent = enable_send_to_agent
+        if enable_send_to_agent_metadata is not None:
+            self.enable_send_to_agent_metadata = enable_send_to_agent_metadata
+        if enable_send_to_intermediary is not None:
+            self.enable_send_to_intermediary = enable_send_to_intermediary
+        if enable_send_to_intermediary_metadata is not None:
+            self.enable_send_to_intermediary_metadata = enable_send_to_intermediary_metadata
+        if enable_send_to_manage is not None:
+            self.enable_send_to_manage = enable_send_to_manage
+        if enable_send_to_manage_metadata is not None:
+            self.enable_send_to_manage_metadata = enable_send_to_manage_metadata
+        if enable_sequential_signing_api is not None:
+            self.enable_sequential_signing_api = enable_sequential_signing_api
+        if enable_sequential_signing_api_metadata is not None:
+            self.enable_sequential_signing_api_metadata = enable_sequential_signing_api_metadata
+        if enable_sequential_signing_ui is not None:
+            self.enable_sequential_signing_ui = enable_sequential_signing_ui
+        if enable_sequential_signing_ui_metadata is not None:
+            self.enable_sequential_signing_ui_metadata = enable_sequential_signing_ui_metadata
+        if enable_signer_attachments is not None:
+            self.enable_signer_attachments = enable_signer_attachments
+        if enable_signer_attachments_metadata is not None:
+            self.enable_signer_attachments_metadata = enable_signer_attachments_metadata
+        if enable_signing_extension_comments is not None:
+            self.enable_signing_extension_comments = enable_signing_extension_comments
+        if enable_signing_extension_comments_metadata is not None:
+            self.enable_signing_extension_comments_metadata = enable_signing_extension_comments_metadata
+        if enable_signing_extension_conversations is not None:
+            self.enable_signing_extension_conversations = enable_signing_extension_conversations
+        if enable_signing_extension_conversations_metadata is not None:
+            self.enable_signing_extension_conversations_metadata = enable_signing_extension_conversations_metadata
+        if enable_signing_order_settings_for_account is not None:
+            self.enable_signing_order_settings_for_account = enable_signing_order_settings_for_account
+        if enable_signing_order_settings_for_account_metadata is not None:
+            self.enable_signing_order_settings_for_account_metadata = enable_signing_order_settings_for_account_metadata
+        if enable_sign_on_paper is not None:
+            self.enable_sign_on_paper = enable_sign_on_paper
+        if enable_sign_on_paper_metadata is not None:
+            self.enable_sign_on_paper_metadata = enable_sign_on_paper_metadata
+        if enable_sign_on_paper_override is not None:
+            self.enable_sign_on_paper_override = enable_sign_on_paper_override
+        if enable_sign_on_paper_override_metadata is not None:
+            self.enable_sign_on_paper_override_metadata = enable_sign_on_paper_override_metadata
+        if enable_sign_with_notary is not None:
+            self.enable_sign_with_notary = enable_sign_with_notary
+        if enable_sign_with_notary_metadata is not None:
+            self.enable_sign_with_notary_metadata = enable_sign_with_notary_metadata
+        if enable_smart_contracts is not None:
+            self.enable_smart_contracts = enable_smart_contracts
+        if enable_smart_contracts_metadata is not None:
+            self.enable_smart_contracts_metadata = enable_smart_contracts_metadata
+        if enable_sms_authentication is not None:
+            self.enable_sms_authentication = enable_sms_authentication
+        if enable_sms_authentication_metadata is not None:
+            self.enable_sms_authentication_metadata = enable_sms_authentication_metadata
+        if enable_social_id_login is not None:
+            self.enable_social_id_login = enable_social_id_login
+        if enable_social_id_login_metadata is not None:
+            self.enable_social_id_login_metadata = enable_social_id_login_metadata
+        if enable_strike_through is not None:
+            self.enable_strike_through = enable_strike_through
+        if enable_strike_through_metadata is not None:
+            self.enable_strike_through_metadata = enable_strike_through_metadata
+        if enable_transaction_point is not None:
+            self.enable_transaction_point = enable_transaction_point
+        if enable_transaction_point_metadata is not None:
+            self.enable_transaction_point_metadata = enable_transaction_point_metadata
+        if enable_vaulting is not None:
+            self.enable_vaulting = enable_vaulting
+        if enable_vaulting_metadata is not None:
+            self.enable_vaulting_metadata = enable_vaulting_metadata
+        if enable_witnessing is not None:
+            self.enable_witnessing = enable_witnessing
+        if enable_witnessing_metadata is not None:
+            self.enable_witnessing_metadata = enable_witnessing_metadata
+        if enforce_template_name_uniqueness is not None:
+            self.enforce_template_name_uniqueness = enforce_template_name_uniqueness
+        if enforce_template_name_uniqueness_metadata is not None:
+            self.enforce_template_name_uniqueness_metadata = enforce_template_name_uniqueness_metadata
+        if envelope_integration_allowed is not None:
+            self.envelope_integration_allowed = envelope_integration_allowed
+        if envelope_integration_allowed_metadata is not None:
+            self.envelope_integration_allowed_metadata = envelope_integration_allowed_metadata
+        if envelope_integration_enabled is not None:
+            self.envelope_integration_enabled = envelope_integration_enabled
+        if envelope_integration_enabled_metadata is not None:
+            self.envelope_integration_enabled_metadata = envelope_integration_enabled_metadata
+        if envelope_stamping_default_value is not None:
+            self.envelope_stamping_default_value = envelope_stamping_default_value
+        if envelope_stamping_default_value_metadata is not None:
+            self.envelope_stamping_default_value_metadata = envelope_stamping_default_value_metadata
+        if express_send is not None:
+            self.express_send = express_send
+        if express_send_allow_tabs is not None:
+            self.express_send_allow_tabs = express_send_allow_tabs
+        if express_send_allow_tabs_metadata is not None:
+            self.express_send_allow_tabs_metadata = express_send_allow_tabs_metadata
+        if express_send_metadata is not None:
+            self.express_send_metadata = express_send_metadata
+        if external_document_sources is not None:
+            self.external_document_sources = external_document_sources
+        if external_signature_pad_type is not None:
+            self.external_signature_pad_type = external_signature_pad_type
+        if external_signature_pad_type_metadata is not None:
+            self.external_signature_pad_type_metadata = external_signature_pad_type_metadata
+        if fax_out_enabled is not None:
+            self.fax_out_enabled = fax_out_enabled
+        if fax_out_enabled_metadata is not None:
+            self.fax_out_enabled_metadata = fax_out_enabled_metadata
+        if guided_forms_html_allowed is not None:
+            self.guided_forms_html_allowed = guided_forms_html_allowed
+        if guided_forms_html_allowed_metadata is not None:
+            self.guided_forms_html_allowed_metadata = guided_forms_html_allowed_metadata
+        if hide_account_address_in_co_c is not None:
+            self.hide_account_address_in_co_c = hide_account_address_in_co_c
+        if hide_account_address_in_co_c_metadata is not None:
+            self.hide_account_address_in_co_c_metadata = hide_account_address_in_co_c_metadata
+        if hide_pricing is not None:
+            self.hide_pricing = hide_pricing
+        if hide_pricing_metadata is not None:
+            self.hide_pricing_metadata = hide_pricing_metadata
+        if id_check_configurations is not None:
+            self.id_check_configurations = id_check_configurations
+        if id_check_expire is not None:
+            self.id_check_expire = id_check_expire
+        if id_check_expire_days is not None:
+            self.id_check_expire_days = id_check_expire_days
+        if id_check_expire_days_metadata is not None:
+            self.id_check_expire_days_metadata = id_check_expire_days_metadata
+        if id_check_expire_metadata is not None:
+            self.id_check_expire_metadata = id_check_expire_metadata
+        if id_check_expire_minutes is not None:
+            self.id_check_expire_minutes = id_check_expire_minutes
+        if id_check_expire_minutes_metadata is not None:
+            self.id_check_expire_minutes_metadata = id_check_expire_minutes_metadata
+        if id_check_required is not None:
+            self.id_check_required = id_check_required
+        if id_check_required_metadata is not None:
+            self.id_check_required_metadata = id_check_required_metadata
+        if identity_verification is not None:
+            self.identity_verification = identity_verification
+        if identity_verification_metadata is not None:
+            self.identity_verification_metadata = identity_verification_metadata
+        if ignore_error_if_anchor_tab_not_found is not None:
+            self.ignore_error_if_anchor_tab_not_found = ignore_error_if_anchor_tab_not_found
+        if ignore_error_if_anchor_tab_not_found_metadata_enabled is not None:
+            self.ignore_error_if_anchor_tab_not_found_metadata_enabled = ignore_error_if_anchor_tab_not_found_metadata_enabled
+        if in_person_id_check_question is not None:
+            self.in_person_id_check_question = in_person_id_check_question
+        if in_person_id_check_question_metadata is not None:
+            self.in_person_id_check_question_metadata = in_person_id_check_question_metadata
+        if in_person_signing_enabled is not None:
+            self.in_person_signing_enabled = in_person_signing_enabled
+        if in_person_signing_enabled_metadata is not None:
+            self.in_person_signing_enabled_metadata = in_person_signing_enabled_metadata
+        if in_session_enabled is not None:
+            self.in_session_enabled = in_session_enabled
+        if in_session_enabled_metadata is not None:
+            self.in_session_enabled_metadata = in_session_enabled_metadata
+        if in_session_suppress_emails is not None:
+            self.in_session_suppress_emails = in_session_suppress_emails
+        if in_session_suppress_emails_metadata is not None:
+            self.in_session_suppress_emails_metadata = in_session_suppress_emails_metadata
+        if maximum_signing_groups is not None:
+            self.maximum_signing_groups = maximum_signing_groups
+        if maximum_signing_groups_metadata is not None:
+            self.maximum_signing_groups_metadata = maximum_signing_groups_metadata
+        if maximum_users_per_signing_group is not None:
+            self.maximum_users_per_signing_group = maximum_users_per_signing_group
+        if maximum_users_per_signing_group_metadata is not None:
+            self.maximum_users_per_signing_group_metadata = maximum_users_per_signing_group_metadata
+        if max_number_of_custom_stamps is not None:
+            self.max_number_of_custom_stamps = max_number_of_custom_stamps
+        if mobile_session_timeout is not None:
+            self.mobile_session_timeout = mobile_session_timeout
+        if mobile_session_timeout_metadata is not None:
+            self.mobile_session_timeout_metadata = mobile_session_timeout_metadata
+        if number_of_active_custom_stamps is not None:
+            self.number_of_active_custom_stamps = number_of_active_custom_stamps
+        if opt_in_mobile_signing_v02 is not None:
+            self.opt_in_mobile_signing_v02 = opt_in_mobile_signing_v02
+        if opt_in_mobile_signing_v02_metadata is not None:
+            self.opt_in_mobile_signing_v02_metadata = opt_in_mobile_signing_v02_metadata
+        if opt_out_auto_nav_text_and_tab_color_updates is not None:
+            self.opt_out_auto_nav_text_and_tab_color_updates = opt_out_auto_nav_text_and_tab_color_updates
+        if opt_out_auto_nav_text_and_tab_color_updates_metadata is not None:
+            self.opt_out_auto_nav_text_and_tab_color_updates_metadata = opt_out_auto_nav_text_and_tab_color_updates_metadata
+        if opt_out_new_platform_seal is not None:
+            self.opt_out_new_platform_seal = opt_out_new_platform_seal
+        if opt_out_new_platform_seal_platform_metadata is not None:
+            self.opt_out_new_platform_seal_platform_metadata = opt_out_new_platform_seal_platform_metadata
+        if phone_auth_recipient_may_provide_phone_number is not None:
+            self.phone_auth_recipient_may_provide_phone_number = phone_auth_recipient_may_provide_phone_number
+        if phone_auth_recipient_may_provide_phone_number_metadata is not None:
+            self.phone_auth_recipient_may_provide_phone_number_metadata = phone_auth_recipient_may_provide_phone_number_metadata
+        if pki_sign_downloaded_pdf_docs is not None:
+            self.pki_sign_downloaded_pdf_docs = pki_sign_downloaded_pdf_docs
+        if pki_sign_downloaded_pdf_docs_metadata is not None:
+            self.pki_sign_downloaded_pdf_docs_metadata = pki_sign_downloaded_pdf_docs_metadata
+        if recipients_can_sign_offline is not None:
+            self.recipients_can_sign_offline = recipients_can_sign_offline
+        if recipients_can_sign_offline_metadata is not None:
+            self.recipients_can_sign_offline_metadata = recipients_can_sign_offline_metadata
+        if recipient_signing_auto_navigation_control is not None:
+            self.recipient_signing_auto_navigation_control = recipient_signing_auto_navigation_control
+        if recipient_signing_auto_navigation_control_metadata is not None:
+            self.recipient_signing_auto_navigation_control_metadata = recipient_signing_auto_navigation_control_metadata
+        if require21_cf_rpt11_compliance is not None:
+            self.require21_cf_rpt11_compliance = require21_cf_rpt11_compliance
+        if require21_cf_rpt11_compliance_metadata is not None:
+            self.require21_cf_rpt11_compliance_metadata = require21_cf_rpt11_compliance_metadata
+        if require_decline_reason is not None:
+            self.require_decline_reason = require_decline_reason
+        if require_decline_reason_metadata is not None:
+            self.require_decline_reason_metadata = require_decline_reason_metadata
+        if require_external_user_management is not None:
+            self.require_external_user_management = require_external_user_management
+        if require_external_user_management_metadata is not None:
+            self.require_external_user_management_metadata = require_external_user_management_metadata
+        if require_signer_certificate_type is not None:
+            self.require_signer_certificate_type = require_signer_certificate_type
+        if require_signer_certificate_type_metadata is not None:
+            self.require_signer_certificate_type_metadata = require_signer_certificate_type_metadata
+        if rsa_verid_account_name is not None:
+            self.rsa_verid_account_name = rsa_verid_account_name
+        if rsa_verid_password is not None:
+            self.rsa_verid_password = rsa_verid_password
+        if rsa_verid_ruleset is not None:
+            self.rsa_verid_ruleset = rsa_verid_ruleset
+        if rsa_verid_user_id is not None:
+            self.rsa_verid_user_id = rsa_verid_user_id
+        if self_signed_recipient_email_document is not None:
+            self.self_signed_recipient_email_document = self_signed_recipient_email_document
+        if self_signed_recipient_email_document_metadata is not None:
+            self.self_signed_recipient_email_document_metadata = self_signed_recipient_email_document_metadata
+        if self_signed_recipient_email_document_user_override is not None:
+            self.self_signed_recipient_email_document_user_override = self_signed_recipient_email_document_user_override
+        if self_signed_recipient_email_document_user_override_metadata is not None:
+            self.self_signed_recipient_email_document_user_override_metadata = self_signed_recipient_email_document_user_override_metadata
+        if sender_can_sign_in_each_location is not None:
+            self.sender_can_sign_in_each_location = sender_can_sign_in_each_location
+        if sender_can_sign_in_each_location_metadata is not None:
+            self.sender_can_sign_in_each_location_metadata = sender_can_sign_in_each_location_metadata
+        if sender_must_authenticate_signing is not None:
+            self.sender_must_authenticate_signing = sender_must_authenticate_signing
+        if sender_must_authenticate_signing_metadata is not None:
+            self.sender_must_authenticate_signing_metadata = sender_must_authenticate_signing_metadata
+        if sending_tags_font_color is not None:
+            self.sending_tags_font_color = sending_tags_font_color
+        if sending_tags_font_color_metadata is not None:
+            self.sending_tags_font_color_metadata = sending_tags_font_color_metadata
+        if sending_tags_font_name is not None:
+            self.sending_tags_font_name = sending_tags_font_name
+        if sending_tags_font_name_metadata is not None:
+            self.sending_tags_font_name_metadata = sending_tags_font_name_metadata
+        if sending_tags_font_size is not None:
+            self.sending_tags_font_size = sending_tags_font_size
+        if sending_tags_font_size_metadata is not None:
+            self.sending_tags_font_size_metadata = sending_tags_font_size_metadata
+        if send_to_certified_delivery_enabled is not None:
+            self.send_to_certified_delivery_enabled = send_to_certified_delivery_enabled
+        if send_to_certified_delivery_enabled_metadata is not None:
+            self.send_to_certified_delivery_enabled_metadata = send_to_certified_delivery_enabled_metadata
+        if session_timeout is not None:
+            self.session_timeout = session_timeout
+        if session_timeout_metadata is not None:
+            self.session_timeout_metadata = session_timeout_metadata
+        if set_recip_email_lang is not None:
+            self.set_recip_email_lang = set_recip_email_lang
+        if set_recip_email_lang_metadata is not None:
+            self.set_recip_email_lang_metadata = set_recip_email_lang_metadata
+        if set_recip_sign_lang is not None:
+            self.set_recip_sign_lang = set_recip_sign_lang
+        if set_recip_sign_lang_metadata is not None:
+            self.set_recip_sign_lang_metadata = set_recip_sign_lang_metadata
+        if shared_template_folders is not None:
+            self.shared_template_folders = shared_template_folders
+        if shared_template_folders_metadata is not None:
+            self.shared_template_folders_metadata = shared_template_folders_metadata
+        if show_complete_dialog_in_embedded_session is not None:
+            self.show_complete_dialog_in_embedded_session = show_complete_dialog_in_embedded_session
+        if show_complete_dialog_in_embedded_session_metadata is not None:
+            self.show_complete_dialog_in_embedded_session_metadata = show_complete_dialog_in_embedded_session_metadata
+        if show_conditional_routing_on_send is not None:
+            self.show_conditional_routing_on_send = show_conditional_routing_on_send
+        if show_conditional_routing_on_send_metadata is not None:
+            self.show_conditional_routing_on_send_metadata = show_conditional_routing_on_send_metadata
+        if show_initial_conditional_fields is not None:
+            self.show_initial_conditional_fields = show_initial_conditional_fields
+        if show_initial_conditional_fields_metadata is not None:
+            self.show_initial_conditional_fields_metadata = show_initial_conditional_fields_metadata
+        if show_localized_watermarks is not None:
+            self.show_localized_watermarks = show_localized_watermarks
+        if show_localized_watermarks_metadata is not None:
+            self.show_localized_watermarks_metadata = show_localized_watermarks_metadata
+        if show_tutorials is not None:
+            self.show_tutorials = show_tutorials
+        if show_tutorials_metadata is not None:
+            self.show_tutorials_metadata = show_tutorials_metadata
+        if signature_providers is not None:
+            self.signature_providers = signature_providers
+        if signature_providers_metadata is not None:
+            self.signature_providers_metadata = signature_providers_metadata
+        if sign_date_format is not None:
+            self.sign_date_format = sign_date_format
+        if sign_date_format_metadata is not None:
+            self.sign_date_format_metadata = sign_date_format_metadata
+        if signer_attach_certificate_to_envelope_pdf is not None:
+            self.signer_attach_certificate_to_envelope_pdf = signer_attach_certificate_to_envelope_pdf
+        if signer_attach_certificate_to_envelope_pdf_metadata is not None:
+            self.signer_attach_certificate_to_envelope_pdf_metadata = signer_attach_certificate_to_envelope_pdf_metadata
+        if signer_attach_concat is not None:
+            self.signer_attach_concat = signer_attach_concat
+        if signer_attach_concat_metadata is not None:
+            self.signer_attach_concat_metadata = signer_attach_concat_metadata
+        if signer_can_create_account is not None:
+            self.signer_can_create_account = signer_can_create_account
+        if signer_can_create_account_metadata is not None:
+            self.signer_can_create_account_metadata = signer_can_create_account_metadata
+        if signer_can_sign_on_mobile is not None:
+            self.signer_can_sign_on_mobile = signer_can_sign_on_mobile
+        if signer_can_sign_on_mobile_metadata is not None:
+            self.signer_can_sign_on_mobile_metadata = signer_can_sign_on_mobile_metadata
+        if signer_in_session_use_envelope_complete_email is not None:
+            self.signer_in_session_use_envelope_complete_email = signer_in_session_use_envelope_complete_email
+        if signer_in_session_use_envelope_complete_email_metadata is not None:
+            self.signer_in_session_use_envelope_complete_email_metadata = signer_in_session_use_envelope_complete_email_metadata
+        if signer_login_requirements is not None:
+            self.signer_login_requirements = signer_login_requirements
+        if signer_login_requirements_metadata is not None:
+            self.signer_login_requirements_metadata = signer_login_requirements_metadata
+        if signer_must_have_account is not None:
+            self.signer_must_have_account = signer_must_have_account
+        if signer_must_have_account_metadata is not None:
+            self.signer_must_have_account_metadata = signer_must_have_account_metadata
+        if signer_must_login_to_sign is not None:
+            self.signer_must_login_to_sign = signer_must_login_to_sign
+        if signer_must_login_to_sign_metadata is not None:
+            self.signer_must_login_to_sign_metadata = signer_must_login_to_sign_metadata
+        if signer_show_secure_field_initial_values is not None:
+            self.signer_show_secure_field_initial_values = signer_show_secure_field_initial_values
+        if signer_show_secure_field_initial_values_metadata is not None:
+            self.signer_show_secure_field_initial_values_metadata = signer_show_secure_field_initial_values_metadata
+        if signing_session_timeout is not None:
+            self.signing_session_timeout = signing_session_timeout
+        if signing_session_timeout_metadata is not None:
+            self.signing_session_timeout_metadata = signing_session_timeout_metadata
+        if signing_ui_version is not None:
+            self.signing_ui_version = signing_ui_version
+        if signing_ui_version_metadata is not None:
+            self.signing_ui_version_metadata = signing_ui_version_metadata
+        if sign_time_format is not None:
+            self.sign_time_format = sign_time_format
+        if sign_time_format_metadata is not None:
+            self.sign_time_format_metadata = sign_time_format_metadata
+        if sign_time_show_am_pm is not None:
+            self.sign_time_show_am_pm = sign_time_show_am_pm
+        if sign_time_show_am_pm_metadata is not None:
+            self.sign_time_show_am_pm_metadata = sign_time_show_am_pm_metadata
+        if simplified_sending_enabled is not None:
+            self.simplified_sending_enabled = simplified_sending_enabled
+        if simplified_sending_enabled_metadata is not None:
+            self.simplified_sending_enabled_metadata = simplified_sending_enabled_metadata
+        if single_sign_on_enabled is not None:
+            self.single_sign_on_enabled = single_sign_on_enabled
+        if single_sign_on_enabled_metadata is not None:
+            self.single_sign_on_enabled_metadata = single_sign_on_enabled_metadata
+        if skip_auth_completed_envelopes is not None:
+            self.skip_auth_completed_envelopes = skip_auth_completed_envelopes
+        if skip_auth_completed_envelopes_metadata is not None:
+            self.skip_auth_completed_envelopes_metadata = skip_auth_completed_envelopes_metadata
+        if social_id_recip_auth is not None:
+            self.social_id_recip_auth = social_id_recip_auth
+        if social_id_recip_auth_metadata is not None:
+            self.social_id_recip_auth_metadata = social_id_recip_auth_metadata
+        if specify_document_visibility is not None:
+            self.specify_document_visibility = specify_document_visibility
+        if specify_document_visibility_metadata is not None:
+            self.specify_document_visibility_metadata = specify_document_visibility_metadata
+        if start_in_advanced_correct is not None:
+            self.start_in_advanced_correct = start_in_advanced_correct
+        if start_in_advanced_correct_metadata is not None:
+            self.start_in_advanced_correct_metadata = start_in_advanced_correct_metadata
+        if supplemental_documents_must_accept is not None:
+            self.supplemental_documents_must_accept = supplemental_documents_must_accept
+        if supplemental_documents_must_accept_metadata is not None:
+            self.supplemental_documents_must_accept_metadata = supplemental_documents_must_accept_metadata
+        if supplemental_documents_must_read is not None:
+            self.supplemental_documents_must_read = supplemental_documents_must_read
+        if supplemental_documents_must_read_metadata is not None:
+            self.supplemental_documents_must_read_metadata = supplemental_documents_must_read_metadata
+        if supplemental_documents_must_view is not None:
+            self.supplemental_documents_must_view = supplemental_documents_must_view
+        if supplemental_documents_must_view_metadata is not None:
+            self.supplemental_documents_must_view_metadata = supplemental_documents_must_view_metadata
+        if suppress_certificate_enforcement is not None:
+            self.suppress_certificate_enforcement = suppress_certificate_enforcement
+        if suppress_certificate_enforcement_metadata is not None:
+            self.suppress_certificate_enforcement_metadata = suppress_certificate_enforcement_metadata
+        if tab_account_settings is not None:
+            self.tab_account_settings = tab_account_settings
+        if timezone_offset_api is not None:
+            self.timezone_offset_api = timezone_offset_api
+        if timezone_offset_api_metadata is not None:
+            self.timezone_offset_api_metadata = timezone_offset_api_metadata
+        if timezone_offset_ui is not None:
+            self.timezone_offset_ui = timezone_offset_ui
+        if timezone_offset_ui_metadata is not None:
+            self.timezone_offset_ui_metadata = timezone_offset_ui_metadata
+        if universal_signature_opt_in is not None:
+            self.universal_signature_opt_in = universal_signature_opt_in
+        if use_account_level_email is not None:
+            self.use_account_level_email = use_account_level_email
+        if use_account_level_email_metadata is not None:
+            self.use_account_level_email_metadata = use_account_level_email_metadata
+        if use_consumer_disclosure is not None:
+            self.use_consumer_disclosure = use_consumer_disclosure
+        if use_consumer_disclosure_metadata is not None:
+            self.use_consumer_disclosure_metadata = use_consumer_disclosure_metadata
+        if use_consumer_disclosure_within_account is not None:
+            self.use_consumer_disclosure_within_account = use_consumer_disclosure_within_account
+        if use_consumer_disclosure_within_account_metadata is not None:
+            self.use_consumer_disclosure_within_account_metadata = use_consumer_disclosure_within_account_metadata
+        if use_derived_keys is not None:
+            self.use_derived_keys = use_derived_keys
+        if use_derived_keys_metadata is not None:
+            self.use_derived_keys_metadata = use_derived_keys_metadata
+        if use_docu_sign_express_signer_certificate is not None:
+            self.use_docu_sign_express_signer_certificate = use_docu_sign_express_signer_certificate
+        if use_docu_sign_express_signer_certificate_metadata is not None:
+            self.use_docu_sign_express_signer_certificate_metadata = use_docu_sign_express_signer_certificate_metadata
+        if use_multi_app_groups_data is not None:
+            self.use_multi_app_groups_data = use_multi_app_groups_data
+        if use_multi_app_groups_data_metadata is not None:
+            self.use_multi_app_groups_data_metadata = use_multi_app_groups_data_metadata
+        if use_new_blob_for_pdf is not None:
+            self.use_new_blob_for_pdf = use_new_blob_for_pdf
+        if use_new_blob_for_pdf_metadata is not None:
+            self.use_new_blob_for_pdf_metadata = use_new_blob_for_pdf_metadata
+        if use_safe_signer_certificates is not None:
+            self.use_safe_signer_certificates = use_safe_signer_certificates
+        if use_safe_signer_certificates_metadata is not None:
+            self.use_safe_signer_certificates_metadata = use_safe_signer_certificates_metadata
+        if uses_api is not None:
+            self.uses_api = uses_api
+        if uses_api_metadata is not None:
+            self.uses_api_metadata = uses_api_metadata
+        if use_signature_provider_platform is not None:
+            self.use_signature_provider_platform = use_signature_provider_platform
+        if use_signature_provider_platform_metadata is not None:
+            self.use_signature_provider_platform_metadata = use_signature_provider_platform_metadata
+        if validations_allowed is not None:
+            self.validations_allowed = validations_allowed
+        if validations_allowed_metadata is not None:
+            self.validations_allowed_metadata = validations_allowed_metadata
+        if validations_brand is not None:
+            self.validations_brand = validations_brand
+        if validations_brand_metadata is not None:
+            self.validations_brand_metadata = validations_brand_metadata
+        if validations_cadence is not None:
+            self.validations_cadence = validations_cadence
+        if validations_cadence_metadata is not None:
+            self.validations_cadence_metadata = validations_cadence_metadata
+        if validations_enabled is not None:
+            self.validations_enabled = validations_enabled
+        if validations_enabled_metadata is not None:
+            self.validations_enabled_metadata = validations_enabled_metadata
+        if validations_report is not None:
+            self.validations_report = validations_report
+        if validations_report_metadata is not None:
+            self.validations_report_metadata = validations_report_metadata
+        if water_mark_enabled is not None:
+            self.water_mark_enabled = water_mark_enabled
+        if water_mark_enabled_metadata is not None:
+            self.water_mark_enabled_metadata = water_mark_enabled_metadata
+        if write_reminder_to_envelope_history is not None:
+            self.write_reminder_to_envelope_history = write_reminder_to_envelope_history
+        if write_reminder_to_envelope_history_metadata is not None:
+            self.write_reminder_to_envelope_history_metadata = write_reminder_to_envelope_history_metadata
+        if wurfl_min_allowable_screen_size is not None:
+            self.wurfl_min_allowable_screen_size = wurfl_min_allowable_screen_size
+        if wurfl_min_allowable_screen_size_metadata is not None:
+            self.wurfl_min_allowable_screen_size_metadata = wurfl_min_allowable_screen_size_metadata
 
     @property
     def access_code_format(self):
@@ -3992,6 +5053,50 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_reminders_metadata = allow_reminders_metadata
+
+    @property
+    def allow_remote_notary(self):
+        """Gets the allow_remote_notary of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_remote_notary of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_remote_notary
+
+    @allow_remote_notary.setter
+    def allow_remote_notary(self, allow_remote_notary):
+        """Sets the allow_remote_notary of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_remote_notary: The allow_remote_notary of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_remote_notary = allow_remote_notary
+
+    @property
+    def allow_remote_notary_metadata(self):
+        """Gets the allow_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_remote_notary_metadata
+
+    @allow_remote_notary_metadata.setter
+    def allow_remote_notary_metadata(self, allow_remote_notary_metadata):
+        """Sets the allow_remote_notary_metadata of this AccountSettingsInformation.
+
+
+        :param allow_remote_notary_metadata: The allow_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_remote_notary_metadata = allow_remote_notary_metadata
 
     @property
     def allow_resource_file_branding(self):
@@ -6766,6 +7871,94 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_advanced_power_forms_metadata = enable_advanced_power_forms_metadata
+
+    @property
+    def enable_agreement_actions_for_clm(self):
+        """Gets the enable_agreement_actions_for_clm of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_agreement_actions_for_clm of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_agreement_actions_for_clm
+
+    @enable_agreement_actions_for_clm.setter
+    def enable_agreement_actions_for_clm(self, enable_agreement_actions_for_clm):
+        """Sets the enable_agreement_actions_for_clm of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_agreement_actions_for_clm: The enable_agreement_actions_for_clm of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_agreement_actions_for_clm = enable_agreement_actions_for_clm
+
+    @property
+    def enable_agreement_actions_for_clm_metadata(self):
+        """Gets the enable_agreement_actions_for_clm_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_agreement_actions_for_clm_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_agreement_actions_for_clm_metadata
+
+    @enable_agreement_actions_for_clm_metadata.setter
+    def enable_agreement_actions_for_clm_metadata(self, enable_agreement_actions_for_clm_metadata):
+        """Sets the enable_agreement_actions_for_clm_metadata of this AccountSettingsInformation.
+
+
+        :param enable_agreement_actions_for_clm_metadata: The enable_agreement_actions_for_clm_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_agreement_actions_for_clm_metadata = enable_agreement_actions_for_clm_metadata
+
+    @property
+    def enable_agreement_actions_for_e_sign(self):
+        """Gets the enable_agreement_actions_for_e_sign of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_agreement_actions_for_e_sign of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_agreement_actions_for_e_sign
+
+    @enable_agreement_actions_for_e_sign.setter
+    def enable_agreement_actions_for_e_sign(self, enable_agreement_actions_for_e_sign):
+        """Sets the enable_agreement_actions_for_e_sign of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_agreement_actions_for_e_sign: The enable_agreement_actions_for_e_sign of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_agreement_actions_for_e_sign = enable_agreement_actions_for_e_sign
+
+    @property
+    def enable_agreement_actions_for_e_sign_metadata(self):
+        """Gets the enable_agreement_actions_for_e_sign_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_agreement_actions_for_e_sign_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_agreement_actions_for_e_sign_metadata
+
+    @enable_agreement_actions_for_e_sign_metadata.setter
+    def enable_agreement_actions_for_e_sign_metadata(self, enable_agreement_actions_for_e_sign_metadata):
+        """Sets the enable_agreement_actions_for_e_sign_metadata of this AccountSettingsInformation.
+
+
+        :param enable_agreement_actions_for_e_sign_metadata: The enable_agreement_actions_for_e_sign_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_agreement_actions_for_e_sign_metadata = enable_agreement_actions_for_e_sign_metadata
 
     @property
     def enable_auto_nav(self):

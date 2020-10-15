@@ -35,7 +35,6 @@ class Intermediary(object):
         'access_code_metadata': 'PropertyMetadata',
         'add_access_code_to_email': 'str',
         'additional_notifications': 'list[RecipientAdditionalNotification]',
-        'additional_notifications_metadata': 'PropertyMetadata',
         'allow_system_override_for_locked_recipient': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
@@ -108,7 +107,6 @@ class Intermediary(object):
         'access_code_metadata': 'accessCodeMetadata',
         'add_access_code_to_email': 'addAccessCodeToEmail',
         'additional_notifications': 'additionalNotifications',
-        'additional_notifications_metadata': 'additionalNotificationsMetadata',
         'allow_system_override_for_locked_recipient': 'allowSystemOverrideForLockedRecipient',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
@@ -176,14 +174,13 @@ class Intermediary(object):
         'user_id': 'userId'
     }
 
-    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, additional_notifications_metadata=None, allow_system_override_for_locked_recipient=None, client_user_id=None, completed_count=None, custom_fields=None, declined_date_time=None, declined_reason=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, last_name=None, last_name_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, note=None, note_metadata=None, phone_authentication=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signed_date_time=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
+    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, allow_system_override_for_locked_recipient=None, client_user_id=None, completed_count=None, custom_fields=None, declined_date_time=None, declined_reason=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, last_name=None, last_name_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, note=None, note_metadata=None, phone_authentication=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signed_date_time=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
         """Intermediary - a model defined in Swagger"""  # noqa: E501
 
         self._access_code = None
         self._access_code_metadata = None
         self._add_access_code_to_email = None
         self._additional_notifications = None
-        self._additional_notifications_metadata = None
         self._allow_system_override_for_locked_recipient = None
         self._client_user_id = None
         self._completed_count = None
@@ -259,8 +256,6 @@ class Intermediary(object):
             self.add_access_code_to_email = add_access_code_to_email
         if additional_notifications is not None:
             self.additional_notifications = additional_notifications
-        if additional_notifications_metadata is not None:
-            self.additional_notifications_metadata = additional_notifications_metadata
         if allow_system_override_for_locked_recipient is not None:
             self.allow_system_override_for_locked_recipient = allow_system_override_for_locked_recipient
         if client_user_id is not None:
@@ -481,27 +476,6 @@ class Intermediary(object):
         """
 
         self._additional_notifications = additional_notifications
-
-    @property
-    def additional_notifications_metadata(self):
-        """Gets the additional_notifications_metadata of this Intermediary.  # noqa: E501
-
-
-        :return: The additional_notifications_metadata of this Intermediary.  # noqa: E501
-        :rtype: PropertyMetadata
-        """
-        return self._additional_notifications_metadata
-
-    @additional_notifications_metadata.setter
-    def additional_notifications_metadata(self, additional_notifications_metadata):
-        """Sets the additional_notifications_metadata of this Intermediary.
-
-
-        :param additional_notifications_metadata: The additional_notifications_metadata of this Intermediary.  # noqa: E501
-        :type: PropertyMetadata
-        """
-
-        self._additional_notifications_metadata = additional_notifications_metadata
 
     @property
     def allow_system_override_for_locked_recipient(self):
