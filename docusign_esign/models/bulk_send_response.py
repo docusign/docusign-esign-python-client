@@ -32,6 +32,7 @@ class BulkSendResponse(object):
     """
     swagger_types = {
         'batch_id': 'str',
+        'batch_name': 'str',
         'batch_size': 'str',
         'envelope_or_template_id': 'str',
         'error_details': 'list[str]',
@@ -42,6 +43,7 @@ class BulkSendResponse(object):
 
     attribute_map = {
         'batch_id': 'batchId',
+        'batch_name': 'batchName',
         'batch_size': 'batchSize',
         'envelope_or_template_id': 'envelopeOrTemplateId',
         'error_details': 'errorDetails',
@@ -50,10 +52,11 @@ class BulkSendResponse(object):
         'total_queued': 'totalQueued'
     }
 
-    def __init__(self, batch_id=None, batch_size=None, envelope_or_template_id=None, error_details=None, errors=None, queue_limit=None, total_queued=None):  # noqa: E501
+    def __init__(self, batch_id=None, batch_name=None, batch_size=None, envelope_or_template_id=None, error_details=None, errors=None, queue_limit=None, total_queued=None):  # noqa: E501
         """BulkSendResponse - a model defined in Swagger"""  # noqa: E501
 
         self._batch_id = None
+        self._batch_name = None
         self._batch_size = None
         self._envelope_or_template_id = None
         self._error_details = None
@@ -64,6 +67,8 @@ class BulkSendResponse(object):
 
         if batch_id is not None:
             self.batch_id = batch_id
+        if batch_name is not None:
+            self.batch_name = batch_name
         if batch_size is not None:
             self.batch_size = batch_size
         if envelope_or_template_id is not None:
@@ -99,6 +104,29 @@ class BulkSendResponse(object):
         """
 
         self._batch_id = batch_id
+
+    @property
+    def batch_name(self):
+        """Gets the batch_name of this BulkSendResponse.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The batch_name of this BulkSendResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._batch_name
+
+    @batch_name.setter
+    def batch_name(self, batch_name):
+        """Sets the batch_name of this BulkSendResponse.
+
+          # noqa: E501
+
+        :param batch_name: The batch_name of this BulkSendResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._batch_name = batch_name
 
     @property
     def batch_size(self):

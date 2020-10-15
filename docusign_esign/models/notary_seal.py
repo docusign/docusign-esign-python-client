@@ -51,8 +51,6 @@ class NotarySeal(object):
         'anchor_x_offset_metadata': 'PropertyMetadata',
         'anchor_y_offset': 'str',
         'anchor_y_offset_metadata': 'PropertyMetadata',
-        'bold': 'str',
-        'bold_metadata': 'PropertyMetadata',
         'conditional_parent_label': 'str',
         'conditional_parent_label_metadata': 'PropertyMetadata',
         'conditional_parent_value': 'str',
@@ -62,12 +60,6 @@ class NotarySeal(object):
         'document_id': 'str',
         'document_id_metadata': 'PropertyMetadata',
         'error_details': 'ErrorDetails',
-        'font': 'str',
-        'font_color': 'str',
-        'font_color_metadata': 'PropertyMetadata',
-        'font_metadata': 'PropertyMetadata',
-        'font_size': 'str',
-        'font_size_metadata': 'PropertyMetadata',
         'form_order': 'str',
         'form_order_metadata': 'PropertyMetadata',
         'form_page_label': 'str',
@@ -76,9 +68,6 @@ class NotarySeal(object):
         'form_page_number_metadata': 'PropertyMetadata',
         'height': 'str',
         'height_metadata': 'PropertyMetadata',
-        'italic': 'str',
-        'italic_metadata': 'PropertyMetadata',
-        'locale_policy': 'LocalePolicyTab',
         'merge_field': 'MergeField',
         'merge_field_xml': 'str',
         'name': 'str',
@@ -89,6 +78,8 @@ class NotarySeal(object):
         'recipient_id_guid': 'str',
         'recipient_id_guid_metadata': 'PropertyMetadata',
         'recipient_id_metadata': 'PropertyMetadata',
+        'scale_value': 'str',
+        'scale_value_metadata': 'PropertyMetadata',
         'smart_contract_information': 'SmartContractInformation',
         'status': 'str',
         'status_metadata': 'PropertyMetadata',
@@ -108,8 +99,6 @@ class NotarySeal(object):
         'template_required_metadata': 'PropertyMetadata',
         'tooltip': 'str',
         'tool_tip_metadata': 'PropertyMetadata',
-        'underline': 'str',
-        'underline_metadata': 'PropertyMetadata',
         'width': 'str',
         'width_metadata': 'PropertyMetadata',
         'x_position': 'str',
@@ -139,8 +128,6 @@ class NotarySeal(object):
         'anchor_x_offset_metadata': 'anchorXOffsetMetadata',
         'anchor_y_offset': 'anchorYOffset',
         'anchor_y_offset_metadata': 'anchorYOffsetMetadata',
-        'bold': 'bold',
-        'bold_metadata': 'boldMetadata',
         'conditional_parent_label': 'conditionalParentLabel',
         'conditional_parent_label_metadata': 'conditionalParentLabelMetadata',
         'conditional_parent_value': 'conditionalParentValue',
@@ -150,12 +137,6 @@ class NotarySeal(object):
         'document_id': 'documentId',
         'document_id_metadata': 'documentIdMetadata',
         'error_details': 'errorDetails',
-        'font': 'font',
-        'font_color': 'fontColor',
-        'font_color_metadata': 'fontColorMetadata',
-        'font_metadata': 'fontMetadata',
-        'font_size': 'fontSize',
-        'font_size_metadata': 'fontSizeMetadata',
         'form_order': 'formOrder',
         'form_order_metadata': 'formOrderMetadata',
         'form_page_label': 'formPageLabel',
@@ -164,9 +145,6 @@ class NotarySeal(object):
         'form_page_number_metadata': 'formPageNumberMetadata',
         'height': 'height',
         'height_metadata': 'heightMetadata',
-        'italic': 'italic',
-        'italic_metadata': 'italicMetadata',
-        'locale_policy': 'localePolicy',
         'merge_field': 'mergeField',
         'merge_field_xml': 'mergeFieldXml',
         'name': 'name',
@@ -177,6 +155,8 @@ class NotarySeal(object):
         'recipient_id_guid': 'recipientIdGuid',
         'recipient_id_guid_metadata': 'recipientIdGuidMetadata',
         'recipient_id_metadata': 'recipientIdMetadata',
+        'scale_value': 'scaleValue',
+        'scale_value_metadata': 'scaleValueMetadata',
         'smart_contract_information': 'smartContractInformation',
         'status': 'status',
         'status_metadata': 'statusMetadata',
@@ -196,8 +176,6 @@ class NotarySeal(object):
         'template_required_metadata': 'templateRequiredMetadata',
         'tooltip': 'tooltip',
         'tool_tip_metadata': 'toolTipMetadata',
-        'underline': 'underline',
-        'underline_metadata': 'underlineMetadata',
         'width': 'width',
         'width_metadata': 'widthMetadata',
         'x_position': 'xPosition',
@@ -206,7 +184,7 @@ class NotarySeal(object):
         'y_position_metadata': 'yPositionMetadata'
     }
 
-    def __init__(self, anchor_allow_white_space_in_characters=None, anchor_allow_white_space_in_characters_metadata=None, anchor_case_sensitive=None, anchor_case_sensitive_metadata=None, anchor_horizontal_alignment=None, anchor_horizontal_alignment_metadata=None, anchor_ignore_if_not_present=None, anchor_ignore_if_not_present_metadata=None, anchor_match_whole_word=None, anchor_match_whole_word_metadata=None, anchor_string=None, anchor_string_metadata=None, anchor_tab_processor_version=None, anchor_tab_processor_version_metadata=None, anchor_units=None, anchor_units_metadata=None, anchor_x_offset=None, anchor_x_offset_metadata=None, anchor_y_offset=None, anchor_y_offset_metadata=None, bold=None, bold_metadata=None, conditional_parent_label=None, conditional_parent_label_metadata=None, conditional_parent_value=None, conditional_parent_value_metadata=None, custom_tab_id=None, custom_tab_id_metadata=None, document_id=None, document_id_metadata=None, error_details=None, font=None, font_color=None, font_color_metadata=None, font_metadata=None, font_size=None, font_size_metadata=None, form_order=None, form_order_metadata=None, form_page_label=None, form_page_label_metadata=None, form_page_number=None, form_page_number_metadata=None, height=None, height_metadata=None, italic=None, italic_metadata=None, locale_policy=None, merge_field=None, merge_field_xml=None, name=None, name_metadata=None, page_number=None, page_number_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_id_guid_metadata=None, recipient_id_metadata=None, smart_contract_information=None, status=None, status_metadata=None, tab_group_labels=None, tab_group_labels_metadata=None, tab_id=None, tab_id_metadata=None, tab_label=None, tab_label_metadata=None, tab_order=None, tab_order_metadata=None, tab_type=None, tab_type_metadata=None, template_locked=None, template_locked_metadata=None, template_required=None, template_required_metadata=None, tooltip=None, tool_tip_metadata=None, underline=None, underline_metadata=None, width=None, width_metadata=None, x_position=None, x_position_metadata=None, y_position=None, y_position_metadata=None):  # noqa: E501
+    def __init__(self, anchor_allow_white_space_in_characters=None, anchor_allow_white_space_in_characters_metadata=None, anchor_case_sensitive=None, anchor_case_sensitive_metadata=None, anchor_horizontal_alignment=None, anchor_horizontal_alignment_metadata=None, anchor_ignore_if_not_present=None, anchor_ignore_if_not_present_metadata=None, anchor_match_whole_word=None, anchor_match_whole_word_metadata=None, anchor_string=None, anchor_string_metadata=None, anchor_tab_processor_version=None, anchor_tab_processor_version_metadata=None, anchor_units=None, anchor_units_metadata=None, anchor_x_offset=None, anchor_x_offset_metadata=None, anchor_y_offset=None, anchor_y_offset_metadata=None, conditional_parent_label=None, conditional_parent_label_metadata=None, conditional_parent_value=None, conditional_parent_value_metadata=None, custom_tab_id=None, custom_tab_id_metadata=None, document_id=None, document_id_metadata=None, error_details=None, form_order=None, form_order_metadata=None, form_page_label=None, form_page_label_metadata=None, form_page_number=None, form_page_number_metadata=None, height=None, height_metadata=None, merge_field=None, merge_field_xml=None, name=None, name_metadata=None, page_number=None, page_number_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_id_guid_metadata=None, recipient_id_metadata=None, scale_value=None, scale_value_metadata=None, smart_contract_information=None, status=None, status_metadata=None, tab_group_labels=None, tab_group_labels_metadata=None, tab_id=None, tab_id_metadata=None, tab_label=None, tab_label_metadata=None, tab_order=None, tab_order_metadata=None, tab_type=None, tab_type_metadata=None, template_locked=None, template_locked_metadata=None, template_required=None, template_required_metadata=None, tooltip=None, tool_tip_metadata=None, width=None, width_metadata=None, x_position=None, x_position_metadata=None, y_position=None, y_position_metadata=None):  # noqa: E501
         """NotarySeal - a model defined in Swagger"""  # noqa: E501
 
         self._anchor_allow_white_space_in_characters = None
@@ -229,8 +207,6 @@ class NotarySeal(object):
         self._anchor_x_offset_metadata = None
         self._anchor_y_offset = None
         self._anchor_y_offset_metadata = None
-        self._bold = None
-        self._bold_metadata = None
         self._conditional_parent_label = None
         self._conditional_parent_label_metadata = None
         self._conditional_parent_value = None
@@ -240,12 +216,6 @@ class NotarySeal(object):
         self._document_id = None
         self._document_id_metadata = None
         self._error_details = None
-        self._font = None
-        self._font_color = None
-        self._font_color_metadata = None
-        self._font_metadata = None
-        self._font_size = None
-        self._font_size_metadata = None
         self._form_order = None
         self._form_order_metadata = None
         self._form_page_label = None
@@ -254,9 +224,6 @@ class NotarySeal(object):
         self._form_page_number_metadata = None
         self._height = None
         self._height_metadata = None
-        self._italic = None
-        self._italic_metadata = None
-        self._locale_policy = None
         self._merge_field = None
         self._merge_field_xml = None
         self._name = None
@@ -267,6 +234,8 @@ class NotarySeal(object):
         self._recipient_id_guid = None
         self._recipient_id_guid_metadata = None
         self._recipient_id_metadata = None
+        self._scale_value = None
+        self._scale_value_metadata = None
         self._smart_contract_information = None
         self._status = None
         self._status_metadata = None
@@ -286,8 +255,6 @@ class NotarySeal(object):
         self._template_required_metadata = None
         self._tooltip = None
         self._tool_tip_metadata = None
-        self._underline = None
-        self._underline_metadata = None
         self._width = None
         self._width_metadata = None
         self._x_position = None
@@ -336,10 +303,6 @@ class NotarySeal(object):
             self.anchor_y_offset = anchor_y_offset
         if anchor_y_offset_metadata is not None:
             self.anchor_y_offset_metadata = anchor_y_offset_metadata
-        if bold is not None:
-            self.bold = bold
-        if bold_metadata is not None:
-            self.bold_metadata = bold_metadata
         if conditional_parent_label is not None:
             self.conditional_parent_label = conditional_parent_label
         if conditional_parent_label_metadata is not None:
@@ -358,18 +321,6 @@ class NotarySeal(object):
             self.document_id_metadata = document_id_metadata
         if error_details is not None:
             self.error_details = error_details
-        if font is not None:
-            self.font = font
-        if font_color is not None:
-            self.font_color = font_color
-        if font_color_metadata is not None:
-            self.font_color_metadata = font_color_metadata
-        if font_metadata is not None:
-            self.font_metadata = font_metadata
-        if font_size is not None:
-            self.font_size = font_size
-        if font_size_metadata is not None:
-            self.font_size_metadata = font_size_metadata
         if form_order is not None:
             self.form_order = form_order
         if form_order_metadata is not None:
@@ -386,12 +337,6 @@ class NotarySeal(object):
             self.height = height
         if height_metadata is not None:
             self.height_metadata = height_metadata
-        if italic is not None:
-            self.italic = italic
-        if italic_metadata is not None:
-            self.italic_metadata = italic_metadata
-        if locale_policy is not None:
-            self.locale_policy = locale_policy
         if merge_field is not None:
             self.merge_field = merge_field
         if merge_field_xml is not None:
@@ -412,6 +357,10 @@ class NotarySeal(object):
             self.recipient_id_guid_metadata = recipient_id_guid_metadata
         if recipient_id_metadata is not None:
             self.recipient_id_metadata = recipient_id_metadata
+        if scale_value is not None:
+            self.scale_value = scale_value
+        if scale_value_metadata is not None:
+            self.scale_value_metadata = scale_value_metadata
         if smart_contract_information is not None:
             self.smart_contract_information = smart_contract_information
         if status is not None:
@@ -450,10 +399,6 @@ class NotarySeal(object):
             self.tooltip = tooltip
         if tool_tip_metadata is not None:
             self.tool_tip_metadata = tool_tip_metadata
-        if underline is not None:
-            self.underline = underline
-        if underline_metadata is not None:
-            self.underline_metadata = underline_metadata
         if width is not None:
             self.width = width
         if width_metadata is not None:
@@ -908,50 +853,6 @@ class NotarySeal(object):
         self._anchor_y_offset_metadata = anchor_y_offset_metadata
 
     @property
-    def bold(self):
-        """Gets the bold of this NotarySeal.  # noqa: E501
-
-        When set to **true**, the information in the tab is bold.  # noqa: E501
-
-        :return: The bold of this NotarySeal.  # noqa: E501
-        :rtype: str
-        """
-        return self._bold
-
-    @bold.setter
-    def bold(self, bold):
-        """Sets the bold of this NotarySeal.
-
-        When set to **true**, the information in the tab is bold.  # noqa: E501
-
-        :param bold: The bold of this NotarySeal.  # noqa: E501
-        :type: str
-        """
-
-        self._bold = bold
-
-    @property
-    def bold_metadata(self):
-        """Gets the bold_metadata of this NotarySeal.  # noqa: E501
-
-
-        :return: The bold_metadata of this NotarySeal.  # noqa: E501
-        :rtype: PropertyMetadata
-        """
-        return self._bold_metadata
-
-    @bold_metadata.setter
-    def bold_metadata(self, bold_metadata):
-        """Sets the bold_metadata of this NotarySeal.
-
-
-        :param bold_metadata: The bold_metadata of this NotarySeal.  # noqa: E501
-        :type: PropertyMetadata
-        """
-
-        self._bold_metadata = bold_metadata
-
-    @property
     def conditional_parent_label(self):
         """Gets the conditional_parent_label of this NotarySeal.  # noqa: E501
 
@@ -1149,138 +1050,6 @@ class NotarySeal(object):
         self._error_details = error_details
 
     @property
-    def font(self):
-        """Gets the font of this NotarySeal.  # noqa: E501
-
-        The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.  # noqa: E501
-
-        :return: The font of this NotarySeal.  # noqa: E501
-        :rtype: str
-        """
-        return self._font
-
-    @font.setter
-    def font(self, font):
-        """Sets the font of this NotarySeal.
-
-        The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.  # noqa: E501
-
-        :param font: The font of this NotarySeal.  # noqa: E501
-        :type: str
-        """
-
-        self._font = font
-
-    @property
-    def font_color(self):
-        """Gets the font_color of this NotarySeal.  # noqa: E501
-
-        The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.  # noqa: E501
-
-        :return: The font_color of this NotarySeal.  # noqa: E501
-        :rtype: str
-        """
-        return self._font_color
-
-    @font_color.setter
-    def font_color(self, font_color):
-        """Sets the font_color of this NotarySeal.
-
-        The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.  # noqa: E501
-
-        :param font_color: The font_color of this NotarySeal.  # noqa: E501
-        :type: str
-        """
-
-        self._font_color = font_color
-
-    @property
-    def font_color_metadata(self):
-        """Gets the font_color_metadata of this NotarySeal.  # noqa: E501
-
-
-        :return: The font_color_metadata of this NotarySeal.  # noqa: E501
-        :rtype: PropertyMetadata
-        """
-        return self._font_color_metadata
-
-    @font_color_metadata.setter
-    def font_color_metadata(self, font_color_metadata):
-        """Sets the font_color_metadata of this NotarySeal.
-
-
-        :param font_color_metadata: The font_color_metadata of this NotarySeal.  # noqa: E501
-        :type: PropertyMetadata
-        """
-
-        self._font_color_metadata = font_color_metadata
-
-    @property
-    def font_metadata(self):
-        """Gets the font_metadata of this NotarySeal.  # noqa: E501
-
-
-        :return: The font_metadata of this NotarySeal.  # noqa: E501
-        :rtype: PropertyMetadata
-        """
-        return self._font_metadata
-
-    @font_metadata.setter
-    def font_metadata(self, font_metadata):
-        """Sets the font_metadata of this NotarySeal.
-
-
-        :param font_metadata: The font_metadata of this NotarySeal.  # noqa: E501
-        :type: PropertyMetadata
-        """
-
-        self._font_metadata = font_metadata
-
-    @property
-    def font_size(self):
-        """Gets the font_size of this NotarySeal.  # noqa: E501
-
-        The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.  # noqa: E501
-
-        :return: The font_size of this NotarySeal.  # noqa: E501
-        :rtype: str
-        """
-        return self._font_size
-
-    @font_size.setter
-    def font_size(self, font_size):
-        """Sets the font_size of this NotarySeal.
-
-        The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.  # noqa: E501
-
-        :param font_size: The font_size of this NotarySeal.  # noqa: E501
-        :type: str
-        """
-
-        self._font_size = font_size
-
-    @property
-    def font_size_metadata(self):
-        """Gets the font_size_metadata of this NotarySeal.  # noqa: E501
-
-
-        :return: The font_size_metadata of this NotarySeal.  # noqa: E501
-        :rtype: PropertyMetadata
-        """
-        return self._font_size_metadata
-
-    @font_size_metadata.setter
-    def font_size_metadata(self, font_size_metadata):
-        """Sets the font_size_metadata of this NotarySeal.
-
-
-        :param font_size_metadata: The font_size_metadata of this NotarySeal.  # noqa: E501
-        :type: PropertyMetadata
-        """
-
-        self._font_size_metadata = font_size_metadata
-
-    @property
     def form_order(self):
         """Gets the form_order of this NotarySeal.  # noqa: E501
 
@@ -1455,71 +1224,6 @@ class NotarySeal(object):
         """
 
         self._height_metadata = height_metadata
-
-    @property
-    def italic(self):
-        """Gets the italic of this NotarySeal.  # noqa: E501
-
-        When set to **true**, the information in the tab is italic.  # noqa: E501
-
-        :return: The italic of this NotarySeal.  # noqa: E501
-        :rtype: str
-        """
-        return self._italic
-
-    @italic.setter
-    def italic(self, italic):
-        """Sets the italic of this NotarySeal.
-
-        When set to **true**, the information in the tab is italic.  # noqa: E501
-
-        :param italic: The italic of this NotarySeal.  # noqa: E501
-        :type: str
-        """
-
-        self._italic = italic
-
-    @property
-    def italic_metadata(self):
-        """Gets the italic_metadata of this NotarySeal.  # noqa: E501
-
-
-        :return: The italic_metadata of this NotarySeal.  # noqa: E501
-        :rtype: PropertyMetadata
-        """
-        return self._italic_metadata
-
-    @italic_metadata.setter
-    def italic_metadata(self, italic_metadata):
-        """Sets the italic_metadata of this NotarySeal.
-
-
-        :param italic_metadata: The italic_metadata of this NotarySeal.  # noqa: E501
-        :type: PropertyMetadata
-        """
-
-        self._italic_metadata = italic_metadata
-
-    @property
-    def locale_policy(self):
-        """Gets the locale_policy of this NotarySeal.  # noqa: E501
-
-
-        :return: The locale_policy of this NotarySeal.  # noqa: E501
-        :rtype: LocalePolicyTab
-        """
-        return self._locale_policy
-
-    @locale_policy.setter
-    def locale_policy(self, locale_policy):
-        """Sets the locale_policy of this NotarySeal.
-
-
-        :param locale_policy: The locale_policy of this NotarySeal.  # noqa: E501
-        :type: LocalePolicyTab
-        """
-
-        self._locale_policy = locale_policy
 
     @property
     def merge_field(self):
@@ -1740,6 +1444,50 @@ class NotarySeal(object):
         """
 
         self._recipient_id_metadata = recipient_id_metadata
+
+    @property
+    def scale_value(self):
+        """Gets the scale_value of this NotarySeal.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The scale_value of this NotarySeal.  # noqa: E501
+        :rtype: str
+        """
+        return self._scale_value
+
+    @scale_value.setter
+    def scale_value(self, scale_value):
+        """Sets the scale_value of this NotarySeal.
+
+          # noqa: E501
+
+        :param scale_value: The scale_value of this NotarySeal.  # noqa: E501
+        :type: str
+        """
+
+        self._scale_value = scale_value
+
+    @property
+    def scale_value_metadata(self):
+        """Gets the scale_value_metadata of this NotarySeal.  # noqa: E501
+
+
+        :return: The scale_value_metadata of this NotarySeal.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._scale_value_metadata
+
+    @scale_value_metadata.setter
+    def scale_value_metadata(self, scale_value_metadata):
+        """Sets the scale_value_metadata of this NotarySeal.
+
+
+        :param scale_value_metadata: The scale_value_metadata of this NotarySeal.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._scale_value_metadata = scale_value_metadata
 
     @property
     def smart_contract_information(self):
@@ -2157,50 +1905,6 @@ class NotarySeal(object):
         """
 
         self._tool_tip_metadata = tool_tip_metadata
-
-    @property
-    def underline(self):
-        """Gets the underline of this NotarySeal.  # noqa: E501
-
-        When set to **true**, the information in the tab is underlined.  # noqa: E501
-
-        :return: The underline of this NotarySeal.  # noqa: E501
-        :rtype: str
-        """
-        return self._underline
-
-    @underline.setter
-    def underline(self, underline):
-        """Sets the underline of this NotarySeal.
-
-        When set to **true**, the information in the tab is underlined.  # noqa: E501
-
-        :param underline: The underline of this NotarySeal.  # noqa: E501
-        :type: str
-        """
-
-        self._underline = underline
-
-    @property
-    def underline_metadata(self):
-        """Gets the underline_metadata of this NotarySeal.  # noqa: E501
-
-
-        :return: The underline_metadata of this NotarySeal.  # noqa: E501
-        :rtype: PropertyMetadata
-        """
-        return self._underline_metadata
-
-    @underline_metadata.setter
-    def underline_metadata(self, underline_metadata):
-        """Sets the underline_metadata of this NotarySeal.
-
-
-        :param underline_metadata: The underline_metadata of this NotarySeal.  # noqa: E501
-        :type: PropertyMetadata
-        """
-
-        self._underline_metadata = underline_metadata
 
     @property
     def width(self):

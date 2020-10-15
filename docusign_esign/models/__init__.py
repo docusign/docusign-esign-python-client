@@ -132,6 +132,10 @@ from docusign_esign.models.comment_history_result import CommentHistoryResult
 from docusign_esign.models.comment_publish import CommentPublish
 from docusign_esign.models.comment_thread import CommentThread
 from docusign_esign.models.comments_publish import CommentsPublish
+from docusign_esign.models.commission_county import CommissionCounty
+from docusign_esign.models.commission_expiration import CommissionExpiration
+from docusign_esign.models.commission_number import CommissionNumber
+from docusign_esign.models.commission_state import CommissionState
 from docusign_esign.models.company import Company
 from docusign_esign.models.composite_template import CompositeTemplate
 from docusign_esign.models.conditional_recipient_rule import ConditionalRecipientRule
@@ -284,7 +288,6 @@ from docusign_esign.models.new_users_definition import NewUsersDefinition
 from docusign_esign.models.new_users_summary import NewUsersSummary
 from docusign_esign.models.notarize import Notarize
 from docusign_esign.models.notary import Notary
-from docusign_esign.models.notary_certificate import NotaryCertificate
 from docusign_esign.models.notary_host import NotaryHost
 from docusign_esign.models.notary_journal import NotaryJournal
 from docusign_esign.models.notary_journal_credible_witness import NotaryJournalCredibleWitness
@@ -316,6 +319,7 @@ from docusign_esign.models.payment_method_with_options import PaymentMethodWithO
 from docusign_esign.models.payment_processor_information import PaymentProcessorInformation
 from docusign_esign.models.permission_profile import PermissionProfile
 from docusign_esign.models.permission_profile_information import PermissionProfileInformation
+from docusign_esign.models.phone_number import PhoneNumber
 from docusign_esign.models.plan_information import PlanInformation
 from docusign_esign.models.poly_line import PolyLine
 from docusign_esign.models.poly_line_overlay import PolyLineOverlay
