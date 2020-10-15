@@ -16,4 +16,3 @@ script: nosetests -s
 matrix:
   allow_failures:
     - python: nightly # Allow all tests to fail for nightly
-    
