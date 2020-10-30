@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [3.7.1] - eSignature API v2.1-20.3.01 - 2020-10-30
+### Changed
+- Added support for version v2.1-20.3.01 of the DocuSign eSignature API.
+- Updated the SDK release version.
+### Fixed
+- DCM-3866, Added support for updateBrandResourcesByContentType function to take in file to upload.
+- DCM-3468, Template get working, added test case for catching regression in future.
+
 ## [3.6.0] - eSignature API v2.1-20.3.00 - 2020-09-24
 ### Changed
 - Added support for version v2.1-20.3.00 of the DocuSign eSignature API.

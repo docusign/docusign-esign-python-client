@@ -17,8 +17,10 @@ IntegratorKey = os.environ.get("INTEGRATOR_KEY_JWT")
 BaseUrl = "https://demo.docusign.net/restapi"
 OauthHostName = "account-d.docusign.com"
 SignTest1File = "{}/docs/SignTest1.pdf".format(os.path.dirname(os.path.abspath(__file__)))
+brandFile = "{}/docs/brand.xml".format(os.path.dirname(os.path.abspath(__file__)))
 TemplateId = os.environ.get("TEMPLATE_ID")
 UserId = os.environ.get("USER_ID")
+BrandId = os.environ.get("BRAND_ID")
 PrivateKeyBytes = base64.b64decode(os.environ.get("PRIVATE_KEY"))
 
 
@@ -90,6 +92,35 @@ class SdkUnitTests(unittest.TestCase):
             # below code required for production, no effect in demo (same domain)
             self.api_client.host = base_url
             docusign.configuration.api_client = self.api_client
+
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+
+    def testTemplateGet(self):
+        try:
+            from docusign_esign import TemplatesApi
+            template_api = TemplatesApi(self.api_client)
+
+            template_obj = template_api.get(self.user_info.accounts[0].account_id, template_id=TemplateId).to_dict()
+            print(template_obj)
+
+            assert template_obj is not None
+            assert template_obj['uri'] is not None
+
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+
+    def testPutUpdateBrandResourceByContentType(self):
+        try:
+            from docusign_esign import AccountsApi
+            acc_api = AccountsApi(self.api_client)
+            acc_obj = acc_api.update_brand_resources_by_content_type(self.user_info.accounts[0].account_id, BrandId, "email", brandFile)
+            print(acc_obj)
+
+            assert acc_obj is not None
+            assert acc_obj.resources_content_uri is not None
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
