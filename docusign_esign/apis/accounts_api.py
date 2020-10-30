@@ -267,8 +267,8 @@ class AccountsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: The external account number (int) or account ID Guid. (required)
-        :param Brand brand:
+        :param str account_id: The external account number (int) or account ID GUID. (required)
+        :param Brand brand: 
         :return: BrandsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -294,8 +294,8 @@ class AccountsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: The external account number (int) or account ID Guid. (required)
-        :param Brand brand:
+        :param str account_id: The external account number (int) or account ID GUID. (required)
+        :param Brand brand: 
         :return: BrandsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -6513,7 +6513,7 @@ class AccountsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_brand_resources_by_content_type(self, account_id, brand_id, resource_content_type, **kwargs):
+    def update_brand_resources_by_content_type(self, account_id, brand_id, resource_content_type, file_xml, **kwargs):
         """
         Uploads a branding resource file.
         This method makes a synchronous HTTP request by default. To make an
@@ -6522,25 +6522,26 @@ class AccountsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_brand_resources_by_content_type(account_id, brand_id, resource_content_type, callback=callback_function)
+        >>> thread = api.update_brand_resources_by_content_type(account_id, brand_id, resource_content_type, file_xml, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: The external account number (int) or account ID Guid. (required)
-        :param str brand_id: The unique identifier of a brand. (required)
-        :param str resource_content_type: (required)
+        :param str account_id: The external account number (int) or account ID GUID. (required)
+        :param str brand_id: The id of the brand. (required)
+        :param str resource_content_type: The type of brand resource file that you are updating. Valid values are:  - `sending` - `signing` - `email` - `signing_captive` (required)
+        :param file file_xml: Brand resource XML file. (required)
         :return: BrandResources
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, **kwargs)
+            return self.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, file_xml, **kwargs)
         else:
-            (data) = self.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, **kwargs)
+            (data) = self.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, file_xml, **kwargs)
             return data
 
-    def update_brand_resources_by_content_type_with_http_info(self, account_id, brand_id, resource_content_type, **kwargs):
+    def update_brand_resources_by_content_type_with_http_info(self, account_id, brand_id, resource_content_type, file_xml, **kwargs):
         """
         Uploads a branding resource file.
         This method makes a synchronous HTTP request by default. To make an
@@ -6549,19 +6550,20 @@ class AccountsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, callback=callback_function)
+        >>> thread = api.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, file_xml, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: The external account number (int) or account ID Guid. (required)
-        :param str brand_id: The unique identifier of a brand. (required)
-        :param str resource_content_type: (required)
+        :param str account_id: The external account number (int) or account ID GUID. (required)
+        :param str brand_id: The id of the brand. (required)
+        :param str resource_content_type: The type of brand resource file that you are updating. Valid values are:  - `sending` - `signing` - `email` - `signing_captive` (required)
+        :param file file_xml: Brand resource XML file. (required)
         :return: BrandResources
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'brand_id', 'resource_content_type']
+        all_params = ['account_id', 'brand_id', 'resource_content_type', 'file_xml']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6585,6 +6587,9 @@ class AccountsApi(object):
         # verify the required parameter 'resource_content_type' is set
         if ('resource_content_type' not in params) or (params['resource_content_type'] is None):
             raise ValueError("Missing the required parameter `resource_content_type` when calling `update_brand_resources_by_content_type`")
+        # verify the required parameter 'file_xml' is set
+        if ('file_xml' not in params) or (params['file_xml'] is None):
+            raise ValueError("Missing the required parameter `file_xml` when calling `update_brand_resources_by_content_type`")
 
 
         collection_formats = {}
@@ -6604,11 +6609,17 @@ class AccountsApi(object):
 
         form_params = []
         local_var_files = {}
+        if 'file_xml' in params:
+            local_var_files['file.xml'] = params['file_xml']
 
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = []
