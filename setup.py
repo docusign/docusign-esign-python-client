@@ -3,7 +3,7 @@
 """
     DocuSign REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
 
     OpenAPI spec version: v2
     Contact: devcenter@docusign.com
@@ -13,8 +13,8 @@
 
 from setuptools import setup, find_packages, Command, os  # noqa: H301
 
-NAME = "docusign_esign"
-VERSION = "2.7.0"
+NAME = "docusign-esign"
+VERSION = "2.8.0rc1"
 # To install the library, run the following
 #
 # python setup.py install
@@ -23,7 +23,7 @@ VERSION = "2.7.0"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = ["urllib3 >= 1.15", "six >= 1.8.0", "certifi >= 14.05.14", "python-dateutil >= 2.5.3",
-            "setuptools >= 21.0.0", "PyJWT>=1.7.1", "cryptography>=2.5", "nose>=1.3.7", "importlib-metadata<2,>=0.12"]
+            "setuptools >= 21.0.0", "PyJWT>=1.7.1,<2", "cryptography>=2.5", "nose>=1.3.7", "importlib-metadata<2,>=0.12"]
 
 class CleanCommand(Command):
     """Custom clean command to tidy up the project root."""
@@ -49,6 +49,6 @@ setup(
             'clean': CleanCommand,
     },
     long_description="""\
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.
+    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
     """
 )

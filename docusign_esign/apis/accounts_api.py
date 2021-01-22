@@ -158,8 +158,8 @@ class AccountsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: The external account number (int) or account ID Guid. (required)
-        :param Brand brand:
+        :param str account_id: The external account number (int) or account id GUID. (required)
+        :param Brand brand: 
         :return: BrandsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -185,8 +185,8 @@ class AccountsApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: The external account number (int) or account ID Guid. (required)
-        :param Brand brand:
+        :param str account_id: The external account number (int) or account id GUID. (required)
+        :param Brand brand: 
         :return: BrandsResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1542,6 +1542,114 @@ class AccountsApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='AccountInformation',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_account_settings_export(self, organization_id, result_id, **kwargs):
+        """
+        Retrieves an account settings comparison.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_account_settings_export(organization_id, result_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str organization_id: (required)
+        :param str result_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_account_settings_export_with_http_info(organization_id, result_id, **kwargs)
+        else:
+            (data) = self.get_account_settings_export_with_http_info(organization_id, result_id, **kwargs)
+            return data
+
+    def get_account_settings_export_with_http_info(self, organization_id, result_id, **kwargs):
+        """
+        Retrieves an account settings comparison.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_account_settings_export_with_http_info(organization_id, result_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str organization_id: (required)
+        :param str result_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['organization_id', 'result_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_account_settings_export" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'organization_id' is set
+        if ('organization_id' not in params) or (params['organization_id'] is None):
+            raise ValueError("Missing the required parameter `organization_id` when calling `get_account_settings_export`")
+        # verify the required parameter 'result_id' is set
+        if ('result_id' not in params) or (params['result_id'] is None):
+            raise ValueError("Missing the required parameter `result_id` when calling `get_account_settings_export`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2/organization_exports/{organizationId}/account_settings/{resultId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'organization_id' in params:
+            path_params['organizationId'] = params['organization_id']
+        if 'result_id' in params:
+            path_params['resultId'] = params['result_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4667,7 +4775,7 @@ class AccountsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_brand_resources_by_content_type(self, account_id, brand_id, resource_content_type, **kwargs):
+    def update_brand_resources_by_content_type(self, account_id, brand_id, resource_content_type, file_xml, **kwargs):
         """
         Uploads a branding resource file.
         This method makes a synchronous HTTP request by default. To make an
@@ -4676,25 +4784,26 @@ class AccountsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_brand_resources_by_content_type(account_id, brand_id, resource_content_type, callback=callback_function)
+        >>> thread = api.update_brand_resources_by_content_type(account_id, brand_id, resource_content_type, file_xml, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str account_id: The external account number (int) or account id GUID. (required)
         :param str brand_id: The unique identifier of a brand. (required)
-        :param str resource_content_type: (required)
+        :param str resource_content_type:  (required)
+        :param file file_xml: Brand resource XML file. (required)
         :return: BrandResources
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, **kwargs)
+            return self.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, file_xml, **kwargs)
         else:
-            (data) = self.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, **kwargs)
+            (data) = self.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, file_xml, **kwargs)
             return data
 
-    def update_brand_resources_by_content_type_with_http_info(self, account_id, brand_id, resource_content_type, **kwargs):
+    def update_brand_resources_by_content_type_with_http_info(self, account_id, brand_id, resource_content_type, file_xml, **kwargs):
         """
         Uploads a branding resource file.
         This method makes a synchronous HTTP request by default. To make an
@@ -4703,19 +4812,20 @@ class AccountsApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, callback=callback_function)
+        >>> thread = api.update_brand_resources_by_content_type_with_http_info(account_id, brand_id, resource_content_type, file_xml, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str account_id: The external account number (int) or account id GUID. (required)
         :param str brand_id: The unique identifier of a brand. (required)
-        :param str resource_content_type: (required)
+        :param str resource_content_type:  (required)
+        :param file file_xml: Brand resource XML file. (required)
         :return: BrandResources
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'brand_id', 'resource_content_type']
+        all_params = ['account_id', 'brand_id', 'resource_content_type', 'file_xml']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4739,6 +4849,9 @@ class AccountsApi(object):
         # verify the required parameter 'resource_content_type' is set
         if ('resource_content_type' not in params) or (params['resource_content_type'] is None):
             raise ValueError("Missing the required parameter `resource_content_type` when calling `update_brand_resources_by_content_type`")
+        # verify the required parameter 'file_xml' is set
+        if ('file_xml' not in params) or (params['file_xml'] is None):
+            raise ValueError("Missing the required parameter `file_xml` when calling `update_brand_resources_by_content_type`")
 
 
         collection_formats = {}
@@ -4758,11 +4871,17 @@ class AccountsApi(object):
 
         form_params = []
         local_var_files = {}
+        if 'file_xml' in params:
+            local_var_files['file.xml'] = params['file_xml']
 
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = []
