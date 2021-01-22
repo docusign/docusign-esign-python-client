@@ -1878,6 +1878,99 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def create_error(self, **kwargs):
+        """
+        Uploads Kazmon error for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_error(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_error_with_http_info(**kwargs)
+        else:
+            (data) = self.create_error_with_http_info(**kwargs)
+            return data
+
+    def create_error_with_http_info(self, **kwargs):
+        """
+        Uploads Kazmon error for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_error_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_error" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/display_appliance_info/error'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def create_lock(self, account_id, envelope_id, **kwargs):
         """
         Lock an envelope.
@@ -1985,6 +2078,222 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='LockInformation',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_page_info(self, account_id, envelope_id, **kwargs):
+        """
+        Create page information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_page_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_page_info_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.create_page_info_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def create_page_info_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Create page information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_page_info_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_page_info" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_page_info`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `create_page_info`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/page_info'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_pdf_blob(self, account_id, envelope_id, **kwargs):
+        """
+        Add pdf blobs for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_pdf_blob(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayAppliancePdf
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_pdf_blob_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.create_pdf_blob_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def create_pdf_blob_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Add pdf blobs for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_pdf_blob_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayAppliancePdf
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_pdf_blob" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_pdf_blob`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `create_pdf_blob`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/pdf_blobs'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayAppliancePdf',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2103,6 +2412,121 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='Recipients',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_recipient_manual_review_view(self, account_id, envelope_id, recipient_id, **kwargs):
+        """
+        Provides a link to access the Identity manual review related to a recipient.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_recipient_manual_review_view(account_id, envelope_id, recipient_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str recipient_id: The ID of the recipient being accessed. (required)
+        :return: ViewUrl
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_recipient_manual_review_view_with_http_info(account_id, envelope_id, recipient_id, **kwargs)
+        else:
+            (data) = self.create_recipient_manual_review_view_with_http_info(account_id, envelope_id, recipient_id, **kwargs)
+            return data
+
+    def create_recipient_manual_review_view_with_http_info(self, account_id, envelope_id, recipient_id, **kwargs):
+        """
+        Provides a link to access the Identity manual review related to a recipient.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_recipient_manual_review_view_with_http_info(account_id, envelope_id, recipient_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str recipient_id: The ID of the recipient being accessed. (required)
+        :return: ViewUrl
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'recipient_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_recipient_manual_review_view" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_recipient_manual_review_view`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `create_recipient_manual_review_view`")
+        # verify the required parameter 'recipient_id' is set
+        if ('recipient_id' not in params) or (params['recipient_id'] is None):
+            raise ValueError("Missing the required parameter `recipient_id` when calling `create_recipient_manual_review_view`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/views/identity_manual_review'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'recipient_id' in params:
+            path_params['recipientId'] = params['recipient_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ViewUrl',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2454,6 +2878,99 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='ViewUrl',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_redeem(self, **kwargs):
+        """
+        Returns signing url for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_redeem(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_redeem_with_http_info(**kwargs)
+        else:
+            (data) = self.create_redeem_with_http_info(**kwargs)
+            return data
+
+    def create_redeem_with_http_info(self, **kwargs):
+        """
+        Returns signing url for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_redeem_with_http_info(callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_redeem" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/display_appliance_info/redeem'.replace('{format}', 'json')
+        path_params = {}
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceInfo',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -3135,6 +3652,229 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='CustomFields',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_custom_fields_0(self, account_id, envelope_id, **kwargs):
+        """
+        Delete custom fields information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_custom_fields_0(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_custom_fields_0_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.delete_custom_fields_0_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def delete_custom_fields_0_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Delete custom fields information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_custom_fields_0_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_custom_fields_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_custom_fields_0`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `delete_custom_fields_0`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/custom_fields/delete'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_document(self, account_id, document_id, envelope_id, **kwargs):
+        """
+        Delete document information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_document(account_id, document_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str document_id: The ID of the document being accessed. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_document_with_http_info(account_id, document_id, envelope_id, **kwargs)
+        else:
+            (data) = self.delete_document_with_http_info(account_id, document_id, envelope_id, **kwargs)
+            return data
+
+    def delete_document_with_http_info(self, account_id, document_id, envelope_id, **kwargs):
+        """
+        Delete document information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_document_with_http_info(account_id, document_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str document_id: The ID of the document being accessed. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'document_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_document" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_document`")
+        # verify the required parameter 'document_id' is set
+        if ('document_id' not in params) or (params['document_id'] is None):
+            raise ValueError("Missing the required parameter `document_id` when calling `delete_document`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `delete_document`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/document/{documentId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'document_id' in params:
+            path_params['documentId'] = params['document_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4168,6 +4908,114 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def delete_page_info(self, account_id, envelope_id, **kwargs):
+        """
+        Delete page information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_page_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_page_info_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.delete_page_info_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def delete_page_info_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Delete page information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_page_info_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_page_info" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_page_info`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `delete_page_info`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/page_info/delete'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def delete_recipient(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Deletes a recipient from an envelope.
@@ -4285,6 +5133,114 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def delete_recipient_denied_document_copy(self, account_id, envelope_id, **kwargs):
+        """
+        Delete RecipientDeniedDocumentCopy for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_recipient_denied_document_copy(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_recipient_denied_document_copy_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.delete_recipient_denied_document_copy_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def delete_recipient_denied_document_copy_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Delete RecipientDeniedDocumentCopy for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_recipient_denied_document_copy_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_recipient_denied_document_copy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_recipient_denied_document_copy`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `delete_recipient_denied_document_copy`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/recipient_denied_copy'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def delete_recipients(self, account_id, envelope_id, **kwargs):
         """
         Deletes recipients from an envelope.
@@ -4392,6 +5348,114 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='Recipients',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_signer_attachment(self, account_id, envelope_id, **kwargs):
+        """
+        Delete signer attachment information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_signer_attachment(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_signer_attachment_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.delete_signer_attachment_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def delete_signer_attachment_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Delete signer attachment information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_signer_attachment_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_signer_attachment" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_signer_attachment`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `delete_signer_attachment`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/signer_attachment_info'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4745,6 +5809,222 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_account(self, account_id, envelope_id, **kwargs):
+        """
+        Returns envelope account information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_account(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceAccount
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_account_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_account_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_account_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Returns envelope account information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_account_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceAccount
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_account" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_account`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_account`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/account_info'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceAccount',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_appliance_info(self, account_id, envelope_id, **kwargs):
+        """
+        Returns envelope and recipient information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_appliance_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_appliance_info_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_appliance_info_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_appliance_info_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Returns envelope and recipient information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_appliance_info_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_appliance_info" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_appliance_info`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_appliance_info`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceInfo',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -5448,6 +6728,222 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_custom_fields(self, account_id, envelope_id, **kwargs):
+        """
+        Return custom fields information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_custom_fields(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_custom_fields_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_custom_fields_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_custom_fields_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Return custom fields information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_custom_fields_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_custom_fields" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_custom_fields`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_custom_fields`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/custom_fields'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_date_signed(self, account_id, envelope_id, **kwargs):
+        """
+        Gets date signed information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_date_signed(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_date_signed_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_date_signed_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_date_signed_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Gets date signed information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_date_signed_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_date_signed" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_date_signed`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_date_signed`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/date_signed'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_document(self, account_id, document_id, envelope_id, **kwargs):
         """
         Gets a document from an envelope.
@@ -5741,6 +7237,114 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_document_pages(self, account_id, envelope_id, **kwargs):
+        """
+        Return document pages for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_document_pages(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_document_pages_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_document_pages_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_document_pages_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Return document pages for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_document_pages_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_document_pages" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_document_pages`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_document_pages`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/document_page_list'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_document_tabs(self, account_id, document_id, envelope_id, **kwargs):
         """
         Returns tabs on the document.
@@ -5757,6 +7361,7 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str document_id: The ID of the document being accessed. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str include_metadata:
         :param str page_numbers:
         :return: Tabs
                  If the method is called asynchronously,
@@ -5785,13 +7390,14 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str document_id: The ID of the document being accessed. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str include_metadata:
         :param str page_numbers:
         :return: Tabs
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'document_id', 'envelope_id', 'page_numbers']
+        all_params = ['account_id', 'document_id', 'envelope_id', 'include_metadata', 'page_numbers']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5829,6 +7435,8 @@ class EnvelopesApi(object):
             path_params['envelopeId'] = params['envelope_id']
 
         query_params = {}
+        if 'include_metadata' in params:
+            query_params['include_metadata'] = params['include_metadata']
         if 'page_numbers' in params:
             query_params['page_numbers'] = params['page_numbers']
 
@@ -5853,6 +7461,107 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='Tabs',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_dynamic_system_settings(self, account_id, **kwargs):
+        """
+        Return document pages for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_dynamic_system_settings(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_dynamic_system_settings_with_http_info(account_id, **kwargs)
+        else:
+            (data) = self.get_dynamic_system_settings_with_http_info(account_id, **kwargs)
+            return data
+
+    def get_dynamic_system_settings_with_http_info(self, account_id, **kwargs):
+        """
+        Return document pages for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_dynamic_system_settings_with_http_info(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_dynamic_system_settings" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_dynamic_system_settings`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/display_appliance_info/dynamicsystemsettings'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceInfo',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -6636,6 +8345,229 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_image(self, account_id, envelope_id, **kwargs):
+        """
+        Returns images for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_image(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_image_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_image_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_image_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Returns images for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_image_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_image" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_image`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_image`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/image'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_locale_policy(self, account_id, envelope_id, user_id, **kwargs):
+        """
+        Returns locale policy information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_locale_policy(account_id, envelope_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_locale_policy_with_http_info(account_id, envelope_id, user_id, **kwargs)
+        else:
+            (data) = self.get_locale_policy_with_http_info(account_id, envelope_id, user_id, **kwargs)
+            return data
+
+    def get_locale_policy_with_http_info(self, account_id, envelope_id, user_id, **kwargs):
+        """
+        Returns locale policy information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_locale_policy_with_http_info(account_id, envelope_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'user_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_locale_policy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_locale_policy`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_locale_policy`")
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `get_locale_policy`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/localepolicy/{userId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceInfo',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_lock(self, account_id, envelope_id, **kwargs):
         """
         Gets envelope lock information.
@@ -7121,6 +9053,229 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_pdf(self, account_id, envelope_id, pdf_id, **kwargs):
+        """
+        Return pdf for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_pdf(account_id, envelope_id, pdf_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str pdf_id: (required)
+        :return: DisplayAppliancePdf
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_pdf_with_http_info(account_id, envelope_id, pdf_id, **kwargs)
+        else:
+            (data) = self.get_pdf_with_http_info(account_id, envelope_id, pdf_id, **kwargs)
+            return data
+
+    def get_pdf_with_http_info(self, account_id, envelope_id, pdf_id, **kwargs):
+        """
+        Return pdf for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_pdf_with_http_info(account_id, envelope_id, pdf_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str pdf_id: (required)
+        :return: DisplayAppliancePdf
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'pdf_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_pdf" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_pdf`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_pdf`")
+        # verify the required parameter 'pdf_id' is set
+        if ('pdf_id' not in params) or (params['pdf_id'] is None):
+            raise ValueError("Missing the required parameter `pdf_id` when calling `get_pdf`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/pdf/{pdfId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'pdf_id' in params:
+            path_params['pdfId'] = params['pdf_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayAppliancePdf',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_pdf_blob(self, account_id, envelope_id, **kwargs):
+        """
+        Return pdf blobs for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_pdf_blob(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayAppliancePdf
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_pdf_blob_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_pdf_blob_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_pdf_blob_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Return pdf blobs for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_pdf_blob_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayAppliancePdf
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_pdf_blob" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_pdf_blob`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_pdf_blob`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/pdf_blobs'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayAppliancePdf',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_recipient_document_visibility(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Returns document visibility for the recipients
@@ -7595,6 +9750,114 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_signer_attachment(self, account_id, envelope_id, **kwargs):
+        """
+        Return signer attachment information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_signer_attachment(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceSignerAttachment
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_signer_attachment_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_signer_attachment_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_signer_attachment_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Return signer attachment information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_signer_attachment_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayApplianceSignerAttachment
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_signer_attachment" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_signer_attachment`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_signer_attachment`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/signer_attachment_info'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceSignerAttachment',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_tabs_blob(self, account_id, envelope_id, **kwargs):
         """
         Get encrypted tabs for envelope.
@@ -7696,6 +9959,114 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_template_info(self, account_id, template_id, **kwargs):
+        """
+        Returns if template was encrypted by Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_template_info(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_template_info_with_http_info(account_id, template_id, **kwargs)
+        else:
+            (data) = self.get_template_info_with_http_info(account_id, template_id, **kwargs)
+            return data
+
+    def get_template_info_with_http_info(self, account_id, template_id, **kwargs):
+        """
+        Returns if template was encrypted by Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_template_info_with_http_info(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :return: DisplayApplianceInfo
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_template_info" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_template_info`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `get_template_info`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{templateId}/display_appliance_info/templateInfo'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayApplianceInfo',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -10089,8 +12460,7 @@ class EnvelopesApi(object):
 
     def update_document(self, account_id, document_id, envelope_id, **kwargs):
         """
-        Adds a document to an existing draft envelope.
-        Adds a document to an existing draft envelope.
+        Update document information for Display Appliance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -10104,7 +12474,7 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str document_id: The ID of the document being accessed. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :return: EnvelopeDocument
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -10117,8 +12487,7 @@ class EnvelopesApi(object):
 
     def update_document_with_http_info(self, account_id, document_id, envelope_id, **kwargs):
         """
-        Adds a document to an existing draft envelope.
-        Adds a document to an existing draft envelope.
+        Update document information for Display Appliance
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -10132,7 +12501,7 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str document_id: The ID of the document being accessed. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :return: EnvelopeDocument
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -10161,6 +12530,123 @@ class EnvelopesApi(object):
         # verify the required parameter 'envelope_id' is set
         if ('envelope_id' not in params) or (params['envelope_id'] is None):
             raise ValueError("Missing the required parameter `envelope_id` when calling `update_document`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/document/{documentId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'document_id' in params:
+            path_params['documentId'] = params['document_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_document_0(self, account_id, document_id, envelope_id, **kwargs):
+        """
+        Adds a document to an existing draft envelope.
+        Adds a document to an existing draft envelope.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_document_0(account_id, document_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str document_id: The ID of the document being accessed. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: EnvelopeDocument
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_document_0_with_http_info(account_id, document_id, envelope_id, **kwargs)
+        else:
+            (data) = self.update_document_0_with_http_info(account_id, document_id, envelope_id, **kwargs)
+            return data
+
+    def update_document_0_with_http_info(self, account_id, document_id, envelope_id, **kwargs):
+        """
+        Adds a document to an existing draft envelope.
+        Adds a document to an existing draft envelope.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_document_0_with_http_info(account_id, document_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str document_id: The ID of the document being accessed. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: EnvelopeDocument
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'document_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_document_0" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_document_0`")
+        # verify the required parameter 'document_id' is set
+        if ('document_id' not in params) or (params['document_id'] is None):
+            raise ValueError("Missing the required parameter `document_id` when calling `update_document_0`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `update_document_0`")
 
 
         collection_formats = {}
@@ -11220,6 +13706,438 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='Notification',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_page_info(self, account_id, envelope_id, **kwargs):
+        """
+        Update page information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_page_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_page_info_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.update_page_info_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def update_page_info_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Update page information for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_page_info_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_page_info" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_page_info`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `update_page_info`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/page_info'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_pdf(self, account_id, envelope_id, **kwargs):
+        """
+        Set latest pdf for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_pdf(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayAppliancePdf
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_pdf_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.update_pdf_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def update_pdf_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Set latest pdf for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_pdf_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: DisplayAppliancePdf
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_pdf" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_pdf`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `update_pdf`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/pdf'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DisplayAppliancePdf',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_pdf_blob(self, account_id, envelope_id, **kwargs):
+        """
+        Update pdf blobs for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_pdf_blob(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_pdf_blob_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.update_pdf_blob_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def update_pdf_blob_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Update pdf blobs for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_pdf_blob_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_pdf_blob" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_pdf_blob`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `update_pdf_blob`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/pdf_blobs'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_recipient_denied_document_copy(self, account_id, envelope_id, **kwargs):
+        """
+        Update RecipientDeniedDocumentCopy for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_recipient_denied_document_copy(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_recipient_denied_document_copy_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.update_recipient_denied_document_copy_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def update_recipient_denied_document_copy_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Update RecipientDeniedDocumentCopy for Display Appliance
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_recipient_denied_document_copy_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_recipient_denied_document_copy" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_recipient_denied_document_copy`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `update_recipient_denied_document_copy`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/display_appliance_info/recipient_denied_copy'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

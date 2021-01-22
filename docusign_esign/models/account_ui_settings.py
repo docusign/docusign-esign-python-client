@@ -41,6 +41,8 @@ class AccountUISettings(object):
         'enable_easy_sign_template_upload_metadata': 'SettingsMetadata',
         'enable_envelope_copy_with_data': 'str',
         'enable_envelope_copy_with_data_metadata': 'SettingsMetadata',
+        'enable_legacy_homepage_link': 'str',
+        'enable_legacy_homepage_link_metadata': 'SettingsMetadata',
         'hide_send_an_envelope': 'str',
         'hide_send_an_envelope_metadata': 'SettingsMetadata',
         'hide_use_a_template': 'str',
@@ -68,6 +70,8 @@ class AccountUISettings(object):
         'enable_easy_sign_template_upload_metadata': 'enableEasySignTemplateUploadMetadata',
         'enable_envelope_copy_with_data': 'enableEnvelopeCopyWithData',
         'enable_envelope_copy_with_data_metadata': 'enableEnvelopeCopyWithDataMetadata',
+        'enable_legacy_homepage_link': 'enableLegacyHomepageLink',
+        'enable_legacy_homepage_link_metadata': 'enableLegacyHomepageLinkMetadata',
         'hide_send_an_envelope': 'hideSendAnEnvelope',
         'hide_send_an_envelope_metadata': 'hideSendAnEnvelopeMetadata',
         'hide_use_a_template': 'hideUseATemplate',
@@ -84,7 +88,7 @@ class AccountUISettings(object):
         'upload_new_image_to_sign_or_initial_metadata': 'uploadNewImageToSignOrInitialMetadata'
     }
 
-    def __init__(self, admin_message=None, ask_an_admin=None, enable_admin_message=None, enable_admin_message_metadata=None, enable_easy_sign_can_use_multi_template_apply=None, enable_easy_sign_can_use_multi_template_apply_metadata=None, enable_easy_sign_template_upload=None, enable_easy_sign_template_upload_metadata=None, enable_envelope_copy_with_data=None, enable_envelope_copy_with_data_metadata=None, hide_send_an_envelope=None, hide_send_an_envelope_metadata=None, hide_use_a_template=None, hide_use_a_template_in_prepare=None, hide_use_a_template_in_prepare_metadata=None, hide_use_a_template_metadata=None, order_based_recipient_id_generation=None, order_based_recipient_id_generation_metadata=None, remove_envelope_forwarding=None, remove_envelope_forwarding_metadata=None, should_redact_access_code=None, should_redact_access_code_metadata=None, upload_new_image_to_sign_or_initial=None, upload_new_image_to_sign_or_initial_metadata=None):  # noqa: E501
+    def __init__(self, admin_message=None, ask_an_admin=None, enable_admin_message=None, enable_admin_message_metadata=None, enable_easy_sign_can_use_multi_template_apply=None, enable_easy_sign_can_use_multi_template_apply_metadata=None, enable_easy_sign_template_upload=None, enable_easy_sign_template_upload_metadata=None, enable_envelope_copy_with_data=None, enable_envelope_copy_with_data_metadata=None, enable_legacy_homepage_link=None, enable_legacy_homepage_link_metadata=None, hide_send_an_envelope=None, hide_send_an_envelope_metadata=None, hide_use_a_template=None, hide_use_a_template_in_prepare=None, hide_use_a_template_in_prepare_metadata=None, hide_use_a_template_metadata=None, order_based_recipient_id_generation=None, order_based_recipient_id_generation_metadata=None, remove_envelope_forwarding=None, remove_envelope_forwarding_metadata=None, should_redact_access_code=None, should_redact_access_code_metadata=None, upload_new_image_to_sign_or_initial=None, upload_new_image_to_sign_or_initial_metadata=None):  # noqa: E501
         """AccountUISettings - a model defined in Swagger"""  # noqa: E501
 
         self._admin_message = None
@@ -97,6 +101,8 @@ class AccountUISettings(object):
         self._enable_easy_sign_template_upload_metadata = None
         self._enable_envelope_copy_with_data = None
         self._enable_envelope_copy_with_data_metadata = None
+        self._enable_legacy_homepage_link = None
+        self._enable_legacy_homepage_link_metadata = None
         self._hide_send_an_envelope = None
         self._hide_send_an_envelope_metadata = None
         self._hide_use_a_template = None
@@ -133,6 +139,10 @@ class AccountUISettings(object):
             self.enable_envelope_copy_with_data = enable_envelope_copy_with_data
         if enable_envelope_copy_with_data_metadata is not None:
             self.enable_envelope_copy_with_data_metadata = enable_envelope_copy_with_data_metadata
+        if enable_legacy_homepage_link is not None:
+            self.enable_legacy_homepage_link = enable_legacy_homepage_link
+        if enable_legacy_homepage_link_metadata is not None:
+            self.enable_legacy_homepage_link_metadata = enable_legacy_homepage_link_metadata
         if hide_send_an_envelope is not None:
             self.hide_send_an_envelope = hide_send_an_envelope
         if hide_send_an_envelope_metadata is not None:
@@ -379,6 +389,50 @@ class AccountUISettings(object):
         """
 
         self._enable_envelope_copy_with_data_metadata = enable_envelope_copy_with_data_metadata
+
+    @property
+    def enable_legacy_homepage_link(self):
+        """Gets the enable_legacy_homepage_link of this AccountUISettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_legacy_homepage_link of this AccountUISettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_legacy_homepage_link
+
+    @enable_legacy_homepage_link.setter
+    def enable_legacy_homepage_link(self, enable_legacy_homepage_link):
+        """Sets the enable_legacy_homepage_link of this AccountUISettings.
+
+          # noqa: E501
+
+        :param enable_legacy_homepage_link: The enable_legacy_homepage_link of this AccountUISettings.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_legacy_homepage_link = enable_legacy_homepage_link
+
+    @property
+    def enable_legacy_homepage_link_metadata(self):
+        """Gets the enable_legacy_homepage_link_metadata of this AccountUISettings.  # noqa: E501
+
+
+        :return: The enable_legacy_homepage_link_metadata of this AccountUISettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_legacy_homepage_link_metadata
+
+    @enable_legacy_homepage_link_metadata.setter
+    def enable_legacy_homepage_link_metadata(self, enable_legacy_homepage_link_metadata):
+        """Sets the enable_legacy_homepage_link_metadata of this AccountUISettings.
+
+
+        :param enable_legacy_homepage_link_metadata: The enable_legacy_homepage_link_metadata of this AccountUISettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_legacy_homepage_link_metadata = enable_legacy_homepage_link_metadata
 
     @property
     def hide_send_an_envelope(self):

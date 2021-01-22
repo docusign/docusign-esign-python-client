@@ -46,6 +46,8 @@ class AccountInformation(object):
         'created_date': 'str',
         'currency_code': 'str',
         'current_plan_id': 'str',
+        'display_appliance_start_url': 'str',
+        'display_appliance_url': 'str',
         'distributor_code': 'str',
         'docu_sign_landing_url': 'str',
         'dss_values': 'dict(str, str)',
@@ -64,7 +66,8 @@ class AccountInformation(object):
         'seats_in_use': 'str',
         'status21_cfr_part11': 'str',
         'suspension_date': 'str',
-        'suspension_status': 'str'
+        'suspension_status': 'str',
+        'use_display_appliance': 'bool'
     }
 
     attribute_map = {
@@ -83,6 +86,8 @@ class AccountInformation(object):
         'created_date': 'createdDate',
         'currency_code': 'currencyCode',
         'current_plan_id': 'currentPlanId',
+        'display_appliance_start_url': 'displayApplianceStartUrl',
+        'display_appliance_url': 'displayApplianceUrl',
         'distributor_code': 'distributorCode',
         'docu_sign_landing_url': 'docuSignLandingUrl',
         'dss_values': 'dssValues',
@@ -101,10 +106,11 @@ class AccountInformation(object):
         'seats_in_use': 'seatsInUse',
         'status21_cfr_part11': 'status21CFRPart11',
         'suspension_date': 'suspensionDate',
-        'suspension_status': 'suspensionStatus'
+        'suspension_status': 'suspensionStatus',
+        'use_display_appliance': 'useDisplayAppliance'
     }
 
-    def __init__(self, account_id_guid=None, account_name=None, account_settings=None, allow_transaction_rooms=None, billing_period_days_remaining=None, billing_period_end_date=None, billing_period_envelopes_allowed=None, billing_period_envelopes_sent=None, billing_period_start_date=None, billing_profile=None, can_upgrade=None, connect_permission=None, created_date=None, currency_code=None, current_plan_id=None, distributor_code=None, docu_sign_landing_url=None, dss_values=None, envelope_sending_blocked=None, envelope_unit_price=None, external_account_id=None, forgotten_password_questions_count=None, is_downgrade=None, payment_method=None, plan_classification=None, plan_end_date=None, plan_name=None, plan_start_date=None, recipient_domains=None, seats_allowed=None, seats_in_use=None, status21_cfr_part11=None, suspension_date=None, suspension_status=None):  # noqa: E501
+    def __init__(self, account_id_guid=None, account_name=None, account_settings=None, allow_transaction_rooms=None, billing_period_days_remaining=None, billing_period_end_date=None, billing_period_envelopes_allowed=None, billing_period_envelopes_sent=None, billing_period_start_date=None, billing_profile=None, can_upgrade=None, connect_permission=None, created_date=None, currency_code=None, current_plan_id=None, display_appliance_start_url=None, display_appliance_url=None, distributor_code=None, docu_sign_landing_url=None, dss_values=None, envelope_sending_blocked=None, envelope_unit_price=None, external_account_id=None, forgotten_password_questions_count=None, is_downgrade=None, payment_method=None, plan_classification=None, plan_end_date=None, plan_name=None, plan_start_date=None, recipient_domains=None, seats_allowed=None, seats_in_use=None, status21_cfr_part11=None, suspension_date=None, suspension_status=None, use_display_appliance=None):  # noqa: E501
         """AccountInformation - a model defined in Swagger"""  # noqa: E501
 
         self._account_id_guid = None
@@ -122,6 +128,8 @@ class AccountInformation(object):
         self._created_date = None
         self._currency_code = None
         self._current_plan_id = None
+        self._display_appliance_start_url = None
+        self._display_appliance_url = None
         self._distributor_code = None
         self._docu_sign_landing_url = None
         self._dss_values = None
@@ -141,6 +149,7 @@ class AccountInformation(object):
         self._status21_cfr_part11 = None
         self._suspension_date = None
         self._suspension_status = None
+        self._use_display_appliance = None
         self.discriminator = None
 
         if account_id_guid is not None:
@@ -173,6 +182,10 @@ class AccountInformation(object):
             self.currency_code = currency_code
         if current_plan_id is not None:
             self.current_plan_id = current_plan_id
+        if display_appliance_start_url is not None:
+            self.display_appliance_start_url = display_appliance_start_url
+        if display_appliance_url is not None:
+            self.display_appliance_url = display_appliance_url
         if distributor_code is not None:
             self.distributor_code = distributor_code
         if docu_sign_landing_url is not None:
@@ -211,6 +224,8 @@ class AccountInformation(object):
             self.suspension_date = suspension_date
         if suspension_status is not None:
             self.suspension_status = suspension_status
+        if use_display_appliance is not None:
+            self.use_display_appliance = use_display_appliance
 
     @property
     def account_id_guid(self):
@@ -554,6 +569,52 @@ class AccountInformation(object):
         """
 
         self._current_plan_id = current_plan_id
+
+    @property
+    def display_appliance_start_url(self):
+        """Gets the display_appliance_start_url of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display_appliance_start_url of this AccountInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_appliance_start_url
+
+    @display_appliance_start_url.setter
+    def display_appliance_start_url(self, display_appliance_start_url):
+        """Sets the display_appliance_start_url of this AccountInformation.
+
+          # noqa: E501
+
+        :param display_appliance_start_url: The display_appliance_start_url of this AccountInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._display_appliance_start_url = display_appliance_start_url
+
+    @property
+    def display_appliance_url(self):
+        """Gets the display_appliance_url of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display_appliance_url of this AccountInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_appliance_url
+
+    @display_appliance_url.setter
+    def display_appliance_url(self, display_appliance_url):
+        """Sets the display_appliance_url of this AccountInformation.
+
+          # noqa: E501
+
+        :param display_appliance_url: The display_appliance_url of this AccountInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._display_appliance_url = display_appliance_url
 
     @property
     def distributor_code(self):
@@ -991,6 +1052,29 @@ class AccountInformation(object):
         """
 
         self._suspension_status = suspension_status
+
+    @property
+    def use_display_appliance(self):
+        """Gets the use_display_appliance of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_display_appliance of this AccountInformation.  # noqa: E501
+        :rtype: bool
+        """
+        return self._use_display_appliance
+
+    @use_display_appliance.setter
+    def use_display_appliance(self, use_display_appliance):
+        """Sets the use_display_appliance of this AccountInformation.
+
+          # noqa: E501
+
+        :param use_display_appliance: The use_display_appliance of this AccountInformation.  # noqa: E501
+        :type: bool
+        """
+
+        self._use_display_appliance = use_display_appliance
 
     def to_dict(self):
         """Returns the model properties as a dict"""

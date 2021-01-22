@@ -32,6 +32,7 @@ class Document(object):
     """
     swagger_types = {
         'apply_anchor_tabs': 'str',
+        'assign_tabs_to_recipient_id': 'str',
         'display': 'str',
         'document_base64': 'str',
         'document_fields': 'list[NameValue]',
@@ -59,6 +60,7 @@ class Document(object):
 
     attribute_map = {
         'apply_anchor_tabs': 'applyAnchorTabs',
+        'assign_tabs_to_recipient_id': 'assignTabsToRecipientId',
         'display': 'display',
         'document_base64': 'documentBase64',
         'document_fields': 'documentFields',
@@ -84,10 +86,11 @@ class Document(object):
         'uri': 'uri'
     }
 
-    def __init__(self, apply_anchor_tabs=None, display=None, document_base64=None, document_fields=None, document_id=None, encrypted_with_key_manager=None, file_extension=None, file_format_hint=None, html_definition=None, include_in_download=None, match_boxes=None, name=None, order=None, pages=None, password=None, pdf_form_field_option=None, remote_url=None, signer_must_acknowledge=None, signer_must_acknowledge_use_account_default=None, tabs=None, template_locked=None, template_required=None, transform_pdf_fields=None, uri=None):  # noqa: E501
+    def __init__(self, apply_anchor_tabs=None, assign_tabs_to_recipient_id=None, display=None, document_base64=None, document_fields=None, document_id=None, encrypted_with_key_manager=None, file_extension=None, file_format_hint=None, html_definition=None, include_in_download=None, match_boxes=None, name=None, order=None, pages=None, password=None, pdf_form_field_option=None, remote_url=None, signer_must_acknowledge=None, signer_must_acknowledge_use_account_default=None, tabs=None, template_locked=None, template_required=None, transform_pdf_fields=None, uri=None):  # noqa: E501
         """Document - a model defined in Swagger"""  # noqa: E501
 
         self._apply_anchor_tabs = None
+        self._assign_tabs_to_recipient_id = None
         self._display = None
         self._document_base64 = None
         self._document_fields = None
@@ -115,6 +118,8 @@ class Document(object):
 
         if apply_anchor_tabs is not None:
             self.apply_anchor_tabs = apply_anchor_tabs
+        if assign_tabs_to_recipient_id is not None:
+            self.assign_tabs_to_recipient_id = assign_tabs_to_recipient_id
         if display is not None:
             self.display = display
         if document_base64 is not None:
@@ -184,6 +189,29 @@ class Document(object):
         """
 
         self._apply_anchor_tabs = apply_anchor_tabs
+
+    @property
+    def assign_tabs_to_recipient_id(self):
+        """Gets the assign_tabs_to_recipient_id of this Document.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The assign_tabs_to_recipient_id of this Document.  # noqa: E501
+        :rtype: str
+        """
+        return self._assign_tabs_to_recipient_id
+
+    @assign_tabs_to_recipient_id.setter
+    def assign_tabs_to_recipient_id(self, assign_tabs_to_recipient_id):
+        """Sets the assign_tabs_to_recipient_id of this Document.
+
+          # noqa: E501
+
+        :param assign_tabs_to_recipient_id: The assign_tabs_to_recipient_id of this Document.  # noqa: E501
+        :type: str
+        """
+
+        self._assign_tabs_to_recipient_id = assign_tabs_to_recipient_id
 
     @property
     def display(self):

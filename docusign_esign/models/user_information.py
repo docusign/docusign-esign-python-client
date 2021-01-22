@@ -44,6 +44,7 @@ class UserInformation(object):
         'first_name': 'str',
         'forgotten_password_info': 'ForgottenPasswordInformation',
         'group_list': 'list[Group]',
+        'has_remote_notary': 'bool',
         'home_address': 'AddressInformation',
         'initials_image_uri': 'str',
         'is_admin': 'str',
@@ -89,6 +90,7 @@ class UserInformation(object):
         'first_name': 'firstName',
         'forgotten_password_info': 'forgottenPasswordInfo',
         'group_list': 'groupList',
+        'has_remote_notary': 'hasRemoteNotary',
         'home_address': 'homeAddress',
         'initials_image_uri': 'initialsImageUri',
         'is_admin': 'isAdmin',
@@ -120,7 +122,7 @@ class UserInformation(object):
         'work_address': 'workAddress'
     }
 
-    def __init__(self, activation_access_code=None, company=None, connect_configurations=None, country_code=None, created_date_time=None, custom_settings=None, default_account_id=None, email=None, enable_connect_for_user=None, error_details=None, first_name=None, forgotten_password_info=None, group_list=None, home_address=None, initials_image_uri=None, is_admin=None, is_nar_enabled=None, job_title=None, last_login=None, last_name=None, login_status=None, middle_name=None, password=None, password_expiration=None, permission_profile_id=None, permission_profile_name=None, profile_image_uri=None, send_activation_email=None, send_activation_on_invalid_login=None, signature_image_uri=None, subscribe=None, suffix_name=None, title=None, uri=None, user_added_to_account_date_time=None, user_id=None, user_name=None, user_profile_last_modified_date=None, user_settings=None, user_status=None, user_type=None, work_address=None):  # noqa: E501
+    def __init__(self, activation_access_code=None, company=None, connect_configurations=None, country_code=None, created_date_time=None, custom_settings=None, default_account_id=None, email=None, enable_connect_for_user=None, error_details=None, first_name=None, forgotten_password_info=None, group_list=None, has_remote_notary=None, home_address=None, initials_image_uri=None, is_admin=None, is_nar_enabled=None, job_title=None, last_login=None, last_name=None, login_status=None, middle_name=None, password=None, password_expiration=None, permission_profile_id=None, permission_profile_name=None, profile_image_uri=None, send_activation_email=None, send_activation_on_invalid_login=None, signature_image_uri=None, subscribe=None, suffix_name=None, title=None, uri=None, user_added_to_account_date_time=None, user_id=None, user_name=None, user_profile_last_modified_date=None, user_settings=None, user_status=None, user_type=None, work_address=None):  # noqa: E501
         """UserInformation - a model defined in Swagger"""  # noqa: E501
 
         self._activation_access_code = None
@@ -136,6 +138,7 @@ class UserInformation(object):
         self._first_name = None
         self._forgotten_password_info = None
         self._group_list = None
+        self._has_remote_notary = None
         self._home_address = None
         self._initials_image_uri = None
         self._is_admin = None
@@ -193,6 +196,8 @@ class UserInformation(object):
             self.forgotten_password_info = forgotten_password_info
         if group_list is not None:
             self.group_list = group_list
+        if has_remote_notary is not None:
+            self.has_remote_notary = has_remote_notary
         if home_address is not None:
             self.home_address = home_address
         if initials_image_uri is not None:
@@ -546,6 +551,29 @@ class UserInformation(object):
         """
 
         self._group_list = group_list
+
+    @property
+    def has_remote_notary(self):
+        """Gets the has_remote_notary of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The has_remote_notary of this UserInformation.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_remote_notary
+
+    @has_remote_notary.setter
+    def has_remote_notary(self, has_remote_notary):
+        """Sets the has_remote_notary of this UserInformation.
+
+          # noqa: E501
+
+        :param has_remote_notary: The has_remote_notary of this UserInformation.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_remote_notary = has_remote_notary
 
     @property
     def home_address(self):

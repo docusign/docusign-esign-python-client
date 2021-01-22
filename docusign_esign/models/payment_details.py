@@ -45,6 +45,7 @@ class PaymentDetails(object):
         'line_items': 'list[PaymentLineItem]',
         'payment_option': 'str',
         'payment_source_id': 'str',
+        'signer_values': 'PaymentSignerValues',
         'status': 'str',
         'total': 'Money'
     }
@@ -64,11 +65,12 @@ class PaymentDetails(object):
         'line_items': 'lineItems',
         'payment_option': 'paymentOption',
         'payment_source_id': 'paymentSourceId',
+        'signer_values': 'signerValues',
         'status': 'status',
         'total': 'total'
     }
 
-    def __init__(self, allowed_payment_methods=None, charge_id=None, currency_code=None, currency_code_metadata=None, customer_id=None, custom_metadata=None, custom_metadata_required=None, gateway_account_id=None, gateway_account_id_metadata=None, gateway_display_name=None, gateway_name=None, line_items=None, payment_option=None, payment_source_id=None, status=None, total=None):  # noqa: E501
+    def __init__(self, allowed_payment_methods=None, charge_id=None, currency_code=None, currency_code_metadata=None, customer_id=None, custom_metadata=None, custom_metadata_required=None, gateway_account_id=None, gateway_account_id_metadata=None, gateway_display_name=None, gateway_name=None, line_items=None, payment_option=None, payment_source_id=None, signer_values=None, status=None, total=None):  # noqa: E501
         """PaymentDetails - a model defined in Swagger"""  # noqa: E501
 
         self._allowed_payment_methods = None
@@ -85,6 +87,7 @@ class PaymentDetails(object):
         self._line_items = None
         self._payment_option = None
         self._payment_source_id = None
+        self._signer_values = None
         self._status = None
         self._total = None
         self.discriminator = None
@@ -117,6 +120,8 @@ class PaymentDetails(object):
             self.payment_option = payment_option
         if payment_source_id is not None:
             self.payment_source_id = payment_source_id
+        if signer_values is not None:
+            self.signer_values = signer_values
         if status is not None:
             self.status = status
         if total is not None:
@@ -439,6 +444,27 @@ class PaymentDetails(object):
         """
 
         self._payment_source_id = payment_source_id
+
+    @property
+    def signer_values(self):
+        """Gets the signer_values of this PaymentDetails.  # noqa: E501
+
+
+        :return: The signer_values of this PaymentDetails.  # noqa: E501
+        :rtype: PaymentSignerValues
+        """
+        return self._signer_values
+
+    @signer_values.setter
+    def signer_values(self, signer_values):
+        """Sets the signer_values of this PaymentDetails.
+
+
+        :param signer_values: The signer_values of this PaymentDetails.  # noqa: E501
+        :type: PaymentSignerValues
+        """
+
+        self._signer_values = signer_values
 
     @property
     def status(self):
