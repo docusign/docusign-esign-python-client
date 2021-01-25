@@ -51,6 +51,8 @@ class TabAccountSettings(object):
         'list_tabs_metadata': 'SettingsMetadata',
         'note_tabs_enabled': 'str',
         'note_tabs_metadata': 'SettingsMetadata',
+        'prefill_tabs_enabled': 'str',
+        'prefill_tabs_metadata': 'SettingsMetadata',
         'radio_tabs_enabled': 'str',
         'radio_tabs_metadata': 'SettingsMetadata',
         'saving_custom_tabs_enabled': 'str',
@@ -94,6 +96,8 @@ class TabAccountSettings(object):
         'list_tabs_metadata': 'listTabsMetadata',
         'note_tabs_enabled': 'noteTabsEnabled',
         'note_tabs_metadata': 'noteTabsMetadata',
+        'prefill_tabs_enabled': 'prefillTabsEnabled',
+        'prefill_tabs_metadata': 'prefillTabsMetadata',
         'radio_tabs_enabled': 'radioTabsEnabled',
         'radio_tabs_metadata': 'radioTabsMetadata',
         'saving_custom_tabs_enabled': 'savingCustomTabsEnabled',
@@ -116,7 +120,7 @@ class TabAccountSettings(object):
         'text_tabs_metadata': 'textTabsMetadata'
     }
 
-    def __init__(self, allow_tab_order=None, allow_tab_order_metadata=None, approve_decline_tabs_enabled=None, approve_decline_tabs_metadata=None, calculated_fields_enabled=None, calculated_fields_metadata=None, checkbox_tabs_enabled=None, check_box_tabs_metadata=None, data_field_regex_enabled=None, data_field_regex_metadata=None, data_field_size_enabled=None, data_field_size_metadata=None, draw_tabs_enabled=None, draw_tabs_metadata=None, first_last_email_tabs_enabled=None, first_last_email_tabs_metadata=None, list_tabs_enabled=None, list_tabs_metadata=None, note_tabs_enabled=None, note_tabs_metadata=None, radio_tabs_enabled=None, radio_tabs_metadata=None, saving_custom_tabs_enabled=None, saving_custom_tabs_metadata=None, sender_to_change_tab_assignments_enabled=None, sender_to_change_tab_assignments_metadata=None, shared_custom_tabs_enabled=None, shared_custom_tabs_metadata=None, tab_data_label_enabled=None, tab_data_label_metadata=None, tab_location_enabled=None, tab_location_metadata=None, tab_locking_enabled=None, tab_locking_metadata=None, tab_scale_enabled=None, tab_scale_metadata=None, tab_text_formatting_enabled=None, tab_text_formatting_metadata=None, text_tabs_enabled=None, text_tabs_metadata=None):  # noqa: E501
+    def __init__(self, allow_tab_order=None, allow_tab_order_metadata=None, approve_decline_tabs_enabled=None, approve_decline_tabs_metadata=None, calculated_fields_enabled=None, calculated_fields_metadata=None, checkbox_tabs_enabled=None, check_box_tabs_metadata=None, data_field_regex_enabled=None, data_field_regex_metadata=None, data_field_size_enabled=None, data_field_size_metadata=None, draw_tabs_enabled=None, draw_tabs_metadata=None, first_last_email_tabs_enabled=None, first_last_email_tabs_metadata=None, list_tabs_enabled=None, list_tabs_metadata=None, note_tabs_enabled=None, note_tabs_metadata=None, prefill_tabs_enabled=None, prefill_tabs_metadata=None, radio_tabs_enabled=None, radio_tabs_metadata=None, saving_custom_tabs_enabled=None, saving_custom_tabs_metadata=None, sender_to_change_tab_assignments_enabled=None, sender_to_change_tab_assignments_metadata=None, shared_custom_tabs_enabled=None, shared_custom_tabs_metadata=None, tab_data_label_enabled=None, tab_data_label_metadata=None, tab_location_enabled=None, tab_location_metadata=None, tab_locking_enabled=None, tab_locking_metadata=None, tab_scale_enabled=None, tab_scale_metadata=None, tab_text_formatting_enabled=None, tab_text_formatting_metadata=None, text_tabs_enabled=None, text_tabs_metadata=None):  # noqa: E501
         """TabAccountSettings - a model defined in Swagger"""  # noqa: E501
 
         self._allow_tab_order = None
@@ -139,6 +143,8 @@ class TabAccountSettings(object):
         self._list_tabs_metadata = None
         self._note_tabs_enabled = None
         self._note_tabs_metadata = None
+        self._prefill_tabs_enabled = None
+        self._prefill_tabs_metadata = None
         self._radio_tabs_enabled = None
         self._radio_tabs_metadata = None
         self._saving_custom_tabs_enabled = None
@@ -201,6 +207,10 @@ class TabAccountSettings(object):
             self.note_tabs_enabled = note_tabs_enabled
         if note_tabs_metadata is not None:
             self.note_tabs_metadata = note_tabs_metadata
+        if prefill_tabs_enabled is not None:
+            self.prefill_tabs_enabled = prefill_tabs_enabled
+        if prefill_tabs_metadata is not None:
+            self.prefill_tabs_metadata = prefill_tabs_metadata
         if radio_tabs_enabled is not None:
             self.radio_tabs_enabled = radio_tabs_enabled
         if radio_tabs_metadata is not None:
@@ -681,6 +691,50 @@ class TabAccountSettings(object):
         """
 
         self._note_tabs_metadata = note_tabs_metadata
+
+    @property
+    def prefill_tabs_enabled(self):
+        """Gets the prefill_tabs_enabled of this TabAccountSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The prefill_tabs_enabled of this TabAccountSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._prefill_tabs_enabled
+
+    @prefill_tabs_enabled.setter
+    def prefill_tabs_enabled(self, prefill_tabs_enabled):
+        """Sets the prefill_tabs_enabled of this TabAccountSettings.
+
+          # noqa: E501
+
+        :param prefill_tabs_enabled: The prefill_tabs_enabled of this TabAccountSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._prefill_tabs_enabled = prefill_tabs_enabled
+
+    @property
+    def prefill_tabs_metadata(self):
+        """Gets the prefill_tabs_metadata of this TabAccountSettings.  # noqa: E501
+
+
+        :return: The prefill_tabs_metadata of this TabAccountSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._prefill_tabs_metadata
+
+    @prefill_tabs_metadata.setter
+    def prefill_tabs_metadata(self, prefill_tabs_metadata):
+        """Sets the prefill_tabs_metadata of this TabAccountSettings.
+
+
+        :param prefill_tabs_metadata: The prefill_tabs_metadata of this TabAccountSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._prefill_tabs_metadata = prefill_tabs_metadata
 
     @property
     def radio_tabs_enabled(self):

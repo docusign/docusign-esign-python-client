@@ -58,6 +58,7 @@ class TemplateTabs(object):
         'number_tabs': 'list[Number]',
         'phone_number_tabs': 'list[PhoneNumber]',
         'poly_line_overlay_tabs': 'list[PolyLineOverlay]',
+        'prefill_tabs': 'PrefillTabs',
         'radio_group_tabs': 'list[RadioGroup]',
         'signer_attachment_tabs': 'list[SignerAttachment]',
         'sign_here_tabs': 'list[SignHere]',
@@ -98,6 +99,7 @@ class TemplateTabs(object):
         'number_tabs': 'numberTabs',
         'phone_number_tabs': 'phoneNumberTabs',
         'poly_line_overlay_tabs': 'polyLineOverlayTabs',
+        'prefill_tabs': 'prefillTabs',
         'radio_group_tabs': 'radioGroupTabs',
         'signer_attachment_tabs': 'signerAttachmentTabs',
         'sign_here_tabs': 'signHereTabs',
@@ -110,7 +112,7 @@ class TemplateTabs(object):
         'zip_tabs': 'zipTabs'
     }
 
-    def __init__(self, approve_tabs=None, checkbox_tabs=None, comment_thread_tabs=None, commission_county_tabs=None, commission_expiration_tabs=None, commission_number_tabs=None, commission_state_tabs=None, company_tabs=None, date_signed_tabs=None, date_tabs=None, decline_tabs=None, draw_tabs=None, email_address_tabs=None, email_tabs=None, envelope_id_tabs=None, first_name_tabs=None, formula_tabs=None, full_name_tabs=None, initial_here_tabs=None, last_name_tabs=None, list_tabs=None, notarize_tabs=None, notary_seal_tabs=None, note_tabs=None, number_tabs=None, phone_number_tabs=None, poly_line_overlay_tabs=None, radio_group_tabs=None, signer_attachment_tabs=None, sign_here_tabs=None, smart_section_tabs=None, ssn_tabs=None, tab_groups=None, text_tabs=None, title_tabs=None, view_tabs=None, zip_tabs=None):  # noqa: E501
+    def __init__(self, approve_tabs=None, checkbox_tabs=None, comment_thread_tabs=None, commission_county_tabs=None, commission_expiration_tabs=None, commission_number_tabs=None, commission_state_tabs=None, company_tabs=None, date_signed_tabs=None, date_tabs=None, decline_tabs=None, draw_tabs=None, email_address_tabs=None, email_tabs=None, envelope_id_tabs=None, first_name_tabs=None, formula_tabs=None, full_name_tabs=None, initial_here_tabs=None, last_name_tabs=None, list_tabs=None, notarize_tabs=None, notary_seal_tabs=None, note_tabs=None, number_tabs=None, phone_number_tabs=None, poly_line_overlay_tabs=None, prefill_tabs=None, radio_group_tabs=None, signer_attachment_tabs=None, sign_here_tabs=None, smart_section_tabs=None, ssn_tabs=None, tab_groups=None, text_tabs=None, title_tabs=None, view_tabs=None, zip_tabs=None):  # noqa: E501
         """TemplateTabs - a model defined in Swagger"""  # noqa: E501
 
         self._approve_tabs = None
@@ -140,6 +142,7 @@ class TemplateTabs(object):
         self._number_tabs = None
         self._phone_number_tabs = None
         self._poly_line_overlay_tabs = None
+        self._prefill_tabs = None
         self._radio_group_tabs = None
         self._signer_attachment_tabs = None
         self._sign_here_tabs = None
@@ -206,6 +209,8 @@ class TemplateTabs(object):
             self.phone_number_tabs = phone_number_tabs
         if poly_line_overlay_tabs is not None:
             self.poly_line_overlay_tabs = poly_line_overlay_tabs
+        if prefill_tabs is not None:
+            self.prefill_tabs = prefill_tabs
         if radio_group_tabs is not None:
             self.radio_group_tabs = radio_group_tabs
         if signer_attachment_tabs is not None:
@@ -847,6 +852,27 @@ class TemplateTabs(object):
         """
 
         self._poly_line_overlay_tabs = poly_line_overlay_tabs
+
+    @property
+    def prefill_tabs(self):
+        """Gets the prefill_tabs of this TemplateTabs.  # noqa: E501
+
+
+        :return: The prefill_tabs of this TemplateTabs.  # noqa: E501
+        :rtype: PrefillTabs
+        """
+        return self._prefill_tabs
+
+    @prefill_tabs.setter
+    def prefill_tabs(self, prefill_tabs):
+        """Sets the prefill_tabs of this TemplateTabs.
+
+
+        :param prefill_tabs: The prefill_tabs of this TemplateTabs.  # noqa: E501
+        :type: PrefillTabs
+        """
+
+        self._prefill_tabs = prefill_tabs
 
     @property
     def radio_group_tabs(self):

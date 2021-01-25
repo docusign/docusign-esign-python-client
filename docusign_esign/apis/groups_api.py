@@ -164,7 +164,7 @@ class GroupsApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str group_id: The ID of the group being accessed. (required)
         :param BrandsRequest brands_request:
-        :return: BrandsResponse
+        :return: GroupBrands
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -192,7 +192,7 @@ class GroupsApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str group_id: The ID of the group being accessed. (required)
         :param BrandsRequest brands_request:
-        :return: BrandsResponse
+        :return: GroupBrands
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -253,7 +253,7 @@ class GroupsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='BrandsResponse',
+                                        response_type='GroupBrands',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -498,7 +498,7 @@ class GroupsApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str group_id: The ID of the group being accessed. (required)
-        :return: BrandsResponse
+        :return: GroupBrands
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -525,7 +525,7 @@ class GroupsApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str group_id: The ID of the group being accessed. (required)
-        :return: BrandsResponse
+        :return: GroupBrands
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -584,7 +584,7 @@ class GroupsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='BrandsResponse',
+                                        response_type='GroupBrands',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -850,7 +850,7 @@ class GroupsApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str group_id: The ID of the group being accessed. (required)
         :param BrandsRequest brands_request:
-        :return: BrandsResponse
+        :return: GroupBrands
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -878,7 +878,7 @@ class GroupsApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str group_id: The ID of the group being accessed. (required)
         :param BrandsRequest brands_request:
-        :return: BrandsResponse
+        :return: GroupBrands
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -939,7 +939,7 @@ class GroupsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='BrandsResponse',
+                                        response_type='GroupBrands',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
