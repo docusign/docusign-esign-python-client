@@ -34,6 +34,7 @@ class EnvelopeFormData(object):
         'email_subject': 'str',
         'envelope_id': 'str',
         'form_data': 'list[NameValue]',
+        'prefill_form_data': 'list[NameValue]',
         'recipient_form_data': 'list[RecipientFormData]',
         'sent_date_time': 'str',
         'status': 'str'
@@ -43,17 +44,19 @@ class EnvelopeFormData(object):
         'email_subject': 'emailSubject',
         'envelope_id': 'envelopeId',
         'form_data': 'formData',
+        'prefill_form_data': 'prefillFormData',
         'recipient_form_data': 'recipientFormData',
         'sent_date_time': 'sentDateTime',
         'status': 'status'
     }
 
-    def __init__(self, email_subject=None, envelope_id=None, form_data=None, recipient_form_data=None, sent_date_time=None, status=None):  # noqa: E501
+    def __init__(self, email_subject=None, envelope_id=None, form_data=None, prefill_form_data=None, recipient_form_data=None, sent_date_time=None, status=None):  # noqa: E501
         """EnvelopeFormData - a model defined in Swagger"""  # noqa: E501
 
         self._email_subject = None
         self._envelope_id = None
         self._form_data = None
+        self._prefill_form_data = None
         self._recipient_form_data = None
         self._sent_date_time = None
         self._status = None
@@ -65,6 +68,8 @@ class EnvelopeFormData(object):
             self.envelope_id = envelope_id
         if form_data is not None:
             self.form_data = form_data
+        if prefill_form_data is not None:
+            self.prefill_form_data = prefill_form_data
         if recipient_form_data is not None:
             self.recipient_form_data = recipient_form_data
         if sent_date_time is not None:
@@ -140,6 +145,29 @@ class EnvelopeFormData(object):
         """
 
         self._form_data = form_data
+
+    @property
+    def prefill_form_data(self):
+        """Gets the prefill_form_data of this EnvelopeFormData.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The prefill_form_data of this EnvelopeFormData.  # noqa: E501
+        :rtype: list[NameValue]
+        """
+        return self._prefill_form_data
+
+    @prefill_form_data.setter
+    def prefill_form_data(self, prefill_form_data):
+        """Sets the prefill_form_data of this EnvelopeFormData.
+
+          # noqa: E501
+
+        :param prefill_form_data: The prefill_form_data of this EnvelopeFormData.  # noqa: E501
+        :type: list[NameValue]
+        """
+
+        self._prefill_form_data = prefill_form_data
 
     @property
     def recipient_form_data(self):

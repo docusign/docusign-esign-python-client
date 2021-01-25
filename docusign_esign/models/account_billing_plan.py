@@ -39,6 +39,7 @@ class AccountBillingPlan(object):
         'included_seats': 'str',
         'incremental_seats': 'str',
         'is_downgrade': 'str',
+        'notification_type': 'str',
         'other_discount_percent': 'str',
         'payment_cycle': 'str',
         'payment_method': 'str',
@@ -62,6 +63,7 @@ class AccountBillingPlan(object):
         'included_seats': 'includedSeats',
         'incremental_seats': 'incrementalSeats',
         'is_downgrade': 'isDowngrade',
+        'notification_type': 'notificationType',
         'other_discount_percent': 'otherDiscountPercent',
         'payment_cycle': 'paymentCycle',
         'payment_method': 'paymentMethod',
@@ -76,7 +78,7 @@ class AccountBillingPlan(object):
         'support_plan_fee': 'supportPlanFee'
     }
 
-    def __init__(self, add_ons=None, can_cancel_renewal=None, can_upgrade=None, currency_code=None, enable_support=None, included_seats=None, incremental_seats=None, is_downgrade=None, other_discount_percent=None, payment_cycle=None, payment_method=None, per_seat_price=None, plan_classification=None, plan_feature_sets=None, plan_id=None, plan_name=None, renewal_status=None, seat_discounts=None, support_incident_fee=None, support_plan_fee=None):  # noqa: E501
+    def __init__(self, add_ons=None, can_cancel_renewal=None, can_upgrade=None, currency_code=None, enable_support=None, included_seats=None, incremental_seats=None, is_downgrade=None, notification_type=None, other_discount_percent=None, payment_cycle=None, payment_method=None, per_seat_price=None, plan_classification=None, plan_feature_sets=None, plan_id=None, plan_name=None, renewal_status=None, seat_discounts=None, support_incident_fee=None, support_plan_fee=None):  # noqa: E501
         """AccountBillingPlan - a model defined in Swagger"""  # noqa: E501
 
         self._add_ons = None
@@ -87,6 +89,7 @@ class AccountBillingPlan(object):
         self._included_seats = None
         self._incremental_seats = None
         self._is_downgrade = None
+        self._notification_type = None
         self._other_discount_percent = None
         self._payment_cycle = None
         self._payment_method = None
@@ -117,6 +120,8 @@ class AccountBillingPlan(object):
             self.incremental_seats = incremental_seats
         if is_downgrade is not None:
             self.is_downgrade = is_downgrade
+        if notification_type is not None:
+            self.notification_type = notification_type
         if other_discount_percent is not None:
             self.other_discount_percent = other_discount_percent
         if payment_cycle is not None:
@@ -325,6 +330,29 @@ class AccountBillingPlan(object):
         """
 
         self._is_downgrade = is_downgrade
+
+    @property
+    def notification_type(self):
+        """Gets the notification_type of this AccountBillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notification_type of this AccountBillingPlan.  # noqa: E501
+        :rtype: str
+        """
+        return self._notification_type
+
+    @notification_type.setter
+    def notification_type(self, notification_type):
+        """Sets the notification_type of this AccountBillingPlan.
+
+          # noqa: E501
+
+        :param notification_type: The notification_type of this AccountBillingPlan.  # noqa: E501
+        :type: str
+        """
+
+        self._notification_type = notification_type
 
     @property
     def other_discount_percent(self):
