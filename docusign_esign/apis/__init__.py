@@ -6,7 +6,6 @@ from __future__ import absolute_import
 from .accounts_api import AccountsApi
 from .authentication_api import AuthenticationApi
 from .billing_api import BillingApi
-from .bulk_envelopes_api import BulkEnvelopesApi
 from .cloud_storage_api import CloudStorageApi
 from .connect_api import ConnectApi
 from .custom_tabs_api import CustomTabsApi
