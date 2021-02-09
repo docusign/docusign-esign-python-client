@@ -426,7 +426,7 @@ class EnvelopeDocument(object):
           # noqa: E501
 
         :return: The size_bytes of this EnvelopeDocument.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._size_bytes
 
@@ -437,7 +437,7 @@ class EnvelopeDocument(object):
           # noqa: E501
 
         :param size_bytes: The size_bytes of this EnvelopeDocument.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._size_bytes = size_bytes
