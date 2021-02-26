@@ -34,6 +34,7 @@ from .apis.templates_api import TemplatesApi
 from .apis.trust_service_providers_api import TrustServiceProvidersApi
 from .apis.users_api import UsersApi
 from .apis.workspaces_api import WorkspacesApi
+from .apis.bulk_envelopes_api import BulkEnvelopesApi
 
 # import models into sdk package
 from docusign_esign.models.account_address import AccountAddress

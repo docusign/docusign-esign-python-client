@@ -21,3 +21,4 @@ from .templates_api import TemplatesApi
 from .trust_service_providers_api import TrustServiceProvidersApi
 from .users_api import UsersApi
 from .workspaces_api import WorkspacesApi
+from .bulk_envelopes_api import BulkEnvelopesApi
