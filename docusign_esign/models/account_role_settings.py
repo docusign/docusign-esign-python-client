@@ -75,6 +75,8 @@ class AccountRoleSettings(object):
         'allow_wet_signing_override_metadata': 'SettingsMetadata',
         'can_create_workspaces': 'str',
         'can_create_workspaces_metadata': 'SettingsMetadata',
+        'can_send_envelopes_via_sms': 'str',
+        'can_send_envelopes_via_sms_metadata': 'SettingsMetadata',
         'disable_document_upload': 'str',
         'disable_document_upload_metadata': 'SettingsMetadata',
         'disable_other_actions': 'str',
@@ -151,6 +153,8 @@ class AccountRoleSettings(object):
         'allow_wet_signing_override_metadata': 'allowWetSigningOverrideMetadata',
         'can_create_workspaces': 'canCreateWorkspaces',
         'can_create_workspaces_metadata': 'canCreateWorkspacesMetadata',
+        'can_send_envelopes_via_sms': 'canSendEnvelopesViaSMS',
+        'can_send_envelopes_via_sms_metadata': 'canSendEnvelopesViaSMSMetadata',
         'disable_document_upload': 'disableDocumentUpload',
         'disable_document_upload_metadata': 'disableDocumentUploadMetadata',
         'disable_other_actions': 'disableOtherActions',
@@ -182,7 +186,7 @@ class AccountRoleSettings(object):
         'vaulting_mode_metadata': 'vaultingModeMetadata'
     }
 
-    def __init__(self, allow_account_management=None, allow_account_management_metadata=None, allow_api_access=None, allow_api_access_metadata=None, allow_api_access_to_account=None, allow_api_access_to_account_metadata=None, allow_api_sending_on_behalf_of_others=None, allow_api_sending_on_behalf_of_others_metadata=None, allow_api_sequential_signing=None, allow_api_sequential_signing_metadata=None, allow_auto_tagging=None, allow_auto_tagging_metadata=None, allow_bulk_sending=None, allow_bulk_sending_metadata=None, allow_docu_sign_desktop_client=None, allow_docu_sign_desktop_client_metadata=None, allowed_address_book_access=None, allowed_address_book_access_metadata=None, allowed_clickwraps_access=None, allowed_clickwraps_access_metadata=None, allowed_template_access=None, allowed_template_access_metadata=None, allowed_to_be_envelope_transfer_recipient=None, allowed_to_be_envelope_transfer_recipient_metadata=None, allow_envelope_sending=None, allow_envelope_sending_metadata=None, allow_e_seal_recipients=None, allow_e_seal_recipients_metadata=None, allow_power_forms_admin_to_access_all_power_form_envelopes=None, allow_power_forms_admin_to_access_all_power_form_envelopes_metadata=None, allow_senders_to_set_recipient_email_language=None, allow_senders_to_set_recipient_email_language_metadata=None, allow_signer_attachments=None, allow_signer_attachments_metadata=None, allow_supplemental_documents=None, allow_supplemental_documents_metadata=None, allow_tagging_in_send_and_correct=None, allow_tagging_in_send_and_correct_metadata=None, allow_vaulting=None, allow_vaulting_metadata=None, allow_wet_signing_override=None, allow_wet_signing_override_metadata=None, can_create_workspaces=None, can_create_workspaces_metadata=None, disable_document_upload=None, disable_document_upload_metadata=None, disable_other_actions=None, disable_other_actions_metadata=None, enable_api_request_logging=None, enable_api_request_logging_metadata=None, enable_recipient_viewing_notifications=None, enable_recipient_viewing_notifications_metadata=None, enable_sequential_signing_interface=None, enable_sequential_signing_interface_metadata=None, enable_transaction_point_integration=None, enable_transaction_point_integration_metadata=None, power_form_role=None, power_form_role_metadata=None, receive_completed_self_signed_documents_as_email_links=None, receive_completed_self_signed_documents_as_email_links_metadata=None, signing_ui_version_metadata=None, supplemental_documents_must_accept=None, supplemental_documents_must_accept_metadata=None, supplemental_documents_must_read=None, supplemental_documents_must_read_metadata=None, supplemental_documents_must_view=None, supplemental_documents_must_view_metadata=None, use_new_docu_sign_experience_interface=None, use_new_docu_sign_experience_interface_metadata=None, use_new_sending_interface=None, use_new_sending_interface_metadata=None, vaulting_mode=None, vaulting_mode_metadata=None):  # noqa: E501
+    def __init__(self, allow_account_management=None, allow_account_management_metadata=None, allow_api_access=None, allow_api_access_metadata=None, allow_api_access_to_account=None, allow_api_access_to_account_metadata=None, allow_api_sending_on_behalf_of_others=None, allow_api_sending_on_behalf_of_others_metadata=None, allow_api_sequential_signing=None, allow_api_sequential_signing_metadata=None, allow_auto_tagging=None, allow_auto_tagging_metadata=None, allow_bulk_sending=None, allow_bulk_sending_metadata=None, allow_docu_sign_desktop_client=None, allow_docu_sign_desktop_client_metadata=None, allowed_address_book_access=None, allowed_address_book_access_metadata=None, allowed_clickwraps_access=None, allowed_clickwraps_access_metadata=None, allowed_template_access=None, allowed_template_access_metadata=None, allowed_to_be_envelope_transfer_recipient=None, allowed_to_be_envelope_transfer_recipient_metadata=None, allow_envelope_sending=None, allow_envelope_sending_metadata=None, allow_e_seal_recipients=None, allow_e_seal_recipients_metadata=None, allow_power_forms_admin_to_access_all_power_form_envelopes=None, allow_power_forms_admin_to_access_all_power_form_envelopes_metadata=None, allow_senders_to_set_recipient_email_language=None, allow_senders_to_set_recipient_email_language_metadata=None, allow_signer_attachments=None, allow_signer_attachments_metadata=None, allow_supplemental_documents=None, allow_supplemental_documents_metadata=None, allow_tagging_in_send_and_correct=None, allow_tagging_in_send_and_correct_metadata=None, allow_vaulting=None, allow_vaulting_metadata=None, allow_wet_signing_override=None, allow_wet_signing_override_metadata=None, can_create_workspaces=None, can_create_workspaces_metadata=None, can_send_envelopes_via_sms=None, can_send_envelopes_via_sms_metadata=None, disable_document_upload=None, disable_document_upload_metadata=None, disable_other_actions=None, disable_other_actions_metadata=None, enable_api_request_logging=None, enable_api_request_logging_metadata=None, enable_recipient_viewing_notifications=None, enable_recipient_viewing_notifications_metadata=None, enable_sequential_signing_interface=None, enable_sequential_signing_interface_metadata=None, enable_transaction_point_integration=None, enable_transaction_point_integration_metadata=None, power_form_role=None, power_form_role_metadata=None, receive_completed_self_signed_documents_as_email_links=None, receive_completed_self_signed_documents_as_email_links_metadata=None, signing_ui_version_metadata=None, supplemental_documents_must_accept=None, supplemental_documents_must_accept_metadata=None, supplemental_documents_must_read=None, supplemental_documents_must_read_metadata=None, supplemental_documents_must_view=None, supplemental_documents_must_view_metadata=None, use_new_docu_sign_experience_interface=None, use_new_docu_sign_experience_interface_metadata=None, use_new_sending_interface=None, use_new_sending_interface_metadata=None, vaulting_mode=None, vaulting_mode_metadata=None):  # noqa: E501
         """AccountRoleSettings - a model defined in Swagger"""  # noqa: E501
 
         self._allow_account_management = None
@@ -229,6 +233,8 @@ class AccountRoleSettings(object):
         self._allow_wet_signing_override_metadata = None
         self._can_create_workspaces = None
         self._can_create_workspaces_metadata = None
+        self._can_send_envelopes_via_sms = None
+        self._can_send_envelopes_via_sms_metadata = None
         self._disable_document_upload = None
         self._disable_document_upload_metadata = None
         self._disable_other_actions = None
@@ -348,6 +354,10 @@ class AccountRoleSettings(object):
             self.can_create_workspaces = can_create_workspaces
         if can_create_workspaces_metadata is not None:
             self.can_create_workspaces_metadata = can_create_workspaces_metadata
+        if can_send_envelopes_via_sms is not None:
+            self.can_send_envelopes_via_sms = can_send_envelopes_via_sms
+        if can_send_envelopes_via_sms_metadata is not None:
+            self.can_send_envelopes_via_sms_metadata = can_send_envelopes_via_sms_metadata
         if disable_document_upload is not None:
             self.disable_document_upload = disable_document_upload
         if disable_document_upload_metadata is not None:
@@ -1374,6 +1384,50 @@ class AccountRoleSettings(object):
         """
 
         self._can_create_workspaces_metadata = can_create_workspaces_metadata
+
+    @property
+    def can_send_envelopes_via_sms(self):
+        """Gets the can_send_envelopes_via_sms of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_send_envelopes_via_sms of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_send_envelopes_via_sms
+
+    @can_send_envelopes_via_sms.setter
+    def can_send_envelopes_via_sms(self, can_send_envelopes_via_sms):
+        """Sets the can_send_envelopes_via_sms of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_send_envelopes_via_sms: The can_send_envelopes_via_sms of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._can_send_envelopes_via_sms = can_send_envelopes_via_sms
+
+    @property
+    def can_send_envelopes_via_sms_metadata(self):
+        """Gets the can_send_envelopes_via_sms_metadata of this AccountRoleSettings.  # noqa: E501
+
+
+        :return: The can_send_envelopes_via_sms_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_send_envelopes_via_sms_metadata
+
+    @can_send_envelopes_via_sms_metadata.setter
+    def can_send_envelopes_via_sms_metadata(self, can_send_envelopes_via_sms_metadata):
+        """Sets the can_send_envelopes_via_sms_metadata of this AccountRoleSettings.
+
+
+        :param can_send_envelopes_via_sms_metadata: The can_send_envelopes_via_sms_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_send_envelopes_via_sms_metadata = can_send_envelopes_via_sms_metadata
 
     @property
     def disable_document_upload(self):

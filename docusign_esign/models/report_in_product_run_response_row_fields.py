@@ -67,6 +67,7 @@ class ReportInProductRunResponseRowFields(object):
         'event_date': 'str',
         'expiration_date': 'str',
         'expired_ts': 'str',
+        'failure_reason': 'str',
         'failures': 'str',
         'failure_vendor_code': 'str',
         'failure_vendor_reason': 'str',
@@ -151,6 +152,8 @@ class ReportInProductRunResponseRowFields(object):
         'user_account_status': 'str',
         'user_count': 'str',
         'user_id': 'str',
+        'verification_status': 'str',
+        'verification_type': 'str',
         'view_date': 'str',
         'voided_ts': 'str'
     }
@@ -192,6 +195,7 @@ class ReportInProductRunResponseRowFields(object):
         'event_date': 'eventDate',
         'expiration_date': 'expirationDate',
         'expired_ts': 'expiredTs',
+        'failure_reason': 'failureReason',
         'failures': 'failures',
         'failure_vendor_code': 'failureVendorCode',
         'failure_vendor_reason': 'failureVendorReason',
@@ -276,11 +280,13 @@ class ReportInProductRunResponseRowFields(object):
         'user_account_status': 'userAccountStatus',
         'user_count': 'userCount',
         'user_id': 'userId',
+        'verification_status': 'verificationStatus',
+        'verification_type': 'verificationType',
         'view_date': 'viewDate',
         'voided_ts': 'voidedTs'
     }
 
-    def __init__(self, access_code_required=None, access_codes_attempted=None, access_codes_failed=None, account_id=None, authentication_category=None, authentication_success=None, authentication_type=None, average_time_to_complete_seconds=None, avg_complete_seconds=None, completed=None, completed_ts=None, created_date=None, custom_field=None, declined_date=None, declined_reason=None, delivered_date=None, envelope_count=None, envelope_creator=None, envelope_id=None, envelope_initial_send_ts=None, envelopes_billed=None, envelopes_completed=None, envelopes_completed_count=None, envelopes_declined=None, envelopes_sent=None, envelopes_sent_count=None, envelopes_voided=None, envelope_voided_reason=None, eod_document_description=None, eod_document_name=None, eod_document_profile_id=None, eod_transaction_id=None, eod_transaction_name=None, event_date=None, expiration_date=None, expired_ts=None, failures=None, failure_vendor_code=None, failure_vendor_reason=None, first_send_ts=None, group_id=None, group_name=None, hours_to_complete_end=None, hours_to_complete_start=None, id_checks_attempted=None, id_checks_failed=None, initial_send_ts=None, ip_address=None, last_activity=None, last_activity_date=None, last_sent_date=None, not_signed=None, number_of_authenticated_recipients=None, number_of_completed_signatures=None, number_of_documents=None, number_of_pages=None, number_of_recipients=None, number_of_sends=None, number_of_signers=None, number_of_total_documents=None, number_of_total_pages=None, number_of_total_signers=None, number_of_unique_senders=None, number_total_recipients=None, period_end=None, period_start=None, phone_calls_attempted=None, phone_calls_failed=None, reason_for_declining=None, reason_for_voiding=None, reassign_reason=None, received=None, recipient=None, recipient_action=None, recipient_company_name=None, recipient_country=None, recipient_email=None, recipient_id=None, recipient_name=None, recipient_template_role_name=None, recipient_title=None, recipient_type=None, recipient_user_id=None, remaining_signatures=None, routing_order=None, sender_account_id=None, sender_company_name=None, sender_country=None, sender_email=None, sender_ip_address=None, sender_job_title=None, sender_name=None, sender_user_id=None, sign_date=None, signed=None, signed_date=None, signed_on_mobile=None, signed_on_paper=None, signer_list=None, status=None, status_changed_date=None, status_changed_ts=None, subject=None, successes=None, templates_created=None, templates_created_count=None, terminal_status_date=None, time_to_complete_seconds=None, time_to_deliver=None, total_documents=None, total_envelopes=None, total_pages=None, total_recipients=None, total_signers=None, unique_senders=None, user_account_email=None, user_account_name=None, user_account_status=None, user_count=None, user_id=None, view_date=None, voided_ts=None):  # noqa: E501
+    def __init__(self, access_code_required=None, access_codes_attempted=None, access_codes_failed=None, account_id=None, authentication_category=None, authentication_success=None, authentication_type=None, average_time_to_complete_seconds=None, avg_complete_seconds=None, completed=None, completed_ts=None, created_date=None, custom_field=None, declined_date=None, declined_reason=None, delivered_date=None, envelope_count=None, envelope_creator=None, envelope_id=None, envelope_initial_send_ts=None, envelopes_billed=None, envelopes_completed=None, envelopes_completed_count=None, envelopes_declined=None, envelopes_sent=None, envelopes_sent_count=None, envelopes_voided=None, envelope_voided_reason=None, eod_document_description=None, eod_document_name=None, eod_document_profile_id=None, eod_transaction_id=None, eod_transaction_name=None, event_date=None, expiration_date=None, expired_ts=None, failure_reason=None, failures=None, failure_vendor_code=None, failure_vendor_reason=None, first_send_ts=None, group_id=None, group_name=None, hours_to_complete_end=None, hours_to_complete_start=None, id_checks_attempted=None, id_checks_failed=None, initial_send_ts=None, ip_address=None, last_activity=None, last_activity_date=None, last_sent_date=None, not_signed=None, number_of_authenticated_recipients=None, number_of_completed_signatures=None, number_of_documents=None, number_of_pages=None, number_of_recipients=None, number_of_sends=None, number_of_signers=None, number_of_total_documents=None, number_of_total_pages=None, number_of_total_signers=None, number_of_unique_senders=None, number_total_recipients=None, period_end=None, period_start=None, phone_calls_attempted=None, phone_calls_failed=None, reason_for_declining=None, reason_for_voiding=None, reassign_reason=None, received=None, recipient=None, recipient_action=None, recipient_company_name=None, recipient_country=None, recipient_email=None, recipient_id=None, recipient_name=None, recipient_template_role_name=None, recipient_title=None, recipient_type=None, recipient_user_id=None, remaining_signatures=None, routing_order=None, sender_account_id=None, sender_company_name=None, sender_country=None, sender_email=None, sender_ip_address=None, sender_job_title=None, sender_name=None, sender_user_id=None, sign_date=None, signed=None, signed_date=None, signed_on_mobile=None, signed_on_paper=None, signer_list=None, status=None, status_changed_date=None, status_changed_ts=None, subject=None, successes=None, templates_created=None, templates_created_count=None, terminal_status_date=None, time_to_complete_seconds=None, time_to_deliver=None, total_documents=None, total_envelopes=None, total_pages=None, total_recipients=None, total_signers=None, unique_senders=None, user_account_email=None, user_account_name=None, user_account_status=None, user_count=None, user_id=None, verification_status=None, verification_type=None, view_date=None, voided_ts=None):  # noqa: E501
         """ReportInProductRunResponseRowFields - a model defined in Swagger"""  # noqa: E501
 
         self._access_code_required = None
@@ -319,6 +325,7 @@ class ReportInProductRunResponseRowFields(object):
         self._event_date = None
         self._expiration_date = None
         self._expired_ts = None
+        self._failure_reason = None
         self._failures = None
         self._failure_vendor_code = None
         self._failure_vendor_reason = None
@@ -403,6 +410,8 @@ class ReportInProductRunResponseRowFields(object):
         self._user_account_status = None
         self._user_count = None
         self._user_id = None
+        self._verification_status = None
+        self._verification_type = None
         self._view_date = None
         self._voided_ts = None
         self.discriminator = None
@@ -479,6 +488,8 @@ class ReportInProductRunResponseRowFields(object):
             self.expiration_date = expiration_date
         if expired_ts is not None:
             self.expired_ts = expired_ts
+        if failure_reason is not None:
+            self.failure_reason = failure_reason
         if failures is not None:
             self.failures = failures
         if failure_vendor_code is not None:
@@ -647,6 +658,10 @@ class ReportInProductRunResponseRowFields(object):
             self.user_count = user_count
         if user_id is not None:
             self.user_id = user_id
+        if verification_status is not None:
+            self.verification_status = verification_status
+        if verification_type is not None:
+            self.verification_type = verification_type
         if view_date is not None:
             self.view_date = view_date
         if voided_ts is not None:
@@ -1479,6 +1494,29 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._expired_ts = expired_ts
+
+    @property
+    def failure_reason(self):
+        """Gets the failure_reason of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The failure_reason of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._failure_reason
+
+    @failure_reason.setter
+    def failure_reason(self, failure_reason):
+        """Sets the failure_reason of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param failure_reason: The failure_reason of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._failure_reason = failure_reason
 
     @property
     def failures(self):
@@ -3411,6 +3449,52 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._user_id = user_id
+
+    @property
+    def verification_status(self):
+        """Gets the verification_status of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The verification_status of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._verification_status
+
+    @verification_status.setter
+    def verification_status(self, verification_status):
+        """Sets the verification_status of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param verification_status: The verification_status of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._verification_status = verification_status
+
+    @property
+    def verification_type(self):
+        """Gets the verification_type of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The verification_type of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._verification_type
+
+    @verification_type.setter
+    def verification_type(self, verification_type):
+        """Sets the verification_type of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param verification_type: The verification_type of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._verification_type = verification_type
 
     @property
     def view_date(self):

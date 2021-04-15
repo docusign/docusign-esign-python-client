@@ -34,6 +34,7 @@ class LocalePolicyTab(object):
         'address_format': 'str',
         'calendar_type': 'str',
         'culture_name': 'str',
+        'currency_code': 'str',
         'currency_negative_format': 'str',
         'currency_positive_format': 'str',
         'custom_date_format': 'str',
@@ -49,6 +50,7 @@ class LocalePolicyTab(object):
         'address_format': 'addressFormat',
         'calendar_type': 'calendarType',
         'culture_name': 'cultureName',
+        'currency_code': 'currencyCode',
         'currency_negative_format': 'currencyNegativeFormat',
         'currency_positive_format': 'currencyPositiveFormat',
         'custom_date_format': 'customDateFormat',
@@ -60,12 +62,13 @@ class LocalePolicyTab(object):
         'time_zone': 'timeZone'
     }
 
-    def __init__(self, address_format=None, calendar_type=None, culture_name=None, currency_negative_format=None, currency_positive_format=None, custom_date_format=None, custom_time_format=None, date_format=None, initial_format=None, name_format=None, time_format=None, time_zone=None):  # noqa: E501
+    def __init__(self, address_format=None, calendar_type=None, culture_name=None, currency_code=None, currency_negative_format=None, currency_positive_format=None, custom_date_format=None, custom_time_format=None, date_format=None, initial_format=None, name_format=None, time_format=None, time_zone=None):  # noqa: E501
         """LocalePolicyTab - a model defined in Swagger"""  # noqa: E501
 
         self._address_format = None
         self._calendar_type = None
         self._culture_name = None
+        self._currency_code = None
         self._currency_negative_format = None
         self._currency_positive_format = None
         self._custom_date_format = None
@@ -83,6 +86,8 @@ class LocalePolicyTab(object):
             self.calendar_type = calendar_type
         if culture_name is not None:
             self.culture_name = culture_name
+        if currency_code is not None:
+            self.currency_code = currency_code
         if currency_negative_format is not None:
             self.currency_negative_format = currency_negative_format
         if currency_positive_format is not None:
@@ -170,6 +175,29 @@ class LocalePolicyTab(object):
         """
 
         self._culture_name = culture_name
+
+    @property
+    def currency_code(self):
+        """Gets the currency_code of this LocalePolicyTab.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_code of this LocalePolicyTab.  # noqa: E501
+        :rtype: str
+        """
+        return self._currency_code
+
+    @currency_code.setter
+    def currency_code(self, currency_code):
+        """Sets the currency_code of this LocalePolicyTab.
+
+          # noqa: E501
+
+        :param currency_code: The currency_code of this LocalePolicyTab.  # noqa: E501
+        :type: str
+        """
+
+        self._currency_code = currency_code
 
     @property
     def currency_negative_format(self):

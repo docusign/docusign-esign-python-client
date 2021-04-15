@@ -39,6 +39,7 @@ class TemplateTabs(object):
         'commission_number_tabs': 'list[CommissionNumber]',
         'commission_state_tabs': 'list[CommissionState]',
         'company_tabs': 'list[Company]',
+        'currency_tabs': 'list[Currency]',
         'date_signed_tabs': 'list[DateSigned]',
         'date_tabs': 'list[Date]',
         'decline_tabs': 'list[Decline]',
@@ -80,6 +81,7 @@ class TemplateTabs(object):
         'commission_number_tabs': 'commissionNumberTabs',
         'commission_state_tabs': 'commissionStateTabs',
         'company_tabs': 'companyTabs',
+        'currency_tabs': 'currencyTabs',
         'date_signed_tabs': 'dateSignedTabs',
         'date_tabs': 'dateTabs',
         'decline_tabs': 'declineTabs',
@@ -112,7 +114,7 @@ class TemplateTabs(object):
         'zip_tabs': 'zipTabs'
     }
 
-    def __init__(self, approve_tabs=None, checkbox_tabs=None, comment_thread_tabs=None, commission_county_tabs=None, commission_expiration_tabs=None, commission_number_tabs=None, commission_state_tabs=None, company_tabs=None, date_signed_tabs=None, date_tabs=None, decline_tabs=None, draw_tabs=None, email_address_tabs=None, email_tabs=None, envelope_id_tabs=None, first_name_tabs=None, formula_tabs=None, full_name_tabs=None, initial_here_tabs=None, last_name_tabs=None, list_tabs=None, notarize_tabs=None, notary_seal_tabs=None, note_tabs=None, number_tabs=None, phone_number_tabs=None, poly_line_overlay_tabs=None, prefill_tabs=None, radio_group_tabs=None, signer_attachment_tabs=None, sign_here_tabs=None, smart_section_tabs=None, ssn_tabs=None, tab_groups=None, text_tabs=None, title_tabs=None, view_tabs=None, zip_tabs=None):  # noqa: E501
+    def __init__(self, approve_tabs=None, checkbox_tabs=None, comment_thread_tabs=None, commission_county_tabs=None, commission_expiration_tabs=None, commission_number_tabs=None, commission_state_tabs=None, company_tabs=None, currency_tabs=None, date_signed_tabs=None, date_tabs=None, decline_tabs=None, draw_tabs=None, email_address_tabs=None, email_tabs=None, envelope_id_tabs=None, first_name_tabs=None, formula_tabs=None, full_name_tabs=None, initial_here_tabs=None, last_name_tabs=None, list_tabs=None, notarize_tabs=None, notary_seal_tabs=None, note_tabs=None, number_tabs=None, phone_number_tabs=None, poly_line_overlay_tabs=None, prefill_tabs=None, radio_group_tabs=None, signer_attachment_tabs=None, sign_here_tabs=None, smart_section_tabs=None, ssn_tabs=None, tab_groups=None, text_tabs=None, title_tabs=None, view_tabs=None, zip_tabs=None):  # noqa: E501
         """TemplateTabs - a model defined in Swagger"""  # noqa: E501
 
         self._approve_tabs = None
@@ -123,6 +125,7 @@ class TemplateTabs(object):
         self._commission_number_tabs = None
         self._commission_state_tabs = None
         self._company_tabs = None
+        self._currency_tabs = None
         self._date_signed_tabs = None
         self._date_tabs = None
         self._decline_tabs = None
@@ -171,6 +174,8 @@ class TemplateTabs(object):
             self.commission_state_tabs = commission_state_tabs
         if company_tabs is not None:
             self.company_tabs = company_tabs
+        if currency_tabs is not None:
+            self.currency_tabs = currency_tabs
         if date_signed_tabs is not None:
             self.date_signed_tabs = date_signed_tabs
         if date_tabs is not None:
@@ -415,6 +420,29 @@ class TemplateTabs(object):
         """
 
         self._company_tabs = company_tabs
+
+    @property
+    def currency_tabs(self):
+        """Gets the currency_tabs of this TemplateTabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_tabs of this TemplateTabs.  # noqa: E501
+        :rtype: list[Currency]
+        """
+        return self._currency_tabs
+
+    @currency_tabs.setter
+    def currency_tabs(self, currency_tabs):
+        """Sets the currency_tabs of this TemplateTabs.
+
+          # noqa: E501
+
+        :param currency_tabs: The currency_tabs of this TemplateTabs.  # noqa: E501
+        :type: list[Currency]
+        """
+
+        self._currency_tabs = currency_tabs
 
     @property
     def date_signed_tabs(self):

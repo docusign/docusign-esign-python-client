@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [3.8.1] - eSignature API v2.1-20.4.01 - 2021-02-26
+### Changed
+- Added support for version v2.1-20.4.01 of the DocuSign eSignature API.
+- Updated the SDK release version.
+### Fixed
+- Exposed BulkEnvelopeApi and other api files as public and accessible.
+- Adding `Type` fix in envelope_document model.
+
 ## [3.7.1] - eSignature API v2.1-20.3.01 - 2020-10-30
 ### Changed
 - Added support for version v2.1-20.3.01 of the DocuSign eSignature API.

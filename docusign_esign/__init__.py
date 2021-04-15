@@ -19,6 +19,7 @@ from __future__ import absolute_import
 from .apis.accounts_api import AccountsApi
 from .apis.authentication_api import AuthenticationApi
 from .apis.billing_api import BillingApi
+from .apis.bulk_envelopes_api import BulkEnvelopesApi
 from .apis.cloud_storage_api import CloudStorageApi
 from .apis.connect_api import ConnectApi
 from .apis.custom_tabs_api import CustomTabsApi
@@ -31,12 +32,11 @@ from .apis.groups_api import GroupsApi
 from .apis.notary_api import NotaryApi
 from .apis.organizations_api import OrganizationsApi
 from .apis.power_forms_api import PowerFormsApi
+from .apis.signature_api import SignatureApi
 from .apis.signing_groups_api import SigningGroupsApi
 from .apis.templates_api import TemplatesApi
-from .apis.trust_service_providers_api import TrustServiceProvidersApi
 from .apis.users_api import UsersApi
 from .apis.workspaces_api import WorkspacesApi
-from .apis.bulk_envelopes_api import BulkEnvelopesApi
 
 # import models into sdk package
 from docusign_esign.models.access_code_format import AccessCodeFormat
@@ -191,6 +191,7 @@ from docusign_esign.models.country import Country
 from docusign_esign.models.credential import Credential
 from docusign_esign.models.credit_card_information import CreditCardInformation
 from docusign_esign.models.credit_card_types import CreditCardTypes
+from docusign_esign.models.currency import Currency
 from docusign_esign.models.currency_feature_set_price import CurrencyFeatureSetPrice
 from docusign_esign.models.currency_plan_price import CurrencyPlanPrice
 from docusign_esign.models.custom_field import CustomField
@@ -298,6 +299,7 @@ from docusign_esign.models.integrated_user_info_list import IntegratedUserInfoLi
 from docusign_esign.models.intermediary import Intermediary
 from docusign_esign.models.jurisdiction import Jurisdiction
 from docusign_esign.models.last_name import LastName
+from docusign_esign.models.linked_external_primary_account import LinkedExternalPrimaryAccount
 from docusign_esign.models.list import List
 from docusign_esign.models.list_custom_field import ListCustomField
 from docusign_esign.models.list_item import ListItem

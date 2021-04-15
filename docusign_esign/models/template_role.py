@@ -32,6 +32,7 @@ class TemplateRole(object):
     """
     swagger_types = {
         'access_code': 'str',
+        'additional_notifications': 'list[RecipientAdditionalNotification]',
         'client_user_id': 'str',
         'default_recipient': 'str',
         'email': 'str',
@@ -48,6 +49,7 @@ class TemplateRole(object):
 
     attribute_map = {
         'access_code': 'accessCode',
+        'additional_notifications': 'additionalNotifications',
         'client_user_id': 'clientUserId',
         'default_recipient': 'defaultRecipient',
         'email': 'email',
@@ -62,10 +64,11 @@ class TemplateRole(object):
         'tabs': 'tabs'
     }
 
-    def __init__(self, access_code=None, client_user_id=None, default_recipient=None, email=None, email_notification=None, embedded_recipient_start_url=None, in_person_signer_name=None, name=None, recipient_signature_providers=None, role_name=None, routing_order=None, signing_group_id=None, tabs=None):  # noqa: E501
+    def __init__(self, access_code=None, additional_notifications=None, client_user_id=None, default_recipient=None, email=None, email_notification=None, embedded_recipient_start_url=None, in_person_signer_name=None, name=None, recipient_signature_providers=None, role_name=None, routing_order=None, signing_group_id=None, tabs=None):  # noqa: E501
         """TemplateRole - a model defined in Swagger"""  # noqa: E501
 
         self._access_code = None
+        self._additional_notifications = None
         self._client_user_id = None
         self._default_recipient = None
         self._email = None
@@ -82,6 +85,8 @@ class TemplateRole(object):
 
         if access_code is not None:
             self.access_code = access_code
+        if additional_notifications is not None:
+            self.additional_notifications = additional_notifications
         if client_user_id is not None:
             self.client_user_id = client_user_id
         if default_recipient is not None:
@@ -129,6 +134,29 @@ class TemplateRole(object):
         """
 
         self._access_code = access_code
+
+    @property
+    def additional_notifications(self):
+        """Gets the additional_notifications of this TemplateRole.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The additional_notifications of this TemplateRole.  # noqa: E501
+        :rtype: list[RecipientAdditionalNotification]
+        """
+        return self._additional_notifications
+
+    @additional_notifications.setter
+    def additional_notifications(self, additional_notifications):
+        """Sets the additional_notifications of this TemplateRole.
+
+          # noqa: E501
+
+        :param additional_notifications: The additional_notifications of this TemplateRole.  # noqa: E501
+        :type: list[RecipientAdditionalNotification]
+        """
+
+        self._additional_notifications = additional_notifications
 
     @property
     def client_user_id(self):

@@ -601,6 +601,7 @@ class BulkEnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str batch_ids:
         :param str count:
+        :param str search_text:
         :param str start_position:
         :param str status:
         :return: BulkSendBatchSummaries
@@ -630,6 +631,7 @@ class BulkEnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str batch_ids:
         :param str count:
+        :param str search_text:
         :param str start_position:
         :param str status:
         :return: BulkSendBatchSummaries
@@ -637,7 +639,7 @@ class BulkEnvelopesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'batch_ids', 'count', 'start_position', 'status']
+        all_params = ['account_id', 'batch_ids', 'count', 'search_text', 'start_position', 'status']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -669,6 +671,8 @@ class BulkEnvelopesApi(object):
             query_params['batch_ids'] = params['batch_ids']
         if 'count' in params:
             query_params['count'] = params['count']
+        if 'search_text' in params:
+            query_params['search_text'] = params['search_text']
         if 'start_position' in params:
             query_params['start_position'] = params['start_position']
         if 'status' in params:

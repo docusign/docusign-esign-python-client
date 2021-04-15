@@ -98,6 +98,8 @@ class AccountSettingsInformation(object):
         'allow_express_signer_certificate_metadata': 'SettingsMetadata',
         'allow_extended_sending_resource_file': 'str',
         'allow_extended_sending_resource_file_metadata': 'SettingsMetadata',
+        'allow_external_linked_accounts': 'str',
+        'allow_external_linked_accounts_metadata': 'SettingsMetadata',
         'allow_external_signature_pad': 'str',
         'allow_external_signature_pad_metadata': 'SettingsMetadata',
         'allow_idv_level1': 'str',
@@ -354,6 +356,8 @@ class AccountSettingsInformation(object):
         'enable_smart_contracts_metadata': 'SettingsMetadata',
         'enable_sms_authentication': 'str',
         'enable_sms_authentication_metadata': 'SettingsMetadata',
+        'enable_sms_delivery_additional_notification': 'str',
+        'enable_sms_delivery_additional_notification_metadata': 'SettingsMetadata',
         'enable_social_id_login': 'str',
         'enable_social_id_login_metadata': 'SettingsMetadata',
         'enable_strike_through': 'str',
@@ -408,6 +412,7 @@ class AccountSettingsInformation(object):
         'in_session_enabled_metadata': 'SettingsMetadata',
         'in_session_suppress_emails': 'str',
         'in_session_suppress_emails_metadata': 'SettingsMetadata',
+        'linked_external_primary_accounts': 'list[LinkedExternalPrimaryAccount]',
         'maximum_signing_groups': 'str',
         'maximum_signing_groups_metadata': 'SettingsMetadata',
         'maximum_users_per_signing_group': 'str',
@@ -474,12 +479,18 @@ class AccountSettingsInformation(object):
         'show_initial_conditional_fields_metadata': 'SettingsMetadata',
         'show_localized_watermarks': 'str',
         'show_localized_watermarks_metadata': 'SettingsMetadata',
+        'show_masked_fields_when_downloading_document_as_sender': 'str',
+        'show_masked_fields_when_downloading_document_as_sender_metadata': 'SettingsMetadata',
         'show_tutorials': 'str',
         'show_tutorials_metadata': 'SettingsMetadata',
         'signature_providers': 'list[str]',
         'signature_providers_metadata': 'SettingsMetadata',
         'sign_date_format': 'str',
         'sign_date_format_metadata': 'SettingsMetadata',
+        'sign_date_time_account_language_override': 'str',
+        'sign_date_time_account_language_override_metadata': 'SettingsMetadata',
+        'sign_date_time_account_timezone_override': 'str',
+        'sign_date_time_account_timezone_override_metadata': 'SettingsMetadata',
         'signer_attach_certificate_to_envelope_pdf': 'str',
         'signer_attach_certificate_to_envelope_pdf_metadata': 'SettingsMetadata',
         'signer_attach_concat': 'str',
@@ -638,6 +649,8 @@ class AccountSettingsInformation(object):
         'allow_express_signer_certificate_metadata': 'allowExpressSignerCertificateMetadata',
         'allow_extended_sending_resource_file': 'allowExtendedSendingResourceFile',
         'allow_extended_sending_resource_file_metadata': 'allowExtendedSendingResourceFileMetadata',
+        'allow_external_linked_accounts': 'allowExternalLinkedAccounts',
+        'allow_external_linked_accounts_metadata': 'allowExternalLinkedAccountsMetadata',
         'allow_external_signature_pad': 'allowExternalSignaturePad',
         'allow_external_signature_pad_metadata': 'allowExternalSignaturePadMetadata',
         'allow_idv_level1': 'allowIDVLevel1',
@@ -894,6 +907,8 @@ class AccountSettingsInformation(object):
         'enable_smart_contracts_metadata': 'enableSmartContractsMetadata',
         'enable_sms_authentication': 'enableSMSAuthentication',
         'enable_sms_authentication_metadata': 'enableSMSAuthenticationMetadata',
+        'enable_sms_delivery_additional_notification': 'enableSMSDeliveryAdditionalNotification',
+        'enable_sms_delivery_additional_notification_metadata': 'enableSMSDeliveryAdditionalNotificationMetadata',
         'enable_social_id_login': 'enableSocialIdLogin',
         'enable_social_id_login_metadata': 'enableSocialIdLoginMetadata',
         'enable_strike_through': 'enableStrikeThrough',
@@ -948,6 +963,7 @@ class AccountSettingsInformation(object):
         'in_session_enabled_metadata': 'inSessionEnabledMetadata',
         'in_session_suppress_emails': 'inSessionSuppressEmails',
         'in_session_suppress_emails_metadata': 'inSessionSuppressEmailsMetadata',
+        'linked_external_primary_accounts': 'linkedExternalPrimaryAccounts',
         'maximum_signing_groups': 'maximumSigningGroups',
         'maximum_signing_groups_metadata': 'maximumSigningGroupsMetadata',
         'maximum_users_per_signing_group': 'maximumUsersPerSigningGroup',
@@ -1014,12 +1030,18 @@ class AccountSettingsInformation(object):
         'show_initial_conditional_fields_metadata': 'showInitialConditionalFieldsMetadata',
         'show_localized_watermarks': 'showLocalizedWatermarks',
         'show_localized_watermarks_metadata': 'showLocalizedWatermarksMetadata',
+        'show_masked_fields_when_downloading_document_as_sender': 'showMaskedFieldsWhenDownloadingDocumentAsSender',
+        'show_masked_fields_when_downloading_document_as_sender_metadata': 'showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata',
         'show_tutorials': 'showTutorials',
         'show_tutorials_metadata': 'showTutorialsMetadata',
         'signature_providers': 'signatureProviders',
         'signature_providers_metadata': 'signatureProvidersMetadata',
         'sign_date_format': 'signDateFormat',
         'sign_date_format_metadata': 'signDateFormatMetadata',
+        'sign_date_time_account_language_override': 'signDateTimeAccountLanguageOverride',
+        'sign_date_time_account_language_override_metadata': 'signDateTimeAccountLanguageOverrideMetadata',
+        'sign_date_time_account_timezone_override': 'signDateTimeAccountTimezoneOverride',
+        'sign_date_time_account_timezone_override_metadata': 'signDateTimeAccountTimezoneOverrideMetadata',
         'signer_attach_certificate_to_envelope_pdf': 'signerAttachCertificateToEnvelopePDF',
         'signer_attach_certificate_to_envelope_pdf_metadata': 'signerAttachCertificateToEnvelopePDFMetadata',
         'signer_attach_concat': 'signerAttachConcat',
@@ -1180,6 +1202,8 @@ class AccountSettingsInformation(object):
         self._allow_express_signer_certificate_metadata = None
         self._allow_extended_sending_resource_file = None
         self._allow_extended_sending_resource_file_metadata = None
+        self._allow_external_linked_accounts = None
+        self._allow_external_linked_accounts_metadata = None
         self._allow_external_signature_pad = None
         self._allow_external_signature_pad_metadata = None
         self._allow_idv_level1 = None
@@ -1436,6 +1460,8 @@ class AccountSettingsInformation(object):
         self._enable_smart_contracts_metadata = None
         self._enable_sms_authentication = None
         self._enable_sms_authentication_metadata = None
+        self._enable_sms_delivery_additional_notification = None
+        self._enable_sms_delivery_additional_notification_metadata = None
         self._enable_social_id_login = None
         self._enable_social_id_login_metadata = None
         self._enable_strike_through = None
@@ -1490,6 +1516,7 @@ class AccountSettingsInformation(object):
         self._in_session_enabled_metadata = None
         self._in_session_suppress_emails = None
         self._in_session_suppress_emails_metadata = None
+        self._linked_external_primary_accounts = None
         self._maximum_signing_groups = None
         self._maximum_signing_groups_metadata = None
         self._maximum_users_per_signing_group = None
@@ -1556,12 +1583,18 @@ class AccountSettingsInformation(object):
         self._show_initial_conditional_fields_metadata = None
         self._show_localized_watermarks = None
         self._show_localized_watermarks_metadata = None
+        self._show_masked_fields_when_downloading_document_as_sender = None
+        self._show_masked_fields_when_downloading_document_as_sender_metadata = None
         self._show_tutorials = None
         self._show_tutorials_metadata = None
         self._signature_providers = None
         self._signature_providers_metadata = None
         self._sign_date_format = None
         self._sign_date_format_metadata = None
+        self._sign_date_time_account_language_override = None
+        self._sign_date_time_account_language_override_metadata = None
+        self._sign_date_time_account_timezone_override = None
+        self._sign_date_time_account_timezone_override_metadata = None
         self._signer_attach_certificate_to_envelope_pdf = None
         self._signer_attach_certificate_to_envelope_pdf_metadata = None
         self._signer_attach_concat = None
@@ -3128,6 +3161,50 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_extended_sending_resource_file_metadata = allow_extended_sending_resource_file_metadata
+
+    @property
+    def allow_external_linked_accounts(self):
+        """Gets the allow_external_linked_accounts of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_external_linked_accounts of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_external_linked_accounts
+
+    @allow_external_linked_accounts.setter
+    def allow_external_linked_accounts(self, allow_external_linked_accounts):
+        """Sets the allow_external_linked_accounts of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_external_linked_accounts: The allow_external_linked_accounts of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_external_linked_accounts = allow_external_linked_accounts
+
+    @property
+    def allow_external_linked_accounts_metadata(self):
+        """Gets the allow_external_linked_accounts_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_external_linked_accounts_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_external_linked_accounts_metadata
+
+    @allow_external_linked_accounts_metadata.setter
+    def allow_external_linked_accounts_metadata(self, allow_external_linked_accounts_metadata):
+        """Sets the allow_external_linked_accounts_metadata of this AccountSettingsInformation.
+
+
+        :param allow_external_linked_accounts_metadata: The allow_external_linked_accounts_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_external_linked_accounts_metadata = allow_external_linked_accounts_metadata
 
     @property
     def allow_external_signature_pad(self):
@@ -8764,6 +8841,50 @@ class AccountSettingsInformation(object):
         self._enable_sms_authentication_metadata = enable_sms_authentication_metadata
 
     @property
+    def enable_sms_delivery_additional_notification(self):
+        """Gets the enable_sms_delivery_additional_notification of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_sms_delivery_additional_notification of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_sms_delivery_additional_notification
+
+    @enable_sms_delivery_additional_notification.setter
+    def enable_sms_delivery_additional_notification(self, enable_sms_delivery_additional_notification):
+        """Sets the enable_sms_delivery_additional_notification of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_sms_delivery_additional_notification: The enable_sms_delivery_additional_notification of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_sms_delivery_additional_notification = enable_sms_delivery_additional_notification
+
+    @property
+    def enable_sms_delivery_additional_notification_metadata(self):
+        """Gets the enable_sms_delivery_additional_notification_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_sms_delivery_additional_notification_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_sms_delivery_additional_notification_metadata
+
+    @enable_sms_delivery_additional_notification_metadata.setter
+    def enable_sms_delivery_additional_notification_metadata(self, enable_sms_delivery_additional_notification_metadata):
+        """Sets the enable_sms_delivery_additional_notification_metadata of this AccountSettingsInformation.
+
+
+        :param enable_sms_delivery_additional_notification_metadata: The enable_sms_delivery_additional_notification_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_sms_delivery_additional_notification_metadata = enable_sms_delivery_additional_notification_metadata
+
+    @property
     def enable_social_id_login(self):
         """Gets the enable_social_id_login of this AccountSettingsInformation.  # noqa: E501
 
@@ -9950,6 +10071,29 @@ class AccountSettingsInformation(object):
         """
 
         self._in_session_suppress_emails_metadata = in_session_suppress_emails_metadata
+
+    @property
+    def linked_external_primary_accounts(self):
+        """Gets the linked_external_primary_accounts of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The linked_external_primary_accounts of this AccountSettingsInformation.  # noqa: E501
+        :rtype: list[LinkedExternalPrimaryAccount]
+        """
+        return self._linked_external_primary_accounts
+
+    @linked_external_primary_accounts.setter
+    def linked_external_primary_accounts(self, linked_external_primary_accounts):
+        """Sets the linked_external_primary_accounts of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param linked_external_primary_accounts: The linked_external_primary_accounts of this AccountSettingsInformation.  # noqa: E501
+        :type: list[LinkedExternalPrimaryAccount]
+        """
+
+        self._linked_external_primary_accounts = linked_external_primary_accounts
 
     @property
     def maximum_signing_groups(self):
@@ -11410,6 +11554,50 @@ class AccountSettingsInformation(object):
         self._show_localized_watermarks_metadata = show_localized_watermarks_metadata
 
     @property
+    def show_masked_fields_when_downloading_document_as_sender(self):
+        """Gets the show_masked_fields_when_downloading_document_as_sender of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The show_masked_fields_when_downloading_document_as_sender of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._show_masked_fields_when_downloading_document_as_sender
+
+    @show_masked_fields_when_downloading_document_as_sender.setter
+    def show_masked_fields_when_downloading_document_as_sender(self, show_masked_fields_when_downloading_document_as_sender):
+        """Sets the show_masked_fields_when_downloading_document_as_sender of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param show_masked_fields_when_downloading_document_as_sender: The show_masked_fields_when_downloading_document_as_sender of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._show_masked_fields_when_downloading_document_as_sender = show_masked_fields_when_downloading_document_as_sender
+
+    @property
+    def show_masked_fields_when_downloading_document_as_sender_metadata(self):
+        """Gets the show_masked_fields_when_downloading_document_as_sender_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The show_masked_fields_when_downloading_document_as_sender_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._show_masked_fields_when_downloading_document_as_sender_metadata
+
+    @show_masked_fields_when_downloading_document_as_sender_metadata.setter
+    def show_masked_fields_when_downloading_document_as_sender_metadata(self, show_masked_fields_when_downloading_document_as_sender_metadata):
+        """Sets the show_masked_fields_when_downloading_document_as_sender_metadata of this AccountSettingsInformation.
+
+
+        :param show_masked_fields_when_downloading_document_as_sender_metadata: The show_masked_fields_when_downloading_document_as_sender_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._show_masked_fields_when_downloading_document_as_sender_metadata = show_masked_fields_when_downloading_document_as_sender_metadata
+
+    @property
     def show_tutorials(self):
         """Gets the show_tutorials of this AccountSettingsInformation.  # noqa: E501
 
@@ -11540,6 +11728,94 @@ class AccountSettingsInformation(object):
         """
 
         self._sign_date_format_metadata = sign_date_format_metadata
+
+    @property
+    def sign_date_time_account_language_override(self):
+        """Gets the sign_date_time_account_language_override of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sign_date_time_account_language_override of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._sign_date_time_account_language_override
+
+    @sign_date_time_account_language_override.setter
+    def sign_date_time_account_language_override(self, sign_date_time_account_language_override):
+        """Sets the sign_date_time_account_language_override of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param sign_date_time_account_language_override: The sign_date_time_account_language_override of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._sign_date_time_account_language_override = sign_date_time_account_language_override
+
+    @property
+    def sign_date_time_account_language_override_metadata(self):
+        """Gets the sign_date_time_account_language_override_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The sign_date_time_account_language_override_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._sign_date_time_account_language_override_metadata
+
+    @sign_date_time_account_language_override_metadata.setter
+    def sign_date_time_account_language_override_metadata(self, sign_date_time_account_language_override_metadata):
+        """Sets the sign_date_time_account_language_override_metadata of this AccountSettingsInformation.
+
+
+        :param sign_date_time_account_language_override_metadata: The sign_date_time_account_language_override_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._sign_date_time_account_language_override_metadata = sign_date_time_account_language_override_metadata
+
+    @property
+    def sign_date_time_account_timezone_override(self):
+        """Gets the sign_date_time_account_timezone_override of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sign_date_time_account_timezone_override of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._sign_date_time_account_timezone_override
+
+    @sign_date_time_account_timezone_override.setter
+    def sign_date_time_account_timezone_override(self, sign_date_time_account_timezone_override):
+        """Sets the sign_date_time_account_timezone_override of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param sign_date_time_account_timezone_override: The sign_date_time_account_timezone_override of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._sign_date_time_account_timezone_override = sign_date_time_account_timezone_override
+
+    @property
+    def sign_date_time_account_timezone_override_metadata(self):
+        """Gets the sign_date_time_account_timezone_override_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The sign_date_time_account_timezone_override_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._sign_date_time_account_timezone_override_metadata
+
+    @sign_date_time_account_timezone_override_metadata.setter
+    def sign_date_time_account_timezone_override_metadata(self, sign_date_time_account_timezone_override_metadata):
+        """Sets the sign_date_time_account_timezone_override_metadata of this AccountSettingsInformation.
+
+
+        :param sign_date_time_account_timezone_override_metadata: The sign_date_time_account_timezone_override_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._sign_date_time_account_timezone_override_metadata = sign_date_time_account_timezone_override_metadata
 
     @property
     def signer_attach_certificate_to_envelope_pdf(self):
