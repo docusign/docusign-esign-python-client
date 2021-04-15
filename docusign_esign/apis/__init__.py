@@ -21,4 +21,3 @@ from .signing_groups_api import SigningGroupsApi
 from .templates_api import TemplatesApi
 from .users_api import UsersApi
 from .workspaces_api import WorkspacesApi
-from .bulk_envelopes_api import BulkEnvelopesApi
