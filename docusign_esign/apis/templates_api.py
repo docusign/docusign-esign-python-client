@@ -4554,6 +4554,7 @@ class TemplatesApi(object):
         :param str folder_types:
         :param str from_date: Start of the search date range. Only returns templates created on or after this date/time. If no value is specified, there is no limit on the earliest date created.
         :param str include: A comma separated list of additional template attributes to include in the response. Valid values are: recipients, folders, documents, custom_fields, and notifications.
+        :param str is_deleted_template_only:
         :param str is_download:
         :param str modified_from_date:
         :param str modified_to_date:
@@ -4602,6 +4603,7 @@ class TemplatesApi(object):
         :param str folder_types:
         :param str from_date: Start of the search date range. Only returns templates created on or after this date/time. If no value is specified, there is no limit on the earliest date created.
         :param str include: A comma separated list of additional template attributes to include in the response. Valid values are: recipients, folders, documents, custom_fields, and notifications.
+        :param str is_deleted_template_only:
         :param str is_download:
         :param str modified_from_date:
         :param str modified_to_date:
@@ -4622,7 +4624,7 @@ class TemplatesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'count', 'created_from_date', 'created_to_date', 'folder_ids', 'folder_types', 'from_date', 'include', 'is_download', 'modified_from_date', 'modified_to_date', 'order', 'order_by', 'search_fields', 'search_text', 'shared_by_me', 'start_position', 'template_ids', 'to_date', 'used_from_date', 'used_to_date', 'user_filter', 'user_id']
+        all_params = ['account_id', 'count', 'created_from_date', 'created_to_date', 'folder_ids', 'folder_types', 'from_date', 'include', 'is_deleted_template_only', 'is_download', 'modified_from_date', 'modified_to_date', 'order', 'order_by', 'search_fields', 'search_text', 'shared_by_me', 'start_position', 'template_ids', 'to_date', 'used_from_date', 'used_to_date', 'user_filter', 'user_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4664,6 +4666,8 @@ class TemplatesApi(object):
             query_params['from_date'] = params['from_date']
         if 'include' in params:
             query_params['include'] = params['include']
+        if 'is_deleted_template_only' in params:
+            query_params['is_deleted_template_only'] = params['is_deleted_template_only']
         if 'is_download' in params:
             query_params['is_download'] = params['is_download']
         if 'modified_from_date' in params:

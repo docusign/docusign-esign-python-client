@@ -83,8 +83,6 @@ class SdkUnitTests(unittest.TestCase):
             assert len(login_info.login_accounts) > 0
             login_accounts = login_info.login_accounts
             assert login_accounts[0].account_id is not None
-            print("LoginInformation: ", end="")
-            pprint(login_info)
 
             # parse first account's baseUrl
             base_url, _ = login_accounts[0].base_url.split('/v2')
@@ -103,7 +101,6 @@ class SdkUnitTests(unittest.TestCase):
             template_api = TemplatesApi(self.api_client)
 
             template_obj = template_api.get(self.user_info.accounts[0].account_id, template_id=TemplateId).to_dict()
-            print(template_obj)
 
             assert template_obj is not None
             assert template_obj['uri'] is not None
@@ -117,7 +114,6 @@ class SdkUnitTests(unittest.TestCase):
             from docusign_esign import AccountsApi
             acc_api = AccountsApi(self.api_client)
             acc_obj = acc_api.update_brand_resources_by_content_type(self.user_info.accounts[0].account_id, BrandId, "email", brandFile)
-            print(acc_obj)
 
             assert acc_obj is not None
             assert acc_obj.resources_content_uri is not None
@@ -187,9 +183,6 @@ class SdkUnitTests(unittest.TestCase):
             assert envelope_summary.envelope_id is not None
             assert envelope_summary.status == 'sent'
 
-            print("EnvelopeSummary: ", end="")
-            pprint(envelope_summary)
-
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
@@ -234,9 +227,6 @@ class SdkUnitTests(unittest.TestCase):
             assert envelope_summary is not None
             assert envelope_summary.envelope_id is not None
             assert envelope_summary.status == 'sent'
-
-            print("EnvelopeSummary: ", end="")
-            pprint(envelope_summary)
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
@@ -322,12 +312,9 @@ class SdkUnitTests(unittest.TestCase):
             view_url = envelopes_api.create_recipient_view(self.user_info.accounts[0].account_id, envelope_id,
                                                            recipient_view_request=recipient_view_request)
 
+            # This Url should work in an Iframe or browser to allow signing
             assert view_url is not None
             assert view_url.url is not None
-
-            # This Url should work in an Iframe or browser to allow signing
-            print("ViewUrl is ", end="")
-            pprint(view_url)
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
@@ -395,9 +382,6 @@ class SdkUnitTests(unittest.TestCase):
                                                              envelope_template=envelope_template)
             assert template_summary is not None
             assert template_summary.template_id is not None
-
-            print("TemplateSummary: ", end="")
-            pprint(template_summary)
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
@@ -493,9 +477,6 @@ class SdkUnitTests(unittest.TestCase):
             assert docs_list is not None
             assert (docs_list.envelope_id == self.envelope_id)
 
-            print("EnvelopeDocumentsResult: ", end="")
-            pprint(docs_list)
-
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
@@ -571,8 +552,6 @@ class SdkUnitTests(unittest.TestCase):
             assert recipients_update_summary is not None
             assert len(recipients_update_summary.recipient_update_results) > 0
             assert ( None == recipients_update_summary.recipient_update_results[0].error_details)
-            print("RecipientsUpdateSummary: ", end="")
-            pprint(recipients_update_summary)
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)

@@ -68,6 +68,7 @@ class CarbonCopy(object):
         'inherit_email_notification_configuration': 'str',
         'last_name': 'str',
         'last_name_metadata': 'PropertyMetadata',
+        'linked_account_configuration_id': 'str',
         'locked_recipient_phone_auth_editable': 'str',
         'locked_recipient_sms_editable': 'str',
         'name': 'str',
@@ -144,6 +145,7 @@ class CarbonCopy(object):
         'inherit_email_notification_configuration': 'inheritEmailNotificationConfiguration',
         'last_name': 'lastName',
         'last_name_metadata': 'lastNameMetadata',
+        'linked_account_configuration_id': 'linkedAccountConfigurationId',
         'locked_recipient_phone_auth_editable': 'lockedRecipientPhoneAuthEditable',
         'locked_recipient_sms_editable': 'lockedRecipientSmsEditable',
         'name': 'name',
@@ -182,7 +184,7 @@ class CarbonCopy(object):
         'user_id': 'userId'
     }
 
-    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, agent_can_edit_email=None, agent_can_edit_name=None, allow_system_override_for_locked_recipient=None, client_user_id=None, completed_count=None, custom_fields=None, declined_date_time=None, declined_reason=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, last_name=None, last_name_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, note=None, note_metadata=None, phone_authentication=None, proof_file=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signed_date_time=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
+    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, agent_can_edit_email=None, agent_can_edit_name=None, allow_system_override_for_locked_recipient=None, client_user_id=None, completed_count=None, custom_fields=None, declined_date_time=None, declined_reason=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, last_name=None, last_name_metadata=None, linked_account_configuration_id=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, note=None, note_metadata=None, phone_authentication=None, proof_file=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signed_date_time=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
         """CarbonCopy - a model defined in Swagger"""  # noqa: E501
 
         self._access_code = None
@@ -222,6 +224,7 @@ class CarbonCopy(object):
         self._inherit_email_notification_configuration = None
         self._last_name = None
         self._last_name_metadata = None
+        self._linked_account_configuration_id = None
         self._locked_recipient_phone_auth_editable = None
         self._locked_recipient_sms_editable = None
         self._name = None
@@ -334,6 +337,8 @@ class CarbonCopy(object):
             self.last_name = last_name
         if last_name_metadata is not None:
             self.last_name_metadata = last_name_metadata
+        if linked_account_configuration_id is not None:
+            self.linked_account_configuration_id = linked_account_configuration_id
         if locked_recipient_phone_auth_editable is not None:
             self.locked_recipient_phone_auth_editable = locked_recipient_phone_auth_editable
         if locked_recipient_sms_editable is not None:
@@ -1233,6 +1238,29 @@ class CarbonCopy(object):
         """
 
         self._last_name_metadata = last_name_metadata
+
+    @property
+    def linked_account_configuration_id(self):
+        """Gets the linked_account_configuration_id of this CarbonCopy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The linked_account_configuration_id of this CarbonCopy.  # noqa: E501
+        :rtype: str
+        """
+        return self._linked_account_configuration_id
+
+    @linked_account_configuration_id.setter
+    def linked_account_configuration_id(self, linked_account_configuration_id):
+        """Sets the linked_account_configuration_id of this CarbonCopy.
+
+          # noqa: E501
+
+        :param linked_account_configuration_id: The linked_account_configuration_id of this CarbonCopy.  # noqa: E501
+        :type: str
+        """
+
+        self._linked_account_configuration_id = linked_account_configuration_id
 
     @property
     def locked_recipient_phone_auth_editable(self):

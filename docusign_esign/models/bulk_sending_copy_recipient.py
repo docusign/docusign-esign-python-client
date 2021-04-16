@@ -39,6 +39,8 @@ class BulkSendingCopyRecipient(object):
         'email_notification': 'RecipientEmailNotification',
         'embedded_recipient_start_url': 'str',
         'fax_number': 'str',
+        'host_email': 'str',
+        'host_name': 'str',
         'id_check_configuration_name': 'str',
         'id_check_information_input': 'IdCheckInformationInput',
         'identification_method': 'str',
@@ -48,6 +50,8 @@ class BulkSendingCopyRecipient(object):
         'recipient_id': 'str',
         'recipient_signature_providers': 'list[RecipientSignatureProvider]',
         'role_name': 'str',
+        'signer_name': 'str',
+        'signing_group_id': 'str',
         'sms_authentication': 'RecipientSMSAuthentication',
         'social_authentications': 'list[SocialAuthentication]',
         'tabs': 'list[BulkSendingCopyTab]'
@@ -62,6 +66,8 @@ class BulkSendingCopyRecipient(object):
         'email_notification': 'emailNotification',
         'embedded_recipient_start_url': 'embeddedRecipientStartURL',
         'fax_number': 'faxNumber',
+        'host_email': 'hostEmail',
+        'host_name': 'hostName',
         'id_check_configuration_name': 'idCheckConfigurationName',
         'id_check_information_input': 'idCheckInformationInput',
         'identification_method': 'identificationMethod',
@@ -71,12 +77,14 @@ class BulkSendingCopyRecipient(object):
         'recipient_id': 'recipientId',
         'recipient_signature_providers': 'recipientSignatureProviders',
         'role_name': 'roleName',
+        'signer_name': 'signerName',
+        'signing_group_id': 'signingGroupId',
         'sms_authentication': 'smsAuthentication',
         'social_authentications': 'socialAuthentications',
         'tabs': 'tabs'
     }
 
-    def __init__(self, access_code=None, client_user_id=None, custom_fields=None, delivery_method=None, email=None, email_notification=None, embedded_recipient_start_url=None, fax_number=None, id_check_configuration_name=None, id_check_information_input=None, identification_method=None, name=None, note=None, phone_authentication=None, recipient_id=None, recipient_signature_providers=None, role_name=None, sms_authentication=None, social_authentications=None, tabs=None):  # noqa: E501
+    def __init__(self, access_code=None, client_user_id=None, custom_fields=None, delivery_method=None, email=None, email_notification=None, embedded_recipient_start_url=None, fax_number=None, host_email=None, host_name=None, id_check_configuration_name=None, id_check_information_input=None, identification_method=None, name=None, note=None, phone_authentication=None, recipient_id=None, recipient_signature_providers=None, role_name=None, signer_name=None, signing_group_id=None, sms_authentication=None, social_authentications=None, tabs=None):  # noqa: E501
         """BulkSendingCopyRecipient - a model defined in Swagger"""  # noqa: E501
 
         self._access_code = None
@@ -87,6 +95,8 @@ class BulkSendingCopyRecipient(object):
         self._email_notification = None
         self._embedded_recipient_start_url = None
         self._fax_number = None
+        self._host_email = None
+        self._host_name = None
         self._id_check_configuration_name = None
         self._id_check_information_input = None
         self._identification_method = None
@@ -96,6 +106,8 @@ class BulkSendingCopyRecipient(object):
         self._recipient_id = None
         self._recipient_signature_providers = None
         self._role_name = None
+        self._signer_name = None
+        self._signing_group_id = None
         self._sms_authentication = None
         self._social_authentications = None
         self._tabs = None
@@ -117,6 +129,10 @@ class BulkSendingCopyRecipient(object):
             self.embedded_recipient_start_url = embedded_recipient_start_url
         if fax_number is not None:
             self.fax_number = fax_number
+        if host_email is not None:
+            self.host_email = host_email
+        if host_name is not None:
+            self.host_name = host_name
         if id_check_configuration_name is not None:
             self.id_check_configuration_name = id_check_configuration_name
         if id_check_information_input is not None:
@@ -135,6 +151,10 @@ class BulkSendingCopyRecipient(object):
             self.recipient_signature_providers = recipient_signature_providers
         if role_name is not None:
             self.role_name = role_name
+        if signer_name is not None:
+            self.signer_name = signer_name
+        if signing_group_id is not None:
+            self.signing_group_id = signing_group_id
         if sms_authentication is not None:
             self.sms_authentication = sms_authentication
         if social_authentications is not None:
@@ -323,6 +343,52 @@ class BulkSendingCopyRecipient(object):
         """
 
         self._fax_number = fax_number
+
+    @property
+    def host_email(self):
+        """Gets the host_email of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The host_email of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._host_email
+
+    @host_email.setter
+    def host_email(self, host_email):
+        """Sets the host_email of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param host_email: The host_email of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        """
+
+        self._host_email = host_email
+
+    @property
+    def host_name(self):
+        """Gets the host_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The host_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._host_name
+
+    @host_name.setter
+    def host_name(self, host_name):
+        """Sets the host_name of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param host_name: The host_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        """
+
+        self._host_name = host_name
 
     @property
     def id_check_configuration_name(self):
@@ -526,6 +592,52 @@ class BulkSendingCopyRecipient(object):
         """
 
         self._role_name = role_name
+
+    @property
+    def signer_name(self):
+        """Gets the signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._signer_name
+
+    @signer_name.setter
+    def signer_name(self, signer_name):
+        """Sets the signer_name of this BulkSendingCopyRecipient.
+
+          # noqa: E501
+
+        :param signer_name: The signer_name of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        """
+
+        self._signer_name = signer_name
+
+    @property
+    def signing_group_id(self):
+        """Gets the signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+
+        When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+        :return: The signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._signing_group_id
+
+    @signing_group_id.setter
+    def signing_group_id(self, signing_group_id):
+        """Sets the signing_group_id of this BulkSendingCopyRecipient.
+
+        When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).  # noqa: E501
+
+        :param signing_group_id: The signing_group_id of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: str
+        """
+
+        self._signing_group_id = signing_group_id
 
     @property
     def sms_authentication(self):

@@ -58,10 +58,12 @@ class TabMetadata(object):
         'last_modified': 'str',
         'last_modified_by_display_name': 'str',
         'last_modified_by_user_id': 'str',
+        'locale_policy': 'LocalePolicyTab',
         'locked': 'str',
         'maximum_length': 'str',
         'merge_field': 'MergeField',
         'name': 'str',
+        'numerical_value': 'str',
         'payment_item_code': 'str',
         'payment_item_description': 'str',
         'payment_item_name': 'str',
@@ -109,10 +111,12 @@ class TabMetadata(object):
         'last_modified': 'lastModified',
         'last_modified_by_display_name': 'lastModifiedByDisplayName',
         'last_modified_by_user_id': 'lastModifiedByUserId',
+        'locale_policy': 'localePolicy',
         'locked': 'locked',
         'maximum_length': 'maximumLength',
         'merge_field': 'mergeField',
         'name': 'name',
+        'numerical_value': 'numericalValue',
         'payment_item_code': 'paymentItemCode',
         'payment_item_description': 'paymentItemDescription',
         'payment_item_name': 'paymentItemName',
@@ -132,7 +136,7 @@ class TabMetadata(object):
         'width': 'width'
     }
 
-    def __init__(self, anchor=None, anchor_case_sensitive=None, anchor_horizontal_alignment=None, anchor_ignore_if_not_present=None, anchor_match_whole_word=None, anchor_units=None, anchor_x_offset=None, anchor_y_offset=None, bold=None, collaborative=None, conceal_value_on_document=None, created_by_display_name=None, created_by_user_id=None, custom_tab_id=None, disable_auto_size=None, editable=None, font=None, font_color=None, font_size=None, height=None, included_in_email=None, initial_value=None, italic=None, items=None, last_modified=None, last_modified_by_display_name=None, last_modified_by_user_id=None, locked=None, maximum_length=None, merge_field=None, name=None, payment_item_code=None, payment_item_description=None, payment_item_name=None, require_all=None, required=None, require_initial_on_shared_change=None, scale_value=None, selected=None, shared=None, stamp_type=None, stamp_type_metadata=None, tab_label=None, type=None, underline=None, validation_message=None, validation_pattern=None, width=None):  # noqa: E501
+    def __init__(self, anchor=None, anchor_case_sensitive=None, anchor_horizontal_alignment=None, anchor_ignore_if_not_present=None, anchor_match_whole_word=None, anchor_units=None, anchor_x_offset=None, anchor_y_offset=None, bold=None, collaborative=None, conceal_value_on_document=None, created_by_display_name=None, created_by_user_id=None, custom_tab_id=None, disable_auto_size=None, editable=None, font=None, font_color=None, font_size=None, height=None, included_in_email=None, initial_value=None, italic=None, items=None, last_modified=None, last_modified_by_display_name=None, last_modified_by_user_id=None, locale_policy=None, locked=None, maximum_length=None, merge_field=None, name=None, numerical_value=None, payment_item_code=None, payment_item_description=None, payment_item_name=None, require_all=None, required=None, require_initial_on_shared_change=None, scale_value=None, selected=None, shared=None, stamp_type=None, stamp_type_metadata=None, tab_label=None, type=None, underline=None, validation_message=None, validation_pattern=None, width=None):  # noqa: E501
         """TabMetadata - a model defined in Swagger"""  # noqa: E501
 
         self._anchor = None
@@ -162,10 +166,12 @@ class TabMetadata(object):
         self._last_modified = None
         self._last_modified_by_display_name = None
         self._last_modified_by_user_id = None
+        self._locale_policy = None
         self._locked = None
         self._maximum_length = None
         self._merge_field = None
         self._name = None
+        self._numerical_value = None
         self._payment_item_code = None
         self._payment_item_description = None
         self._payment_item_name = None
@@ -239,6 +245,8 @@ class TabMetadata(object):
             self.last_modified_by_display_name = last_modified_by_display_name
         if last_modified_by_user_id is not None:
             self.last_modified_by_user_id = last_modified_by_user_id
+        if locale_policy is not None:
+            self.locale_policy = locale_policy
         if locked is not None:
             self.locked = locked
         if maximum_length is not None:
@@ -247,6 +255,8 @@ class TabMetadata(object):
             self.merge_field = merge_field
         if name is not None:
             self.name = name
+        if numerical_value is not None:
+            self.numerical_value = numerical_value
         if payment_item_code is not None:
             self.payment_item_code = payment_item_code
         if payment_item_description is not None:
@@ -904,6 +914,27 @@ class TabMetadata(object):
         self._last_modified_by_user_id = last_modified_by_user_id
 
     @property
+    def locale_policy(self):
+        """Gets the locale_policy of this TabMetadata.  # noqa: E501
+
+
+        :return: The locale_policy of this TabMetadata.  # noqa: E501
+        :rtype: LocalePolicyTab
+        """
+        return self._locale_policy
+
+    @locale_policy.setter
+    def locale_policy(self, locale_policy):
+        """Sets the locale_policy of this TabMetadata.
+
+
+        :param locale_policy: The locale_policy of this TabMetadata.  # noqa: E501
+        :type: LocalePolicyTab
+        """
+
+        self._locale_policy = locale_policy
+
+    @property
     def locked(self):
         """Gets the locked of this TabMetadata.  # noqa: E501
 
@@ -992,6 +1023,29 @@ class TabMetadata(object):
         """
 
         self._name = name
+
+    @property
+    def numerical_value(self):
+        """Gets the numerical_value of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The numerical_value of this TabMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._numerical_value
+
+    @numerical_value.setter
+    def numerical_value(self, numerical_value):
+        """Sets the numerical_value of this TabMetadata.
+
+          # noqa: E501
+
+        :param numerical_value: The numerical_value of this TabMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._numerical_value = numerical_value
 
     @property
     def payment_item_code(self):

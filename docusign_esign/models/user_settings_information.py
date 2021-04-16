@@ -70,6 +70,8 @@ class UserSettingsInformation(object):
         'can_send_api_requests_metadata': 'SettingsMetadata',
         'can_send_envelope': 'str',
         'can_send_envelope_metadata': 'SettingsMetadata',
+        'can_send_envelopes_via_sms': 'str',
+        'can_send_envelopes_via_sms_metadata': 'SettingsMetadata',
         'can_sign_envelope': 'str',
         'can_sign_envelope_metadata': 'SettingsMetadata',
         'can_use_scratchpad': 'str',
@@ -192,6 +194,8 @@ class UserSettingsInformation(object):
         'can_send_api_requests_metadata': 'canSendAPIRequestsMetadata',
         'can_send_envelope': 'canSendEnvelope',
         'can_send_envelope_metadata': 'canSendEnvelopeMetadata',
+        'can_send_envelopes_via_sms': 'canSendEnvelopesViaSMS',
+        'can_send_envelopes_via_sms_metadata': 'canSendEnvelopesViaSMSMetadata',
         'can_sign_envelope': 'canSignEnvelope',
         'can_sign_envelope_metadata': 'canSignEnvelopeMetadata',
         'can_use_scratchpad': 'canUseScratchpad',
@@ -274,7 +278,7 @@ class UserSettingsInformation(object):
         'vaulting_mode_metadata': 'vaultingModeMetadata'
     }
 
-    def __init__(self, account_management_granular=None, admin_only=None, admin_only_metadata=None, allow_auto_tagging=None, allow_envelope_transfer_to=None, allow_envelope_transfer_to_metadata=None, allow_eseal_recipients=None, allow_eseal_recipients_metadata=None, allow_power_forms_admin_to_access_all_power_form_envelope=None, allow_power_forms_admin_to_access_all_power_form_envelope_metadata=None, allow_recipient_language_selection=None, allow_recipient_language_selection_metadata=None, allow_send_on_behalf_of=None, allow_send_on_behalf_of_metadata=None, allow_supplemental_documents=None, allow_supplemental_documents_metadata=None, anchor_tag_versioned_placement_enabled=None, api_account_wide_access=None, api_account_wide_access_metadata=None, api_can_export_ac=None, api_can_export_ac_metadata=None, bulk_send=None, bulk_send_metadata=None, can_charge_account=None, can_charge_account_metadata=None, can_edit_shared_addressbook=None, can_edit_shared_addressbook_metadata=None, can_lock_envelopes=None, can_lock_envelopes_metadata=None, can_manage_account=None, can_manage_account_metadata=None, can_manage_distributor=None, can_manage_distributor_metadata=None, can_manage_templates=None, can_manage_templates_metadata=None, can_send_api_requests=None, can_send_api_requests_metadata=None, can_send_envelope=None, can_send_envelope_metadata=None, can_sign_envelope=None, can_sign_envelope_metadata=None, can_use_scratchpad=None, can_use_scratchpad_metadata=None, can_use_smart_contracts=None, can_use_smart_contracts_metadata=None, disable_document_upload=None, disable_document_upload_metadata=None, disable_other_actions=None, disable_other_actions_metadata=None, enable_ds_pro=None, enable_ds_pro_metadata=None, enable_sequential_signing_api=None, enable_sequential_signing_api_metadata=None, enable_sequential_signing_ui=None, enable_sequential_signing_ui_metadata=None, enable_signer_attachments=None, enable_signer_attachments_metadata=None, enable_sign_on_paper_override=None, enable_sign_on_paper_override_metadata=None, enable_transaction_point=None, enable_transaction_point_metadata=None, enable_vaulting=None, enable_vaulting_metadata=None, express_send_only=None, locale=None, locale_metadata=None, locale_policy=None, manage_clickwraps_mode=None, manage_clickwraps_mode_metadata=None, modified_by=None, modified_by_metadata=None, modified_date=None, modified_date_metadata=None, modified_page=None, modified_page_metadata=None, new_send_ui=None, new_send_ui_metadata=None, power_form_mode=None, power_form_mode_metadata=None, recipient_viewed_notification=None, recipient_viewed_notification_metadata=None, seal_identifiers=None, self_signed_recipient_email_document=None, self_signed_recipient_email_document_metadata=None, sender_email_notifications=None, signer_email_notifications=None, supplemental_document_include_in_download=None, supplemental_documents_must_accept=None, supplemental_documents_must_accept_metadata=None, supplemental_documents_must_read=None, supplemental_documents_must_read_metadata=None, supplemental_documents_must_view=None, supplemental_documents_must_view_metadata=None, template_active_creation=None, template_active_creation_metadata=None, template_apply_notify=None, template_apply_notify_metadata=None, template_auto_matching=None, template_auto_matching_metadata=None, template_matching_sensitivity=None, template_matching_sensitivity_metadata=None, template_page_level_matching=None, template_page_level_matching_metadata=None, timezone_dst=None, timezone_dst_metadata=None, timezone_mask=None, timezone_mask_metadata=None, timezone_offset=None, timezone_offset_metadata=None, timezone_sending_pref=None, timezone_sending_pref_metadata=None, timezone_signing_pref=None, timezone_signing_pref_metadata=None, transaction_point_site_name_url=None, transaction_point_site_name_url_metadata=None, transaction_point_user_name=None, transaction_point_user_name_metadata=None, vaulting_mode=None, vaulting_mode_metadata=None):  # noqa: E501
+    def __init__(self, account_management_granular=None, admin_only=None, admin_only_metadata=None, allow_auto_tagging=None, allow_envelope_transfer_to=None, allow_envelope_transfer_to_metadata=None, allow_eseal_recipients=None, allow_eseal_recipients_metadata=None, allow_power_forms_admin_to_access_all_power_form_envelope=None, allow_power_forms_admin_to_access_all_power_form_envelope_metadata=None, allow_recipient_language_selection=None, allow_recipient_language_selection_metadata=None, allow_send_on_behalf_of=None, allow_send_on_behalf_of_metadata=None, allow_supplemental_documents=None, allow_supplemental_documents_metadata=None, anchor_tag_versioned_placement_enabled=None, api_account_wide_access=None, api_account_wide_access_metadata=None, api_can_export_ac=None, api_can_export_ac_metadata=None, bulk_send=None, bulk_send_metadata=None, can_charge_account=None, can_charge_account_metadata=None, can_edit_shared_addressbook=None, can_edit_shared_addressbook_metadata=None, can_lock_envelopes=None, can_lock_envelopes_metadata=None, can_manage_account=None, can_manage_account_metadata=None, can_manage_distributor=None, can_manage_distributor_metadata=None, can_manage_templates=None, can_manage_templates_metadata=None, can_send_api_requests=None, can_send_api_requests_metadata=None, can_send_envelope=None, can_send_envelope_metadata=None, can_send_envelopes_via_sms=None, can_send_envelopes_via_sms_metadata=None, can_sign_envelope=None, can_sign_envelope_metadata=None, can_use_scratchpad=None, can_use_scratchpad_metadata=None, can_use_smart_contracts=None, can_use_smart_contracts_metadata=None, disable_document_upload=None, disable_document_upload_metadata=None, disable_other_actions=None, disable_other_actions_metadata=None, enable_ds_pro=None, enable_ds_pro_metadata=None, enable_sequential_signing_api=None, enable_sequential_signing_api_metadata=None, enable_sequential_signing_ui=None, enable_sequential_signing_ui_metadata=None, enable_signer_attachments=None, enable_signer_attachments_metadata=None, enable_sign_on_paper_override=None, enable_sign_on_paper_override_metadata=None, enable_transaction_point=None, enable_transaction_point_metadata=None, enable_vaulting=None, enable_vaulting_metadata=None, express_send_only=None, locale=None, locale_metadata=None, locale_policy=None, manage_clickwraps_mode=None, manage_clickwraps_mode_metadata=None, modified_by=None, modified_by_metadata=None, modified_date=None, modified_date_metadata=None, modified_page=None, modified_page_metadata=None, new_send_ui=None, new_send_ui_metadata=None, power_form_mode=None, power_form_mode_metadata=None, recipient_viewed_notification=None, recipient_viewed_notification_metadata=None, seal_identifiers=None, self_signed_recipient_email_document=None, self_signed_recipient_email_document_metadata=None, sender_email_notifications=None, signer_email_notifications=None, supplemental_document_include_in_download=None, supplemental_documents_must_accept=None, supplemental_documents_must_accept_metadata=None, supplemental_documents_must_read=None, supplemental_documents_must_read_metadata=None, supplemental_documents_must_view=None, supplemental_documents_must_view_metadata=None, template_active_creation=None, template_active_creation_metadata=None, template_apply_notify=None, template_apply_notify_metadata=None, template_auto_matching=None, template_auto_matching_metadata=None, template_matching_sensitivity=None, template_matching_sensitivity_metadata=None, template_page_level_matching=None, template_page_level_matching_metadata=None, timezone_dst=None, timezone_dst_metadata=None, timezone_mask=None, timezone_mask_metadata=None, timezone_offset=None, timezone_offset_metadata=None, timezone_sending_pref=None, timezone_sending_pref_metadata=None, timezone_signing_pref=None, timezone_signing_pref_metadata=None, transaction_point_site_name_url=None, transaction_point_site_name_url_metadata=None, transaction_point_user_name=None, transaction_point_user_name_metadata=None, vaulting_mode=None, vaulting_mode_metadata=None):  # noqa: E501
         """UserSettingsInformation - a model defined in Swagger"""  # noqa: E501
 
         self._account_management_granular = None
@@ -316,6 +320,8 @@ class UserSettingsInformation(object):
         self._can_send_api_requests_metadata = None
         self._can_send_envelope = None
         self._can_send_envelope_metadata = None
+        self._can_send_envelopes_via_sms = None
+        self._can_send_envelopes_via_sms_metadata = None
         self._can_sign_envelope = None
         self._can_sign_envelope_metadata = None
         self._can_use_scratchpad = None
@@ -476,6 +482,10 @@ class UserSettingsInformation(object):
             self.can_send_envelope = can_send_envelope
         if can_send_envelope_metadata is not None:
             self.can_send_envelope_metadata = can_send_envelope_metadata
+        if can_send_envelopes_via_sms is not None:
+            self.can_send_envelopes_via_sms = can_send_envelopes_via_sms
+        if can_send_envelopes_via_sms_metadata is not None:
+            self.can_send_envelopes_via_sms_metadata = can_send_envelopes_via_sms_metadata
         if can_sign_envelope is not None:
             self.can_sign_envelope = can_sign_envelope
         if can_sign_envelope_metadata is not None:
@@ -1495,6 +1505,50 @@ class UserSettingsInformation(object):
         """
 
         self._can_send_envelope_metadata = can_send_envelope_metadata
+
+    @property
+    def can_send_envelopes_via_sms(self):
+        """Gets the can_send_envelopes_via_sms of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_send_envelopes_via_sms of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_send_envelopes_via_sms
+
+    @can_send_envelopes_via_sms.setter
+    def can_send_envelopes_via_sms(self, can_send_envelopes_via_sms):
+        """Sets the can_send_envelopes_via_sms of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_send_envelopes_via_sms: The can_send_envelopes_via_sms of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._can_send_envelopes_via_sms = can_send_envelopes_via_sms
+
+    @property
+    def can_send_envelopes_via_sms_metadata(self):
+        """Gets the can_send_envelopes_via_sms_metadata of this UserSettingsInformation.  # noqa: E501
+
+
+        :return: The can_send_envelopes_via_sms_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_send_envelopes_via_sms_metadata
+
+    @can_send_envelopes_via_sms_metadata.setter
+    def can_send_envelopes_via_sms_metadata(self, can_send_envelopes_via_sms_metadata):
+        """Sets the can_send_envelopes_via_sms_metadata of this UserSettingsInformation.
+
+
+        :param can_send_envelopes_via_sms_metadata: The can_send_envelopes_via_sms_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_send_envelopes_via_sms_metadata = can_send_envelopes_via_sms_metadata
 
     @property
     def can_sign_envelope(self):

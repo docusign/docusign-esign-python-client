@@ -32,6 +32,8 @@ class AccountBillingPlan(object):
     """
     swagger_types = {
         'add_ons': 'list[AddOn]',
+        'app_store_receipt_expiration_date': 'str',
+        'app_store_receipt_purchase_date': 'str',
         'can_cancel_renewal': 'str',
         'can_upgrade': 'str',
         'currency_code': 'str',
@@ -57,6 +59,8 @@ class AccountBillingPlan(object):
 
     attribute_map = {
         'add_ons': 'addOns',
+        'app_store_receipt_expiration_date': 'appStoreReceiptExpirationDate',
+        'app_store_receipt_purchase_date': 'appStoreReceiptPurchaseDate',
         'can_cancel_renewal': 'canCancelRenewal',
         'can_upgrade': 'canUpgrade',
         'currency_code': 'currencyCode',
@@ -80,10 +84,12 @@ class AccountBillingPlan(object):
         'support_plan_fee': 'supportPlanFee'
     }
 
-    def __init__(self, add_ons=None, can_cancel_renewal=None, can_upgrade=None, currency_code=None, downgrade_plan_information=None, enable_support=None, included_seats=None, incremental_seats=None, is_downgrade=None, notification_type=None, other_discount_percent=None, payment_cycle=None, payment_method=None, per_seat_price=None, plan_classification=None, plan_feature_sets=None, plan_id=None, plan_name=None, renewal_status=None, seat_discounts=None, support_incident_fee=None, support_plan_fee=None):  # noqa: E501
+    def __init__(self, add_ons=None, app_store_receipt_expiration_date=None, app_store_receipt_purchase_date=None, can_cancel_renewal=None, can_upgrade=None, currency_code=None, downgrade_plan_information=None, enable_support=None, included_seats=None, incremental_seats=None, is_downgrade=None, notification_type=None, other_discount_percent=None, payment_cycle=None, payment_method=None, per_seat_price=None, plan_classification=None, plan_feature_sets=None, plan_id=None, plan_name=None, renewal_status=None, seat_discounts=None, support_incident_fee=None, support_plan_fee=None):  # noqa: E501
         """AccountBillingPlan - a model defined in Swagger"""  # noqa: E501
 
         self._add_ons = None
+        self._app_store_receipt_expiration_date = None
+        self._app_store_receipt_purchase_date = None
         self._can_cancel_renewal = None
         self._can_upgrade = None
         self._currency_code = None
@@ -109,6 +115,10 @@ class AccountBillingPlan(object):
 
         if add_ons is not None:
             self.add_ons = add_ons
+        if app_store_receipt_expiration_date is not None:
+            self.app_store_receipt_expiration_date = app_store_receipt_expiration_date
+        if app_store_receipt_purchase_date is not None:
+            self.app_store_receipt_purchase_date = app_store_receipt_purchase_date
         if can_cancel_renewal is not None:
             self.can_cancel_renewal = can_cancel_renewal
         if can_upgrade is not None:
@@ -174,6 +184,52 @@ class AccountBillingPlan(object):
         """
 
         self._add_ons = add_ons
+
+    @property
+    def app_store_receipt_expiration_date(self):
+        """Gets the app_store_receipt_expiration_date of this AccountBillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The app_store_receipt_expiration_date of this AccountBillingPlan.  # noqa: E501
+        :rtype: str
+        """
+        return self._app_store_receipt_expiration_date
+
+    @app_store_receipt_expiration_date.setter
+    def app_store_receipt_expiration_date(self, app_store_receipt_expiration_date):
+        """Sets the app_store_receipt_expiration_date of this AccountBillingPlan.
+
+          # noqa: E501
+
+        :param app_store_receipt_expiration_date: The app_store_receipt_expiration_date of this AccountBillingPlan.  # noqa: E501
+        :type: str
+        """
+
+        self._app_store_receipt_expiration_date = app_store_receipt_expiration_date
+
+    @property
+    def app_store_receipt_purchase_date(self):
+        """Gets the app_store_receipt_purchase_date of this AccountBillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The app_store_receipt_purchase_date of this AccountBillingPlan.  # noqa: E501
+        :rtype: str
+        """
+        return self._app_store_receipt_purchase_date
+
+    @app_store_receipt_purchase_date.setter
+    def app_store_receipt_purchase_date(self, app_store_receipt_purchase_date):
+        """Sets the app_store_receipt_purchase_date of this AccountBillingPlan.
+
+          # noqa: E501
+
+        :param app_store_receipt_purchase_date: The app_store_receipt_purchase_date of this AccountBillingPlan.  # noqa: E501
+        :type: str
+        """
+
+        self._app_store_receipt_purchase_date = app_store_receipt_purchase_date
 
     @property
     def can_cancel_renewal(self):

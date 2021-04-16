@@ -75,6 +75,7 @@ class NotaryRecipient(object):
         'is_bulk_recipient_metadata': 'PropertyMetadata',
         'last_name': 'str',
         'last_name_metadata': 'PropertyMetadata',
+        'live_oak_start_url': 'str',
         'locked_recipient_phone_auth_editable': 'str',
         'locked_recipient_sms_editable': 'str',
         'name': 'str',
@@ -170,6 +171,7 @@ class NotaryRecipient(object):
         'is_bulk_recipient_metadata': 'isBulkRecipientMetadata',
         'last_name': 'lastName',
         'last_name_metadata': 'lastNameMetadata',
+        'live_oak_start_url': 'liveOakStartURL',
         'locked_recipient_phone_auth_editable': 'lockedRecipientPhoneAuthEditable',
         'locked_recipient_sms_editable': 'lockedRecipientSmsEditable',
         'name': 'name',
@@ -220,7 +222,7 @@ class NotaryRecipient(object):
         'user_id': 'userId'
     }
 
-    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, agent_can_edit_email=None, agent_can_edit_name=None, allow_system_override_for_locked_recipient=None, auto_navigation=None, bulk_recipients_uri=None, can_sign_offline=None, client_user_id=None, completed_count=None, creation_reason=None, custom_fields=None, declined_date_time=None, declined_reason=None, default_recipient=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, is_bulk_recipient=None, is_bulk_recipient_metadata=None, last_name=None, last_name_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, notary_id=None, notary_signers=None, notary_type=None, note=None, note_metadata=None, offline_attributes=None, phone_authentication=None, proof_file=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_signature_providers=None, recipient_supplies_tabs=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, require_signer_certificate=None, require_sign_on_paper=None, require_upload_signature=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signature_info=None, signed_date_time=None, sign_in_each_location=None, sign_in_each_location_metadata=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
+    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, agent_can_edit_email=None, agent_can_edit_name=None, allow_system_override_for_locked_recipient=None, auto_navigation=None, bulk_recipients_uri=None, can_sign_offline=None, client_user_id=None, completed_count=None, creation_reason=None, custom_fields=None, declined_date_time=None, declined_reason=None, default_recipient=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, is_bulk_recipient=None, is_bulk_recipient_metadata=None, last_name=None, last_name_metadata=None, live_oak_start_url=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, notary_id=None, notary_signers=None, notary_type=None, note=None, note_metadata=None, offline_attributes=None, phone_authentication=None, proof_file=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_signature_providers=None, recipient_supplies_tabs=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, require_signer_certificate=None, require_sign_on_paper=None, require_upload_signature=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signature_info=None, signed_date_time=None, sign_in_each_location=None, sign_in_each_location_metadata=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
         """NotaryRecipient - a model defined in Swagger"""  # noqa: E501
 
         self._access_code = None
@@ -267,6 +269,7 @@ class NotaryRecipient(object):
         self._is_bulk_recipient_metadata = None
         self._last_name = None
         self._last_name_metadata = None
+        self._live_oak_start_url = None
         self._locked_recipient_phone_auth_editable = None
         self._locked_recipient_sms_editable = None
         self._name = None
@@ -405,6 +408,8 @@ class NotaryRecipient(object):
             self.last_name = last_name
         if last_name_metadata is not None:
             self.last_name_metadata = last_name_metadata
+        if live_oak_start_url is not None:
+            self.live_oak_start_url = live_oak_start_url
         if locked_recipient_phone_auth_editable is not None:
             self.locked_recipient_phone_auth_editable = locked_recipient_phone_auth_editable
         if locked_recipient_sms_editable is not None:
@@ -1487,6 +1492,29 @@ class NotaryRecipient(object):
         """
 
         self._last_name_metadata = last_name_metadata
+
+    @property
+    def live_oak_start_url(self):
+        """Gets the live_oak_start_url of this NotaryRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The live_oak_start_url of this NotaryRecipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._live_oak_start_url
+
+    @live_oak_start_url.setter
+    def live_oak_start_url(self, live_oak_start_url):
+        """Sets the live_oak_start_url of this NotaryRecipient.
+
+          # noqa: E501
+
+        :param live_oak_start_url: The live_oak_start_url of this NotaryRecipient.  # noqa: E501
+        :type: str
+        """
+
+        self._live_oak_start_url = live_oak_start_url
 
     @property
     def locked_recipient_phone_auth_editable(self):

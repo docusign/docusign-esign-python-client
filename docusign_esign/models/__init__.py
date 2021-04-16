@@ -167,6 +167,7 @@ from docusign_esign.models.country import Country
 from docusign_esign.models.credential import Credential
 from docusign_esign.models.credit_card_information import CreditCardInformation
 from docusign_esign.models.credit_card_types import CreditCardTypes
+from docusign_esign.models.currency import Currency
 from docusign_esign.models.currency_feature_set_price import CurrencyFeatureSetPrice
 from docusign_esign.models.currency_plan_price import CurrencyPlanPrice
 from docusign_esign.models.custom_field import CustomField
@@ -274,6 +275,7 @@ from docusign_esign.models.integrated_user_info_list import IntegratedUserInfoLi
 from docusign_esign.models.intermediary import Intermediary
 from docusign_esign.models.jurisdiction import Jurisdiction
 from docusign_esign.models.last_name import LastName
+from docusign_esign.models.linked_external_primary_account import LinkedExternalPrimaryAccount
 from docusign_esign.models.list import List
 from docusign_esign.models.list_custom_field import ListCustomField
 from docusign_esign.models.list_item import ListItem
