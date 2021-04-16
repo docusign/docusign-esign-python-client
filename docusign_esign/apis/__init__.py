@@ -16,9 +16,8 @@ from .groups_api import GroupsApi
 from .notary_api import NotaryApi
 from .organizations_api import OrganizationsApi
 from .power_forms_api import PowerFormsApi
+from .signature_api import SignatureApi
 from .signing_groups_api import SigningGroupsApi
 from .templates_api import TemplatesApi
-from .trust_service_providers_api import TrustServiceProvidersApi
 from .users_api import UsersApi
 from .workspaces_api import WorkspacesApi
-from .bulk_envelopes_api import BulkEnvelopesApi

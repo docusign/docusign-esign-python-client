@@ -29,12 +29,11 @@ from .apis.groups_api import GroupsApi
 from .apis.notary_api import NotaryApi
 from .apis.organizations_api import OrganizationsApi
 from .apis.power_forms_api import PowerFormsApi
+from .apis.signature_api import SignatureApi
 from .apis.signing_groups_api import SigningGroupsApi
 from .apis.templates_api import TemplatesApi
-from .apis.trust_service_providers_api import TrustServiceProvidersApi
 from .apis.users_api import UsersApi
 from .apis.workspaces_api import WorkspacesApi
-from .apis.bulk_envelopes_api import BulkEnvelopesApi
 
 # import models into sdk package
 from docusign_esign.models.account_address import AccountAddress
