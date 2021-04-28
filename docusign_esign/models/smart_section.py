@@ -89,6 +89,7 @@ class SmartSection(object):
         'shared': 'str',
         'shared_metadata': 'PropertyMetadata',
         'smart_contract_information': 'SmartContractInformation',
+        'source': 'str',
         'start_anchor': 'str',
         'start_position': 'SmartSectionAnchorPosition',
         'status': 'str',
@@ -175,6 +176,7 @@ class SmartSection(object):
         'shared': 'shared',
         'shared_metadata': 'sharedMetadata',
         'smart_contract_information': 'smartContractInformation',
+        'source': 'source',
         'start_anchor': 'startAnchor',
         'start_position': 'startPosition',
         'status': 'status',
@@ -202,7 +204,7 @@ class SmartSection(object):
         'y_position_metadata': 'yPositionMetadata'
     }
 
-    def __init__(self, anchor_allow_white_space_in_characters=None, anchor_allow_white_space_in_characters_metadata=None, anchor_case_sensitive=None, anchor_case_sensitive_metadata=None, anchor_horizontal_alignment=None, anchor_horizontal_alignment_metadata=None, anchor_ignore_if_not_present=None, anchor_ignore_if_not_present_metadata=None, anchor_match_whole_word=None, anchor_match_whole_word_metadata=None, anchor_string=None, anchor_string_metadata=None, anchor_tab_processor_version=None, anchor_tab_processor_version_metadata=None, anchor_units=None, anchor_units_metadata=None, anchor_x_offset=None, anchor_x_offset_metadata=None, anchor_y_offset=None, anchor_y_offset_metadata=None, case_sensitive=None, conditional_parent_label=None, conditional_parent_label_metadata=None, conditional_parent_value=None, conditional_parent_value_metadata=None, custom_tab_id=None, custom_tab_id_metadata=None, display_settings=None, document_id=None, document_id_metadata=None, end_anchor=None, end_position=None, error_details=None, form_order=None, form_order_metadata=None, form_page_label=None, form_page_label_metadata=None, form_page_number=None, form_page_number_metadata=None, height=None, height_metadata=None, locked=None, locked_metadata=None, merge_field=None, merge_field_xml=None, overlay_type=None, overlay_type_metadata=None, page_number=None, page_number_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_id_guid_metadata=None, recipient_id_metadata=None, remove_end_anchor=None, remove_start_anchor=None, shared=None, shared_metadata=None, smart_contract_information=None, start_anchor=None, start_position=None, status=None, status_metadata=None, tab_group_labels=None, tab_group_labels_metadata=None, tab_id=None, tab_id_metadata=None, tab_label=None, tab_order=None, tab_order_metadata=None, tab_type=None, tab_type_metadata=None, template_locked=None, template_locked_metadata=None, template_required=None, template_required_metadata=None, tooltip=None, tool_tip_metadata=None, width=None, width_metadata=None, x_position=None, x_position_metadata=None, y_position=None, y_position_metadata=None):  # noqa: E501
+    def __init__(self, anchor_allow_white_space_in_characters=None, anchor_allow_white_space_in_characters_metadata=None, anchor_case_sensitive=None, anchor_case_sensitive_metadata=None, anchor_horizontal_alignment=None, anchor_horizontal_alignment_metadata=None, anchor_ignore_if_not_present=None, anchor_ignore_if_not_present_metadata=None, anchor_match_whole_word=None, anchor_match_whole_word_metadata=None, anchor_string=None, anchor_string_metadata=None, anchor_tab_processor_version=None, anchor_tab_processor_version_metadata=None, anchor_units=None, anchor_units_metadata=None, anchor_x_offset=None, anchor_x_offset_metadata=None, anchor_y_offset=None, anchor_y_offset_metadata=None, case_sensitive=None, conditional_parent_label=None, conditional_parent_label_metadata=None, conditional_parent_value=None, conditional_parent_value_metadata=None, custom_tab_id=None, custom_tab_id_metadata=None, display_settings=None, document_id=None, document_id_metadata=None, end_anchor=None, end_position=None, error_details=None, form_order=None, form_order_metadata=None, form_page_label=None, form_page_label_metadata=None, form_page_number=None, form_page_number_metadata=None, height=None, height_metadata=None, locked=None, locked_metadata=None, merge_field=None, merge_field_xml=None, overlay_type=None, overlay_type_metadata=None, page_number=None, page_number_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_id_guid_metadata=None, recipient_id_metadata=None, remove_end_anchor=None, remove_start_anchor=None, shared=None, shared_metadata=None, smart_contract_information=None, source=None, start_anchor=None, start_position=None, status=None, status_metadata=None, tab_group_labels=None, tab_group_labels_metadata=None, tab_id=None, tab_id_metadata=None, tab_label=None, tab_order=None, tab_order_metadata=None, tab_type=None, tab_type_metadata=None, template_locked=None, template_locked_metadata=None, template_required=None, template_required_metadata=None, tooltip=None, tool_tip_metadata=None, width=None, width_metadata=None, x_position=None, x_position_metadata=None, y_position=None, y_position_metadata=None):  # noqa: E501
         """SmartSection - a model defined in Swagger"""  # noqa: E501
 
         self._anchor_allow_white_space_in_characters = None
@@ -263,6 +265,7 @@ class SmartSection(object):
         self._shared = None
         self._shared_metadata = None
         self._smart_contract_information = None
+        self._source = None
         self._start_anchor = None
         self._start_position = None
         self._status = None
@@ -406,6 +409,8 @@ class SmartSection(object):
             self.shared_metadata = shared_metadata
         if smart_contract_information is not None:
             self.smart_contract_information = smart_contract_information
+        if source is not None:
+            self.source = source
         if start_anchor is not None:
             self.start_anchor = start_anchor
         if start_position is not None:
@@ -1732,6 +1737,29 @@ class SmartSection(object):
         """
 
         self._smart_contract_information = smart_contract_information
+
+    @property
+    def source(self):
+        """Gets the source of this SmartSection.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The source of this SmartSection.  # noqa: E501
+        :rtype: str
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """Sets the source of this SmartSection.
+
+          # noqa: E501
+
+        :param source: The source of this SmartSection.  # noqa: E501
+        :type: str
+        """
+
+        self._source = source
 
     @property
     def start_anchor(self):

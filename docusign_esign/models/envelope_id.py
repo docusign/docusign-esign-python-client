@@ -90,6 +90,7 @@ class EnvelopeId(object):
         'recipient_id_guid_metadata': 'PropertyMetadata',
         'recipient_id_metadata': 'PropertyMetadata',
         'smart_contract_information': 'SmartContractInformation',
+        'source': 'str',
         'status': 'str',
         'status_metadata': 'PropertyMetadata',
         'tab_group_labels': 'list[str]',
@@ -178,6 +179,7 @@ class EnvelopeId(object):
         'recipient_id_guid_metadata': 'recipientIdGuidMetadata',
         'recipient_id_metadata': 'recipientIdMetadata',
         'smart_contract_information': 'smartContractInformation',
+        'source': 'source',
         'status': 'status',
         'status_metadata': 'statusMetadata',
         'tab_group_labels': 'tabGroupLabels',
@@ -206,7 +208,7 @@ class EnvelopeId(object):
         'y_position_metadata': 'yPositionMetadata'
     }
 
-    def __init__(self, anchor_allow_white_space_in_characters=None, anchor_allow_white_space_in_characters_metadata=None, anchor_case_sensitive=None, anchor_case_sensitive_metadata=None, anchor_horizontal_alignment=None, anchor_horizontal_alignment_metadata=None, anchor_ignore_if_not_present=None, anchor_ignore_if_not_present_metadata=None, anchor_match_whole_word=None, anchor_match_whole_word_metadata=None, anchor_string=None, anchor_string_metadata=None, anchor_tab_processor_version=None, anchor_tab_processor_version_metadata=None, anchor_units=None, anchor_units_metadata=None, anchor_x_offset=None, anchor_x_offset_metadata=None, anchor_y_offset=None, anchor_y_offset_metadata=None, bold=None, bold_metadata=None, conditional_parent_label=None, conditional_parent_label_metadata=None, conditional_parent_value=None, conditional_parent_value_metadata=None, custom_tab_id=None, custom_tab_id_metadata=None, document_id=None, document_id_metadata=None, error_details=None, font=None, font_color=None, font_color_metadata=None, font_metadata=None, font_size=None, font_size_metadata=None, form_order=None, form_order_metadata=None, form_page_label=None, form_page_label_metadata=None, form_page_number=None, form_page_number_metadata=None, height=None, height_metadata=None, italic=None, italic_metadata=None, locale_policy=None, merge_field=None, merge_field_xml=None, name=None, name_metadata=None, page_number=None, page_number_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_id_guid_metadata=None, recipient_id_metadata=None, smart_contract_information=None, status=None, status_metadata=None, tab_group_labels=None, tab_group_labels_metadata=None, tab_id=None, tab_id_metadata=None, tab_label=None, tab_label_metadata=None, tab_order=None, tab_order_metadata=None, tab_type=None, tab_type_metadata=None, template_locked=None, template_locked_metadata=None, template_required=None, template_required_metadata=None, tooltip=None, tool_tip_metadata=None, underline=None, underline_metadata=None, width=None, width_metadata=None, x_position=None, x_position_metadata=None, y_position=None, y_position_metadata=None):  # noqa: E501
+    def __init__(self, anchor_allow_white_space_in_characters=None, anchor_allow_white_space_in_characters_metadata=None, anchor_case_sensitive=None, anchor_case_sensitive_metadata=None, anchor_horizontal_alignment=None, anchor_horizontal_alignment_metadata=None, anchor_ignore_if_not_present=None, anchor_ignore_if_not_present_metadata=None, anchor_match_whole_word=None, anchor_match_whole_word_metadata=None, anchor_string=None, anchor_string_metadata=None, anchor_tab_processor_version=None, anchor_tab_processor_version_metadata=None, anchor_units=None, anchor_units_metadata=None, anchor_x_offset=None, anchor_x_offset_metadata=None, anchor_y_offset=None, anchor_y_offset_metadata=None, bold=None, bold_metadata=None, conditional_parent_label=None, conditional_parent_label_metadata=None, conditional_parent_value=None, conditional_parent_value_metadata=None, custom_tab_id=None, custom_tab_id_metadata=None, document_id=None, document_id_metadata=None, error_details=None, font=None, font_color=None, font_color_metadata=None, font_metadata=None, font_size=None, font_size_metadata=None, form_order=None, form_order_metadata=None, form_page_label=None, form_page_label_metadata=None, form_page_number=None, form_page_number_metadata=None, height=None, height_metadata=None, italic=None, italic_metadata=None, locale_policy=None, merge_field=None, merge_field_xml=None, name=None, name_metadata=None, page_number=None, page_number_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_id_guid_metadata=None, recipient_id_metadata=None, smart_contract_information=None, source=None, status=None, status_metadata=None, tab_group_labels=None, tab_group_labels_metadata=None, tab_id=None, tab_id_metadata=None, tab_label=None, tab_label_metadata=None, tab_order=None, tab_order_metadata=None, tab_type=None, tab_type_metadata=None, template_locked=None, template_locked_metadata=None, template_required=None, template_required_metadata=None, tooltip=None, tool_tip_metadata=None, underline=None, underline_metadata=None, width=None, width_metadata=None, x_position=None, x_position_metadata=None, y_position=None, y_position_metadata=None):  # noqa: E501
         """EnvelopeId - a model defined in Swagger"""  # noqa: E501
 
         self._anchor_allow_white_space_in_characters = None
@@ -268,6 +270,7 @@ class EnvelopeId(object):
         self._recipient_id_guid_metadata = None
         self._recipient_id_metadata = None
         self._smart_contract_information = None
+        self._source = None
         self._status = None
         self._status_metadata = None
         self._tab_group_labels = None
@@ -414,6 +417,8 @@ class EnvelopeId(object):
             self.recipient_id_metadata = recipient_id_metadata
         if smart_contract_information is not None:
             self.smart_contract_information = smart_contract_information
+        if source is not None:
+            self.source = source
         if status is not None:
             self.status = status
         if status_metadata is not None:
@@ -1761,6 +1766,29 @@ class EnvelopeId(object):
         """
 
         self._smart_contract_information = smart_contract_information
+
+    @property
+    def source(self):
+        """Gets the source of this EnvelopeId.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The source of this EnvelopeId.  # noqa: E501
+        :rtype: str
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """Sets the source of this EnvelopeId.
+
+          # noqa: E501
+
+        :param source: The source of this EnvelopeId.  # noqa: E501
+        :type: str
+        """
+
+        self._source = source
 
     @property
     def status(self):
