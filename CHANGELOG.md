@@ -3,6 +3,14 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [3.9.0] - eSignature API v2.1-21.1.01.03 - 2021-04-22
+### Added
+- Added support for version v2.1-21.1.01.03 of the DocuSign eSignature API.
+### Updated
+- Updated the SDK release version.
+- Updated `user_agent` in configurations. Eg; `'Swagger-Codegen/v2.1/3.9.0rc1/python3'`
+- Updated test cases to remove printing sensitive info
+
 ## [3.8.1] - eSignature API v2.1-20.4.01 - 2021-02-26
 ### Changed
 - Added support for version v2.1-20.4.01 of the DocuSign eSignature API.
