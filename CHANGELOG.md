@@ -5,8 +5,10 @@ See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for
 
 ## [3.9.0] - eSignature API v2.1-21.1.01.03 - 2021-04-22
 ### Added
-- Added support for version v2.1-21.1.01.03 of the DocuSign eSignature API.
+- Added new methods `deleteCustomFieldsV2`, `deletePageInfoV2`, `getApplianceEnvelopeInfo`, `getTemplateInfo` to envelopes.
+- Added new method `deleteConnectSecret` to connect.
 ### Updated
+- Added support for version v2.1-21.1.01.03 of the DocuSign eSignature API.
 - Updated the SDK release version.
 - Updated `user_agent` in configurations. Eg; `'Swagger-Codegen/v2.1/3.9.0rc1/python3'`
 - Updated test cases to remove printing sensitive info
