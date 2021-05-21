@@ -3,9 +3,19 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [2.9.0] - eSignature API v2-21.1.01.03 - 2021-04-22
+## [2.10.0rc1] - eSignature API  v2-21.1.02.00 - 2021-05-20
+### Breaking
+- Removed methods `get_account_settings_export`,`get_seal_providers` from Accounts.
+- Removed methods `create_connect_secret`,`delete_connect_secret`,`generate_connect_secret`,`get_connect_secrets` from Connect.
+- Removed methods `complete_sign_hash`,`get_user_info`,`health_check`,`sign_hash_session_info`,`update_transaction` from TrustServiceProviders.
+- Removed method `get_user_list_export` from Users.
+### Changed
+- Added support for version v2-21.1.02.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
 ### Added
-- Added new method `delete_connect_secret` to connect.
+- PyPi description is being shown from Readme file.
+
+## [2.9.0] - eSignature API v2-21.1.01.03 - 2021-04-22
 ### Changed
 - Added support for version v2-21.1.01.03 of the DocuSign eSignature API.
 - Updated the SDK release version.

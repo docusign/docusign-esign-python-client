@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages, Command, os  # noqa: H301
 
 NAME = "docusign-esign"
-VERSION = "2.9.0"
+VERSION = "2.10.0rc1"
 # To install the library, run the following
 #
 # python setup.py install
@@ -35,6 +35,10 @@ class CleanCommand(Command):
     def run(self):
         os.system('rm -vrf ./build ./dist ./*.pyc ./*.tgz ./*.egg-info')
 
+this_directory = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
     name=NAME,
     version=VERSION,
@@ -48,7 +52,6 @@ setup(
     cmdclass={
             'clean': CleanCommand,
     },
-    long_description="""\
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
-    """
+    long_description=long_description,
+    long_description_content_type='text/markdown'
 )
