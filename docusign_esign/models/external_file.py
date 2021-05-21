@@ -32,9 +32,11 @@ class ExternalFile(object):
     """
     swagger_types = {
         '_date': 'str',
+        'has_composite_template': 'str',
         'id': 'str',
         'img': 'str',
         'name': 'str',
+        'owner_name': 'str',
         'size': 'str',
         'supported': 'str',
         'type': 'str',
@@ -43,22 +45,26 @@ class ExternalFile(object):
 
     attribute_map = {
         '_date': 'date',
+        'has_composite_template': 'hasCompositeTemplate',
         'id': 'id',
         'img': 'img',
         'name': 'name',
+        'owner_name': 'ownerName',
         'size': 'size',
         'supported': 'supported',
         'type': 'type',
         'uri': 'uri'
     }
 
-    def __init__(self, _date=None, id=None, img=None, name=None, size=None, supported=None, type=None, uri=None):  # noqa: E501
+    def __init__(self, _date=None, has_composite_template=None, id=None, img=None, name=None, owner_name=None, size=None, supported=None, type=None, uri=None):  # noqa: E501
         """ExternalFile - a model defined in Swagger"""  # noqa: E501
 
         self.__date = None
+        self._has_composite_template = None
         self._id = None
         self._img = None
         self._name = None
+        self._owner_name = None
         self._size = None
         self._supported = None
         self._type = None
@@ -67,12 +73,16 @@ class ExternalFile(object):
 
         if _date is not None:
             self._date = _date
+        if has_composite_template is not None:
+            self.has_composite_template = has_composite_template
         if id is not None:
             self.id = id
         if img is not None:
             self.img = img
         if name is not None:
             self.name = name
+        if owner_name is not None:
+            self.owner_name = owner_name
         if size is not None:
             self.size = size
         if supported is not None:
@@ -104,6 +114,29 @@ class ExternalFile(object):
         """
 
         self.__date = _date
+
+    @property
+    def has_composite_template(self):
+        """Gets the has_composite_template of this ExternalFile.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The has_composite_template of this ExternalFile.  # noqa: E501
+        :rtype: str
+        """
+        return self._has_composite_template
+
+    @has_composite_template.setter
+    def has_composite_template(self, has_composite_template):
+        """Sets the has_composite_template of this ExternalFile.
+
+          # noqa: E501
+
+        :param has_composite_template: The has_composite_template of this ExternalFile.  # noqa: E501
+        :type: str
+        """
+
+        self._has_composite_template = has_composite_template
 
     @property
     def id(self):
@@ -173,6 +206,29 @@ class ExternalFile(object):
         """
 
         self._name = name
+
+    @property
+    def owner_name(self):
+        """Gets the owner_name of this ExternalFile.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The owner_name of this ExternalFile.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_name
+
+    @owner_name.setter
+    def owner_name(self, owner_name):
+        """Sets the owner_name of this ExternalFile.
+
+          # noqa: E501
+
+        :param owner_name: The owner_name of this ExternalFile.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_name = owner_name
 
     @property
     def size(self):

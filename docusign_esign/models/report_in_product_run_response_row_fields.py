@@ -40,6 +40,7 @@ class ReportInProductRunResponseRowFields(object):
         'authentication_type': 'str',
         'average_time_to_complete_seconds': 'str',
         'avg_complete_seconds': 'str',
+        'capture_method': 'str',
         'completed': 'str',
         'completed_ts': 'str',
         'created_date': 'str',
@@ -78,11 +79,14 @@ class ReportInProductRunResponseRowFields(object):
         'hours_to_complete_start': 'str',
         'id_checks_attempted': 'str',
         'id_checks_failed': 'str',
+        'id_country': 'str',
+        'id_method': 'str',
         'initial_send_ts': 'str',
         'ip_address': 'str',
         'last_activity': 'str',
         'last_activity_date': 'str',
         'last_sent_date': 'str',
+        'metadata_removed': 'str',
         'not_signed': 'str',
         'number_of_authenticated_recipients': 'str',
         'number_of_completed_signatures': 'str',
@@ -100,6 +104,8 @@ class ReportInProductRunResponseRowFields(object):
         'period_start': 'str',
         'phone_calls_attempted': 'str',
         'phone_calls_failed': 'str',
+        'pii_redacted': 'str',
+        'purge_date': 'str',
         'reason_for_declining': 'str',
         'reason_for_voiding': 'str',
         'reassign_reason': 'str',
@@ -134,6 +140,7 @@ class ReportInProductRunResponseRowFields(object):
         'status': 'str',
         'status_changed_date': 'str',
         'status_changed_ts': 'str',
+        'status_comment': 'str',
         'subject': 'str',
         'successes': 'str',
         'templates_created': 'str',
@@ -168,6 +175,7 @@ class ReportInProductRunResponseRowFields(object):
         'authentication_type': 'authenticationType',
         'average_time_to_complete_seconds': 'averageTimeToCompleteSeconds',
         'avg_complete_seconds': 'avgCompleteSeconds',
+        'capture_method': 'captureMethod',
         'completed': 'completed',
         'completed_ts': 'completedTs',
         'created_date': 'createdDate',
@@ -206,11 +214,14 @@ class ReportInProductRunResponseRowFields(object):
         'hours_to_complete_start': 'hoursToCompleteStart',
         'id_checks_attempted': 'idChecksAttempted',
         'id_checks_failed': 'idChecksFailed',
+        'id_country': 'idCountry',
+        'id_method': 'idMethod',
         'initial_send_ts': 'initialSendTs',
         'ip_address': 'ipAddress',
         'last_activity': 'lastActivity',
         'last_activity_date': 'lastActivityDate',
         'last_sent_date': 'lastSentDate',
+        'metadata_removed': 'metadataRemoved',
         'not_signed': 'notSigned',
         'number_of_authenticated_recipients': 'numberOfAuthenticatedRecipients',
         'number_of_completed_signatures': 'numberOfCompletedSignatures',
@@ -228,6 +239,8 @@ class ReportInProductRunResponseRowFields(object):
         'period_start': 'periodStart',
         'phone_calls_attempted': 'phoneCallsAttempted',
         'phone_calls_failed': 'phoneCallsFailed',
+        'pii_redacted': 'piiRedacted',
+        'purge_date': 'purgeDate',
         'reason_for_declining': 'reasonForDeclining',
         'reason_for_voiding': 'reasonForVoiding',
         'reassign_reason': 'reassignReason',
@@ -262,6 +275,7 @@ class ReportInProductRunResponseRowFields(object):
         'status': 'status',
         'status_changed_date': 'statusChangedDate',
         'status_changed_ts': 'statusChangedTs',
+        'status_comment': 'statusComment',
         'subject': 'subject',
         'successes': 'successes',
         'templates_created': 'templatesCreated',
@@ -286,7 +300,7 @@ class ReportInProductRunResponseRowFields(object):
         'voided_ts': 'voidedTs'
     }
 
-    def __init__(self, access_code_required=None, access_codes_attempted=None, access_codes_failed=None, account_id=None, authentication_category=None, authentication_success=None, authentication_type=None, average_time_to_complete_seconds=None, avg_complete_seconds=None, completed=None, completed_ts=None, created_date=None, custom_field=None, declined_date=None, declined_reason=None, delivered_date=None, envelope_count=None, envelope_creator=None, envelope_id=None, envelope_initial_send_ts=None, envelopes_billed=None, envelopes_completed=None, envelopes_completed_count=None, envelopes_declined=None, envelopes_sent=None, envelopes_sent_count=None, envelopes_voided=None, envelope_voided_reason=None, eod_document_description=None, eod_document_name=None, eod_document_profile_id=None, eod_transaction_id=None, eod_transaction_name=None, event_date=None, expiration_date=None, expired_ts=None, failure_reason=None, failures=None, failure_vendor_code=None, failure_vendor_reason=None, first_send_ts=None, group_id=None, group_name=None, hours_to_complete_end=None, hours_to_complete_start=None, id_checks_attempted=None, id_checks_failed=None, initial_send_ts=None, ip_address=None, last_activity=None, last_activity_date=None, last_sent_date=None, not_signed=None, number_of_authenticated_recipients=None, number_of_completed_signatures=None, number_of_documents=None, number_of_pages=None, number_of_recipients=None, number_of_sends=None, number_of_signers=None, number_of_total_documents=None, number_of_total_pages=None, number_of_total_signers=None, number_of_unique_senders=None, number_total_recipients=None, period_end=None, period_start=None, phone_calls_attempted=None, phone_calls_failed=None, reason_for_declining=None, reason_for_voiding=None, reassign_reason=None, received=None, recipient=None, recipient_action=None, recipient_company_name=None, recipient_country=None, recipient_email=None, recipient_id=None, recipient_name=None, recipient_template_role_name=None, recipient_title=None, recipient_type=None, recipient_user_id=None, remaining_signatures=None, routing_order=None, sender_account_id=None, sender_company_name=None, sender_country=None, sender_email=None, sender_ip_address=None, sender_job_title=None, sender_name=None, sender_user_id=None, sign_date=None, signed=None, signed_date=None, signed_on_mobile=None, signed_on_paper=None, signer_list=None, status=None, status_changed_date=None, status_changed_ts=None, subject=None, successes=None, templates_created=None, templates_created_count=None, terminal_status_date=None, time_to_complete_seconds=None, time_to_deliver=None, total_documents=None, total_envelopes=None, total_pages=None, total_recipients=None, total_signers=None, unique_senders=None, user_account_email=None, user_account_name=None, user_account_status=None, user_count=None, user_id=None, verification_status=None, verification_type=None, view_date=None, voided_ts=None):  # noqa: E501
+    def __init__(self, access_code_required=None, access_codes_attempted=None, access_codes_failed=None, account_id=None, authentication_category=None, authentication_success=None, authentication_type=None, average_time_to_complete_seconds=None, avg_complete_seconds=None, capture_method=None, completed=None, completed_ts=None, created_date=None, custom_field=None, declined_date=None, declined_reason=None, delivered_date=None, envelope_count=None, envelope_creator=None, envelope_id=None, envelope_initial_send_ts=None, envelopes_billed=None, envelopes_completed=None, envelopes_completed_count=None, envelopes_declined=None, envelopes_sent=None, envelopes_sent_count=None, envelopes_voided=None, envelope_voided_reason=None, eod_document_description=None, eod_document_name=None, eod_document_profile_id=None, eod_transaction_id=None, eod_transaction_name=None, event_date=None, expiration_date=None, expired_ts=None, failure_reason=None, failures=None, failure_vendor_code=None, failure_vendor_reason=None, first_send_ts=None, group_id=None, group_name=None, hours_to_complete_end=None, hours_to_complete_start=None, id_checks_attempted=None, id_checks_failed=None, id_country=None, id_method=None, initial_send_ts=None, ip_address=None, last_activity=None, last_activity_date=None, last_sent_date=None, metadata_removed=None, not_signed=None, number_of_authenticated_recipients=None, number_of_completed_signatures=None, number_of_documents=None, number_of_pages=None, number_of_recipients=None, number_of_sends=None, number_of_signers=None, number_of_total_documents=None, number_of_total_pages=None, number_of_total_signers=None, number_of_unique_senders=None, number_total_recipients=None, period_end=None, period_start=None, phone_calls_attempted=None, phone_calls_failed=None, pii_redacted=None, purge_date=None, reason_for_declining=None, reason_for_voiding=None, reassign_reason=None, received=None, recipient=None, recipient_action=None, recipient_company_name=None, recipient_country=None, recipient_email=None, recipient_id=None, recipient_name=None, recipient_template_role_name=None, recipient_title=None, recipient_type=None, recipient_user_id=None, remaining_signatures=None, routing_order=None, sender_account_id=None, sender_company_name=None, sender_country=None, sender_email=None, sender_ip_address=None, sender_job_title=None, sender_name=None, sender_user_id=None, sign_date=None, signed=None, signed_date=None, signed_on_mobile=None, signed_on_paper=None, signer_list=None, status=None, status_changed_date=None, status_changed_ts=None, status_comment=None, subject=None, successes=None, templates_created=None, templates_created_count=None, terminal_status_date=None, time_to_complete_seconds=None, time_to_deliver=None, total_documents=None, total_envelopes=None, total_pages=None, total_recipients=None, total_signers=None, unique_senders=None, user_account_email=None, user_account_name=None, user_account_status=None, user_count=None, user_id=None, verification_status=None, verification_type=None, view_date=None, voided_ts=None):  # noqa: E501
         """ReportInProductRunResponseRowFields - a model defined in Swagger"""  # noqa: E501
 
         self._access_code_required = None
@@ -298,6 +312,7 @@ class ReportInProductRunResponseRowFields(object):
         self._authentication_type = None
         self._average_time_to_complete_seconds = None
         self._avg_complete_seconds = None
+        self._capture_method = None
         self._completed = None
         self._completed_ts = None
         self._created_date = None
@@ -336,11 +351,14 @@ class ReportInProductRunResponseRowFields(object):
         self._hours_to_complete_start = None
         self._id_checks_attempted = None
         self._id_checks_failed = None
+        self._id_country = None
+        self._id_method = None
         self._initial_send_ts = None
         self._ip_address = None
         self._last_activity = None
         self._last_activity_date = None
         self._last_sent_date = None
+        self._metadata_removed = None
         self._not_signed = None
         self._number_of_authenticated_recipients = None
         self._number_of_completed_signatures = None
@@ -358,6 +376,8 @@ class ReportInProductRunResponseRowFields(object):
         self._period_start = None
         self._phone_calls_attempted = None
         self._phone_calls_failed = None
+        self._pii_redacted = None
+        self._purge_date = None
         self._reason_for_declining = None
         self._reason_for_voiding = None
         self._reassign_reason = None
@@ -392,6 +412,7 @@ class ReportInProductRunResponseRowFields(object):
         self._status = None
         self._status_changed_date = None
         self._status_changed_ts = None
+        self._status_comment = None
         self._subject = None
         self._successes = None
         self._templates_created = None
@@ -434,6 +455,8 @@ class ReportInProductRunResponseRowFields(object):
             self.average_time_to_complete_seconds = average_time_to_complete_seconds
         if avg_complete_seconds is not None:
             self.avg_complete_seconds = avg_complete_seconds
+        if capture_method is not None:
+            self.capture_method = capture_method
         if completed is not None:
             self.completed = completed
         if completed_ts is not None:
@@ -510,6 +533,10 @@ class ReportInProductRunResponseRowFields(object):
             self.id_checks_attempted = id_checks_attempted
         if id_checks_failed is not None:
             self.id_checks_failed = id_checks_failed
+        if id_country is not None:
+            self.id_country = id_country
+        if id_method is not None:
+            self.id_method = id_method
         if initial_send_ts is not None:
             self.initial_send_ts = initial_send_ts
         if ip_address is not None:
@@ -520,6 +547,8 @@ class ReportInProductRunResponseRowFields(object):
             self.last_activity_date = last_activity_date
         if last_sent_date is not None:
             self.last_sent_date = last_sent_date
+        if metadata_removed is not None:
+            self.metadata_removed = metadata_removed
         if not_signed is not None:
             self.not_signed = not_signed
         if number_of_authenticated_recipients is not None:
@@ -554,6 +583,10 @@ class ReportInProductRunResponseRowFields(object):
             self.phone_calls_attempted = phone_calls_attempted
         if phone_calls_failed is not None:
             self.phone_calls_failed = phone_calls_failed
+        if pii_redacted is not None:
+            self.pii_redacted = pii_redacted
+        if purge_date is not None:
+            self.purge_date = purge_date
         if reason_for_declining is not None:
             self.reason_for_declining = reason_for_declining
         if reason_for_voiding is not None:
@@ -622,6 +655,8 @@ class ReportInProductRunResponseRowFields(object):
             self.status_changed_date = status_changed_date
         if status_changed_ts is not None:
             self.status_changed_ts = status_changed_ts
+        if status_comment is not None:
+            self.status_comment = status_comment
         if subject is not None:
             self.subject = subject
         if successes is not None:
@@ -873,6 +908,29 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._avg_complete_seconds = avg_complete_seconds
+
+    @property
+    def capture_method(self):
+        """Gets the capture_method of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The capture_method of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._capture_method
+
+    @capture_method.setter
+    def capture_method(self, capture_method):
+        """Sets the capture_method of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param capture_method: The capture_method of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._capture_method = capture_method
 
     @property
     def completed(self):
@@ -1749,6 +1807,52 @@ class ReportInProductRunResponseRowFields(object):
         self._id_checks_failed = id_checks_failed
 
     @property
+    def id_country(self):
+        """Gets the id_country of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The id_country of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_country
+
+    @id_country.setter
+    def id_country(self, id_country):
+        """Sets the id_country of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param id_country: The id_country of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._id_country = id_country
+
+    @property
+    def id_method(self):
+        """Gets the id_method of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The id_method of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_method
+
+    @id_method.setter
+    def id_method(self, id_method):
+        """Sets the id_method of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param id_method: The id_method of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._id_method = id_method
+
+    @property
     def initial_send_ts(self):
         """Gets the initial_send_ts of this ReportInProductRunResponseRowFields.  # noqa: E501
 
@@ -1862,6 +1966,29 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._last_sent_date = last_sent_date
+
+    @property
+    def metadata_removed(self):
+        """Gets the metadata_removed of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The metadata_removed of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._metadata_removed
+
+    @metadata_removed.setter
+    def metadata_removed(self, metadata_removed):
+        """Sets the metadata_removed of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param metadata_removed: The metadata_removed of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._metadata_removed = metadata_removed
 
     @property
     def not_signed(self):
@@ -2253,6 +2380,52 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._phone_calls_failed = phone_calls_failed
+
+    @property
+    def pii_redacted(self):
+        """Gets the pii_redacted of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pii_redacted of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._pii_redacted
+
+    @pii_redacted.setter
+    def pii_redacted(self, pii_redacted):
+        """Sets the pii_redacted of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param pii_redacted: The pii_redacted of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._pii_redacted = pii_redacted
+
+    @property
+    def purge_date(self):
+        """Gets the purge_date of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The purge_date of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._purge_date
+
+    @purge_date.setter
+    def purge_date(self, purge_date):
+        """Sets the purge_date of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param purge_date: The purge_date of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._purge_date = purge_date
 
     @property
     def reason_for_declining(self):
@@ -3035,6 +3208,29 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._status_changed_ts = status_changed_ts
+
+    @property
+    def status_comment(self):
+        """Gets the status_comment of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The status_comment of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._status_comment
+
+    @status_comment.setter
+    def status_comment(self, status_comment):
+        """Sets the status_comment of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param status_comment: The status_comment of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._status_comment = status_comment
 
     @property
     def subject(self):

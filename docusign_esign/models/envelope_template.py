@@ -58,6 +58,7 @@ class EnvelopeTemplate(object):
         'delivered_date_time': 'str',
         'description': 'str',
         'disable_responsive_document': 'str',
+        'document_base64': 'str',
         'documents': 'list[Document]',
         'documents_combined_uri': 'str',
         'documents_uri': 'str',
@@ -159,6 +160,7 @@ class EnvelopeTemplate(object):
         'delivered_date_time': 'deliveredDateTime',
         'description': 'description',
         'disable_responsive_document': 'disableResponsiveDocument',
+        'document_base64': 'documentBase64',
         'documents': 'documents',
         'documents_combined_uri': 'documentsCombinedUri',
         'documents_uri': 'documentsUri',
@@ -232,7 +234,7 @@ class EnvelopeTemplate(object):
         'workflow': 'workflow'
     }
 
-    def __init__(self, access_control_list_base64=None, allow_comments=None, allow_markup=None, allow_reassign=None, allow_view_history=None, any_signer=None, asynchronous=None, attachments_uri=None, authoritative_copy=None, authoritative_copy_default=None, auto_match=None, auto_match_specified_by_user=None, auto_navigation=None, brand_id=None, brand_lock=None, certificate_uri=None, completed_date_time=None, copy_recipient_data=None, created=None, created_date_time=None, custom_fields=None, custom_fields_uri=None, declined_date_time=None, deleted_date_time=None, delivered_date_time=None, description=None, disable_responsive_document=None, documents=None, documents_combined_uri=None, documents_uri=None, email_blurb=None, email_settings=None, email_subject=None, enable_wet_sign=None, enforce_signer_visibility=None, envelope_attachments=None, envelope_documents=None, envelope_id=None, envelope_id_stamping=None, envelope_location=None, envelope_metadata=None, envelope_uri=None, expire_after=None, expire_date_time=None, expire_enabled=None, external_envelope_id=None, favorited_by_me=None, folder_id=None, folder_ids=None, folder_name=None, folders=None, has_comments=None, has_form_data_changed=None, has_wav_file=None, holder=None, initial_sent_date_time=None, is21_cfr_part11=None, is_dynamic_envelope=None, is_signature_provider_envelope=None, last_modified=None, last_modified_by=None, last_modified_date_time=None, last_used=None, location=None, lock_information=None, message_lock=None, name=None, new_password=None, notification=None, notification_uri=None, owner=None, page_count=None, password=None, password_protected=None, power_form=None, power_forms=None, purge_completed_date=None, purge_request_date=None, purge_state=None, recipients=None, recipients_lock=None, recipients_uri=None, sender=None, sent_date_time=None, shared=None, signer_can_sign_on_mobile=None, signing_location=None, status=None, status_changed_date_time=None, status_date_time=None, template_id=None, templates_uri=None, transaction_id=None, uri=None, use_disclosure=None, voided_date_time=None, voided_reason=None, workflow=None):  # noqa: E501
+    def __init__(self, access_control_list_base64=None, allow_comments=None, allow_markup=None, allow_reassign=None, allow_view_history=None, any_signer=None, asynchronous=None, attachments_uri=None, authoritative_copy=None, authoritative_copy_default=None, auto_match=None, auto_match_specified_by_user=None, auto_navigation=None, brand_id=None, brand_lock=None, certificate_uri=None, completed_date_time=None, copy_recipient_data=None, created=None, created_date_time=None, custom_fields=None, custom_fields_uri=None, declined_date_time=None, deleted_date_time=None, delivered_date_time=None, description=None, disable_responsive_document=None, document_base64=None, documents=None, documents_combined_uri=None, documents_uri=None, email_blurb=None, email_settings=None, email_subject=None, enable_wet_sign=None, enforce_signer_visibility=None, envelope_attachments=None, envelope_documents=None, envelope_id=None, envelope_id_stamping=None, envelope_location=None, envelope_metadata=None, envelope_uri=None, expire_after=None, expire_date_time=None, expire_enabled=None, external_envelope_id=None, favorited_by_me=None, folder_id=None, folder_ids=None, folder_name=None, folders=None, has_comments=None, has_form_data_changed=None, has_wav_file=None, holder=None, initial_sent_date_time=None, is21_cfr_part11=None, is_dynamic_envelope=None, is_signature_provider_envelope=None, last_modified=None, last_modified_by=None, last_modified_date_time=None, last_used=None, location=None, lock_information=None, message_lock=None, name=None, new_password=None, notification=None, notification_uri=None, owner=None, page_count=None, password=None, password_protected=None, power_form=None, power_forms=None, purge_completed_date=None, purge_request_date=None, purge_state=None, recipients=None, recipients_lock=None, recipients_uri=None, sender=None, sent_date_time=None, shared=None, signer_can_sign_on_mobile=None, signing_location=None, status=None, status_changed_date_time=None, status_date_time=None, template_id=None, templates_uri=None, transaction_id=None, uri=None, use_disclosure=None, voided_date_time=None, voided_reason=None, workflow=None):  # noqa: E501
         """EnvelopeTemplate - a model defined in Swagger"""  # noqa: E501
 
         self._access_control_list_base64 = None
@@ -262,6 +264,7 @@ class EnvelopeTemplate(object):
         self._delivered_date_time = None
         self._description = None
         self._disable_responsive_document = None
+        self._document_base64 = None
         self._documents = None
         self._documents_combined_uri = None
         self._documents_uri = None
@@ -389,6 +392,8 @@ class EnvelopeTemplate(object):
             self.description = description
         if disable_responsive_document is not None:
             self.disable_responsive_document = disable_responsive_document
+        if document_base64 is not None:
+            self.document_base64 = document_base64
         if documents is not None:
             self.documents = documents
         if documents_combined_uri is not None:
@@ -1150,6 +1155,29 @@ class EnvelopeTemplate(object):
         """
 
         self._disable_responsive_document = disable_responsive_document
+
+    @property
+    def document_base64(self):
+        """Gets the document_base64 of this EnvelopeTemplate.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_base64 of this EnvelopeTemplate.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_base64
+
+    @document_base64.setter
+    def document_base64(self, document_base64):
+        """Sets the document_base64 of this EnvelopeTemplate.
+
+          # noqa: E501
+
+        :param document_base64: The document_base64 of this EnvelopeTemplate.  # noqa: E501
+        :type: str
+        """
+
+        self._document_base64 = document_base64
 
     @property
     def documents(self):

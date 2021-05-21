@@ -286,6 +286,8 @@ class AccountSettingsInformation(object):
         'enable_agreement_actions_for_e_sign_metadata': 'SettingsMetadata',
         'enable_auto_nav': 'str',
         'enable_auto_nav_metadata': 'SettingsMetadata',
+        'enable_bcc_dummy_link': 'str',
+        'enable_bcc_dummy_link_metadata': 'SettingsMetadata',
         'enable_calculated_fields': 'str',
         'enable_calculated_fields_metadata': 'SettingsMetadata',
         'enable_clickwraps': 'str',
@@ -306,12 +308,16 @@ class AccountSettingsInformation(object):
         'enable_in_browser_editor_metadata': 'SettingsMetadata',
         'enable_payment_processing': 'str',
         'enable_payment_processing_metadata': 'SettingsMetadata',
+        'enable_pdfa_conversion': 'str',
+        'enable_pdfa_conversion_metadata': 'SettingsMetadata',
         'enable_power_form': 'str',
         'enable_power_form_direct': 'str',
         'enable_power_form_direct_metadata': 'SettingsMetadata',
         'enable_power_form_metadata': 'SettingsMetadata',
         'enable_recipient_domain_validation': 'str',
         'enable_recipient_domain_validation_metadata': 'SettingsMetadata',
+        'enable_recipient_may_provide_phone_number': 'str',
+        'enable_recipient_may_provide_phone_number_metadata': 'SettingsMetadata',
         'enable_report_links': 'str',
         'enable_report_links_metadata': 'SettingsMetadata',
         'enable_require_sign_on_paper': 'str',
@@ -837,6 +843,8 @@ class AccountSettingsInformation(object):
         'enable_agreement_actions_for_e_sign_metadata': 'enableAgreementActionsForESignMetadata',
         'enable_auto_nav': 'enableAutoNav',
         'enable_auto_nav_metadata': 'enableAutoNavMetadata',
+        'enable_bcc_dummy_link': 'enableBccDummyLink',
+        'enable_bcc_dummy_link_metadata': 'enableBccDummyLinkMetadata',
         'enable_calculated_fields': 'enableCalculatedFields',
         'enable_calculated_fields_metadata': 'enableCalculatedFieldsMetadata',
         'enable_clickwraps': 'enableClickwraps',
@@ -857,12 +865,16 @@ class AccountSettingsInformation(object):
         'enable_in_browser_editor_metadata': 'enableInBrowserEditorMetadata',
         'enable_payment_processing': 'enablePaymentProcessing',
         'enable_payment_processing_metadata': 'enablePaymentProcessingMetadata',
+        'enable_pdfa_conversion': 'enablePDFAConversion',
+        'enable_pdfa_conversion_metadata': 'enablePDFAConversionMetadata',
         'enable_power_form': 'enablePowerForm',
         'enable_power_form_direct': 'enablePowerFormDirect',
         'enable_power_form_direct_metadata': 'enablePowerFormDirectMetadata',
         'enable_power_form_metadata': 'enablePowerFormMetadata',
         'enable_recipient_domain_validation': 'enableRecipientDomainValidation',
         'enable_recipient_domain_validation_metadata': 'enableRecipientDomainValidationMetadata',
+        'enable_recipient_may_provide_phone_number': 'enableRecipientMayProvidePhoneNumber',
+        'enable_recipient_may_provide_phone_number_metadata': 'enableRecipientMayProvidePhoneNumberMetadata',
         'enable_report_links': 'enableReportLinks',
         'enable_report_links_metadata': 'enableReportLinksMetadata',
         'enable_require_sign_on_paper': 'enableRequireSignOnPaper',
@@ -1390,6 +1402,8 @@ class AccountSettingsInformation(object):
         self._enable_agreement_actions_for_e_sign_metadata = None
         self._enable_auto_nav = None
         self._enable_auto_nav_metadata = None
+        self._enable_bcc_dummy_link = None
+        self._enable_bcc_dummy_link_metadata = None
         self._enable_calculated_fields = None
         self._enable_calculated_fields_metadata = None
         self._enable_clickwraps = None
@@ -1410,12 +1424,16 @@ class AccountSettingsInformation(object):
         self._enable_in_browser_editor_metadata = None
         self._enable_payment_processing = None
         self._enable_payment_processing_metadata = None
+        self._enable_pdfa_conversion = None
+        self._enable_pdfa_conversion_metadata = None
         self._enable_power_form = None
         self._enable_power_form_direct = None
         self._enable_power_form_direct_metadata = None
         self._enable_power_form_metadata = None
         self._enable_recipient_domain_validation = None
         self._enable_recipient_domain_validation_metadata = None
+        self._enable_recipient_may_provide_phone_number = None
+        self._enable_recipient_may_provide_phone_number_metadata = None
         self._enable_report_links = None
         self._enable_report_links_metadata = None
         self._enable_require_sign_on_paper = None
@@ -7301,6 +7319,50 @@ class AccountSettingsInformation(object):
         self._enable_auto_nav_metadata = enable_auto_nav_metadata
 
     @property
+    def enable_bcc_dummy_link(self):
+        """Gets the enable_bcc_dummy_link of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_bcc_dummy_link of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_bcc_dummy_link
+
+    @enable_bcc_dummy_link.setter
+    def enable_bcc_dummy_link(self, enable_bcc_dummy_link):
+        """Sets the enable_bcc_dummy_link of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_bcc_dummy_link: The enable_bcc_dummy_link of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_bcc_dummy_link = enable_bcc_dummy_link
+
+    @property
+    def enable_bcc_dummy_link_metadata(self):
+        """Gets the enable_bcc_dummy_link_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_bcc_dummy_link_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_bcc_dummy_link_metadata
+
+    @enable_bcc_dummy_link_metadata.setter
+    def enable_bcc_dummy_link_metadata(self, enable_bcc_dummy_link_metadata):
+        """Sets the enable_bcc_dummy_link_metadata of this AccountSettingsInformation.
+
+
+        :param enable_bcc_dummy_link_metadata: The enable_bcc_dummy_link_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_bcc_dummy_link_metadata = enable_bcc_dummy_link_metadata
+
+    @property
     def enable_calculated_fields(self):
         """Gets the enable_calculated_fields of this AccountSettingsInformation.  # noqa: E501
 
@@ -7741,6 +7803,50 @@ class AccountSettingsInformation(object):
         self._enable_payment_processing_metadata = enable_payment_processing_metadata
 
     @property
+    def enable_pdfa_conversion(self):
+        """Gets the enable_pdfa_conversion of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_pdfa_conversion of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_pdfa_conversion
+
+    @enable_pdfa_conversion.setter
+    def enable_pdfa_conversion(self, enable_pdfa_conversion):
+        """Sets the enable_pdfa_conversion of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_pdfa_conversion: The enable_pdfa_conversion of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_pdfa_conversion = enable_pdfa_conversion
+
+    @property
+    def enable_pdfa_conversion_metadata(self):
+        """Gets the enable_pdfa_conversion_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_pdfa_conversion_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_pdfa_conversion_metadata
+
+    @enable_pdfa_conversion_metadata.setter
+    def enable_pdfa_conversion_metadata(self, enable_pdfa_conversion_metadata):
+        """Sets the enable_pdfa_conversion_metadata of this AccountSettingsInformation.
+
+
+        :param enable_pdfa_conversion_metadata: The enable_pdfa_conversion_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_pdfa_conversion_metadata = enable_pdfa_conversion_metadata
+
+    @property
     def enable_power_form(self):
         """Gets the enable_power_form of this AccountSettingsInformation.  # noqa: E501
 
@@ -7871,6 +7977,50 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_recipient_domain_validation_metadata = enable_recipient_domain_validation_metadata
+
+    @property
+    def enable_recipient_may_provide_phone_number(self):
+        """Gets the enable_recipient_may_provide_phone_number of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_recipient_may_provide_phone_number of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_recipient_may_provide_phone_number
+
+    @enable_recipient_may_provide_phone_number.setter
+    def enable_recipient_may_provide_phone_number(self, enable_recipient_may_provide_phone_number):
+        """Sets the enable_recipient_may_provide_phone_number of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_recipient_may_provide_phone_number: The enable_recipient_may_provide_phone_number of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_recipient_may_provide_phone_number = enable_recipient_may_provide_phone_number
+
+    @property
+    def enable_recipient_may_provide_phone_number_metadata(self):
+        """Gets the enable_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_recipient_may_provide_phone_number_metadata
+
+    @enable_recipient_may_provide_phone_number_metadata.setter
+    def enable_recipient_may_provide_phone_number_metadata(self, enable_recipient_may_provide_phone_number_metadata):
+        """Sets the enable_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.
+
+
+        :param enable_recipient_may_provide_phone_number_metadata: The enable_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_recipient_may_provide_phone_number_metadata = enable_recipient_may_provide_phone_number_metadata
 
     @property
     def enable_report_links(self):

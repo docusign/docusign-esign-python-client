@@ -39,6 +39,7 @@ class BulkSendBatchStatus(object):
         'envelopes_uri': 'str',
         'failed': 'str',
         'mailing_list_id': 'str',
+        'mailing_list_name': 'str',
         'owner_user_id': 'str',
         'queued': 'str',
         'sender_user_id': 'str',
@@ -55,6 +56,7 @@ class BulkSendBatchStatus(object):
         'envelopes_uri': 'envelopesUri',
         'failed': 'failed',
         'mailing_list_id': 'mailingListId',
+        'mailing_list_name': 'mailingListName',
         'owner_user_id': 'ownerUserId',
         'queued': 'queued',
         'sender_user_id': 'senderUserId',
@@ -62,7 +64,7 @@ class BulkSendBatchStatus(object):
         'submitted_date': 'submittedDate'
     }
 
-    def __init__(self, batch_id=None, batch_name=None, batch_size=None, bulk_errors=None, envelope_id_or_template_id=None, envelopes_uri=None, failed=None, mailing_list_id=None, owner_user_id=None, queued=None, sender_user_id=None, sent=None, submitted_date=None):  # noqa: E501
+    def __init__(self, batch_id=None, batch_name=None, batch_size=None, bulk_errors=None, envelope_id_or_template_id=None, envelopes_uri=None, failed=None, mailing_list_id=None, mailing_list_name=None, owner_user_id=None, queued=None, sender_user_id=None, sent=None, submitted_date=None):  # noqa: E501
         """BulkSendBatchStatus - a model defined in Swagger"""  # noqa: E501
 
         self._batch_id = None
@@ -73,6 +75,7 @@ class BulkSendBatchStatus(object):
         self._envelopes_uri = None
         self._failed = None
         self._mailing_list_id = None
+        self._mailing_list_name = None
         self._owner_user_id = None
         self._queued = None
         self._sender_user_id = None
@@ -96,6 +99,8 @@ class BulkSendBatchStatus(object):
             self.failed = failed
         if mailing_list_id is not None:
             self.mailing_list_id = mailing_list_id
+        if mailing_list_name is not None:
+            self.mailing_list_name = mailing_list_name
         if owner_user_id is not None:
             self.owner_user_id = owner_user_id
         if queued is not None:
@@ -290,6 +295,29 @@ class BulkSendBatchStatus(object):
         """
 
         self._mailing_list_id = mailing_list_id
+
+    @property
+    def mailing_list_name(self):
+        """Gets the mailing_list_name of this BulkSendBatchStatus.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The mailing_list_name of this BulkSendBatchStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._mailing_list_name
+
+    @mailing_list_name.setter
+    def mailing_list_name(self, mailing_list_name):
+        """Sets the mailing_list_name of this BulkSendBatchStatus.
+
+          # noqa: E501
+
+        :param mailing_list_name: The mailing_list_name of this BulkSendBatchStatus.  # noqa: E501
+        :type: str
+        """
+
+        self._mailing_list_name = mailing_list_name
 
     @property
     def owner_user_id(self):

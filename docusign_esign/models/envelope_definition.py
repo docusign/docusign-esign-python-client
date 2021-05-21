@@ -58,6 +58,7 @@ class EnvelopeDefinition(object):
         'deleted_date_time': 'str',
         'delivered_date_time': 'str',
         'disable_responsive_document': 'str',
+        'document_base64': 'str',
         'documents': 'list[Document]',
         'documents_combined_uri': 'str',
         'documents_uri': 'str',
@@ -102,6 +103,7 @@ class EnvelopeDefinition(object):
         'recipients': 'Recipients',
         'recipients_lock': 'str',
         'recipients_uri': 'str',
+        'recipient_view_request': 'RecipientViewRequest',
         'sender': 'UserInfo',
         'sent_date_time': 'str',
         'signer_can_sign_on_mobile': 'str',
@@ -147,6 +149,7 @@ class EnvelopeDefinition(object):
         'deleted_date_time': 'deletedDateTime',
         'delivered_date_time': 'deliveredDateTime',
         'disable_responsive_document': 'disableResponsiveDocument',
+        'document_base64': 'documentBase64',
         'documents': 'documents',
         'documents_combined_uri': 'documentsCombinedUri',
         'documents_uri': 'documentsUri',
@@ -191,6 +194,7 @@ class EnvelopeDefinition(object):
         'recipients': 'recipients',
         'recipients_lock': 'recipientsLock',
         'recipients_uri': 'recipientsUri',
+        'recipient_view_request': 'recipientViewRequest',
         'sender': 'sender',
         'sent_date_time': 'sentDateTime',
         'signer_can_sign_on_mobile': 'signerCanSignOnMobile',
@@ -208,7 +212,7 @@ class EnvelopeDefinition(object):
         'workflow': 'workflow'
     }
 
-    def __init__(self, access_control_list_base64=None, accessibility=None, allow_comments=None, allow_markup=None, allow_reassign=None, allow_recipient_recursion=None, allow_view_history=None, any_signer=None, asynchronous=None, attachments=None, attachments_uri=None, authoritative_copy=None, authoritative_copy_default=None, auto_navigation=None, brand_id=None, brand_lock=None, certificate_uri=None, completed_date_time=None, composite_templates=None, copy_recipient_data=None, created_date_time=None, custom_fields=None, custom_fields_uri=None, declined_date_time=None, deleted_date_time=None, delivered_date_time=None, disable_responsive_document=None, documents=None, documents_combined_uri=None, documents_uri=None, email_blurb=None, email_settings=None, email_subject=None, enable_wet_sign=None, enforce_signer_visibility=None, envelope_attachments=None, envelope_documents=None, envelope_id=None, envelope_id_stamping=None, envelope_location=None, envelope_metadata=None, envelope_uri=None, event_notification=None, event_notifications=None, expire_after=None, expire_date_time=None, expire_enabled=None, external_envelope_id=None, folders=None, has_comments=None, has_form_data_changed=None, has_wav_file=None, holder=None, initial_sent_date_time=None, is21_cfr_part11=None, is_dynamic_envelope=None, is_signature_provider_envelope=None, last_modified_date_time=None, location=None, lock_information=None, message_lock=None, notification=None, notification_uri=None, password=None, power_form=None, purge_completed_date=None, purge_request_date=None, purge_state=None, recipients=None, recipients_lock=None, recipients_uri=None, sender=None, sent_date_time=None, signer_can_sign_on_mobile=None, signing_location=None, status=None, status_changed_date_time=None, status_date_time=None, template_id=None, template_roles=None, templates_uri=None, transaction_id=None, use_disclosure=None, voided_date_time=None, voided_reason=None, workflow=None):  # noqa: E501
+    def __init__(self, access_control_list_base64=None, accessibility=None, allow_comments=None, allow_markup=None, allow_reassign=None, allow_recipient_recursion=None, allow_view_history=None, any_signer=None, asynchronous=None, attachments=None, attachments_uri=None, authoritative_copy=None, authoritative_copy_default=None, auto_navigation=None, brand_id=None, brand_lock=None, certificate_uri=None, completed_date_time=None, composite_templates=None, copy_recipient_data=None, created_date_time=None, custom_fields=None, custom_fields_uri=None, declined_date_time=None, deleted_date_time=None, delivered_date_time=None, disable_responsive_document=None, document_base64=None, documents=None, documents_combined_uri=None, documents_uri=None, email_blurb=None, email_settings=None, email_subject=None, enable_wet_sign=None, enforce_signer_visibility=None, envelope_attachments=None, envelope_documents=None, envelope_id=None, envelope_id_stamping=None, envelope_location=None, envelope_metadata=None, envelope_uri=None, event_notification=None, event_notifications=None, expire_after=None, expire_date_time=None, expire_enabled=None, external_envelope_id=None, folders=None, has_comments=None, has_form_data_changed=None, has_wav_file=None, holder=None, initial_sent_date_time=None, is21_cfr_part11=None, is_dynamic_envelope=None, is_signature_provider_envelope=None, last_modified_date_time=None, location=None, lock_information=None, message_lock=None, notification=None, notification_uri=None, password=None, power_form=None, purge_completed_date=None, purge_request_date=None, purge_state=None, recipients=None, recipients_lock=None, recipients_uri=None, recipient_view_request=None, sender=None, sent_date_time=None, signer_can_sign_on_mobile=None, signing_location=None, status=None, status_changed_date_time=None, status_date_time=None, template_id=None, template_roles=None, templates_uri=None, transaction_id=None, use_disclosure=None, voided_date_time=None, voided_reason=None, workflow=None):  # noqa: E501
         """EnvelopeDefinition - a model defined in Swagger"""  # noqa: E501
 
         self._access_control_list_base64 = None
@@ -238,6 +242,7 @@ class EnvelopeDefinition(object):
         self._deleted_date_time = None
         self._delivered_date_time = None
         self._disable_responsive_document = None
+        self._document_base64 = None
         self._documents = None
         self._documents_combined_uri = None
         self._documents_uri = None
@@ -282,6 +287,7 @@ class EnvelopeDefinition(object):
         self._recipients = None
         self._recipients_lock = None
         self._recipients_uri = None
+        self._recipient_view_request = None
         self._sender = None
         self._sent_date_time = None
         self._signer_can_sign_on_mobile = None
@@ -353,6 +359,8 @@ class EnvelopeDefinition(object):
             self.delivered_date_time = delivered_date_time
         if disable_responsive_document is not None:
             self.disable_responsive_document = disable_responsive_document
+        if document_base64 is not None:
+            self.document_base64 = document_base64
         if documents is not None:
             self.documents = documents
         if documents_combined_uri is not None:
@@ -441,6 +449,8 @@ class EnvelopeDefinition(object):
             self.recipients_lock = recipients_lock
         if recipients_uri is not None:
             self.recipients_uri = recipients_uri
+        if recipient_view_request is not None:
+            self.recipient_view_request = recipient_view_request
         if sender is not None:
             self.sender = sender
         if sent_date_time is not None:
@@ -1090,6 +1100,29 @@ class EnvelopeDefinition(object):
         """
 
         self._disable_responsive_document = disable_responsive_document
+
+    @property
+    def document_base64(self):
+        """Gets the document_base64 of this EnvelopeDefinition.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_base64 of this EnvelopeDefinition.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_base64
+
+    @document_base64.setter
+    def document_base64(self, document_base64):
+        """Sets the document_base64 of this EnvelopeDefinition.
+
+          # noqa: E501
+
+        :param document_base64: The document_base64 of this EnvelopeDefinition.  # noqa: E501
+        :type: str
+        """
+
+        self._document_base64 = document_base64
 
     @property
     def documents(self):
@@ -2088,6 +2121,27 @@ class EnvelopeDefinition(object):
         """
 
         self._recipients_uri = recipients_uri
+
+    @property
+    def recipient_view_request(self):
+        """Gets the recipient_view_request of this EnvelopeDefinition.  # noqa: E501
+
+
+        :return: The recipient_view_request of this EnvelopeDefinition.  # noqa: E501
+        :rtype: RecipientViewRequest
+        """
+        return self._recipient_view_request
+
+    @recipient_view_request.setter
+    def recipient_view_request(self, recipient_view_request):
+        """Sets the recipient_view_request of this EnvelopeDefinition.
+
+
+        :param recipient_view_request: The recipient_view_request of this EnvelopeDefinition.  # noqa: E501
+        :type: RecipientViewRequest
+        """
+
+        self._recipient_view_request = recipient_view_request
 
     @property
     def sender(self):
