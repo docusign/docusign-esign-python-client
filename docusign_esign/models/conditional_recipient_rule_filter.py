@@ -36,6 +36,7 @@ class ConditionalRecipientRuleFilter(object):
         'scope': 'str',
         'tab_id': 'str',
         'tab_label': 'str',
+        'tab_type': 'str',
         'value': 'str'
     }
 
@@ -45,10 +46,11 @@ class ConditionalRecipientRuleFilter(object):
         'scope': 'scope',
         'tab_id': 'tabId',
         'tab_label': 'tabLabel',
+        'tab_type': 'tabType',
         'value': 'value'
     }
 
-    def __init__(self, operator=None, recipient_id=None, scope=None, tab_id=None, tab_label=None, value=None):  # noqa: E501
+    def __init__(self, operator=None, recipient_id=None, scope=None, tab_id=None, tab_label=None, tab_type=None, value=None):  # noqa: E501
         """ConditionalRecipientRuleFilter - a model defined in Swagger"""  # noqa: E501
 
         self._operator = None
@@ -56,6 +58,7 @@ class ConditionalRecipientRuleFilter(object):
         self._scope = None
         self._tab_id = None
         self._tab_label = None
+        self._tab_type = None
         self._value = None
         self.discriminator = None
 
@@ -69,6 +72,8 @@ class ConditionalRecipientRuleFilter(object):
             self.tab_id = tab_id
         if tab_label is not None:
             self.tab_label = tab_label
+        if tab_type is not None:
+            self.tab_type = tab_type
         if value is not None:
             self.value = value
 
@@ -186,6 +191,29 @@ class ConditionalRecipientRuleFilter(object):
         """
 
         self._tab_label = tab_label
+
+    @property
+    def tab_type(self):
+        """Gets the tab_type of this ConditionalRecipientRuleFilter.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tab_type of this ConditionalRecipientRuleFilter.  # noqa: E501
+        :rtype: str
+        """
+        return self._tab_type
+
+    @tab_type.setter
+    def tab_type(self, tab_type):
+        """Sets the tab_type of this ConditionalRecipientRuleFilter.
+
+          # noqa: E501
+
+        :param tab_type: The tab_type of this ConditionalRecipientRuleFilter.  # noqa: E501
+        :type: str
+        """
+
+        self._tab_type = tab_type
 
     @property
     def value(self):

@@ -35,7 +35,6 @@ class AccountUISettings(object):
         'ask_an_admin': 'AskAnAdmin',
         'enable_admin_message': 'str',
         'enable_admin_message_metadata': 'SettingsMetadata',
-        'enable_advanced_payments_react_edit': 'str',
         'enable_easy_sign_can_use_multi_template_apply': 'str',
         'enable_easy_sign_can_use_multi_template_apply_metadata': 'SettingsMetadata',
         'enable_easy_sign_template_upload': 'str',
@@ -67,7 +66,6 @@ class AccountUISettings(object):
         'ask_an_admin': 'askAnAdmin',
         'enable_admin_message': 'enableAdminMessage',
         'enable_admin_message_metadata': 'enableAdminMessageMetadata',
-        'enable_advanced_payments_react_edit': 'enableAdvancedPaymentsReactEdit',
         'enable_easy_sign_can_use_multi_template_apply': 'enableEasySignCanUseMultiTemplateApply',
         'enable_easy_sign_can_use_multi_template_apply_metadata': 'enableEasySignCanUseMultiTemplateApplyMetadata',
         'enable_easy_sign_template_upload': 'enableEasySignTemplateUpload',
@@ -94,14 +92,13 @@ class AccountUISettings(object):
         'upload_new_image_to_sign_or_initial_metadata': 'uploadNewImageToSignOrInitialMetadata'
     }
 
-    def __init__(self, admin_message=None, ask_an_admin=None, enable_admin_message=None, enable_admin_message_metadata=None, enable_advanced_payments_react_edit=None, enable_easy_sign_can_use_multi_template_apply=None, enable_easy_sign_can_use_multi_template_apply_metadata=None, enable_easy_sign_template_upload=None, enable_easy_sign_template_upload_metadata=None, enable_envelope_copy_with_data=None, enable_envelope_copy_with_data_metadata=None, enable_legacy_homepage_link=None, enable_legacy_homepage_link_metadata=None, has_external_linked_accounts=None, has_external_linked_accounts_metadata=None, hide_send_an_envelope=None, hide_send_an_envelope_metadata=None, hide_use_a_template=None, hide_use_a_template_in_prepare=None, hide_use_a_template_in_prepare_metadata=None, hide_use_a_template_metadata=None, order_based_recipient_id_generation=None, order_based_recipient_id_generation_metadata=None, remove_envelope_forwarding=None, remove_envelope_forwarding_metadata=None, should_redact_access_code=None, should_redact_access_code_metadata=None, upload_new_image_to_sign_or_initial=None, upload_new_image_to_sign_or_initial_metadata=None):  # noqa: E501
+    def __init__(self, admin_message=None, ask_an_admin=None, enable_admin_message=None, enable_admin_message_metadata=None, enable_easy_sign_can_use_multi_template_apply=None, enable_easy_sign_can_use_multi_template_apply_metadata=None, enable_easy_sign_template_upload=None, enable_easy_sign_template_upload_metadata=None, enable_envelope_copy_with_data=None, enable_envelope_copy_with_data_metadata=None, enable_legacy_homepage_link=None, enable_legacy_homepage_link_metadata=None, has_external_linked_accounts=None, has_external_linked_accounts_metadata=None, hide_send_an_envelope=None, hide_send_an_envelope_metadata=None, hide_use_a_template=None, hide_use_a_template_in_prepare=None, hide_use_a_template_in_prepare_metadata=None, hide_use_a_template_metadata=None, order_based_recipient_id_generation=None, order_based_recipient_id_generation_metadata=None, remove_envelope_forwarding=None, remove_envelope_forwarding_metadata=None, should_redact_access_code=None, should_redact_access_code_metadata=None, upload_new_image_to_sign_or_initial=None, upload_new_image_to_sign_or_initial_metadata=None):  # noqa: E501
         """AccountUISettings - a model defined in Swagger"""  # noqa: E501
 
         self._admin_message = None
         self._ask_an_admin = None
         self._enable_admin_message = None
         self._enable_admin_message_metadata = None
-        self._enable_advanced_payments_react_edit = None
         self._enable_easy_sign_can_use_multi_template_apply = None
         self._enable_easy_sign_can_use_multi_template_apply_metadata = None
         self._enable_easy_sign_template_upload = None
@@ -136,8 +133,6 @@ class AccountUISettings(object):
             self.enable_admin_message = enable_admin_message
         if enable_admin_message_metadata is not None:
             self.enable_admin_message_metadata = enable_admin_message_metadata
-        if enable_advanced_payments_react_edit is not None:
-            self.enable_advanced_payments_react_edit = enable_advanced_payments_react_edit
         if enable_easy_sign_can_use_multi_template_apply is not None:
             self.enable_easy_sign_can_use_multi_template_apply = enable_easy_sign_can_use_multi_template_apply
         if enable_easy_sign_can_use_multi_template_apply_metadata is not None:
@@ -272,29 +267,6 @@ class AccountUISettings(object):
         """
 
         self._enable_admin_message_metadata = enable_admin_message_metadata
-
-    @property
-    def enable_advanced_payments_react_edit(self):
-        """Gets the enable_advanced_payments_react_edit of this AccountUISettings.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The enable_advanced_payments_react_edit of this AccountUISettings.  # noqa: E501
-        :rtype: str
-        """
-        return self._enable_advanced_payments_react_edit
-
-    @enable_advanced_payments_react_edit.setter
-    def enable_advanced_payments_react_edit(self, enable_advanced_payments_react_edit):
-        """Sets the enable_advanced_payments_react_edit of this AccountUISettings.
-
-          # noqa: E501
-
-        :param enable_advanced_payments_react_edit: The enable_advanced_payments_react_edit of this AccountUISettings.  # noqa: E501
-        :type: str
-        """
-
-        self._enable_advanced_payments_react_edit = enable_advanced_payments_react_edit
 
     @property
     def enable_easy_sign_can_use_multi_template_apply(self):

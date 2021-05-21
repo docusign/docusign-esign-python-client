@@ -34,6 +34,8 @@ class EnvelopeSummary(object):
         'bulk_envelope_status': 'BulkEnvelopeStatus',
         'envelope_id': 'str',
         'error_details': 'ErrorDetails',
+        'recipient_signing_uri': 'str',
+        'recipient_signing_uri_error': 'str',
         'status': 'str',
         'status_date_time': 'str',
         'uri': 'str'
@@ -43,17 +45,21 @@ class EnvelopeSummary(object):
         'bulk_envelope_status': 'bulkEnvelopeStatus',
         'envelope_id': 'envelopeId',
         'error_details': 'errorDetails',
+        'recipient_signing_uri': 'recipientSigningUri',
+        'recipient_signing_uri_error': 'recipientSigningUriError',
         'status': 'status',
         'status_date_time': 'statusDateTime',
         'uri': 'uri'
     }
 
-    def __init__(self, bulk_envelope_status=None, envelope_id=None, error_details=None, status=None, status_date_time=None, uri=None):  # noqa: E501
+    def __init__(self, bulk_envelope_status=None, envelope_id=None, error_details=None, recipient_signing_uri=None, recipient_signing_uri_error=None, status=None, status_date_time=None, uri=None):  # noqa: E501
         """EnvelopeSummary - a model defined in Swagger"""  # noqa: E501
 
         self._bulk_envelope_status = None
         self._envelope_id = None
         self._error_details = None
+        self._recipient_signing_uri = None
+        self._recipient_signing_uri_error = None
         self._status = None
         self._status_date_time = None
         self._uri = None
@@ -65,6 +71,10 @@ class EnvelopeSummary(object):
             self.envelope_id = envelope_id
         if error_details is not None:
             self.error_details = error_details
+        if recipient_signing_uri is not None:
+            self.recipient_signing_uri = recipient_signing_uri
+        if recipient_signing_uri_error is not None:
+            self.recipient_signing_uri_error = recipient_signing_uri_error
         if status is not None:
             self.status = status
         if status_date_time is not None:
@@ -136,6 +146,52 @@ class EnvelopeSummary(object):
         """
 
         self._error_details = error_details
+
+    @property
+    def recipient_signing_uri(self):
+        """Gets the recipient_signing_uri of this EnvelopeSummary.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_signing_uri of this EnvelopeSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._recipient_signing_uri
+
+    @recipient_signing_uri.setter
+    def recipient_signing_uri(self, recipient_signing_uri):
+        """Sets the recipient_signing_uri of this EnvelopeSummary.
+
+          # noqa: E501
+
+        :param recipient_signing_uri: The recipient_signing_uri of this EnvelopeSummary.  # noqa: E501
+        :type: str
+        """
+
+        self._recipient_signing_uri = recipient_signing_uri
+
+    @property
+    def recipient_signing_uri_error(self):
+        """Gets the recipient_signing_uri_error of this EnvelopeSummary.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_signing_uri_error of this EnvelopeSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._recipient_signing_uri_error
+
+    @recipient_signing_uri_error.setter
+    def recipient_signing_uri_error(self, recipient_signing_uri_error):
+        """Sets the recipient_signing_uri_error of this EnvelopeSummary.
+
+          # noqa: E501
+
+        :param recipient_signing_uri_error: The recipient_signing_uri_error of this EnvelopeSummary.  # noqa: E501
+        :type: str
+        """
+
+        self._recipient_signing_uri_error = recipient_signing_uri_error
 
     @property
     def status(self):

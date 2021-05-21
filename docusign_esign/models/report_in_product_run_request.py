@@ -31,6 +31,7 @@ class ReportInProductRunRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'authentication_success_filter': 'str',
         'custom_field_filter': 'str',
         'date_range_custom_from_date': 'str',
         'date_range_custom_to_date': 'str',
@@ -52,10 +53,12 @@ class ReportInProductRunRequest(object):
         'sent_by_ids': 'str',
         'sort_direction': 'str',
         'sort_field': 'str',
-        'start_position': 'str'
+        'start_position': 'str',
+        'verification_status_filter': 'str'
     }
 
     attribute_map = {
+        'authentication_success_filter': 'authenticationSuccessFilter',
         'custom_field_filter': 'customFieldFilter',
         'date_range_custom_from_date': 'dateRangeCustomFromDate',
         'date_range_custom_to_date': 'dateRangeCustomToDate',
@@ -77,12 +80,14 @@ class ReportInProductRunRequest(object):
         'sent_by_ids': 'sentByIds',
         'sort_direction': 'sortDirection',
         'sort_field': 'sortField',
-        'start_position': 'startPosition'
+        'start_position': 'startPosition',
+        'verification_status_filter': 'verificationStatusFilter'
     }
 
-    def __init__(self, custom_field_filter=None, date_range_custom_from_date=None, date_range_custom_to_date=None, date_range_filter=None, envelope_date_type_filter=None, envelope_recipient_name_contains_filter=None, envelope_status_filter=None, envelope_subject_contains_filter=None, fields=None, for_download=None, is_dashboard=None, period_length_filter=None, report_customized_id=None, report_description=None, report_id=None, report_invocation_type=None, report_name=None, sent_by_filter=None, sent_by_ids=None, sort_direction=None, sort_field=None, start_position=None):  # noqa: E501
+    def __init__(self, authentication_success_filter=None, custom_field_filter=None, date_range_custom_from_date=None, date_range_custom_to_date=None, date_range_filter=None, envelope_date_type_filter=None, envelope_recipient_name_contains_filter=None, envelope_status_filter=None, envelope_subject_contains_filter=None, fields=None, for_download=None, is_dashboard=None, period_length_filter=None, report_customized_id=None, report_description=None, report_id=None, report_invocation_type=None, report_name=None, sent_by_filter=None, sent_by_ids=None, sort_direction=None, sort_field=None, start_position=None, verification_status_filter=None):  # noqa: E501
         """ReportInProductRunRequest - a model defined in Swagger"""  # noqa: E501
 
+        self._authentication_success_filter = None
         self._custom_field_filter = None
         self._date_range_custom_from_date = None
         self._date_range_custom_to_date = None
@@ -105,8 +110,11 @@ class ReportInProductRunRequest(object):
         self._sort_direction = None
         self._sort_field = None
         self._start_position = None
+        self._verification_status_filter = None
         self.discriminator = None
 
+        if authentication_success_filter is not None:
+            self.authentication_success_filter = authentication_success_filter
         if custom_field_filter is not None:
             self.custom_field_filter = custom_field_filter
         if date_range_custom_from_date is not None:
@@ -151,6 +159,31 @@ class ReportInProductRunRequest(object):
             self.sort_field = sort_field
         if start_position is not None:
             self.start_position = start_position
+        if verification_status_filter is not None:
+            self.verification_status_filter = verification_status_filter
+
+    @property
+    def authentication_success_filter(self):
+        """Gets the authentication_success_filter of this ReportInProductRunRequest.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The authentication_success_filter of this ReportInProductRunRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._authentication_success_filter
+
+    @authentication_success_filter.setter
+    def authentication_success_filter(self, authentication_success_filter):
+        """Sets the authentication_success_filter of this ReportInProductRunRequest.
+
+          # noqa: E501
+
+        :param authentication_success_filter: The authentication_success_filter of this ReportInProductRunRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._authentication_success_filter = authentication_success_filter
 
     @property
     def custom_field_filter(self):
@@ -657,6 +690,29 @@ class ReportInProductRunRequest(object):
         """
 
         self._start_position = start_position
+
+    @property
+    def verification_status_filter(self):
+        """Gets the verification_status_filter of this ReportInProductRunRequest.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The verification_status_filter of this ReportInProductRunRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._verification_status_filter
+
+    @verification_status_filter.setter
+    def verification_status_filter(self, verification_status_filter):
+        """Sets the verification_status_filter of this ReportInProductRunRequest.
+
+          # noqa: E501
+
+        :param verification_status_filter: The verification_status_filter of this ReportInProductRunRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._verification_status_filter = verification_status_filter
 
     def to_dict(self):
         """Returns the model properties as a dict"""

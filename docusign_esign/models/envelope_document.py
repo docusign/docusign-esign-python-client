@@ -39,6 +39,7 @@ class EnvelopeDocument(object):
         'contains_pdf_form_fields': 'str',
         'display': 'str',
         'display_metadata': 'PropertyMetadata',
+        'document_base64': 'str',
         'document_fields': 'list[NameValue]',
         'document_id': 'str',
         'document_id_guid': 'str',
@@ -67,6 +68,7 @@ class EnvelopeDocument(object):
         'contains_pdf_form_fields': 'containsPdfFormFields',
         'display': 'display',
         'display_metadata': 'displayMetadata',
+        'document_base64': 'documentBase64',
         'document_fields': 'documentFields',
         'document_id': 'documentId',
         'document_id_guid': 'documentIdGuid',
@@ -86,7 +88,7 @@ class EnvelopeDocument(object):
         'uri': 'uri'
     }
 
-    def __init__(self, added_recipient_ids=None, attachment_tab_id=None, authoritative_copy=None, authoritative_copy_metadata=None, available_document_types=None, contains_pdf_form_fields=None, display=None, display_metadata=None, document_fields=None, document_id=None, document_id_guid=None, error_details=None, include_in_download=None, include_in_download_metadata=None, name=None, name_metadata=None, order=None, pages=None, signer_must_acknowledge=None, signer_must_acknowledge_metadata=None, size_bytes=None, template_locked=None, template_required=None, type=None, uri=None):  # noqa: E501
+    def __init__(self, added_recipient_ids=None, attachment_tab_id=None, authoritative_copy=None, authoritative_copy_metadata=None, available_document_types=None, contains_pdf_form_fields=None, display=None, display_metadata=None, document_base64=None, document_fields=None, document_id=None, document_id_guid=None, error_details=None, include_in_download=None, include_in_download_metadata=None, name=None, name_metadata=None, order=None, pages=None, signer_must_acknowledge=None, signer_must_acknowledge_metadata=None, size_bytes=None, template_locked=None, template_required=None, type=None, uri=None):  # noqa: E501
         """EnvelopeDocument - a model defined in Swagger"""  # noqa: E501
 
         self._added_recipient_ids = None
@@ -97,6 +99,7 @@ class EnvelopeDocument(object):
         self._contains_pdf_form_fields = None
         self._display = None
         self._display_metadata = None
+        self._document_base64 = None
         self._document_fields = None
         self._document_id = None
         self._document_id_guid = None
@@ -132,6 +135,8 @@ class EnvelopeDocument(object):
             self.display = display
         if display_metadata is not None:
             self.display_metadata = display_metadata
+        if document_base64 is not None:
+            self.document_base64 = document_base64
         if document_fields is not None:
             self.document_fields = document_fields
         if document_id is not None:
@@ -346,6 +351,29 @@ class EnvelopeDocument(object):
         """
 
         self._display_metadata = display_metadata
+
+    @property
+    def document_base64(self):
+        """Gets the document_base64 of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_base64 of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_base64
+
+    @document_base64.setter
+    def document_base64(self, document_base64):
+        """Sets the document_base64 of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param document_base64: The document_base64 of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._document_base64 = document_base64
 
     @property
     def document_fields(self):

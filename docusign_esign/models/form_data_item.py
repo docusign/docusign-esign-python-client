@@ -34,6 +34,7 @@ class FormDataItem(object):
         'error_details': 'ErrorDetails',
         'list_selected_value': 'str',
         'name': 'str',
+        'numerical_value': 'str',
         'original_value': 'str',
         'value': 'str'
     }
@@ -42,16 +43,18 @@ class FormDataItem(object):
         'error_details': 'errorDetails',
         'list_selected_value': 'listSelectedValue',
         'name': 'name',
+        'numerical_value': 'numericalValue',
         'original_value': 'originalValue',
         'value': 'value'
     }
 
-    def __init__(self, error_details=None, list_selected_value=None, name=None, original_value=None, value=None):  # noqa: E501
+    def __init__(self, error_details=None, list_selected_value=None, name=None, numerical_value=None, original_value=None, value=None):  # noqa: E501
         """FormDataItem - a model defined in Swagger"""  # noqa: E501
 
         self._error_details = None
         self._list_selected_value = None
         self._name = None
+        self._numerical_value = None
         self._original_value = None
         self._value = None
         self.discriminator = None
@@ -62,6 +65,8 @@ class FormDataItem(object):
             self.list_selected_value = list_selected_value
         if name is not None:
             self.name = name
+        if numerical_value is not None:
+            self.numerical_value = numerical_value
         if original_value is not None:
             self.original_value = original_value
         if value is not None:
@@ -133,6 +138,29 @@ class FormDataItem(object):
         """
 
         self._name = name
+
+    @property
+    def numerical_value(self):
+        """Gets the numerical_value of this FormDataItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The numerical_value of this FormDataItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._numerical_value
+
+    @numerical_value.setter
+    def numerical_value(self, numerical_value):
+        """Sets the numerical_value of this FormDataItem.
+
+          # noqa: E501
+
+        :param numerical_value: The numerical_value of this FormDataItem.  # noqa: E501
+        :type: str
+        """
+
+        self._numerical_value = numerical_value
 
     @property
     def original_value(self):

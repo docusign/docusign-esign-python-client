@@ -3,12 +3,25 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [3.10.0rc1] - eSignature API v2.1-21.1.02.00 - 2021-05-20
+### Breaking
+- Removed methods `get_account_settings_export`,`get_seal_providers` from Accounts.
+- Removed methods `create_connect_secret`,`delete_connect_secret`,`generate_connect_secret`,`get_connect_secrets` from Connect.
+- Removed methods `get_dynamic_system_settings`,`get_template_info`,`get_appliance_info`,`get_account`,`get_custom_fields`,`delete_custom_fields_v2`,`get_document_pages`,`get_image`,`get_locale_policy`,`update_page_info`,`create_page_info`,`delete_page_info`,
+`update_pdf`,`get_pdf`,`get_pdf_blob`,`update_pdf_blob`,`create_pdf_blob`,`update_recipient_denied_document_copy`,`delete_recipient_denied_document_copy`,`get_signer_attachment`,`delete_signer_attachment`, from Envelopes.
+- Removed methods `complete_sign_hash`,`get_user_info`,`health_check`,`sign_hash_session_info`,`update_transaction` from Trust_Service_Providers.
+- Removed methods `get_user_list_export` from Users.
+### Added
+- Added new methods `get_bulk_send_batch_envelopes` to BulkEnvelopes.
+- Description in PyPi taken from Readme file.
+### Changed
+- Added support for version v2.1-21.1.02.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
+
 ## [3.9.0] - eSignature API v2.1-21.1.01.03 - 2021-04-22
 ### Added
-- Added new methods `deleteCustomFieldsV2`, `deletePageInfoV2`, `getApplianceEnvelopeInfo`, `getTemplateInfo` to envelopes.
-- Added new method `deleteConnectSecret` to connect.
-### Updated
 - Added support for version v2.1-21.1.01.03 of the DocuSign eSignature API.
+### Updated
 - Updated the SDK release version.
 - Updated `user_agent` in configurations. Eg; `'Swagger-Codegen/v2.1/3.9.0rc1/python3'`
 - Updated test cases to remove printing sensitive info
