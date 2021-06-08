@@ -645,6 +645,77 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
+    def testGetFormData(self):
+        try:
+            envelopes_api = EnvelopesApi()
+
+            form_data = envelopes_api.get_form_data(account_id=self.user_info.accounts[0].account_id,
+                                                    envelope_id=self.envelope_id)
+            assert form_data is not None
+            assert form_data.prefill_form_data is not None
+            assert form_data.prefill_form_data.form_data[0] is not None
+            assert form_data.prefill_form_data.form_data[0].name is not None
+
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+
+    def testListTabs(self):
+        # For this the template Role should be manager
+        template_role_name = 'Manager'
+
+        # Set properties and create an envelope later on
+        email_subject = 'Please Sign my Python SDK Envelope'
+        email_blurb = 'Hello, Please sign my Python SDK Envelope.'
+
+        # assign template information including ID and role(s)
+        template_id = TemplateId
+
+        # create a template role with a valid templateId and roleName and assign signer info
+        role_name = template_role_name
+        name = 'Pat Developer'
+        email = Username
+        t_role = docusign.TemplateRole(role_name=role_name,
+                                       name=name,
+                                       email=email)
+
+        # create a list of template roles and add our newly created role
+        # assign template role(s) to the envelope
+        template_roles = [t_role]
+
+        # send the envelope by setting |status| to "sent". To save as a draft set to "created"
+        status = 'sent'
+
+        # create the envelope definition with the properties set
+        envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
+                                                          email_blurb=email_blurb,
+                                                          template_id=template_id,
+                                                          template_roles=template_roles,
+                                                          status=status)
+        try:
+            envelopes_api = EnvelopesApi()
+
+            # Create Envelope with the new role
+            envelope_summary = envelopes_api.create_envelope(self.user_info.accounts[0].account_id,
+                                                             envelope_definition=envelope_definition)
+            # Read the new Envelope
+            created_envelope = envelopes_api.get_envelope(account_id=self.user_info.accounts[0].account_id,
+                                                          envelope_id=envelope_summary.envelope_id)
+
+            recipients = envelopes_api.list_recipients(account_id=self.user_info.accounts[0].account_id,
+                                                       envelope_id=created_envelope.envelope_id)
+
+            tabs = envelopes_api.list_tabs(account_id=self.user_info.accounts[0].account_id,
+                                           envelope_id=created_envelope.envelope_id,
+                                           recipient_id=recipients.signers[0].recipient_id)
+            list_tabs = tabs.list_tabs
+
+            assert list_tabs is not None
+
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+
     def testMoveEnvelopes(self):
         with open(SignTest1File, 'rb') as sign_file:
             file_contents = sign_file.read()

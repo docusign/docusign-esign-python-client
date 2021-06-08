@@ -34,7 +34,7 @@ class EnvelopeFormData(object):
         'email_subject': 'str',
         'envelope_id': 'str',
         'form_data': 'list[FormDataItem]',
-        'prefill_form_data': 'list[FormDataItem]',
+        'prefill_form_data': 'EnvelopeFormDataPrefillFormData',
         'recipient_form_data': 'list[RecipientFormData]',
         'sent_date_time': 'str',
         'status': 'str'
@@ -150,10 +150,9 @@ class EnvelopeFormData(object):
     def prefill_form_data(self):
         """Gets the prefill_form_data of this EnvelopeFormData.  # noqa: E501
 
-          # noqa: E501
 
         :return: The prefill_form_data of this EnvelopeFormData.  # noqa: E501
-        :rtype: list[FormDataItem]
+        :rtype: EnvelopeFormDataPrefillFormData
         """
         return self._prefill_form_data
 
@@ -161,10 +160,9 @@ class EnvelopeFormData(object):
     def prefill_form_data(self, prefill_form_data):
         """Sets the prefill_form_data of this EnvelopeFormData.
 
-          # noqa: E501
 
         :param prefill_form_data: The prefill_form_data of this EnvelopeFormData.  # noqa: E501
-        :type: list[FormDataItem]
+        :type: EnvelopeFormDataPrefillFormData
         """
 
         self._prefill_form_data = prefill_form_data
