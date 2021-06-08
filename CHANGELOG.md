@@ -3,6 +3,22 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [3.10.0] - eSignature API v2.1-21.1.02.00 - 2021-06-08
+### Breaking
+- Removed methods `get_account_settings_export`,`get_seal_providers` from Accounts.
+- Removed methods `create_connect_secret`,`delete_connect_secret`,`generate_connect_secret`,`get_connect_secrets` from Connect.
+- Removed methods `get_dynamic_system_settings`,`get_template_info`,`get_appliance_info`,`get_account`,`get_custom_fields`,`delete_custom_fields_v2`,`get_document_pages`,`get_image`,`get_locale_policy`,`update_page_info`,`create_page_info`,`delete_page_info`,
+`update_pdf`,`get_pdf`,`get_pdf_blob`,`update_pdf_blob`,`create_pdf_blob`,`update_recipient_denied_document_copy`,`delete_recipient_denied_document_copy`,`get_signer_attachment`,`delete_signer_attachment`, from Envelopes.
+- Removed methods `complete_sign_hash`,`get_user_info`,`health_check`,`sign_hash_session_info`,`update_transaction` from Trust_Service_Providers.
+- Removed methods `get_user_list_export` from Users.
+### Added
+- Added new methods `get_bulk_send_batch_envelopes` to BulkEnvelopes.
+- Description in PyPi taken from Readme file.
+- Test cases for tab_lists and Form pre-fill data.
+### Changed
+- Added support for version v2.1-21.1.02.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
+
 ## [3.10.0rc1] - eSignature API v2.1-21.1.02.00 - 2021-05-20
 ### Breaking
 - Removed methods `get_account_settings_export`,`get_seal_providers` from Accounts.
