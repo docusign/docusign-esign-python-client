@@ -183,6 +183,7 @@ from docusign_esign.models.envelope_document import EnvelopeDocument
 from docusign_esign.models.envelope_documents_result import EnvelopeDocumentsResult
 from docusign_esign.models.envelope_event import EnvelopeEvent
 from docusign_esign.models.envelope_form_data import EnvelopeFormData
+from docusign_esign.models.envelope_form_data_prefill_form_data import EnvelopeFormDataPrefillFormData
 from docusign_esign.models.envelope_id import EnvelopeId
 from docusign_esign.models.envelope_ids_request import EnvelopeIdsRequest
 from docusign_esign.models.envelope_notification_request import EnvelopeNotificationRequest
