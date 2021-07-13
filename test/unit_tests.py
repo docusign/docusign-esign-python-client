@@ -69,6 +69,8 @@ class SdkUnitTests(unittest.TestCase):
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
         self.api_client.rest_client.pool_manager.clear()
 
     def tearDown(self):
@@ -94,6 +96,9 @@ class SdkUnitTests(unittest.TestCase):
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
 
     def testTemplateGet(self):
         try:
@@ -108,6 +113,9 @@ class SdkUnitTests(unittest.TestCase):
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
 
     def testPutUpdateBrandResourceByContentType(self):
         try:
@@ -119,6 +127,9 @@ class SdkUnitTests(unittest.TestCase):
             assert acc_obj.resources_content_uri is not None
 
         except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
@@ -186,6 +197,9 @@ class SdkUnitTests(unittest.TestCase):
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
 
     def testRequestSignatureFromTemplate(self):
         template_role_name = 'Needs to sign'
@@ -229,6 +243,9 @@ class SdkUnitTests(unittest.TestCase):
             assert envelope_summary.status == 'sent'
 
         except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
@@ -319,6 +336,9 @@ class SdkUnitTests(unittest.TestCase):
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
 
     def testCreateTemplate(self):
         with open(SignTest1File, 'rb') as sign_file:
@@ -384,6 +404,9 @@ class SdkUnitTests(unittest.TestCase):
             assert template_summary.template_id is not None
 
         except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
@@ -457,6 +480,9 @@ class SdkUnitTests(unittest.TestCase):
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
 
     def testListDocuments(self):
         auth_api = AuthenticationApi()
@@ -478,6 +504,9 @@ class SdkUnitTests(unittest.TestCase):
             assert (docs_list.envelope_id == self.envelope_id)
 
         except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
@@ -554,6 +583,9 @@ class SdkUnitTests(unittest.TestCase):
             assert ( None == recipients_update_summary.recipient_update_results[0].error_details)
 
         except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
@@ -644,6 +676,9 @@ class SdkUnitTests(unittest.TestCase):
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
 
     def testGetFormData(self):
         try:
@@ -657,6 +692,9 @@ class SdkUnitTests(unittest.TestCase):
             assert form_data.prefill_form_data.form_data[0].name is not None
 
         except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
@@ -713,6 +751,9 @@ class SdkUnitTests(unittest.TestCase):
             assert list_tabs is not None
 
         except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
@@ -806,6 +847,9 @@ class SdkUnitTests(unittest.TestCase):
             assert False
 
         except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 

@@ -21,6 +21,9 @@ class ApiException(Exception):
             self.reason = http_resp.reason
             self.body = http_resp.data
             self.headers = http_resp.getheaders()
+            self.trace_token = http_resp.getheader('X-DocuSign-TraceToken')
+            self.timestamp = http_resp.getheader('date')
+            self.response = http_resp
         else:
             self.status = status
             self.reason = reason
@@ -31,8 +34,10 @@ class ApiException(Exception):
         """
         Custom error messages for exception
         """
-        error_message = "({0})\n"\
-                        "Reason: {1}\n".format(self.status, self.reason)
+        error_message = "({0})\n" \
+                        "Reason: {1}\n" \
+                        "Trace-Token: {2}\n" \
+                        "Timestamp: {3}\n".format(self.status, self.reason, self.trace_token, self.timestamp)
         if self.headers:
             error_message += "HTTP response headers: {0}\n".format(self.headers)
 

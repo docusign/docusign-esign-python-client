@@ -36,6 +36,7 @@ class InPersonSigner(object):
         'add_access_code_to_email': 'str',
         'allow_system_override_for_locked_recipient': 'str',
         'auto_navigation': 'str',
+        'auto_responded_reason': 'str',
         'can_sign_offline': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
@@ -131,6 +132,7 @@ class InPersonSigner(object):
         'add_access_code_to_email': 'addAccessCodeToEmail',
         'allow_system_override_for_locked_recipient': 'allowSystemOverrideForLockedRecipient',
         'auto_navigation': 'autoNavigation',
+        'auto_responded_reason': 'autoRespondedReason',
         'can_sign_offline': 'canSignOffline',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
@@ -220,7 +222,7 @@ class InPersonSigner(object):
         'user_id': 'userId'
     }
 
-    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, allow_system_override_for_locked_recipient=None, auto_navigation=None, can_sign_offline=None, client_user_id=None, completed_count=None, creation_reason=None, custom_fields=None, declined_date_time=None, declined_reason=None, default_recipient=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, host_email=None, host_email_metadata=None, host_name=None, host_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, in_person_signing_type=None, in_person_signing_type_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, notary_host=None, notary_id=None, note=None, note_metadata=None, offline_attributes=None, phone_authentication=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_signature_providers=None, recipient_supplies_tabs=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, require_signer_certificate=None, require_sign_on_paper=None, require_upload_signature=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signature_info=None, signed_date_time=None, signer_email=None, signer_email_metadata=None, signer_first_name=None, signer_first_name_metadata=None, signer_last_name=None, signer_last_name_metadata=None, signer_name=None, signer_name_metadata=None, sign_in_each_location=None, sign_in_each_location_metadata=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
+    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, allow_system_override_for_locked_recipient=None, auto_navigation=None, auto_responded_reason=None, can_sign_offline=None, client_user_id=None, completed_count=None, creation_reason=None, custom_fields=None, declined_date_time=None, declined_reason=None, default_recipient=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, host_email=None, host_email_metadata=None, host_name=None, host_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, in_person_signing_type=None, in_person_signing_type_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, notary_host=None, notary_id=None, note=None, note_metadata=None, offline_attributes=None, phone_authentication=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_signature_providers=None, recipient_supplies_tabs=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, require_signer_certificate=None, require_sign_on_paper=None, require_upload_signature=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signature_info=None, signed_date_time=None, signer_email=None, signer_email_metadata=None, signer_first_name=None, signer_first_name_metadata=None, signer_last_name=None, signer_last_name_metadata=None, signer_name=None, signer_name_metadata=None, sign_in_each_location=None, sign_in_each_location_metadata=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
         """InPersonSigner - a model defined in Swagger"""  # noqa: E501
 
         self._access_code = None
@@ -228,6 +230,7 @@ class InPersonSigner(object):
         self._add_access_code_to_email = None
         self._allow_system_override_for_locked_recipient = None
         self._auto_navigation = None
+        self._auto_responded_reason = None
         self._can_sign_offline = None
         self._client_user_id = None
         self._completed_count = None
@@ -327,6 +330,8 @@ class InPersonSigner(object):
             self.allow_system_override_for_locked_recipient = allow_system_override_for_locked_recipient
         if auto_navigation is not None:
             self.auto_navigation = auto_navigation
+        if auto_responded_reason is not None:
+            self.auto_responded_reason = auto_responded_reason
         if can_sign_offline is not None:
             self.can_sign_offline = can_sign_offline
         if client_user_id is not None:
@@ -614,6 +619,29 @@ class InPersonSigner(object):
         """
 
         self._auto_navigation = auto_navigation
+
+    @property
+    def auto_responded_reason(self):
+        """Gets the auto_responded_reason of this InPersonSigner.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The auto_responded_reason of this InPersonSigner.  # noqa: E501
+        :rtype: str
+        """
+        return self._auto_responded_reason
+
+    @auto_responded_reason.setter
+    def auto_responded_reason(self, auto_responded_reason):
+        """Sets the auto_responded_reason of this InPersonSigner.
+
+          # noqa: E501
+
+        :param auto_responded_reason: The auto_responded_reason of this InPersonSigner.  # noqa: E501
+        :type: str
+        """
+
+        self._auto_responded_reason = auto_responded_reason
 
     @property
     def can_sign_offline(self):

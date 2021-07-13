@@ -44,6 +44,8 @@ class ReportInProductRunResponseRowFields(object):
         'completed': 'str',
         'completed_ts': 'str',
         'created_date': 'str',
+        'created_on': 'str',
+        'creator': 'str',
         'custom_field': 'str',
         'declined_date': 'str',
         'declined_reason': 'str',
@@ -85,7 +87,9 @@ class ReportInProductRunResponseRowFields(object):
         'ip_address': 'str',
         'last_activity': 'str',
         'last_activity_date': 'str',
+        'last_modified': 'str',
         'last_sent_date': 'str',
+        'last_used': 'str',
         'metadata_removed': 'str',
         'not_signed': 'str',
         'number_of_authenticated_recipients': 'str',
@@ -100,6 +104,8 @@ class ReportInProductRunResponseRowFields(object):
         'number_of_total_signers': 'str',
         'number_of_unique_senders': 'str',
         'number_total_recipients': 'str',
+        'owner': 'str',
+        'owner_mail': 'str',
         'period_end': 'str',
         'period_start': 'str',
         'phone_calls_attempted': 'str',
@@ -117,6 +123,7 @@ class ReportInProductRunResponseRowFields(object):
         'recipient_email': 'str',
         'recipient_id': 'str',
         'recipient_name': 'str',
+        'recipient_role_name': 'str',
         'recipient_template_role_name': 'str',
         'recipient_title': 'str',
         'recipient_type': 'str',
@@ -143,6 +150,8 @@ class ReportInProductRunResponseRowFields(object):
         'status_comment': 'str',
         'subject': 'str',
         'successes': 'str',
+        'template_id': 'str',
+        'template_name': 'str',
         'templates_created': 'str',
         'templates_created_count': 'str',
         'terminal_status_date': 'str',
@@ -179,6 +188,8 @@ class ReportInProductRunResponseRowFields(object):
         'completed': 'completed',
         'completed_ts': 'completedTs',
         'created_date': 'createdDate',
+        'created_on': 'createdOn',
+        'creator': 'creator',
         'custom_field': 'customField',
         'declined_date': 'declinedDate',
         'declined_reason': 'declinedReason',
@@ -220,7 +231,9 @@ class ReportInProductRunResponseRowFields(object):
         'ip_address': 'ipAddress',
         'last_activity': 'lastActivity',
         'last_activity_date': 'lastActivityDate',
+        'last_modified': 'lastModified',
         'last_sent_date': 'lastSentDate',
+        'last_used': 'lastUsed',
         'metadata_removed': 'metadataRemoved',
         'not_signed': 'notSigned',
         'number_of_authenticated_recipients': 'numberOfAuthenticatedRecipients',
@@ -235,6 +248,8 @@ class ReportInProductRunResponseRowFields(object):
         'number_of_total_signers': 'numberOfTotalSigners',
         'number_of_unique_senders': 'numberOfUniqueSenders',
         'number_total_recipients': 'numberTotalRecipients',
+        'owner': 'owner',
+        'owner_mail': 'ownerMail',
         'period_end': 'periodEnd',
         'period_start': 'periodStart',
         'phone_calls_attempted': 'phoneCallsAttempted',
@@ -252,6 +267,7 @@ class ReportInProductRunResponseRowFields(object):
         'recipient_email': 'recipientEmail',
         'recipient_id': 'recipientId',
         'recipient_name': 'recipientName',
+        'recipient_role_name': 'recipientRoleName',
         'recipient_template_role_name': 'recipientTemplateRoleName',
         'recipient_title': 'recipientTitle',
         'recipient_type': 'recipientType',
@@ -278,6 +294,8 @@ class ReportInProductRunResponseRowFields(object):
         'status_comment': 'statusComment',
         'subject': 'subject',
         'successes': 'successes',
+        'template_id': 'templateId',
+        'template_name': 'templateName',
         'templates_created': 'templatesCreated',
         'templates_created_count': 'templatesCreatedCount',
         'terminal_status_date': 'terminalStatusDate',
@@ -300,7 +318,7 @@ class ReportInProductRunResponseRowFields(object):
         'voided_ts': 'voidedTs'
     }
 
-    def __init__(self, access_code_required=None, access_codes_attempted=None, access_codes_failed=None, account_id=None, authentication_category=None, authentication_success=None, authentication_type=None, average_time_to_complete_seconds=None, avg_complete_seconds=None, capture_method=None, completed=None, completed_ts=None, created_date=None, custom_field=None, declined_date=None, declined_reason=None, delivered_date=None, envelope_count=None, envelope_creator=None, envelope_id=None, envelope_initial_send_ts=None, envelopes_billed=None, envelopes_completed=None, envelopes_completed_count=None, envelopes_declined=None, envelopes_sent=None, envelopes_sent_count=None, envelopes_voided=None, envelope_voided_reason=None, eod_document_description=None, eod_document_name=None, eod_document_profile_id=None, eod_transaction_id=None, eod_transaction_name=None, event_date=None, expiration_date=None, expired_ts=None, failure_reason=None, failures=None, failure_vendor_code=None, failure_vendor_reason=None, first_send_ts=None, group_id=None, group_name=None, hours_to_complete_end=None, hours_to_complete_start=None, id_checks_attempted=None, id_checks_failed=None, id_country=None, id_method=None, initial_send_ts=None, ip_address=None, last_activity=None, last_activity_date=None, last_sent_date=None, metadata_removed=None, not_signed=None, number_of_authenticated_recipients=None, number_of_completed_signatures=None, number_of_documents=None, number_of_pages=None, number_of_recipients=None, number_of_sends=None, number_of_signers=None, number_of_total_documents=None, number_of_total_pages=None, number_of_total_signers=None, number_of_unique_senders=None, number_total_recipients=None, period_end=None, period_start=None, phone_calls_attempted=None, phone_calls_failed=None, pii_redacted=None, purge_date=None, reason_for_declining=None, reason_for_voiding=None, reassign_reason=None, received=None, recipient=None, recipient_action=None, recipient_company_name=None, recipient_country=None, recipient_email=None, recipient_id=None, recipient_name=None, recipient_template_role_name=None, recipient_title=None, recipient_type=None, recipient_user_id=None, remaining_signatures=None, routing_order=None, sender_account_id=None, sender_company_name=None, sender_country=None, sender_email=None, sender_ip_address=None, sender_job_title=None, sender_name=None, sender_user_id=None, sign_date=None, signed=None, signed_date=None, signed_on_mobile=None, signed_on_paper=None, signer_list=None, status=None, status_changed_date=None, status_changed_ts=None, status_comment=None, subject=None, successes=None, templates_created=None, templates_created_count=None, terminal_status_date=None, time_to_complete_seconds=None, time_to_deliver=None, total_documents=None, total_envelopes=None, total_pages=None, total_recipients=None, total_signers=None, unique_senders=None, user_account_email=None, user_account_name=None, user_account_status=None, user_count=None, user_id=None, verification_status=None, verification_type=None, view_date=None, voided_ts=None):  # noqa: E501
+    def __init__(self, access_code_required=None, access_codes_attempted=None, access_codes_failed=None, account_id=None, authentication_category=None, authentication_success=None, authentication_type=None, average_time_to_complete_seconds=None, avg_complete_seconds=None, capture_method=None, completed=None, completed_ts=None, created_date=None, created_on=None, creator=None, custom_field=None, declined_date=None, declined_reason=None, delivered_date=None, envelope_count=None, envelope_creator=None, envelope_id=None, envelope_initial_send_ts=None, envelopes_billed=None, envelopes_completed=None, envelopes_completed_count=None, envelopes_declined=None, envelopes_sent=None, envelopes_sent_count=None, envelopes_voided=None, envelope_voided_reason=None, eod_document_description=None, eod_document_name=None, eod_document_profile_id=None, eod_transaction_id=None, eod_transaction_name=None, event_date=None, expiration_date=None, expired_ts=None, failure_reason=None, failures=None, failure_vendor_code=None, failure_vendor_reason=None, first_send_ts=None, group_id=None, group_name=None, hours_to_complete_end=None, hours_to_complete_start=None, id_checks_attempted=None, id_checks_failed=None, id_country=None, id_method=None, initial_send_ts=None, ip_address=None, last_activity=None, last_activity_date=None, last_modified=None, last_sent_date=None, last_used=None, metadata_removed=None, not_signed=None, number_of_authenticated_recipients=None, number_of_completed_signatures=None, number_of_documents=None, number_of_pages=None, number_of_recipients=None, number_of_sends=None, number_of_signers=None, number_of_total_documents=None, number_of_total_pages=None, number_of_total_signers=None, number_of_unique_senders=None, number_total_recipients=None, owner=None, owner_mail=None, period_end=None, period_start=None, phone_calls_attempted=None, phone_calls_failed=None, pii_redacted=None, purge_date=None, reason_for_declining=None, reason_for_voiding=None, reassign_reason=None, received=None, recipient=None, recipient_action=None, recipient_company_name=None, recipient_country=None, recipient_email=None, recipient_id=None, recipient_name=None, recipient_role_name=None, recipient_template_role_name=None, recipient_title=None, recipient_type=None, recipient_user_id=None, remaining_signatures=None, routing_order=None, sender_account_id=None, sender_company_name=None, sender_country=None, sender_email=None, sender_ip_address=None, sender_job_title=None, sender_name=None, sender_user_id=None, sign_date=None, signed=None, signed_date=None, signed_on_mobile=None, signed_on_paper=None, signer_list=None, status=None, status_changed_date=None, status_changed_ts=None, status_comment=None, subject=None, successes=None, template_id=None, template_name=None, templates_created=None, templates_created_count=None, terminal_status_date=None, time_to_complete_seconds=None, time_to_deliver=None, total_documents=None, total_envelopes=None, total_pages=None, total_recipients=None, total_signers=None, unique_senders=None, user_account_email=None, user_account_name=None, user_account_status=None, user_count=None, user_id=None, verification_status=None, verification_type=None, view_date=None, voided_ts=None):  # noqa: E501
         """ReportInProductRunResponseRowFields - a model defined in Swagger"""  # noqa: E501
 
         self._access_code_required = None
@@ -316,6 +334,8 @@ class ReportInProductRunResponseRowFields(object):
         self._completed = None
         self._completed_ts = None
         self._created_date = None
+        self._created_on = None
+        self._creator = None
         self._custom_field = None
         self._declined_date = None
         self._declined_reason = None
@@ -357,7 +377,9 @@ class ReportInProductRunResponseRowFields(object):
         self._ip_address = None
         self._last_activity = None
         self._last_activity_date = None
+        self._last_modified = None
         self._last_sent_date = None
+        self._last_used = None
         self._metadata_removed = None
         self._not_signed = None
         self._number_of_authenticated_recipients = None
@@ -372,6 +394,8 @@ class ReportInProductRunResponseRowFields(object):
         self._number_of_total_signers = None
         self._number_of_unique_senders = None
         self._number_total_recipients = None
+        self._owner = None
+        self._owner_mail = None
         self._period_end = None
         self._period_start = None
         self._phone_calls_attempted = None
@@ -389,6 +413,7 @@ class ReportInProductRunResponseRowFields(object):
         self._recipient_email = None
         self._recipient_id = None
         self._recipient_name = None
+        self._recipient_role_name = None
         self._recipient_template_role_name = None
         self._recipient_title = None
         self._recipient_type = None
@@ -415,6 +440,8 @@ class ReportInProductRunResponseRowFields(object):
         self._status_comment = None
         self._subject = None
         self._successes = None
+        self._template_id = None
+        self._template_name = None
         self._templates_created = None
         self._templates_created_count = None
         self._terminal_status_date = None
@@ -463,6 +490,10 @@ class ReportInProductRunResponseRowFields(object):
             self.completed_ts = completed_ts
         if created_date is not None:
             self.created_date = created_date
+        if created_on is not None:
+            self.created_on = created_on
+        if creator is not None:
+            self.creator = creator
         if custom_field is not None:
             self.custom_field = custom_field
         if declined_date is not None:
@@ -545,8 +576,12 @@ class ReportInProductRunResponseRowFields(object):
             self.last_activity = last_activity
         if last_activity_date is not None:
             self.last_activity_date = last_activity_date
+        if last_modified is not None:
+            self.last_modified = last_modified
         if last_sent_date is not None:
             self.last_sent_date = last_sent_date
+        if last_used is not None:
+            self.last_used = last_used
         if metadata_removed is not None:
             self.metadata_removed = metadata_removed
         if not_signed is not None:
@@ -575,6 +610,10 @@ class ReportInProductRunResponseRowFields(object):
             self.number_of_unique_senders = number_of_unique_senders
         if number_total_recipients is not None:
             self.number_total_recipients = number_total_recipients
+        if owner is not None:
+            self.owner = owner
+        if owner_mail is not None:
+            self.owner_mail = owner_mail
         if period_end is not None:
             self.period_end = period_end
         if period_start is not None:
@@ -609,6 +648,8 @@ class ReportInProductRunResponseRowFields(object):
             self.recipient_id = recipient_id
         if recipient_name is not None:
             self.recipient_name = recipient_name
+        if recipient_role_name is not None:
+            self.recipient_role_name = recipient_role_name
         if recipient_template_role_name is not None:
             self.recipient_template_role_name = recipient_template_role_name
         if recipient_title is not None:
@@ -661,6 +702,10 @@ class ReportInProductRunResponseRowFields(object):
             self.subject = subject
         if successes is not None:
             self.successes = successes
+        if template_id is not None:
+            self.template_id = template_id
+        if template_name is not None:
+            self.template_name = template_name
         if templates_created is not None:
             self.templates_created = templates_created
         if templates_created_count is not None:
@@ -1000,6 +1045,52 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._created_date = created_date
+
+    @property
+    def created_on(self):
+        """Gets the created_on of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The created_on of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_on
+
+    @created_on.setter
+    def created_on(self, created_on):
+        """Sets the created_on of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param created_on: The created_on of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._created_on = created_on
+
+    @property
+    def creator(self):
+        """Gets the creator of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The creator of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._creator
+
+    @creator.setter
+    def creator(self, creator):
+        """Sets the creator of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param creator: The creator of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._creator = creator
 
     @property
     def custom_field(self):
@@ -1945,6 +2036,29 @@ class ReportInProductRunResponseRowFields(object):
         self._last_activity_date = last_activity_date
 
     @property
+    def last_modified(self):
+        """Gets the last_modified of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The last_modified of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_modified
+
+    @last_modified.setter
+    def last_modified(self, last_modified):
+        """Sets the last_modified of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param last_modified: The last_modified of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._last_modified = last_modified
+
+    @property
     def last_sent_date(self):
         """Gets the last_sent_date of this ReportInProductRunResponseRowFields.  # noqa: E501
 
@@ -1966,6 +2080,29 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._last_sent_date = last_sent_date
+
+    @property
+    def last_used(self):
+        """Gets the last_used of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The last_used of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_used
+
+    @last_used.setter
+    def last_used(self, last_used):
+        """Sets the last_used of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param last_used: The last_used of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._last_used = last_used
 
     @property
     def metadata_removed(self):
@@ -2288,6 +2425,52 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._number_total_recipients = number_total_recipients
+
+    @property
+    def owner(self):
+        """Gets the owner of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The owner of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner
+
+    @owner.setter
+    def owner(self, owner):
+        """Sets the owner of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param owner: The owner of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._owner = owner
+
+    @property
+    def owner_mail(self):
+        """Gets the owner_mail of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The owner_mail of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_mail
+
+    @owner_mail.setter
+    def owner_mail(self, owner_mail):
+        """Sets the owner_mail of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param owner_mail: The owner_mail of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_mail = owner_mail
 
     @property
     def period_end(self):
@@ -2679,6 +2862,29 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._recipient_name = recipient_name
+
+    @property
+    def recipient_role_name(self):
+        """Gets the recipient_role_name of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The recipient_role_name of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._recipient_role_name
+
+    @recipient_role_name.setter
+    def recipient_role_name(self, recipient_role_name):
+        """Sets the recipient_role_name of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param recipient_role_name: The recipient_role_name of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._recipient_role_name = recipient_role_name
 
     @property
     def recipient_template_role_name(self):
@@ -3277,6 +3483,52 @@ class ReportInProductRunResponseRowFields(object):
         """
 
         self._successes = successes
+
+    @property
+    def template_id(self):
+        """Gets the template_id of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+        The unique identifier of the template. If this is not provided, DocuSign will generate a value.   # noqa: E501
+
+        :return: The template_id of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._template_id
+
+    @template_id.setter
+    def template_id(self, template_id):
+        """Sets the template_id of this ReportInProductRunResponseRowFields.
+
+        The unique identifier of the template. If this is not provided, DocuSign will generate a value.   # noqa: E501
+
+        :param template_id: The template_id of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._template_id = template_id
+
+    @property
+    def template_name(self):
+        """Gets the template_name of this ReportInProductRunResponseRowFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The template_name of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :rtype: str
+        """
+        return self._template_name
+
+    @template_name.setter
+    def template_name(self, template_name):
+        """Sets the template_name of this ReportInProductRunResponseRowFields.
+
+          # noqa: E501
+
+        :param template_name: The template_name of this ReportInProductRunResponseRowFields.  # noqa: E501
+        :type: str
+        """
+
+        self._template_name = template_name
 
     @property
     def templates_created(self):

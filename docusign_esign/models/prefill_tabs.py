@@ -33,6 +33,8 @@ class PrefillTabs(object):
     swagger_types = {
         'checkbox_tabs': 'list[Checkbox]',
         'radio_group_tabs': 'list[RadioGroup]',
+        'sender_company_tabs': 'list[SenderCompany]',
+        'sender_name_tabs': 'list[SenderName]',
         'tab_groups': 'list[TabGroup]',
         'text_tabs': 'list[Text]'
     }
@@ -40,15 +42,19 @@ class PrefillTabs(object):
     attribute_map = {
         'checkbox_tabs': 'checkboxTabs',
         'radio_group_tabs': 'radioGroupTabs',
+        'sender_company_tabs': 'senderCompanyTabs',
+        'sender_name_tabs': 'senderNameTabs',
         'tab_groups': 'tabGroups',
         'text_tabs': 'textTabs'
     }
 
-    def __init__(self, checkbox_tabs=None, radio_group_tabs=None, tab_groups=None, text_tabs=None):  # noqa: E501
+    def __init__(self, checkbox_tabs=None, radio_group_tabs=None, sender_company_tabs=None, sender_name_tabs=None, tab_groups=None, text_tabs=None):  # noqa: E501
         """PrefillTabs - a model defined in Swagger"""  # noqa: E501
 
         self._checkbox_tabs = None
         self._radio_group_tabs = None
+        self._sender_company_tabs = None
+        self._sender_name_tabs = None
         self._tab_groups = None
         self._text_tabs = None
         self.discriminator = None
@@ -57,6 +63,10 @@ class PrefillTabs(object):
             self.checkbox_tabs = checkbox_tabs
         if radio_group_tabs is not None:
             self.radio_group_tabs = radio_group_tabs
+        if sender_company_tabs is not None:
+            self.sender_company_tabs = sender_company_tabs
+        if sender_name_tabs is not None:
+            self.sender_name_tabs = sender_name_tabs
         if tab_groups is not None:
             self.tab_groups = tab_groups
         if text_tabs is not None:
@@ -107,6 +117,52 @@ class PrefillTabs(object):
         """
 
         self._radio_group_tabs = radio_group_tabs
+
+    @property
+    def sender_company_tabs(self):
+        """Gets the sender_company_tabs of this PrefillTabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sender_company_tabs of this PrefillTabs.  # noqa: E501
+        :rtype: list[SenderCompany]
+        """
+        return self._sender_company_tabs
+
+    @sender_company_tabs.setter
+    def sender_company_tabs(self, sender_company_tabs):
+        """Sets the sender_company_tabs of this PrefillTabs.
+
+          # noqa: E501
+
+        :param sender_company_tabs: The sender_company_tabs of this PrefillTabs.  # noqa: E501
+        :type: list[SenderCompany]
+        """
+
+        self._sender_company_tabs = sender_company_tabs
+
+    @property
+    def sender_name_tabs(self):
+        """Gets the sender_name_tabs of this PrefillTabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sender_name_tabs of this PrefillTabs.  # noqa: E501
+        :rtype: list[SenderName]
+        """
+        return self._sender_name_tabs
+
+    @sender_name_tabs.setter
+    def sender_name_tabs(self, sender_name_tabs):
+        """Sets the sender_name_tabs of this PrefillTabs.
+
+          # noqa: E501
+
+        :param sender_name_tabs: The sender_name_tabs of this PrefillTabs.  # noqa: E501
+        :type: list[SenderName]
+        """
+
+        self._sender_name_tabs = sender_name_tabs
 
     @property
     def tab_groups(self):

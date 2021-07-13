@@ -34,6 +34,7 @@ class RecipientViewRequest(object):
         'assertion_id': 'str',
         'authentication_instant': 'str',
         'authentication_method': 'str',
+        'client_ur_ls': 'RecipientTokenClientURLs',
         'client_user_id': 'str',
         'email': 'str',
         'frame_ancestors': 'list[str]',
@@ -53,6 +54,7 @@ class RecipientViewRequest(object):
         'assertion_id': 'assertionId',
         'authentication_instant': 'authenticationInstant',
         'authentication_method': 'authenticationMethod',
+        'client_ur_ls': 'clientURLs',
         'client_user_id': 'clientUserId',
         'email': 'email',
         'frame_ancestors': 'frameAncestors',
@@ -68,12 +70,13 @@ class RecipientViewRequest(object):
         'x_frame_options_allow_from_url': 'xFrameOptionsAllowFromUrl'
     }
 
-    def __init__(self, assertion_id=None, authentication_instant=None, authentication_method=None, client_user_id=None, email=None, frame_ancestors=None, message_origins=None, ping_frequency=None, ping_url=None, recipient_id=None, return_url=None, security_domain=None, user_id=None, user_name=None, x_frame_options=None, x_frame_options_allow_from_url=None):  # noqa: E501
+    def __init__(self, assertion_id=None, authentication_instant=None, authentication_method=None, client_ur_ls=None, client_user_id=None, email=None, frame_ancestors=None, message_origins=None, ping_frequency=None, ping_url=None, recipient_id=None, return_url=None, security_domain=None, user_id=None, user_name=None, x_frame_options=None, x_frame_options_allow_from_url=None):  # noqa: E501
         """RecipientViewRequest - a model defined in Swagger"""  # noqa: E501
 
         self._assertion_id = None
         self._authentication_instant = None
         self._authentication_method = None
+        self._client_ur_ls = None
         self._client_user_id = None
         self._email = None
         self._frame_ancestors = None
@@ -95,6 +98,8 @@ class RecipientViewRequest(object):
             self.authentication_instant = authentication_instant
         if authentication_method is not None:
             self.authentication_method = authentication_method
+        if client_ur_ls is not None:
+            self.client_ur_ls = client_ur_ls
         if client_user_id is not None:
             self.client_user_id = client_user_id
         if email is not None:
@@ -190,6 +195,27 @@ class RecipientViewRequest(object):
         """
 
         self._authentication_method = authentication_method
+
+    @property
+    def client_ur_ls(self):
+        """Gets the client_ur_ls of this RecipientViewRequest.  # noqa: E501
+
+
+        :return: The client_ur_ls of this RecipientViewRequest.  # noqa: E501
+        :rtype: RecipientTokenClientURLs
+        """
+        return self._client_ur_ls
+
+    @client_ur_ls.setter
+    def client_ur_ls(self, client_ur_ls):
+        """Sets the client_ur_ls of this RecipientViewRequest.
+
+
+        :param client_ur_ls: The client_ur_ls of this RecipientViewRequest.  # noqa: E501
+        :type: RecipientTokenClientURLs
+        """
+
+        self._client_ur_ls = client_ur_ls
 
     @property
     def client_user_id(self):

@@ -51,6 +51,8 @@ class AccountBillingPlan(object):
         'plan_feature_sets': 'list[FeatureSet]',
         'plan_id': 'str',
         'plan_name': 'str',
+        'plan_start_date': 'str',
+        'renewal_date': 'str',
         'renewal_status': 'str',
         'seat_discounts': 'list[SeatDiscount]',
         'support_incident_fee': 'str',
@@ -78,13 +80,15 @@ class AccountBillingPlan(object):
         'plan_feature_sets': 'planFeatureSets',
         'plan_id': 'planId',
         'plan_name': 'planName',
+        'plan_start_date': 'planStartDate',
+        'renewal_date': 'renewalDate',
         'renewal_status': 'renewalStatus',
         'seat_discounts': 'seatDiscounts',
         'support_incident_fee': 'supportIncidentFee',
         'support_plan_fee': 'supportPlanFee'
     }
 
-    def __init__(self, add_ons=None, app_store_receipt_expiration_date=None, app_store_receipt_purchase_date=None, can_cancel_renewal=None, can_upgrade=None, currency_code=None, downgrade_plan_information=None, enable_support=None, included_seats=None, incremental_seats=None, is_downgrade=None, notification_type=None, other_discount_percent=None, payment_cycle=None, payment_method=None, per_seat_price=None, plan_classification=None, plan_feature_sets=None, plan_id=None, plan_name=None, renewal_status=None, seat_discounts=None, support_incident_fee=None, support_plan_fee=None):  # noqa: E501
+    def __init__(self, add_ons=None, app_store_receipt_expiration_date=None, app_store_receipt_purchase_date=None, can_cancel_renewal=None, can_upgrade=None, currency_code=None, downgrade_plan_information=None, enable_support=None, included_seats=None, incremental_seats=None, is_downgrade=None, notification_type=None, other_discount_percent=None, payment_cycle=None, payment_method=None, per_seat_price=None, plan_classification=None, plan_feature_sets=None, plan_id=None, plan_name=None, plan_start_date=None, renewal_date=None, renewal_status=None, seat_discounts=None, support_incident_fee=None, support_plan_fee=None):  # noqa: E501
         """AccountBillingPlan - a model defined in Swagger"""  # noqa: E501
 
         self._add_ons = None
@@ -107,6 +111,8 @@ class AccountBillingPlan(object):
         self._plan_feature_sets = None
         self._plan_id = None
         self._plan_name = None
+        self._plan_start_date = None
+        self._renewal_date = None
         self._renewal_status = None
         self._seat_discounts = None
         self._support_incident_fee = None
@@ -153,6 +159,10 @@ class AccountBillingPlan(object):
             self.plan_id = plan_id
         if plan_name is not None:
             self.plan_name = plan_name
+        if plan_start_date is not None:
+            self.plan_start_date = plan_start_date
+        if renewal_date is not None:
+            self.renewal_date = renewal_date
         if renewal_status is not None:
             self.renewal_status = renewal_status
         if seat_discounts is not None:
@@ -619,6 +629,52 @@ class AccountBillingPlan(object):
         """
 
         self._plan_name = plan_name
+
+    @property
+    def plan_start_date(self):
+        """Gets the plan_start_date of this AccountBillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The plan_start_date of this AccountBillingPlan.  # noqa: E501
+        :rtype: str
+        """
+        return self._plan_start_date
+
+    @plan_start_date.setter
+    def plan_start_date(self, plan_start_date):
+        """Sets the plan_start_date of this AccountBillingPlan.
+
+          # noqa: E501
+
+        :param plan_start_date: The plan_start_date of this AccountBillingPlan.  # noqa: E501
+        :type: str
+        """
+
+        self._plan_start_date = plan_start_date
+
+    @property
+    def renewal_date(self):
+        """Gets the renewal_date of this AccountBillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The renewal_date of this AccountBillingPlan.  # noqa: E501
+        :rtype: str
+        """
+        return self._renewal_date
+
+    @renewal_date.setter
+    def renewal_date(self, renewal_date):
+        """Sets the renewal_date of this AccountBillingPlan.
+
+          # noqa: E501
+
+        :param renewal_date: The renewal_date of this AccountBillingPlan.  # noqa: E501
+        :type: str
+        """
+
+        self._renewal_date = renewal_date
 
     @property
     def renewal_status(self):

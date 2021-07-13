@@ -36,6 +36,7 @@ class Agent(object):
         'add_access_code_to_email': 'str',
         'additional_notifications': 'list[RecipientAdditionalNotification]',
         'allow_system_override_for_locked_recipient': 'str',
+        'auto_responded_reason': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
         'custom_fields': 'list[str]',
@@ -73,6 +74,8 @@ class Agent(object):
         'note': 'str',
         'note_metadata': 'PropertyMetadata',
         'phone_authentication': 'RecipientPhoneAuthentication',
+        'phone_number': 'RecipientPhoneNumber',
+        'phone_number_metadata': 'PropertyMetadata',
         'recipient_attachments': 'list[RecipientAttachment]',
         'recipient_authentication_status': 'AuthenticationStatus',
         'recipient_feature_metadata': 'list[FeatureAvailableMetadata]',
@@ -108,6 +111,7 @@ class Agent(object):
         'add_access_code_to_email': 'addAccessCodeToEmail',
         'additional_notifications': 'additionalNotifications',
         'allow_system_override_for_locked_recipient': 'allowSystemOverrideForLockedRecipient',
+        'auto_responded_reason': 'autoRespondedReason',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
         'custom_fields': 'customFields',
@@ -145,6 +149,8 @@ class Agent(object):
         'note': 'note',
         'note_metadata': 'noteMetadata',
         'phone_authentication': 'phoneAuthentication',
+        'phone_number': 'phoneNumber',
+        'phone_number_metadata': 'phoneNumberMetadata',
         'recipient_attachments': 'recipientAttachments',
         'recipient_authentication_status': 'recipientAuthenticationStatus',
         'recipient_feature_metadata': 'recipientFeatureMetadata',
@@ -174,7 +180,7 @@ class Agent(object):
         'user_id': 'userId'
     }
 
-    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, allow_system_override_for_locked_recipient=None, client_user_id=None, completed_count=None, custom_fields=None, declined_date_time=None, declined_reason=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, last_name=None, last_name_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, note=None, note_metadata=None, phone_authentication=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signed_date_time=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
+    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, allow_system_override_for_locked_recipient=None, auto_responded_reason=None, client_user_id=None, completed_count=None, custom_fields=None, declined_date_time=None, declined_reason=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, last_name=None, last_name_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, note=None, note_metadata=None, phone_authentication=None, phone_number=None, phone_number_metadata=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signed_date_time=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
         """Agent - a model defined in Swagger"""  # noqa: E501
 
         self._access_code = None
@@ -182,6 +188,7 @@ class Agent(object):
         self._add_access_code_to_email = None
         self._additional_notifications = None
         self._allow_system_override_for_locked_recipient = None
+        self._auto_responded_reason = None
         self._client_user_id = None
         self._completed_count = None
         self._custom_fields = None
@@ -219,6 +226,8 @@ class Agent(object):
         self._note = None
         self._note_metadata = None
         self._phone_authentication = None
+        self._phone_number = None
+        self._phone_number_metadata = None
         self._recipient_attachments = None
         self._recipient_authentication_status = None
         self._recipient_feature_metadata = None
@@ -258,6 +267,8 @@ class Agent(object):
             self.additional_notifications = additional_notifications
         if allow_system_override_for_locked_recipient is not None:
             self.allow_system_override_for_locked_recipient = allow_system_override_for_locked_recipient
+        if auto_responded_reason is not None:
+            self.auto_responded_reason = auto_responded_reason
         if client_user_id is not None:
             self.client_user_id = client_user_id
         if completed_count is not None:
@@ -332,6 +343,10 @@ class Agent(object):
             self.note_metadata = note_metadata
         if phone_authentication is not None:
             self.phone_authentication = phone_authentication
+        if phone_number is not None:
+            self.phone_number = phone_number
+        if phone_number_metadata is not None:
+            self.phone_number_metadata = phone_number_metadata
         if recipient_attachments is not None:
             self.recipient_attachments = recipient_attachments
         if recipient_authentication_status is not None:
@@ -499,6 +514,29 @@ class Agent(object):
         """
 
         self._allow_system_override_for_locked_recipient = allow_system_override_for_locked_recipient
+
+    @property
+    def auto_responded_reason(self):
+        """Gets the auto_responded_reason of this Agent.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The auto_responded_reason of this Agent.  # noqa: E501
+        :rtype: str
+        """
+        return self._auto_responded_reason
+
+    @auto_responded_reason.setter
+    def auto_responded_reason(self, auto_responded_reason):
+        """Sets the auto_responded_reason of this Agent.
+
+          # noqa: E501
+
+        :param auto_responded_reason: The auto_responded_reason of this Agent.  # noqa: E501
+        :type: str
+        """
+
+        self._auto_responded_reason = auto_responded_reason
 
     @property
     def client_user_id(self):
@@ -1322,6 +1360,48 @@ class Agent(object):
         """
 
         self._phone_authentication = phone_authentication
+
+    @property
+    def phone_number(self):
+        """Gets the phone_number of this Agent.  # noqa: E501
+
+
+        :return: The phone_number of this Agent.  # noqa: E501
+        :rtype: RecipientPhoneNumber
+        """
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """Sets the phone_number of this Agent.
+
+
+        :param phone_number: The phone_number of this Agent.  # noqa: E501
+        :type: RecipientPhoneNumber
+        """
+
+        self._phone_number = phone_number
+
+    @property
+    def phone_number_metadata(self):
+        """Gets the phone_number_metadata of this Agent.  # noqa: E501
+
+
+        :return: The phone_number_metadata of this Agent.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._phone_number_metadata
+
+    @phone_number_metadata.setter
+    def phone_number_metadata(self, phone_number_metadata):
+        """Sets the phone_number_metadata of this Agent.
+
+
+        :param phone_number_metadata: The phone_number_metadata of this Agent.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._phone_number_metadata = phone_number_metadata
 
     @property
     def recipient_attachments(self):

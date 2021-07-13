@@ -34,6 +34,7 @@ class RecipientPreviewRequest(object):
         'assertion_id': 'str',
         'authentication_instant': 'str',
         'authentication_method': 'str',
+        'client_ur_ls': 'RecipientTokenClientURLs',
         'ping_frequency': 'str',
         'ping_url': 'str',
         'recipient_id': 'str',
@@ -47,6 +48,7 @@ class RecipientPreviewRequest(object):
         'assertion_id': 'assertionId',
         'authentication_instant': 'authenticationInstant',
         'authentication_method': 'authenticationMethod',
+        'client_ur_ls': 'clientURLs',
         'ping_frequency': 'pingFrequency',
         'ping_url': 'pingUrl',
         'recipient_id': 'recipientId',
@@ -56,12 +58,13 @@ class RecipientPreviewRequest(object):
         'x_frame_options_allow_from_url': 'xFrameOptionsAllowFromUrl'
     }
 
-    def __init__(self, assertion_id=None, authentication_instant=None, authentication_method=None, ping_frequency=None, ping_url=None, recipient_id=None, return_url=None, security_domain=None, x_frame_options=None, x_frame_options_allow_from_url=None):  # noqa: E501
+    def __init__(self, assertion_id=None, authentication_instant=None, authentication_method=None, client_ur_ls=None, ping_frequency=None, ping_url=None, recipient_id=None, return_url=None, security_domain=None, x_frame_options=None, x_frame_options_allow_from_url=None):  # noqa: E501
         """RecipientPreviewRequest - a model defined in Swagger"""  # noqa: E501
 
         self._assertion_id = None
         self._authentication_instant = None
         self._authentication_method = None
+        self._client_ur_ls = None
         self._ping_frequency = None
         self._ping_url = None
         self._recipient_id = None
@@ -77,6 +80,8 @@ class RecipientPreviewRequest(object):
             self.authentication_instant = authentication_instant
         if authentication_method is not None:
             self.authentication_method = authentication_method
+        if client_ur_ls is not None:
+            self.client_ur_ls = client_ur_ls
         if ping_frequency is not None:
             self.ping_frequency = ping_frequency
         if ping_url is not None:
@@ -160,6 +165,27 @@ class RecipientPreviewRequest(object):
         """
 
         self._authentication_method = authentication_method
+
+    @property
+    def client_ur_ls(self):
+        """Gets the client_ur_ls of this RecipientPreviewRequest.  # noqa: E501
+
+
+        :return: The client_ur_ls of this RecipientPreviewRequest.  # noqa: E501
+        :rtype: RecipientTokenClientURLs
+        """
+        return self._client_ur_ls
+
+    @client_ur_ls.setter
+    def client_ur_ls(self, client_ur_ls):
+        """Sets the client_ur_ls of this RecipientPreviewRequest.
+
+
+        :param client_ur_ls: The client_ur_ls of this RecipientPreviewRequest.  # noqa: E501
+        :type: RecipientTokenClientURLs
+        """
+
+        self._client_ur_ls = client_ur_ls
 
     @property
     def ping_frequency(self):
