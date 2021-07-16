@@ -183,7 +183,6 @@ from docusign_esign.models.envelope_document import EnvelopeDocument
 from docusign_esign.models.envelope_documents_result import EnvelopeDocumentsResult
 from docusign_esign.models.envelope_event import EnvelopeEvent
 from docusign_esign.models.envelope_form_data import EnvelopeFormData
-from docusign_esign.models.envelope_form_data_prefill_form_data import EnvelopeFormDataPrefillFormData
 from docusign_esign.models.envelope_id import EnvelopeId
 from docusign_esign.models.envelope_ids_request import EnvelopeIdsRequest
 from docusign_esign.models.envelope_notification_request import EnvelopeNotificationRequest
@@ -280,6 +279,7 @@ from docusign_esign.models.power_form_senders_response import PowerFormSendersRe
 from docusign_esign.models.power_forms_form_data_response import PowerFormsFormDataResponse
 from docusign_esign.models.power_forms_request import PowerFormsRequest
 from docusign_esign.models.power_forms_response import PowerFormsResponse
+from docusign_esign.models.prefill_form_data import PrefillFormData
 from docusign_esign.models.property_metadata import PropertyMetadata
 from docusign_esign.models.province import Province
 from docusign_esign.models.provisioning_information import ProvisioningInformation
