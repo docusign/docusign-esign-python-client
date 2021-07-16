@@ -35,6 +35,7 @@ class SealSign(object):
         'access_code_metadata': 'PropertyMetadata',
         'add_access_code_to_email': 'str',
         'allow_system_override_for_locked_recipient': 'str',
+        'auto_responded_reason': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
         'custom_fields': 'list[str]',
@@ -94,6 +95,7 @@ class SealSign(object):
         'access_code_metadata': 'accessCodeMetadata',
         'add_access_code_to_email': 'addAccessCodeToEmail',
         'allow_system_override_for_locked_recipient': 'allowSystemOverrideForLockedRecipient',
+        'auto_responded_reason': 'autoRespondedReason',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
         'custom_fields': 'customFields',
@@ -148,13 +150,14 @@ class SealSign(object):
         'user_id': 'userId'
     }
 
-    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, allow_system_override_for_locked_recipient=None, client_user_id=None, completed_count=None, custom_fields=None, declined_date_time=None, declined_reason=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, fax_number=None, fax_number_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, note=None, note_metadata=None, phone_authentication=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_signature_providers=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signed_date_time=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
+    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, allow_system_override_for_locked_recipient=None, auto_responded_reason=None, client_user_id=None, completed_count=None, custom_fields=None, declined_date_time=None, declined_reason=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, fax_number=None, fax_number_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, note=None, note_metadata=None, phone_authentication=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_signature_providers=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signed_date_time=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
         """SealSign - a model defined in Swagger"""  # noqa: E501
 
         self._access_code = None
         self._access_code_metadata = None
         self._add_access_code_to_email = None
         self._allow_system_override_for_locked_recipient = None
+        self._auto_responded_reason = None
         self._client_user_id = None
         self._completed_count = None
         self._custom_fields = None
@@ -217,6 +220,8 @@ class SealSign(object):
             self.add_access_code_to_email = add_access_code_to_email
         if allow_system_override_for_locked_recipient is not None:
             self.allow_system_override_for_locked_recipient = allow_system_override_for_locked_recipient
+        if auto_responded_reason is not None:
+            self.auto_responded_reason = auto_responded_reason
         if client_user_id is not None:
             self.client_user_id = client_user_id
         if completed_count is not None:
@@ -411,6 +416,29 @@ class SealSign(object):
         """
 
         self._allow_system_override_for_locked_recipient = allow_system_override_for_locked_recipient
+
+    @property
+    def auto_responded_reason(self):
+        """Gets the auto_responded_reason of this SealSign.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The auto_responded_reason of this SealSign.  # noqa: E501
+        :rtype: str
+        """
+        return self._auto_responded_reason
+
+    @auto_responded_reason.setter
+    def auto_responded_reason(self, auto_responded_reason):
+        """Sets the auto_responded_reason of this SealSign.
+
+          # noqa: E501
+
+        :param auto_responded_reason: The auto_responded_reason of this SealSign.  # noqa: E501
+        :type: str
+        """
+
+        self._auto_responded_reason = auto_responded_reason
 
     @property
     def client_user_id(self):

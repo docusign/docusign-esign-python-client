@@ -39,6 +39,7 @@ class Signer(object):
         'agent_can_edit_name': 'str',
         'allow_system_override_for_locked_recipient': 'str',
         'auto_navigation': 'str',
+        'auto_responded_reason': 'str',
         'bulk_recipients_uri': 'str',
         'can_sign_offline': 'str',
         'client_user_id': 'str',
@@ -84,6 +85,8 @@ class Signer(object):
         'note_metadata': 'PropertyMetadata',
         'offline_attributes': 'OfflineAttributes',
         'phone_authentication': 'RecipientPhoneAuthentication',
+        'phone_number': 'RecipientPhoneNumber',
+        'phone_number_metadata': 'PropertyMetadata',
         'proof_file': 'RecipientProofFile',
         'recipient_attachments': 'list[RecipientAttachment]',
         'recipient_authentication_status': 'AuthenticationStatus',
@@ -132,6 +135,7 @@ class Signer(object):
         'agent_can_edit_name': 'agentCanEditName',
         'allow_system_override_for_locked_recipient': 'allowSystemOverrideForLockedRecipient',
         'auto_navigation': 'autoNavigation',
+        'auto_responded_reason': 'autoRespondedReason',
         'bulk_recipients_uri': 'bulkRecipientsUri',
         'can_sign_offline': 'canSignOffline',
         'client_user_id': 'clientUserId',
@@ -177,6 +181,8 @@ class Signer(object):
         'note_metadata': 'noteMetadata',
         'offline_attributes': 'offlineAttributes',
         'phone_authentication': 'phoneAuthentication',
+        'phone_number': 'phoneNumber',
+        'phone_number_metadata': 'phoneNumberMetadata',
         'proof_file': 'proofFile',
         'recipient_attachments': 'recipientAttachments',
         'recipient_authentication_status': 'recipientAuthenticationStatus',
@@ -216,7 +222,7 @@ class Signer(object):
         'user_id': 'userId'
     }
 
-    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, agent_can_edit_email=None, agent_can_edit_name=None, allow_system_override_for_locked_recipient=None, auto_navigation=None, bulk_recipients_uri=None, can_sign_offline=None, client_user_id=None, completed_count=None, creation_reason=None, custom_fields=None, declined_date_time=None, declined_reason=None, default_recipient=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, is_bulk_recipient=None, is_bulk_recipient_metadata=None, last_name=None, last_name_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, notary_id=None, note=None, note_metadata=None, offline_attributes=None, phone_authentication=None, proof_file=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_signature_providers=None, recipient_supplies_tabs=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, require_signer_certificate=None, require_sign_on_paper=None, require_upload_signature=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signature_info=None, signed_date_time=None, sign_in_each_location=None, sign_in_each_location_metadata=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
+    def __init__(self, access_code=None, access_code_metadata=None, add_access_code_to_email=None, additional_notifications=None, agent_can_edit_email=None, agent_can_edit_name=None, allow_system_override_for_locked_recipient=None, auto_navigation=None, auto_responded_reason=None, bulk_recipients_uri=None, can_sign_offline=None, client_user_id=None, completed_count=None, creation_reason=None, custom_fields=None, declined_date_time=None, declined_reason=None, default_recipient=None, delivered_date_time=None, delivery_method=None, delivery_method_metadata=None, designator_id=None, designator_id_guid=None, document_visibility=None, email=None, email_metadata=None, email_notification=None, embedded_recipient_start_url=None, error_details=None, excluded_documents=None, fax_number=None, fax_number_metadata=None, first_name=None, first_name_metadata=None, full_name=None, full_name_metadata=None, id_check_configuration_name=None, id_check_configuration_name_metadata=None, id_check_information_input=None, identity_verification=None, inherit_email_notification_configuration=None, is_bulk_recipient=None, is_bulk_recipient_metadata=None, last_name=None, last_name_metadata=None, locked_recipient_phone_auth_editable=None, locked_recipient_sms_editable=None, name=None, name_metadata=None, notary_id=None, note=None, note_metadata=None, offline_attributes=None, phone_authentication=None, phone_number=None, phone_number_metadata=None, proof_file=None, recipient_attachments=None, recipient_authentication_status=None, recipient_feature_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_signature_providers=None, recipient_supplies_tabs=None, recipient_type=None, recipient_type_metadata=None, require_id_lookup=None, require_id_lookup_metadata=None, require_signer_certificate=None, require_sign_on_paper=None, require_upload_signature=None, role_name=None, routing_order=None, routing_order_metadata=None, sent_date_time=None, signature_info=None, signed_date_time=None, sign_in_each_location=None, sign_in_each_location_metadata=None, signing_group_id=None, signing_group_id_metadata=None, signing_group_name=None, signing_group_users=None, sms_authentication=None, social_authentications=None, status=None, status_code=None, suppress_emails=None, tabs=None, template_locked=None, template_required=None, total_tab_count=None, user_id=None):  # noqa: E501
         """Signer - a model defined in Swagger"""  # noqa: E501
 
         self._access_code = None
@@ -227,6 +233,7 @@ class Signer(object):
         self._agent_can_edit_name = None
         self._allow_system_override_for_locked_recipient = None
         self._auto_navigation = None
+        self._auto_responded_reason = None
         self._bulk_recipients_uri = None
         self._can_sign_offline = None
         self._client_user_id = None
@@ -272,6 +279,8 @@ class Signer(object):
         self._note_metadata = None
         self._offline_attributes = None
         self._phone_authentication = None
+        self._phone_number = None
+        self._phone_number_metadata = None
         self._proof_file = None
         self._recipient_attachments = None
         self._recipient_authentication_status = None
@@ -327,6 +336,8 @@ class Signer(object):
             self.allow_system_override_for_locked_recipient = allow_system_override_for_locked_recipient
         if auto_navigation is not None:
             self.auto_navigation = auto_navigation
+        if auto_responded_reason is not None:
+            self.auto_responded_reason = auto_responded_reason
         if bulk_recipients_uri is not None:
             self.bulk_recipients_uri = bulk_recipients_uri
         if can_sign_offline is not None:
@@ -417,6 +428,10 @@ class Signer(object):
             self.offline_attributes = offline_attributes
         if phone_authentication is not None:
             self.phone_authentication = phone_authentication
+        if phone_number is not None:
+            self.phone_number = phone_number
+        if phone_number_metadata is not None:
+            self.phone_number_metadata = phone_number_metadata
         if proof_file is not None:
             self.proof_file = proof_file
         if recipient_attachments is not None:
@@ -673,6 +688,29 @@ class Signer(object):
         """
 
         self._auto_navigation = auto_navigation
+
+    @property
+    def auto_responded_reason(self):
+        """Gets the auto_responded_reason of this Signer.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The auto_responded_reason of this Signer.  # noqa: E501
+        :rtype: str
+        """
+        return self._auto_responded_reason
+
+    @auto_responded_reason.setter
+    def auto_responded_reason(self, auto_responded_reason):
+        """Sets the auto_responded_reason of this Signer.
+
+          # noqa: E501
+
+        :param auto_responded_reason: The auto_responded_reason of this Signer.  # noqa: E501
+        :type: str
+        """
+
+        self._auto_responded_reason = auto_responded_reason
 
     @property
     def bulk_recipients_uri(self):
@@ -1676,6 +1714,48 @@ class Signer(object):
         """
 
         self._phone_authentication = phone_authentication
+
+    @property
+    def phone_number(self):
+        """Gets the phone_number of this Signer.  # noqa: E501
+
+
+        :return: The phone_number of this Signer.  # noqa: E501
+        :rtype: RecipientPhoneNumber
+        """
+        return self._phone_number
+
+    @phone_number.setter
+    def phone_number(self, phone_number):
+        """Sets the phone_number of this Signer.
+
+
+        :param phone_number: The phone_number of this Signer.  # noqa: E501
+        :type: RecipientPhoneNumber
+        """
+
+        self._phone_number = phone_number
+
+    @property
+    def phone_number_metadata(self):
+        """Gets the phone_number_metadata of this Signer.  # noqa: E501
+
+
+        :return: The phone_number_metadata of this Signer.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._phone_number_metadata
+
+    @phone_number_metadata.setter
+    def phone_number_metadata(self, phone_number_metadata):
+        """Sets the phone_number_metadata of this Signer.
+
+
+        :param phone_number_metadata: The phone_number_metadata of this Signer.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._phone_number_metadata = phone_number_metadata
 
     @property
     def proof_file(self):

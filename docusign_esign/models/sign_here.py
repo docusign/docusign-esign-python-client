@@ -66,6 +66,7 @@ class SignHere(object):
         'form_page_label_metadata': 'PropertyMetadata',
         'form_page_number': 'str',
         'form_page_number_metadata': 'PropertyMetadata',
+        'hand_draw_required': 'str',
         'height': 'str',
         'height_metadata': 'PropertyMetadata',
         'is_seal_sign_tab': 'str',
@@ -150,6 +151,7 @@ class SignHere(object):
         'form_page_label_metadata': 'formPageLabelMetadata',
         'form_page_number': 'formPageNumber',
         'form_page_number_metadata': 'formPageNumberMetadata',
+        'hand_draw_required': 'handDrawRequired',
         'height': 'height',
         'height_metadata': 'heightMetadata',
         'is_seal_sign_tab': 'isSealSignTab',
@@ -198,7 +200,7 @@ class SignHere(object):
         'y_position_metadata': 'yPositionMetadata'
     }
 
-    def __init__(self, anchor_allow_white_space_in_characters=None, anchor_allow_white_space_in_characters_metadata=None, anchor_case_sensitive=None, anchor_case_sensitive_metadata=None, anchor_horizontal_alignment=None, anchor_horizontal_alignment_metadata=None, anchor_ignore_if_not_present=None, anchor_ignore_if_not_present_metadata=None, anchor_match_whole_word=None, anchor_match_whole_word_metadata=None, anchor_string=None, anchor_string_metadata=None, anchor_tab_processor_version=None, anchor_tab_processor_version_metadata=None, anchor_units=None, anchor_units_metadata=None, anchor_x_offset=None, anchor_x_offset_metadata=None, anchor_y_offset=None, anchor_y_offset_metadata=None, conditional_parent_label=None, conditional_parent_label_metadata=None, conditional_parent_value=None, conditional_parent_value_metadata=None, custom_tab_id=None, custom_tab_id_metadata=None, document_id=None, document_id_metadata=None, error_details=None, form_order=None, form_order_metadata=None, form_page_label=None, form_page_label_metadata=None, form_page_number=None, form_page_number_metadata=None, height=None, height_metadata=None, is_seal_sign_tab=None, merge_field=None, merge_field_xml=None, name=None, name_metadata=None, optional=None, optional_metadata=None, page_number=None, page_number_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_id_guid_metadata=None, recipient_id_metadata=None, scale_value=None, scale_value_metadata=None, smart_contract_information=None, source=None, stamp=None, stamp_type=None, stamp_type_metadata=None, status=None, status_metadata=None, tab_group_labels=None, tab_group_labels_metadata=None, tab_id=None, tab_id_metadata=None, tab_label=None, tab_label_metadata=None, tab_order=None, tab_order_metadata=None, tab_type=None, tab_type_metadata=None, template_locked=None, template_locked_metadata=None, template_required=None, template_required_metadata=None, tooltip=None, tool_tip_metadata=None, width=None, width_metadata=None, x_position=None, x_position_metadata=None, y_position=None, y_position_metadata=None):  # noqa: E501
+    def __init__(self, anchor_allow_white_space_in_characters=None, anchor_allow_white_space_in_characters_metadata=None, anchor_case_sensitive=None, anchor_case_sensitive_metadata=None, anchor_horizontal_alignment=None, anchor_horizontal_alignment_metadata=None, anchor_ignore_if_not_present=None, anchor_ignore_if_not_present_metadata=None, anchor_match_whole_word=None, anchor_match_whole_word_metadata=None, anchor_string=None, anchor_string_metadata=None, anchor_tab_processor_version=None, anchor_tab_processor_version_metadata=None, anchor_units=None, anchor_units_metadata=None, anchor_x_offset=None, anchor_x_offset_metadata=None, anchor_y_offset=None, anchor_y_offset_metadata=None, conditional_parent_label=None, conditional_parent_label_metadata=None, conditional_parent_value=None, conditional_parent_value_metadata=None, custom_tab_id=None, custom_tab_id_metadata=None, document_id=None, document_id_metadata=None, error_details=None, form_order=None, form_order_metadata=None, form_page_label=None, form_page_label_metadata=None, form_page_number=None, form_page_number_metadata=None, hand_draw_required=None, height=None, height_metadata=None, is_seal_sign_tab=None, merge_field=None, merge_field_xml=None, name=None, name_metadata=None, optional=None, optional_metadata=None, page_number=None, page_number_metadata=None, recipient_id=None, recipient_id_guid=None, recipient_id_guid_metadata=None, recipient_id_metadata=None, scale_value=None, scale_value_metadata=None, smart_contract_information=None, source=None, stamp=None, stamp_type=None, stamp_type_metadata=None, status=None, status_metadata=None, tab_group_labels=None, tab_group_labels_metadata=None, tab_id=None, tab_id_metadata=None, tab_label=None, tab_label_metadata=None, tab_order=None, tab_order_metadata=None, tab_type=None, tab_type_metadata=None, template_locked=None, template_locked_metadata=None, template_required=None, template_required_metadata=None, tooltip=None, tool_tip_metadata=None, width=None, width_metadata=None, x_position=None, x_position_metadata=None, y_position=None, y_position_metadata=None):  # noqa: E501
         """SignHere - a model defined in Swagger"""  # noqa: E501
 
         self._anchor_allow_white_space_in_characters = None
@@ -236,6 +238,7 @@ class SignHere(object):
         self._form_page_label_metadata = None
         self._form_page_number = None
         self._form_page_number_metadata = None
+        self._hand_draw_required = None
         self._height = None
         self._height_metadata = None
         self._is_seal_sign_tab = None
@@ -354,6 +357,8 @@ class SignHere(object):
             self.form_page_number = form_page_number
         if form_page_number_metadata is not None:
             self.form_page_number_metadata = form_page_number_metadata
+        if hand_draw_required is not None:
+            self.hand_draw_required = hand_draw_required
         if height is not None:
             self.height = height
         if height_metadata is not None:
@@ -1215,6 +1220,29 @@ class SignHere(object):
         """
 
         self._form_page_number_metadata = form_page_number_metadata
+
+    @property
+    def hand_draw_required(self):
+        """Gets the hand_draw_required of this SignHere.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The hand_draw_required of this SignHere.  # noqa: E501
+        :rtype: str
+        """
+        return self._hand_draw_required
+
+    @hand_draw_required.setter
+    def hand_draw_required(self, hand_draw_required):
+        """Sets the hand_draw_required of this SignHere.
+
+          # noqa: E501
+
+        :param hand_draw_required: The hand_draw_required of this SignHere.  # noqa: E501
+        :type: str
+        """
+
+        self._hand_draw_required = hand_draw_required
 
     @property
     def height(self):

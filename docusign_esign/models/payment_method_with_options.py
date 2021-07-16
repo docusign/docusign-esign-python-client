@@ -31,26 +31,54 @@ class PaymentMethodWithOptions(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'supported_currencies': 'list[str]',
         'supported_options': 'list[str]',
         'type': 'str'
     }
 
     attribute_map = {
+        'supported_currencies': 'supportedCurrencies',
         'supported_options': 'supportedOptions',
         'type': 'type'
     }
 
-    def __init__(self, supported_options=None, type=None):  # noqa: E501
+    def __init__(self, supported_currencies=None, supported_options=None, type=None):  # noqa: E501
         """PaymentMethodWithOptions - a model defined in Swagger"""  # noqa: E501
 
+        self._supported_currencies = None
         self._supported_options = None
         self._type = None
         self.discriminator = None
 
+        if supported_currencies is not None:
+            self.supported_currencies = supported_currencies
         if supported_options is not None:
             self.supported_options = supported_options
         if type is not None:
             self.type = type
+
+    @property
+    def supported_currencies(self):
+        """Gets the supported_currencies of this PaymentMethodWithOptions.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The supported_currencies of this PaymentMethodWithOptions.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._supported_currencies
+
+    @supported_currencies.setter
+    def supported_currencies(self, supported_currencies):
+        """Sets the supported_currencies of this PaymentMethodWithOptions.
+
+          # noqa: E501
+
+        :param supported_currencies: The supported_currencies of this PaymentMethodWithOptions.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._supported_currencies = supported_currencies
 
     @property
     def supported_options(self):
