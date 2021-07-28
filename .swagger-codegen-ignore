@@ -36,7 +36,6 @@ LICENSE
 requirements.txt
 test-requirements.txt
 setup.cfg
-#setup.py
 
 
 # Specific src and test files
@@ -44,7 +43,6 @@ tox.ini
 docs/
 test/
 docusign_esign/client/
-#docusign_esign/__init__.py
 docusign_esign/api_client.py
 docusign_esign/configuration.py
 docusign_esign/rest.py
