@@ -171,6 +171,7 @@ from docusign_esign.models.custom_field import CustomField
 from docusign_esign.models.custom_fields import CustomFields
 from docusign_esign.models.custom_fields_envelope import CustomFieldsEnvelope
 from docusign_esign.models.custom_settings_information import CustomSettingsInformation
+from docusign_esign.models.date import Date
 from docusign_esign.models.date_signed import DateSigned
 from docusign_esign.models.date_stamp_properties import DateStampProperties
 from docusign_esign.models.decline import Decline
