@@ -11,10 +11,10 @@
 """
 
 
-from setuptools import setup, find_packages, Command, os  # noqa: H301
+from setuptools import setup, find_packages, Command, os  # noqa: H301	
 
 NAME = "docusign-esign"
-VERSION = "3.11.0"
+VERSION = "3.12.0rc1"
 # To install the library, run the following
 #
 # python setup.py install
@@ -37,6 +37,7 @@ class CleanCommand(Command):
 this_directory = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
+    
 
 setup(
     name=NAME,

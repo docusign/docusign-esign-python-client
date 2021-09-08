@@ -2798,6 +2798,7 @@ class UsersApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param str allow_all_languages:
         :param UserSettingsInformation user_settings_information:
         :return: None
                  If the method is called asynchronously,
@@ -2826,13 +2827,14 @@ class UsersApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param str allow_all_languages:
         :param UserSettingsInformation user_settings_information:
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'user_id', 'user_settings_information']
+        all_params = ['account_id', 'user_id', 'allow_all_languages', 'user_settings_information']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2865,6 +2867,8 @@ class UsersApi(object):
             path_params['userId'] = params['user_id']
 
         query_params = {}
+        if 'allow_all_languages' in params:
+            query_params['allow_all_languages'] = params['allow_all_languages']
 
         header_params = {}
 
@@ -3280,6 +3284,7 @@ class UsersApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param str allow_all_languages:
         :param UserInformation user_information:
         :return: UserInformation
                  If the method is called asynchronously,
@@ -3307,13 +3312,14 @@ class UsersApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param str allow_all_languages:
         :param UserInformation user_information:
         :return: UserInformation
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'user_id', 'user_information']
+        all_params = ['account_id', 'user_id', 'allow_all_languages', 'user_information']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3346,6 +3352,8 @@ class UsersApi(object):
             path_params['userId'] = params['user_id']
 
         query_params = {}
+        if 'allow_all_languages' in params:
+            query_params['allow_all_languages'] = params['allow_all_languages']
 
         header_params = {}
 
@@ -3391,6 +3399,7 @@ class UsersApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str allow_all_languages:
         :param UserInformationList user_information_list:
         :return: UserInformationList
                  If the method is called asynchronously,
@@ -3417,13 +3426,14 @@ class UsersApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str allow_all_languages:
         :param UserInformationList user_information_list:
         :return: UserInformationList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'user_information_list']
+        all_params = ['account_id', 'allow_all_languages', 'user_information_list']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3451,6 +3461,8 @@ class UsersApi(object):
             path_params['accountId'] = params['account_id']
 
         query_params = {}
+        if 'allow_all_languages' in params:
+            query_params['allow_all_languages'] = params['allow_all_languages']
 
         header_params = {}
 

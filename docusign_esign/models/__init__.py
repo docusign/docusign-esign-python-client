@@ -176,7 +176,6 @@ from docusign_esign.models.date_stamp_properties import DateStampProperties
 from docusign_esign.models.decline import Decline
 from docusign_esign.models.diagnostics_settings_information import DiagnosticsSettingsInformation
 from docusign_esign.models.direct_debit_processor_information import DirectDebitProcessorInformation
-from docusign_esign.models.display_appliance_info import DisplayApplianceInfo
 from docusign_esign.models.dob_information_input import DobInformationInput
 from docusign_esign.models.document import Document
 from docusign_esign.models.document_fields_information import DocumentFieldsInformation
@@ -211,7 +210,6 @@ from docusign_esign.models.envelope_document import EnvelopeDocument
 from docusign_esign.models.envelope_documents_result import EnvelopeDocumentsResult
 from docusign_esign.models.envelope_event import EnvelopeEvent
 from docusign_esign.models.envelope_form_data import EnvelopeFormData
-from docusign_esign.models.envelope_form_data_prefill_form_data import EnvelopeFormDataPrefillFormData
 from docusign_esign.models.envelope_id import EnvelopeId
 from docusign_esign.models.envelope_ids_request import EnvelopeIdsRequest
 from docusign_esign.models.envelope_metadata import EnvelopeMetadata
@@ -337,6 +335,7 @@ from docusign_esign.models.power_form_senders_response import PowerFormSendersRe
 from docusign_esign.models.power_forms_form_data_response import PowerFormsFormDataResponse
 from docusign_esign.models.power_forms_request import PowerFormsRequest
 from docusign_esign.models.power_forms_response import PowerFormsResponse
+from docusign_esign.models.prefill_form_data import PrefillFormData
 from docusign_esign.models.prefill_tabs import PrefillTabs
 from docusign_esign.models.proof_service_resource_token import ProofServiceResourceToken
 from docusign_esign.models.proof_service_view_link import ProofServiceViewLink
@@ -368,6 +367,7 @@ from docusign_esign.models.recipient_sms_authentication import RecipientSMSAuthe
 from docusign_esign.models.recipient_signature_information import RecipientSignatureInformation
 from docusign_esign.models.recipient_signature_provider import RecipientSignatureProvider
 from docusign_esign.models.recipient_signature_provider_options import RecipientSignatureProviderOptions
+from docusign_esign.models.recipient_token_client_ur_ls import RecipientTokenClientURLs
 from docusign_esign.models.recipient_update_response import RecipientUpdateResponse
 from docusign_esign.models.recipient_view_request import RecipientViewRequest
 from docusign_esign.models.recipients import Recipients
@@ -390,7 +390,9 @@ from docusign_esign.models.return_url_request import ReturnUrlRequest
 from docusign_esign.models.seal_identifier import SealIdentifier
 from docusign_esign.models.seal_sign import SealSign
 from docusign_esign.models.seat_discount import SeatDiscount
+from docusign_esign.models.sender_company import SenderCompany
 from docusign_esign.models.sender_email_notifications import SenderEmailNotifications
+from docusign_esign.models.sender_name import SenderName
 from docusign_esign.models.server_template import ServerTemplate
 from docusign_esign.models.service_information import ServiceInformation
 from docusign_esign.models.service_version import ServiceVersion
@@ -473,4 +475,3 @@ from docusign_esign.models.workspace_settings import WorkspaceSettings
 from docusign_esign.models.workspace_user import WorkspaceUser
 from docusign_esign.models.workspace_user_authorization import WorkspaceUserAuthorization
 from docusign_esign.models.zip import Zip
-from docusign_esign.models.prefill_form_data import PrefillFormData
