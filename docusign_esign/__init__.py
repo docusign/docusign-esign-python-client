@@ -35,6 +35,17 @@ from .apis.trust_service_providers_api import TrustServiceProvidersApi
 from .apis.users_api import UsersApi
 from .apis.workspaces_api import WorkspacesApi
 
+# import ApiClient
+from .client.api_client import ApiClient
+from .client.configuration import Configuration
+from .client.api_exception import ApiException
+
+from .client.auth.oauth import OAuth	
+from .client.auth.oauth import OAuthToken	
+from .client.auth.oauth import Account	
+from .client.auth.oauth import Organization	
+from .client.auth.oauth import Link
+
 # import models into sdk package
 from docusign_esign.models.account_address import AccountAddress
 from docusign_esign.models.account_billing_plan import AccountBillingPlan
@@ -388,15 +399,5 @@ from docusign_esign.models.workspace_user import WorkspaceUser
 from docusign_esign.models.workspace_user_authorization import WorkspaceUserAuthorization
 from docusign_esign.models.zip import Zip
 
-# import ApiClient
-from .client.api_client import ApiClient
-from .client.api_client import ApiException
-from .client.auth.oauth import OAuth
-from .client.auth.oauth import OAuthToken
-from .client.auth.oauth import Account
-from .client.auth.oauth import Organization
-from .client.auth.oauth import Link
-
-from .client.configuration import Configuration
 
 configuration = Configuration()

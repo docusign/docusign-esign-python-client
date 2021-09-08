@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [2.12.0rc1] - eSignature API v2-21.2.02.00 - 2021-09-08
+### Changed
+- Added support for version v2-21.2.02.00 of the DocuSign eSignature API.
+- Updated the SDK release version.
+- The way all models take in init parameters using `kwargs`
+- Updated to latest OpenAPI spec.
+
 ## [2.11.0] - eSignature API v2-2.11.0 - 2021-07-22
 ### Changed
 - Added support for version v2-2.11.0 of the DocuSign eSignature API.

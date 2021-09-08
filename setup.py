@@ -11,10 +11,10 @@
 """
 
 
-from setuptools import setup, find_packages, Command, os  # noqa: H301
+from setuptools import setup, find_packages, Command, os  # noqa: H301	
 
 NAME = "docusign-esign"
-VERSION = "2.11.0"
+VERSION = "2.12.0rc1"
 # To install the library, run the following
 #
 # python setup.py install
@@ -22,8 +22,7 @@ VERSION = "2.11.0"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.8.0", "certifi >= 14.05.14", "python-dateutil >= 2.5.3",
-            "setuptools >= 21.0.0", "PyJWT>=1.7.1,<2", "cryptography>=2.5", "nose>=1.3.7", "importlib-metadata<2,>=0.12"]
+REQUIRES = ["urllib3 >= 1.15", "six >= 1.8.0", "certifi >= 14.05.14", "python-dateutil >= 2.5.3", "setuptools >= 21.0.0", "PyJWT>=1.7.1,<2", "cryptography>=2.5", "nose>=1.3.7"]
 
 class CleanCommand(Command):
     """Custom clean command to tidy up the project root."""
@@ -38,6 +37,7 @@ class CleanCommand(Command):
 this_directory = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
+    
 
 setup(
     name=NAME,
@@ -50,7 +50,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     cmdclass={
-            'clean': CleanCommand,
+        'clean': CleanCommand,
     },
     long_description=long_description,
     long_description_content_type='text/markdown'
