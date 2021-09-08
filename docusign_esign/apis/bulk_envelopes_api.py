@@ -492,12 +492,12 @@ class BulkEnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str bulk_send_batch_id: (required)
-        :param int count:
+        :param str count:
         :param str include:
         :param str order:
         :param str order_by:
         :param str search_text:
-        :param int start_position:
+        :param str start_position:
         :param str status:
         :param str user_id:
         :return: EnvelopesInformation
@@ -526,12 +526,12 @@ class BulkEnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str bulk_send_batch_id: (required)
-        :param int count:
+        :param str count:
         :param str include:
         :param str order:
         :param str order_by:
         :param str search_text:
-        :param int start_position:
+        :param str start_position:
         :param str status:
         :param str user_id:
         :return: EnvelopesInformation
