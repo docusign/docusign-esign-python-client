@@ -54,6 +54,7 @@ class AccountBillingPlan(object):
         'plan_id': 'str',
         'plan_name': 'str',
         'plan_start_date': 'str',
+        'product_id': 'str',
         'renewal_date': 'str',
         'renewal_status': 'str',
         'seat_discounts': 'list[SeatDiscount]',
@@ -84,6 +85,7 @@ class AccountBillingPlan(object):
         'plan_id': 'planId',
         'plan_name': 'planName',
         'plan_start_date': 'planStartDate',
+        'product_id': 'productId',
         'renewal_date': 'renewalDate',
         'renewal_status': 'renewalStatus',
         'seat_discounts': 'seatDiscounts',
@@ -119,6 +121,7 @@ class AccountBillingPlan(object):
         self._plan_id = None
         self._plan_name = None
         self._plan_start_date = None
+        self._product_id = None
         self._renewal_date = None
         self._renewal_status = None
         self._seat_discounts = None
@@ -148,6 +151,7 @@ class AccountBillingPlan(object):
         setattr(self, "_{}".format('plan_id'), kwargs.get('plan_id', None))
         setattr(self, "_{}".format('plan_name'), kwargs.get('plan_name', None))
         setattr(self, "_{}".format('plan_start_date'), kwargs.get('plan_start_date', None))
+        setattr(self, "_{}".format('product_id'), kwargs.get('product_id', None))
         setattr(self, "_{}".format('renewal_date'), kwargs.get('renewal_date', None))
         setattr(self, "_{}".format('renewal_status'), kwargs.get('renewal_status', None))
         setattr(self, "_{}".format('seat_discounts'), kwargs.get('seat_discounts', None))
@@ -635,6 +639,29 @@ class AccountBillingPlan(object):
         """
 
         self._plan_start_date = plan_start_date
+
+    @property
+    def product_id(self):
+        """Gets the product_id of this AccountBillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The product_id of this AccountBillingPlan.  # noqa: E501
+        :rtype: str
+        """
+        return self._product_id
+
+    @product_id.setter
+    def product_id(self, product_id):
+        """Sets the product_id of this AccountBillingPlan.
+
+          # noqa: E501
+
+        :param product_id: The product_id of this AccountBillingPlan.  # noqa: E501
+        :type: str
+        """
+
+        self._product_id = product_id
 
     @property
     def renewal_date(self):

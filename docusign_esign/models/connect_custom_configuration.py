@@ -38,6 +38,7 @@ class ConnectCustomConfiguration(object):
         'all_users': 'str',
         'configuration_type': 'str',
         'connect_id': 'str',
+        'delivery_mode': 'str',
         'enable_log': 'str',
         'envelope_events': 'list[str]',
         'event_data': 'ConnectEventData',
@@ -77,6 +78,7 @@ class ConnectCustomConfiguration(object):
         'all_users': 'allUsers',
         'configuration_type': 'configurationType',
         'connect_id': 'connectId',
+        'delivery_mode': 'deliveryMode',
         'enable_log': 'enableLog',
         'envelope_events': 'envelopeEvents',
         'event_data': 'eventData',
@@ -121,6 +123,7 @@ class ConnectCustomConfiguration(object):
         self._all_users = None
         self._configuration_type = None
         self._connect_id = None
+        self._delivery_mode = None
         self._enable_log = None
         self._envelope_events = None
         self._event_data = None
@@ -159,6 +162,7 @@ class ConnectCustomConfiguration(object):
         setattr(self, "_{}".format('all_users'), kwargs.get('all_users', None))
         setattr(self, "_{}".format('configuration_type'), kwargs.get('configuration_type', None))
         setattr(self, "_{}".format('connect_id'), kwargs.get('connect_id', None))
+        setattr(self, "_{}".format('delivery_mode'), kwargs.get('delivery_mode', None))
         setattr(self, "_{}".format('enable_log'), kwargs.get('enable_log', None))
         setattr(self, "_{}".format('envelope_events'), kwargs.get('envelope_events', None))
         setattr(self, "_{}".format('event_data'), kwargs.get('event_data', None))
@@ -307,6 +311,29 @@ class ConnectCustomConfiguration(object):
         self._connect_id = connect_id
 
     @property
+    def delivery_mode(self):
+        """Gets the delivery_mode of this ConnectCustomConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The delivery_mode of this ConnectCustomConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._delivery_mode
+
+    @delivery_mode.setter
+    def delivery_mode(self, delivery_mode):
+        """Sets the delivery_mode of this ConnectCustomConfiguration.
+
+          # noqa: E501
+
+        :param delivery_mode: The delivery_mode of this ConnectCustomConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._delivery_mode = delivery_mode
+
+    @property
     def enable_log(self):
         """Gets the enable_log of this ConnectCustomConfiguration.  # noqa: E501
 
@@ -333,7 +360,7 @@ class ConnectCustomConfiguration(object):
     def envelope_events(self):
         """Gets the envelope_events of this ConnectCustomConfiguration.  # noqa: E501
 
-        A comma separated list of Ã¯Â¿Â½EnvelopeÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.  # noqa: E501
+        A comma separated list of ï¿½Envelopeï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.  # noqa: E501
 
         :return: The envelope_events of this ConnectCustomConfiguration.  # noqa: E501
         :rtype: list[str]
@@ -344,7 +371,7 @@ class ConnectCustomConfiguration(object):
     def envelope_events(self, envelope_events):
         """Sets the envelope_events of this ConnectCustomConfiguration.
 
-        A comma separated list of Ã¯Â¿Â½EnvelopeÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.  # noqa: E501
+        A comma separated list of ï¿½Envelopeï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.  # noqa: E501
 
         :param envelope_events: The envelope_events of this ConnectCustomConfiguration.  # noqa: E501
         :type: list[str]
@@ -653,7 +680,7 @@ class ConnectCustomConfiguration(object):
     def recipient_events(self):
         """Gets the recipient_events of this ConnectCustomConfiguration.  # noqa: E501
 
-        A comma separated list of Ã¯Â¿Â½RecipientÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.  # noqa: E501
+        A comma separated list of ï¿½Recipientï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.  # noqa: E501
 
         :return: The recipient_events of this ConnectCustomConfiguration.  # noqa: E501
         :rtype: list[str]
@@ -664,7 +691,7 @@ class ConnectCustomConfiguration(object):
     def recipient_events(self, recipient_events):
         """Sets the recipient_events of this ConnectCustomConfiguration.
 
-        A comma separated list of Ã¯Â¿Â½RecipientÃ¯Â¿Â½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.  # noqa: E501
+        A comma separated list of ï¿½Recipientï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.  # noqa: E501
 
         :param recipient_events: The recipient_events of this ConnectCustomConfiguration.  # noqa: E501
         :type: list[str]
@@ -952,7 +979,7 @@ class ConnectCustomConfiguration(object):
     def user_ids(self):
         """Gets the user_ids of this ConnectCustomConfiguration.  # noqa: E501
 
-        A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to Ã¯Â¿Â½falseÃ¯Â¿Â½ then you must provide a list of user idÃ¯Â¿Â½s.  # noqa: E501
+        A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to ï¿½falseï¿½ then you must provide a list of user idï¿½s.  # noqa: E501
 
         :return: The user_ids of this ConnectCustomConfiguration.  # noqa: E501
         :rtype: list[str]
@@ -963,7 +990,7 @@ class ConnectCustomConfiguration(object):
     def user_ids(self, user_ids):
         """Sets the user_ids of this ConnectCustomConfiguration.
 
-        A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to Ã¯Â¿Â½falseÃ¯Â¿Â½ then you must provide a list of user idÃ¯Â¿Â½s.  # noqa: E501
+        A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to ï¿½falseï¿½ then you must provide a list of user idï¿½s.  # noqa: E501
 
         :param user_ids: The user_ids of this ConnectCustomConfiguration.  # noqa: E501
         :type: list[str]

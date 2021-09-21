@@ -41,6 +41,7 @@ class DowngradePlanUpdateResponse(object):
         'downgrade_plan_name': 'str',
         'downgrade_request_status': 'str',
         'message': 'str',
+        'product_id': 'str',
         'promo_code': 'str',
         'sale_discount': 'str',
         'sale_discount_periods': 'str',
@@ -56,6 +57,7 @@ class DowngradePlanUpdateResponse(object):
         'downgrade_plan_name': 'downgradePlanName',
         'downgrade_request_status': 'downgradeRequestStatus',
         'message': 'message',
+        'product_id': 'productId',
         'promo_code': 'promoCode',
         'sale_discount': 'saleDiscount',
         'sale_discount_periods': 'saleDiscountPeriods',
@@ -76,6 +78,7 @@ class DowngradePlanUpdateResponse(object):
         self._downgrade_plan_name = None
         self._downgrade_request_status = None
         self._message = None
+        self._product_id = None
         self._promo_code = None
         self._sale_discount = None
         self._sale_discount_periods = None
@@ -90,6 +93,7 @@ class DowngradePlanUpdateResponse(object):
         setattr(self, "_{}".format('downgrade_plan_name'), kwargs.get('downgrade_plan_name', None))
         setattr(self, "_{}".format('downgrade_request_status'), kwargs.get('downgrade_request_status', None))
         setattr(self, "_{}".format('message'), kwargs.get('message', None))
+        setattr(self, "_{}".format('product_id'), kwargs.get('product_id', None))
         setattr(self, "_{}".format('promo_code'), kwargs.get('promo_code', None))
         setattr(self, "_{}".format('sale_discount'), kwargs.get('sale_discount', None))
         setattr(self, "_{}".format('sale_discount_periods'), kwargs.get('sale_discount_periods', None))
@@ -278,6 +282,29 @@ class DowngradePlanUpdateResponse(object):
         """
 
         self._message = message
+
+    @property
+    def product_id(self):
+        """Gets the product_id of this DowngradePlanUpdateResponse.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The product_id of this DowngradePlanUpdateResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._product_id
+
+    @product_id.setter
+    def product_id(self, product_id):
+        """Sets the product_id of this DowngradePlanUpdateResponse.
+
+          # noqa: E501
+
+        :param product_id: The product_id of this DowngradePlanUpdateResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._product_id = product_id
 
     @property
     def promo_code(self):

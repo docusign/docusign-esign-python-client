@@ -34,12 +34,14 @@ class RecipientIdentityVerification(object):
     """
     swagger_types = {
         'input_options': 'list[RecipientIdentityInputOption]',
-        'workflow_id': 'str'
+        'workflow_id': 'str',
+        'workflow_id_metadata': 'PropertyMetadata'
     }
 
     attribute_map = {
         'input_options': 'inputOptions',
-        'workflow_id': 'workflowId'
+        'workflow_id': 'workflowId',
+        'workflow_id_metadata': 'workflowIdMetadata'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -50,10 +52,12 @@ class RecipientIdentityVerification(object):
 
         self._input_options = None
         self._workflow_id = None
+        self._workflow_id_metadata = None
         self.discriminator = None
 
         setattr(self, "_{}".format('input_options'), kwargs.get('input_options', None))
         setattr(self, "_{}".format('workflow_id'), kwargs.get('workflow_id', None))
+        setattr(self, "_{}".format('workflow_id_metadata'), kwargs.get('workflow_id_metadata', None))
 
     @property
     def input_options(self):
@@ -100,6 +104,27 @@ class RecipientIdentityVerification(object):
         """
 
         self._workflow_id = workflow_id
+
+    @property
+    def workflow_id_metadata(self):
+        """Gets the workflow_id_metadata of this RecipientIdentityVerification.  # noqa: E501
+
+
+        :return: The workflow_id_metadata of this RecipientIdentityVerification.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._workflow_id_metadata
+
+    @workflow_id_metadata.setter
+    def workflow_id_metadata(self, workflow_id_metadata):
+        """Sets the workflow_id_metadata of this RecipientIdentityVerification.
+
+
+        :param workflow_id_metadata: The workflow_id_metadata of this RecipientIdentityVerification.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._workflow_id_metadata = workflow_id_metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

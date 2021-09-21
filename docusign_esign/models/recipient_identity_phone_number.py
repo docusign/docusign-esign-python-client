@@ -34,14 +34,22 @@ class RecipientIdentityPhoneNumber(object):
     """
     swagger_types = {
         'country_code': 'str',
+        'country_code_lock': 'str',
+        'country_code_metadata': 'PropertyMetadata',
         'extension': 'str',
-        'number': 'str'
+        'extension_metadata': 'PropertyMetadata',
+        'number': 'str',
+        'number_metadata': 'PropertyMetadata'
     }
 
     attribute_map = {
         'country_code': 'countryCode',
+        'country_code_lock': 'countryCodeLock',
+        'country_code_metadata': 'countryCodeMetadata',
         'extension': 'extension',
-        'number': 'number'
+        'extension_metadata': 'extensionMetadata',
+        'number': 'number',
+        'number_metadata': 'numberMetadata'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -51,13 +59,21 @@ class RecipientIdentityPhoneNumber(object):
         self._configuration = _configuration
 
         self._country_code = None
+        self._country_code_lock = None
+        self._country_code_metadata = None
         self._extension = None
+        self._extension_metadata = None
         self._number = None
+        self._number_metadata = None
         self.discriminator = None
 
         setattr(self, "_{}".format('country_code'), kwargs.get('country_code', None))
+        setattr(self, "_{}".format('country_code_lock'), kwargs.get('country_code_lock', None))
+        setattr(self, "_{}".format('country_code_metadata'), kwargs.get('country_code_metadata', None))
         setattr(self, "_{}".format('extension'), kwargs.get('extension', None))
+        setattr(self, "_{}".format('extension_metadata'), kwargs.get('extension_metadata', None))
         setattr(self, "_{}".format('number'), kwargs.get('number', None))
+        setattr(self, "_{}".format('number_metadata'), kwargs.get('number_metadata', None))
 
     @property
     def country_code(self):
@@ -83,6 +99,50 @@ class RecipientIdentityPhoneNumber(object):
         self._country_code = country_code
 
     @property
+    def country_code_lock(self):
+        """Gets the country_code_lock of this RecipientIdentityPhoneNumber.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The country_code_lock of this RecipientIdentityPhoneNumber.  # noqa: E501
+        :rtype: str
+        """
+        return self._country_code_lock
+
+    @country_code_lock.setter
+    def country_code_lock(self, country_code_lock):
+        """Sets the country_code_lock of this RecipientIdentityPhoneNumber.
+
+          # noqa: E501
+
+        :param country_code_lock: The country_code_lock of this RecipientIdentityPhoneNumber.  # noqa: E501
+        :type: str
+        """
+
+        self._country_code_lock = country_code_lock
+
+    @property
+    def country_code_metadata(self):
+        """Gets the country_code_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
+
+
+        :return: The country_code_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._country_code_metadata
+
+    @country_code_metadata.setter
+    def country_code_metadata(self, country_code_metadata):
+        """Sets the country_code_metadata of this RecipientIdentityPhoneNumber.
+
+
+        :param country_code_metadata: The country_code_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._country_code_metadata = country_code_metadata
+
+    @property
     def extension(self):
         """Gets the extension of this RecipientIdentityPhoneNumber.  # noqa: E501
 
@@ -106,6 +166,27 @@ class RecipientIdentityPhoneNumber(object):
         self._extension = extension
 
     @property
+    def extension_metadata(self):
+        """Gets the extension_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
+
+
+        :return: The extension_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._extension_metadata
+
+    @extension_metadata.setter
+    def extension_metadata(self, extension_metadata):
+        """Sets the extension_metadata of this RecipientIdentityPhoneNumber.
+
+
+        :param extension_metadata: The extension_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._extension_metadata = extension_metadata
+
+    @property
     def number(self):
         """Gets the number of this RecipientIdentityPhoneNumber.  # noqa: E501
 
@@ -127,6 +208,27 @@ class RecipientIdentityPhoneNumber(object):
         """
 
         self._number = number
+
+    @property
+    def number_metadata(self):
+        """Gets the number_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
+
+
+        :return: The number_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._number_metadata
+
+    @number_metadata.setter
+    def number_metadata(self, number_metadata):
+        """Sets the number_metadata of this RecipientIdentityPhoneNumber.
+
+
+        :param number_metadata: The number_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._number_metadata = number_metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

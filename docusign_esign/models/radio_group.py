@@ -52,6 +52,8 @@ class RadioGroup(object):
         'require_initial_on_shared_change_metadata': 'PropertyMetadata',
         'shared': 'str',
         'shared_metadata': 'PropertyMetadata',
+        'share_to_recipients': 'str',
+        'share_to_recipients_metadata': 'PropertyMetadata',
         'tab_type': 'str',
         'tab_type_metadata': 'PropertyMetadata',
         'template_locked': 'str',
@@ -82,6 +84,8 @@ class RadioGroup(object):
         'require_initial_on_shared_change_metadata': 'requireInitialOnSharedChangeMetadata',
         'shared': 'shared',
         'shared_metadata': 'sharedMetadata',
+        'share_to_recipients': 'shareToRecipients',
+        'share_to_recipients_metadata': 'shareToRecipientsMetadata',
         'tab_type': 'tabType',
         'tab_type_metadata': 'tabTypeMetadata',
         'template_locked': 'templateLocked',
@@ -117,6 +121,8 @@ class RadioGroup(object):
         self._require_initial_on_shared_change_metadata = None
         self._shared = None
         self._shared_metadata = None
+        self._share_to_recipients = None
+        self._share_to_recipients_metadata = None
         self._tab_type = None
         self._tab_type_metadata = None
         self._template_locked = None
@@ -146,6 +152,8 @@ class RadioGroup(object):
         setattr(self, "_{}".format('require_initial_on_shared_change_metadata'), kwargs.get('require_initial_on_shared_change_metadata', None))
         setattr(self, "_{}".format('shared'), kwargs.get('shared', None))
         setattr(self, "_{}".format('shared_metadata'), kwargs.get('shared_metadata', None))
+        setattr(self, "_{}".format('share_to_recipients'), kwargs.get('share_to_recipients', None))
+        setattr(self, "_{}".format('share_to_recipients_metadata'), kwargs.get('share_to_recipients_metadata', None))
         setattr(self, "_{}".format('tab_type'), kwargs.get('tab_type', None))
         setattr(self, "_{}".format('tab_type_metadata'), kwargs.get('tab_type_metadata', None))
         setattr(self, "_{}".format('template_locked'), kwargs.get('template_locked', None))
@@ -573,6 +581,50 @@ class RadioGroup(object):
         """
 
         self._shared_metadata = shared_metadata
+
+    @property
+    def share_to_recipients(self):
+        """Gets the share_to_recipients of this RadioGroup.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The share_to_recipients of this RadioGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._share_to_recipients
+
+    @share_to_recipients.setter
+    def share_to_recipients(self, share_to_recipients):
+        """Sets the share_to_recipients of this RadioGroup.
+
+          # noqa: E501
+
+        :param share_to_recipients: The share_to_recipients of this RadioGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._share_to_recipients = share_to_recipients
+
+    @property
+    def share_to_recipients_metadata(self):
+        """Gets the share_to_recipients_metadata of this RadioGroup.  # noqa: E501
+
+
+        :return: The share_to_recipients_metadata of this RadioGroup.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._share_to_recipients_metadata
+
+    @share_to_recipients_metadata.setter
+    def share_to_recipients_metadata(self, share_to_recipients_metadata):
+        """Sets the share_to_recipients_metadata of this RadioGroup.
+
+
+        :param share_to_recipients_metadata: The share_to_recipients_metadata of this RadioGroup.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._share_to_recipients_metadata = share_to_recipients_metadata
 
     @property
     def tab_type(self):
