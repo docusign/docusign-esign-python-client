@@ -111,6 +111,8 @@ class Email(object):
         'sender_required_metadata': 'PropertyMetadata',
         'shared': 'str',
         'shared_metadata': 'PropertyMetadata',
+        'share_to_recipients': 'str',
+        'share_to_recipients_metadata': 'PropertyMetadata',
         'smart_contract_information': 'SmartContractInformation',
         'source': 'str',
         'status': 'str',
@@ -226,6 +228,8 @@ class Email(object):
         'sender_required_metadata': 'senderRequiredMetadata',
         'shared': 'shared',
         'shared_metadata': 'sharedMetadata',
+        'share_to_recipients': 'shareToRecipients',
+        'share_to_recipients_metadata': 'shareToRecipientsMetadata',
         'smart_contract_information': 'smartContractInformation',
         'source': 'source',
         'status': 'status',
@@ -346,6 +350,8 @@ class Email(object):
         self._sender_required_metadata = None
         self._shared = None
         self._shared_metadata = None
+        self._share_to_recipients = None
+        self._share_to_recipients_metadata = None
         self._smart_contract_information = None
         self._source = None
         self._status = None
@@ -460,6 +466,8 @@ class Email(object):
         setattr(self, "_{}".format('sender_required_metadata'), kwargs.get('sender_required_metadata', None))
         setattr(self, "_{}".format('shared'), kwargs.get('shared', None))
         setattr(self, "_{}".format('shared_metadata'), kwargs.get('shared_metadata', None))
+        setattr(self, "_{}".format('share_to_recipients'), kwargs.get('share_to_recipients', None))
+        setattr(self, "_{}".format('share_to_recipients_metadata'), kwargs.get('share_to_recipients_metadata', None))
         setattr(self, "_{}".format('smart_contract_information'), kwargs.get('smart_contract_information', None))
         setattr(self, "_{}".format('source'), kwargs.get('source', None))
         setattr(self, "_{}".format('status'), kwargs.get('status', None))
@@ -2208,6 +2216,50 @@ class Email(object):
         """
 
         self._shared_metadata = shared_metadata
+
+    @property
+    def share_to_recipients(self):
+        """Gets the share_to_recipients of this Email.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The share_to_recipients of this Email.  # noqa: E501
+        :rtype: str
+        """
+        return self._share_to_recipients
+
+    @share_to_recipients.setter
+    def share_to_recipients(self, share_to_recipients):
+        """Sets the share_to_recipients of this Email.
+
+          # noqa: E501
+
+        :param share_to_recipients: The share_to_recipients of this Email.  # noqa: E501
+        :type: str
+        """
+
+        self._share_to_recipients = share_to_recipients
+
+    @property
+    def share_to_recipients_metadata(self):
+        """Gets the share_to_recipients_metadata of this Email.  # noqa: E501
+
+
+        :return: The share_to_recipients_metadata of this Email.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._share_to_recipients_metadata
+
+    @share_to_recipients_metadata.setter
+    def share_to_recipients_metadata(self, share_to_recipients_metadata):
+        """Sets the share_to_recipients_metadata of this Email.
+
+
+        :param share_to_recipients_metadata: The share_to_recipients_metadata of this Email.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._share_to_recipients_metadata = share_to_recipients_metadata
 
     @property
     def smart_contract_information(self):

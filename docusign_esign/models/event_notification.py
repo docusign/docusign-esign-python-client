@@ -33,6 +33,7 @@ class EventNotification(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'delivery_mode': 'str',
         'envelope_events': 'list[EnvelopeEvent]',
         'event_data': 'ConnectEventData',
         'include_certificate_of_completion': 'str',
@@ -53,6 +54,7 @@ class EventNotification(object):
     }
 
     attribute_map = {
+        'delivery_mode': 'deliveryMode',
         'envelope_events': 'envelopeEvents',
         'event_data': 'eventData',
         'include_certificate_of_completion': 'includeCertificateOfCompletion',
@@ -78,6 +80,7 @@ class EventNotification(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._delivery_mode = None
         self._envelope_events = None
         self._event_data = None
         self._include_certificate_of_completion = None
@@ -97,6 +100,7 @@ class EventNotification(object):
         self._use_soap_interface = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('delivery_mode'), kwargs.get('delivery_mode', None))
         setattr(self, "_{}".format('envelope_events'), kwargs.get('envelope_events', None))
         setattr(self, "_{}".format('event_data'), kwargs.get('event_data', None))
         setattr(self, "_{}".format('include_certificate_of_completion'), kwargs.get('include_certificate_of_completion', None))
@@ -114,6 +118,29 @@ class EventNotification(object):
         setattr(self, "_{}".format('soap_name_space'), kwargs.get('soap_name_space', None))
         setattr(self, "_{}".format('url'), kwargs.get('url', None))
         setattr(self, "_{}".format('use_soap_interface'), kwargs.get('use_soap_interface', None))
+
+    @property
+    def delivery_mode(self):
+        """Gets the delivery_mode of this EventNotification.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The delivery_mode of this EventNotification.  # noqa: E501
+        :rtype: str
+        """
+        return self._delivery_mode
+
+    @delivery_mode.setter
+    def delivery_mode(self, delivery_mode):
+        """Sets the delivery_mode of this EventNotification.
+
+          # noqa: E501
+
+        :param delivery_mode: The delivery_mode of this EventNotification.  # noqa: E501
+        :type: str
+        """
+
+        self._delivery_mode = delivery_mode
 
     @property
     def envelope_events(self):

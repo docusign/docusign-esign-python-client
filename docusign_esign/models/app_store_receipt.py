@@ -33,11 +33,15 @@ class AppStoreReceipt(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'downgrade_product_id': 'str',
+        'is_downgrade_cancellation': 'str',
         'product_id': 'str',
         'receipt_data': 'str'
     }
 
     attribute_map = {
+        'downgrade_product_id': 'downgradeProductId',
+        'is_downgrade_cancellation': 'isDowngradeCancellation',
         'product_id': 'productId',
         'receipt_data': 'receiptData'
     }
@@ -48,12 +52,62 @@ class AppStoreReceipt(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._downgrade_product_id = None
+        self._is_downgrade_cancellation = None
         self._product_id = None
         self._receipt_data = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('downgrade_product_id'), kwargs.get('downgrade_product_id', None))
+        setattr(self, "_{}".format('is_downgrade_cancellation'), kwargs.get('is_downgrade_cancellation', None))
         setattr(self, "_{}".format('product_id'), kwargs.get('product_id', None))
         setattr(self, "_{}".format('receipt_data'), kwargs.get('receipt_data', None))
+
+    @property
+    def downgrade_product_id(self):
+        """Gets the downgrade_product_id of this AppStoreReceipt.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The downgrade_product_id of this AppStoreReceipt.  # noqa: E501
+        :rtype: str
+        """
+        return self._downgrade_product_id
+
+    @downgrade_product_id.setter
+    def downgrade_product_id(self, downgrade_product_id):
+        """Sets the downgrade_product_id of this AppStoreReceipt.
+
+          # noqa: E501
+
+        :param downgrade_product_id: The downgrade_product_id of this AppStoreReceipt.  # noqa: E501
+        :type: str
+        """
+
+        self._downgrade_product_id = downgrade_product_id
+
+    @property
+    def is_downgrade_cancellation(self):
+        """Gets the is_downgrade_cancellation of this AppStoreReceipt.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_downgrade_cancellation of this AppStoreReceipt.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_downgrade_cancellation
+
+    @is_downgrade_cancellation.setter
+    def is_downgrade_cancellation(self, is_downgrade_cancellation):
+        """Sets the is_downgrade_cancellation of this AppStoreReceipt.
+
+          # noqa: E501
+
+        :param is_downgrade_cancellation: The is_downgrade_cancellation of this AppStoreReceipt.  # noqa: E501
+        :type: str
+        """
+
+        self._is_downgrade_cancellation = is_downgrade_cancellation
 
     @property
     def product_id(self):

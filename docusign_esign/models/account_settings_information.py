@@ -306,6 +306,8 @@ class AccountSettingsInformation(object):
         'enable_envelope_stamping_by_ds_admin_metadata': 'SettingsMetadata',
         'enable_esign_communities': 'str',
         'enable_esign_communities_metadata': 'SettingsMetadata',
+        'enable_id_fx_intuit_kba': 'str',
+        'enable_id_fx_intuit_kba_metadata': 'SettingsMetadata',
         'enable_in_browser_editor': 'str',
         'enable_in_browser_editor_metadata': 'SettingsMetadata',
         'enable_payment_processing': 'str',
@@ -410,6 +412,8 @@ class AccountSettingsInformation(object):
         'id_check_required_metadata': 'SettingsMetadata',
         'identity_verification': 'list[AccountIdentityVerificationWorkflow]',
         'identity_verification_metadata': 'SettingsMetadata',
+        'idfx_phone_authentication_override': 'str',
+        'idfx_phone_authentication_override_metadata': 'SettingsMetadata',
         'ignore_error_if_anchor_tab_not_found': 'str',
         'ignore_error_if_anchor_tab_not_found_metadata_enabled': 'SettingsMetadata',
         'in_person_id_check_question': 'str',
@@ -863,6 +867,8 @@ class AccountSettingsInformation(object):
         'enable_envelope_stamping_by_ds_admin_metadata': 'enableEnvelopeStampingByDSAdminMetadata',
         'enable_esign_communities': 'enableEsignCommunities',
         'enable_esign_communities_metadata': 'enableEsignCommunitiesMetadata',
+        'enable_id_fx_intuit_kba': 'enableIDFxIntuitKBA',
+        'enable_id_fx_intuit_kba_metadata': 'enableIDFxIntuitKBAMetadata',
         'enable_in_browser_editor': 'enableInBrowserEditor',
         'enable_in_browser_editor_metadata': 'enableInBrowserEditorMetadata',
         'enable_payment_processing': 'enablePaymentProcessing',
@@ -967,6 +973,8 @@ class AccountSettingsInformation(object):
         'id_check_required_metadata': 'idCheckRequiredMetadata',
         'identity_verification': 'identityVerification',
         'identity_verification_metadata': 'identityVerificationMetadata',
+        'idfx_phone_authentication_override': 'idfxPhoneAuthenticationOverride',
+        'idfx_phone_authentication_override_metadata': 'idfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found': 'ignoreErrorIfAnchorTabNotFound',
         'ignore_error_if_anchor_tab_not_found_metadata_enabled': 'ignoreErrorIfAnchorTabNotFoundMetadataEnabled',
         'in_person_id_check_question': 'inPersonIDCheckQuestion',
@@ -1425,6 +1433,8 @@ class AccountSettingsInformation(object):
         self._enable_envelope_stamping_by_ds_admin_metadata = None
         self._enable_esign_communities = None
         self._enable_esign_communities_metadata = None
+        self._enable_id_fx_intuit_kba = None
+        self._enable_id_fx_intuit_kba_metadata = None
         self._enable_in_browser_editor = None
         self._enable_in_browser_editor_metadata = None
         self._enable_payment_processing = None
@@ -1529,6 +1539,8 @@ class AccountSettingsInformation(object):
         self._id_check_required_metadata = None
         self._identity_verification = None
         self._identity_verification_metadata = None
+        self._idfx_phone_authentication_override = None
+        self._idfx_phone_authentication_override_metadata = None
         self._ignore_error_if_anchor_tab_not_found = None
         self._ignore_error_if_anchor_tab_not_found_metadata_enabled = None
         self._in_person_id_check_question = None
@@ -1981,6 +1993,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_envelope_stamping_by_ds_admin_metadata'), kwargs.get('enable_envelope_stamping_by_ds_admin_metadata', None))
         setattr(self, "_{}".format('enable_esign_communities'), kwargs.get('enable_esign_communities', None))
         setattr(self, "_{}".format('enable_esign_communities_metadata'), kwargs.get('enable_esign_communities_metadata', None))
+        setattr(self, "_{}".format('enable_id_fx_intuit_kba'), kwargs.get('enable_id_fx_intuit_kba', None))
+        setattr(self, "_{}".format('enable_id_fx_intuit_kba_metadata'), kwargs.get('enable_id_fx_intuit_kba_metadata', None))
         setattr(self, "_{}".format('enable_in_browser_editor'), kwargs.get('enable_in_browser_editor', None))
         setattr(self, "_{}".format('enable_in_browser_editor_metadata'), kwargs.get('enable_in_browser_editor_metadata', None))
         setattr(self, "_{}".format('enable_payment_processing'), kwargs.get('enable_payment_processing', None))
@@ -2085,6 +2099,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('id_check_required_metadata'), kwargs.get('id_check_required_metadata', None))
         setattr(self, "_{}".format('identity_verification'), kwargs.get('identity_verification', None))
         setattr(self, "_{}".format('identity_verification_metadata'), kwargs.get('identity_verification_metadata', None))
+        setattr(self, "_{}".format('idfx_phone_authentication_override'), kwargs.get('idfx_phone_authentication_override', None))
+        setattr(self, "_{}".format('idfx_phone_authentication_override_metadata'), kwargs.get('idfx_phone_authentication_override_metadata', None))
         setattr(self, "_{}".format('ignore_error_if_anchor_tab_not_found'), kwargs.get('ignore_error_if_anchor_tab_not_found', None))
         setattr(self, "_{}".format('ignore_error_if_anchor_tab_not_found_metadata_enabled'), kwargs.get('ignore_error_if_anchor_tab_not_found_metadata_enabled', None))
         setattr(self, "_{}".format('in_person_id_check_question'), kwargs.get('in_person_id_check_question', None))
@@ -8271,6 +8287,50 @@ class AccountSettingsInformation(object):
         self._enable_esign_communities_metadata = enable_esign_communities_metadata
 
     @property
+    def enable_id_fx_intuit_kba(self):
+        """Gets the enable_id_fx_intuit_kba of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_id_fx_intuit_kba of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_id_fx_intuit_kba
+
+    @enable_id_fx_intuit_kba.setter
+    def enable_id_fx_intuit_kba(self, enable_id_fx_intuit_kba):
+        """Sets the enable_id_fx_intuit_kba of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_id_fx_intuit_kba: The enable_id_fx_intuit_kba of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_id_fx_intuit_kba = enable_id_fx_intuit_kba
+
+    @property
+    def enable_id_fx_intuit_kba_metadata(self):
+        """Gets the enable_id_fx_intuit_kba_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_id_fx_intuit_kba_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_id_fx_intuit_kba_metadata
+
+    @enable_id_fx_intuit_kba_metadata.setter
+    def enable_id_fx_intuit_kba_metadata(self, enable_id_fx_intuit_kba_metadata):
+        """Sets the enable_id_fx_intuit_kba_metadata of this AccountSettingsInformation.
+
+
+        :param enable_id_fx_intuit_kba_metadata: The enable_id_fx_intuit_kba_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_id_fx_intuit_kba_metadata = enable_id_fx_intuit_kba_metadata
+
+    @property
     def enable_in_browser_editor(self):
         """Gets the enable_in_browser_editor of this AccountSettingsInformation.  # noqa: E501
 
@@ -10557,6 +10617,50 @@ class AccountSettingsInformation(object):
         """
 
         self._identity_verification_metadata = identity_verification_metadata
+
+    @property
+    def idfx_phone_authentication_override(self):
+        """Gets the idfx_phone_authentication_override of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The idfx_phone_authentication_override of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._idfx_phone_authentication_override
+
+    @idfx_phone_authentication_override.setter
+    def idfx_phone_authentication_override(self, idfx_phone_authentication_override):
+        """Sets the idfx_phone_authentication_override of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param idfx_phone_authentication_override: The idfx_phone_authentication_override of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._idfx_phone_authentication_override = idfx_phone_authentication_override
+
+    @property
+    def idfx_phone_authentication_override_metadata(self):
+        """Gets the idfx_phone_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The idfx_phone_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._idfx_phone_authentication_override_metadata
+
+    @idfx_phone_authentication_override_metadata.setter
+    def idfx_phone_authentication_override_metadata(self, idfx_phone_authentication_override_metadata):
+        """Sets the idfx_phone_authentication_override_metadata of this AccountSettingsInformation.
+
+
+        :param idfx_phone_authentication_override_metadata: The idfx_phone_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._idfx_phone_authentication_override_metadata = idfx_phone_authentication_override_metadata
 
     @property
     def ignore_error_if_anchor_tab_not_found(self):
