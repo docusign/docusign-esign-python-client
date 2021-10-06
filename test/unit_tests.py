@@ -10,7 +10,19 @@ from pprint import pprint
 from time import sleep
 
 import docusign_esign as docusign
-from docusign_esign import AuthenticationApi, EnvelopesApi, TemplatesApi, DiagnosticsApi, FoldersApi, ApiException
+from docusign_esign import (
+    AuthenticationApi,
+    EnvelopesApi,
+    TemplatesApi,
+    DiagnosticsApi,
+    FoldersApi,
+    ApiException,
+    RecipientViewRequest,
+    AccountsApi,
+    Recipients,
+    CarbonCopy,
+    UsersApi
+    )
 
 Username = os.environ.get("USER_NAME")
 IntegratorKey = os.environ.get("INTEGRATOR_KEY_JWT")
@@ -21,7 +33,9 @@ brandFile = "{}/docs/brand.xml".format(os.path.dirname(os.path.abspath(__file__)
 TemplateId = os.environ.get("TEMPLATE_ID")
 UserId = os.environ.get("USER_ID")
 BrandId = os.environ.get("BRAND_ID")
-PrivateKeyBytes = base64.b64decode(os.environ.get("PRIVATE_KEY"))
+PrivateKeyBytes = os.environ.get("PRIVATE_KEY") # base64.b64decode(os.environ.get("PRIVATE_KEY"))
+Name = "Pat Developer"
+ClientUserID = "1000"
 
 
 class SdkUnitTests(unittest.TestCase):
@@ -37,15 +51,16 @@ class SdkUnitTests(unittest.TestCase):
             template_id = TemplateId
 
             role_name = 'Needs to sign'
-            name = 'Pat Developer'
+            name = Name
             email = Username
             t_role = docusign.TemplateRole(role_name=role_name,
                                            name=name,
-                                           email=email)
+                                           email=email,
+                                           client_user_id=ClientUserID)
             # send the envelope by setting |status| to "sent". To save as a draft set to "created"
             status = 'sent'
             # create an envelope definition
-            envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
+            self.envelope_definition = docusign.EnvelopeDefinition(email_subject=email_subject,
                                                               email_blurb=email_blurb,
                                                               template_id=template_id,
                                                               template_roles=[t_role],
@@ -59,11 +74,12 @@ class SdkUnitTests(unittest.TestCase):
                                                             oauth_host_name=OauthHostName,
                                                             private_key_bytes=PrivateKeyBytes,
                                                             expires_in=3600))
-            self.user_info = self.api_client.get_user_info(token.access_token)
+            user_info = self.api_client.get_user_info(token.access_token)
+            self.account_id = user_info.accounts[1].account_id
             self.api_client.rest_client.pool_manager.clear()
             docusign.configuration.api_client = self.api_client
-            envelope_summary = envelopes_api.create_envelope(self.user_info.accounts[0].account_id,
-                                                             envelope_definition=envelope_definition)
+            envelope_summary = envelopes_api.create_envelope(self.account_id,
+                                                             envelope_definition=self.envelope_definition)
             self.api_client.rest_client.pool_manager.clear()
             self.envelope_id = envelope_summary.envelope_id
 
@@ -105,7 +121,7 @@ class SdkUnitTests(unittest.TestCase):
             from docusign_esign import TemplatesApi
             template_api = TemplatesApi(self.api_client)
 
-            template_obj = template_api.get(self.user_info.accounts[0].account_id, template_id=TemplateId).to_dict()
+            template_obj = template_api.get(self.account_id, template_id=TemplateId).to_dict()
 
             assert template_obj is not None
             assert template_obj['uri'] is not None
@@ -121,7 +137,7 @@ class SdkUnitTests(unittest.TestCase):
         try:
             from docusign_esign import AccountsApi
             acc_api = AccountsApi(self.api_client)
-            acc_obj = acc_api.update_brand_resources_by_content_type(self.user_info.accounts[0].account_id, BrandId, "email", brandFile)
+            acc_obj = acc_api.update_brand_resources_by_content_type(self.account_id, BrandId, "email", brandFile)
 
             assert acc_obj is not None
             assert acc_obj.resources_content_uri is not None
@@ -188,7 +204,7 @@ class SdkUnitTests(unittest.TestCase):
         envelopes_api = EnvelopesApi()
 
         try:
-            envelope_summary = envelopes_api.create_envelope(self.user_info.accounts[0].account_id,
+            envelope_summary = envelopes_api.create_envelope(self.account_id,
                                                              envelope_definition=envelope_definition)
             assert envelope_summary is not None
             assert envelope_summary.envelope_id is not None
@@ -236,7 +252,7 @@ class SdkUnitTests(unittest.TestCase):
         envelopes_api = EnvelopesApi()
 
         try:
-            envelope_summary = envelopes_api.create_envelope(self.user_info.accounts[0].account_id,
+            envelope_summary = envelopes_api.create_envelope(self.account_id,
                                                              envelope_definition=envelope_definition)
             assert envelope_summary is not None
             assert envelope_summary.envelope_id is not None
@@ -322,11 +338,11 @@ class SdkUnitTests(unittest.TestCase):
             recipient_view_request.user_name = 'Pat Developer'
             recipient_view_request.email = Username
 
-            envelope_summary = envelopes_api.create_envelope(self.user_info.accounts[0].account_id,
+            envelope_summary = envelopes_api.create_envelope(self.account_id,
                                                              envelope_definition=envelope_definition)
             envelope_id = envelope_summary.envelope_id
 
-            view_url = envelopes_api.create_recipient_view(self.user_info.accounts[0].account_id, envelope_id,
+            view_url = envelopes_api.create_recipient_view(self.account_id, envelope_id,
                                                            recipient_view_request=recipient_view_request)
 
             # This Url should work in an Iframe or browser to allow signing
@@ -398,7 +414,7 @@ class SdkUnitTests(unittest.TestCase):
 
         try:
 
-            template_summary = templates_api.create_template(self.user_info.accounts[0].account_id,
+            template_summary = templates_api.create_template(self.account_id,
                                                              envelope_template=envelope_template)
             assert template_summary is not None
             assert template_summary.template_id is not None
@@ -472,7 +488,7 @@ class SdkUnitTests(unittest.TestCase):
         try:
             docusign.configuration.api_client = self.api_client
 
-            file1 = envelopes_api.get_document(self.user_info.accounts[0].account_id, 'combined', self.envelope_id)
+            file1 = envelopes_api.get_document(self.account_id, 'combined', self.envelope_id)
 
             assert len(file1) > 0
             subprocess.call('open ' + file1, shell=True)
@@ -575,7 +591,7 @@ class SdkUnitTests(unittest.TestCase):
         try:
             docusign.configuration.api_client = self.api_client
 
-            recipients_update_summary = envelopes_api.update_recipients(self.user_info.accounts[0].account_id,
+            recipients_update_summary = envelopes_api.update_recipients(self.account_id,
                                                                         self.envelope_id, recipients=recipients,
                                                                         resend_envelope='true')
             assert recipients_update_summary is not None
@@ -659,11 +675,11 @@ class SdkUnitTests(unittest.TestCase):
             diagnostics_settings_information = docusign.DiagnosticsSettingsInformation()
             diagnostics_settings_information.api_request_logging = 'true'
             diag_api.update_request_log_settings(diagnostics_settings_information=diagnostics_settings_information)
-            envelope_summary = envelopes_api.create_envelope(self.user_info.accounts[0].account_id,
+            envelope_summary = envelopes_api.create_envelope(self.account_id,
                                                              envelope_definition=envelope_definition)
             envelope_id = envelope_summary.envelope_id
 
-            file1 = envelopes_api.get_document(self.user_info.accounts[0].account_id, 'combined', envelope_id)
+            file1 = envelopes_api.get_document(self.account_id, 'combined', envelope_id)
             assert len(file1) > 0
             subprocess.call('open ' + file1, shell=True)
 
@@ -684,7 +700,7 @@ class SdkUnitTests(unittest.TestCase):
         try:
             envelopes_api = EnvelopesApi()
 
-            form_data = envelopes_api.get_form_data(account_id=self.user_info.accounts[0].account_id,
+            form_data = envelopes_api.get_form_data(account_id=self.account_id,
                                                     envelope_id=self.envelope_id)
             assert form_data is not None
             assert form_data.prefill_form_data is not None
@@ -734,16 +750,16 @@ class SdkUnitTests(unittest.TestCase):
             envelopes_api = EnvelopesApi()
 
             # Create Envelope with the new role
-            envelope_summary = envelopes_api.create_envelope(self.user_info.accounts[0].account_id,
+            envelope_summary = envelopes_api.create_envelope(self.account_id,
                                                              envelope_definition=envelope_definition)
             # Read the new Envelope
-            created_envelope = envelopes_api.get_envelope(account_id=self.user_info.accounts[0].account_id,
+            created_envelope = envelopes_api.get_envelope(account_id=self.account_id,
                                                           envelope_id=envelope_summary.envelope_id)
 
-            recipients = envelopes_api.list_recipients(account_id=self.user_info.accounts[0].account_id,
+            recipients = envelopes_api.list_recipients(account_id=self.account_id,
                                                        envelope_id=created_envelope.envelope_id)
 
-            tabs = envelopes_api.list_tabs(account_id=self.user_info.accounts[0].account_id,
+            tabs = envelopes_api.list_tabs(account_id=self.account_id,
                                            envelope_id=created_envelope.envelope_id,
                                            recipient_id=recipients.signers[0].recipient_id)
             list_tabs = tabs.list_tabs
@@ -813,7 +829,7 @@ class SdkUnitTests(unittest.TestCase):
         envelopes_api = EnvelopesApi()
 
         try:
-            envelope_summary = envelopes_api.create_envelope(self.user_info.accounts[0].account_id,
+            envelope_summary = envelopes_api.create_envelope(self.account_id,
                                                              envelope_definition=envelope_definition)
             assert envelope_summary is not None
             assert envelope_summary.envelope_id is not None
@@ -824,7 +840,7 @@ class SdkUnitTests(unittest.TestCase):
 
             to_folder_id = "draft"
 
-            folders_api.move_envelopes(self.user_info.accounts[0].account_id, to_folder_id,
+            folders_api.move_envelopes(self.account_id, to_folder_id,
                                        folders_request=folders_request)
 
             # Wait for 3 second to make sure the newly created envelope was moved to the 'sentitems' folder
@@ -835,7 +851,7 @@ class SdkUnitTests(unittest.TestCase):
             # Test if we moved the envelope to the correct folder
 
             search_options = "true"
-            list_from_drafts_folder = folders_api.list_items(self.user_info.accounts[0].account_id, to_folder_id, include_items=search_options)
+            list_from_drafts_folder = folders_api.list_items(self.account_id, to_folder_id, include_items=search_options)
 
             assert list_from_drafts_folder is not None
 
@@ -852,6 +868,159 @@ class SdkUnitTests(unittest.TestCase):
         except Exception as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
+
+    def testGetRecipients(self):
+        envelopes_api = EnvelopesApi()
+        try:
+            recipients_list = envelopes_api.list_recipients(self.account_id, self.envelope_id)
+            assert recipients_list is not None
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+
+    def testCreateRecipientWiew(self):
+        envelopes_api = EnvelopesApi()
+        try:
+            # Create the recipient view request object
+            recipient_view_request = RecipientViewRequest(
+                authentication_method="None",
+                client_user_id=ClientUserID,
+                recipient_id="1",
+                return_url="http://localhost",
+                user_name=Name,
+                email=Username
+            )
+
+            results = envelopes_api.create_recipient_view(
+                self.account_id,
+                self.envelope_id,
+                recipient_view_request=recipient_view_request
+            )
+            assert 'https://' in results.url
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+
+    def testGetDocuments(self):
+        envelopes_api = EnvelopesApi()
+        try:
+            documents_list = envelopes_api.list_documents(self.account_id, self.envelope_id)
+            assert documents_list.envelope_documents is not None
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+
+    def testPutEnvelope(self):
+        envelopes_api = EnvelopesApi()
+        try:
+            res = envelopes_api.update(
+                self.account_id,
+                self.envelope_id,
+                envelope=self.envelope_definition
+            )
+            assert res.envelope_id is not None
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+
+    def testGetAccount(self):
+        accounts_api = AccountsApi()
+        try:
+            acc_info = accounts_api.get_account_information(self.account_id)
+            assert acc_info.account_name is not None
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+
+    def testPutRecipient(self):
+        envelopes_api = EnvelopesApi()
+
+        recipients = Recipients()
+        recipients.carbon_copies = []
+        cc = CarbonCopy()
+        cc.email = 'janedoe@example.com'
+        cc.name = 'Jane Doe'
+        cc.delivery_method ='email'
+        cc.recipient_id = '11'
+        cc.routing_order = '3'  
+        recipients.carbon_copies.append(cc)
+
+        try:
+            res = envelopes_api.update_recipients(
+                self.account_id,
+                self.envelope_id,
+                recipients=recipients
+            )
+            assert res.recipient_update_results is not None
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+
+    def testGetTemplates(self):
+        templates_api = TemplatesApi()
+        try:
+            templates_list = templates_api.list_templates(self.account_id)
+            assert templates_list.envelope_templates is not None
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+
+    def testGetUsers(self):
+        users_api = UsersApi()
+        try:
+            users_list = users_api.list(self.account_id)
+            assert users_list.users is not None
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+
+    def testGetTemplate(self):
+        templates_api = TemplatesApi()
+        try:
+            template = templates_api.get(self.account_id, TemplateId)
+            assert template.documents is not None
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+
+    def testEventsGetAudit(self):
+        envelopes_api = EnvelopesApi()
+        try:
+            audit_list = envelopes_api.list_audit_events(self.account_id, self.envelope_id)
+            assert audit_list.audit_events is not None
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None
 
 
 if __name__ == '__main__':
