@@ -33,7 +33,7 @@ brandFile = "{}/docs/brand.xml".format(os.path.dirname(os.path.abspath(__file__)
 TemplateId = os.environ.get("TEMPLATE_ID")
 UserId = os.environ.get("USER_ID")
 BrandId = os.environ.get("BRAND_ID")
-PrivateKeyBytes = os.environ.get("PRIVATE_KEY") # base64.b64decode(os.environ.get("PRIVATE_KEY"))
+PrivateKeyBytes = base64.b64decode(os.environ.get("PRIVATE_KEY"))
 Name = "Pat Developer"
 ClientUserID = "1000"
 
@@ -75,7 +75,7 @@ class SdkUnitTests(unittest.TestCase):
                                                             private_key_bytes=PrivateKeyBytes,
                                                             expires_in=3600))
             user_info = self.api_client.get_user_info(token.access_token)
-            self.account_id = user_info.accounts[1].account_id
+            self.account_id = user_info.accounts[0].account_id
             self.api_client.rest_client.pool_manager.clear()
             docusign.configuration.api_client = self.api_client
             envelope_summary = envelopes_api.create_envelope(self.account_id,
