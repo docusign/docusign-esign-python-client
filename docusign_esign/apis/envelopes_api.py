@@ -8772,7 +8772,7 @@ class EnvelopesApi(object):
         form_params = []
         local_var_files = {}
 
-        body_params = None
+        body_params = {}
         if 'envelope_ids_request' in params:
             body_params = params['envelope_ids_request']
         # HTTP header `Accept`
