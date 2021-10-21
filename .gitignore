@@ -68,3 +68,4 @@ target/
 
 # Local files
 *.DS_Store
+.env
