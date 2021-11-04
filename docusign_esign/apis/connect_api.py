@@ -273,7 +273,7 @@ class ConnectApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str failure_id: The ID of the failed connect log entry. (required)
-        :return: None
+        :return: ConnectDeleteFailureResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -300,7 +300,7 @@ class ConnectApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str failure_id: The ID of the failed connect log entry. (required)
-        :return: None
+        :return: ConnectDeleteFailureResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -359,7 +359,7 @@ class ConnectApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='ConnectDeleteFailureResult',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -790,6 +790,138 @@ class ConnectApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='ConnectConfigResults',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_connect_all_users(self, account_id, connect_id, **kwargs):
+        """
+        Returns all users from the configured Connect service.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_connect_all_users(account_id, connect_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: (required)
+        :param str connect_id: (required)
+        :param str count:
+        :param str email_substring:
+        :param str is_recipient_connect_config:
+        :param str start_position:
+        :param str status:
+        :param str user_name_substring:
+        :return: IntegratedConnectUserInfoList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_connect_all_users_with_http_info(account_id, connect_id, **kwargs)
+        else:
+            (data) = self.get_connect_all_users_with_http_info(account_id, connect_id, **kwargs)
+            return data
+
+    def get_connect_all_users_with_http_info(self, account_id, connect_id, **kwargs):
+        """
+        Returns all users from the configured Connect service.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_connect_all_users_with_http_info(account_id, connect_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: (required)
+        :param str connect_id: (required)
+        :param str count:
+        :param str email_substring:
+        :param str is_recipient_connect_config:
+        :param str start_position:
+        :param str status:
+        :param str user_name_substring:
+        :return: IntegratedConnectUserInfoList
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'connect_id', 'count', 'email_substring', 'is_recipient_connect_config', 'start_position', 'status', 'user_name_substring']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_connect_all_users" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_connect_all_users`")
+        # verify the required parameter 'connect_id' is set
+        if ('connect_id' not in params) or (params['connect_id'] is None):
+            raise ValueError("Missing the required parameter `connect_id` when calling `get_connect_all_users`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/connect/{connectId}/all/users'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'connect_id' in params:
+            path_params['connectId'] = params['connect_id']
+
+        query_params = {}
+        if 'count' in params:
+            query_params['count'] = params['count']
+        if 'email_substring' in params:
+            query_params['email_substring'] = params['email_substring']
+        if 'is_recipient_connect_config' in params:
+            query_params['is_recipient_connect_config'] = params['is_recipient_connect_config']
+        if 'start_position' in params:
+            query_params['start_position'] = params['start_position']
+        if 'status' in params:
+            query_params['status'] = params['status']
+        if 'user_name_substring' in params:
+            query_params['user_name_substring'] = params['user_name_substring']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='IntegratedConnectUserInfoList',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
