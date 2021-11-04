@@ -134,8 +134,16 @@ class AccountSettingsInformation(object):
         'allow_offline_signing_metadata': 'SettingsMetadata',
         'allow_open_trust_signer_certificate': 'str',
         'allow_open_trust_signer_certificate_metadata': 'SettingsMetadata',
+        'allow_organization_docusign_monitor': 'str',
+        'allow_organization_docusign_monitor_metadata': 'SettingsMetadata',
+        'allow_organization_domain_user_management': 'str',
+        'allow_organization_domain_user_management_metadata': 'SettingsMetadata',
         'allow_organizations': 'str',
         'allow_organizations_metadata': 'SettingsMetadata',
+        'allow_organization_sso_management': 'str',
+        'allow_organization_sso_management_metadata': 'SettingsMetadata',
+        'allow_organization_to_use_remote_notary': 'str',
+        'allow_organization_to_use_remote_notary_metadata': 'SettingsMetadata',
         'allow_payment_processing': 'str',
         'allow_payment_processing_metadata': 'SettingsMetadata',
         'allow_personal_signer_certificate': 'str',
@@ -397,6 +405,7 @@ class AccountSettingsInformation(object):
         'fax_out_enabled_metadata': 'SettingsMetadata',
         'guided_forms_html_allowed': 'str',
         'guided_forms_html_allowed_metadata': 'SettingsMetadata',
+        'has_recipient_connect_claimed_domain': 'str',
         'hide_account_address_in_co_c': 'str',
         'hide_account_address_in_co_c_metadata': 'SettingsMetadata',
         'hide_pricing': 'str',
@@ -443,6 +452,8 @@ class AccountSettingsInformation(object):
         'phone_auth_recipient_may_provide_phone_number_metadata': 'SettingsMetadata',
         'pki_sign_downloaded_pdf_docs': 'str',
         'pki_sign_downloaded_pdf_docs_metadata': 'SettingsMetadata',
+        'read_only_mode': 'str',
+        'read_only_mode_metadata': 'SettingsMetadata',
         'recipients_can_sign_offline': 'str',
         'recipients_can_sign_offline_metadata': 'SettingsMetadata',
         'recipient_signing_auto_navigation_control': 'str',
@@ -695,8 +706,16 @@ class AccountSettingsInformation(object):
         'allow_offline_signing_metadata': 'allowOfflineSigningMetadata',
         'allow_open_trust_signer_certificate': 'allowOpenTrustSignerCertificate',
         'allow_open_trust_signer_certificate_metadata': 'allowOpenTrustSignerCertificateMetadata',
+        'allow_organization_docusign_monitor': 'allowOrganizationDocusignMonitor',
+        'allow_organization_docusign_monitor_metadata': 'allowOrganizationDocusignMonitorMetadata',
+        'allow_organization_domain_user_management': 'allowOrganizationDomainUserManagement',
+        'allow_organization_domain_user_management_metadata': 'allowOrganizationDomainUserManagementMetadata',
         'allow_organizations': 'allowOrganizations',
         'allow_organizations_metadata': 'allowOrganizationsMetadata',
+        'allow_organization_sso_management': 'allowOrganizationSsoManagement',
+        'allow_organization_sso_management_metadata': 'allowOrganizationSsoManagementMetadata',
+        'allow_organization_to_use_remote_notary': 'allowOrganizationToUseRemoteNotary',
+        'allow_organization_to_use_remote_notary_metadata': 'allowOrganizationToUseRemoteNotaryMetadata',
         'allow_payment_processing': 'allowPaymentProcessing',
         'allow_payment_processing_metadata': 'allowPaymentProcessingMetadata',
         'allow_personal_signer_certificate': 'allowPersonalSignerCertificate',
@@ -958,6 +977,7 @@ class AccountSettingsInformation(object):
         'fax_out_enabled_metadata': 'faxOutEnabledMetadata',
         'guided_forms_html_allowed': 'guidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata': 'guidedFormsHtmlAllowedMetadata',
+        'has_recipient_connect_claimed_domain': 'hasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c': 'hideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata': 'hideAccountAddressInCoCMetadata',
         'hide_pricing': 'hidePricing',
@@ -1004,6 +1024,8 @@ class AccountSettingsInformation(object):
         'phone_auth_recipient_may_provide_phone_number_metadata': 'phoneAuthRecipientMayProvidePhoneNumberMetadata',
         'pki_sign_downloaded_pdf_docs': 'pkiSignDownloadedPDFDocs',
         'pki_sign_downloaded_pdf_docs_metadata': 'pkiSignDownloadedPDFDocsMetadata',
+        'read_only_mode': 'readOnlyMode',
+        'read_only_mode_metadata': 'readOnlyModeMetadata',
         'recipients_can_sign_offline': 'recipientsCanSignOffline',
         'recipients_can_sign_offline_metadata': 'recipientsCanSignOfflineMetadata',
         'recipient_signing_auto_navigation_control': 'recipientSigningAutoNavigationControl',
@@ -1261,8 +1283,16 @@ class AccountSettingsInformation(object):
         self._allow_offline_signing_metadata = None
         self._allow_open_trust_signer_certificate = None
         self._allow_open_trust_signer_certificate_metadata = None
+        self._allow_organization_docusign_monitor = None
+        self._allow_organization_docusign_monitor_metadata = None
+        self._allow_organization_domain_user_management = None
+        self._allow_organization_domain_user_management_metadata = None
         self._allow_organizations = None
         self._allow_organizations_metadata = None
+        self._allow_organization_sso_management = None
+        self._allow_organization_sso_management_metadata = None
+        self._allow_organization_to_use_remote_notary = None
+        self._allow_organization_to_use_remote_notary_metadata = None
         self._allow_payment_processing = None
         self._allow_payment_processing_metadata = None
         self._allow_personal_signer_certificate = None
@@ -1524,6 +1554,7 @@ class AccountSettingsInformation(object):
         self._fax_out_enabled_metadata = None
         self._guided_forms_html_allowed = None
         self._guided_forms_html_allowed_metadata = None
+        self._has_recipient_connect_claimed_domain = None
         self._hide_account_address_in_co_c = None
         self._hide_account_address_in_co_c_metadata = None
         self._hide_pricing = None
@@ -1570,6 +1601,8 @@ class AccountSettingsInformation(object):
         self._phone_auth_recipient_may_provide_phone_number_metadata = None
         self._pki_sign_downloaded_pdf_docs = None
         self._pki_sign_downloaded_pdf_docs_metadata = None
+        self._read_only_mode = None
+        self._read_only_mode_metadata = None
         self._recipients_can_sign_offline = None
         self._recipients_can_sign_offline_metadata = None
         self._recipient_signing_auto_navigation_control = None
@@ -1821,8 +1854,16 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_offline_signing_metadata'), kwargs.get('allow_offline_signing_metadata', None))
         setattr(self, "_{}".format('allow_open_trust_signer_certificate'), kwargs.get('allow_open_trust_signer_certificate', None))
         setattr(self, "_{}".format('allow_open_trust_signer_certificate_metadata'), kwargs.get('allow_open_trust_signer_certificate_metadata', None))
+        setattr(self, "_{}".format('allow_organization_docusign_monitor'), kwargs.get('allow_organization_docusign_monitor', None))
+        setattr(self, "_{}".format('allow_organization_docusign_monitor_metadata'), kwargs.get('allow_organization_docusign_monitor_metadata', None))
+        setattr(self, "_{}".format('allow_organization_domain_user_management'), kwargs.get('allow_organization_domain_user_management', None))
+        setattr(self, "_{}".format('allow_organization_domain_user_management_metadata'), kwargs.get('allow_organization_domain_user_management_metadata', None))
         setattr(self, "_{}".format('allow_organizations'), kwargs.get('allow_organizations', None))
         setattr(self, "_{}".format('allow_organizations_metadata'), kwargs.get('allow_organizations_metadata', None))
+        setattr(self, "_{}".format('allow_organization_sso_management'), kwargs.get('allow_organization_sso_management', None))
+        setattr(self, "_{}".format('allow_organization_sso_management_metadata'), kwargs.get('allow_organization_sso_management_metadata', None))
+        setattr(self, "_{}".format('allow_organization_to_use_remote_notary'), kwargs.get('allow_organization_to_use_remote_notary', None))
+        setattr(self, "_{}".format('allow_organization_to_use_remote_notary_metadata'), kwargs.get('allow_organization_to_use_remote_notary_metadata', None))
         setattr(self, "_{}".format('allow_payment_processing'), kwargs.get('allow_payment_processing', None))
         setattr(self, "_{}".format('allow_payment_processing_metadata'), kwargs.get('allow_payment_processing_metadata', None))
         setattr(self, "_{}".format('allow_personal_signer_certificate'), kwargs.get('allow_personal_signer_certificate', None))
@@ -2084,6 +2125,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('fax_out_enabled_metadata'), kwargs.get('fax_out_enabled_metadata', None))
         setattr(self, "_{}".format('guided_forms_html_allowed'), kwargs.get('guided_forms_html_allowed', None))
         setattr(self, "_{}".format('guided_forms_html_allowed_metadata'), kwargs.get('guided_forms_html_allowed_metadata', None))
+        setattr(self, "_{}".format('has_recipient_connect_claimed_domain'), kwargs.get('has_recipient_connect_claimed_domain', None))
         setattr(self, "_{}".format('hide_account_address_in_co_c'), kwargs.get('hide_account_address_in_co_c', None))
         setattr(self, "_{}".format('hide_account_address_in_co_c_metadata'), kwargs.get('hide_account_address_in_co_c_metadata', None))
         setattr(self, "_{}".format('hide_pricing'), kwargs.get('hide_pricing', None))
@@ -2130,6 +2172,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('phone_auth_recipient_may_provide_phone_number_metadata'), kwargs.get('phone_auth_recipient_may_provide_phone_number_metadata', None))
         setattr(self, "_{}".format('pki_sign_downloaded_pdf_docs'), kwargs.get('pki_sign_downloaded_pdf_docs', None))
         setattr(self, "_{}".format('pki_sign_downloaded_pdf_docs_metadata'), kwargs.get('pki_sign_downloaded_pdf_docs_metadata', None))
+        setattr(self, "_{}".format('read_only_mode'), kwargs.get('read_only_mode', None))
+        setattr(self, "_{}".format('read_only_mode_metadata'), kwargs.get('read_only_mode_metadata', None))
         setattr(self, "_{}".format('recipients_can_sign_offline'), kwargs.get('recipients_can_sign_offline', None))
         setattr(self, "_{}".format('recipients_can_sign_offline_metadata'), kwargs.get('recipients_can_sign_offline_metadata', None))
         setattr(self, "_{}".format('recipient_signing_auto_navigation_control'), kwargs.get('recipient_signing_auto_navigation_control', None))
@@ -4501,6 +4545,94 @@ class AccountSettingsInformation(object):
         self._allow_open_trust_signer_certificate_metadata = allow_open_trust_signer_certificate_metadata
 
     @property
+    def allow_organization_docusign_monitor(self):
+        """Gets the allow_organization_docusign_monitor of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_organization_docusign_monitor of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_organization_docusign_monitor
+
+    @allow_organization_docusign_monitor.setter
+    def allow_organization_docusign_monitor(self, allow_organization_docusign_monitor):
+        """Sets the allow_organization_docusign_monitor of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_organization_docusign_monitor: The allow_organization_docusign_monitor of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_organization_docusign_monitor = allow_organization_docusign_monitor
+
+    @property
+    def allow_organization_docusign_monitor_metadata(self):
+        """Gets the allow_organization_docusign_monitor_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_organization_docusign_monitor_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_organization_docusign_monitor_metadata
+
+    @allow_organization_docusign_monitor_metadata.setter
+    def allow_organization_docusign_monitor_metadata(self, allow_organization_docusign_monitor_metadata):
+        """Sets the allow_organization_docusign_monitor_metadata of this AccountSettingsInformation.
+
+
+        :param allow_organization_docusign_monitor_metadata: The allow_organization_docusign_monitor_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_organization_docusign_monitor_metadata = allow_organization_docusign_monitor_metadata
+
+    @property
+    def allow_organization_domain_user_management(self):
+        """Gets the allow_organization_domain_user_management of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_organization_domain_user_management of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_organization_domain_user_management
+
+    @allow_organization_domain_user_management.setter
+    def allow_organization_domain_user_management(self, allow_organization_domain_user_management):
+        """Sets the allow_organization_domain_user_management of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_organization_domain_user_management: The allow_organization_domain_user_management of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_organization_domain_user_management = allow_organization_domain_user_management
+
+    @property
+    def allow_organization_domain_user_management_metadata(self):
+        """Gets the allow_organization_domain_user_management_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_organization_domain_user_management_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_organization_domain_user_management_metadata
+
+    @allow_organization_domain_user_management_metadata.setter
+    def allow_organization_domain_user_management_metadata(self, allow_organization_domain_user_management_metadata):
+        """Sets the allow_organization_domain_user_management_metadata of this AccountSettingsInformation.
+
+
+        :param allow_organization_domain_user_management_metadata: The allow_organization_domain_user_management_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_organization_domain_user_management_metadata = allow_organization_domain_user_management_metadata
+
+    @property
     def allow_organizations(self):
         """Gets the allow_organizations of this AccountSettingsInformation.  # noqa: E501
 
@@ -4543,6 +4675,94 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_organizations_metadata = allow_organizations_metadata
+
+    @property
+    def allow_organization_sso_management(self):
+        """Gets the allow_organization_sso_management of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_organization_sso_management of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_organization_sso_management
+
+    @allow_organization_sso_management.setter
+    def allow_organization_sso_management(self, allow_organization_sso_management):
+        """Sets the allow_organization_sso_management of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_organization_sso_management: The allow_organization_sso_management of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_organization_sso_management = allow_organization_sso_management
+
+    @property
+    def allow_organization_sso_management_metadata(self):
+        """Gets the allow_organization_sso_management_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_organization_sso_management_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_organization_sso_management_metadata
+
+    @allow_organization_sso_management_metadata.setter
+    def allow_organization_sso_management_metadata(self, allow_organization_sso_management_metadata):
+        """Sets the allow_organization_sso_management_metadata of this AccountSettingsInformation.
+
+
+        :param allow_organization_sso_management_metadata: The allow_organization_sso_management_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_organization_sso_management_metadata = allow_organization_sso_management_metadata
+
+    @property
+    def allow_organization_to_use_remote_notary(self):
+        """Gets the allow_organization_to_use_remote_notary of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_organization_to_use_remote_notary of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_organization_to_use_remote_notary
+
+    @allow_organization_to_use_remote_notary.setter
+    def allow_organization_to_use_remote_notary(self, allow_organization_to_use_remote_notary):
+        """Sets the allow_organization_to_use_remote_notary of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_organization_to_use_remote_notary: The allow_organization_to_use_remote_notary of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_organization_to_use_remote_notary = allow_organization_to_use_remote_notary
+
+    @property
+    def allow_organization_to_use_remote_notary_metadata(self):
+        """Gets the allow_organization_to_use_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_organization_to_use_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_organization_to_use_remote_notary_metadata
+
+    @allow_organization_to_use_remote_notary_metadata.setter
+    def allow_organization_to_use_remote_notary_metadata(self, allow_organization_to_use_remote_notary_metadata):
+        """Sets the allow_organization_to_use_remote_notary_metadata of this AccountSettingsInformation.
+
+
+        :param allow_organization_to_use_remote_notary_metadata: The allow_organization_to_use_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_organization_to_use_remote_notary_metadata = allow_organization_to_use_remote_notary_metadata
 
     @property
     def allow_payment_processing(self):
@@ -10288,6 +10508,29 @@ class AccountSettingsInformation(object):
         self._guided_forms_html_allowed_metadata = guided_forms_html_allowed_metadata
 
     @property
+    def has_recipient_connect_claimed_domain(self):
+        """Gets the has_recipient_connect_claimed_domain of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The has_recipient_connect_claimed_domain of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._has_recipient_connect_claimed_domain
+
+    @has_recipient_connect_claimed_domain.setter
+    def has_recipient_connect_claimed_domain(self, has_recipient_connect_claimed_domain):
+        """Sets the has_recipient_connect_claimed_domain of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param has_recipient_connect_claimed_domain: The has_recipient_connect_claimed_domain of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._has_recipient_connect_claimed_domain = has_recipient_connect_claimed_domain
+
+    @property
     def hide_account_address_in_co_c(self):
         """Gets the hide_account_address_in_co_c of this AccountSettingsInformation.  # noqa: E501
 
@@ -11302,6 +11545,50 @@ class AccountSettingsInformation(object):
         """
 
         self._pki_sign_downloaded_pdf_docs_metadata = pki_sign_downloaded_pdf_docs_metadata
+
+    @property
+    def read_only_mode(self):
+        """Gets the read_only_mode of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The read_only_mode of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._read_only_mode
+
+    @read_only_mode.setter
+    def read_only_mode(self, read_only_mode):
+        """Sets the read_only_mode of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param read_only_mode: The read_only_mode of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._read_only_mode = read_only_mode
+
+    @property
+    def read_only_mode_metadata(self):
+        """Gets the read_only_mode_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The read_only_mode_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._read_only_mode_metadata
+
+    @read_only_mode_metadata.setter
+    def read_only_mode_metadata(self, read_only_mode_metadata):
+        """Sets the read_only_mode_metadata of this AccountSettingsInformation.
+
+
+        :param read_only_mode_metadata: The read_only_mode_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._read_only_mode_metadata = read_only_mode_metadata
 
     @property
     def recipients_can_sign_offline(self):

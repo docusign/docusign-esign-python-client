@@ -179,6 +179,7 @@ from docusign_esign.models.conditional_recipient_rule_filter import ConditionalR
 from docusign_esign.models.connect_config_results import ConnectConfigResults
 from docusign_esign.models.connect_custom_configuration import ConnectCustomConfiguration
 from docusign_esign.models.connect_debug_log import ConnectDebugLog
+from docusign_esign.models.connect_delete_failure_result import ConnectDeleteFailureResult
 from docusign_esign.models.connect_event_data import ConnectEventData
 from docusign_esign.models.connect_failure_filter import ConnectFailureFilter
 from docusign_esign.models.connect_failure_result import ConnectFailureResult
@@ -187,6 +188,7 @@ from docusign_esign.models.connect_log import ConnectLog
 from docusign_esign.models.connect_logs import ConnectLogs
 from docusign_esign.models.connect_salesforce_field import ConnectSalesforceField
 from docusign_esign.models.connect_salesforce_object import ConnectSalesforceObject
+from docusign_esign.models.connect_user_info import ConnectUserInfo
 from docusign_esign.models.connect_user_object import ConnectUserObject
 from docusign_esign.models.console_view_request import ConsoleViewRequest
 from docusign_esign.models.consumer_disclosure import ConsumerDisclosure
@@ -228,6 +230,7 @@ from docusign_esign.models.document_visibility_list import DocumentVisibilityLis
 from docusign_esign.models.downgrad_request_billing_info_response import DowngradRequestBillingInfoResponse
 from docusign_esign.models.downgrade_billing_plan_information import DowngradeBillingPlanInformation
 from docusign_esign.models.downgrade_plan_update_response import DowngradePlanUpdateResponse
+from docusign_esign.models.downgrade_request_information import DowngradeRequestInformation
 from docusign_esign.models.draw import Draw
 from docusign_esign.models.e_note_configuration import ENoteConfiguration
 from docusign_esign.models.editor import Editor
@@ -288,7 +291,6 @@ from docusign_esign.models.formula_tab import FormulaTab
 from docusign_esign.models.full_name import FullName
 from docusign_esign.models.graphics_context import GraphicsContext
 from docusign_esign.models.group import Group
-from docusign_esign.models.group_brands import GroupBrands
 from docusign_esign.models.group_information import GroupInformation
 from docusign_esign.models.id_check_configuration import IdCheckConfiguration
 from docusign_esign.models.id_check_information_input import IdCheckInformationInput
@@ -296,6 +298,7 @@ from docusign_esign.models.id_check_security_step import IdCheckSecurityStep
 from docusign_esign.models.in_person_signer import InPersonSigner
 from docusign_esign.models.initial_here import InitialHere
 from docusign_esign.models.inline_template import InlineTemplate
+from docusign_esign.models.integrated_connect_user_info_list import IntegratedConnectUserInfoList
 from docusign_esign.models.integrated_user_info_list import IntegratedUserInfoList
 from docusign_esign.models.intermediary import Intermediary
 from docusign_esign.models.jurisdiction import Jurisdiction
