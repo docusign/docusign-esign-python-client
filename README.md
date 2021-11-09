@@ -67,11 +67,18 @@ For details regarding which type of OAuth grant will work best for your DocuSign
 
 For security purposes, DocuSign recommends using the [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) flow.
 
-## Running tests:
+## Tests:
 
-To run tests, you need:
-1. Create a .env file at the root of the repository (or rename an existing .env_example file)
-2. Enter your data from the developer account
+### Test configuration
+1. Login with your DocuSign account on https://appdemo.docusign.com.
+2. Open Apps and Keys section in Settings and press Add App and Integration Key button.
+3. Enter App name, add secret key, generate RSA key and press Save button.
+4. Create new brand on https://admindemo.docusign.com/brands page and save its ID.
+5. Create new template on https://appdemo.docusign.com/templates page and save its ID.
+6. Create a .env file at the root of the repository (or rename an existing .env_example file) and fill it with required data from steps 3-5.
+7. Write your generated private key into .env file
+
+8. Where in the developer account to look for data for the .env file:
 *   USER_NAME=< your e-mail on which to register an account >
 *   CLIENT_SECRET=< The secret key of your application > \
     settings => Apps and Keys =>
@@ -90,13 +97,16 @@ To run tests, you need:
     Settings => "Apps and Keys"
     in Apps and Integration Keys choose your application name => "ACTIONS" Edit => Service Integration => + GENERATE RSA
 
-3. Install dependencies from test-requirements.txt: \
+9. Install dependencies from test-requirements.txt: \
     python3 -m pip install --upgrade pip \
     pip3 install -r test-requirements.txt
 
-4. Run tests: \
+10. Run tests: \
     python3 -m unittest test.test_oauth \
     python3 -m unittest test.unit_tests
+
+### Recomended operating system
+The prefered operating system to run unit-tests is Linux.
 
 ## Support
 Log issues against this client through GitHub. We also have an [active developer community on Stack Overflow](https://stackoverflow.com/questions/tagged/docusignapi).
