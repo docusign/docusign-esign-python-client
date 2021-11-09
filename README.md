@@ -97,8 +97,9 @@ For security purposes, DocuSign recommends using the [Authorization Code Grant](
     Settings => "Apps and Keys"
     in Apps and Integration Keys choose your application name => "ACTIONS" Edit => Service Integration => + GENERATE RSA
 
-9. Install dependencies from test-requirements.txt: \
+9. Install dependencies: \
     python3 -m pip install --upgrade pip \
+    pip3 install -r requirements.txt \
     pip3 install -r test-requirements.txt
 
 10. Run tests: \
@@ -107,6 +108,12 @@ For security purposes, DocuSign recommends using the [Authorization Code Grant](
 
 ### Recomended operating system
 The prefered operating system to run unit-tests is Linux.
+
+### Installing Python3 language on PC
+To run tests for this project, please, install the Python 3.7 or higher on your PC:\
+https://www.python.org/downloads/ \
+After downloading process is complete, check if you have a Python3 installed on your PC by using \
+python3 --version
 
 ## Support
 Log issues against this client through GitHub. We also have an [active developer community on Stack Overflow](https://stackoverflow.com/questions/tagged/docusignapi).
