@@ -107,7 +107,7 @@ For security purposes, DocuSign recommends using the [Authorization Code Grant](
     python3 -m unittest test.unit_tests
 
 ### Recomended operating system
-The prefered operating system to run unit-tests is Linux.
+You can use Windows or Linux to run these unit tests.
 
 ### Installing Python3 language on PC
 To run tests for this project, please, install the Python 3.7 or higher on your PC:\
