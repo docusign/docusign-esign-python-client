@@ -705,8 +705,7 @@ class SdkUnitTests(unittest.TestCase):
                                                     envelope_id=self.envelope_id)
             assert form_data is not None
             assert form_data.prefill_form_data is not None
-            assert form_data.prefill_form_data.form_data[0] is not None
-            assert form_data.prefill_form_data.form_data[0].name is not None
+            assert isinstance(form_data.prefill_form_data.form_data, list)
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
@@ -762,8 +761,8 @@ class SdkUnitTests(unittest.TestCase):
 
             tabs = envelopes_api.list_tabs(account_id=self.account_id,
                                            envelope_id=created_envelope.envelope_id,
-                                           recipient_id=recipients.signers[0].recipient_id)
-            list_tabs = tabs.list_tabs
+                                           recipient_id=recipients.signers[1].recipient_id)
+            list_tabs = tabs
 
             assert list_tabs is not None
 
