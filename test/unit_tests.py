@@ -495,7 +495,6 @@ class SdkUnitTests(unittest.TestCase):
             document = envelopes_api.get_document(self.account_id, 'combined', self.envelope_id)
 
             assert len(document) > 0
-            subprocess.call('open ' + document, shell=True)
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
@@ -685,13 +684,11 @@ class SdkUnitTests(unittest.TestCase):
 
             document = envelopes_api.get_document(self.account_id, 'combined', envelope_id)
             assert len(document) > 0
-            subprocess.call('open ' + document, shell=True)
 
             logs_list = diag_api.list_request_logs()
             request_log_id = logs_list.api_request_logs[0].request_log_id
             file2 = diag_api.get_request_log(request_log_id)
             assert len(file2) > 0
-            subprocess.call('open ' + file2, shell=True)
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
