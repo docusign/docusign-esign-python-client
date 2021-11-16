@@ -869,7 +869,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
-    def ListRecipients_CorrectAccountIdAndEnvelopeId_ReturnRecipientsList(self):
+    def test_ListRecipients_CorrectAccountIdAndEnvelopeId_ReturnRecipientsList(self):
         envelopes_api = EnvelopesApi()
         try:
             recipients_list = envelopes_api.list_recipients(self.account_id, self.envelope_id)
@@ -881,7 +881,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None
 
-    def CreateRecipientView_CorrectAccountIdAndEnvelopeId_ReturnViewUrl(self):
+    def test_CreateRecipientView_CorrectAccountIdAndEnvelopeId_ReturnViewUrl(self):
         envelopes_api = EnvelopesApi()
         try:
             # Create the recipient view request object
@@ -907,7 +907,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None
 
-    def ListDocuments_CorrectAccountIdAndEnvelopeId_ReturnEnvelopeDocumentsResult(self):
+    def test_ListDocuments_CorrectAccountIdAndEnvelopeId_ReturnEnvelopeDocumentsResult(self):
         envelopes_api = EnvelopesApi()
         try:
             envelope_documents = envelopes_api.list_documents(self.account_id, self.envelope_id)
@@ -919,7 +919,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None
 
-    def Update_CorrectAccountIdAndEnvelopeIdAndEnvelope_ReturnEnvelopeUpdateSummary(self):
+    def test_Update_CorrectAccountIdAndEnvelopeIdAndEnvelope_ReturnEnvelopeUpdateSummary(self):
         envelopes_api = EnvelopesApi()
         try:
             envelope_update = envelopes_api.update(
@@ -935,7 +935,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None
 
-    def GetAccountInformation_CorrectAccountId_ReturnAccountInfo(self):
+    def test_GetAccountInformation_CorrectAccountId_ReturnAccountInfo(self):
         accounts_api = AccountsApi()
         try:
             acc_info = accounts_api.get_account_information(self.account_id)
@@ -947,7 +947,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None
 
-    def UpdateRecipients_CorrectAccountIdAndEnvelopeId_ReturnRecipientsUpdateSummary(self):
+    def test_UpdateRecipients_CorrectAccountIdAndEnvelopeId_ReturnRecipientsUpdateSummary(self):
         envelopes_api = EnvelopesApi()
 
         recipients = Recipients()
@@ -974,7 +974,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None
 
-    def ListTemplates_CorrectAccountId_ReturnTemplatesList(self):
+    def test_ListTemplates_CorrectAccountId_ReturnTemplatesList(self):
         templates_api = TemplatesApi()
         try:
             templates_list = templates_api.list_templates(self.account_id)
@@ -986,7 +986,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None
 
-    def List_CorrectAccountId_ReturnUsersList(self):
+    def test_List_CorrectAccountId_ReturnUsersList(self):
         users_api = UsersApi()
         try:
             users_list = users_api.list(self.account_id)
@@ -998,7 +998,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None
 
-    def Get_CorrectAccountIdAndTemplateId_ReturnTemplate(self):
+    def test_Get_CorrectAccountIdAndTemplateId_ReturnTemplate(self):
         templates_api = TemplatesApi()
         try:
             template = templates_api.get(self.account_id, TemplateId)
@@ -1010,7 +1010,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None
 
-    def ListAuditEvents_CorrectAccountIdAndEnvelopeId_ReturnAuditList(self):
+    def test_ListAuditEvents_CorrectAccountIdAndEnvelopeId_ReturnAuditList(self):
         envelopes_api = EnvelopesApi()
         try:
             audit_list = envelopes_api.list_audit_events(self.account_id, self.envelope_id)
