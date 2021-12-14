@@ -86,6 +86,7 @@ class Checkbox(object):
         'merge_field_xml': 'str',
         'name': 'str',
         'name_metadata': 'PropertyMetadata',
+        'original_value': 'str',
         'page_number': 'str',
         'page_number_metadata': 'PropertyMetadata',
         'recipient_id': 'str',
@@ -124,6 +125,7 @@ class Checkbox(object):
         'tool_tip_metadata': 'PropertyMetadata',
         'underline': 'str',
         'underline_metadata': 'PropertyMetadata',
+        'value': 'str',
         'width': 'str',
         'width_metadata': 'PropertyMetadata',
         'x_position': 'str',
@@ -186,6 +188,7 @@ class Checkbox(object):
         'merge_field_xml': 'mergeFieldXml',
         'name': 'name',
         'name_metadata': 'nameMetadata',
+        'original_value': 'originalValue',
         'page_number': 'pageNumber',
         'page_number_metadata': 'pageNumberMetadata',
         'recipient_id': 'recipientId',
@@ -224,6 +227,7 @@ class Checkbox(object):
         'tool_tip_metadata': 'toolTipMetadata',
         'underline': 'underline',
         'underline_metadata': 'underlineMetadata',
+        'value': 'value',
         'width': 'width',
         'width_metadata': 'widthMetadata',
         'x_position': 'xPosition',
@@ -291,6 +295,7 @@ class Checkbox(object):
         self._merge_field_xml = None
         self._name = None
         self._name_metadata = None
+        self._original_value = None
         self._page_number = None
         self._page_number_metadata = None
         self._recipient_id = None
@@ -329,6 +334,7 @@ class Checkbox(object):
         self._tool_tip_metadata = None
         self._underline = None
         self._underline_metadata = None
+        self._value = None
         self._width = None
         self._width_metadata = None
         self._x_position = None
@@ -390,6 +396,7 @@ class Checkbox(object):
         setattr(self, "_{}".format('merge_field_xml'), kwargs.get('merge_field_xml', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('name_metadata'), kwargs.get('name_metadata', None))
+        setattr(self, "_{}".format('original_value'), kwargs.get('original_value', None))
         setattr(self, "_{}".format('page_number'), kwargs.get('page_number', None))
         setattr(self, "_{}".format('page_number_metadata'), kwargs.get('page_number_metadata', None))
         setattr(self, "_{}".format('recipient_id'), kwargs.get('recipient_id', None))
@@ -428,6 +435,7 @@ class Checkbox(object):
         setattr(self, "_{}".format('tool_tip_metadata'), kwargs.get('tool_tip_metadata', None))
         setattr(self, "_{}".format('underline'), kwargs.get('underline', None))
         setattr(self, "_{}".format('underline_metadata'), kwargs.get('underline_metadata', None))
+        setattr(self, "_{}".format('value'), kwargs.get('value', None))
         setattr(self, "_{}".format('width'), kwargs.get('width', None))
         setattr(self, "_{}".format('width_metadata'), kwargs.get('width_metadata', None))
         setattr(self, "_{}".format('x_position'), kwargs.get('x_position', None))
@@ -1601,6 +1609,29 @@ class Checkbox(object):
         self._name_metadata = name_metadata
 
     @property
+    def original_value(self):
+        """Gets the original_value of this Checkbox.  # noqa: E501
+
+        The initial value of the tab when it was sent to the recipient.   # noqa: E501
+
+        :return: The original_value of this Checkbox.  # noqa: E501
+        :rtype: str
+        """
+        return self._original_value
+
+    @original_value.setter
+    def original_value(self, original_value):
+        """Sets the original_value of this Checkbox.
+
+        The initial value of the tab when it was sent to the recipient.   # noqa: E501
+
+        :param original_value: The original_value of this Checkbox.  # noqa: E501
+        :type: str
+        """
+
+        self._original_value = original_value
+
+    @property
     def page_number(self):
         """Gets the page_number of this Checkbox.  # noqa: E501
 
@@ -2435,6 +2466,29 @@ class Checkbox(object):
         """
 
         self._underline_metadata = underline_metadata
+
+    @property
+    def value(self):
+        """Gets the value of this Checkbox.  # noqa: E501
+
+        Specifies the value of the tab.   # noqa: E501
+
+        :return: The value of this Checkbox.  # noqa: E501
+        :rtype: str
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        """Sets the value of this Checkbox.
+
+        Specifies the value of the tab.   # noqa: E501
+
+        :param value: The value of this Checkbox.  # noqa: E501
+        :type: str
+        """
+
+        self._value = value
 
     @property
     def width(self):

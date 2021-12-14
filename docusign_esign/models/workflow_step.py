@@ -35,6 +35,7 @@ class WorkflowStep(object):
     swagger_types = {
         'action': 'str',
         'completed_date': 'str',
+        'delayed_routing': 'DelayedRoutingApiModel',
         'item_id': 'str',
         'recipient_routing': 'RecipientRouting',
         'status': 'str',
@@ -46,6 +47,7 @@ class WorkflowStep(object):
     attribute_map = {
         'action': 'action',
         'completed_date': 'completedDate',
+        'delayed_routing': 'delayedRouting',
         'item_id': 'itemId',
         'recipient_routing': 'recipientRouting',
         'status': 'status',
@@ -62,6 +64,7 @@ class WorkflowStep(object):
 
         self._action = None
         self._completed_date = None
+        self._delayed_routing = None
         self._item_id = None
         self._recipient_routing = None
         self._status = None
@@ -72,6 +75,7 @@ class WorkflowStep(object):
 
         setattr(self, "_{}".format('action'), kwargs.get('action', None))
         setattr(self, "_{}".format('completed_date'), kwargs.get('completed_date', None))
+        setattr(self, "_{}".format('delayed_routing'), kwargs.get('delayed_routing', None))
         setattr(self, "_{}".format('item_id'), kwargs.get('item_id', None))
         setattr(self, "_{}".format('recipient_routing'), kwargs.get('recipient_routing', None))
         setattr(self, "_{}".format('status'), kwargs.get('status', None))
@@ -124,6 +128,27 @@ class WorkflowStep(object):
         """
 
         self._completed_date = completed_date
+
+    @property
+    def delayed_routing(self):
+        """Gets the delayed_routing of this WorkflowStep.  # noqa: E501
+
+
+        :return: The delayed_routing of this WorkflowStep.  # noqa: E501
+        :rtype: DelayedRoutingApiModel
+        """
+        return self._delayed_routing
+
+    @delayed_routing.setter
+    def delayed_routing(self, delayed_routing):
+        """Sets the delayed_routing of this WorkflowStep.
+
+
+        :param delayed_routing: The delayed_routing of this WorkflowStep.  # noqa: E501
+        :type: DelayedRoutingApiModel
+        """
+
+        self._delayed_routing = delayed_routing
 
     @property
     def item_id(self):

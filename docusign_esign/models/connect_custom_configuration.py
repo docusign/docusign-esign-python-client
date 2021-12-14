@@ -42,6 +42,7 @@ class ConnectCustomConfiguration(object):
         'enable_log': 'str',
         'envelope_events': 'list[str]',
         'event_data': 'ConnectEventData',
+        'events': 'list[str]',
         'external_folder_id': 'str',
         'external_folder_label': 'str',
         'include_certificate_of_completion': 'str',
@@ -82,6 +83,7 @@ class ConnectCustomConfiguration(object):
         'enable_log': 'enableLog',
         'envelope_events': 'envelopeEvents',
         'event_data': 'eventData',
+        'events': 'events',
         'external_folder_id': 'externalFolderId',
         'external_folder_label': 'externalFolderLabel',
         'include_certificate_of_completion': 'includeCertificateOfCompletion',
@@ -127,6 +129,7 @@ class ConnectCustomConfiguration(object):
         self._enable_log = None
         self._envelope_events = None
         self._event_data = None
+        self._events = None
         self._external_folder_id = None
         self._external_folder_label = None
         self._include_certificate_of_completion = None
@@ -166,6 +169,7 @@ class ConnectCustomConfiguration(object):
         setattr(self, "_{}".format('enable_log'), kwargs.get('enable_log', None))
         setattr(self, "_{}".format('envelope_events'), kwargs.get('envelope_events', None))
         setattr(self, "_{}".format('event_data'), kwargs.get('event_data', None))
+        setattr(self, "_{}".format('events'), kwargs.get('events', None))
         setattr(self, "_{}".format('external_folder_id'), kwargs.get('external_folder_id', None))
         setattr(self, "_{}".format('external_folder_label'), kwargs.get('external_folder_label', None))
         setattr(self, "_{}".format('include_certificate_of_completion'), kwargs.get('include_certificate_of_completion', None))
@@ -399,6 +403,29 @@ class ConnectCustomConfiguration(object):
         """
 
         self._event_data = event_data
+
+    @property
+    def events(self):
+        """Gets the events of this ConnectCustomConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The events of this ConnectCustomConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._events
+
+    @events.setter
+    def events(self, events):
+        """Sets the events of this ConnectCustomConfiguration.
+
+          # noqa: E501
+
+        :param events: The events of this ConnectCustomConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._events = events
 
     @property
     def external_folder_id(self):

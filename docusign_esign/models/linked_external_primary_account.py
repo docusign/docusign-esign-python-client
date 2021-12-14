@@ -37,6 +37,7 @@ class LinkedExternalPrimaryAccount(object):
         'configuration_id': 'str',
         'email': 'str',
         'link_id': 'str',
+        'recipient_auth_requirements': 'ExternalPrimaryAccountRecipientAuthRequirements',
         'status': 'str',
         'user_id': 'str'
     }
@@ -46,6 +47,7 @@ class LinkedExternalPrimaryAccount(object):
         'configuration_id': 'configurationId',
         'email': 'email',
         'link_id': 'linkId',
+        'recipient_auth_requirements': 'recipientAuthRequirements',
         'status': 'status',
         'user_id': 'userId'
     }
@@ -60,6 +62,7 @@ class LinkedExternalPrimaryAccount(object):
         self._configuration_id = None
         self._email = None
         self._link_id = None
+        self._recipient_auth_requirements = None
         self._status = None
         self._user_id = None
         self.discriminator = None
@@ -68,6 +71,7 @@ class LinkedExternalPrimaryAccount(object):
         setattr(self, "_{}".format('configuration_id'), kwargs.get('configuration_id', None))
         setattr(self, "_{}".format('email'), kwargs.get('email', None))
         setattr(self, "_{}".format('link_id'), kwargs.get('link_id', None))
+        setattr(self, "_{}".format('recipient_auth_requirements'), kwargs.get('recipient_auth_requirements', None))
         setattr(self, "_{}".format('status'), kwargs.get('status', None))
         setattr(self, "_{}".format('user_id'), kwargs.get('user_id', None))
 
@@ -162,6 +166,27 @@ class LinkedExternalPrimaryAccount(object):
         """
 
         self._link_id = link_id
+
+    @property
+    def recipient_auth_requirements(self):
+        """Gets the recipient_auth_requirements of this LinkedExternalPrimaryAccount.  # noqa: E501
+
+
+        :return: The recipient_auth_requirements of this LinkedExternalPrimaryAccount.  # noqa: E501
+        :rtype: ExternalPrimaryAccountRecipientAuthRequirements
+        """
+        return self._recipient_auth_requirements
+
+    @recipient_auth_requirements.setter
+    def recipient_auth_requirements(self, recipient_auth_requirements):
+        """Sets the recipient_auth_requirements of this LinkedExternalPrimaryAccount.
+
+
+        :param recipient_auth_requirements: The recipient_auth_requirements of this LinkedExternalPrimaryAccount.  # noqa: E501
+        :type: ExternalPrimaryAccountRecipientAuthRequirements
+        """
+
+        self._recipient_auth_requirements = recipient_auth_requirements
 
     @property
     def status(self):

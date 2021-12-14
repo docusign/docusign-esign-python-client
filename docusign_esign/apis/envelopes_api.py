@@ -5869,9 +5869,9 @@ class EnvelopesApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: (required)
-        :param str document_id: (required)
-        :param str envelope_id: (required)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str document_id: The ID of the document being accessed. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str include_anchor_tab_locations:
         :return: DocumentHtmlDefinitionOriginals
                  If the method is called asynchronously,
@@ -5897,9 +5897,9 @@ class EnvelopesApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: (required)
-        :param str document_id: (required)
-        :param str envelope_id: (required)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str document_id: The ID of the document being accessed. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str include_anchor_tab_locations:
         :return: DocumentHtmlDefinitionOriginals
                  If the method is called asynchronously,
@@ -7846,8 +7846,8 @@ class EnvelopesApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: (required)
-        :param str envelope_id: (required)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str include_anchor_tab_locations:
         :return: DocumentHtmlDefinitionOriginals
                  If the method is called asynchronously,
@@ -7873,8 +7873,8 @@ class EnvelopesApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: (required)
-        :param str envelope_id: (required)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str include_anchor_tab_locations:
         :return: DocumentHtmlDefinitionOriginals
                  If the method is called asynchronously,

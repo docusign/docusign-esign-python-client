@@ -40,7 +40,7 @@ class AccountBillingPlanResponse(object):
         'direct_debit_processor_information': 'DirectDebitProcessorInformation',
         'downgrade_plan_information': 'DowngradePlanUpdateResponse',
         'downgrade_request_information': 'DowngradeRequestInformation',
-        'entity_name': 'str',
+        'entity_information': 'BillingEntityInformationResponse',
         'payment_method': 'str',
         'payment_processor_information': 'PaymentProcessorInformation',
         'referral_information': 'ReferralInformation',
@@ -55,7 +55,7 @@ class AccountBillingPlanResponse(object):
         'direct_debit_processor_information': 'directDebitProcessorInformation',
         'downgrade_plan_information': 'downgradePlanInformation',
         'downgrade_request_information': 'downgradeRequestInformation',
-        'entity_name': 'entityName',
+        'entity_information': 'entityInformation',
         'payment_method': 'paymentMethod',
         'payment_processor_information': 'paymentProcessorInformation',
         'referral_information': 'referralInformation',
@@ -75,7 +75,7 @@ class AccountBillingPlanResponse(object):
         self._direct_debit_processor_information = None
         self._downgrade_plan_information = None
         self._downgrade_request_information = None
-        self._entity_name = None
+        self._entity_information = None
         self._payment_method = None
         self._payment_processor_information = None
         self._referral_information = None
@@ -89,7 +89,7 @@ class AccountBillingPlanResponse(object):
         setattr(self, "_{}".format('direct_debit_processor_information'), kwargs.get('direct_debit_processor_information', None))
         setattr(self, "_{}".format('downgrade_plan_information'), kwargs.get('downgrade_plan_information', None))
         setattr(self, "_{}".format('downgrade_request_information'), kwargs.get('downgrade_request_information', None))
-        setattr(self, "_{}".format('entity_name'), kwargs.get('entity_name', None))
+        setattr(self, "_{}".format('entity_information'), kwargs.get('entity_information', None))
         setattr(self, "_{}".format('payment_method'), kwargs.get('payment_method', None))
         setattr(self, "_{}".format('payment_processor_information'), kwargs.get('payment_processor_information', None))
         setattr(self, "_{}".format('referral_information'), kwargs.get('referral_information', None))
@@ -245,27 +245,25 @@ class AccountBillingPlanResponse(object):
         self._downgrade_request_information = downgrade_request_information
 
     @property
-    def entity_name(self):
-        """Gets the entity_name of this AccountBillingPlanResponse.  # noqa: E501
+    def entity_information(self):
+        """Gets the entity_information of this AccountBillingPlanResponse.  # noqa: E501
 
-          # noqa: E501
 
-        :return: The entity_name of this AccountBillingPlanResponse.  # noqa: E501
-        :rtype: str
+        :return: The entity_information of this AccountBillingPlanResponse.  # noqa: E501
+        :rtype: BillingEntityInformationResponse
         """
-        return self._entity_name
+        return self._entity_information
 
-    @entity_name.setter
-    def entity_name(self, entity_name):
-        """Sets the entity_name of this AccountBillingPlanResponse.
+    @entity_information.setter
+    def entity_information(self, entity_information):
+        """Sets the entity_information of this AccountBillingPlanResponse.
 
-          # noqa: E501
 
-        :param entity_name: The entity_name of this AccountBillingPlanResponse.  # noqa: E501
-        :type: str
+        :param entity_information: The entity_information of this AccountBillingPlanResponse.  # noqa: E501
+        :type: BillingEntityInformationResponse
         """
 
-        self._entity_name = entity_name
+        self._entity_information = entity_information
 
     @property
     def payment_method(self):
