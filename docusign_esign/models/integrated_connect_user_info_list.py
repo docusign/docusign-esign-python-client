@@ -79,7 +79,7 @@ class IntegratedConnectUserInfoList(object):
     def end_position(self):
         """Gets the end_position of this IntegratedConnectUserInfoList.  # noqa: E501
 
-          # noqa: E501
+        The last position in the result set.   # noqa: E501
 
         :return: The end_position of this IntegratedConnectUserInfoList.  # noqa: E501
         :rtype: str
@@ -90,7 +90,7 @@ class IntegratedConnectUserInfoList(object):
     def end_position(self, end_position):
         """Sets the end_position of this IntegratedConnectUserInfoList.
 
-          # noqa: E501
+        The last position in the result set.   # noqa: E501
 
         :param end_position: The end_position of this IntegratedConnectUserInfoList.  # noqa: E501
         :type: str
@@ -102,7 +102,7 @@ class IntegratedConnectUserInfoList(object):
     def next_uri(self):
         """Gets the next_uri of this IntegratedConnectUserInfoList.  # noqa: E501
 
-          # noqa: E501
+        The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.   # noqa: E501
 
         :return: The next_uri of this IntegratedConnectUserInfoList.  # noqa: E501
         :rtype: str
@@ -113,7 +113,7 @@ class IntegratedConnectUserInfoList(object):
     def next_uri(self, next_uri):
         """Sets the next_uri of this IntegratedConnectUserInfoList.
 
-          # noqa: E501
+        The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null.   # noqa: E501
 
         :param next_uri: The next_uri of this IntegratedConnectUserInfoList.  # noqa: E501
         :type: str
@@ -125,7 +125,7 @@ class IntegratedConnectUserInfoList(object):
     def previous_uri(self):
         """Gets the previous_uri of this IntegratedConnectUserInfoList.  # noqa: E501
 
-          # noqa: E501
+        The postal code for the billing address.  # noqa: E501
 
         :return: The previous_uri of this IntegratedConnectUserInfoList.  # noqa: E501
         :rtype: str
@@ -136,7 +136,7 @@ class IntegratedConnectUserInfoList(object):
     def previous_uri(self, previous_uri):
         """Sets the previous_uri of this IntegratedConnectUserInfoList.
 
-          # noqa: E501
+        The postal code for the billing address.  # noqa: E501
 
         :param previous_uri: The previous_uri of this IntegratedConnectUserInfoList.  # noqa: E501
         :type: str
@@ -148,7 +148,7 @@ class IntegratedConnectUserInfoList(object):
     def result_set_size(self):
         """Gets the result_set_size of this IntegratedConnectUserInfoList.  # noqa: E501
 
-          # noqa: E501
+        The number of results returned in this response.   # noqa: E501
 
         :return: The result_set_size of this IntegratedConnectUserInfoList.  # noqa: E501
         :rtype: str
@@ -159,7 +159,7 @@ class IntegratedConnectUserInfoList(object):
     def result_set_size(self, result_set_size):
         """Sets the result_set_size of this IntegratedConnectUserInfoList.
 
-          # noqa: E501
+        The number of results returned in this response.   # noqa: E501
 
         :param result_set_size: The result_set_size of this IntegratedConnectUserInfoList.  # noqa: E501
         :type: str
@@ -171,7 +171,7 @@ class IntegratedConnectUserInfoList(object):
     def start_position(self):
         """Gets the start_position of this IntegratedConnectUserInfoList.  # noqa: E501
 
-          # noqa: E501
+        Starting position of the current result set.  # noqa: E501
 
         :return: The start_position of this IntegratedConnectUserInfoList.  # noqa: E501
         :rtype: str
@@ -182,7 +182,7 @@ class IntegratedConnectUserInfoList(object):
     def start_position(self, start_position):
         """Sets the start_position of this IntegratedConnectUserInfoList.
 
-          # noqa: E501
+        Starting position of the current result set.  # noqa: E501
 
         :param start_position: The start_position of this IntegratedConnectUserInfoList.  # noqa: E501
         :type: str
@@ -194,7 +194,7 @@ class IntegratedConnectUserInfoList(object):
     def total_set_size(self):
         """Gets the total_set_size of this IntegratedConnectUserInfoList.  # noqa: E501
 
-          # noqa: E501
+        The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.  # noqa: E501
 
         :return: The total_set_size of this IntegratedConnectUserInfoList.  # noqa: E501
         :rtype: str
@@ -205,7 +205,7 @@ class IntegratedConnectUserInfoList(object):
     def total_set_size(self, total_set_size):
         """Sets the total_set_size of this IntegratedConnectUserInfoList.
 
-          # noqa: E501
+        The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.  # noqa: E501
 
         :param total_set_size: The total_set_size of this IntegratedConnectUserInfoList.  # noqa: E501
         :type: str

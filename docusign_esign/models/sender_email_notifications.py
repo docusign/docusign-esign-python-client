@@ -34,6 +34,7 @@ class SenderEmailNotifications(object):
     """
     swagger_types = {
         'changed_signer': 'str',
+        'clickwrap_responses_limit_notification_email': 'str',
         'comments_only_private_and_mention': 'str',
         'comments_receive_all': 'str',
         'delivery_failed': 'str',
@@ -48,6 +49,7 @@ class SenderEmailNotifications(object):
 
     attribute_map = {
         'changed_signer': 'changedSigner',
+        'clickwrap_responses_limit_notification_email': 'clickwrapResponsesLimitNotificationEmail',
         'comments_only_private_and_mention': 'commentsOnlyPrivateAndMention',
         'comments_receive_all': 'commentsReceiveAll',
         'delivery_failed': 'deliveryFailed',
@@ -67,6 +69,7 @@ class SenderEmailNotifications(object):
         self._configuration = _configuration
 
         self._changed_signer = None
+        self._clickwrap_responses_limit_notification_email = None
         self._comments_only_private_and_mention = None
         self._comments_receive_all = None
         self._delivery_failed = None
@@ -80,6 +83,7 @@ class SenderEmailNotifications(object):
         self.discriminator = None
 
         setattr(self, "_{}".format('changed_signer'), kwargs.get('changed_signer', None))
+        setattr(self, "_{}".format('clickwrap_responses_limit_notification_email'), kwargs.get('clickwrap_responses_limit_notification_email', None))
         setattr(self, "_{}".format('comments_only_private_and_mention'), kwargs.get('comments_only_private_and_mention', None))
         setattr(self, "_{}".format('comments_receive_all'), kwargs.get('comments_receive_all', None))
         setattr(self, "_{}".format('delivery_failed'), kwargs.get('delivery_failed', None))
@@ -113,6 +117,29 @@ class SenderEmailNotifications(object):
         """
 
         self._changed_signer = changed_signer
+
+    @property
+    def clickwrap_responses_limit_notification_email(self):
+        """Gets the clickwrap_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The clickwrap_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+        :rtype: str
+        """
+        return self._clickwrap_responses_limit_notification_email
+
+    @clickwrap_responses_limit_notification_email.setter
+    def clickwrap_responses_limit_notification_email(self, clickwrap_responses_limit_notification_email):
+        """Sets the clickwrap_responses_limit_notification_email of this SenderEmailNotifications.
+
+          # noqa: E501
+
+        :param clickwrap_responses_limit_notification_email: The clickwrap_responses_limit_notification_email of this SenderEmailNotifications.  # noqa: E501
+        :type: str
+        """
+
+        self._clickwrap_responses_limit_notification_email = clickwrap_responses_limit_notification_email
 
     @property
     def comments_only_private_and_mention(self):

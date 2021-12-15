@@ -10,7 +10,6 @@ from .bulk_envelopes_api import BulkEnvelopesApi
 from .cloud_storage_api import CloudStorageApi
 from .connect_api import ConnectApi
 from .custom_tabs_api import CustomTabsApi
-from .data_feed_api import DataFeedApi
 from .diagnostics_api import DiagnosticsApi
 from .email_archive_api import EmailArchiveApi
 from .envelopes_api import EnvelopesApi

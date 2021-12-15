@@ -810,11 +810,11 @@ class ConnectApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: (required)
-        :param str connect_id: (required)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str connect_id: The ID of the custom Connect configuration being accessed. (required)
         :param str count:
+        :param str domain_users_only:
         :param str email_substring:
-        :param str is_recipient_connect_config:
         :param str start_position:
         :param str status:
         :param str user_name_substring:
@@ -842,11 +842,11 @@ class ConnectApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param str account_id: (required)
-        :param str connect_id: (required)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str connect_id: The ID of the custom Connect configuration being accessed. (required)
         :param str count:
+        :param str domain_users_only:
         :param str email_substring:
-        :param str is_recipient_connect_config:
         :param str start_position:
         :param str status:
         :param str user_name_substring:
@@ -855,7 +855,7 @@ class ConnectApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'connect_id', 'count', 'email_substring', 'is_recipient_connect_config', 'start_position', 'status', 'user_name_substring']
+        all_params = ['account_id', 'connect_id', 'count', 'domain_users_only', 'email_substring', 'start_position', 'status', 'user_name_substring']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -890,10 +890,10 @@ class ConnectApi(object):
         query_params = {}
         if 'count' in params:
             query_params['count'] = params['count']
+        if 'domain_users_only' in params:
+            query_params['domain_users_only'] = params['domain_users_only']
         if 'email_substring' in params:
             query_params['email_substring'] = params['email_substring']
-        if 'is_recipient_connect_config' in params:
-            query_params['is_recipient_connect_config'] = params['is_recipient_connect_config']
         if 'start_position' in params:
             query_params['start_position'] = params['start_position']
         if 'status' in params:

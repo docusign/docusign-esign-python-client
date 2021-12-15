@@ -38,6 +38,7 @@ class BulkSendBatchStatus(object):
         'batch_size': 'str',
         'bulk_errors': 'list[BulkSendErrorStatus]',
         'envelope_id_or_template_id': 'str',
+        'envelopes_info': 'BulkSendEnvelopesInfo',
         'envelopes_uri': 'str',
         'failed': 'str',
         'mailing_list_id': 'str',
@@ -55,6 +56,7 @@ class BulkSendBatchStatus(object):
         'batch_size': 'batchSize',
         'bulk_errors': 'bulkErrors',
         'envelope_id_or_template_id': 'envelopeIdOrTemplateId',
+        'envelopes_info': 'envelopesInfo',
         'envelopes_uri': 'envelopesUri',
         'failed': 'failed',
         'mailing_list_id': 'mailingListId',
@@ -77,6 +79,7 @@ class BulkSendBatchStatus(object):
         self._batch_size = None
         self._bulk_errors = None
         self._envelope_id_or_template_id = None
+        self._envelopes_info = None
         self._envelopes_uri = None
         self._failed = None
         self._mailing_list_id = None
@@ -93,6 +96,7 @@ class BulkSendBatchStatus(object):
         setattr(self, "_{}".format('batch_size'), kwargs.get('batch_size', None))
         setattr(self, "_{}".format('bulk_errors'), kwargs.get('bulk_errors', None))
         setattr(self, "_{}".format('envelope_id_or_template_id'), kwargs.get('envelope_id_or_template_id', None))
+        setattr(self, "_{}".format('envelopes_info'), kwargs.get('envelopes_info', None))
         setattr(self, "_{}".format('envelopes_uri'), kwargs.get('envelopes_uri', None))
         setattr(self, "_{}".format('failed'), kwargs.get('failed', None))
         setattr(self, "_{}".format('mailing_list_id'), kwargs.get('mailing_list_id', None))
@@ -217,6 +221,27 @@ class BulkSendBatchStatus(object):
         """
 
         self._envelope_id_or_template_id = envelope_id_or_template_id
+
+    @property
+    def envelopes_info(self):
+        """Gets the envelopes_info of this BulkSendBatchStatus.  # noqa: E501
+
+
+        :return: The envelopes_info of this BulkSendBatchStatus.  # noqa: E501
+        :rtype: BulkSendEnvelopesInfo
+        """
+        return self._envelopes_info
+
+    @envelopes_info.setter
+    def envelopes_info(self, envelopes_info):
+        """Sets the envelopes_info of this BulkSendBatchStatus.
+
+
+        :param envelopes_info: The envelopes_info of this BulkSendBatchStatus.  # noqa: E501
+        :type: BulkSendEnvelopesInfo
+        """
+
+        self._envelopes_info = envelopes_info
 
     @property
     def envelopes_uri(self):

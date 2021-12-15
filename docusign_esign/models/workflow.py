@@ -34,12 +34,16 @@ class Workflow(object):
     """
     swagger_types = {
         'current_workflow_step_id': 'str',
+        'resume_date': 'str',
+        'scheduled_sending': 'ScheduledSendingApiModel',
         'workflow_status': 'str',
         'workflow_steps': 'list[WorkflowStep]'
     }
 
     attribute_map = {
         'current_workflow_step_id': 'currentWorkflowStepId',
+        'resume_date': 'resumeDate',
+        'scheduled_sending': 'scheduledSending',
         'workflow_status': 'workflowStatus',
         'workflow_steps': 'workflowSteps'
     }
@@ -51,11 +55,15 @@ class Workflow(object):
         self._configuration = _configuration
 
         self._current_workflow_step_id = None
+        self._resume_date = None
+        self._scheduled_sending = None
         self._workflow_status = None
         self._workflow_steps = None
         self.discriminator = None
 
         setattr(self, "_{}".format('current_workflow_step_id'), kwargs.get('current_workflow_step_id', None))
+        setattr(self, "_{}".format('resume_date'), kwargs.get('resume_date', None))
+        setattr(self, "_{}".format('scheduled_sending'), kwargs.get('scheduled_sending', None))
         setattr(self, "_{}".format('workflow_status'), kwargs.get('workflow_status', None))
         setattr(self, "_{}".format('workflow_steps'), kwargs.get('workflow_steps', None))
 
@@ -81,6 +89,50 @@ class Workflow(object):
         """
 
         self._current_workflow_step_id = current_workflow_step_id
+
+    @property
+    def resume_date(self):
+        """Gets the resume_date of this Workflow.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The resume_date of this Workflow.  # noqa: E501
+        :rtype: str
+        """
+        return self._resume_date
+
+    @resume_date.setter
+    def resume_date(self, resume_date):
+        """Sets the resume_date of this Workflow.
+
+          # noqa: E501
+
+        :param resume_date: The resume_date of this Workflow.  # noqa: E501
+        :type: str
+        """
+
+        self._resume_date = resume_date
+
+    @property
+    def scheduled_sending(self):
+        """Gets the scheduled_sending of this Workflow.  # noqa: E501
+
+
+        :return: The scheduled_sending of this Workflow.  # noqa: E501
+        :rtype: ScheduledSendingApiModel
+        """
+        return self._scheduled_sending
+
+    @scheduled_sending.setter
+    def scheduled_sending(self, scheduled_sending):
+        """Sets the scheduled_sending of this Workflow.
+
+
+        :param scheduled_sending: The scheduled_sending of this Workflow.  # noqa: E501
+        :type: ScheduledSendingApiModel
+        """
+
+        self._scheduled_sending = scheduled_sending
 
     @property
     def workflow_status(self):

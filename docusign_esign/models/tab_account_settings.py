@@ -41,6 +41,8 @@ class TabAccountSettings(object):
         'calculated_fields_metadata': 'SettingsMetadata',
         'checkbox_tabs_enabled': 'str',
         'check_box_tabs_metadata': 'SettingsMetadata',
+        'currency_tabs_enabled': 'str',
+        'currency_tabs_metadata': 'SettingsMetadata',
         'data_field_regex_enabled': 'str',
         'data_field_regex_metadata': 'SettingsMetadata',
         'data_field_size_enabled': 'str',
@@ -86,6 +88,8 @@ class TabAccountSettings(object):
         'calculated_fields_metadata': 'calculatedFieldsMetadata',
         'checkbox_tabs_enabled': 'checkboxTabsEnabled',
         'check_box_tabs_metadata': 'checkBoxTabsMetadata',
+        'currency_tabs_enabled': 'currencyTabsEnabled',
+        'currency_tabs_metadata': 'currencyTabsMetadata',
         'data_field_regex_enabled': 'dataFieldRegexEnabled',
         'data_field_regex_metadata': 'dataFieldRegexMetadata',
         'data_field_size_enabled': 'dataFieldSizeEnabled',
@@ -136,6 +140,8 @@ class TabAccountSettings(object):
         self._calculated_fields_metadata = None
         self._checkbox_tabs_enabled = None
         self._check_box_tabs_metadata = None
+        self._currency_tabs_enabled = None
+        self._currency_tabs_metadata = None
         self._data_field_regex_enabled = None
         self._data_field_regex_metadata = None
         self._data_field_size_enabled = None
@@ -180,6 +186,8 @@ class TabAccountSettings(object):
         setattr(self, "_{}".format('calculated_fields_metadata'), kwargs.get('calculated_fields_metadata', None))
         setattr(self, "_{}".format('checkbox_tabs_enabled'), kwargs.get('checkbox_tabs_enabled', None))
         setattr(self, "_{}".format('check_box_tabs_metadata'), kwargs.get('check_box_tabs_metadata', None))
+        setattr(self, "_{}".format('currency_tabs_enabled'), kwargs.get('currency_tabs_enabled', None))
+        setattr(self, "_{}".format('currency_tabs_metadata'), kwargs.get('currency_tabs_metadata', None))
         setattr(self, "_{}".format('data_field_regex_enabled'), kwargs.get('data_field_regex_enabled', None))
         setattr(self, "_{}".format('data_field_regex_metadata'), kwargs.get('data_field_regex_metadata', None))
         setattr(self, "_{}".format('data_field_size_enabled'), kwargs.get('data_field_size_enabled', None))
@@ -390,6 +398,50 @@ class TabAccountSettings(object):
         """
 
         self._check_box_tabs_metadata = check_box_tabs_metadata
+
+    @property
+    def currency_tabs_enabled(self):
+        """Gets the currency_tabs_enabled of this TabAccountSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_tabs_enabled of this TabAccountSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._currency_tabs_enabled
+
+    @currency_tabs_enabled.setter
+    def currency_tabs_enabled(self, currency_tabs_enabled):
+        """Sets the currency_tabs_enabled of this TabAccountSettings.
+
+          # noqa: E501
+
+        :param currency_tabs_enabled: The currency_tabs_enabled of this TabAccountSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._currency_tabs_enabled = currency_tabs_enabled
+
+    @property
+    def currency_tabs_metadata(self):
+        """Gets the currency_tabs_metadata of this TabAccountSettings.  # noqa: E501
+
+
+        :return: The currency_tabs_metadata of this TabAccountSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._currency_tabs_metadata
+
+    @currency_tabs_metadata.setter
+    def currency_tabs_metadata(self, currency_tabs_metadata):
+        """Sets the currency_tabs_metadata of this TabAccountSettings.
+
+
+        :param currency_tabs_metadata: The currency_tabs_metadata of this TabAccountSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._currency_tabs_metadata = currency_tabs_metadata
 
     @property
     def data_field_regex_enabled(self):

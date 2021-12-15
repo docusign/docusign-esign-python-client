@@ -43,6 +43,7 @@ class Contact(object):
         'is_owner': 'bool',
         'name': 'str',
         'organization': 'str',
+        'room_contact_type': 'str',
         'shared': 'str',
         'signing_group': 'str',
         'signing_group_name': 'str'
@@ -59,6 +60,7 @@ class Contact(object):
         'is_owner': 'isOwner',
         'name': 'name',
         'organization': 'organization',
+        'room_contact_type': 'roomContactType',
         'shared': 'shared',
         'signing_group': 'signingGroup',
         'signing_group_name': 'signingGroupName'
@@ -80,6 +82,7 @@ class Contact(object):
         self._is_owner = None
         self._name = None
         self._organization = None
+        self._room_contact_type = None
         self._shared = None
         self._signing_group = None
         self._signing_group_name = None
@@ -95,6 +98,7 @@ class Contact(object):
         setattr(self, "_{}".format('is_owner'), kwargs.get('is_owner', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('organization'), kwargs.get('organization', None))
+        setattr(self, "_{}".format('room_contact_type'), kwargs.get('room_contact_type', None))
         setattr(self, "_{}".format('shared'), kwargs.get('shared', None))
         setattr(self, "_{}".format('signing_group'), kwargs.get('signing_group', None))
         setattr(self, "_{}".format('signing_group_name'), kwargs.get('signing_group_name', None))
@@ -326,6 +330,29 @@ class Contact(object):
         """
 
         self._organization = organization
+
+    @property
+    def room_contact_type(self):
+        """Gets the room_contact_type of this Contact.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The room_contact_type of this Contact.  # noqa: E501
+        :rtype: str
+        """
+        return self._room_contact_type
+
+    @room_contact_type.setter
+    def room_contact_type(self, room_contact_type):
+        """Sets the room_contact_type of this Contact.
+
+          # noqa: E501
+
+        :param room_contact_type: The room_contact_type of this Contact.  # noqa: E501
+        :type: str
+        """
+
+        self._room_contact_type = room_contact_type
 
     @property
     def shared(self):

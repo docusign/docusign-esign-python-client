@@ -36,6 +36,7 @@ class EventNotification(object):
         'delivery_mode': 'str',
         'envelope_events': 'list[EnvelopeEvent]',
         'event_data': 'ConnectEventData',
+        'events': 'list[str]',
         'include_certificate_of_completion': 'str',
         'include_certificate_with_soap': 'str',
         'include_document_fields': 'str',
@@ -57,6 +58,7 @@ class EventNotification(object):
         'delivery_mode': 'deliveryMode',
         'envelope_events': 'envelopeEvents',
         'event_data': 'eventData',
+        'events': 'events',
         'include_certificate_of_completion': 'includeCertificateOfCompletion',
         'include_certificate_with_soap': 'includeCertificateWithSoap',
         'include_document_fields': 'includeDocumentFields',
@@ -83,6 +85,7 @@ class EventNotification(object):
         self._delivery_mode = None
         self._envelope_events = None
         self._event_data = None
+        self._events = None
         self._include_certificate_of_completion = None
         self._include_certificate_with_soap = None
         self._include_document_fields = None
@@ -103,6 +106,7 @@ class EventNotification(object):
         setattr(self, "_{}".format('delivery_mode'), kwargs.get('delivery_mode', None))
         setattr(self, "_{}".format('envelope_events'), kwargs.get('envelope_events', None))
         setattr(self, "_{}".format('event_data'), kwargs.get('event_data', None))
+        setattr(self, "_{}".format('events'), kwargs.get('events', None))
         setattr(self, "_{}".format('include_certificate_of_completion'), kwargs.get('include_certificate_of_completion', None))
         setattr(self, "_{}".format('include_certificate_with_soap'), kwargs.get('include_certificate_with_soap', None))
         setattr(self, "_{}".format('include_document_fields'), kwargs.get('include_document_fields', None))
@@ -185,6 +189,29 @@ class EventNotification(object):
         """
 
         self._event_data = event_data
+
+    @property
+    def events(self):
+        """Gets the events of this EventNotification.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The events of this EventNotification.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._events
+
+    @events.setter
+    def events(self, events):
+        """Sets the events of this EventNotification.
+
+          # noqa: E501
+
+        :param events: The events of this EventNotification.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._events = events
 
     @property
     def include_certificate_of_completion(self):

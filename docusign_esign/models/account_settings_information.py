@@ -74,6 +74,8 @@ class AccountSettingsInformation(object):
         'allow_consumer_disclosure_override_metadata': 'SettingsMetadata',
         'allow_data_download': 'str',
         'allow_data_download_metadata': 'SettingsMetadata',
+        'allow_delegated_signing': 'str',
+        'allow_delegated_signing_metadata': 'SettingsMetadata',
         'allow_document_disclosures': 'str',
         'allow_document_disclosures_metadata': 'SettingsMetadata',
         'allow_documents_on_signed_envelopes': 'str',
@@ -234,6 +236,8 @@ class AccountSettingsInformation(object):
         'can_use_salesforce_o_auth_metadata': 'SettingsMetadata',
         'capture_voice_recording': 'str',
         'capture_voice_recording_metadata': 'SettingsMetadata',
+        'cfr21_simplified_signing_enabled': 'str',
+        'cfr21_simplified_signing_enabled_metadata': 'SettingsMetadata',
         'cfr_use_wide_image': 'str',
         'cfr_use_wide_image_metadata': 'SettingsMetadata',
         'check_for_multiple_admins_on_account': 'str',
@@ -282,6 +286,8 @@ class AccountSettingsInformation(object):
         'document_retention_purge_tabs': 'str',
         'document_visibility': 'str',
         'document_visibility_metadata': 'SettingsMetadata',
+        'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'str',
+        'dss_sign_29182_slide_up_bar_radmin_option': 'str',
         'email_template_version': 'str',
         'email_template_version_metadata': 'SettingsMetadata',
         'enable_access_code_generator': 'str',
@@ -316,6 +322,8 @@ class AccountSettingsInformation(object):
         'enable_esign_communities_metadata': 'SettingsMetadata',
         'enable_id_fx_intuit_kba': 'str',
         'enable_id_fx_intuit_kba_metadata': 'SettingsMetadata',
+        'enable_id_fx_phone_authentication': 'str',
+        'enable_id_fx_phone_authentication_metadata': 'SettingsMetadata',
         'enable_in_browser_editor': 'str',
         'enable_in_browser_editor_metadata': 'SettingsMetadata',
         'enable_payment_processing': 'str',
@@ -376,6 +384,7 @@ class AccountSettingsInformation(object):
         'enable_sms_authentication_metadata': 'SettingsMetadata',
         'enable_sms_delivery_additional_notification': 'str',
         'enable_sms_delivery_additional_notification_metadata': 'SettingsMetadata',
+        'enable_sms_delivery_primary': 'str',
         'enable_social_id_login': 'str',
         'enable_social_id_login_metadata': 'SettingsMetadata',
         'enable_strike_through': 'str',
@@ -394,6 +403,8 @@ class AccountSettingsInformation(object):
         'envelope_integration_enabled_metadata': 'SettingsMetadata',
         'envelope_stamping_default_value': 'str',
         'envelope_stamping_default_value_metadata': 'SettingsMetadata',
+        'exit_prompt': 'str',
+        'exit_prompt_metadata': 'SettingsMetadata',
         'express_send': 'str',
         'express_send_allow_tabs': 'str',
         'express_send_allow_tabs_metadata': 'SettingsMetadata',
@@ -403,6 +414,8 @@ class AccountSettingsInformation(object):
         'external_signature_pad_type_metadata': 'SettingsMetadata',
         'fax_out_enabled': 'str',
         'fax_out_enabled_metadata': 'SettingsMetadata',
+        'finish_reminder': 'str',
+        'finish_reminder_metadata': 'SettingsMetadata',
         'guided_forms_html_allowed': 'str',
         'guided_forms_html_allowed_metadata': 'SettingsMetadata',
         'has_recipient_connect_claimed_domain': 'str',
@@ -484,6 +497,8 @@ class AccountSettingsInformation(object):
         'sending_tags_font_name_metadata': 'SettingsMetadata',
         'sending_tags_font_size': 'str',
         'sending_tags_font_size_metadata': 'SettingsMetadata',
+        'send_lockout_recipient_notification': 'str',
+        'send_lockout_recipient_notification_metadata': 'SettingsMetadata',
         'send_to_certified_delivery_enabled': 'str',
         'send_to_certified_delivery_enabled_metadata': 'SettingsMetadata',
         'session_timeout': 'str',
@@ -646,6 +661,8 @@ class AccountSettingsInformation(object):
         'allow_consumer_disclosure_override_metadata': 'allowConsumerDisclosureOverrideMetadata',
         'allow_data_download': 'allowDataDownload',
         'allow_data_download_metadata': 'allowDataDownloadMetadata',
+        'allow_delegated_signing': 'allowDelegatedSigning',
+        'allow_delegated_signing_metadata': 'allowDelegatedSigningMetadata',
         'allow_document_disclosures': 'allowDocumentDisclosures',
         'allow_document_disclosures_metadata': 'allowDocumentDisclosuresMetadata',
         'allow_documents_on_signed_envelopes': 'allowDocumentsOnSignedEnvelopes',
@@ -806,6 +823,8 @@ class AccountSettingsInformation(object):
         'can_use_salesforce_o_auth_metadata': 'canUseSalesforceOAuthMetadata',
         'capture_voice_recording': 'captureVoiceRecording',
         'capture_voice_recording_metadata': 'captureVoiceRecordingMetadata',
+        'cfr21_simplified_signing_enabled': 'cfr21SimplifiedSigningEnabled',
+        'cfr21_simplified_signing_enabled_metadata': 'cfr21SimplifiedSigningEnabledMetadata',
         'cfr_use_wide_image': 'cfrUseWideImage',
         'cfr_use_wide_image_metadata': 'cfrUseWideImageMetadata',
         'check_for_multiple_admins_on_account': 'checkForMultipleAdminsOnAccount',
@@ -854,6 +873,8 @@ class AccountSettingsInformation(object):
         'document_retention_purge_tabs': 'documentRetentionPurgeTabs',
         'document_visibility': 'documentVisibility',
         'document_visibility_metadata': 'documentVisibilityMetadata',
+        'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
+        'dss_sign_29182_slide_up_bar_radmin_option': 'dss_SIGN_29182_SlideUpBar_RadminOption',
         'email_template_version': 'emailTemplateVersion',
         'email_template_version_metadata': 'emailTemplateVersionMetadata',
         'enable_access_code_generator': 'enableAccessCodeGenerator',
@@ -888,6 +909,8 @@ class AccountSettingsInformation(object):
         'enable_esign_communities_metadata': 'enableEsignCommunitiesMetadata',
         'enable_id_fx_intuit_kba': 'enableIDFxIntuitKBA',
         'enable_id_fx_intuit_kba_metadata': 'enableIDFxIntuitKBAMetadata',
+        'enable_id_fx_phone_authentication': 'enableIDFxPhoneAuthentication',
+        'enable_id_fx_phone_authentication_metadata': 'enableIDFxPhoneAuthenticationMetadata',
         'enable_in_browser_editor': 'enableInBrowserEditor',
         'enable_in_browser_editor_metadata': 'enableInBrowserEditorMetadata',
         'enable_payment_processing': 'enablePaymentProcessing',
@@ -948,6 +971,7 @@ class AccountSettingsInformation(object):
         'enable_sms_authentication_metadata': 'enableSMSAuthenticationMetadata',
         'enable_sms_delivery_additional_notification': 'enableSMSDeliveryAdditionalNotification',
         'enable_sms_delivery_additional_notification_metadata': 'enableSMSDeliveryAdditionalNotificationMetadata',
+        'enable_sms_delivery_primary': 'enableSMSDeliveryPrimary',
         'enable_social_id_login': 'enableSocialIdLogin',
         'enable_social_id_login_metadata': 'enableSocialIdLoginMetadata',
         'enable_strike_through': 'enableStrikeThrough',
@@ -966,6 +990,8 @@ class AccountSettingsInformation(object):
         'envelope_integration_enabled_metadata': 'envelopeIntegrationEnabledMetadata',
         'envelope_stamping_default_value': 'envelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata': 'envelopeStampingDefaultValueMetadata',
+        'exit_prompt': 'exitPrompt',
+        'exit_prompt_metadata': 'exitPromptMetadata',
         'express_send': 'expressSend',
         'express_send_allow_tabs': 'expressSendAllowTabs',
         'express_send_allow_tabs_metadata': 'expressSendAllowTabsMetadata',
@@ -975,6 +1001,8 @@ class AccountSettingsInformation(object):
         'external_signature_pad_type_metadata': 'externalSignaturePadTypeMetadata',
         'fax_out_enabled': 'faxOutEnabled',
         'fax_out_enabled_metadata': 'faxOutEnabledMetadata',
+        'finish_reminder': 'finishReminder',
+        'finish_reminder_metadata': 'finishReminderMetadata',
         'guided_forms_html_allowed': 'guidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata': 'guidedFormsHtmlAllowedMetadata',
         'has_recipient_connect_claimed_domain': 'hasRecipientConnectClaimedDomain',
@@ -1056,6 +1084,8 @@ class AccountSettingsInformation(object):
         'sending_tags_font_name_metadata': 'sendingTagsFontNameMetadata',
         'sending_tags_font_size': 'sendingTagsFontSize',
         'sending_tags_font_size_metadata': 'sendingTagsFontSizeMetadata',
+        'send_lockout_recipient_notification': 'sendLockoutRecipientNotification',
+        'send_lockout_recipient_notification_metadata': 'sendLockoutRecipientNotificationMetadata',
         'send_to_certified_delivery_enabled': 'sendToCertifiedDeliveryEnabled',
         'send_to_certified_delivery_enabled_metadata': 'sendToCertifiedDeliveryEnabledMetadata',
         'session_timeout': 'sessionTimeout',
@@ -1223,6 +1253,8 @@ class AccountSettingsInformation(object):
         self._allow_consumer_disclosure_override_metadata = None
         self._allow_data_download = None
         self._allow_data_download_metadata = None
+        self._allow_delegated_signing = None
+        self._allow_delegated_signing_metadata = None
         self._allow_document_disclosures = None
         self._allow_document_disclosures_metadata = None
         self._allow_documents_on_signed_envelopes = None
@@ -1383,6 +1415,8 @@ class AccountSettingsInformation(object):
         self._can_use_salesforce_o_auth_metadata = None
         self._capture_voice_recording = None
         self._capture_voice_recording_metadata = None
+        self._cfr21_simplified_signing_enabled = None
+        self._cfr21_simplified_signing_enabled_metadata = None
         self._cfr_use_wide_image = None
         self._cfr_use_wide_image_metadata = None
         self._check_for_multiple_admins_on_account = None
@@ -1431,6 +1465,8 @@ class AccountSettingsInformation(object):
         self._document_retention_purge_tabs = None
         self._document_visibility = None
         self._document_visibility_metadata = None
+        self._dss_sign_28411_enable_leave_page_prompt_radmin_option = None
+        self._dss_sign_29182_slide_up_bar_radmin_option = None
         self._email_template_version = None
         self._email_template_version_metadata = None
         self._enable_access_code_generator = None
@@ -1465,6 +1501,8 @@ class AccountSettingsInformation(object):
         self._enable_esign_communities_metadata = None
         self._enable_id_fx_intuit_kba = None
         self._enable_id_fx_intuit_kba_metadata = None
+        self._enable_id_fx_phone_authentication = None
+        self._enable_id_fx_phone_authentication_metadata = None
         self._enable_in_browser_editor = None
         self._enable_in_browser_editor_metadata = None
         self._enable_payment_processing = None
@@ -1525,6 +1563,7 @@ class AccountSettingsInformation(object):
         self._enable_sms_authentication_metadata = None
         self._enable_sms_delivery_additional_notification = None
         self._enable_sms_delivery_additional_notification_metadata = None
+        self._enable_sms_delivery_primary = None
         self._enable_social_id_login = None
         self._enable_social_id_login_metadata = None
         self._enable_strike_through = None
@@ -1543,6 +1582,8 @@ class AccountSettingsInformation(object):
         self._envelope_integration_enabled_metadata = None
         self._envelope_stamping_default_value = None
         self._envelope_stamping_default_value_metadata = None
+        self._exit_prompt = None
+        self._exit_prompt_metadata = None
         self._express_send = None
         self._express_send_allow_tabs = None
         self._express_send_allow_tabs_metadata = None
@@ -1552,6 +1593,8 @@ class AccountSettingsInformation(object):
         self._external_signature_pad_type_metadata = None
         self._fax_out_enabled = None
         self._fax_out_enabled_metadata = None
+        self._finish_reminder = None
+        self._finish_reminder_metadata = None
         self._guided_forms_html_allowed = None
         self._guided_forms_html_allowed_metadata = None
         self._has_recipient_connect_claimed_domain = None
@@ -1633,6 +1676,8 @@ class AccountSettingsInformation(object):
         self._sending_tags_font_name_metadata = None
         self._sending_tags_font_size = None
         self._sending_tags_font_size_metadata = None
+        self._send_lockout_recipient_notification = None
+        self._send_lockout_recipient_notification_metadata = None
         self._send_to_certified_delivery_enabled = None
         self._send_to_certified_delivery_enabled_metadata = None
         self._session_timeout = None
@@ -1794,6 +1839,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_consumer_disclosure_override_metadata'), kwargs.get('allow_consumer_disclosure_override_metadata', None))
         setattr(self, "_{}".format('allow_data_download'), kwargs.get('allow_data_download', None))
         setattr(self, "_{}".format('allow_data_download_metadata'), kwargs.get('allow_data_download_metadata', None))
+        setattr(self, "_{}".format('allow_delegated_signing'), kwargs.get('allow_delegated_signing', None))
+        setattr(self, "_{}".format('allow_delegated_signing_metadata'), kwargs.get('allow_delegated_signing_metadata', None))
         setattr(self, "_{}".format('allow_document_disclosures'), kwargs.get('allow_document_disclosures', None))
         setattr(self, "_{}".format('allow_document_disclosures_metadata'), kwargs.get('allow_document_disclosures_metadata', None))
         setattr(self, "_{}".format('allow_documents_on_signed_envelopes'), kwargs.get('allow_documents_on_signed_envelopes', None))
@@ -1954,6 +2001,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('can_use_salesforce_o_auth_metadata'), kwargs.get('can_use_salesforce_o_auth_metadata', None))
         setattr(self, "_{}".format('capture_voice_recording'), kwargs.get('capture_voice_recording', None))
         setattr(self, "_{}".format('capture_voice_recording_metadata'), kwargs.get('capture_voice_recording_metadata', None))
+        setattr(self, "_{}".format('cfr21_simplified_signing_enabled'), kwargs.get('cfr21_simplified_signing_enabled', None))
+        setattr(self, "_{}".format('cfr21_simplified_signing_enabled_metadata'), kwargs.get('cfr21_simplified_signing_enabled_metadata', None))
         setattr(self, "_{}".format('cfr_use_wide_image'), kwargs.get('cfr_use_wide_image', None))
         setattr(self, "_{}".format('cfr_use_wide_image_metadata'), kwargs.get('cfr_use_wide_image_metadata', None))
         setattr(self, "_{}".format('check_for_multiple_admins_on_account'), kwargs.get('check_for_multiple_admins_on_account', None))
@@ -2002,6 +2051,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('document_retention_purge_tabs'), kwargs.get('document_retention_purge_tabs', None))
         setattr(self, "_{}".format('document_visibility'), kwargs.get('document_visibility', None))
         setattr(self, "_{}".format('document_visibility_metadata'), kwargs.get('document_visibility_metadata', None))
+        setattr(self, "_{}".format('dss_sign_28411_enable_leave_page_prompt_radmin_option'), kwargs.get('dss_sign_28411_enable_leave_page_prompt_radmin_option', None))
+        setattr(self, "_{}".format('dss_sign_29182_slide_up_bar_radmin_option'), kwargs.get('dss_sign_29182_slide_up_bar_radmin_option', None))
         setattr(self, "_{}".format('email_template_version'), kwargs.get('email_template_version', None))
         setattr(self, "_{}".format('email_template_version_metadata'), kwargs.get('email_template_version_metadata', None))
         setattr(self, "_{}".format('enable_access_code_generator'), kwargs.get('enable_access_code_generator', None))
@@ -2036,6 +2087,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_esign_communities_metadata'), kwargs.get('enable_esign_communities_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_intuit_kba'), kwargs.get('enable_id_fx_intuit_kba', None))
         setattr(self, "_{}".format('enable_id_fx_intuit_kba_metadata'), kwargs.get('enable_id_fx_intuit_kba_metadata', None))
+        setattr(self, "_{}".format('enable_id_fx_phone_authentication'), kwargs.get('enable_id_fx_phone_authentication', None))
+        setattr(self, "_{}".format('enable_id_fx_phone_authentication_metadata'), kwargs.get('enable_id_fx_phone_authentication_metadata', None))
         setattr(self, "_{}".format('enable_in_browser_editor'), kwargs.get('enable_in_browser_editor', None))
         setattr(self, "_{}".format('enable_in_browser_editor_metadata'), kwargs.get('enable_in_browser_editor_metadata', None))
         setattr(self, "_{}".format('enable_payment_processing'), kwargs.get('enable_payment_processing', None))
@@ -2096,6 +2149,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_sms_authentication_metadata'), kwargs.get('enable_sms_authentication_metadata', None))
         setattr(self, "_{}".format('enable_sms_delivery_additional_notification'), kwargs.get('enable_sms_delivery_additional_notification', None))
         setattr(self, "_{}".format('enable_sms_delivery_additional_notification_metadata'), kwargs.get('enable_sms_delivery_additional_notification_metadata', None))
+        setattr(self, "_{}".format('enable_sms_delivery_primary'), kwargs.get('enable_sms_delivery_primary', None))
         setattr(self, "_{}".format('enable_social_id_login'), kwargs.get('enable_social_id_login', None))
         setattr(self, "_{}".format('enable_social_id_login_metadata'), kwargs.get('enable_social_id_login_metadata', None))
         setattr(self, "_{}".format('enable_strike_through'), kwargs.get('enable_strike_through', None))
@@ -2114,6 +2168,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('envelope_integration_enabled_metadata'), kwargs.get('envelope_integration_enabled_metadata', None))
         setattr(self, "_{}".format('envelope_stamping_default_value'), kwargs.get('envelope_stamping_default_value', None))
         setattr(self, "_{}".format('envelope_stamping_default_value_metadata'), kwargs.get('envelope_stamping_default_value_metadata', None))
+        setattr(self, "_{}".format('exit_prompt'), kwargs.get('exit_prompt', None))
+        setattr(self, "_{}".format('exit_prompt_metadata'), kwargs.get('exit_prompt_metadata', None))
         setattr(self, "_{}".format('express_send'), kwargs.get('express_send', None))
         setattr(self, "_{}".format('express_send_allow_tabs'), kwargs.get('express_send_allow_tabs', None))
         setattr(self, "_{}".format('express_send_allow_tabs_metadata'), kwargs.get('express_send_allow_tabs_metadata', None))
@@ -2123,6 +2179,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('external_signature_pad_type_metadata'), kwargs.get('external_signature_pad_type_metadata', None))
         setattr(self, "_{}".format('fax_out_enabled'), kwargs.get('fax_out_enabled', None))
         setattr(self, "_{}".format('fax_out_enabled_metadata'), kwargs.get('fax_out_enabled_metadata', None))
+        setattr(self, "_{}".format('finish_reminder'), kwargs.get('finish_reminder', None))
+        setattr(self, "_{}".format('finish_reminder_metadata'), kwargs.get('finish_reminder_metadata', None))
         setattr(self, "_{}".format('guided_forms_html_allowed'), kwargs.get('guided_forms_html_allowed', None))
         setattr(self, "_{}".format('guided_forms_html_allowed_metadata'), kwargs.get('guided_forms_html_allowed_metadata', None))
         setattr(self, "_{}".format('has_recipient_connect_claimed_domain'), kwargs.get('has_recipient_connect_claimed_domain', None))
@@ -2204,6 +2262,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('sending_tags_font_name_metadata'), kwargs.get('sending_tags_font_name_metadata', None))
         setattr(self, "_{}".format('sending_tags_font_size'), kwargs.get('sending_tags_font_size', None))
         setattr(self, "_{}".format('sending_tags_font_size_metadata'), kwargs.get('sending_tags_font_size_metadata', None))
+        setattr(self, "_{}".format('send_lockout_recipient_notification'), kwargs.get('send_lockout_recipient_notification', None))
+        setattr(self, "_{}".format('send_lockout_recipient_notification_metadata'), kwargs.get('send_lockout_recipient_notification_metadata', None))
         setattr(self, "_{}".format('send_to_certified_delivery_enabled'), kwargs.get('send_to_certified_delivery_enabled', None))
         setattr(self, "_{}".format('send_to_certified_delivery_enabled_metadata'), kwargs.get('send_to_certified_delivery_enabled_metadata', None))
         setattr(self, "_{}".format('session_timeout'), kwargs.get('session_timeout', None))
@@ -3223,6 +3283,50 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_data_download_metadata = allow_data_download_metadata
+
+    @property
+    def allow_delegated_signing(self):
+        """Gets the allow_delegated_signing of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_delegated_signing of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_delegated_signing
+
+    @allow_delegated_signing.setter
+    def allow_delegated_signing(self, allow_delegated_signing):
+        """Sets the allow_delegated_signing of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_delegated_signing: The allow_delegated_signing of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_delegated_signing = allow_delegated_signing
+
+    @property
+    def allow_delegated_signing_metadata(self):
+        """Gets the allow_delegated_signing_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_delegated_signing_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_delegated_signing_metadata
+
+    @allow_delegated_signing_metadata.setter
+    def allow_delegated_signing_metadata(self, allow_delegated_signing_metadata):
+        """Sets the allow_delegated_signing_metadata of this AccountSettingsInformation.
+
+
+        :param allow_delegated_signing_metadata: The allow_delegated_signing_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_delegated_signing_metadata = allow_delegated_signing_metadata
 
     @property
     def allow_document_disclosures(self):
@@ -6747,6 +6851,50 @@ class AccountSettingsInformation(object):
         self._capture_voice_recording_metadata = capture_voice_recording_metadata
 
     @property
+    def cfr21_simplified_signing_enabled(self):
+        """Gets the cfr21_simplified_signing_enabled of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The cfr21_simplified_signing_enabled of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._cfr21_simplified_signing_enabled
+
+    @cfr21_simplified_signing_enabled.setter
+    def cfr21_simplified_signing_enabled(self, cfr21_simplified_signing_enabled):
+        """Sets the cfr21_simplified_signing_enabled of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param cfr21_simplified_signing_enabled: The cfr21_simplified_signing_enabled of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._cfr21_simplified_signing_enabled = cfr21_simplified_signing_enabled
+
+    @property
+    def cfr21_simplified_signing_enabled_metadata(self):
+        """Gets the cfr21_simplified_signing_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The cfr21_simplified_signing_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._cfr21_simplified_signing_enabled_metadata
+
+    @cfr21_simplified_signing_enabled_metadata.setter
+    def cfr21_simplified_signing_enabled_metadata(self, cfr21_simplified_signing_enabled_metadata):
+        """Sets the cfr21_simplified_signing_enabled_metadata of this AccountSettingsInformation.
+
+
+        :param cfr21_simplified_signing_enabled_metadata: The cfr21_simplified_signing_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._cfr21_simplified_signing_enabled_metadata = cfr21_simplified_signing_enabled_metadata
+
+    @property
     def cfr_use_wide_image(self):
         """Gets the cfr_use_wide_image of this AccountSettingsInformation.  # noqa: E501
 
@@ -7803,6 +7951,52 @@ class AccountSettingsInformation(object):
         self._document_visibility_metadata = document_visibility_metadata
 
     @property
+    def dss_sign_28411_enable_leave_page_prompt_radmin_option(self):
+        """Gets the dss_sign_28411_enable_leave_page_prompt_radmin_option of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The dss_sign_28411_enable_leave_page_prompt_radmin_option of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._dss_sign_28411_enable_leave_page_prompt_radmin_option
+
+    @dss_sign_28411_enable_leave_page_prompt_radmin_option.setter
+    def dss_sign_28411_enable_leave_page_prompt_radmin_option(self, dss_sign_28411_enable_leave_page_prompt_radmin_option):
+        """Sets the dss_sign_28411_enable_leave_page_prompt_radmin_option of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param dss_sign_28411_enable_leave_page_prompt_radmin_option: The dss_sign_28411_enable_leave_page_prompt_radmin_option of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._dss_sign_28411_enable_leave_page_prompt_radmin_option = dss_sign_28411_enable_leave_page_prompt_radmin_option
+
+    @property
+    def dss_sign_29182_slide_up_bar_radmin_option(self):
+        """Gets the dss_sign_29182_slide_up_bar_radmin_option of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The dss_sign_29182_slide_up_bar_radmin_option of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._dss_sign_29182_slide_up_bar_radmin_option
+
+    @dss_sign_29182_slide_up_bar_radmin_option.setter
+    def dss_sign_29182_slide_up_bar_radmin_option(self, dss_sign_29182_slide_up_bar_radmin_option):
+        """Sets the dss_sign_29182_slide_up_bar_radmin_option of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param dss_sign_29182_slide_up_bar_radmin_option: The dss_sign_29182_slide_up_bar_radmin_option of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._dss_sign_29182_slide_up_bar_radmin_option = dss_sign_29182_slide_up_bar_radmin_option
+
+    @property
     def email_template_version(self):
         """Gets the email_template_version of this AccountSettingsInformation.  # noqa: E501
 
@@ -8549,6 +8743,50 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_id_fx_intuit_kba_metadata = enable_id_fx_intuit_kba_metadata
+
+    @property
+    def enable_id_fx_phone_authentication(self):
+        """Gets the enable_id_fx_phone_authentication of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_id_fx_phone_authentication of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_id_fx_phone_authentication
+
+    @enable_id_fx_phone_authentication.setter
+    def enable_id_fx_phone_authentication(self, enable_id_fx_phone_authentication):
+        """Sets the enable_id_fx_phone_authentication of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_id_fx_phone_authentication: The enable_id_fx_phone_authentication of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_id_fx_phone_authentication = enable_id_fx_phone_authentication
+
+    @property
+    def enable_id_fx_phone_authentication_metadata(self):
+        """Gets the enable_id_fx_phone_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_id_fx_phone_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_id_fx_phone_authentication_metadata
+
+    @enable_id_fx_phone_authentication_metadata.setter
+    def enable_id_fx_phone_authentication_metadata(self, enable_id_fx_phone_authentication_metadata):
+        """Sets the enable_id_fx_phone_authentication_metadata of this AccountSettingsInformation.
+
+
+        :param enable_id_fx_phone_authentication_metadata: The enable_id_fx_phone_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_id_fx_phone_authentication_metadata = enable_id_fx_phone_authentication_metadata
 
     @property
     def enable_in_browser_editor(self):
@@ -9871,6 +10109,29 @@ class AccountSettingsInformation(object):
         self._enable_sms_delivery_additional_notification_metadata = enable_sms_delivery_additional_notification_metadata
 
     @property
+    def enable_sms_delivery_primary(self):
+        """Gets the enable_sms_delivery_primary of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_sms_delivery_primary of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_sms_delivery_primary
+
+    @enable_sms_delivery_primary.setter
+    def enable_sms_delivery_primary(self, enable_sms_delivery_primary):
+        """Sets the enable_sms_delivery_primary of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_sms_delivery_primary: The enable_sms_delivery_primary of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_sms_delivery_primary = enable_sms_delivery_primary
+
+    @property
     def enable_social_id_login(self):
         """Gets the enable_social_id_login of this AccountSettingsInformation.  # noqa: E501
 
@@ -10267,6 +10528,50 @@ class AccountSettingsInformation(object):
         self._envelope_stamping_default_value_metadata = envelope_stamping_default_value_metadata
 
     @property
+    def exit_prompt(self):
+        """Gets the exit_prompt of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The exit_prompt of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._exit_prompt
+
+    @exit_prompt.setter
+    def exit_prompt(self, exit_prompt):
+        """Sets the exit_prompt of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param exit_prompt: The exit_prompt of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._exit_prompt = exit_prompt
+
+    @property
+    def exit_prompt_metadata(self):
+        """Gets the exit_prompt_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The exit_prompt_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._exit_prompt_metadata
+
+    @exit_prompt_metadata.setter
+    def exit_prompt_metadata(self, exit_prompt_metadata):
+        """Sets the exit_prompt_metadata of this AccountSettingsInformation.
+
+
+        :param exit_prompt_metadata: The exit_prompt_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._exit_prompt_metadata = exit_prompt_metadata
+
+    @property
     def express_send(self):
         """Gets the express_send of this AccountSettingsInformation.  # noqa: E501
 
@@ -10462,6 +10767,50 @@ class AccountSettingsInformation(object):
         """
 
         self._fax_out_enabled_metadata = fax_out_enabled_metadata
+
+    @property
+    def finish_reminder(self):
+        """Gets the finish_reminder of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The finish_reminder of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._finish_reminder
+
+    @finish_reminder.setter
+    def finish_reminder(self, finish_reminder):
+        """Sets the finish_reminder of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param finish_reminder: The finish_reminder of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._finish_reminder = finish_reminder
+
+    @property
+    def finish_reminder_metadata(self):
+        """Gets the finish_reminder_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The finish_reminder_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._finish_reminder_metadata
+
+    @finish_reminder_metadata.setter
+    def finish_reminder_metadata(self, finish_reminder_metadata):
+        """Sets the finish_reminder_metadata of this AccountSettingsInformation.
+
+
+        :param finish_reminder_metadata: The finish_reminder_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._finish_reminder_metadata = finish_reminder_metadata
 
     @property
     def guided_forms_html_allowed(self):
@@ -12253,6 +12602,50 @@ class AccountSettingsInformation(object):
         """
 
         self._sending_tags_font_size_metadata = sending_tags_font_size_metadata
+
+    @property
+    def send_lockout_recipient_notification(self):
+        """Gets the send_lockout_recipient_notification of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The send_lockout_recipient_notification of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._send_lockout_recipient_notification
+
+    @send_lockout_recipient_notification.setter
+    def send_lockout_recipient_notification(self, send_lockout_recipient_notification):
+        """Sets the send_lockout_recipient_notification of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param send_lockout_recipient_notification: The send_lockout_recipient_notification of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._send_lockout_recipient_notification = send_lockout_recipient_notification
+
+    @property
+    def send_lockout_recipient_notification_metadata(self):
+        """Gets the send_lockout_recipient_notification_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The send_lockout_recipient_notification_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._send_lockout_recipient_notification_metadata
+
+    @send_lockout_recipient_notification_metadata.setter
+    def send_lockout_recipient_notification_metadata(self, send_lockout_recipient_notification_metadata):
+        """Sets the send_lockout_recipient_notification_metadata of this AccountSettingsInformation.
+
+
+        :param send_lockout_recipient_notification_metadata: The send_lockout_recipient_notification_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._send_lockout_recipient_notification_metadata = send_lockout_recipient_notification_metadata
 
     @property
     def send_to_certified_delivery_enabled(self):

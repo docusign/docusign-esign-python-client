@@ -51,6 +51,8 @@ class NotaryRecipient(object):
         'declined_date_time': 'str',
         'declined_reason': 'str',
         'default_recipient': 'str',
+        'delegated_by': 'DelegationInfo',
+        'delegated_to': 'list[DelegationInfo]',
         'delivered_date_time': 'str',
         'delivery_method': 'str',
         'delivery_method_metadata': 'PropertyMetadata',
@@ -84,6 +86,7 @@ class NotaryRecipient(object):
         'name': 'str',
         'name_metadata': 'PropertyMetadata',
         'notary_id': 'str',
+        'notary_signer_email_sent': 'str',
         'notary_signers': 'list[str]',
         'notary_type': 'str',
         'note': 'str',
@@ -149,6 +152,8 @@ class NotaryRecipient(object):
         'declined_date_time': 'declinedDateTime',
         'declined_reason': 'declinedReason',
         'default_recipient': 'defaultRecipient',
+        'delegated_by': 'delegatedBy',
+        'delegated_to': 'delegatedTo',
         'delivered_date_time': 'deliveredDateTime',
         'delivery_method': 'deliveryMethod',
         'delivery_method_metadata': 'deliveryMethodMetadata',
@@ -182,6 +187,7 @@ class NotaryRecipient(object):
         'name': 'name',
         'name_metadata': 'nameMetadata',
         'notary_id': 'notaryId',
+        'notary_signer_email_sent': 'notarySignerEmailSent',
         'notary_signers': 'notarySigners',
         'notary_type': 'notaryType',
         'note': 'note',
@@ -252,6 +258,8 @@ class NotaryRecipient(object):
         self._declined_date_time = None
         self._declined_reason = None
         self._default_recipient = None
+        self._delegated_by = None
+        self._delegated_to = None
         self._delivered_date_time = None
         self._delivery_method = None
         self._delivery_method_metadata = None
@@ -285,6 +293,7 @@ class NotaryRecipient(object):
         self._name = None
         self._name_metadata = None
         self._notary_id = None
+        self._notary_signer_email_sent = None
         self._notary_signers = None
         self._notary_type = None
         self._note = None
@@ -349,6 +358,8 @@ class NotaryRecipient(object):
         setattr(self, "_{}".format('declined_date_time'), kwargs.get('declined_date_time', None))
         setattr(self, "_{}".format('declined_reason'), kwargs.get('declined_reason', None))
         setattr(self, "_{}".format('default_recipient'), kwargs.get('default_recipient', None))
+        setattr(self, "_{}".format('delegated_by'), kwargs.get('delegated_by', None))
+        setattr(self, "_{}".format('delegated_to'), kwargs.get('delegated_to', None))
         setattr(self, "_{}".format('delivered_date_time'), kwargs.get('delivered_date_time', None))
         setattr(self, "_{}".format('delivery_method'), kwargs.get('delivery_method', None))
         setattr(self, "_{}".format('delivery_method_metadata'), kwargs.get('delivery_method_metadata', None))
@@ -382,6 +393,7 @@ class NotaryRecipient(object):
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('name_metadata'), kwargs.get('name_metadata', None))
         setattr(self, "_{}".format('notary_id'), kwargs.get('notary_id', None))
+        setattr(self, "_{}".format('notary_signer_email_sent'), kwargs.get('notary_signer_email_sent', None))
         setattr(self, "_{}".format('notary_signers'), kwargs.get('notary_signers', None))
         setattr(self, "_{}".format('notary_type'), kwargs.get('notary_type', None))
         setattr(self, "_{}".format('note'), kwargs.get('note', None))
@@ -838,6 +850,50 @@ class NotaryRecipient(object):
         """
 
         self._default_recipient = default_recipient
+
+    @property
+    def delegated_by(self):
+        """Gets the delegated_by of this NotaryRecipient.  # noqa: E501
+
+
+        :return: The delegated_by of this NotaryRecipient.  # noqa: E501
+        :rtype: DelegationInfo
+        """
+        return self._delegated_by
+
+    @delegated_by.setter
+    def delegated_by(self, delegated_by):
+        """Sets the delegated_by of this NotaryRecipient.
+
+
+        :param delegated_by: The delegated_by of this NotaryRecipient.  # noqa: E501
+        :type: DelegationInfo
+        """
+
+        self._delegated_by = delegated_by
+
+    @property
+    def delegated_to(self):
+        """Gets the delegated_to of this NotaryRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The delegated_to of this NotaryRecipient.  # noqa: E501
+        :rtype: list[DelegationInfo]
+        """
+        return self._delegated_to
+
+    @delegated_to.setter
+    def delegated_to(self, delegated_to):
+        """Sets the delegated_to of this NotaryRecipient.
+
+          # noqa: E501
+
+        :param delegated_to: The delegated_to of this NotaryRecipient.  # noqa: E501
+        :type: list[DelegationInfo]
+        """
+
+        self._delegated_to = delegated_to
 
     @property
     def delivered_date_time(self):
@@ -1571,6 +1627,29 @@ class NotaryRecipient(object):
         """
 
         self._notary_id = notary_id
+
+    @property
+    def notary_signer_email_sent(self):
+        """Gets the notary_signer_email_sent of this NotaryRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notary_signer_email_sent of this NotaryRecipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._notary_signer_email_sent
+
+    @notary_signer_email_sent.setter
+    def notary_signer_email_sent(self, notary_signer_email_sent):
+        """Sets the notary_signer_email_sent of this NotaryRecipient.
+
+          # noqa: E501
+
+        :param notary_signer_email_sent: The notary_signer_email_sent of this NotaryRecipient.  # noqa: E501
+        :type: str
+        """
+
+        self._notary_signer_email_sent = notary_signer_email_sent
 
     @property
     def notary_signers(self):

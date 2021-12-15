@@ -1876,6 +1876,7 @@ class UsersApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str additional_info: When set to **true**, the full list of user information is returned for each user in the account.
         :param str count: Number of records to return. The number must be greater than 0 and less than or equal to 100. 
+        :param str domain_users_only:
         :param str email:
         :param str email_substring: Filters the returned user records by the email address or a sub-string of email address.
         :param str group_id: Filters user records returned by one or more group Id's.
@@ -1913,6 +1914,7 @@ class UsersApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str additional_info: When set to **true**, the full list of user information is returned for each user in the account.
         :param str count: Number of records to return. The number must be greater than 0 and less than or equal to 100. 
+        :param str domain_users_only:
         :param str email:
         :param str email_substring: Filters the returned user records by the email address or a sub-string of email address.
         :param str group_id: Filters user records returned by one or more group Id's.
@@ -1927,7 +1929,7 @@ class UsersApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'additional_info', 'count', 'email', 'email_substring', 'group_id', 'include_usersettings_for_csv', 'login_status', 'not_group_id', 'start_position', 'status', 'user_name_substring']
+        all_params = ['account_id', 'additional_info', 'count', 'domain_users_only', 'email', 'email_substring', 'group_id', 'include_usersettings_for_csv', 'login_status', 'not_group_id', 'start_position', 'status', 'user_name_substring']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1959,6 +1961,8 @@ class UsersApi(object):
             query_params['additional_info'] = params['additional_info']
         if 'count' in params:
             query_params['count'] = params['count']
+        if 'domain_users_only' in params:
+            query_params['domain_users_only'] = params['domain_users_only']
         if 'email' in params:
             query_params['email'] = params['email']
         if 'email_substring' in params:
