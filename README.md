@@ -67,6 +67,54 @@ For details regarding which type of OAuth grant will work best for your DocuSign
 
 For security purposes, DocuSign recommends using the [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) flow.
 
+## Tests:
+
+### Test configuration
+1. Login with your DocuSign account on https://appdemo.docusign.com.
+2. Open Apps and Keys section in Settings and press Add App and Integration Key button.
+3. Enter App name, add secret key, generate RSA key and press Save button.
+4. Create new brand on https://admindemo.docusign.com/brands page and save its ID.
+5. Create new template on https://appdemo.docusign.com/templates page and save its ID.
+6. Create a .env file at the root of the repository (or rename an existing .env_example file) and fill it with required data from steps 3-5.
+7. Write your generated private key into .env file
+
+8. Where in the developer account to look for data for the .env file:
+*   USER_NAME=< your e-mail on which to register an account >
+*   CLIENT_SECRET=< The secret key of your application > \
+    settings => Apps and Keys =>
+    Apps and Integration Keys your app "ACTIONS" => Edit =>
+    Authentication => Secret Keys
+*   INTEGRATOR_KEY_JWT=< your Integration Key > \
+    settings => Apps and Keys => Integration Key of your app
+*   TEMPLATE_ID=< your template id > \
+    templates => in MyTemplates list click by choosen template => template id
+*   REDIRECT_URI=< URI for redirect >
+*   USER_ID=< your User ID > \
+    settings => Apps and Keys => User ID
+*   BRAND_ID=< your brand ID > \
+    settings => Brands => your Brand => "Edit" => Brand id
+*   PRIVATE_KEY=< your private key > \
+    Settings => "Apps and Keys"
+    in Apps and Integration Keys choose your application name => "ACTIONS" Edit => Service Integration => + GENERATE RSA
+
+9. Install dependencies: \
+    python3 -m pip install --upgrade pip \
+    pip3 install -r requirements.txt \
+    pip3 install -r test-requirements.txt
+
+10. Run tests: \
+    python3 -m unittest test.test_oauth \
+    python3 -m unittest test.unit_tests
+
+### Recomended operating system
+You can use Windows or Linux to run these unit tests.
+
+### Installing Python3 language on PC
+To run tests for this project, please, install the Python 3.7 or higher on your PC:\
+https://www.python.org/downloads/ \
+After downloading process is complete, check if you have a Python3 installed on your PC by using \
+python3 --version
+
 ## Support
 Log issues against this client through GitHub. We also have an [active developer community on Stack Overflow](https://stackoverflow.com/questions/tagged/docusignapi).
 

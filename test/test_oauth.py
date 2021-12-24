@@ -15,10 +15,12 @@ from __future__ import absolute_import
 import base64
 import os
 import unittest
+from dotenv import load_dotenv
 
 from docusign_esign.client.api_client import ApiClient
 from docusign_esign.client.auth.oauth import OAuthToken
 
+load_dotenv()
 
 class TestConfig(object):
     def __init__(self, user_name=None, client_secret =None, user_id=None, integrator_key=None, host=None, recipient_email=None,
@@ -36,7 +38,7 @@ class TestConfig(object):
         self.redirect_uri = redirect_uri if redirect_uri else os.environ.get("REDIRECT_URI")
 
         self.oauth_host_name = "account-d.docusign.com"
-        self.private_key_bytes = base64.b64decode(os.environ.get("PRIVATE_KEY"))
+        self.private_key_bytes = os.environ.get("PRIVATE_KEY")
         self.expires_in = 3600
 
 
