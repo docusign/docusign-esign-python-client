@@ -584,6 +584,7 @@ class BillingApi(object):
         :param str include_downgrade_information:
         :param str include_metadata: When set to **true**, the `canUpgrade` and `renewalStatus` properities are included the response and an array of `supportedCountries` property is added to the `billingAddress` information. 
         :param str include_successor_plans: When set to **true**, excludes successor information from the response.
+        :param str include_tax_exempt_id:
         :return: AccountBillingPlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -614,12 +615,13 @@ class BillingApi(object):
         :param str include_downgrade_information:
         :param str include_metadata: When set to **true**, the `canUpgrade` and `renewalStatus` properities are included the response and an array of `supportedCountries` property is added to the `billingAddress` information. 
         :param str include_successor_plans: When set to **true**, excludes successor information from the response.
+        :param str include_tax_exempt_id:
         :return: AccountBillingPlanResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'include_credit_card_information', 'include_downgrade_information', 'include_metadata', 'include_successor_plans']
+        all_params = ['account_id', 'include_credit_card_information', 'include_downgrade_information', 'include_metadata', 'include_successor_plans', 'include_tax_exempt_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -655,6 +657,8 @@ class BillingApi(object):
             query_params['include_metadata'] = params['include_metadata']
         if 'include_successor_plans' in params:
             query_params['include_successor_plans'] = params['include_successor_plans']
+        if 'include_tax_exempt_id' in params:
+            query_params['include_tax_exempt_id'] = params['include_tax_exempt_id']
 
         header_params = {}
 

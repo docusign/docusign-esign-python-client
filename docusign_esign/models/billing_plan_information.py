@@ -50,7 +50,8 @@ class BillingPlanInformation(object):
         'sale_discount_fixed_amount': 'str',
         'sale_discount_percent': 'str',
         'sale_discount_periods': 'str',
-        'sale_discount_seat_price_override': 'str'
+        'sale_discount_seat_price_override': 'str',
+        'tax_exempt_id': 'str'
     }
 
     attribute_map = {
@@ -71,7 +72,8 @@ class BillingPlanInformation(object):
         'sale_discount_fixed_amount': 'saleDiscountFixedAmount',
         'sale_discount_percent': 'saleDiscountPercent',
         'sale_discount_periods': 'saleDiscountPeriods',
-        'sale_discount_seat_price_override': 'saleDiscountSeatPriceOverride'
+        'sale_discount_seat_price_override': 'saleDiscountSeatPriceOverride',
+        'tax_exempt_id': 'taxExemptId'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -98,6 +100,7 @@ class BillingPlanInformation(object):
         self._sale_discount_percent = None
         self._sale_discount_periods = None
         self._sale_discount_seat_price_override = None
+        self._tax_exempt_id = None
         self.discriminator = None
 
         setattr(self, "_{}".format('app_store_receipt'), kwargs.get('app_store_receipt', None))
@@ -118,6 +121,7 @@ class BillingPlanInformation(object):
         setattr(self, "_{}".format('sale_discount_percent'), kwargs.get('sale_discount_percent', None))
         setattr(self, "_{}".format('sale_discount_periods'), kwargs.get('sale_discount_periods', None))
         setattr(self, "_{}".format('sale_discount_seat_price_override'), kwargs.get('sale_discount_seat_price_override', None))
+        setattr(self, "_{}".format('tax_exempt_id'), kwargs.get('tax_exempt_id', None))
 
     @property
     def app_store_receipt(self):
@@ -518,6 +522,29 @@ class BillingPlanInformation(object):
         """
 
         self._sale_discount_seat_price_override = sale_discount_seat_price_override
+
+    @property
+    def tax_exempt_id(self):
+        """Gets the tax_exempt_id of this BillingPlanInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tax_exempt_id of this BillingPlanInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._tax_exempt_id
+
+    @tax_exempt_id.setter
+    def tax_exempt_id(self, tax_exempt_id):
+        """Sets the tax_exempt_id of this BillingPlanInformation.
+
+          # noqa: E501
+
+        :param tax_exempt_id: The tax_exempt_id of this BillingPlanInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._tax_exempt_id = tax_exempt_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

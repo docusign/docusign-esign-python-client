@@ -39,6 +39,8 @@ class UserAccountManagementGranularInformation(object):
         'can_manage_account_settings_metadata': 'SettingsMetadata',
         'can_manage_admins': 'str',
         'can_manage_admins_metadata': 'SettingsMetadata',
+        'can_manage_connect': 'str',
+        'can_manage_connect_metadata': 'SettingsMetadata',
         'can_manage_document_retention': 'str',
         'can_manage_document_retention_metadata': 'SettingsMetadata',
         'can_manage_envelope_transfer': 'str',
@@ -63,6 +65,8 @@ class UserAccountManagementGranularInformation(object):
         'can_manage_account_settings_metadata': 'canManageAccountSettingsMetadata',
         'can_manage_admins': 'canManageAdmins',
         'can_manage_admins_metadata': 'canManageAdminsMetadata',
+        'can_manage_connect': 'canManageConnect',
+        'can_manage_connect_metadata': 'canManageConnectMetadata',
         'can_manage_document_retention': 'canManageDocumentRetention',
         'can_manage_document_retention_metadata': 'canManageDocumentRetentionMetadata',
         'can_manage_envelope_transfer': 'canManageEnvelopeTransfer',
@@ -92,6 +96,8 @@ class UserAccountManagementGranularInformation(object):
         self._can_manage_account_settings_metadata = None
         self._can_manage_admins = None
         self._can_manage_admins_metadata = None
+        self._can_manage_connect = None
+        self._can_manage_connect_metadata = None
         self._can_manage_document_retention = None
         self._can_manage_document_retention_metadata = None
         self._can_manage_envelope_transfer = None
@@ -115,6 +121,8 @@ class UserAccountManagementGranularInformation(object):
         setattr(self, "_{}".format('can_manage_account_settings_metadata'), kwargs.get('can_manage_account_settings_metadata', None))
         setattr(self, "_{}".format('can_manage_admins'), kwargs.get('can_manage_admins', None))
         setattr(self, "_{}".format('can_manage_admins_metadata'), kwargs.get('can_manage_admins_metadata', None))
+        setattr(self, "_{}".format('can_manage_connect'), kwargs.get('can_manage_connect', None))
+        setattr(self, "_{}".format('can_manage_connect_metadata'), kwargs.get('can_manage_connect_metadata', None))
         setattr(self, "_{}".format('can_manage_document_retention'), kwargs.get('can_manage_document_retention', None))
         setattr(self, "_{}".format('can_manage_document_retention_metadata'), kwargs.get('can_manage_document_retention_metadata', None))
         setattr(self, "_{}".format('can_manage_envelope_transfer'), kwargs.get('can_manage_envelope_transfer', None))
@@ -262,6 +270,50 @@ class UserAccountManagementGranularInformation(object):
         """
 
         self._can_manage_admins_metadata = can_manage_admins_metadata
+
+    @property
+    def can_manage_connect(self):
+        """Gets the can_manage_connect of this UserAccountManagementGranularInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_manage_connect of this UserAccountManagementGranularInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_manage_connect
+
+    @can_manage_connect.setter
+    def can_manage_connect(self, can_manage_connect):
+        """Sets the can_manage_connect of this UserAccountManagementGranularInformation.
+
+          # noqa: E501
+
+        :param can_manage_connect: The can_manage_connect of this UserAccountManagementGranularInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._can_manage_connect = can_manage_connect
+
+    @property
+    def can_manage_connect_metadata(self):
+        """Gets the can_manage_connect_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+
+
+        :return: The can_manage_connect_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_manage_connect_metadata
+
+    @can_manage_connect_metadata.setter
+    def can_manage_connect_metadata(self, can_manage_connect_metadata):
+        """Sets the can_manage_connect_metadata of this UserAccountManagementGranularInformation.
+
+
+        :param can_manage_connect_metadata: The can_manage_connect_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_manage_connect_metadata = can_manage_connect_metadata
 
     @property
     def can_manage_document_retention(self):

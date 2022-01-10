@@ -89,8 +89,10 @@ class Currency(object):
         'locked_metadata': 'PropertyMetadata',
         'max_length': 'str',
         'max_length_metadata': 'PropertyMetadata',
+        'max_numerical_value': 'str',
         'merge_field': 'MergeField',
         'merge_field_xml': 'str',
+        'min_numerical_value': 'str',
         'name': 'str',
         'name_metadata': 'PropertyMetadata',
         'numerical_value': 'str',
@@ -201,8 +203,10 @@ class Currency(object):
         'locked_metadata': 'lockedMetadata',
         'max_length': 'maxLength',
         'max_length_metadata': 'maxLengthMetadata',
+        'max_numerical_value': 'maxNumericalValue',
         'merge_field': 'mergeField',
         'merge_field_xml': 'mergeFieldXml',
+        'min_numerical_value': 'minNumericalValue',
         'name': 'name',
         'name_metadata': 'nameMetadata',
         'numerical_value': 'numericalValue',
@@ -318,8 +322,10 @@ class Currency(object):
         self._locked_metadata = None
         self._max_length = None
         self._max_length_metadata = None
+        self._max_numerical_value = None
         self._merge_field = None
         self._merge_field_xml = None
+        self._min_numerical_value = None
         self._name = None
         self._name_metadata = None
         self._numerical_value = None
@@ -429,8 +435,10 @@ class Currency(object):
         setattr(self, "_{}".format('locked_metadata'), kwargs.get('locked_metadata', None))
         setattr(self, "_{}".format('max_length'), kwargs.get('max_length', None))
         setattr(self, "_{}".format('max_length_metadata'), kwargs.get('max_length_metadata', None))
+        setattr(self, "_{}".format('max_numerical_value'), kwargs.get('max_numerical_value', None))
         setattr(self, "_{}".format('merge_field'), kwargs.get('merge_field', None))
         setattr(self, "_{}".format('merge_field_xml'), kwargs.get('merge_field_xml', None))
+        setattr(self, "_{}".format('min_numerical_value'), kwargs.get('min_numerical_value', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('name_metadata'), kwargs.get('name_metadata', None))
         setattr(self, "_{}".format('numerical_value'), kwargs.get('numerical_value', None))
@@ -1714,6 +1722,29 @@ class Currency(object):
         self._max_length_metadata = max_length_metadata
 
     @property
+    def max_numerical_value(self):
+        """Gets the max_numerical_value of this Currency.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The max_numerical_value of this Currency.  # noqa: E501
+        :rtype: str
+        """
+        return self._max_numerical_value
+
+    @max_numerical_value.setter
+    def max_numerical_value(self, max_numerical_value):
+        """Sets the max_numerical_value of this Currency.
+
+          # noqa: E501
+
+        :param max_numerical_value: The max_numerical_value of this Currency.  # noqa: E501
+        :type: str
+        """
+
+        self._max_numerical_value = max_numerical_value
+
+    @property
     def merge_field(self):
         """Gets the merge_field of this Currency.  # noqa: E501
 
@@ -1756,6 +1787,29 @@ class Currency(object):
         """
 
         self._merge_field_xml = merge_field_xml
+
+    @property
+    def min_numerical_value(self):
+        """Gets the min_numerical_value of this Currency.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The min_numerical_value of this Currency.  # noqa: E501
+        :rtype: str
+        """
+        return self._min_numerical_value
+
+    @min_numerical_value.setter
+    def min_numerical_value(self, min_numerical_value):
+        """Sets the min_numerical_value of this Currency.
+
+          # noqa: E501
+
+        :param min_numerical_value: The min_numerical_value of this Currency.  # noqa: E501
+        :type: str
+        """
+
+        self._min_numerical_value = min_numerical_value
 
     @property
     def name(self):

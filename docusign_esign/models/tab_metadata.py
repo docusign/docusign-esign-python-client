@@ -63,7 +63,9 @@ class TabMetadata(object):
         'locale_policy': 'LocalePolicyTab',
         'locked': 'str',
         'maximum_length': 'str',
+        'max_numerical_value': 'str',
         'merge_field': 'MergeField',
+        'min_numerical_value': 'str',
         'name': 'str',
         'numerical_value': 'str',
         'payment_item_code': 'str',
@@ -116,7 +118,9 @@ class TabMetadata(object):
         'locale_policy': 'localePolicy',
         'locked': 'locked',
         'maximum_length': 'maximumLength',
+        'max_numerical_value': 'maxNumericalValue',
         'merge_field': 'mergeField',
+        'min_numerical_value': 'minNumericalValue',
         'name': 'name',
         'numerical_value': 'numericalValue',
         'payment_item_code': 'paymentItemCode',
@@ -174,7 +178,9 @@ class TabMetadata(object):
         self._locale_policy = None
         self._locked = None
         self._maximum_length = None
+        self._max_numerical_value = None
         self._merge_field = None
+        self._min_numerical_value = None
         self._name = None
         self._numerical_value = None
         self._payment_item_code = None
@@ -226,7 +232,9 @@ class TabMetadata(object):
         setattr(self, "_{}".format('locale_policy'), kwargs.get('locale_policy', None))
         setattr(self, "_{}".format('locked'), kwargs.get('locked', None))
         setattr(self, "_{}".format('maximum_length'), kwargs.get('maximum_length', None))
+        setattr(self, "_{}".format('max_numerical_value'), kwargs.get('max_numerical_value', None))
         setattr(self, "_{}".format('merge_field'), kwargs.get('merge_field', None))
+        setattr(self, "_{}".format('min_numerical_value'), kwargs.get('min_numerical_value', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('numerical_value'), kwargs.get('numerical_value', None))
         setattr(self, "_{}".format('payment_item_code'), kwargs.get('payment_item_code', None))
@@ -936,6 +944,29 @@ class TabMetadata(object):
         self._maximum_length = maximum_length
 
     @property
+    def max_numerical_value(self):
+        """Gets the max_numerical_value of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The max_numerical_value of this TabMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._max_numerical_value
+
+    @max_numerical_value.setter
+    def max_numerical_value(self, max_numerical_value):
+        """Sets the max_numerical_value of this TabMetadata.
+
+          # noqa: E501
+
+        :param max_numerical_value: The max_numerical_value of this TabMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._max_numerical_value = max_numerical_value
+
+    @property
     def merge_field(self):
         """Gets the merge_field of this TabMetadata.  # noqa: E501
 
@@ -955,6 +986,29 @@ class TabMetadata(object):
         """
 
         self._merge_field = merge_field
+
+    @property
+    def min_numerical_value(self):
+        """Gets the min_numerical_value of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The min_numerical_value of this TabMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._min_numerical_value
+
+    @min_numerical_value.setter
+    def min_numerical_value(self, min_numerical_value):
+        """Sets the min_numerical_value of this TabMetadata.
+
+          # noqa: E501
+
+        :param min_numerical_value: The min_numerical_value of this TabMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._min_numerical_value = min_numerical_value
 
     @property
     def name(self):

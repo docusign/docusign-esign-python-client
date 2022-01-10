@@ -46,7 +46,8 @@ class NewAccountDefinition(object):
         'payment_processor_information': 'PaymentProcessorInformation',
         'plan_information': 'PlanInformation',
         'referral_information': 'ReferralInformation',
-        'social_account_information': 'SocialAccountInformation'
+        'social_account_information': 'SocialAccountInformation',
+        'tax_exempt_id': 'str'
     }
 
     attribute_map = {
@@ -63,7 +64,8 @@ class NewAccountDefinition(object):
         'payment_processor_information': 'paymentProcessorInformation',
         'plan_information': 'planInformation',
         'referral_information': 'referralInformation',
-        'social_account_information': 'socialAccountInformation'
+        'social_account_information': 'socialAccountInformation',
+        'tax_exempt_id': 'taxExemptId'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -86,6 +88,7 @@ class NewAccountDefinition(object):
         self._plan_information = None
         self._referral_information = None
         self._social_account_information = None
+        self._tax_exempt_id = None
         self.discriminator = None
 
         setattr(self, "_{}".format('account_name'), kwargs.get('account_name', None))
@@ -102,6 +105,7 @@ class NewAccountDefinition(object):
         setattr(self, "_{}".format('plan_information'), kwargs.get('plan_information', None))
         setattr(self, "_{}".format('referral_information'), kwargs.get('referral_information', None))
         setattr(self, "_{}".format('social_account_information'), kwargs.get('social_account_information', None))
+        setattr(self, "_{}".format('tax_exempt_id'), kwargs.get('tax_exempt_id', None))
 
     @property
     def account_name(self):
@@ -406,6 +410,29 @@ class NewAccountDefinition(object):
         """
 
         self._social_account_information = social_account_information
+
+    @property
+    def tax_exempt_id(self):
+        """Gets the tax_exempt_id of this NewAccountDefinition.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tax_exempt_id of this NewAccountDefinition.  # noqa: E501
+        :rtype: str
+        """
+        return self._tax_exempt_id
+
+    @tax_exempt_id.setter
+    def tax_exempt_id(self, tax_exempt_id):
+        """Sets the tax_exempt_id of this NewAccountDefinition.
+
+          # noqa: E501
+
+        :param tax_exempt_id: The tax_exempt_id of this NewAccountDefinition.  # noqa: E501
+        :type: str
+        """
+
+        self._tax_exempt_id = tax_exempt_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

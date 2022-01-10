@@ -74,6 +74,8 @@ class AccountSettingsInformation(object):
         'allow_consumer_disclosure_override_metadata': 'SettingsMetadata',
         'allow_data_download': 'str',
         'allow_data_download_metadata': 'SettingsMetadata',
+        'allow_delayed_routing': 'str',
+        'allow_delayed_routing_metadata': 'SettingsMetadata',
         'allow_delegated_signing': 'str',
         'allow_delegated_signing_metadata': 'SettingsMetadata',
         'allow_document_disclosures': 'str',
@@ -166,6 +168,8 @@ class AccountSettingsInformation(object):
         'allow_resource_file_branding_metadata': 'SettingsMetadata',
         'allow_safe_bio_pharma_signer_certificate': 'str',
         'allow_safe_bio_pharma_signer_certificate_metadata': 'SettingsMetadata',
+        'allow_scheduled_sending': 'str',
+        'allow_scheduled_sending_metadata': 'SettingsMetadata',
         'allow_security_appliance': 'str',
         'allow_security_appliance_metadata': 'SettingsMetadata',
         'allow_send_to_certified_delivery': 'str',
@@ -661,6 +665,8 @@ class AccountSettingsInformation(object):
         'allow_consumer_disclosure_override_metadata': 'allowConsumerDisclosureOverrideMetadata',
         'allow_data_download': 'allowDataDownload',
         'allow_data_download_metadata': 'allowDataDownloadMetadata',
+        'allow_delayed_routing': 'allowDelayedRouting',
+        'allow_delayed_routing_metadata': 'allowDelayedRoutingMetadata',
         'allow_delegated_signing': 'allowDelegatedSigning',
         'allow_delegated_signing_metadata': 'allowDelegatedSigningMetadata',
         'allow_document_disclosures': 'allowDocumentDisclosures',
@@ -753,6 +759,8 @@ class AccountSettingsInformation(object):
         'allow_resource_file_branding_metadata': 'allowResourceFileBrandingMetadata',
         'allow_safe_bio_pharma_signer_certificate': 'allowSafeBioPharmaSignerCertificate',
         'allow_safe_bio_pharma_signer_certificate_metadata': 'allowSafeBioPharmaSignerCertificateMetadata',
+        'allow_scheduled_sending': 'allowScheduledSending',
+        'allow_scheduled_sending_metadata': 'allowScheduledSendingMetadata',
         'allow_security_appliance': 'allowSecurityAppliance',
         'allow_security_appliance_metadata': 'allowSecurityApplianceMetadata',
         'allow_send_to_certified_delivery': 'allowSendToCertifiedDelivery',
@@ -1253,6 +1261,8 @@ class AccountSettingsInformation(object):
         self._allow_consumer_disclosure_override_metadata = None
         self._allow_data_download = None
         self._allow_data_download_metadata = None
+        self._allow_delayed_routing = None
+        self._allow_delayed_routing_metadata = None
         self._allow_delegated_signing = None
         self._allow_delegated_signing_metadata = None
         self._allow_document_disclosures = None
@@ -1345,6 +1355,8 @@ class AccountSettingsInformation(object):
         self._allow_resource_file_branding_metadata = None
         self._allow_safe_bio_pharma_signer_certificate = None
         self._allow_safe_bio_pharma_signer_certificate_metadata = None
+        self._allow_scheduled_sending = None
+        self._allow_scheduled_sending_metadata = None
         self._allow_security_appliance = None
         self._allow_security_appliance_metadata = None
         self._allow_send_to_certified_delivery = None
@@ -1839,6 +1851,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_consumer_disclosure_override_metadata'), kwargs.get('allow_consumer_disclosure_override_metadata', None))
         setattr(self, "_{}".format('allow_data_download'), kwargs.get('allow_data_download', None))
         setattr(self, "_{}".format('allow_data_download_metadata'), kwargs.get('allow_data_download_metadata', None))
+        setattr(self, "_{}".format('allow_delayed_routing'), kwargs.get('allow_delayed_routing', None))
+        setattr(self, "_{}".format('allow_delayed_routing_metadata'), kwargs.get('allow_delayed_routing_metadata', None))
         setattr(self, "_{}".format('allow_delegated_signing'), kwargs.get('allow_delegated_signing', None))
         setattr(self, "_{}".format('allow_delegated_signing_metadata'), kwargs.get('allow_delegated_signing_metadata', None))
         setattr(self, "_{}".format('allow_document_disclosures'), kwargs.get('allow_document_disclosures', None))
@@ -1931,6 +1945,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_resource_file_branding_metadata'), kwargs.get('allow_resource_file_branding_metadata', None))
         setattr(self, "_{}".format('allow_safe_bio_pharma_signer_certificate'), kwargs.get('allow_safe_bio_pharma_signer_certificate', None))
         setattr(self, "_{}".format('allow_safe_bio_pharma_signer_certificate_metadata'), kwargs.get('allow_safe_bio_pharma_signer_certificate_metadata', None))
+        setattr(self, "_{}".format('allow_scheduled_sending'), kwargs.get('allow_scheduled_sending', None))
+        setattr(self, "_{}".format('allow_scheduled_sending_metadata'), kwargs.get('allow_scheduled_sending_metadata', None))
         setattr(self, "_{}".format('allow_security_appliance'), kwargs.get('allow_security_appliance', None))
         setattr(self, "_{}".format('allow_security_appliance_metadata'), kwargs.get('allow_security_appliance_metadata', None))
         setattr(self, "_{}".format('allow_send_to_certified_delivery'), kwargs.get('allow_send_to_certified_delivery', None))
@@ -3283,6 +3299,50 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_data_download_metadata = allow_data_download_metadata
+
+    @property
+    def allow_delayed_routing(self):
+        """Gets the allow_delayed_routing of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_delayed_routing of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_delayed_routing
+
+    @allow_delayed_routing.setter
+    def allow_delayed_routing(self, allow_delayed_routing):
+        """Sets the allow_delayed_routing of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_delayed_routing: The allow_delayed_routing of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_delayed_routing = allow_delayed_routing
+
+    @property
+    def allow_delayed_routing_metadata(self):
+        """Gets the allow_delayed_routing_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_delayed_routing_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_delayed_routing_metadata
+
+    @allow_delayed_routing_metadata.setter
+    def allow_delayed_routing_metadata(self, allow_delayed_routing_metadata):
+        """Sets the allow_delayed_routing_metadata of this AccountSettingsInformation.
+
+
+        :param allow_delayed_routing_metadata: The allow_delayed_routing_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_delayed_routing_metadata = allow_delayed_routing_metadata
 
     @property
     def allow_delegated_signing(self):
@@ -5307,6 +5367,50 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_safe_bio_pharma_signer_certificate_metadata = allow_safe_bio_pharma_signer_certificate_metadata
+
+    @property
+    def allow_scheduled_sending(self):
+        """Gets the allow_scheduled_sending of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_scheduled_sending of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_scheduled_sending
+
+    @allow_scheduled_sending.setter
+    def allow_scheduled_sending(self, allow_scheduled_sending):
+        """Sets the allow_scheduled_sending of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_scheduled_sending: The allow_scheduled_sending of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_scheduled_sending = allow_scheduled_sending
+
+    @property
+    def allow_scheduled_sending_metadata(self):
+        """Gets the allow_scheduled_sending_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_scheduled_sending_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_scheduled_sending_metadata
+
+    @allow_scheduled_sending_metadata.setter
+    def allow_scheduled_sending_metadata(self, allow_scheduled_sending_metadata):
+        """Sets the allow_scheduled_sending_metadata of this AccountSettingsInformation.
+
+
+        :param allow_scheduled_sending_metadata: The allow_scheduled_sending_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_scheduled_sending_metadata = allow_scheduled_sending_metadata
 
     @property
     def allow_security_appliance(self):
