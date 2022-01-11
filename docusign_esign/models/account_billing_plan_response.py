@@ -44,7 +44,8 @@ class AccountBillingPlanResponse(object):
         'payment_method': 'str',
         'payment_processor_information': 'PaymentProcessorInformation',
         'referral_information': 'ReferralInformation',
-        'successor_plans': 'list[BillingPlan]'
+        'successor_plans': 'list[BillingPlan]',
+        'tax_exempt_id': 'str'
     }
 
     attribute_map = {
@@ -59,7 +60,8 @@ class AccountBillingPlanResponse(object):
         'payment_method': 'paymentMethod',
         'payment_processor_information': 'paymentProcessorInformation',
         'referral_information': 'referralInformation',
-        'successor_plans': 'successorPlans'
+        'successor_plans': 'successorPlans',
+        'tax_exempt_id': 'taxExemptId'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -80,6 +82,7 @@ class AccountBillingPlanResponse(object):
         self._payment_processor_information = None
         self._referral_information = None
         self._successor_plans = None
+        self._tax_exempt_id = None
         self.discriminator = None
 
         setattr(self, "_{}".format('billing_address'), kwargs.get('billing_address', None))
@@ -94,6 +97,7 @@ class AccountBillingPlanResponse(object):
         setattr(self, "_{}".format('payment_processor_information'), kwargs.get('payment_processor_information', None))
         setattr(self, "_{}".format('referral_information'), kwargs.get('referral_information', None))
         setattr(self, "_{}".format('successor_plans'), kwargs.get('successor_plans', None))
+        setattr(self, "_{}".format('tax_exempt_id'), kwargs.get('tax_exempt_id', None))
 
     @property
     def billing_address(self):
@@ -352,6 +356,29 @@ class AccountBillingPlanResponse(object):
         """
 
         self._successor_plans = successor_plans
+
+    @property
+    def tax_exempt_id(self):
+        """Gets the tax_exempt_id of this AccountBillingPlanResponse.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tax_exempt_id of this AccountBillingPlanResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._tax_exempt_id
+
+    @tax_exempt_id.setter
+    def tax_exempt_id(self, tax_exempt_id):
+        """Sets the tax_exempt_id of this AccountBillingPlanResponse.
+
+          # noqa: E501
+
+        :param tax_exempt_id: The tax_exempt_id of this AccountBillingPlanResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._tax_exempt_id = tax_exempt_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

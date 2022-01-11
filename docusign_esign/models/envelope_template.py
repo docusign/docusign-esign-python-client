@@ -70,6 +70,7 @@ class EnvelopeTemplate(object):
         'enable_wet_sign': 'str',
         'enforce_signer_visibility': 'str',
         'envelope_attachments': 'list[Attachment]',
+        'envelope_custom_metadata': 'EnvelopeCustomMetadata',
         'envelope_documents': 'list[EnvelopeDocument]',
         'envelope_id': 'str',
         'envelope_id_stamping': 'str',
@@ -172,6 +173,7 @@ class EnvelopeTemplate(object):
         'enable_wet_sign': 'enableWetSign',
         'enforce_signer_visibility': 'enforceSignerVisibility',
         'envelope_attachments': 'envelopeAttachments',
+        'envelope_custom_metadata': 'envelopeCustomMetadata',
         'envelope_documents': 'envelopeDocuments',
         'envelope_id': 'envelopeId',
         'envelope_id_stamping': 'envelopeIdStamping',
@@ -279,6 +281,7 @@ class EnvelopeTemplate(object):
         self._enable_wet_sign = None
         self._enforce_signer_visibility = None
         self._envelope_attachments = None
+        self._envelope_custom_metadata = None
         self._envelope_documents = None
         self._envelope_id = None
         self._envelope_id_stamping = None
@@ -380,6 +383,7 @@ class EnvelopeTemplate(object):
         setattr(self, "_{}".format('enable_wet_sign'), kwargs.get('enable_wet_sign', None))
         setattr(self, "_{}".format('enforce_signer_visibility'), kwargs.get('enforce_signer_visibility', None))
         setattr(self, "_{}".format('envelope_attachments'), kwargs.get('envelope_attachments', None))
+        setattr(self, "_{}".format('envelope_custom_metadata'), kwargs.get('envelope_custom_metadata', None))
         setattr(self, "_{}".format('envelope_documents'), kwargs.get('envelope_documents', None))
         setattr(self, "_{}".format('envelope_id'), kwargs.get('envelope_id', None))
         setattr(self, "_{}".format('envelope_id_stamping'), kwargs.get('envelope_id_stamping', None))
@@ -1289,6 +1293,27 @@ class EnvelopeTemplate(object):
         """
 
         self._envelope_attachments = envelope_attachments
+
+    @property
+    def envelope_custom_metadata(self):
+        """Gets the envelope_custom_metadata of this EnvelopeTemplate.  # noqa: E501
+
+
+        :return: The envelope_custom_metadata of this EnvelopeTemplate.  # noqa: E501
+        :rtype: EnvelopeCustomMetadata
+        """
+        return self._envelope_custom_metadata
+
+    @envelope_custom_metadata.setter
+    def envelope_custom_metadata(self, envelope_custom_metadata):
+        """Sets the envelope_custom_metadata of this EnvelopeTemplate.
+
+
+        :param envelope_custom_metadata: The envelope_custom_metadata of this EnvelopeTemplate.  # noqa: E501
+        :type: EnvelopeCustomMetadata
+        """
+
+        self._envelope_custom_metadata = envelope_custom_metadata
 
     @property
     def envelope_documents(self):

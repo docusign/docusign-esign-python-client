@@ -60,7 +60,8 @@ class AccountBillingPlan(object):
         'seat_discounts': 'list[SeatDiscount]',
         'subscription_start_date': 'str',
         'support_incident_fee': 'str',
-        'support_plan_fee': 'str'
+        'support_plan_fee': 'str',
+        'tax_exempt_id': 'str'
     }
 
     attribute_map = {
@@ -91,7 +92,8 @@ class AccountBillingPlan(object):
         'seat_discounts': 'seatDiscounts',
         'subscription_start_date': 'subscriptionStartDate',
         'support_incident_fee': 'supportIncidentFee',
-        'support_plan_fee': 'supportPlanFee'
+        'support_plan_fee': 'supportPlanFee',
+        'tax_exempt_id': 'taxExemptId'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -128,6 +130,7 @@ class AccountBillingPlan(object):
         self._subscription_start_date = None
         self._support_incident_fee = None
         self._support_plan_fee = None
+        self._tax_exempt_id = None
         self.discriminator = None
 
         setattr(self, "_{}".format('add_ons'), kwargs.get('add_ons', None))
@@ -158,6 +161,7 @@ class AccountBillingPlan(object):
         setattr(self, "_{}".format('subscription_start_date'), kwargs.get('subscription_start_date', None))
         setattr(self, "_{}".format('support_incident_fee'), kwargs.get('support_incident_fee', None))
         setattr(self, "_{}".format('support_plan_fee'), kwargs.get('support_plan_fee', None))
+        setattr(self, "_{}".format('tax_exempt_id'), kwargs.get('tax_exempt_id', None))
 
     @property
     def add_ons(self):
@@ -800,6 +804,29 @@ class AccountBillingPlan(object):
         """
 
         self._support_plan_fee = support_plan_fee
+
+    @property
+    def tax_exempt_id(self):
+        """Gets the tax_exempt_id of this AccountBillingPlan.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tax_exempt_id of this AccountBillingPlan.  # noqa: E501
+        :rtype: str
+        """
+        return self._tax_exempt_id
+
+    @tax_exempt_id.setter
+    def tax_exempt_id(self, tax_exempt_id):
+        """Sets the tax_exempt_id of this AccountBillingPlan.
+
+          # noqa: E501
+
+        :param tax_exempt_id: The tax_exempt_id of this AccountBillingPlan.  # noqa: E501
+        :type: str
+        """
+
+        self._tax_exempt_id = tax_exempt_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

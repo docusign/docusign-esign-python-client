@@ -20,6 +20,8 @@ from .apis.accounts_api import AccountsApi
 from .apis.authentication_api import AuthenticationApi
 from .apis.billing_api import BillingApi
 from .apis.bulk_envelopes_api import BulkEnvelopesApi
+from .apis.bulk_process_data_api import BulkProcessDataApi
+from .apis.bulk_process_data_send_api import BulkProcessDataSendApi
 from .apis.cloud_storage_api import CloudStorageApi
 from .apis.connect_api import ConnectApi
 from .apis.custom_tabs_api import CustomTabsApi
@@ -130,6 +132,12 @@ from docusign_esign.models.brands_request import BrandsRequest
 from docusign_esign.models.brands_response import BrandsResponse
 from docusign_esign.models.bulk_envelope import BulkEnvelope
 from docusign_esign.models.bulk_envelope_status import BulkEnvelopeStatus
+from docusign_esign.models.bulk_process_request import BulkProcessRequest
+from docusign_esign.models.bulk_process_response import BulkProcessResponse
+from docusign_esign.models.bulk_process_result import BulkProcessResult
+from docusign_esign.models.bulk_processing_list_summaries import BulkProcessingListSummaries
+from docusign_esign.models.bulk_processing_list_summary import BulkProcessingListSummary
+from docusign_esign.models.bulk_processing_lists import BulkProcessingLists
 from docusign_esign.models.bulk_recipient import BulkRecipient
 from docusign_esign.models.bulk_recipient_signature_provider import BulkRecipientSignatureProvider
 from docusign_esign.models.bulk_recipient_tab_label import BulkRecipientTabLabel
@@ -137,6 +145,7 @@ from docusign_esign.models.bulk_recipients_request import BulkRecipientsRequest
 from docusign_esign.models.bulk_recipients_response import BulkRecipientsResponse
 from docusign_esign.models.bulk_recipients_summary_response import BulkRecipientsSummaryResponse
 from docusign_esign.models.bulk_recipients_update_response import BulkRecipientsUpdateResponse
+from docusign_esign.models.bulk_send_batch_error import BulkSendBatchError
 from docusign_esign.models.bulk_send_batch_request import BulkSendBatchRequest
 from docusign_esign.models.bulk_send_batch_status import BulkSendBatchStatus
 from docusign_esign.models.bulk_send_batch_summaries import BulkSendBatchSummaries
@@ -246,6 +255,7 @@ from docusign_esign.models.envelope_attachments_request import EnvelopeAttachmen
 from docusign_esign.models.envelope_attachments_result import EnvelopeAttachmentsResult
 from docusign_esign.models.envelope_audit_event import EnvelopeAuditEvent
 from docusign_esign.models.envelope_audit_event_response import EnvelopeAuditEventResponse
+from docusign_esign.models.envelope_custom_metadata import EnvelopeCustomMetadata
 from docusign_esign.models.envelope_definition import EnvelopeDefinition
 from docusign_esign.models.envelope_delay_rule_api_model import EnvelopeDelayRuleApiModel
 from docusign_esign.models.envelope_document import EnvelopeDocument

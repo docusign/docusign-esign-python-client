@@ -745,7 +745,7 @@ class SdkUnitTests(unittest.TestCase):
 
             tabs = envelopes_api.list_tabs(account_id=self.user_info.accounts[0].account_id,
                                            envelope_id=created_envelope.envelope_id,
-                                           recipient_id=recipients.signers[0].recipient_id)
+                                           recipient_id=recipients.signers[1].recipient_id)
             list_tabs = tabs.list_tabs
 
             assert list_tabs is not None

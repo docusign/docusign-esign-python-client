@@ -35,6 +35,8 @@ class BulkSendBatchSummaries(object):
     swagger_types = {
         'batch_size_limit': 'str',
         'bulk_batch_summaries': 'list[BulkSendBatchSummary]',
+        'bulk_process_queue_limit': 'str',
+        'bulk_process_total_queued': 'str',
         'end_position': 'str',
         'next_uri': 'str',
         'previous_uri': 'str',
@@ -48,6 +50,8 @@ class BulkSendBatchSummaries(object):
     attribute_map = {
         'batch_size_limit': 'batchSizeLimit',
         'bulk_batch_summaries': 'bulkBatchSummaries',
+        'bulk_process_queue_limit': 'bulkProcessQueueLimit',
+        'bulk_process_total_queued': 'bulkProcessTotalQueued',
         'end_position': 'endPosition',
         'next_uri': 'nextUri',
         'previous_uri': 'previousUri',
@@ -66,6 +70,8 @@ class BulkSendBatchSummaries(object):
 
         self._batch_size_limit = None
         self._bulk_batch_summaries = None
+        self._bulk_process_queue_limit = None
+        self._bulk_process_total_queued = None
         self._end_position = None
         self._next_uri = None
         self._previous_uri = None
@@ -78,6 +84,8 @@ class BulkSendBatchSummaries(object):
 
         setattr(self, "_{}".format('batch_size_limit'), kwargs.get('batch_size_limit', None))
         setattr(self, "_{}".format('bulk_batch_summaries'), kwargs.get('bulk_batch_summaries', None))
+        setattr(self, "_{}".format('bulk_process_queue_limit'), kwargs.get('bulk_process_queue_limit', None))
+        setattr(self, "_{}".format('bulk_process_total_queued'), kwargs.get('bulk_process_total_queued', None))
         setattr(self, "_{}".format('end_position'), kwargs.get('end_position', None))
         setattr(self, "_{}".format('next_uri'), kwargs.get('next_uri', None))
         setattr(self, "_{}".format('previous_uri'), kwargs.get('previous_uri', None))
@@ -132,6 +140,52 @@ class BulkSendBatchSummaries(object):
         """
 
         self._bulk_batch_summaries = bulk_batch_summaries
+
+    @property
+    def bulk_process_queue_limit(self):
+        """Gets the bulk_process_queue_limit of this BulkSendBatchSummaries.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The bulk_process_queue_limit of this BulkSendBatchSummaries.  # noqa: E501
+        :rtype: str
+        """
+        return self._bulk_process_queue_limit
+
+    @bulk_process_queue_limit.setter
+    def bulk_process_queue_limit(self, bulk_process_queue_limit):
+        """Sets the bulk_process_queue_limit of this BulkSendBatchSummaries.
+
+          # noqa: E501
+
+        :param bulk_process_queue_limit: The bulk_process_queue_limit of this BulkSendBatchSummaries.  # noqa: E501
+        :type: str
+        """
+
+        self._bulk_process_queue_limit = bulk_process_queue_limit
+
+    @property
+    def bulk_process_total_queued(self):
+        """Gets the bulk_process_total_queued of this BulkSendBatchSummaries.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The bulk_process_total_queued of this BulkSendBatchSummaries.  # noqa: E501
+        :rtype: str
+        """
+        return self._bulk_process_total_queued
+
+    @bulk_process_total_queued.setter
+    def bulk_process_total_queued(self, bulk_process_total_queued):
+        """Sets the bulk_process_total_queued of this BulkSendBatchSummaries.
+
+          # noqa: E501
+
+        :param bulk_process_total_queued: The bulk_process_total_queued of this BulkSendBatchSummaries.  # noqa: E501
+        :type: str
+        """
+
+        self._bulk_process_total_queued = bulk_process_total_queued
 
     @property
     def end_position(self):
