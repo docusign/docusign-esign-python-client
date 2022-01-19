@@ -11,7 +11,7 @@
 """
 
 
-from setuptools import setup, find_packages, Command, os  # noqa: H301	
+from setuptools import setup, find_packages, Command, os  # noqa: H301
 
 NAME = "docusign-esign"
 VERSION = "3.14.0rc1"
@@ -22,7 +22,7 @@ VERSION = "3.14.0rc1"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.8.0", "certifi >= 14.05.14", "python-dateutil >= 2.5.3", "setuptools >= 21.0.0", "PyJWT>=1.7.1,<2", "cryptography>=2.5", "nose>=1.3.7"]
+REQUIRES = ["urllib3 >= 1.15", "six >= 1.8.0", "certifi >= 14.05.14", "python-dateutil >= 2.5.3", "setuptools >= 21.0.0", "PyJWT==2.3.0", "cryptography>=2.5", "nose>=1.3.7"]
 
 class CleanCommand(Command):
     """Custom clean command to tidy up the project root."""
@@ -37,7 +37,7 @@ class CleanCommand(Command):
 this_directory = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
-    
+
 
 setup(
     name=NAME,
