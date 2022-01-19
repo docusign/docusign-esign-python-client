@@ -56,8 +56,7 @@ This client has the following external dependencies:
 *   python_dateutil v2.5.3+
 *   setuptools v21.0.0+
 *   urllib3 v1.15.1+
-*   jwcrypto v0.4.2+
-*   py-oauth2 v0.0.10+
+*   PyJWT v1.7.1+
 
 ## Code examples
 You can find on our GitHub a self-executing package of code examples for the eSignature Python SDK, called a [Launcher](https://github.com/docusign/code-examples-python/blob/master/README.md), that demonstrates common use cases. You can also download a version preconfigured for your DocuSign developer account from [Quickstart](https://developers.docusign.com/docs/esign-rest-api/quickstart/). These examples can use either the [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) or [JSON Web Token (JWT)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) authentication workflows.
