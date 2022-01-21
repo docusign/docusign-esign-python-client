@@ -115,8 +115,8 @@ class ApiClient(object):
                    _request_timeout=None):
         """
         :param _preload_content: if False, the urllib3.HTTPResponse object will be returned without
-                                 reading/decoding response data. Default is True. 
-        :return: 
+                                 reading/decoding response data. Default is True.
+        :return:
         """
 
         # header parameters
@@ -686,7 +686,7 @@ class ApiClient(object):
         later = now + (expires_in * 1)
         claim = {"iss": client_id, "sub": user_id, "aud": oauth_host_name, "iat": now, "exp": later,
                  "scope": " ".join(scopes)}
-        token = jwt.encode(payload=claim, key=private_key_bytes, algorithm='RS256').decode("utf-8")
+        token = jwt.encode(payload=claim, key=private_key_bytes, algorithm='RS256')
         response = self.request("POST", "https://" + oauth_host_name + "/oauth/token",
                                 headers=self.sanitize_for_serialization(
                                     {"Content-Type": "application/x-www-form-urlencoded"}),
@@ -818,8 +818,8 @@ class ApiClient(object):
     def set_access_token(self, token_obj):
         """
 
-        :param token_obj: 
-        :return: 
+        :param token_obj:
+        :return:
         """
         self.default_headers['Authorization'] = token_obj.access_token
 
