@@ -49,6 +49,7 @@ class PaymentDetails(object):
         'payment_source_id': 'str',
         'signer_values': 'PaymentSignerValues',
         'status': 'str',
+        'sub_gateway_name': 'str',
         'total': 'Money'
     }
 
@@ -69,6 +70,7 @@ class PaymentDetails(object):
         'payment_source_id': 'paymentSourceId',
         'signer_values': 'signerValues',
         'status': 'status',
+        'sub_gateway_name': 'subGatewayName',
         'total': 'total'
     }
 
@@ -94,6 +96,7 @@ class PaymentDetails(object):
         self._payment_source_id = None
         self._signer_values = None
         self._status = None
+        self._sub_gateway_name = None
         self._total = None
         self.discriminator = None
 
@@ -113,6 +116,7 @@ class PaymentDetails(object):
         setattr(self, "_{}".format('payment_source_id'), kwargs.get('payment_source_id', None))
         setattr(self, "_{}".format('signer_values'), kwargs.get('signer_values', None))
         setattr(self, "_{}".format('status'), kwargs.get('status', None))
+        setattr(self, "_{}".format('sub_gateway_name'), kwargs.get('sub_gateway_name', None))
         setattr(self, "_{}".format('total'), kwargs.get('total', None))
 
     @property
@@ -476,6 +480,29 @@ class PaymentDetails(object):
         """
 
         self._status = status
+
+    @property
+    def sub_gateway_name(self):
+        """Gets the sub_gateway_name of this PaymentDetails.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sub_gateway_name of this PaymentDetails.  # noqa: E501
+        :rtype: str
+        """
+        return self._sub_gateway_name
+
+    @sub_gateway_name.setter
+    def sub_gateway_name(self, sub_gateway_name):
+        """Sets the sub_gateway_name of this PaymentDetails.
+
+          # noqa: E501
+
+        :param sub_gateway_name: The sub_gateway_name of this PaymentDetails.  # noqa: E501
+        :type: str
+        """
+
+        self._sub_gateway_name = sub_gateway_name
 
     @property
     def total(self):

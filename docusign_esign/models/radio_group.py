@@ -41,6 +41,8 @@ class RadioGroup(object):
         'document_id_metadata': 'PropertyMetadata',
         'group_name': 'str',
         'group_name_metadata': 'PropertyMetadata',
+        'original_value': 'str',
+        'original_value_metadata': 'PropertyMetadata',
         'radios': 'list[Radio]',
         'recipient_id': 'str',
         'recipient_id_guid': 'str',
@@ -61,7 +63,9 @@ class RadioGroup(object):
         'template_required': 'str',
         'template_required_metadata': 'PropertyMetadata',
         'tooltip': 'str',
-        'tooltip_metadata': 'PropertyMetadata'
+        'tooltip_metadata': 'PropertyMetadata',
+        'value': 'str',
+        'value_metadata': 'PropertyMetadata'
     }
 
     attribute_map = {
@@ -73,6 +77,8 @@ class RadioGroup(object):
         'document_id_metadata': 'documentIdMetadata',
         'group_name': 'groupName',
         'group_name_metadata': 'groupNameMetadata',
+        'original_value': 'originalValue',
+        'original_value_metadata': 'originalValueMetadata',
         'radios': 'radios',
         'recipient_id': 'recipientId',
         'recipient_id_guid': 'recipientIdGuid',
@@ -93,7 +99,9 @@ class RadioGroup(object):
         'template_required': 'templateRequired',
         'template_required_metadata': 'templateRequiredMetadata',
         'tooltip': 'tooltip',
-        'tooltip_metadata': 'tooltipMetadata'
+        'tooltip_metadata': 'tooltipMetadata',
+        'value': 'value',
+        'value_metadata': 'valueMetadata'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -110,6 +118,8 @@ class RadioGroup(object):
         self._document_id_metadata = None
         self._group_name = None
         self._group_name_metadata = None
+        self._original_value = None
+        self._original_value_metadata = None
         self._radios = None
         self._recipient_id = None
         self._recipient_id_guid = None
@@ -131,6 +141,8 @@ class RadioGroup(object):
         self._template_required_metadata = None
         self._tooltip = None
         self._tooltip_metadata = None
+        self._value = None
+        self._value_metadata = None
         self.discriminator = None
 
         setattr(self, "_{}".format('conditional_parent_label'), kwargs.get('conditional_parent_label', None))
@@ -141,6 +153,8 @@ class RadioGroup(object):
         setattr(self, "_{}".format('document_id_metadata'), kwargs.get('document_id_metadata', None))
         setattr(self, "_{}".format('group_name'), kwargs.get('group_name', None))
         setattr(self, "_{}".format('group_name_metadata'), kwargs.get('group_name_metadata', None))
+        setattr(self, "_{}".format('original_value'), kwargs.get('original_value', None))
+        setattr(self, "_{}".format('original_value_metadata'), kwargs.get('original_value_metadata', None))
         setattr(self, "_{}".format('radios'), kwargs.get('radios', None))
         setattr(self, "_{}".format('recipient_id'), kwargs.get('recipient_id', None))
         setattr(self, "_{}".format('recipient_id_guid'), kwargs.get('recipient_id_guid', None))
@@ -162,6 +176,8 @@ class RadioGroup(object):
         setattr(self, "_{}".format('template_required_metadata'), kwargs.get('template_required_metadata', None))
         setattr(self, "_{}".format('tooltip'), kwargs.get('tooltip', None))
         setattr(self, "_{}".format('tooltip_metadata'), kwargs.get('tooltip_metadata', None))
+        setattr(self, "_{}".format('value'), kwargs.get('value', None))
+        setattr(self, "_{}".format('value_metadata'), kwargs.get('value_metadata', None))
 
     @property
     def conditional_parent_label(self):
@@ -338,6 +354,50 @@ class RadioGroup(object):
         """
 
         self._group_name_metadata = group_name_metadata
+
+    @property
+    def original_value(self):
+        """Gets the original_value of this RadioGroup.  # noqa: E501
+
+        The initial value of the tab when it was sent to the recipient.   # noqa: E501
+
+        :return: The original_value of this RadioGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._original_value
+
+    @original_value.setter
+    def original_value(self, original_value):
+        """Sets the original_value of this RadioGroup.
+
+        The initial value of the tab when it was sent to the recipient.   # noqa: E501
+
+        :param original_value: The original_value of this RadioGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._original_value = original_value
+
+    @property
+    def original_value_metadata(self):
+        """Gets the original_value_metadata of this RadioGroup.  # noqa: E501
+
+
+        :return: The original_value_metadata of this RadioGroup.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._original_value_metadata
+
+    @original_value_metadata.setter
+    def original_value_metadata(self, original_value_metadata):
+        """Sets the original_value_metadata of this RadioGroup.
+
+
+        :param original_value_metadata: The original_value_metadata of this RadioGroup.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._original_value_metadata = original_value_metadata
 
     @property
     def radios(self):
@@ -801,6 +861,50 @@ class RadioGroup(object):
         """
 
         self._tooltip_metadata = tooltip_metadata
+
+    @property
+    def value(self):
+        """Gets the value of this RadioGroup.  # noqa: E501
+
+        Specifies the value of the tab.   # noqa: E501
+
+        :return: The value of this RadioGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        """Sets the value of this RadioGroup.
+
+        Specifies the value of the tab.   # noqa: E501
+
+        :param value: The value of this RadioGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._value = value
+
+    @property
+    def value_metadata(self):
+        """Gets the value_metadata of this RadioGroup.  # noqa: E501
+
+
+        :return: The value_metadata of this RadioGroup.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._value_metadata
+
+    @value_metadata.setter
+    def value_metadata(self, value_metadata):
+        """Sets the value_metadata of this RadioGroup.
+
+
+        :param value_metadata: The value_metadata of this RadioGroup.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._value_metadata = value_metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

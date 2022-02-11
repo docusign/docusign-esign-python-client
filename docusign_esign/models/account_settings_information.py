@@ -3304,7 +3304,7 @@ class AccountSettingsInformation(object):
     def allow_delayed_routing(self):
         """Gets the allow_delayed_routing of this AccountSettingsInformation.  # noqa: E501
 
-          # noqa: E501
+        \"true\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \"false\" otherwise.  # noqa: E501
 
         :return: The allow_delayed_routing of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
@@ -3315,7 +3315,7 @@ class AccountSettingsInformation(object):
     def allow_delayed_routing(self, allow_delayed_routing):
         """Sets the allow_delayed_routing of this AccountSettingsInformation.
 
-          # noqa: E501
+        \"true\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \"false\" otherwise.  # noqa: E501
 
         :param allow_delayed_routing: The allow_delayed_routing of this AccountSettingsInformation.  # noqa: E501
         :type: str
@@ -5372,7 +5372,7 @@ class AccountSettingsInformation(object):
     def allow_scheduled_sending(self):
         """Gets the allow_scheduled_sending of this AccountSettingsInformation.  # noqa: E501
 
-          # noqa: E501
+        \"true\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \"false\" otherwise.  # noqa: E501
 
         :return: The allow_scheduled_sending of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
@@ -5383,7 +5383,7 @@ class AccountSettingsInformation(object):
     def allow_scheduled_sending(self, allow_scheduled_sending):
         """Sets the allow_scheduled_sending of this AccountSettingsInformation.
 
-          # noqa: E501
+        \"true\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \"false\" otherwise.  # noqa: E501
 
         :param allow_scheduled_sending: The allow_scheduled_sending of this AccountSettingsInformation.  # noqa: E501
         :type: str
