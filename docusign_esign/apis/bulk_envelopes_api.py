@@ -1055,6 +1055,125 @@ class BulkEnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def update_bulk_send_batch_action(self, account_id, bulk_action, bulk_send_batch_id, **kwargs):
+        """
+        Initiate a specific bulk send batch action
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_bulk_send_batch_action(account_id, bulk_action, bulk_send_batch_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str bulk_action: (required)
+        :param str bulk_send_batch_id: (required)
+        :param BulkSendBatchActionRequest bulk_send_batch_action_request:
+        :return: BulkSendBatchStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_bulk_send_batch_action_with_http_info(account_id, bulk_action, bulk_send_batch_id, **kwargs)
+        else:
+            (data) = self.update_bulk_send_batch_action_with_http_info(account_id, bulk_action, bulk_send_batch_id, **kwargs)
+            return data
+
+    def update_bulk_send_batch_action_with_http_info(self, account_id, bulk_action, bulk_send_batch_id, **kwargs):
+        """
+        Initiate a specific bulk send batch action
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_bulk_send_batch_action_with_http_info(account_id, bulk_action, bulk_send_batch_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str bulk_action: (required)
+        :param str bulk_send_batch_id: (required)
+        :param BulkSendBatchActionRequest bulk_send_batch_action_request:
+        :return: BulkSendBatchStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'bulk_action', 'bulk_send_batch_id', 'bulk_send_batch_action_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_bulk_send_batch_action" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_bulk_send_batch_action`")
+        # verify the required parameter 'bulk_action' is set
+        if ('bulk_action' not in params) or (params['bulk_action'] is None):
+            raise ValueError("Missing the required parameter `bulk_action` when calling `update_bulk_send_batch_action`")
+        # verify the required parameter 'bulk_send_batch_id' is set
+        if ('bulk_send_batch_id' not in params) or (params['bulk_send_batch_id'] is None):
+            raise ValueError("Missing the required parameter `bulk_send_batch_id` when calling `update_bulk_send_batch_action`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}/{bulkAction}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'bulk_action' in params:
+            path_params['bulkAction'] = params['bulk_action']
+        if 'bulk_send_batch_id' in params:
+            path_params['bulkSendBatchId'] = params['bulk_send_batch_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'bulk_send_batch_action_request' in params:
+            body_params = params['bulk_send_batch_action_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='BulkSendBatchStatus',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def update_bulk_send_batch_status(self, account_id, bulk_send_batch_id, **kwargs):
         """
         Put/Update a specific bulk send batch status
