@@ -55,6 +55,7 @@ class CertifiedDelivery(object):
         'email': 'str',
         'email_metadata': 'PropertyMetadata',
         'email_notification': 'RecipientEmailNotification',
+        'email_recipient_post_signing_url': 'str',
         'embedded_recipient_start_url': 'str',
         'error_details': 'ErrorDetails',
         'excluded_documents': 'list[str]',
@@ -132,6 +133,7 @@ class CertifiedDelivery(object):
         'email': 'email',
         'email_metadata': 'emailMetadata',
         'email_notification': 'emailNotification',
+        'email_recipient_post_signing_url': 'emailRecipientPostSigningURL',
         'embedded_recipient_start_url': 'embeddedRecipientStartURL',
         'error_details': 'errorDetails',
         'excluded_documents': 'excludedDocuments',
@@ -214,6 +216,7 @@ class CertifiedDelivery(object):
         self._email = None
         self._email_metadata = None
         self._email_notification = None
+        self._email_recipient_post_signing_url = None
         self._embedded_recipient_start_url = None
         self._error_details = None
         self._excluded_documents = None
@@ -290,6 +293,7 @@ class CertifiedDelivery(object):
         setattr(self, "_{}".format('email'), kwargs.get('email', None))
         setattr(self, "_{}".format('email_metadata'), kwargs.get('email_metadata', None))
         setattr(self, "_{}".format('email_notification'), kwargs.get('email_notification', None))
+        setattr(self, "_{}".format('email_recipient_post_signing_url'), kwargs.get('email_recipient_post_signing_url', None))
         setattr(self, "_{}".format('embedded_recipient_start_url'), kwargs.get('embedded_recipient_start_url', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
         setattr(self, "_{}".format('excluded_documents'), kwargs.get('excluded_documents', None))
@@ -840,6 +844,29 @@ class CertifiedDelivery(object):
         """
 
         self._email_notification = email_notification
+
+    @property
+    def email_recipient_post_signing_url(self):
+        """Gets the email_recipient_post_signing_url of this CertifiedDelivery.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The email_recipient_post_signing_url of this CertifiedDelivery.  # noqa: E501
+        :rtype: str
+        """
+        return self._email_recipient_post_signing_url
+
+    @email_recipient_post_signing_url.setter
+    def email_recipient_post_signing_url(self, email_recipient_post_signing_url):
+        """Sets the email_recipient_post_signing_url of this CertifiedDelivery.
+
+          # noqa: E501
+
+        :param email_recipient_post_signing_url: The email_recipient_post_signing_url of this CertifiedDelivery.  # noqa: E501
+        :type: str
+        """
+
+        self._email_recipient_post_signing_url = email_recipient_post_signing_url
 
     @property
     def embedded_recipient_start_url(self):

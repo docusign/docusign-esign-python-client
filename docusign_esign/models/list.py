@@ -88,6 +88,8 @@ class List(object):
         'locked_metadata': 'PropertyMetadata',
         'merge_field': 'MergeField',
         'merge_field_xml': 'str',
+        'original_value': 'str',
+        'original_value_metadata': 'PropertyMetadata',
         'page_number': 'str',
         'page_number_metadata': 'PropertyMetadata',
         'recipient_id': 'str',
@@ -194,6 +196,8 @@ class List(object):
         'locked_metadata': 'lockedMetadata',
         'merge_field': 'mergeField',
         'merge_field_xml': 'mergeFieldXml',
+        'original_value': 'originalValue',
+        'original_value_metadata': 'originalValueMetadata',
         'page_number': 'pageNumber',
         'page_number_metadata': 'pageNumberMetadata',
         'recipient_id': 'recipientId',
@@ -305,6 +309,8 @@ class List(object):
         self._locked_metadata = None
         self._merge_field = None
         self._merge_field_xml = None
+        self._original_value = None
+        self._original_value_metadata = None
         self._page_number = None
         self._page_number_metadata = None
         self._recipient_id = None
@@ -410,6 +416,8 @@ class List(object):
         setattr(self, "_{}".format('locked_metadata'), kwargs.get('locked_metadata', None))
         setattr(self, "_{}".format('merge_field'), kwargs.get('merge_field', None))
         setattr(self, "_{}".format('merge_field_xml'), kwargs.get('merge_field_xml', None))
+        setattr(self, "_{}".format('original_value'), kwargs.get('original_value', None))
+        setattr(self, "_{}".format('original_value_metadata'), kwargs.get('original_value_metadata', None))
         setattr(self, "_{}".format('page_number'), kwargs.get('page_number', None))
         setattr(self, "_{}".format('page_number_metadata'), kwargs.get('page_number_metadata', None))
         setattr(self, "_{}".format('recipient_id'), kwargs.get('recipient_id', None))
@@ -1667,6 +1675,50 @@ class List(object):
         """
 
         self._merge_field_xml = merge_field_xml
+
+    @property
+    def original_value(self):
+        """Gets the original_value of this List.  # noqa: E501
+
+        The initial value of the tab when it was sent to the recipient.   # noqa: E501
+
+        :return: The original_value of this List.  # noqa: E501
+        :rtype: str
+        """
+        return self._original_value
+
+    @original_value.setter
+    def original_value(self, original_value):
+        """Sets the original_value of this List.
+
+        The initial value of the tab when it was sent to the recipient.   # noqa: E501
+
+        :param original_value: The original_value of this List.  # noqa: E501
+        :type: str
+        """
+
+        self._original_value = original_value
+
+    @property
+    def original_value_metadata(self):
+        """Gets the original_value_metadata of this List.  # noqa: E501
+
+
+        :return: The original_value_metadata of this List.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._original_value_metadata
+
+    @original_value_metadata.setter
+    def original_value_metadata(self, original_value_metadata):
+        """Sets the original_value_metadata of this List.
+
+
+        :param original_value_metadata: The original_value_metadata of this List.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._original_value_metadata = original_value_metadata
 
     @property
     def page_number(self):

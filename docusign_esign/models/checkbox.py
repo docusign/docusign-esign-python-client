@@ -87,6 +87,7 @@ class Checkbox(object):
         'name': 'str',
         'name_metadata': 'PropertyMetadata',
         'original_value': 'str',
+        'original_value_metadata': 'PropertyMetadata',
         'page_number': 'str',
         'page_number_metadata': 'PropertyMetadata',
         'recipient_id': 'str',
@@ -99,6 +100,8 @@ class Checkbox(object):
         'require_initial_on_shared_change_metadata': 'PropertyMetadata',
         'selected': 'str',
         'selected_metadata': 'PropertyMetadata',
+        'selected_original': 'str',
+        'selected_original_metadata': 'PropertyMetadata',
         'shared': 'str',
         'shared_metadata': 'PropertyMetadata',
         'share_to_recipients': 'str',
@@ -126,6 +129,7 @@ class Checkbox(object):
         'underline': 'str',
         'underline_metadata': 'PropertyMetadata',
         'value': 'str',
+        'value_metadata': 'PropertyMetadata',
         'width': 'str',
         'width_metadata': 'PropertyMetadata',
         'x_position': 'str',
@@ -189,6 +193,7 @@ class Checkbox(object):
         'name': 'name',
         'name_metadata': 'nameMetadata',
         'original_value': 'originalValue',
+        'original_value_metadata': 'originalValueMetadata',
         'page_number': 'pageNumber',
         'page_number_metadata': 'pageNumberMetadata',
         'recipient_id': 'recipientId',
@@ -201,6 +206,8 @@ class Checkbox(object):
         'require_initial_on_shared_change_metadata': 'requireInitialOnSharedChangeMetadata',
         'selected': 'selected',
         'selected_metadata': 'selectedMetadata',
+        'selected_original': 'selectedOriginal',
+        'selected_original_metadata': 'selectedOriginalMetadata',
         'shared': 'shared',
         'shared_metadata': 'sharedMetadata',
         'share_to_recipients': 'shareToRecipients',
@@ -228,6 +235,7 @@ class Checkbox(object):
         'underline': 'underline',
         'underline_metadata': 'underlineMetadata',
         'value': 'value',
+        'value_metadata': 'valueMetadata',
         'width': 'width',
         'width_metadata': 'widthMetadata',
         'x_position': 'xPosition',
@@ -296,6 +304,7 @@ class Checkbox(object):
         self._name = None
         self._name_metadata = None
         self._original_value = None
+        self._original_value_metadata = None
         self._page_number = None
         self._page_number_metadata = None
         self._recipient_id = None
@@ -308,6 +317,8 @@ class Checkbox(object):
         self._require_initial_on_shared_change_metadata = None
         self._selected = None
         self._selected_metadata = None
+        self._selected_original = None
+        self._selected_original_metadata = None
         self._shared = None
         self._shared_metadata = None
         self._share_to_recipients = None
@@ -335,6 +346,7 @@ class Checkbox(object):
         self._underline = None
         self._underline_metadata = None
         self._value = None
+        self._value_metadata = None
         self._width = None
         self._width_metadata = None
         self._x_position = None
@@ -397,6 +409,7 @@ class Checkbox(object):
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('name_metadata'), kwargs.get('name_metadata', None))
         setattr(self, "_{}".format('original_value'), kwargs.get('original_value', None))
+        setattr(self, "_{}".format('original_value_metadata'), kwargs.get('original_value_metadata', None))
         setattr(self, "_{}".format('page_number'), kwargs.get('page_number', None))
         setattr(self, "_{}".format('page_number_metadata'), kwargs.get('page_number_metadata', None))
         setattr(self, "_{}".format('recipient_id'), kwargs.get('recipient_id', None))
@@ -409,6 +422,8 @@ class Checkbox(object):
         setattr(self, "_{}".format('require_initial_on_shared_change_metadata'), kwargs.get('require_initial_on_shared_change_metadata', None))
         setattr(self, "_{}".format('selected'), kwargs.get('selected', None))
         setattr(self, "_{}".format('selected_metadata'), kwargs.get('selected_metadata', None))
+        setattr(self, "_{}".format('selected_original'), kwargs.get('selected_original', None))
+        setattr(self, "_{}".format('selected_original_metadata'), kwargs.get('selected_original_metadata', None))
         setattr(self, "_{}".format('shared'), kwargs.get('shared', None))
         setattr(self, "_{}".format('shared_metadata'), kwargs.get('shared_metadata', None))
         setattr(self, "_{}".format('share_to_recipients'), kwargs.get('share_to_recipients', None))
@@ -436,6 +451,7 @@ class Checkbox(object):
         setattr(self, "_{}".format('underline'), kwargs.get('underline', None))
         setattr(self, "_{}".format('underline_metadata'), kwargs.get('underline_metadata', None))
         setattr(self, "_{}".format('value'), kwargs.get('value', None))
+        setattr(self, "_{}".format('value_metadata'), kwargs.get('value_metadata', None))
         setattr(self, "_{}".format('width'), kwargs.get('width', None))
         setattr(self, "_{}".format('width_metadata'), kwargs.get('width_metadata', None))
         setattr(self, "_{}".format('x_position'), kwargs.get('x_position', None))
@@ -1632,6 +1648,27 @@ class Checkbox(object):
         self._original_value = original_value
 
     @property
+    def original_value_metadata(self):
+        """Gets the original_value_metadata of this Checkbox.  # noqa: E501
+
+
+        :return: The original_value_metadata of this Checkbox.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._original_value_metadata
+
+    @original_value_metadata.setter
+    def original_value_metadata(self, original_value_metadata):
+        """Sets the original_value_metadata of this Checkbox.
+
+
+        :param original_value_metadata: The original_value_metadata of this Checkbox.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._original_value_metadata = original_value_metadata
+
+    @property
     def page_number(self):
         """Gets the page_number of this Checkbox.  # noqa: E501
 
@@ -1894,6 +1931,50 @@ class Checkbox(object):
         """
 
         self._selected_metadata = selected_metadata
+
+    @property
+    def selected_original(self):
+        """Gets the selected_original of this Checkbox.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The selected_original of this Checkbox.  # noqa: E501
+        :rtype: str
+        """
+        return self._selected_original
+
+    @selected_original.setter
+    def selected_original(self, selected_original):
+        """Sets the selected_original of this Checkbox.
+
+          # noqa: E501
+
+        :param selected_original: The selected_original of this Checkbox.  # noqa: E501
+        :type: str
+        """
+
+        self._selected_original = selected_original
+
+    @property
+    def selected_original_metadata(self):
+        """Gets the selected_original_metadata of this Checkbox.  # noqa: E501
+
+
+        :return: The selected_original_metadata of this Checkbox.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._selected_original_metadata
+
+    @selected_original_metadata.setter
+    def selected_original_metadata(self, selected_original_metadata):
+        """Sets the selected_original_metadata of this Checkbox.
+
+
+        :param selected_original_metadata: The selected_original_metadata of this Checkbox.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._selected_original_metadata = selected_original_metadata
 
     @property
     def shared(self):
@@ -2489,6 +2570,27 @@ class Checkbox(object):
         """
 
         self._value = value
+
+    @property
+    def value_metadata(self):
+        """Gets the value_metadata of this Checkbox.  # noqa: E501
+
+
+        :return: The value_metadata of this Checkbox.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._value_metadata
+
+    @value_metadata.setter
+    def value_metadata(self, value_metadata):
+        """Sets the value_metadata of this Checkbox.
+
+
+        :param value_metadata: The value_metadata of this Checkbox.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._value_metadata = value_metadata
 
     @property
     def width(self):

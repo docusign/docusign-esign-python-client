@@ -41,6 +41,7 @@ class FolderItemV2(object):
         'folder_id': 'str',
         'folder_uri': 'str',
         'is21_cfr_part11': 'str',
+        'last_modified_date_time': 'str',
         'owner_name': 'str',
         'recipients': 'Recipients',
         'recipients_uri': 'str',
@@ -64,6 +65,7 @@ class FolderItemV2(object):
         'folder_id': 'folderId',
         'folder_uri': 'folderUri',
         'is21_cfr_part11': 'is21CFRPart11',
+        'last_modified_date_time': 'lastModifiedDateTime',
         'owner_name': 'ownerName',
         'recipients': 'recipients',
         'recipients_uri': 'recipientsUri',
@@ -92,6 +94,7 @@ class FolderItemV2(object):
         self._folder_id = None
         self._folder_uri = None
         self._is21_cfr_part11 = None
+        self._last_modified_date_time = None
         self._owner_name = None
         self._recipients = None
         self._recipients_uri = None
@@ -114,6 +117,7 @@ class FolderItemV2(object):
         setattr(self, "_{}".format('folder_id'), kwargs.get('folder_id', None))
         setattr(self, "_{}".format('folder_uri'), kwargs.get('folder_uri', None))
         setattr(self, "_{}".format('is21_cfr_part11'), kwargs.get('is21_cfr_part11', None))
+        setattr(self, "_{}".format('last_modified_date_time'), kwargs.get('last_modified_date_time', None))
         setattr(self, "_{}".format('owner_name'), kwargs.get('owner_name', None))
         setattr(self, "_{}".format('recipients'), kwargs.get('recipients', None))
         setattr(self, "_{}".format('recipients_uri'), kwargs.get('recipients_uri', None))
@@ -310,6 +314,29 @@ class FolderItemV2(object):
         """
 
         self._is21_cfr_part11 = is21_cfr_part11
+
+    @property
+    def last_modified_date_time(self):
+        """Gets the last_modified_date_time of this FolderItemV2.  # noqa: E501
+
+        The date and time the item was last modified.  # noqa: E501
+
+        :return: The last_modified_date_time of this FolderItemV2.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_modified_date_time
+
+    @last_modified_date_time.setter
+    def last_modified_date_time(self, last_modified_date_time):
+        """Sets the last_modified_date_time of this FolderItemV2.
+
+        The date and time the item was last modified.  # noqa: E501
+
+        :param last_modified_date_time: The last_modified_date_time of this FolderItemV2.  # noqa: E501
+        :type: str
+        """
+
+        self._last_modified_date_time = last_modified_date_time
 
     @property
     def owner_name(self):
