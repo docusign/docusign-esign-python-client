@@ -107,7 +107,9 @@ class AccountRoleSettings(object):
         'use_new_sending_interface': 'str',
         'use_new_sending_interface_metadata': 'SettingsMetadata',
         'vaulting_mode': 'str',
-        'vaulting_mode_metadata': 'SettingsMetadata'
+        'vaulting_mode_metadata': 'SettingsMetadata',
+        'web_forms': 'str',
+        'web_forms_metadata': 'SettingsMetadata'
     }
 
     attribute_map = {
@@ -185,7 +187,9 @@ class AccountRoleSettings(object):
         'use_new_sending_interface': 'useNewSendingInterface',
         'use_new_sending_interface_metadata': 'useNewSendingInterfaceMetadata',
         'vaulting_mode': 'vaultingMode',
-        'vaulting_mode_metadata': 'vaultingModeMetadata'
+        'vaulting_mode_metadata': 'vaultingModeMetadata',
+        'web_forms': 'webForms',
+        'web_forms_metadata': 'webFormsMetadata'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -269,6 +273,8 @@ class AccountRoleSettings(object):
         self._use_new_sending_interface_metadata = None
         self._vaulting_mode = None
         self._vaulting_mode_metadata = None
+        self._web_forms = None
+        self._web_forms_metadata = None
         self.discriminator = None
 
         setattr(self, "_{}".format('allow_account_management'), kwargs.get('allow_account_management', None))
@@ -346,6 +352,8 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('use_new_sending_interface_metadata'), kwargs.get('use_new_sending_interface_metadata', None))
         setattr(self, "_{}".format('vaulting_mode'), kwargs.get('vaulting_mode', None))
         setattr(self, "_{}".format('vaulting_mode_metadata'), kwargs.get('vaulting_mode_metadata', None))
+        setattr(self, "_{}".format('web_forms'), kwargs.get('web_forms', None))
+        setattr(self, "_{}".format('web_forms_metadata'), kwargs.get('web_forms_metadata', None))
 
     @property
     def allow_account_management(self):
@@ -1995,6 +2003,50 @@ class AccountRoleSettings(object):
         """
 
         self._vaulting_mode_metadata = vaulting_mode_metadata
+
+    @property
+    def web_forms(self):
+        """Gets the web_forms of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The web_forms of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._web_forms
+
+    @web_forms.setter
+    def web_forms(self, web_forms):
+        """Sets the web_forms of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param web_forms: The web_forms of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._web_forms = web_forms
+
+    @property
+    def web_forms_metadata(self):
+        """Gets the web_forms_metadata of this AccountRoleSettings.  # noqa: E501
+
+
+        :return: The web_forms_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._web_forms_metadata
+
+    @web_forms_metadata.setter
+    def web_forms_metadata(self, web_forms_metadata):
+        """Sets the web_forms_metadata of this AccountRoleSettings.
+
+
+        :param web_forms_metadata: The web_forms_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._web_forms_metadata = web_forms_metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

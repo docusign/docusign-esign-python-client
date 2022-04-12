@@ -37,6 +37,8 @@ class BillingInvoiceItem(object):
         'charge_name': 'str',
         'invoice_item_id': 'str',
         'quantity': 'str',
+        'tax_amount': 'str',
+        'tax_exempt_amount': 'str',
         'unit_price': 'str'
     }
 
@@ -45,6 +47,8 @@ class BillingInvoiceItem(object):
         'charge_name': 'chargeName',
         'invoice_item_id': 'invoiceItemId',
         'quantity': 'quantity',
+        'tax_amount': 'taxAmount',
+        'tax_exempt_amount': 'taxExemptAmount',
         'unit_price': 'unitPrice'
     }
 
@@ -58,6 +62,8 @@ class BillingInvoiceItem(object):
         self._charge_name = None
         self._invoice_item_id = None
         self._quantity = None
+        self._tax_amount = None
+        self._tax_exempt_amount = None
         self._unit_price = None
         self.discriminator = None
 
@@ -65,6 +71,8 @@ class BillingInvoiceItem(object):
         setattr(self, "_{}".format('charge_name'), kwargs.get('charge_name', None))
         setattr(self, "_{}".format('invoice_item_id'), kwargs.get('invoice_item_id', None))
         setattr(self, "_{}".format('quantity'), kwargs.get('quantity', None))
+        setattr(self, "_{}".format('tax_amount'), kwargs.get('tax_amount', None))
+        setattr(self, "_{}".format('tax_exempt_amount'), kwargs.get('tax_exempt_amount', None))
         setattr(self, "_{}".format('unit_price'), kwargs.get('unit_price', None))
 
     @property
@@ -158,6 +166,52 @@ class BillingInvoiceItem(object):
         """
 
         self._quantity = quantity
+
+    @property
+    def tax_amount(self):
+        """Gets the tax_amount of this BillingInvoiceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tax_amount of this BillingInvoiceItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._tax_amount
+
+    @tax_amount.setter
+    def tax_amount(self, tax_amount):
+        """Sets the tax_amount of this BillingInvoiceItem.
+
+          # noqa: E501
+
+        :param tax_amount: The tax_amount of this BillingInvoiceItem.  # noqa: E501
+        :type: str
+        """
+
+        self._tax_amount = tax_amount
+
+    @property
+    def tax_exempt_amount(self):
+        """Gets the tax_exempt_amount of this BillingInvoiceItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tax_exempt_amount of this BillingInvoiceItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._tax_exempt_amount
+
+    @tax_exempt_amount.setter
+    def tax_exempt_amount(self, tax_exempt_amount):
+        """Sets the tax_exempt_amount of this BillingInvoiceItem.
+
+          # noqa: E501
+
+        :param tax_exempt_amount: The tax_exempt_amount of this BillingInvoiceItem.  # noqa: E501
+        :type: str
+        """
+
+        self._tax_exempt_amount = tax_exempt_amount
 
     @property
     def unit_price(self):

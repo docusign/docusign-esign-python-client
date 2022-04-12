@@ -35,7 +35,7 @@ class WorkflowStep(object):
     swagger_types = {
         'action': 'str',
         'completed_date': 'str',
-        'delayed_routing': 'DelayedRoutingApiModel',
+        'delayed_routing': 'DelayedRouting',
         'item_id': 'str',
         'recipient_routing': 'RecipientRouting',
         'status': 'str',
@@ -135,7 +135,7 @@ class WorkflowStep(object):
 
 
         :return: The delayed_routing of this WorkflowStep.  # noqa: E501
-        :rtype: DelayedRoutingApiModel
+        :rtype: DelayedRouting
         """
         return self._delayed_routing
 
@@ -145,7 +145,7 @@ class WorkflowStep(object):
 
 
         :param delayed_routing: The delayed_routing of this WorkflowStep.  # noqa: E501
-        :type: DelayedRoutingApiModel
+        :type: DelayedRouting
         """
 
         self._delayed_routing = delayed_routing
