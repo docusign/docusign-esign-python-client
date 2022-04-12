@@ -105,9 +105,7 @@ from docusign_esign.models.bulk_processing_lists import BulkProcessingLists
 from docusign_esign.models.bulk_recipient import BulkRecipient
 from docusign_esign.models.bulk_recipient_signature_provider import BulkRecipientSignatureProvider
 from docusign_esign.models.bulk_recipient_tab_label import BulkRecipientTabLabel
-from docusign_esign.models.bulk_recipients_request import BulkRecipientsRequest
 from docusign_esign.models.bulk_recipients_response import BulkRecipientsResponse
-from docusign_esign.models.bulk_recipients_summary_response import BulkRecipientsSummaryResponse
 from docusign_esign.models.bulk_recipients_update_response import BulkRecipientsUpdateResponse
 from docusign_esign.models.bulk_send_batch_action_request import BulkSendBatchActionRequest
 from docusign_esign.models.bulk_send_batch_error import BulkSendBatchError
@@ -186,7 +184,7 @@ from docusign_esign.models.custom_settings_information import CustomSettingsInfo
 from docusign_esign.models.date_signed import DateSigned
 from docusign_esign.models.date_stamp_properties import DateStampProperties
 from docusign_esign.models.decline import Decline
-from docusign_esign.models.delayed_routing_api_model import DelayedRoutingApiModel
+from docusign_esign.models.delayed_routing import DelayedRouting
 from docusign_esign.models.delegation_info import DelegationInfo
 from docusign_esign.models.diagnostics_settings_information import DiagnosticsSettingsInformation
 from docusign_esign.models.direct_debit_processor_information import DirectDebitProcessorInformation
@@ -222,7 +220,7 @@ from docusign_esign.models.envelope_audit_event import EnvelopeAuditEvent
 from docusign_esign.models.envelope_audit_event_response import EnvelopeAuditEventResponse
 from docusign_esign.models.envelope_custom_metadata import EnvelopeCustomMetadata
 from docusign_esign.models.envelope_definition import EnvelopeDefinition
-from docusign_esign.models.envelope_delay_rule_api_model import EnvelopeDelayRuleApiModel
+from docusign_esign.models.envelope_delay_rule import EnvelopeDelayRule
 from docusign_esign.models.envelope_document import EnvelopeDocument
 from docusign_esign.models.envelope_documents_result import EnvelopeDocumentsResult
 from docusign_esign.models.envelope_event import EnvelopeEvent
@@ -395,7 +393,7 @@ from docusign_esign.models.reminders import Reminders
 from docusign_esign.models.reserved_domain_existence import ReservedDomainExistence
 from docusign_esign.models.resource_information import ResourceInformation
 from docusign_esign.models.return_url_request import ReturnUrlRequest
-from docusign_esign.models.scheduled_sending_api_model import ScheduledSendingApiModel
+from docusign_esign.models.scheduled_sending import ScheduledSending
 from docusign_esign.models.seal_identifier import SealIdentifier
 from docusign_esign.models.seal_sign import SealSign
 from docusign_esign.models.seat_discount import SeatDiscount

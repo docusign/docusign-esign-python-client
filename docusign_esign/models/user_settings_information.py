@@ -153,7 +153,9 @@ class UserSettingsInformation(object):
         'transaction_point_user_name': 'str',
         'transaction_point_user_name_metadata': 'SettingsMetadata',
         'vaulting_mode': 'str',
-        'vaulting_mode_metadata': 'SettingsMetadata'
+        'vaulting_mode_metadata': 'SettingsMetadata',
+        'web_forms': 'str',
+        'web_forms_metadata': 'SettingsMetadata'
     }
 
     attribute_map = {
@@ -277,7 +279,9 @@ class UserSettingsInformation(object):
         'transaction_point_user_name': 'transactionPointUserName',
         'transaction_point_user_name_metadata': 'transactionPointUserNameMetadata',
         'vaulting_mode': 'vaultingMode',
-        'vaulting_mode_metadata': 'vaultingModeMetadata'
+        'vaulting_mode_metadata': 'vaultingModeMetadata',
+        'web_forms': 'webForms',
+        'web_forms_metadata': 'webFormsMetadata'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -407,6 +411,8 @@ class UserSettingsInformation(object):
         self._transaction_point_user_name_metadata = None
         self._vaulting_mode = None
         self._vaulting_mode_metadata = None
+        self._web_forms = None
+        self._web_forms_metadata = None
         self.discriminator = None
 
         setattr(self, "_{}".format('account_management_granular'), kwargs.get('account_management_granular', None))
@@ -530,6 +536,8 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('transaction_point_user_name_metadata'), kwargs.get('transaction_point_user_name_metadata', None))
         setattr(self, "_{}".format('vaulting_mode'), kwargs.get('vaulting_mode', None))
         setattr(self, "_{}".format('vaulting_mode_metadata'), kwargs.get('vaulting_mode_metadata', None))
+        setattr(self, "_{}".format('web_forms'), kwargs.get('web_forms', None))
+        setattr(self, "_{}".format('web_forms_metadata'), kwargs.get('web_forms_metadata', None))
 
     @property
     def account_management_granular(self):
@@ -3193,6 +3201,50 @@ class UserSettingsInformation(object):
         """
 
         self._vaulting_mode_metadata = vaulting_mode_metadata
+
+    @property
+    def web_forms(self):
+        """Gets the web_forms of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The web_forms of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._web_forms
+
+    @web_forms.setter
+    def web_forms(self, web_forms):
+        """Sets the web_forms of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param web_forms: The web_forms of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._web_forms = web_forms
+
+    @property
+    def web_forms_metadata(self):
+        """Gets the web_forms_metadata of this UserSettingsInformation.  # noqa: E501
+
+
+        :return: The web_forms_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._web_forms_metadata
+
+    @web_forms_metadata.setter
+    def web_forms_metadata(self, web_forms_metadata):
+        """Sets the web_forms_metadata of this UserSettingsInformation.
+
+
+        :param web_forms_metadata: The web_forms_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._web_forms_metadata = web_forms_metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -50,6 +50,7 @@ class UserInformation(object):
         'home_address': 'AddressInformation',
         'initials_image_uri': 'str',
         'is_admin': 'str',
+        'is_alternate_admin': 'str',
         'is_nar_enabled': 'str',
         'job_title': 'str',
         'last_login': 'str',
@@ -96,6 +97,7 @@ class UserInformation(object):
         'home_address': 'homeAddress',
         'initials_image_uri': 'initialsImageUri',
         'is_admin': 'isAdmin',
+        'is_alternate_admin': 'isAlternateAdmin',
         'is_nar_enabled': 'isNAREnabled',
         'job_title': 'jobTitle',
         'last_login': 'lastLogin',
@@ -147,6 +149,7 @@ class UserInformation(object):
         self._home_address = None
         self._initials_image_uri = None
         self._is_admin = None
+        self._is_alternate_admin = None
         self._is_nar_enabled = None
         self._job_title = None
         self._last_login = None
@@ -192,6 +195,7 @@ class UserInformation(object):
         setattr(self, "_{}".format('home_address'), kwargs.get('home_address', None))
         setattr(self, "_{}".format('initials_image_uri'), kwargs.get('initials_image_uri', None))
         setattr(self, "_{}".format('is_admin'), kwargs.get('is_admin', None))
+        setattr(self, "_{}".format('is_alternate_admin'), kwargs.get('is_alternate_admin', None))
         setattr(self, "_{}".format('is_nar_enabled'), kwargs.get('is_nar_enabled', None))
         setattr(self, "_{}".format('job_title'), kwargs.get('job_title', None))
         setattr(self, "_{}".format('last_login'), kwargs.get('last_login', None))
@@ -603,6 +607,29 @@ class UserInformation(object):
         """
 
         self._is_admin = is_admin
+
+    @property
+    def is_alternate_admin(self):
+        """Gets the is_alternate_admin of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_alternate_admin of this UserInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_alternate_admin
+
+    @is_alternate_admin.setter
+    def is_alternate_admin(self, is_alternate_admin):
+        """Sets the is_alternate_admin of this UserInformation.
+
+          # noqa: E501
+
+        :param is_alternate_admin: The is_alternate_admin of this UserInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._is_alternate_admin = is_alternate_admin
 
     @property
     def is_nar_enabled(self):

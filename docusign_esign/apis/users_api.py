@@ -1875,6 +1875,7 @@ class UsersApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str additional_info: When set to **true**, the full list of user information is returned for each user in the account.
+        :param str alternate_admins_only:
         :param str count: Number of records to return. The number must be greater than 0 and less than or equal to 100. 
         :param str domain_users_only:
         :param str email:
@@ -1913,6 +1914,7 @@ class UsersApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str additional_info: When set to **true**, the full list of user information is returned for each user in the account.
+        :param str alternate_admins_only:
         :param str count: Number of records to return. The number must be greater than 0 and less than or equal to 100. 
         :param str domain_users_only:
         :param str email:
@@ -1929,7 +1931,7 @@ class UsersApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'additional_info', 'count', 'domain_users_only', 'email', 'email_substring', 'group_id', 'include_usersettings_for_csv', 'login_status', 'not_group_id', 'start_position', 'status', 'user_name_substring']
+        all_params = ['account_id', 'additional_info', 'alternate_admins_only', 'count', 'domain_users_only', 'email', 'email_substring', 'group_id', 'include_usersettings_for_csv', 'login_status', 'not_group_id', 'start_position', 'status', 'user_name_substring']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1959,6 +1961,8 @@ class UsersApi(object):
         query_params = {}
         if 'additional_info' in params:
             query_params['additional_info'] = params['additional_info']
+        if 'alternate_admins_only' in params:
+            query_params['alternate_admins_only'] = params['alternate_admins_only']
         if 'count' in params:
             query_params['count'] = params['count']
         if 'domain_users_only' in params:

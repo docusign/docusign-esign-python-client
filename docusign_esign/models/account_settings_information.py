@@ -117,6 +117,8 @@ class AccountSettingsInformation(object):
         'allow_idv_platform': 'str',
         'allow_idv_platform_metadata': 'SettingsMetadata',
         'allow_in_person': 'str',
+        'allow_in_person_electronic_notary': 'str',
+        'allow_in_person_electronic_notary_metadata': 'SettingsMetadata',
         'allow_in_person_metadata': 'SettingsMetadata',
         'allow_managed_stamps': 'str',
         'allow_managed_stamps_metadata': 'SettingsMetadata',
@@ -146,12 +148,12 @@ class AccountSettingsInformation(object):
         'allow_organizations_metadata': 'SettingsMetadata',
         'allow_organization_sso_management': 'str',
         'allow_organization_sso_management_metadata': 'SettingsMetadata',
+        'allow_organization_to_use_in_person_electronic_notary': 'str',
+        'allow_organization_to_use_in_person_electronic_notary_metadata': 'SettingsMetadata',
         'allow_organization_to_use_remote_notary': 'str',
         'allow_organization_to_use_remote_notary_metadata': 'SettingsMetadata',
         'allow_payment_processing': 'str',
         'allow_payment_processing_metadata': 'SettingsMetadata',
-        'allow_personal_signer_certificate': 'str',
-        'allow_personal_signer_certificate_metadata': 'SettingsMetadata',
         'allow_phone_authentication': 'str',
         'allow_phone_authentication_metadata': 'SettingsMetadata',
         'allow_phone_auth_override': 'str',
@@ -210,6 +212,8 @@ class AccountSettingsInformation(object):
         'allow_users_to_access_directory_metadata': 'SettingsMetadata',
         'allow_value_insights': 'str',
         'allow_value_insights_metadata': 'SettingsMetadata',
+        'allow_web_forms': 'str',
+        'allow_web_forms_metadata': 'SettingsMetadata',
         'anchor_population_scope': 'str',
         'anchor_population_scope_metadata': 'SettingsMetadata',
         'anchor_tag_versioned_placement_enabled': 'str',
@@ -605,6 +609,7 @@ class AccountSettingsInformation(object):
         'uses_api_metadata': 'SettingsMetadata',
         'use_signature_provider_platform': 'str',
         'use_signature_provider_platform_metadata': 'SettingsMetadata',
+        'use_smart_contracts_v1': 'str',
         'validations_allowed': 'str',
         'validations_allowed_metadata': 'SettingsMetadata',
         'validations_brand': 'str',
@@ -708,6 +713,8 @@ class AccountSettingsInformation(object):
         'allow_idv_platform': 'allowIDVPlatform',
         'allow_idv_platform_metadata': 'allowIDVPlatformMetadata',
         'allow_in_person': 'allowInPerson',
+        'allow_in_person_electronic_notary': 'allowInPersonElectronicNotary',
+        'allow_in_person_electronic_notary_metadata': 'allowInPersonElectronicNotaryMetadata',
         'allow_in_person_metadata': 'allowInPersonMetadata',
         'allow_managed_stamps': 'allowManagedStamps',
         'allow_managed_stamps_metadata': 'allowManagedStampsMetadata',
@@ -737,12 +744,12 @@ class AccountSettingsInformation(object):
         'allow_organizations_metadata': 'allowOrganizationsMetadata',
         'allow_organization_sso_management': 'allowOrganizationSsoManagement',
         'allow_organization_sso_management_metadata': 'allowOrganizationSsoManagementMetadata',
+        'allow_organization_to_use_in_person_electronic_notary': 'allowOrganizationToUseInPersonElectronicNotary',
+        'allow_organization_to_use_in_person_electronic_notary_metadata': 'allowOrganizationToUseInPersonElectronicNotaryMetadata',
         'allow_organization_to_use_remote_notary': 'allowOrganizationToUseRemoteNotary',
         'allow_organization_to_use_remote_notary_metadata': 'allowOrganizationToUseRemoteNotaryMetadata',
         'allow_payment_processing': 'allowPaymentProcessing',
         'allow_payment_processing_metadata': 'allowPaymentProcessingMetadata',
-        'allow_personal_signer_certificate': 'allowPersonalSignerCertificate',
-        'allow_personal_signer_certificate_metadata': 'allowPersonalSignerCertificateMetadata',
         'allow_phone_authentication': 'allowPhoneAuthentication',
         'allow_phone_authentication_metadata': 'allowPhoneAuthenticationMetadata',
         'allow_phone_auth_override': 'allowPhoneAuthOverride',
@@ -801,6 +808,8 @@ class AccountSettingsInformation(object):
         'allow_users_to_access_directory_metadata': 'allowUsersToAccessDirectoryMetadata',
         'allow_value_insights': 'allowValueInsights',
         'allow_value_insights_metadata': 'allowValueInsightsMetadata',
+        'allow_web_forms': 'allowWebForms',
+        'allow_web_forms_metadata': 'allowWebFormsMetadata',
         'anchor_population_scope': 'anchorPopulationScope',
         'anchor_population_scope_metadata': 'anchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled': 'anchorTagVersionedPlacementEnabled',
@@ -1196,6 +1205,7 @@ class AccountSettingsInformation(object):
         'uses_api_metadata': 'usesAPIMetadata',
         'use_signature_provider_platform': 'useSignatureProviderPlatform',
         'use_signature_provider_platform_metadata': 'useSignatureProviderPlatformMetadata',
+        'use_smart_contracts_v1': 'useSmartContractsV1',
         'validations_allowed': 'validationsAllowed',
         'validations_allowed_metadata': 'validationsAllowedMetadata',
         'validations_brand': 'validationsBrand',
@@ -1304,6 +1314,8 @@ class AccountSettingsInformation(object):
         self._allow_idv_platform = None
         self._allow_idv_platform_metadata = None
         self._allow_in_person = None
+        self._allow_in_person_electronic_notary = None
+        self._allow_in_person_electronic_notary_metadata = None
         self._allow_in_person_metadata = None
         self._allow_managed_stamps = None
         self._allow_managed_stamps_metadata = None
@@ -1333,12 +1345,12 @@ class AccountSettingsInformation(object):
         self._allow_organizations_metadata = None
         self._allow_organization_sso_management = None
         self._allow_organization_sso_management_metadata = None
+        self._allow_organization_to_use_in_person_electronic_notary = None
+        self._allow_organization_to_use_in_person_electronic_notary_metadata = None
         self._allow_organization_to_use_remote_notary = None
         self._allow_organization_to_use_remote_notary_metadata = None
         self._allow_payment_processing = None
         self._allow_payment_processing_metadata = None
-        self._allow_personal_signer_certificate = None
-        self._allow_personal_signer_certificate_metadata = None
         self._allow_phone_authentication = None
         self._allow_phone_authentication_metadata = None
         self._allow_phone_auth_override = None
@@ -1397,6 +1409,8 @@ class AccountSettingsInformation(object):
         self._allow_users_to_access_directory_metadata = None
         self._allow_value_insights = None
         self._allow_value_insights_metadata = None
+        self._allow_web_forms = None
+        self._allow_web_forms_metadata = None
         self._anchor_population_scope = None
         self._anchor_population_scope_metadata = None
         self._anchor_tag_versioned_placement_enabled = None
@@ -1792,6 +1806,7 @@ class AccountSettingsInformation(object):
         self._uses_api_metadata = None
         self._use_signature_provider_platform = None
         self._use_signature_provider_platform_metadata = None
+        self._use_smart_contracts_v1 = None
         self._validations_allowed = None
         self._validations_allowed_metadata = None
         self._validations_brand = None
@@ -1894,6 +1909,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_idv_platform'), kwargs.get('allow_idv_platform', None))
         setattr(self, "_{}".format('allow_idv_platform_metadata'), kwargs.get('allow_idv_platform_metadata', None))
         setattr(self, "_{}".format('allow_in_person'), kwargs.get('allow_in_person', None))
+        setattr(self, "_{}".format('allow_in_person_electronic_notary'), kwargs.get('allow_in_person_electronic_notary', None))
+        setattr(self, "_{}".format('allow_in_person_electronic_notary_metadata'), kwargs.get('allow_in_person_electronic_notary_metadata', None))
         setattr(self, "_{}".format('allow_in_person_metadata'), kwargs.get('allow_in_person_metadata', None))
         setattr(self, "_{}".format('allow_managed_stamps'), kwargs.get('allow_managed_stamps', None))
         setattr(self, "_{}".format('allow_managed_stamps_metadata'), kwargs.get('allow_managed_stamps_metadata', None))
@@ -1923,12 +1940,12 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_organizations_metadata'), kwargs.get('allow_organizations_metadata', None))
         setattr(self, "_{}".format('allow_organization_sso_management'), kwargs.get('allow_organization_sso_management', None))
         setattr(self, "_{}".format('allow_organization_sso_management_metadata'), kwargs.get('allow_organization_sso_management_metadata', None))
+        setattr(self, "_{}".format('allow_organization_to_use_in_person_electronic_notary'), kwargs.get('allow_organization_to_use_in_person_electronic_notary', None))
+        setattr(self, "_{}".format('allow_organization_to_use_in_person_electronic_notary_metadata'), kwargs.get('allow_organization_to_use_in_person_electronic_notary_metadata', None))
         setattr(self, "_{}".format('allow_organization_to_use_remote_notary'), kwargs.get('allow_organization_to_use_remote_notary', None))
         setattr(self, "_{}".format('allow_organization_to_use_remote_notary_metadata'), kwargs.get('allow_organization_to_use_remote_notary_metadata', None))
         setattr(self, "_{}".format('allow_payment_processing'), kwargs.get('allow_payment_processing', None))
         setattr(self, "_{}".format('allow_payment_processing_metadata'), kwargs.get('allow_payment_processing_metadata', None))
-        setattr(self, "_{}".format('allow_personal_signer_certificate'), kwargs.get('allow_personal_signer_certificate', None))
-        setattr(self, "_{}".format('allow_personal_signer_certificate_metadata'), kwargs.get('allow_personal_signer_certificate_metadata', None))
         setattr(self, "_{}".format('allow_phone_authentication'), kwargs.get('allow_phone_authentication', None))
         setattr(self, "_{}".format('allow_phone_authentication_metadata'), kwargs.get('allow_phone_authentication_metadata', None))
         setattr(self, "_{}".format('allow_phone_auth_override'), kwargs.get('allow_phone_auth_override', None))
@@ -1987,6 +2004,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_users_to_access_directory_metadata'), kwargs.get('allow_users_to_access_directory_metadata', None))
         setattr(self, "_{}".format('allow_value_insights'), kwargs.get('allow_value_insights', None))
         setattr(self, "_{}".format('allow_value_insights_metadata'), kwargs.get('allow_value_insights_metadata', None))
+        setattr(self, "_{}".format('allow_web_forms'), kwargs.get('allow_web_forms', None))
+        setattr(self, "_{}".format('allow_web_forms_metadata'), kwargs.get('allow_web_forms_metadata', None))
         setattr(self, "_{}".format('anchor_population_scope'), kwargs.get('anchor_population_scope', None))
         setattr(self, "_{}".format('anchor_population_scope_metadata'), kwargs.get('anchor_population_scope_metadata', None))
         setattr(self, "_{}".format('anchor_tag_versioned_placement_enabled'), kwargs.get('anchor_tag_versioned_placement_enabled', None))
@@ -2382,6 +2401,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('uses_api_metadata'), kwargs.get('uses_api_metadata', None))
         setattr(self, "_{}".format('use_signature_provider_platform'), kwargs.get('use_signature_provider_platform', None))
         setattr(self, "_{}".format('use_signature_provider_platform_metadata'), kwargs.get('use_signature_provider_platform_metadata', None))
+        setattr(self, "_{}".format('use_smart_contracts_v1'), kwargs.get('use_smart_contracts_v1', None))
         setattr(self, "_{}".format('validations_allowed'), kwargs.get('validations_allowed', None))
         setattr(self, "_{}".format('validations_allowed_metadata'), kwargs.get('validations_allowed_metadata', None))
         setattr(self, "_{}".format('validations_brand'), kwargs.get('validations_brand', None))
@@ -4248,6 +4268,50 @@ class AccountSettingsInformation(object):
         self._allow_in_person = allow_in_person
 
     @property
+    def allow_in_person_electronic_notary(self):
+        """Gets the allow_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_in_person_electronic_notary
+
+    @allow_in_person_electronic_notary.setter
+    def allow_in_person_electronic_notary(self, allow_in_person_electronic_notary):
+        """Sets the allow_in_person_electronic_notary of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_in_person_electronic_notary: The allow_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_in_person_electronic_notary = allow_in_person_electronic_notary
+
+    @property
+    def allow_in_person_electronic_notary_metadata(self):
+        """Gets the allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_in_person_electronic_notary_metadata
+
+    @allow_in_person_electronic_notary_metadata.setter
+    def allow_in_person_electronic_notary_metadata(self, allow_in_person_electronic_notary_metadata):
+        """Sets the allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.
+
+
+        :param allow_in_person_electronic_notary_metadata: The allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_in_person_electronic_notary_metadata = allow_in_person_electronic_notary_metadata
+
+    @property
     def allow_in_person_metadata(self):
         """Gets the allow_in_person_metadata of this AccountSettingsInformation.  # noqa: E501
 
@@ -4885,6 +4949,50 @@ class AccountSettingsInformation(object):
         self._allow_organization_sso_management_metadata = allow_organization_sso_management_metadata
 
     @property
+    def allow_organization_to_use_in_person_electronic_notary(self):
+        """Gets the allow_organization_to_use_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_organization_to_use_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_organization_to_use_in_person_electronic_notary
+
+    @allow_organization_to_use_in_person_electronic_notary.setter
+    def allow_organization_to_use_in_person_electronic_notary(self, allow_organization_to_use_in_person_electronic_notary):
+        """Sets the allow_organization_to_use_in_person_electronic_notary of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_organization_to_use_in_person_electronic_notary: The allow_organization_to_use_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_organization_to_use_in_person_electronic_notary = allow_organization_to_use_in_person_electronic_notary
+
+    @property
+    def allow_organization_to_use_in_person_electronic_notary_metadata(self):
+        """Gets the allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_organization_to_use_in_person_electronic_notary_metadata
+
+    @allow_organization_to_use_in_person_electronic_notary_metadata.setter
+    def allow_organization_to_use_in_person_electronic_notary_metadata(self, allow_organization_to_use_in_person_electronic_notary_metadata):
+        """Sets the allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.
+
+
+        :param allow_organization_to_use_in_person_electronic_notary_metadata: The allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_organization_to_use_in_person_electronic_notary_metadata = allow_organization_to_use_in_person_electronic_notary_metadata
+
+    @property
     def allow_organization_to_use_remote_notary(self):
         """Gets the allow_organization_to_use_remote_notary of this AccountSettingsInformation.  # noqa: E501
 
@@ -4971,50 +5079,6 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_payment_processing_metadata = allow_payment_processing_metadata
-
-    @property
-    def allow_personal_signer_certificate(self):
-        """Gets the allow_personal_signer_certificate of this AccountSettingsInformation.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The allow_personal_signer_certificate of this AccountSettingsInformation.  # noqa: E501
-        :rtype: str
-        """
-        return self._allow_personal_signer_certificate
-
-    @allow_personal_signer_certificate.setter
-    def allow_personal_signer_certificate(self, allow_personal_signer_certificate):
-        """Sets the allow_personal_signer_certificate of this AccountSettingsInformation.
-
-          # noqa: E501
-
-        :param allow_personal_signer_certificate: The allow_personal_signer_certificate of this AccountSettingsInformation.  # noqa: E501
-        :type: str
-        """
-
-        self._allow_personal_signer_certificate = allow_personal_signer_certificate
-
-    @property
-    def allow_personal_signer_certificate_metadata(self):
-        """Gets the allow_personal_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
-
-
-        :return: The allow_personal_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
-        :rtype: SettingsMetadata
-        """
-        return self._allow_personal_signer_certificate_metadata
-
-    @allow_personal_signer_certificate_metadata.setter
-    def allow_personal_signer_certificate_metadata(self, allow_personal_signer_certificate_metadata):
-        """Sets the allow_personal_signer_certificate_metadata of this AccountSettingsInformation.
-
-
-        :param allow_personal_signer_certificate_metadata: The allow_personal_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
-        :type: SettingsMetadata
-        """
-
-        self._allow_personal_signer_certificate_metadata = allow_personal_signer_certificate_metadata
 
     @property
     def allow_phone_authentication(self):
@@ -6293,6 +6357,50 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_value_insights_metadata = allow_value_insights_metadata
+
+    @property
+    def allow_web_forms(self):
+        """Gets the allow_web_forms of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_web_forms of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_web_forms
+
+    @allow_web_forms.setter
+    def allow_web_forms(self, allow_web_forms):
+        """Sets the allow_web_forms of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_web_forms: The allow_web_forms of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_web_forms = allow_web_forms
+
+    @property
+    def allow_web_forms_metadata(self):
+        """Gets the allow_web_forms_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_web_forms_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_web_forms_metadata
+
+    @allow_web_forms_metadata.setter
+    def allow_web_forms_metadata(self, allow_web_forms_metadata):
+        """Sets the allow_web_forms_metadata of this AccountSettingsInformation.
+
+
+        :param allow_web_forms_metadata: The allow_web_forms_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_web_forms_metadata = allow_web_forms_metadata
 
     @property
     def anchor_population_scope(self):
@@ -14994,6 +15102,29 @@ class AccountSettingsInformation(object):
         """
 
         self._use_signature_provider_platform_metadata = use_signature_provider_platform_metadata
+
+    @property
+    def use_smart_contracts_v1(self):
+        """Gets the use_smart_contracts_v1 of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_smart_contracts_v1 of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._use_smart_contracts_v1
+
+    @use_smart_contracts_v1.setter
+    def use_smart_contracts_v1(self, use_smart_contracts_v1):
+        """Sets the use_smart_contracts_v1 of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param use_smart_contracts_v1: The use_smart_contracts_v1 of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._use_smart_contracts_v1 = use_smart_contracts_v1
 
     @property
     def validations_allowed(self):
