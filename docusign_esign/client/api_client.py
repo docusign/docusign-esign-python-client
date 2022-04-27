@@ -804,16 +804,18 @@ class ApiClient(object):
             self.oauth_host_name = oauth_host_name
             return
 
-        if not oauth_host_name:
-            raise ArgumentException('oAuthBasePath cannot be empty')
+        if not self.base_path:
+            raise ArgumentException('Unable to infer oauth_host_name without base_path set')
 
         # Derive OAuth Base Path if not given
         if self.base_path.startswith("https://demo") or self.base_path.startswith("http://demo"):
             self.oauth_host_name = OAuth.DEMO_OAUTH_BASE_PATH
         elif self.base_path.startswith("https://stage") or self.base_path.startswith("http://stage"):
             self.oauth_host_name = OAuth.STAGE_OAUTH_BASE_PATH
-        else:
+        elif self.base_path.startswith("https://docusign") or self.base_path.startswith("http://docusign"):
             self.oauth_host_name = OAuth.PRODUCTION_OAUTH_BASE_PATH
+
+        raise ArgumentException('Unable to infer oauth_host_name from unknown base_path')
 
     def set_access_token(self, token_obj):
         """
