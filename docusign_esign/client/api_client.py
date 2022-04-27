@@ -756,7 +756,7 @@ class ApiClient(object):
             raise ArgumentException("Cannot find a valid access token."
                                     " Make sure OAuth is configured before you try again.")
         if not self.oauth_host_name:
-            raise ArgumentException("oAuthBasePath cannot be empty")
+            raise ArgumentException("The oauth_host_name property has not been set")
 
         resource_path = '/oauth/userinfo'
         headers = {"Authorization": "Bearer " + access_token}
@@ -774,6 +774,8 @@ class ApiClient(object):
         """
         if not client_id or not client_secret or not code:
             raise ArgumentException
+        if not self.oauth_host_name:
+            raise ArgumentException("The oauth_host_name property has not been set")
         url = "https://{0}/oauth/token".format(self.oauth_host_name)
         integrator_and_secret_key = b"Basic " + base64.b64encode(str.encode("{}:{}".format(client_id, client_secret)))
         headers = {
