@@ -679,6 +679,7 @@ class ApiClient(object):
             raise ArgumentException("Private key not supplied or is invalid!")
         if not user_id:
             raise ArgumentException("User Id not supplied or is invalid!")
+        # TODO: Make oauth_host_name optional and default to the instance property.
         if not oauth_host_name:
             raise ArgumentException("oAuthBasePath cannot be empty")
 
@@ -720,6 +721,7 @@ class ApiClient(object):
 
         if not private_key_bytes:
             raise ArgumentException("Private key not supplied or is invalid!")
+        # TODO: Make oauth_host_name optional and default to the instance property.
         if not oauth_host_name:
             raise ArgumentException("oAuthBasePath cannot be empty")
 
