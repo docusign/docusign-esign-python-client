@@ -40,11 +40,13 @@ class NewAccountDefinition(object):
         'direct_debit_processor_information': 'DirectDebitProcessorInformation',
         'distributor_code': 'str',
         'distributor_password': 'str',
+        'enable_pre_auth': 'str',
         'envelope_partition_id': 'str',
         'initial_user': 'UserInformation',
         'payment_method': 'str',
         'payment_processor_information': 'PaymentProcessorInformation',
         'plan_information': 'PlanInformation',
+        'process_payment': 'str',
         'referral_information': 'ReferralInformation',
         'social_account_information': 'SocialAccountInformation',
         'tax_exempt_id': 'str'
@@ -58,11 +60,13 @@ class NewAccountDefinition(object):
         'direct_debit_processor_information': 'directDebitProcessorInformation',
         'distributor_code': 'distributorCode',
         'distributor_password': 'distributorPassword',
+        'enable_pre_auth': 'enablePreAuth',
         'envelope_partition_id': 'envelopePartitionId',
         'initial_user': 'initialUser',
         'payment_method': 'paymentMethod',
         'payment_processor_information': 'paymentProcessorInformation',
         'plan_information': 'planInformation',
+        'process_payment': 'processPayment',
         'referral_information': 'referralInformation',
         'social_account_information': 'socialAccountInformation',
         'tax_exempt_id': 'taxExemptId'
@@ -81,11 +85,13 @@ class NewAccountDefinition(object):
         self._direct_debit_processor_information = None
         self._distributor_code = None
         self._distributor_password = None
+        self._enable_pre_auth = None
         self._envelope_partition_id = None
         self._initial_user = None
         self._payment_method = None
         self._payment_processor_information = None
         self._plan_information = None
+        self._process_payment = None
         self._referral_information = None
         self._social_account_information = None
         self._tax_exempt_id = None
@@ -98,11 +104,13 @@ class NewAccountDefinition(object):
         setattr(self, "_{}".format('direct_debit_processor_information'), kwargs.get('direct_debit_processor_information', None))
         setattr(self, "_{}".format('distributor_code'), kwargs.get('distributor_code', None))
         setattr(self, "_{}".format('distributor_password'), kwargs.get('distributor_password', None))
+        setattr(self, "_{}".format('enable_pre_auth'), kwargs.get('enable_pre_auth', None))
         setattr(self, "_{}".format('envelope_partition_id'), kwargs.get('envelope_partition_id', None))
         setattr(self, "_{}".format('initial_user'), kwargs.get('initial_user', None))
         setattr(self, "_{}".format('payment_method'), kwargs.get('payment_method', None))
         setattr(self, "_{}".format('payment_processor_information'), kwargs.get('payment_processor_information', None))
         setattr(self, "_{}".format('plan_information'), kwargs.get('plan_information', None))
+        setattr(self, "_{}".format('process_payment'), kwargs.get('process_payment', None))
         setattr(self, "_{}".format('referral_information'), kwargs.get('referral_information', None))
         setattr(self, "_{}".format('social_account_information'), kwargs.get('social_account_information', None))
         setattr(self, "_{}".format('tax_exempt_id'), kwargs.get('tax_exempt_id', None))
@@ -261,6 +269,29 @@ class NewAccountDefinition(object):
         self._distributor_password = distributor_password
 
     @property
+    def enable_pre_auth(self):
+        """Gets the enable_pre_auth of this NewAccountDefinition.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_pre_auth of this NewAccountDefinition.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_pre_auth
+
+    @enable_pre_auth.setter
+    def enable_pre_auth(self, enable_pre_auth):
+        """Sets the enable_pre_auth of this NewAccountDefinition.
+
+          # noqa: E501
+
+        :param enable_pre_auth: The enable_pre_auth of this NewAccountDefinition.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_pre_auth = enable_pre_auth
+
+    @property
     def envelope_partition_id(self):
         """Gets the envelope_partition_id of this NewAccountDefinition.  # noqa: E501
 
@@ -368,6 +399,29 @@ class NewAccountDefinition(object):
         """
 
         self._plan_information = plan_information
+
+    @property
+    def process_payment(self):
+        """Gets the process_payment of this NewAccountDefinition.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The process_payment of this NewAccountDefinition.  # noqa: E501
+        :rtype: str
+        """
+        return self._process_payment
+
+    @process_payment.setter
+    def process_payment(self, process_payment):
+        """Sets the process_payment of this NewAccountDefinition.
+
+          # noqa: E501
+
+        :param process_payment: The process_payment of this NewAccountDefinition.  # noqa: E501
+        :type: str
+        """
+
+        self._process_payment = process_payment
 
     @property
     def referral_information(self):

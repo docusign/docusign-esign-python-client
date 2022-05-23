@@ -2241,7 +2241,7 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
-        :return: ProofServiceViewLink
+        :return: IdEvidenceViewLink
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2268,7 +2268,7 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
-        :return: ProofServiceViewLink
+        :return: IdEvidenceViewLink
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2332,7 +2332,7 @@ class EnvelopesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ProofServiceViewLink',
+                                        response_type='IdEvidenceViewLink',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2357,7 +2357,7 @@ class EnvelopesApi(object):
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
         :param str token_scopes: (required)
-        :return: ProofServiceResourceToken
+        :return: IdEvidenceResourceToken
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2385,7 +2385,7 @@ class EnvelopesApi(object):
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
         :param str token_scopes: (required)
-        :return: ProofServiceResourceToken
+        :return: IdEvidenceResourceToken
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2454,7 +2454,7 @@ class EnvelopesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='ProofServiceResourceToken',
+                                        response_type='IdEvidenceResourceToken',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

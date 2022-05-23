@@ -273,6 +273,8 @@ from docusign_esign.models.group_information import GroupInformation
 from docusign_esign.models.id_check_configuration import IdCheckConfiguration
 from docusign_esign.models.id_check_information_input import IdCheckInformationInput
 from docusign_esign.models.id_check_security_step import IdCheckSecurityStep
+from docusign_esign.models.id_evidence_resource_token import IdEvidenceResourceToken
+from docusign_esign.models.id_evidence_view_link import IdEvidenceViewLink
 from docusign_esign.models.in_person_signer import InPersonSigner
 from docusign_esign.models.initial_here import InitialHere
 from docusign_esign.models.inline_template import InlineTemplate
@@ -327,6 +329,7 @@ from docusign_esign.models.offline_attributes import OfflineAttributes
 from docusign_esign.models.page import Page
 from docusign_esign.models.page_images import PageImages
 from docusign_esign.models.page_request import PageRequest
+from docusign_esign.models.participant import Participant
 from docusign_esign.models.path_extended_element import PathExtendedElement
 from docusign_esign.models.pay_pal_legacy_settings import PayPalLegacySettings
 from docusign_esign.models.payment_details import PaymentDetails
@@ -353,8 +356,6 @@ from docusign_esign.models.power_forms_request import PowerFormsRequest
 from docusign_esign.models.power_forms_response import PowerFormsResponse
 from docusign_esign.models.prefill_form_data import PrefillFormData
 from docusign_esign.models.prefill_tabs import PrefillTabs
-from docusign_esign.models.proof_service_resource_token import ProofServiceResourceToken
-from docusign_esign.models.proof_service_view_link import ProofServiceViewLink
 from docusign_esign.models.property_metadata import PropertyMetadata
 from docusign_esign.models.province import Province
 from docusign_esign.models.provisioning_information import ProvisioningInformation
@@ -390,7 +391,6 @@ from docusign_esign.models.recipients import Recipients
 from docusign_esign.models.recipients_update_summary import RecipientsUpdateSummary
 from docusign_esign.models.referral_information import ReferralInformation
 from docusign_esign.models.reminders import Reminders
-from docusign_esign.models.reserved_domain_existence import ReservedDomainExistence
 from docusign_esign.models.resource_information import ResourceInformation
 from docusign_esign.models.return_url_request import ReturnUrlRequest
 from docusign_esign.models.scheduled_sending import ScheduledSending

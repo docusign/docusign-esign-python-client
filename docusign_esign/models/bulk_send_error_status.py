@@ -34,12 +34,14 @@ class BulkSendErrorStatus(object):
     """
     swagger_types = {
         'created': 'str',
+        'envelope_id': 'str',
         'error_message': 'str',
         'recipient_emails': 'list[str]'
     }
 
     attribute_map = {
         'created': 'created',
+        'envelope_id': 'envelopeId',
         'error_message': 'errorMessage',
         'recipient_emails': 'recipientEmails'
     }
@@ -51,11 +53,13 @@ class BulkSendErrorStatus(object):
         self._configuration = _configuration
 
         self._created = None
+        self._envelope_id = None
         self._error_message = None
         self._recipient_emails = None
         self.discriminator = None
 
         setattr(self, "_{}".format('created'), kwargs.get('created', None))
+        setattr(self, "_{}".format('envelope_id'), kwargs.get('envelope_id', None))
         setattr(self, "_{}".format('error_message'), kwargs.get('error_message', None))
         setattr(self, "_{}".format('recipient_emails'), kwargs.get('recipient_emails', None))
 
@@ -81,6 +85,29 @@ class BulkSendErrorStatus(object):
         """
 
         self._created = created
+
+    @property
+    def envelope_id(self):
+        """Gets the envelope_id of this BulkSendErrorStatus.  # noqa: E501
+
+        The envelope ID of the envelope status that failed to post.  # noqa: E501
+
+        :return: The envelope_id of this BulkSendErrorStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._envelope_id
+
+    @envelope_id.setter
+    def envelope_id(self, envelope_id):
+        """Sets the envelope_id of this BulkSendErrorStatus.
+
+        The envelope ID of the envelope status that failed to post.  # noqa: E501
+
+        :param envelope_id: The envelope_id of this BulkSendErrorStatus.  # noqa: E501
+        :type: str
+        """
+
+        self._envelope_id = envelope_id
 
     @property
     def error_message(self):

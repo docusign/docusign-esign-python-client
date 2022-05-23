@@ -36,6 +36,7 @@ class ConnectCustomConfiguration(object):
         'allow_envelope_publish': 'str',
         'allow_salesforce_publish': 'str',
         'all_users': 'str',
+        'all_users_except': 'str',
         'configuration_type': 'str',
         'connect_id': 'str',
         'delivery_mode': 'str',
@@ -45,6 +46,7 @@ class ConnectCustomConfiguration(object):
         'events': 'list[str]',
         'external_folder_id': 'str',
         'external_folder_label': 'str',
+        'group_ids': 'list[str]',
         'include_certificate_of_completion': 'str',
         'include_cert_soap_header': 'str',
         'include_document_fields': 'str',
@@ -77,6 +79,7 @@ class ConnectCustomConfiguration(object):
         'allow_envelope_publish': 'allowEnvelopePublish',
         'allow_salesforce_publish': 'allowSalesforcePublish',
         'all_users': 'allUsers',
+        'all_users_except': 'allUsersExcept',
         'configuration_type': 'configurationType',
         'connect_id': 'connectId',
         'delivery_mode': 'deliveryMode',
@@ -86,6 +89,7 @@ class ConnectCustomConfiguration(object):
         'events': 'events',
         'external_folder_id': 'externalFolderId',
         'external_folder_label': 'externalFolderLabel',
+        'group_ids': 'groupIds',
         'include_certificate_of_completion': 'includeCertificateOfCompletion',
         'include_cert_soap_header': 'includeCertSoapHeader',
         'include_document_fields': 'includeDocumentFields',
@@ -123,6 +127,7 @@ class ConnectCustomConfiguration(object):
         self._allow_envelope_publish = None
         self._allow_salesforce_publish = None
         self._all_users = None
+        self._all_users_except = None
         self._configuration_type = None
         self._connect_id = None
         self._delivery_mode = None
@@ -132,6 +137,7 @@ class ConnectCustomConfiguration(object):
         self._events = None
         self._external_folder_id = None
         self._external_folder_label = None
+        self._group_ids = None
         self._include_certificate_of_completion = None
         self._include_cert_soap_header = None
         self._include_document_fields = None
@@ -163,6 +169,7 @@ class ConnectCustomConfiguration(object):
         setattr(self, "_{}".format('allow_envelope_publish'), kwargs.get('allow_envelope_publish', None))
         setattr(self, "_{}".format('allow_salesforce_publish'), kwargs.get('allow_salesforce_publish', None))
         setattr(self, "_{}".format('all_users'), kwargs.get('all_users', None))
+        setattr(self, "_{}".format('all_users_except'), kwargs.get('all_users_except', None))
         setattr(self, "_{}".format('configuration_type'), kwargs.get('configuration_type', None))
         setattr(self, "_{}".format('connect_id'), kwargs.get('connect_id', None))
         setattr(self, "_{}".format('delivery_mode'), kwargs.get('delivery_mode', None))
@@ -172,6 +179,7 @@ class ConnectCustomConfiguration(object):
         setattr(self, "_{}".format('events'), kwargs.get('events', None))
         setattr(self, "_{}".format('external_folder_id'), kwargs.get('external_folder_id', None))
         setattr(self, "_{}".format('external_folder_label'), kwargs.get('external_folder_label', None))
+        setattr(self, "_{}".format('group_ids'), kwargs.get('group_ids', None))
         setattr(self, "_{}".format('include_certificate_of_completion'), kwargs.get('include_certificate_of_completion', None))
         setattr(self, "_{}".format('include_cert_soap_header'), kwargs.get('include_cert_soap_header', None))
         setattr(self, "_{}".format('include_document_fields'), kwargs.get('include_document_fields', None))
@@ -267,6 +275,29 @@ class ConnectCustomConfiguration(object):
         """
 
         self._all_users = all_users
+
+    @property
+    def all_users_except(self):
+        """Gets the all_users_except of this ConnectCustomConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The all_users_except of this ConnectCustomConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._all_users_except
+
+    @all_users_except.setter
+    def all_users_except(self, all_users_except):
+        """Sets the all_users_except of this ConnectCustomConfiguration.
+
+          # noqa: E501
+
+        :param all_users_except: The all_users_except of this ConnectCustomConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._all_users_except = all_users_except
 
     @property
     def configuration_type(self):
@@ -472,6 +503,29 @@ class ConnectCustomConfiguration(object):
         """
 
         self._external_folder_label = external_folder_label
+
+    @property
+    def group_ids(self):
+        """Gets the group_ids of this ConnectCustomConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The group_ids of this ConnectCustomConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._group_ids
+
+    @group_ids.setter
+    def group_ids(self, group_ids):
+        """Sets the group_ids of this ConnectCustomConfiguration.
+
+          # noqa: E501
+
+        :param group_ids: The group_ids of this ConnectCustomConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._group_ids = group_ids
 
     @property
     def include_certificate_of_completion(self):
