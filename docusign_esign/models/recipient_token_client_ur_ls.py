@@ -33,9 +33,29 @@ class RecipientTokenClientURLs(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'on_access_code_failed': 'str',
+        'on_cancel': 'str',
+        'on_decline': 'str',
+        'on_exception': 'str',
+        'on_fax_pending': 'str',
+        'on_id_check_failed': 'str',
+        'on_session_timeout': 'str',
+        'on_signing_complete': 'str',
+        'on_ttl_expired': 'str',
+        'on_viewing_complete': 'str'
     }
 
     attribute_map = {
+        'on_access_code_failed': 'OnAccessCodeFailed',
+        'on_cancel': 'OnCancel',
+        'on_decline': 'OnDecline',
+        'on_exception': 'OnException',
+        'on_fax_pending': 'OnFaxPending',
+        'on_id_check_failed': 'OnIdCheckFailed',
+        'on_session_timeout': 'OnSessionTimeout',
+        'on_signing_complete': 'OnSigningComplete',
+        'on_ttl_expired': 'OnTTLExpired',
+        'on_viewing_complete': 'OnViewingComplete'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -43,7 +63,259 @@ class RecipientTokenClientURLs(object):
         if _configuration is None:
             _configuration = Configuration()
         self._configuration = _configuration
+
+        self._on_access_code_failed = None
+        self._on_cancel = None
+        self._on_decline = None
+        self._on_exception = None
+        self._on_fax_pending = None
+        self._on_id_check_failed = None
+        self._on_session_timeout = None
+        self._on_signing_complete = None
+        self._on_ttl_expired = None
+        self._on_viewing_complete = None
         self.discriminator = None
+
+        setattr(self, "_{}".format('on_access_code_failed'), kwargs.get('on_access_code_failed', None))
+        setattr(self, "_{}".format('on_cancel'), kwargs.get('on_cancel', None))
+        setattr(self, "_{}".format('on_decline'), kwargs.get('on_decline', None))
+        setattr(self, "_{}".format('on_exception'), kwargs.get('on_exception', None))
+        setattr(self, "_{}".format('on_fax_pending'), kwargs.get('on_fax_pending', None))
+        setattr(self, "_{}".format('on_id_check_failed'), kwargs.get('on_id_check_failed', None))
+        setattr(self, "_{}".format('on_session_timeout'), kwargs.get('on_session_timeout', None))
+        setattr(self, "_{}".format('on_signing_complete'), kwargs.get('on_signing_complete', None))
+        setattr(self, "_{}".format('on_ttl_expired'), kwargs.get('on_ttl_expired', None))
+        setattr(self, "_{}".format('on_viewing_complete'), kwargs.get('on_viewing_complete', None))
+
+    @property
+    def on_access_code_failed(self):
+        """Gets the on_access_code_failed of this RecipientTokenClientURLs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The on_access_code_failed of this RecipientTokenClientURLs.  # noqa: E501
+        :rtype: str
+        """
+        return self._on_access_code_failed
+
+    @on_access_code_failed.setter
+    def on_access_code_failed(self, on_access_code_failed):
+        """Sets the on_access_code_failed of this RecipientTokenClientURLs.
+
+          # noqa: E501
+
+        :param on_access_code_failed: The on_access_code_failed of this RecipientTokenClientURLs.  # noqa: E501
+        :type: str
+        """
+
+        self._on_access_code_failed = on_access_code_failed
+
+    @property
+    def on_cancel(self):
+        """Gets the on_cancel of this RecipientTokenClientURLs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The on_cancel of this RecipientTokenClientURLs.  # noqa: E501
+        :rtype: str
+        """
+        return self._on_cancel
+
+    @on_cancel.setter
+    def on_cancel(self, on_cancel):
+        """Sets the on_cancel of this RecipientTokenClientURLs.
+
+          # noqa: E501
+
+        :param on_cancel: The on_cancel of this RecipientTokenClientURLs.  # noqa: E501
+        :type: str
+        """
+
+        self._on_cancel = on_cancel
+
+    @property
+    def on_decline(self):
+        """Gets the on_decline of this RecipientTokenClientURLs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The on_decline of this RecipientTokenClientURLs.  # noqa: E501
+        :rtype: str
+        """
+        return self._on_decline
+
+    @on_decline.setter
+    def on_decline(self, on_decline):
+        """Sets the on_decline of this RecipientTokenClientURLs.
+
+          # noqa: E501
+
+        :param on_decline: The on_decline of this RecipientTokenClientURLs.  # noqa: E501
+        :type: str
+        """
+
+        self._on_decline = on_decline
+
+    @property
+    def on_exception(self):
+        """Gets the on_exception of this RecipientTokenClientURLs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The on_exception of this RecipientTokenClientURLs.  # noqa: E501
+        :rtype: str
+        """
+        return self._on_exception
+
+    @on_exception.setter
+    def on_exception(self, on_exception):
+        """Sets the on_exception of this RecipientTokenClientURLs.
+
+          # noqa: E501
+
+        :param on_exception: The on_exception of this RecipientTokenClientURLs.  # noqa: E501
+        :type: str
+        """
+
+        self._on_exception = on_exception
+
+    @property
+    def on_fax_pending(self):
+        """Gets the on_fax_pending of this RecipientTokenClientURLs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The on_fax_pending of this RecipientTokenClientURLs.  # noqa: E501
+        :rtype: str
+        """
+        return self._on_fax_pending
+
+    @on_fax_pending.setter
+    def on_fax_pending(self, on_fax_pending):
+        """Sets the on_fax_pending of this RecipientTokenClientURLs.
+
+          # noqa: E501
+
+        :param on_fax_pending: The on_fax_pending of this RecipientTokenClientURLs.  # noqa: E501
+        :type: str
+        """
+
+        self._on_fax_pending = on_fax_pending
+
+    @property
+    def on_id_check_failed(self):
+        """Gets the on_id_check_failed of this RecipientTokenClientURLs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The on_id_check_failed of this RecipientTokenClientURLs.  # noqa: E501
+        :rtype: str
+        """
+        return self._on_id_check_failed
+
+    @on_id_check_failed.setter
+    def on_id_check_failed(self, on_id_check_failed):
+        """Sets the on_id_check_failed of this RecipientTokenClientURLs.
+
+          # noqa: E501
+
+        :param on_id_check_failed: The on_id_check_failed of this RecipientTokenClientURLs.  # noqa: E501
+        :type: str
+        """
+
+        self._on_id_check_failed = on_id_check_failed
+
+    @property
+    def on_session_timeout(self):
+        """Gets the on_session_timeout of this RecipientTokenClientURLs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The on_session_timeout of this RecipientTokenClientURLs.  # noqa: E501
+        :rtype: str
+        """
+        return self._on_session_timeout
+
+    @on_session_timeout.setter
+    def on_session_timeout(self, on_session_timeout):
+        """Sets the on_session_timeout of this RecipientTokenClientURLs.
+
+          # noqa: E501
+
+        :param on_session_timeout: The on_session_timeout of this RecipientTokenClientURLs.  # noqa: E501
+        :type: str
+        """
+
+        self._on_session_timeout = on_session_timeout
+
+    @property
+    def on_signing_complete(self):
+        """Gets the on_signing_complete of this RecipientTokenClientURLs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The on_signing_complete of this RecipientTokenClientURLs.  # noqa: E501
+        :rtype: str
+        """
+        return self._on_signing_complete
+
+    @on_signing_complete.setter
+    def on_signing_complete(self, on_signing_complete):
+        """Sets the on_signing_complete of this RecipientTokenClientURLs.
+
+          # noqa: E501
+
+        :param on_signing_complete: The on_signing_complete of this RecipientTokenClientURLs.  # noqa: E501
+        :type: str
+        """
+
+        self._on_signing_complete = on_signing_complete
+
+    @property
+    def on_ttl_expired(self):
+        """Gets the on_ttl_expired of this RecipientTokenClientURLs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The on_ttl_expired of this RecipientTokenClientURLs.  # noqa: E501
+        :rtype: str
+        """
+        return self._on_ttl_expired
+
+    @on_ttl_expired.setter
+    def on_ttl_expired(self, on_ttl_expired):
+        """Sets the on_ttl_expired of this RecipientTokenClientURLs.
+
+          # noqa: E501
+
+        :param on_ttl_expired: The on_ttl_expired of this RecipientTokenClientURLs.  # noqa: E501
+        :type: str
+        """
+
+        self._on_ttl_expired = on_ttl_expired
+
+    @property
+    def on_viewing_complete(self):
+        """Gets the on_viewing_complete of this RecipientTokenClientURLs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The on_viewing_complete of this RecipientTokenClientURLs.  # noqa: E501
+        :rtype: str
+        """
+        return self._on_viewing_complete
+
+    @on_viewing_complete.setter
+    def on_viewing_complete(self, on_viewing_complete):
+        """Sets the on_viewing_complete of this RecipientTokenClientURLs.
+
+          # noqa: E501
+
+        :param on_viewing_complete: The on_viewing_complete of this RecipientTokenClientURLs.  # noqa: E501
+        :type: str
+        """
+
+        self._on_viewing_complete = on_viewing_complete
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,14 +33,34 @@ class BulkSendEnvelopesInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'authoritative_copy': 'str',
         'completed': 'str',
+        'correct': 'str',
+        'created': 'str',
         'declined': 'str',
+        'deleted': 'str',
+        'delivered': 'str',
+        'digital_signatures_pending': 'str',
+        'sent': 'str',
+        'signed': 'str',
+        'timed_out': 'str',
+        'transfer_completed': 'str',
         'voided': 'str'
     }
 
     attribute_map = {
+        'authoritative_copy': 'authoritativeCopy',
         'completed': 'completed',
+        'correct': 'correct',
+        'created': 'created',
         'declined': 'declined',
+        'deleted': 'deleted',
+        'delivered': 'delivered',
+        'digital_signatures_pending': 'digitalSignaturesPending',
+        'sent': 'sent',
+        'signed': 'signed',
+        'timed_out': 'timedOut',
+        'transfer_completed': 'transferCompleted',
         'voided': 'voided'
     }
 
@@ -50,14 +70,57 @@ class BulkSendEnvelopesInfo(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._authoritative_copy = None
         self._completed = None
+        self._correct = None
+        self._created = None
         self._declined = None
+        self._deleted = None
+        self._delivered = None
+        self._digital_signatures_pending = None
+        self._sent = None
+        self._signed = None
+        self._timed_out = None
+        self._transfer_completed = None
         self._voided = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('authoritative_copy'), kwargs.get('authoritative_copy', None))
         setattr(self, "_{}".format('completed'), kwargs.get('completed', None))
+        setattr(self, "_{}".format('correct'), kwargs.get('correct', None))
+        setattr(self, "_{}".format('created'), kwargs.get('created', None))
         setattr(self, "_{}".format('declined'), kwargs.get('declined', None))
+        setattr(self, "_{}".format('deleted'), kwargs.get('deleted', None))
+        setattr(self, "_{}".format('delivered'), kwargs.get('delivered', None))
+        setattr(self, "_{}".format('digital_signatures_pending'), kwargs.get('digital_signatures_pending', None))
+        setattr(self, "_{}".format('sent'), kwargs.get('sent', None))
+        setattr(self, "_{}".format('signed'), kwargs.get('signed', None))
+        setattr(self, "_{}".format('timed_out'), kwargs.get('timed_out', None))
+        setattr(self, "_{}".format('transfer_completed'), kwargs.get('transfer_completed', None))
         setattr(self, "_{}".format('voided'), kwargs.get('voided', None))
+
+    @property
+    def authoritative_copy(self):
+        """Gets the authoritative_copy of this BulkSendEnvelopesInfo.  # noqa: E501
+
+        Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.  # noqa: E501
+
+        :return: The authoritative_copy of this BulkSendEnvelopesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._authoritative_copy
+
+    @authoritative_copy.setter
+    def authoritative_copy(self, authoritative_copy):
+        """Sets the authoritative_copy of this BulkSendEnvelopesInfo.
+
+        Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.  # noqa: E501
+
+        :param authoritative_copy: The authoritative_copy of this BulkSendEnvelopesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._authoritative_copy = authoritative_copy
 
     @property
     def completed(self):
@@ -83,6 +146,52 @@ class BulkSendEnvelopesInfo(object):
         self._completed = completed
 
     @property
+    def correct(self):
+        """Gets the correct of this BulkSendEnvelopesInfo.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The correct of this BulkSendEnvelopesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._correct
+
+    @correct.setter
+    def correct(self, correct):
+        """Sets the correct of this BulkSendEnvelopesInfo.
+
+          # noqa: E501
+
+        :param correct: The correct of this BulkSendEnvelopesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._correct = correct
+
+    @property
+    def created(self):
+        """Gets the created of this BulkSendEnvelopesInfo.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The created of this BulkSendEnvelopesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._created
+
+    @created.setter
+    def created(self, created):
+        """Sets the created of this BulkSendEnvelopesInfo.
+
+          # noqa: E501
+
+        :param created: The created of this BulkSendEnvelopesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._created = created
+
+    @property
     def declined(self):
         """Gets the declined of this BulkSendEnvelopesInfo.  # noqa: E501
 
@@ -104,6 +213,167 @@ class BulkSendEnvelopesInfo(object):
         """
 
         self._declined = declined
+
+    @property
+    def deleted(self):
+        """Gets the deleted of this BulkSendEnvelopesInfo.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The deleted of this BulkSendEnvelopesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._deleted
+
+    @deleted.setter
+    def deleted(self, deleted):
+        """Sets the deleted of this BulkSendEnvelopesInfo.
+
+          # noqa: E501
+
+        :param deleted: The deleted of this BulkSendEnvelopesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._deleted = deleted
+
+    @property
+    def delivered(self):
+        """Gets the delivered of this BulkSendEnvelopesInfo.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The delivered of this BulkSendEnvelopesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._delivered
+
+    @delivered.setter
+    def delivered(self, delivered):
+        """Sets the delivered of this BulkSendEnvelopesInfo.
+
+          # noqa: E501
+
+        :param delivered: The delivered of this BulkSendEnvelopesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._delivered = delivered
+
+    @property
+    def digital_signatures_pending(self):
+        """Gets the digital_signatures_pending of this BulkSendEnvelopesInfo.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The digital_signatures_pending of this BulkSendEnvelopesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._digital_signatures_pending
+
+    @digital_signatures_pending.setter
+    def digital_signatures_pending(self, digital_signatures_pending):
+        """Sets the digital_signatures_pending of this BulkSendEnvelopesInfo.
+
+          # noqa: E501
+
+        :param digital_signatures_pending: The digital_signatures_pending of this BulkSendEnvelopesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._digital_signatures_pending = digital_signatures_pending
+
+    @property
+    def sent(self):
+        """Gets the sent of this BulkSendEnvelopesInfo.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sent of this BulkSendEnvelopesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._sent
+
+    @sent.setter
+    def sent(self, sent):
+        """Sets the sent of this BulkSendEnvelopesInfo.
+
+          # noqa: E501
+
+        :param sent: The sent of this BulkSendEnvelopesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._sent = sent
+
+    @property
+    def signed(self):
+        """Gets the signed of this BulkSendEnvelopesInfo.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signed of this BulkSendEnvelopesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._signed
+
+    @signed.setter
+    def signed(self, signed):
+        """Sets the signed of this BulkSendEnvelopesInfo.
+
+          # noqa: E501
+
+        :param signed: The signed of this BulkSendEnvelopesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._signed = signed
+
+    @property
+    def timed_out(self):
+        """Gets the timed_out of this BulkSendEnvelopesInfo.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The timed_out of this BulkSendEnvelopesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._timed_out
+
+    @timed_out.setter
+    def timed_out(self, timed_out):
+        """Sets the timed_out of this BulkSendEnvelopesInfo.
+
+          # noqa: E501
+
+        :param timed_out: The timed_out of this BulkSendEnvelopesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._timed_out = timed_out
+
+    @property
+    def transfer_completed(self):
+        """Gets the transfer_completed of this BulkSendEnvelopesInfo.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The transfer_completed of this BulkSendEnvelopesInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._transfer_completed
+
+    @transfer_completed.setter
+    def transfer_completed(self, transfer_completed):
+        """Sets the transfer_completed of this BulkSendEnvelopesInfo.
+
+          # noqa: E501
+
+        :param transfer_completed: The transfer_completed of this BulkSendEnvelopesInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._transfer_completed = transfer_completed
 
     @property
     def voided(self):

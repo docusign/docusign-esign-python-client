@@ -33,13 +33,17 @@ class BillingInvoicesSummary(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'account_balance': 'str',
         'billing_invoices': 'list[BillingInvoice]',
+        'currency_code': 'str',
         'past_due_balance': 'str',
         'payment_allowed': 'str'
     }
 
     attribute_map = {
+        'account_balance': 'accountBalance',
         'billing_invoices': 'billingInvoices',
+        'currency_code': 'currencyCode',
         'past_due_balance': 'pastDueBalance',
         'payment_allowed': 'paymentAllowed'
     }
@@ -50,14 +54,41 @@ class BillingInvoicesSummary(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._account_balance = None
         self._billing_invoices = None
+        self._currency_code = None
         self._past_due_balance = None
         self._payment_allowed = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('account_balance'), kwargs.get('account_balance', None))
         setattr(self, "_{}".format('billing_invoices'), kwargs.get('billing_invoices', None))
+        setattr(self, "_{}".format('currency_code'), kwargs.get('currency_code', None))
         setattr(self, "_{}".format('past_due_balance'), kwargs.get('past_due_balance', None))
         setattr(self, "_{}".format('payment_allowed'), kwargs.get('payment_allowed', None))
+
+    @property
+    def account_balance(self):
+        """Gets the account_balance of this BillingInvoicesSummary.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The account_balance of this BillingInvoicesSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._account_balance
+
+    @account_balance.setter
+    def account_balance(self, account_balance):
+        """Sets the account_balance of this BillingInvoicesSummary.
+
+          # noqa: E501
+
+        :param account_balance: The account_balance of this BillingInvoicesSummary.  # noqa: E501
+        :type: str
+        """
+
+        self._account_balance = account_balance
 
     @property
     def billing_invoices(self):
@@ -81,6 +112,29 @@ class BillingInvoicesSummary(object):
         """
 
         self._billing_invoices = billing_invoices
+
+    @property
+    def currency_code(self):
+        """Gets the currency_code of this BillingInvoicesSummary.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The currency_code of this BillingInvoicesSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._currency_code
+
+    @currency_code.setter
+    def currency_code(self, currency_code):
+        """Sets the currency_code of this BillingInvoicesSummary.
+
+          # noqa: E501
+
+        :param currency_code: The currency_code of this BillingInvoicesSummary.  # noqa: E501
+        :type: str
+        """
+
+        self._currency_code = currency_code
 
     @property
     def past_due_balance(self):

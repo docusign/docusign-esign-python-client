@@ -42,6 +42,7 @@ class TemplateRecipients(object):
         'in_person_signers': 'list[InPersonSigner]',
         'intermediaries': 'list[Intermediary]',
         'notaries': 'list[NotaryRecipient]',
+        'participants': 'list[Participant]',
         'recipient_count': 'str',
         'seals': 'list[SealSign]',
         'signers': 'list[Signer]',
@@ -58,6 +59,7 @@ class TemplateRecipients(object):
         'in_person_signers': 'inPersonSigners',
         'intermediaries': 'intermediaries',
         'notaries': 'notaries',
+        'participants': 'participants',
         'recipient_count': 'recipientCount',
         'seals': 'seals',
         'signers': 'signers',
@@ -79,6 +81,7 @@ class TemplateRecipients(object):
         self._in_person_signers = None
         self._intermediaries = None
         self._notaries = None
+        self._participants = None
         self._recipient_count = None
         self._seals = None
         self._signers = None
@@ -94,6 +97,7 @@ class TemplateRecipients(object):
         setattr(self, "_{}".format('in_person_signers'), kwargs.get('in_person_signers', None))
         setattr(self, "_{}".format('intermediaries'), kwargs.get('intermediaries', None))
         setattr(self, "_{}".format('notaries'), kwargs.get('notaries', None))
+        setattr(self, "_{}".format('participants'), kwargs.get('participants', None))
         setattr(self, "_{}".format('recipient_count'), kwargs.get('recipient_count', None))
         setattr(self, "_{}".format('seals'), kwargs.get('seals', None))
         setattr(self, "_{}".format('signers'), kwargs.get('signers', None))
@@ -303,6 +307,29 @@ class TemplateRecipients(object):
         """
 
         self._notaries = notaries
+
+    @property
+    def participants(self):
+        """Gets the participants of this TemplateRecipients.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The participants of this TemplateRecipients.  # noqa: E501
+        :rtype: list[Participant]
+        """
+        return self._participants
+
+    @participants.setter
+    def participants(self, participants):
+        """Sets the participants of this TemplateRecipients.
+
+          # noqa: E501
+
+        :param participants: The participants of this TemplateRecipients.  # noqa: E501
+        :type: list[Participant]
+        """
+
+        self._participants = participants
 
     @property
     def recipient_count(self):

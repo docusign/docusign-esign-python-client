@@ -233,6 +233,7 @@ class AccountSettingsInformation(object):
         'billing_address': 'AddressInformation',
         'billing_address_metadata': 'SettingsMetadata',
         'bulk_send': 'str',
+        'bulk_send_action_resend_limit': 'str',
         'bulk_send_max_copies_in_batch': 'str',
         'bulk_send_max_unprocessed_envelopes_count': 'str',
         'bulk_send_metadata': 'SettingsMetadata',
@@ -316,6 +317,7 @@ class AccountSettingsInformation(object):
         'enable_calculated_fields_metadata': 'SettingsMetadata',
         'enable_clickwraps': 'str',
         'enable_clickwraps_metadata': 'SettingsMetadata',
+        'enable_combined_pdf_download_for_sbs': 'str',
         'enable_comments_history_download_in_signing': 'str',
         'enable_comments_history_download_in_signing_metadata': 'SettingsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'str',
@@ -328,12 +330,16 @@ class AccountSettingsInformation(object):
         'enable_envelope_stamping_by_ds_admin_metadata': 'SettingsMetadata',
         'enable_esign_communities': 'str',
         'enable_esign_communities_metadata': 'SettingsMetadata',
+        'enable_id_fx_accountless_sms_auth_for_part11': 'str',
+        'enable_id_fx_accountless_sms_auth_for_part11_metadata': 'SettingsMetadata',
         'enable_id_fx_intuit_kba': 'str',
         'enable_id_fx_intuit_kba_metadata': 'SettingsMetadata',
         'enable_id_fx_phone_authentication': 'str',
         'enable_id_fx_phone_authentication_metadata': 'SettingsMetadata',
         'enable_in_browser_editor': 'str',
         'enable_in_browser_editor_metadata': 'SettingsMetadata',
+        'enable_key_terms_suggestions_by_document_type': 'str',
+        'enable_key_terms_suggestions_by_document_type_metadata': 'SettingsMetadata',
         'enable_payment_processing': 'str',
         'enable_payment_processing_metadata': 'SettingsMetadata',
         'enable_pdfa_conversion': 'str',
@@ -358,6 +364,8 @@ class AccountSettingsInformation(object):
         'enable_scheduled_release_metadata': 'SettingsMetadata',
         'enable_search': 'str',
         'enable_search_metadata': 'SettingsMetadata',
+        'enable_search_site_specific_api': 'str',
+        'enable_search_site_specific_api_metadata': 'SettingsMetadata',
         'enable_search_ui': 'str',
         'enable_search_ui_metadata': 'SettingsMetadata',
         'enable_sending_tags_font_settings': 'str',
@@ -829,6 +837,7 @@ class AccountSettingsInformation(object):
         'billing_address': 'billingAddress',
         'billing_address_metadata': 'billingAddressMetadata',
         'bulk_send': 'bulkSend',
+        'bulk_send_action_resend_limit': 'bulkSendActionResendLimit',
         'bulk_send_max_copies_in_batch': 'bulkSendMaxCopiesInBatch',
         'bulk_send_max_unprocessed_envelopes_count': 'bulkSendMaxUnprocessedEnvelopesCount',
         'bulk_send_metadata': 'bulkSendMetadata',
@@ -912,6 +921,7 @@ class AccountSettingsInformation(object):
         'enable_calculated_fields_metadata': 'enableCalculatedFieldsMetadata',
         'enable_clickwraps': 'enableClickwraps',
         'enable_clickwraps_metadata': 'enableClickwrapsMetadata',
+        'enable_combined_pdf_download_for_sbs': 'enableCombinedPDFDownloadForSBS',
         'enable_comments_history_download_in_signing': 'enableCommentsHistoryDownloadInSigning',
         'enable_comments_history_download_in_signing_metadata': 'enableCommentsHistoryDownloadInSigningMetadata',
         'enable_customer_satisfaction_metric_tracking': 'enableCustomerSatisfactionMetricTracking',
@@ -924,12 +934,16 @@ class AccountSettingsInformation(object):
         'enable_envelope_stamping_by_ds_admin_metadata': 'enableEnvelopeStampingByDSAdminMetadata',
         'enable_esign_communities': 'enableEsignCommunities',
         'enable_esign_communities_metadata': 'enableEsignCommunitiesMetadata',
+        'enable_id_fx_accountless_sms_auth_for_part11': 'enableIDFxAccountlessSMSAuthForPart11',
+        'enable_id_fx_accountless_sms_auth_for_part11_metadata': 'enableIDFxAccountlessSMSAuthForPart11Metadata',
         'enable_id_fx_intuit_kba': 'enableIDFxIntuitKBA',
         'enable_id_fx_intuit_kba_metadata': 'enableIDFxIntuitKBAMetadata',
         'enable_id_fx_phone_authentication': 'enableIDFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata': 'enableIDFxPhoneAuthenticationMetadata',
         'enable_in_browser_editor': 'enableInBrowserEditor',
         'enable_in_browser_editor_metadata': 'enableInBrowserEditorMetadata',
+        'enable_key_terms_suggestions_by_document_type': 'enableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata': 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_payment_processing': 'enablePaymentProcessing',
         'enable_payment_processing_metadata': 'enablePaymentProcessingMetadata',
         'enable_pdfa_conversion': 'enablePDFAConversion',
@@ -954,6 +968,8 @@ class AccountSettingsInformation(object):
         'enable_scheduled_release_metadata': 'enableScheduledReleaseMetadata',
         'enable_search': 'enableSearch',
         'enable_search_metadata': 'enableSearchMetadata',
+        'enable_search_site_specific_api': 'enableSearchSiteSpecificApi',
+        'enable_search_site_specific_api_metadata': 'enableSearchSiteSpecificApiMetadata',
         'enable_search_ui': 'enableSearchUI',
         'enable_search_ui_metadata': 'enableSearchUIMetadata',
         'enable_sending_tags_font_settings': 'enableSendingTagsFontSettings',
@@ -1430,6 +1446,7 @@ class AccountSettingsInformation(object):
         self._billing_address = None
         self._billing_address_metadata = None
         self._bulk_send = None
+        self._bulk_send_action_resend_limit = None
         self._bulk_send_max_copies_in_batch = None
         self._bulk_send_max_unprocessed_envelopes_count = None
         self._bulk_send_metadata = None
@@ -1513,6 +1530,7 @@ class AccountSettingsInformation(object):
         self._enable_calculated_fields_metadata = None
         self._enable_clickwraps = None
         self._enable_clickwraps_metadata = None
+        self._enable_combined_pdf_download_for_sbs = None
         self._enable_comments_history_download_in_signing = None
         self._enable_comments_history_download_in_signing_metadata = None
         self._enable_customer_satisfaction_metric_tracking = None
@@ -1525,12 +1543,16 @@ class AccountSettingsInformation(object):
         self._enable_envelope_stamping_by_ds_admin_metadata = None
         self._enable_esign_communities = None
         self._enable_esign_communities_metadata = None
+        self._enable_id_fx_accountless_sms_auth_for_part11 = None
+        self._enable_id_fx_accountless_sms_auth_for_part11_metadata = None
         self._enable_id_fx_intuit_kba = None
         self._enable_id_fx_intuit_kba_metadata = None
         self._enable_id_fx_phone_authentication = None
         self._enable_id_fx_phone_authentication_metadata = None
         self._enable_in_browser_editor = None
         self._enable_in_browser_editor_metadata = None
+        self._enable_key_terms_suggestions_by_document_type = None
+        self._enable_key_terms_suggestions_by_document_type_metadata = None
         self._enable_payment_processing = None
         self._enable_payment_processing_metadata = None
         self._enable_pdfa_conversion = None
@@ -1555,6 +1577,8 @@ class AccountSettingsInformation(object):
         self._enable_scheduled_release_metadata = None
         self._enable_search = None
         self._enable_search_metadata = None
+        self._enable_search_site_specific_api = None
+        self._enable_search_site_specific_api_metadata = None
         self._enable_search_ui = None
         self._enable_search_ui_metadata = None
         self._enable_sending_tags_font_settings = None
@@ -2025,6 +2049,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('billing_address'), kwargs.get('billing_address', None))
         setattr(self, "_{}".format('billing_address_metadata'), kwargs.get('billing_address_metadata', None))
         setattr(self, "_{}".format('bulk_send'), kwargs.get('bulk_send', None))
+        setattr(self, "_{}".format('bulk_send_action_resend_limit'), kwargs.get('bulk_send_action_resend_limit', None))
         setattr(self, "_{}".format('bulk_send_max_copies_in_batch'), kwargs.get('bulk_send_max_copies_in_batch', None))
         setattr(self, "_{}".format('bulk_send_max_unprocessed_envelopes_count'), kwargs.get('bulk_send_max_unprocessed_envelopes_count', None))
         setattr(self, "_{}".format('bulk_send_metadata'), kwargs.get('bulk_send_metadata', None))
@@ -2108,6 +2133,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_calculated_fields_metadata'), kwargs.get('enable_calculated_fields_metadata', None))
         setattr(self, "_{}".format('enable_clickwraps'), kwargs.get('enable_clickwraps', None))
         setattr(self, "_{}".format('enable_clickwraps_metadata'), kwargs.get('enable_clickwraps_metadata', None))
+        setattr(self, "_{}".format('enable_combined_pdf_download_for_sbs'), kwargs.get('enable_combined_pdf_download_for_sbs', None))
         setattr(self, "_{}".format('enable_comments_history_download_in_signing'), kwargs.get('enable_comments_history_download_in_signing', None))
         setattr(self, "_{}".format('enable_comments_history_download_in_signing_metadata'), kwargs.get('enable_comments_history_download_in_signing_metadata', None))
         setattr(self, "_{}".format('enable_customer_satisfaction_metric_tracking'), kwargs.get('enable_customer_satisfaction_metric_tracking', None))
@@ -2120,12 +2146,16 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_envelope_stamping_by_ds_admin_metadata'), kwargs.get('enable_envelope_stamping_by_ds_admin_metadata', None))
         setattr(self, "_{}".format('enable_esign_communities'), kwargs.get('enable_esign_communities', None))
         setattr(self, "_{}".format('enable_esign_communities_metadata'), kwargs.get('enable_esign_communities_metadata', None))
+        setattr(self, "_{}".format('enable_id_fx_accountless_sms_auth_for_part11'), kwargs.get('enable_id_fx_accountless_sms_auth_for_part11', None))
+        setattr(self, "_{}".format('enable_id_fx_accountless_sms_auth_for_part11_metadata'), kwargs.get('enable_id_fx_accountless_sms_auth_for_part11_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_intuit_kba'), kwargs.get('enable_id_fx_intuit_kba', None))
         setattr(self, "_{}".format('enable_id_fx_intuit_kba_metadata'), kwargs.get('enable_id_fx_intuit_kba_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_phone_authentication'), kwargs.get('enable_id_fx_phone_authentication', None))
         setattr(self, "_{}".format('enable_id_fx_phone_authentication_metadata'), kwargs.get('enable_id_fx_phone_authentication_metadata', None))
         setattr(self, "_{}".format('enable_in_browser_editor'), kwargs.get('enable_in_browser_editor', None))
         setattr(self, "_{}".format('enable_in_browser_editor_metadata'), kwargs.get('enable_in_browser_editor_metadata', None))
+        setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type'), kwargs.get('enable_key_terms_suggestions_by_document_type', None))
+        setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type_metadata'), kwargs.get('enable_key_terms_suggestions_by_document_type_metadata', None))
         setattr(self, "_{}".format('enable_payment_processing'), kwargs.get('enable_payment_processing', None))
         setattr(self, "_{}".format('enable_payment_processing_metadata'), kwargs.get('enable_payment_processing_metadata', None))
         setattr(self, "_{}".format('enable_pdfa_conversion'), kwargs.get('enable_pdfa_conversion', None))
@@ -2150,6 +2180,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_scheduled_release_metadata'), kwargs.get('enable_scheduled_release_metadata', None))
         setattr(self, "_{}".format('enable_search'), kwargs.get('enable_search', None))
         setattr(self, "_{}".format('enable_search_metadata'), kwargs.get('enable_search_metadata', None))
+        setattr(self, "_{}".format('enable_search_site_specific_api'), kwargs.get('enable_search_site_specific_api', None))
+        setattr(self, "_{}".format('enable_search_site_specific_api_metadata'), kwargs.get('enable_search_site_specific_api_metadata', None))
         setattr(self, "_{}".format('enable_search_ui'), kwargs.get('enable_search_ui', None))
         setattr(self, "_{}".format('enable_search_ui_metadata'), kwargs.get('enable_search_ui_metadata', None))
         setattr(self, "_{}".format('enable_sending_tags_font_settings'), kwargs.get('enable_sending_tags_font_settings', None))
@@ -4271,7 +4303,7 @@ class AccountSettingsInformation(object):
     def allow_in_person_electronic_notary(self):
         """Gets the allow_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
 
-          # noqa: E501
+        Account Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions  # noqa: E501
 
         :return: The allow_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
@@ -4282,7 +4314,7 @@ class AccountSettingsInformation(object):
     def allow_in_person_electronic_notary(self, allow_in_person_electronic_notary):
         """Sets the allow_in_person_electronic_notary of this AccountSettingsInformation.
 
-          # noqa: E501
+        Account Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions  # noqa: E501
 
         :param allow_in_person_electronic_notary: The allow_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
         :type: str
@@ -4294,6 +4326,7 @@ class AccountSettingsInformation(object):
     def allow_in_person_electronic_notary_metadata(self):
         """Gets the allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        MetaData for the allowInPersonElectronicNotary flag  # noqa: E501
 
         :return: The allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4304,6 +4337,7 @@ class AccountSettingsInformation(object):
     def allow_in_person_electronic_notary_metadata(self, allow_in_person_electronic_notary_metadata):
         """Sets the allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.
 
+        MetaData for the allowInPersonElectronicNotary flag  # noqa: E501
 
         :param allow_in_person_electronic_notary_metadata: The allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4952,7 +4986,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_in_person_electronic_notary(self):
         """Gets the allow_organization_to_use_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
 
-          # noqa: E501
+        Organization Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions  # noqa: E501
 
         :return: The allow_organization_to_use_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
@@ -4963,7 +4997,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_in_person_electronic_notary(self, allow_organization_to_use_in_person_electronic_notary):
         """Sets the allow_organization_to_use_in_person_electronic_notary of this AccountSettingsInformation.
 
-          # noqa: E501
+        Organization Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions  # noqa: E501
 
         :param allow_organization_to_use_in_person_electronic_notary: The allow_organization_to_use_in_person_electronic_notary of this AccountSettingsInformation.  # noqa: E501
         :type: str
@@ -4975,6 +5009,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_in_person_electronic_notary_metadata(self):
         """Gets the allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        MetaData for the allowOrganizationToUseInPersonElectronicNotary flag  # noqa: E501
 
         :return: The allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4985,6 +5020,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_in_person_electronic_notary_metadata(self, allow_organization_to_use_in_person_electronic_notary_metadata):
         """Sets the allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.
 
+        MetaData for the allowOrganizationToUseInPersonElectronicNotary flag  # noqa: E501
 
         :param allow_organization_to_use_in_person_electronic_notary_metadata: The allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6820,6 +6856,29 @@ class AccountSettingsInformation(object):
         self._bulk_send = bulk_send
 
     @property
+    def bulk_send_action_resend_limit(self):
+        """Gets the bulk_send_action_resend_limit of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The bulk_send_action_resend_limit of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._bulk_send_action_resend_limit
+
+    @bulk_send_action_resend_limit.setter
+    def bulk_send_action_resend_limit(self, bulk_send_action_resend_limit):
+        """Sets the bulk_send_action_resend_limit of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param bulk_send_action_resend_limit: The bulk_send_action_resend_limit of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._bulk_send_action_resend_limit = bulk_send_action_resend_limit
+
+    @property
     def bulk_send_max_copies_in_batch(self):
         """Gets the bulk_send_max_copies_in_batch of this AccountSettingsInformation.  # noqa: E501
 
@@ -8649,6 +8708,29 @@ class AccountSettingsInformation(object):
         self._enable_clickwraps_metadata = enable_clickwraps_metadata
 
     @property
+    def enable_combined_pdf_download_for_sbs(self):
+        """Gets the enable_combined_pdf_download_for_sbs of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_combined_pdf_download_for_sbs of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_combined_pdf_download_for_sbs
+
+    @enable_combined_pdf_download_for_sbs.setter
+    def enable_combined_pdf_download_for_sbs(self, enable_combined_pdf_download_for_sbs):
+        """Sets the enable_combined_pdf_download_for_sbs of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_combined_pdf_download_for_sbs: The enable_combined_pdf_download_for_sbs of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_combined_pdf_download_for_sbs = enable_combined_pdf_download_for_sbs
+
+    @property
     def enable_comments_history_download_in_signing(self):
         """Gets the enable_comments_history_download_in_signing of this AccountSettingsInformation.  # noqa: E501
 
@@ -8913,6 +8995,50 @@ class AccountSettingsInformation(object):
         self._enable_esign_communities_metadata = enable_esign_communities_metadata
 
     @property
+    def enable_id_fx_accountless_sms_auth_for_part11(self):
+        """Gets the enable_id_fx_accountless_sms_auth_for_part11 of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_id_fx_accountless_sms_auth_for_part11 of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_id_fx_accountless_sms_auth_for_part11
+
+    @enable_id_fx_accountless_sms_auth_for_part11.setter
+    def enable_id_fx_accountless_sms_auth_for_part11(self, enable_id_fx_accountless_sms_auth_for_part11):
+        """Sets the enable_id_fx_accountless_sms_auth_for_part11 of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_id_fx_accountless_sms_auth_for_part11: The enable_id_fx_accountless_sms_auth_for_part11 of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_id_fx_accountless_sms_auth_for_part11 = enable_id_fx_accountless_sms_auth_for_part11
+
+    @property
+    def enable_id_fx_accountless_sms_auth_for_part11_metadata(self):
+        """Gets the enable_id_fx_accountless_sms_auth_for_part11_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_id_fx_accountless_sms_auth_for_part11_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_id_fx_accountless_sms_auth_for_part11_metadata
+
+    @enable_id_fx_accountless_sms_auth_for_part11_metadata.setter
+    def enable_id_fx_accountless_sms_auth_for_part11_metadata(self, enable_id_fx_accountless_sms_auth_for_part11_metadata):
+        """Sets the enable_id_fx_accountless_sms_auth_for_part11_metadata of this AccountSettingsInformation.
+
+
+        :param enable_id_fx_accountless_sms_auth_for_part11_metadata: The enable_id_fx_accountless_sms_auth_for_part11_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_id_fx_accountless_sms_auth_for_part11_metadata = enable_id_fx_accountless_sms_auth_for_part11_metadata
+
+    @property
     def enable_id_fx_intuit_kba(self):
         """Gets the enable_id_fx_intuit_kba of this AccountSettingsInformation.  # noqa: E501
 
@@ -9043,6 +9169,50 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_in_browser_editor_metadata = enable_in_browser_editor_metadata
+
+    @property
+    def enable_key_terms_suggestions_by_document_type(self):
+        """Gets the enable_key_terms_suggestions_by_document_type of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_key_terms_suggestions_by_document_type of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_key_terms_suggestions_by_document_type
+
+    @enable_key_terms_suggestions_by_document_type.setter
+    def enable_key_terms_suggestions_by_document_type(self, enable_key_terms_suggestions_by_document_type):
+        """Sets the enable_key_terms_suggestions_by_document_type of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_key_terms_suggestions_by_document_type: The enable_key_terms_suggestions_by_document_type of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_key_terms_suggestions_by_document_type = enable_key_terms_suggestions_by_document_type
+
+    @property
+    def enable_key_terms_suggestions_by_document_type_metadata(self):
+        """Gets the enable_key_terms_suggestions_by_document_type_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_key_terms_suggestions_by_document_type_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_key_terms_suggestions_by_document_type_metadata
+
+    @enable_key_terms_suggestions_by_document_type_metadata.setter
+    def enable_key_terms_suggestions_by_document_type_metadata(self, enable_key_terms_suggestions_by_document_type_metadata):
+        """Sets the enable_key_terms_suggestions_by_document_type_metadata of this AccountSettingsInformation.
+
+
+        :param enable_key_terms_suggestions_by_document_type_metadata: The enable_key_terms_suggestions_by_document_type_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_key_terms_suggestions_by_document_type_metadata = enable_key_terms_suggestions_by_document_type_metadata
 
     @property
     def enable_payment_processing(self):
@@ -9571,6 +9741,50 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_search_metadata = enable_search_metadata
+
+    @property
+    def enable_search_site_specific_api(self):
+        """Gets the enable_search_site_specific_api of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_search_site_specific_api of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_search_site_specific_api
+
+    @enable_search_site_specific_api.setter
+    def enable_search_site_specific_api(self, enable_search_site_specific_api):
+        """Sets the enable_search_site_specific_api of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_search_site_specific_api: The enable_search_site_specific_api of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_search_site_specific_api = enable_search_site_specific_api
+
+    @property
+    def enable_search_site_specific_api_metadata(self):
+        """Gets the enable_search_site_specific_api_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_search_site_specific_api_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_search_site_specific_api_metadata
+
+    @enable_search_site_specific_api_metadata.setter
+    def enable_search_site_specific_api_metadata(self, enable_search_site_specific_api_metadata):
+        """Sets the enable_search_site_specific_api_metadata of this AccountSettingsInformation.
+
+
+        :param enable_search_site_specific_api_metadata: The enable_search_site_specific_api_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_search_site_specific_api_metadata = enable_search_site_specific_api_metadata
 
     @property
     def enable_search_ui(self):

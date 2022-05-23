@@ -86,6 +86,8 @@ class UserSettingsInformation(object):
         'disable_other_actions_metadata': 'SettingsMetadata',
         'enable_ds_pro': 'str',
         'enable_ds_pro_metadata': 'SettingsMetadata',
+        'enable_key_terms_suggestions_by_document_type': 'str',
+        'enable_key_terms_suggestions_by_document_type_metadata': 'SettingsMetadata',
         'enable_sequential_signing_api': 'str',
         'enable_sequential_signing_api_metadata': 'SettingsMetadata',
         'enable_sequential_signing_ui': 'str',
@@ -212,6 +214,8 @@ class UserSettingsInformation(object):
         'disable_other_actions_metadata': 'disableOtherActionsMetadata',
         'enable_ds_pro': 'enableDSPro',
         'enable_ds_pro_metadata': 'enableDSProMetadata',
+        'enable_key_terms_suggestions_by_document_type': 'enableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata': 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_sequential_signing_api': 'enableSequentialSigningAPI',
         'enable_sequential_signing_api_metadata': 'enableSequentialSigningAPIMetadata',
         'enable_sequential_signing_ui': 'enableSequentialSigningUI',
@@ -343,6 +347,8 @@ class UserSettingsInformation(object):
         self._disable_other_actions_metadata = None
         self._enable_ds_pro = None
         self._enable_ds_pro_metadata = None
+        self._enable_key_terms_suggestions_by_document_type = None
+        self._enable_key_terms_suggestions_by_document_type_metadata = None
         self._enable_sequential_signing_api = None
         self._enable_sequential_signing_api_metadata = None
         self._enable_sequential_signing_ui = None
@@ -468,6 +474,8 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('disable_other_actions_metadata'), kwargs.get('disable_other_actions_metadata', None))
         setattr(self, "_{}".format('enable_ds_pro'), kwargs.get('enable_ds_pro', None))
         setattr(self, "_{}".format('enable_ds_pro_metadata'), kwargs.get('enable_ds_pro_metadata', None))
+        setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type'), kwargs.get('enable_key_terms_suggestions_by_document_type', None))
+        setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type_metadata'), kwargs.get('enable_key_terms_suggestions_by_document_type_metadata', None))
         setattr(self, "_{}".format('enable_sequential_signing_api'), kwargs.get('enable_sequential_signing_api', None))
         setattr(self, "_{}".format('enable_sequential_signing_api_metadata'), kwargs.get('enable_sequential_signing_api_metadata', None))
         setattr(self, "_{}".format('enable_sequential_signing_ui'), kwargs.get('enable_sequential_signing_ui', None))
@@ -1705,6 +1713,50 @@ class UserSettingsInformation(object):
         """
 
         self._enable_ds_pro_metadata = enable_ds_pro_metadata
+
+    @property
+    def enable_key_terms_suggestions_by_document_type(self):
+        """Gets the enable_key_terms_suggestions_by_document_type of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_key_terms_suggestions_by_document_type of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_key_terms_suggestions_by_document_type
+
+    @enable_key_terms_suggestions_by_document_type.setter
+    def enable_key_terms_suggestions_by_document_type(self, enable_key_terms_suggestions_by_document_type):
+        """Sets the enable_key_terms_suggestions_by_document_type of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_key_terms_suggestions_by_document_type: The enable_key_terms_suggestions_by_document_type of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_key_terms_suggestions_by_document_type = enable_key_terms_suggestions_by_document_type
+
+    @property
+    def enable_key_terms_suggestions_by_document_type_metadata(self):
+        """Gets the enable_key_terms_suggestions_by_document_type_metadata of this UserSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_key_terms_suggestions_by_document_type_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_key_terms_suggestions_by_document_type_metadata
+
+    @enable_key_terms_suggestions_by_document_type_metadata.setter
+    def enable_key_terms_suggestions_by_document_type_metadata(self, enable_key_terms_suggestions_by_document_type_metadata):
+        """Sets the enable_key_terms_suggestions_by_document_type_metadata of this UserSettingsInformation.
+
+
+        :param enable_key_terms_suggestions_by_document_type_metadata: The enable_key_terms_suggestions_by_document_type_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_key_terms_suggestions_by_document_type_metadata = enable_key_terms_suggestions_by_document_type_metadata
 
     @property
     def enable_sequential_signing_api(self):

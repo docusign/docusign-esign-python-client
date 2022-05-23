@@ -85,6 +85,8 @@ class AccountRoleSettings(object):
         'disable_other_actions_metadata': 'SettingsMetadata',
         'enable_api_request_logging': 'str',
         'enable_api_request_logging_metadata': 'SettingsMetadata',
+        'enable_key_terms_suggestions_by_document_type': 'str',
+        'enable_key_terms_suggestions_by_document_type_metadata': 'SettingsMetadata',
         'enable_recipient_viewing_notifications': 'str',
         'enable_recipient_viewing_notifications_metadata': 'SettingsMetadata',
         'enable_sequential_signing_interface': 'str',
@@ -165,6 +167,8 @@ class AccountRoleSettings(object):
         'disable_other_actions_metadata': 'disableOtherActionsMetadata',
         'enable_api_request_logging': 'enableApiRequestLogging',
         'enable_api_request_logging_metadata': 'enableApiRequestLoggingMetadata',
+        'enable_key_terms_suggestions_by_document_type': 'enableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata': 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_recipient_viewing_notifications': 'enableRecipientViewingNotifications',
         'enable_recipient_viewing_notifications_metadata': 'enableRecipientViewingNotificationsMetadata',
         'enable_sequential_signing_interface': 'enableSequentialSigningInterface',
@@ -250,6 +254,8 @@ class AccountRoleSettings(object):
         self._disable_other_actions_metadata = None
         self._enable_api_request_logging = None
         self._enable_api_request_logging_metadata = None
+        self._enable_key_terms_suggestions_by_document_type = None
+        self._enable_key_terms_suggestions_by_document_type_metadata = None
         self._enable_recipient_viewing_notifications = None
         self._enable_recipient_viewing_notifications_metadata = None
         self._enable_sequential_signing_interface = None
@@ -329,6 +335,8 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('disable_other_actions_metadata'), kwargs.get('disable_other_actions_metadata', None))
         setattr(self, "_{}".format('enable_api_request_logging'), kwargs.get('enable_api_request_logging', None))
         setattr(self, "_{}".format('enable_api_request_logging_metadata'), kwargs.get('enable_api_request_logging_metadata', None))
+        setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type'), kwargs.get('enable_key_terms_suggestions_by_document_type', None))
+        setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type_metadata'), kwargs.get('enable_key_terms_suggestions_by_document_type_metadata', None))
         setattr(self, "_{}".format('enable_recipient_viewing_notifications'), kwargs.get('enable_recipient_viewing_notifications', None))
         setattr(self, "_{}".format('enable_recipient_viewing_notifications_metadata'), kwargs.get('enable_recipient_viewing_notifications_metadata', None))
         setattr(self, "_{}".format('enable_sequential_signing_interface'), kwargs.get('enable_sequential_signing_interface', None))
@@ -1498,6 +1506,50 @@ class AccountRoleSettings(object):
         """
 
         self._enable_api_request_logging_metadata = enable_api_request_logging_metadata
+
+    @property
+    def enable_key_terms_suggestions_by_document_type(self):
+        """Gets the enable_key_terms_suggestions_by_document_type of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_key_terms_suggestions_by_document_type of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_key_terms_suggestions_by_document_type
+
+    @enable_key_terms_suggestions_by_document_type.setter
+    def enable_key_terms_suggestions_by_document_type(self, enable_key_terms_suggestions_by_document_type):
+        """Sets the enable_key_terms_suggestions_by_document_type of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param enable_key_terms_suggestions_by_document_type: The enable_key_terms_suggestions_by_document_type of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_key_terms_suggestions_by_document_type = enable_key_terms_suggestions_by_document_type
+
+    @property
+    def enable_key_terms_suggestions_by_document_type_metadata(self):
+        """Gets the enable_key_terms_suggestions_by_document_type_metadata of this AccountRoleSettings.  # noqa: E501
+
+
+        :return: The enable_key_terms_suggestions_by_document_type_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_key_terms_suggestions_by_document_type_metadata
+
+    @enable_key_terms_suggestions_by_document_type_metadata.setter
+    def enable_key_terms_suggestions_by_document_type_metadata(self, enable_key_terms_suggestions_by_document_type_metadata):
+        """Sets the enable_key_terms_suggestions_by_document_type_metadata of this AccountRoleSettings.
+
+
+        :param enable_key_terms_suggestions_by_document_type_metadata: The enable_key_terms_suggestions_by_document_type_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_key_terms_suggestions_by_document_type_metadata = enable_key_terms_suggestions_by_document_type_metadata
 
     @property
     def enable_recipient_viewing_notifications(self):
