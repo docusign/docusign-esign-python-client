@@ -34,14 +34,16 @@ class Workflow(object):
     """
     swagger_types = {
         'current_workflow_step_id': 'str',
+        'overwrite_update_mode': 'str',
         'resume_date': 'str',
-        'scheduled_sending': 'ScheduledSendingApiModel',
+        'scheduled_sending': 'ScheduledSending',
         'workflow_status': 'str',
         'workflow_steps': 'list[WorkflowStep]'
     }
 
     attribute_map = {
         'current_workflow_step_id': 'currentWorkflowStepId',
+        'overwrite_update_mode': 'overwriteUpdateMode',
         'resume_date': 'resumeDate',
         'scheduled_sending': 'scheduledSending',
         'workflow_status': 'workflowStatus',
@@ -55,6 +57,7 @@ class Workflow(object):
         self._configuration = _configuration
 
         self._current_workflow_step_id = None
+        self._overwrite_update_mode = None
         self._resume_date = None
         self._scheduled_sending = None
         self._workflow_status = None
@@ -62,6 +65,7 @@ class Workflow(object):
         self.discriminator = None
 
         setattr(self, "_{}".format('current_workflow_step_id'), kwargs.get('current_workflow_step_id', None))
+        setattr(self, "_{}".format('overwrite_update_mode'), kwargs.get('overwrite_update_mode', None))
         setattr(self, "_{}".format('resume_date'), kwargs.get('resume_date', None))
         setattr(self, "_{}".format('scheduled_sending'), kwargs.get('scheduled_sending', None))
         setattr(self, "_{}".format('workflow_status'), kwargs.get('workflow_status', None))
@@ -89,6 +93,29 @@ class Workflow(object):
         """
 
         self._current_workflow_step_id = current_workflow_step_id
+
+    @property
+    def overwrite_update_mode(self):
+        """Gets the overwrite_update_mode of this Workflow.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The overwrite_update_mode of this Workflow.  # noqa: E501
+        :rtype: str
+        """
+        return self._overwrite_update_mode
+
+    @overwrite_update_mode.setter
+    def overwrite_update_mode(self, overwrite_update_mode):
+        """Sets the overwrite_update_mode of this Workflow.
+
+          # noqa: E501
+
+        :param overwrite_update_mode: The overwrite_update_mode of this Workflow.  # noqa: E501
+        :type: str
+        """
+
+        self._overwrite_update_mode = overwrite_update_mode
 
     @property
     def resume_date(self):
@@ -119,7 +146,7 @@ class Workflow(object):
 
 
         :return: The scheduled_sending of this Workflow.  # noqa: E501
-        :rtype: ScheduledSendingApiModel
+        :rtype: ScheduledSending
         """
         return self._scheduled_sending
 
@@ -129,7 +156,7 @@ class Workflow(object):
 
 
         :param scheduled_sending: The scheduled_sending of this Workflow.  # noqa: E501
-        :type: ScheduledSendingApiModel
+        :type: ScheduledSending
         """
 
         self._scheduled_sending = scheduled_sending

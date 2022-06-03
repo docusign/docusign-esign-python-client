@@ -55,6 +55,8 @@ class PhoneNumber(object):
         'anchor_y_offset_metadata': 'PropertyMetadata',
         'bold': 'str',
         'bold_metadata': 'PropertyMetadata',
+        'caption': 'str',
+        'caption_metadata': 'PropertyMetadata',
         'conceal_value_on_document': 'str',
         'conceal_value_on_document_metadata': 'PropertyMetadata',
         'conditional_parent_label': 'str',
@@ -158,6 +160,8 @@ class PhoneNumber(object):
         'anchor_y_offset_metadata': 'anchorYOffsetMetadata',
         'bold': 'bold',
         'bold_metadata': 'boldMetadata',
+        'caption': 'caption',
+        'caption_metadata': 'captionMetadata',
         'conceal_value_on_document': 'concealValueOnDocument',
         'conceal_value_on_document_metadata': 'concealValueOnDocumentMetadata',
         'conditional_parent_label': 'conditionalParentLabel',
@@ -266,6 +270,8 @@ class PhoneNumber(object):
         self._anchor_y_offset_metadata = None
         self._bold = None
         self._bold_metadata = None
+        self._caption = None
+        self._caption_metadata = None
         self._conceal_value_on_document = None
         self._conceal_value_on_document_metadata = None
         self._conditional_parent_label = None
@@ -368,6 +374,8 @@ class PhoneNumber(object):
         setattr(self, "_{}".format('anchor_y_offset_metadata'), kwargs.get('anchor_y_offset_metadata', None))
         setattr(self, "_{}".format('bold'), kwargs.get('bold', None))
         setattr(self, "_{}".format('bold_metadata'), kwargs.get('bold_metadata', None))
+        setattr(self, "_{}".format('caption'), kwargs.get('caption', None))
+        setattr(self, "_{}".format('caption_metadata'), kwargs.get('caption_metadata', None))
         setattr(self, "_{}".format('conceal_value_on_document'), kwargs.get('conceal_value_on_document', None))
         setattr(self, "_{}".format('conceal_value_on_document_metadata'), kwargs.get('conceal_value_on_document_metadata', None))
         setattr(self, "_{}".format('conditional_parent_label'), kwargs.get('conditional_parent_label', None))
@@ -930,6 +938,50 @@ class PhoneNumber(object):
         """
 
         self._bold_metadata = bold_metadata
+
+    @property
+    def caption(self):
+        """Gets the caption of this PhoneNumber.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The caption of this PhoneNumber.  # noqa: E501
+        :rtype: str
+        """
+        return self._caption
+
+    @caption.setter
+    def caption(self, caption):
+        """Sets the caption of this PhoneNumber.
+
+          # noqa: E501
+
+        :param caption: The caption of this PhoneNumber.  # noqa: E501
+        :type: str
+        """
+
+        self._caption = caption
+
+    @property
+    def caption_metadata(self):
+        """Gets the caption_metadata of this PhoneNumber.  # noqa: E501
+
+
+        :return: The caption_metadata of this PhoneNumber.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._caption_metadata
+
+    @caption_metadata.setter
+    def caption_metadata(self, caption_metadata):
+        """Sets the caption_metadata of this PhoneNumber.
+
+
+        :param caption_metadata: The caption_metadata of this PhoneNumber.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._caption_metadata = caption_metadata
 
     @property
     def conceal_value_on_document(self):

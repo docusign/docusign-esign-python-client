@@ -686,7 +686,7 @@ class ApiClient(object):
         later = now + (expires_in * 1)
         claim = {"iss": client_id, "sub": user_id, "aud": oauth_host_name, "iat": now, "exp": later,
                  "scope": " ".join(scopes)}
-        token = jwt.encode(payload=claim, key=private_key_bytes, algorithm='RS256').decode("utf-8")
+        token = jwt.encode(payload=claim, key=private_key_bytes, algorithm='RS256')
         response = self.request("POST", "https://" + oauth_host_name + "/oauth/token",
                                 headers=self.sanitize_for_serialization(
                                     {"Content-Type": "application/x-www-form-urlencoded"}),

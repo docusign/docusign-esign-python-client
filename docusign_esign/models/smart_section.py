@@ -53,6 +53,8 @@ class SmartSection(object):
         'anchor_x_offset_metadata': 'PropertyMetadata',
         'anchor_y_offset': 'str',
         'anchor_y_offset_metadata': 'PropertyMetadata',
+        'caption': 'str',
+        'caption_metadata': 'PropertyMetadata',
         'case_sensitive': 'bool',
         'conditional_parent_label': 'str',
         'conditional_parent_label_metadata': 'PropertyMetadata',
@@ -140,6 +142,8 @@ class SmartSection(object):
         'anchor_x_offset_metadata': 'anchorXOffsetMetadata',
         'anchor_y_offset': 'anchorYOffset',
         'anchor_y_offset_metadata': 'anchorYOffsetMetadata',
+        'caption': 'caption',
+        'caption_metadata': 'captionMetadata',
         'case_sensitive': 'caseSensitive',
         'conditional_parent_label': 'conditionalParentLabel',
         'conditional_parent_label_metadata': 'conditionalParentLabelMetadata',
@@ -232,6 +236,8 @@ class SmartSection(object):
         self._anchor_x_offset_metadata = None
         self._anchor_y_offset = None
         self._anchor_y_offset_metadata = None
+        self._caption = None
+        self._caption_metadata = None
         self._case_sensitive = None
         self._conditional_parent_label = None
         self._conditional_parent_label_metadata = None
@@ -318,6 +324,8 @@ class SmartSection(object):
         setattr(self, "_{}".format('anchor_x_offset_metadata'), kwargs.get('anchor_x_offset_metadata', None))
         setattr(self, "_{}".format('anchor_y_offset'), kwargs.get('anchor_y_offset', None))
         setattr(self, "_{}".format('anchor_y_offset_metadata'), kwargs.get('anchor_y_offset_metadata', None))
+        setattr(self, "_{}".format('caption'), kwargs.get('caption', None))
+        setattr(self, "_{}".format('caption_metadata'), kwargs.get('caption_metadata', None))
         setattr(self, "_{}".format('case_sensitive'), kwargs.get('case_sensitive', None))
         setattr(self, "_{}".format('conditional_parent_label'), kwargs.get('conditional_parent_label', None))
         setattr(self, "_{}".format('conditional_parent_label_metadata'), kwargs.get('conditional_parent_label_metadata', None))
@@ -822,6 +830,50 @@ class SmartSection(object):
         """
 
         self._anchor_y_offset_metadata = anchor_y_offset_metadata
+
+    @property
+    def caption(self):
+        """Gets the caption of this SmartSection.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The caption of this SmartSection.  # noqa: E501
+        :rtype: str
+        """
+        return self._caption
+
+    @caption.setter
+    def caption(self, caption):
+        """Sets the caption of this SmartSection.
+
+          # noqa: E501
+
+        :param caption: The caption of this SmartSection.  # noqa: E501
+        :type: str
+        """
+
+        self._caption = caption
+
+    @property
+    def caption_metadata(self):
+        """Gets the caption_metadata of this SmartSection.  # noqa: E501
+
+
+        :return: The caption_metadata of this SmartSection.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._caption_metadata
+
+    @caption_metadata.setter
+    def caption_metadata(self, caption_metadata):
+        """Sets the caption_metadata of this SmartSection.
+
+
+        :param caption_metadata: The caption_metadata of this SmartSection.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._caption_metadata = caption_metadata
 
     @property
     def case_sensitive(self):

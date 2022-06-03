@@ -499,7 +499,6 @@ class BulkEnvelopesApi(object):
         :param str search_text:
         :param str start_position:
         :param str status:
-        :param str user_id:
         :return: EnvelopesInformation
                  If the method is called asynchronously,
                  returns the request thread.
@@ -533,13 +532,12 @@ class BulkEnvelopesApi(object):
         :param str search_text:
         :param str start_position:
         :param str status:
-        :param str user_id:
         :return: EnvelopesInformation
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'bulk_send_batch_id', 'count', 'include', 'order', 'order_by', 'search_text', 'start_position', 'status', 'user_id']
+        all_params = ['account_id', 'bulk_send_batch_id', 'count', 'include', 'order', 'order_by', 'search_text', 'start_position', 'status']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -586,8 +584,6 @@ class BulkEnvelopesApi(object):
             query_params['start_position'] = params['start_position']
         if 'status' in params:
             query_params['status'] = params['status']
-        if 'user_id' in params:
-            query_params['user_id'] = params['user_id']
 
         header_params = {}
 
@@ -741,9 +737,12 @@ class BulkEnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str batch_ids:
         :param str count:
+        :param str from_date:
         :param str search_text:
         :param str start_position:
         :param str status:
+        :param str to_date:
+        :param str user_id:
         :return: BulkSendBatchSummaries
                  If the method is called asynchronously,
                  returns the request thread.
@@ -771,15 +770,18 @@ class BulkEnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str batch_ids:
         :param str count:
+        :param str from_date:
         :param str search_text:
         :param str start_position:
         :param str status:
+        :param str to_date:
+        :param str user_id:
         :return: BulkSendBatchSummaries
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'batch_ids', 'count', 'search_text', 'start_position', 'status']
+        all_params = ['account_id', 'batch_ids', 'count', 'from_date', 'search_text', 'start_position', 'status', 'to_date', 'user_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -811,12 +813,18 @@ class BulkEnvelopesApi(object):
             query_params['batch_ids'] = params['batch_ids']
         if 'count' in params:
             query_params['count'] = params['count']
+        if 'from_date' in params:
+            query_params['from_date'] = params['from_date']
         if 'search_text' in params:
             query_params['search_text'] = params['search_text']
         if 'start_position' in params:
             query_params['start_position'] = params['start_position']
         if 'status' in params:
             query_params['status'] = params['status']
+        if 'to_date' in params:
+            query_params['to_date'] = params['to_date']
+        if 'user_id' in params:
+            query_params['user_id'] = params['user_id']
 
         header_params = {}
 

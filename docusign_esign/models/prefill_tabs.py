@@ -34,20 +34,30 @@ class PrefillTabs(object):
     """
     swagger_types = {
         'checkbox_tabs': 'list[Checkbox]',
+        'date_tabs': 'list[Date]',
+        'email_tabs': 'list[Email]',
+        'number_tabs': 'list[Number]',
         'radio_group_tabs': 'list[RadioGroup]',
         'sender_company_tabs': 'list[SenderCompany]',
         'sender_name_tabs': 'list[SenderName]',
+        'ssn_tabs': 'list[Ssn]',
         'tab_groups': 'list[TabGroup]',
-        'text_tabs': 'list[Text]'
+        'text_tabs': 'list[Text]',
+        'zip_tabs': 'list[Zip]'
     }
 
     attribute_map = {
         'checkbox_tabs': 'checkboxTabs',
+        'date_tabs': 'dateTabs',
+        'email_tabs': 'emailTabs',
+        'number_tabs': 'numberTabs',
         'radio_group_tabs': 'radioGroupTabs',
         'sender_company_tabs': 'senderCompanyTabs',
         'sender_name_tabs': 'senderNameTabs',
+        'ssn_tabs': 'ssnTabs',
         'tab_groups': 'tabGroups',
-        'text_tabs': 'textTabs'
+        'text_tabs': 'textTabs',
+        'zip_tabs': 'zipTabs'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -57,19 +67,29 @@ class PrefillTabs(object):
         self._configuration = _configuration
 
         self._checkbox_tabs = None
+        self._date_tabs = None
+        self._email_tabs = None
+        self._number_tabs = None
         self._radio_group_tabs = None
         self._sender_company_tabs = None
         self._sender_name_tabs = None
+        self._ssn_tabs = None
         self._tab_groups = None
         self._text_tabs = None
+        self._zip_tabs = None
         self.discriminator = None
 
         setattr(self, "_{}".format('checkbox_tabs'), kwargs.get('checkbox_tabs', None))
+        setattr(self, "_{}".format('date_tabs'), kwargs.get('date_tabs', None))
+        setattr(self, "_{}".format('email_tabs'), kwargs.get('email_tabs', None))
+        setattr(self, "_{}".format('number_tabs'), kwargs.get('number_tabs', None))
         setattr(self, "_{}".format('radio_group_tabs'), kwargs.get('radio_group_tabs', None))
         setattr(self, "_{}".format('sender_company_tabs'), kwargs.get('sender_company_tabs', None))
         setattr(self, "_{}".format('sender_name_tabs'), kwargs.get('sender_name_tabs', None))
+        setattr(self, "_{}".format('ssn_tabs'), kwargs.get('ssn_tabs', None))
         setattr(self, "_{}".format('tab_groups'), kwargs.get('tab_groups', None))
         setattr(self, "_{}".format('text_tabs'), kwargs.get('text_tabs', None))
+        setattr(self, "_{}".format('zip_tabs'), kwargs.get('zip_tabs', None))
 
     @property
     def checkbox_tabs(self):
@@ -93,6 +113,75 @@ class PrefillTabs(object):
         """
 
         self._checkbox_tabs = checkbox_tabs
+
+    @property
+    def date_tabs(self):
+        """Gets the date_tabs of this PrefillTabs.  # noqa: E501
+
+        Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.  # noqa: E501
+
+        :return: The date_tabs of this PrefillTabs.  # noqa: E501
+        :rtype: list[Date]
+        """
+        return self._date_tabs
+
+    @date_tabs.setter
+    def date_tabs(self, date_tabs):
+        """Sets the date_tabs of this PrefillTabs.
+
+        Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.  # noqa: E501
+
+        :param date_tabs: The date_tabs of this PrefillTabs.  # noqa: E501
+        :type: list[Date]
+        """
+
+        self._date_tabs = date_tabs
+
+    @property
+    def email_tabs(self):
+        """Gets the email_tabs of this PrefillTabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The email_tabs of this PrefillTabs.  # noqa: E501
+        :rtype: list[Email]
+        """
+        return self._email_tabs
+
+    @email_tabs.setter
+    def email_tabs(self, email_tabs):
+        """Sets the email_tabs of this PrefillTabs.
+
+        Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param email_tabs: The email_tabs of this PrefillTabs.  # noqa: E501
+        :type: list[Email]
+        """
+
+        self._email_tabs = email_tabs
+
+    @property
+    def number_tabs(self):
+        """Gets the number_tabs of this PrefillTabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.   # noqa: E501
+
+        :return: The number_tabs of this PrefillTabs.  # noqa: E501
+        :rtype: list[Number]
+        """
+        return self._number_tabs
+
+    @number_tabs.setter
+    def number_tabs(self, number_tabs):
+        """Sets the number_tabs of this PrefillTabs.
+
+        Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.   # noqa: E501
+
+        :param number_tabs: The number_tabs of this PrefillTabs.  # noqa: E501
+        :type: list[Number]
+        """
+
+        self._number_tabs = number_tabs
 
     @property
     def radio_group_tabs(self):
@@ -164,6 +253,29 @@ class PrefillTabs(object):
         self._sender_name_tabs = sender_name_tabs
 
     @property
+    def ssn_tabs(self):
+        """Gets the ssn_tabs of this PrefillTabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The ssn_tabs of this PrefillTabs.  # noqa: E501
+        :rtype: list[Ssn]
+        """
+        return self._ssn_tabs
+
+    @ssn_tabs.setter
+    def ssn_tabs(self, ssn_tabs):
+        """Sets the ssn_tabs of this PrefillTabs.
+
+        Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param ssn_tabs: The ssn_tabs of this PrefillTabs.  # noqa: E501
+        :type: list[Ssn]
+        """
+
+        self._ssn_tabs = ssn_tabs
+
+    @property
     def tab_groups(self):
         """Gets the tab_groups of this PrefillTabs.  # noqa: E501
 
@@ -208,6 +320,29 @@ class PrefillTabs(object):
         """
 
         self._text_tabs = text_tabs
+
+    @property
+    def zip_tabs(self):
+        """Gets the zip_tabs of this PrefillTabs.  # noqa: E501
+
+        Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :return: The zip_tabs of this PrefillTabs.  # noqa: E501
+        :rtype: list[Zip]
+        """
+        return self._zip_tabs
+
+    @zip_tabs.setter
+    def zip_tabs(self, zip_tabs):
+        """Sets the zip_tabs of this PrefillTabs.
+
+        Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.  # noqa: E501
+
+        :param zip_tabs: The zip_tabs of this PrefillTabs.  # noqa: E501
+        :type: list[Zip]
+        """
+
+        self._zip_tabs = zip_tabs
 
     def to_dict(self):
         """Returns the model properties as a dict"""

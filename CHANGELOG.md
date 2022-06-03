@@ -3,6 +3,23 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.16.0] - eSignature API v2.1-22.1.02.00 - 2022-05-18
+### Changed
+- Added support for version v2.1-22.1.02.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+- Added support for latest PyJwt versions of library.
+
+## [v3.15.0] - eSignature API v2.1-22.1.01.00 - 2022-04-07
+### Changed
+- Added support for version v2.1-22.1.01.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+### Breaking
+- Following models are renamed
+
+    - `ScheduledSendingApiModel` is renamed to `ScheduledSending`
+    - `DelayedRoutingApiModel` is renamed to `DelayedRouting`
+
 ## [v3.14.0] - eSignature API v2.1-21.4.02.00 - 2022-02-11
 ### Changed
 - Added support for version v2.1-21.4.02.00 of the DocuSign ESignature API.

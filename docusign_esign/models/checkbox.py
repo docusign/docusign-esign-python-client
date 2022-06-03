@@ -55,6 +55,8 @@ class Checkbox(object):
         'anchor_y_offset_metadata': 'PropertyMetadata',
         'bold': 'str',
         'bold_metadata': 'PropertyMetadata',
+        'caption': 'str',
+        'caption_metadata': 'PropertyMetadata',
         'conditional_parent_label': 'str',
         'conditional_parent_label_metadata': 'PropertyMetadata',
         'conditional_parent_value': 'str',
@@ -161,6 +163,8 @@ class Checkbox(object):
         'anchor_y_offset_metadata': 'anchorYOffsetMetadata',
         'bold': 'bold',
         'bold_metadata': 'boldMetadata',
+        'caption': 'caption',
+        'caption_metadata': 'captionMetadata',
         'conditional_parent_label': 'conditionalParentLabel',
         'conditional_parent_label_metadata': 'conditionalParentLabelMetadata',
         'conditional_parent_value': 'conditionalParentValue',
@@ -272,6 +276,8 @@ class Checkbox(object):
         self._anchor_y_offset_metadata = None
         self._bold = None
         self._bold_metadata = None
+        self._caption = None
+        self._caption_metadata = None
         self._conditional_parent_label = None
         self._conditional_parent_label_metadata = None
         self._conditional_parent_value = None
@@ -377,6 +383,8 @@ class Checkbox(object):
         setattr(self, "_{}".format('anchor_y_offset_metadata'), kwargs.get('anchor_y_offset_metadata', None))
         setattr(self, "_{}".format('bold'), kwargs.get('bold', None))
         setattr(self, "_{}".format('bold_metadata'), kwargs.get('bold_metadata', None))
+        setattr(self, "_{}".format('caption'), kwargs.get('caption', None))
+        setattr(self, "_{}".format('caption_metadata'), kwargs.get('caption_metadata', None))
         setattr(self, "_{}".format('conditional_parent_label'), kwargs.get('conditional_parent_label', None))
         setattr(self, "_{}".format('conditional_parent_label_metadata'), kwargs.get('conditional_parent_label_metadata', None))
         setattr(self, "_{}".format('conditional_parent_value'), kwargs.get('conditional_parent_value', None))
@@ -942,6 +950,50 @@ class Checkbox(object):
         """
 
         self._bold_metadata = bold_metadata
+
+    @property
+    def caption(self):
+        """Gets the caption of this Checkbox.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The caption of this Checkbox.  # noqa: E501
+        :rtype: str
+        """
+        return self._caption
+
+    @caption.setter
+    def caption(self, caption):
+        """Sets the caption of this Checkbox.
+
+          # noqa: E501
+
+        :param caption: The caption of this Checkbox.  # noqa: E501
+        :type: str
+        """
+
+        self._caption = caption
+
+    @property
+    def caption_metadata(self):
+        """Gets the caption_metadata of this Checkbox.  # noqa: E501
+
+
+        :return: The caption_metadata of this Checkbox.  # noqa: E501
+        :rtype: PropertyMetadata
+        """
+        return self._caption_metadata
+
+    @caption_metadata.setter
+    def caption_metadata(self, caption_metadata):
+        """Sets the caption_metadata of this Checkbox.
+
+
+        :param caption_metadata: The caption_metadata of this Checkbox.  # noqa: E501
+        :type: PropertyMetadata
+        """
+
+        self._caption_metadata = caption_metadata
 
     @property
     def conditional_parent_label(self):

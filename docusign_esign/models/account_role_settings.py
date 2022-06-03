@@ -85,6 +85,8 @@ class AccountRoleSettings(object):
         'disable_other_actions_metadata': 'SettingsMetadata',
         'enable_api_request_logging': 'str',
         'enable_api_request_logging_metadata': 'SettingsMetadata',
+        'enable_key_terms_suggestions_by_document_type': 'str',
+        'enable_key_terms_suggestions_by_document_type_metadata': 'SettingsMetadata',
         'enable_recipient_viewing_notifications': 'str',
         'enable_recipient_viewing_notifications_metadata': 'SettingsMetadata',
         'enable_sequential_signing_interface': 'str',
@@ -107,7 +109,9 @@ class AccountRoleSettings(object):
         'use_new_sending_interface': 'str',
         'use_new_sending_interface_metadata': 'SettingsMetadata',
         'vaulting_mode': 'str',
-        'vaulting_mode_metadata': 'SettingsMetadata'
+        'vaulting_mode_metadata': 'SettingsMetadata',
+        'web_forms': 'str',
+        'web_forms_metadata': 'SettingsMetadata'
     }
 
     attribute_map = {
@@ -163,6 +167,8 @@ class AccountRoleSettings(object):
         'disable_other_actions_metadata': 'disableOtherActionsMetadata',
         'enable_api_request_logging': 'enableApiRequestLogging',
         'enable_api_request_logging_metadata': 'enableApiRequestLoggingMetadata',
+        'enable_key_terms_suggestions_by_document_type': 'enableKeyTermsSuggestionsByDocumentType',
+        'enable_key_terms_suggestions_by_document_type_metadata': 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
         'enable_recipient_viewing_notifications': 'enableRecipientViewingNotifications',
         'enable_recipient_viewing_notifications_metadata': 'enableRecipientViewingNotificationsMetadata',
         'enable_sequential_signing_interface': 'enableSequentialSigningInterface',
@@ -185,7 +191,9 @@ class AccountRoleSettings(object):
         'use_new_sending_interface': 'useNewSendingInterface',
         'use_new_sending_interface_metadata': 'useNewSendingInterfaceMetadata',
         'vaulting_mode': 'vaultingMode',
-        'vaulting_mode_metadata': 'vaultingModeMetadata'
+        'vaulting_mode_metadata': 'vaultingModeMetadata',
+        'web_forms': 'webForms',
+        'web_forms_metadata': 'webFormsMetadata'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -246,6 +254,8 @@ class AccountRoleSettings(object):
         self._disable_other_actions_metadata = None
         self._enable_api_request_logging = None
         self._enable_api_request_logging_metadata = None
+        self._enable_key_terms_suggestions_by_document_type = None
+        self._enable_key_terms_suggestions_by_document_type_metadata = None
         self._enable_recipient_viewing_notifications = None
         self._enable_recipient_viewing_notifications_metadata = None
         self._enable_sequential_signing_interface = None
@@ -269,6 +279,8 @@ class AccountRoleSettings(object):
         self._use_new_sending_interface_metadata = None
         self._vaulting_mode = None
         self._vaulting_mode_metadata = None
+        self._web_forms = None
+        self._web_forms_metadata = None
         self.discriminator = None
 
         setattr(self, "_{}".format('allow_account_management'), kwargs.get('allow_account_management', None))
@@ -323,6 +335,8 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('disable_other_actions_metadata'), kwargs.get('disable_other_actions_metadata', None))
         setattr(self, "_{}".format('enable_api_request_logging'), kwargs.get('enable_api_request_logging', None))
         setattr(self, "_{}".format('enable_api_request_logging_metadata'), kwargs.get('enable_api_request_logging_metadata', None))
+        setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type'), kwargs.get('enable_key_terms_suggestions_by_document_type', None))
+        setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type_metadata'), kwargs.get('enable_key_terms_suggestions_by_document_type_metadata', None))
         setattr(self, "_{}".format('enable_recipient_viewing_notifications'), kwargs.get('enable_recipient_viewing_notifications', None))
         setattr(self, "_{}".format('enable_recipient_viewing_notifications_metadata'), kwargs.get('enable_recipient_viewing_notifications_metadata', None))
         setattr(self, "_{}".format('enable_sequential_signing_interface'), kwargs.get('enable_sequential_signing_interface', None))
@@ -346,6 +360,8 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('use_new_sending_interface_metadata'), kwargs.get('use_new_sending_interface_metadata', None))
         setattr(self, "_{}".format('vaulting_mode'), kwargs.get('vaulting_mode', None))
         setattr(self, "_{}".format('vaulting_mode_metadata'), kwargs.get('vaulting_mode_metadata', None))
+        setattr(self, "_{}".format('web_forms'), kwargs.get('web_forms', None))
+        setattr(self, "_{}".format('web_forms_metadata'), kwargs.get('web_forms_metadata', None))
 
     @property
     def allow_account_management(self):
@@ -1492,6 +1508,50 @@ class AccountRoleSettings(object):
         self._enable_api_request_logging_metadata = enable_api_request_logging_metadata
 
     @property
+    def enable_key_terms_suggestions_by_document_type(self):
+        """Gets the enable_key_terms_suggestions_by_document_type of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_key_terms_suggestions_by_document_type of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_key_terms_suggestions_by_document_type
+
+    @enable_key_terms_suggestions_by_document_type.setter
+    def enable_key_terms_suggestions_by_document_type(self, enable_key_terms_suggestions_by_document_type):
+        """Sets the enable_key_terms_suggestions_by_document_type of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param enable_key_terms_suggestions_by_document_type: The enable_key_terms_suggestions_by_document_type of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_key_terms_suggestions_by_document_type = enable_key_terms_suggestions_by_document_type
+
+    @property
+    def enable_key_terms_suggestions_by_document_type_metadata(self):
+        """Gets the enable_key_terms_suggestions_by_document_type_metadata of this AccountRoleSettings.  # noqa: E501
+
+
+        :return: The enable_key_terms_suggestions_by_document_type_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_key_terms_suggestions_by_document_type_metadata
+
+    @enable_key_terms_suggestions_by_document_type_metadata.setter
+    def enable_key_terms_suggestions_by_document_type_metadata(self, enable_key_terms_suggestions_by_document_type_metadata):
+        """Sets the enable_key_terms_suggestions_by_document_type_metadata of this AccountRoleSettings.
+
+
+        :param enable_key_terms_suggestions_by_document_type_metadata: The enable_key_terms_suggestions_by_document_type_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_key_terms_suggestions_by_document_type_metadata = enable_key_terms_suggestions_by_document_type_metadata
+
+    @property
     def enable_recipient_viewing_notifications(self):
         """Gets the enable_recipient_viewing_notifications of this AccountRoleSettings.  # noqa: E501
 
@@ -1995,6 +2055,50 @@ class AccountRoleSettings(object):
         """
 
         self._vaulting_mode_metadata = vaulting_mode_metadata
+
+    @property
+    def web_forms(self):
+        """Gets the web_forms of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The web_forms of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._web_forms
+
+    @web_forms.setter
+    def web_forms(self, web_forms):
+        """Sets the web_forms of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param web_forms: The web_forms of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._web_forms = web_forms
+
+    @property
+    def web_forms_metadata(self):
+        """Gets the web_forms_metadata of this AccountRoleSettings.  # noqa: E501
+
+
+        :return: The web_forms_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._web_forms_metadata
+
+    @web_forms_metadata.setter
+    def web_forms_metadata(self, web_forms_metadata):
+        """Sets the web_forms_metadata of this AccountRoleSettings.
+
+
+        :param web_forms_metadata: The web_forms_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._web_forms_metadata = web_forms_metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

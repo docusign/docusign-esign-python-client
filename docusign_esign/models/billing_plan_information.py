@@ -38,12 +38,14 @@ class BillingPlanInformation(object):
         'credit_card_information': 'CreditCardInformation',
         'direct_debit_processor_information': 'DirectDebitProcessorInformation',
         'downgrade_reason': 'str',
+        'enable_pre_auth': 'str',
         'enable_support': 'str',
         'included_seats': 'str',
         'incremental_seats': 'str',
         'payment_method': 'str',
         'payment_processor_information': 'PaymentProcessorInformation',
         'plan_information': 'PlanInformation',
+        'process_payment': 'str',
         'referral_information': 'ReferralInformation',
         'renewal_status': 'str',
         'sale_discount_amount': 'str',
@@ -60,12 +62,14 @@ class BillingPlanInformation(object):
         'credit_card_information': 'creditCardInformation',
         'direct_debit_processor_information': 'directDebitProcessorInformation',
         'downgrade_reason': 'downgradeReason',
+        'enable_pre_auth': 'enablePreAuth',
         'enable_support': 'enableSupport',
         'included_seats': 'includedSeats',
         'incremental_seats': 'incrementalSeats',
         'payment_method': 'paymentMethod',
         'payment_processor_information': 'paymentProcessorInformation',
         'plan_information': 'planInformation',
+        'process_payment': 'processPayment',
         'referral_information': 'referralInformation',
         'renewal_status': 'renewalStatus',
         'sale_discount_amount': 'saleDiscountAmount',
@@ -87,12 +91,14 @@ class BillingPlanInformation(object):
         self._credit_card_information = None
         self._direct_debit_processor_information = None
         self._downgrade_reason = None
+        self._enable_pre_auth = None
         self._enable_support = None
         self._included_seats = None
         self._incremental_seats = None
         self._payment_method = None
         self._payment_processor_information = None
         self._plan_information = None
+        self._process_payment = None
         self._referral_information = None
         self._renewal_status = None
         self._sale_discount_amount = None
@@ -108,12 +114,14 @@ class BillingPlanInformation(object):
         setattr(self, "_{}".format('credit_card_information'), kwargs.get('credit_card_information', None))
         setattr(self, "_{}".format('direct_debit_processor_information'), kwargs.get('direct_debit_processor_information', None))
         setattr(self, "_{}".format('downgrade_reason'), kwargs.get('downgrade_reason', None))
+        setattr(self, "_{}".format('enable_pre_auth'), kwargs.get('enable_pre_auth', None))
         setattr(self, "_{}".format('enable_support'), kwargs.get('enable_support', None))
         setattr(self, "_{}".format('included_seats'), kwargs.get('included_seats', None))
         setattr(self, "_{}".format('incremental_seats'), kwargs.get('incremental_seats', None))
         setattr(self, "_{}".format('payment_method'), kwargs.get('payment_method', None))
         setattr(self, "_{}".format('payment_processor_information'), kwargs.get('payment_processor_information', None))
         setattr(self, "_{}".format('plan_information'), kwargs.get('plan_information', None))
+        setattr(self, "_{}".format('process_payment'), kwargs.get('process_payment', None))
         setattr(self, "_{}".format('referral_information'), kwargs.get('referral_information', None))
         setattr(self, "_{}".format('renewal_status'), kwargs.get('renewal_status', None))
         setattr(self, "_{}".format('sale_discount_amount'), kwargs.get('sale_discount_amount', None))
@@ -229,6 +237,29 @@ class BillingPlanInformation(object):
         """
 
         self._downgrade_reason = downgrade_reason
+
+    @property
+    def enable_pre_auth(self):
+        """Gets the enable_pre_auth of this BillingPlanInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_pre_auth of this BillingPlanInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_pre_auth
+
+    @enable_pre_auth.setter
+    def enable_pre_auth(self, enable_pre_auth):
+        """Sets the enable_pre_auth of this BillingPlanInformation.
+
+          # noqa: E501
+
+        :param enable_pre_auth: The enable_pre_auth of this BillingPlanInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_pre_auth = enable_pre_auth
 
     @property
     def enable_support(self):
@@ -363,6 +394,29 @@ class BillingPlanInformation(object):
         """
 
         self._plan_information = plan_information
+
+    @property
+    def process_payment(self):
+        """Gets the process_payment of this BillingPlanInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The process_payment of this BillingPlanInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._process_payment
+
+    @process_payment.setter
+    def process_payment(self, process_payment):
+        """Sets the process_payment of this BillingPlanInformation.
+
+          # noqa: E501
+
+        :param process_payment: The process_payment of this BillingPlanInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._process_payment = process_payment
 
     @property
     def referral_information(self):

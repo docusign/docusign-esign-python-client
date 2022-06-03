@@ -47,6 +47,7 @@ class BulkSendBatchStatus(object):
         'mailing_list_name': 'str',
         'owner_user_id': 'str',
         'queued': 'str',
+        'resends_remaining': 'str',
         'sender_user_id': 'str',
         'sent': 'str',
         'submitted_date': 'str'
@@ -67,6 +68,7 @@ class BulkSendBatchStatus(object):
         'mailing_list_name': 'mailingListName',
         'owner_user_id': 'ownerUserId',
         'queued': 'queued',
+        'resends_remaining': 'resendsRemaining',
         'sender_user_id': 'senderUserId',
         'sent': 'sent',
         'submitted_date': 'submittedDate'
@@ -92,6 +94,7 @@ class BulkSendBatchStatus(object):
         self._mailing_list_name = None
         self._owner_user_id = None
         self._queued = None
+        self._resends_remaining = None
         self._sender_user_id = None
         self._sent = None
         self._submitted_date = None
@@ -111,6 +114,7 @@ class BulkSendBatchStatus(object):
         setattr(self, "_{}".format('mailing_list_name'), kwargs.get('mailing_list_name', None))
         setattr(self, "_{}".format('owner_user_id'), kwargs.get('owner_user_id', None))
         setattr(self, "_{}".format('queued'), kwargs.get('queued', None))
+        setattr(self, "_{}".format('resends_remaining'), kwargs.get('resends_remaining', None))
         setattr(self, "_{}".format('sender_user_id'), kwargs.get('sender_user_id', None))
         setattr(self, "_{}".format('sent'), kwargs.get('sent', None))
         setattr(self, "_{}".format('submitted_date'), kwargs.get('submitted_date', None))
@@ -434,6 +438,29 @@ class BulkSendBatchStatus(object):
         """
 
         self._queued = queued
+
+    @property
+    def resends_remaining(self):
+        """Gets the resends_remaining of this BulkSendBatchStatus.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The resends_remaining of this BulkSendBatchStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._resends_remaining
+
+    @resends_remaining.setter
+    def resends_remaining(self, resends_remaining):
+        """Sets the resends_remaining of this BulkSendBatchStatus.
+
+          # noqa: E501
+
+        :param resends_remaining: The resends_remaining of this BulkSendBatchStatus.  # noqa: E501
+        :type: str
+        """
+
+        self._resends_remaining = resends_remaining
 
     @property
     def sender_user_id(self):

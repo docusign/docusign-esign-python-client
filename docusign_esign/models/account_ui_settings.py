@@ -43,8 +43,8 @@ class AccountUISettings(object):
         'enable_easy_sign_template_upload_metadata': 'SettingsMetadata',
         'enable_envelope_copy_with_data': 'str',
         'enable_envelope_copy_with_data_metadata': 'SettingsMetadata',
-        'enable_legacy_homepage_link': 'str',
-        'enable_legacy_homepage_link_metadata': 'SettingsMetadata',
+        'enable_legacy_sendflow_link': 'str',
+        'enable_legacy_sendflow_link_metadata': 'SettingsMetadata',
         'has_external_linked_accounts': 'str',
         'has_external_linked_accounts_metadata': 'SettingsMetadata',
         'hide_send_an_envelope': 'str',
@@ -74,8 +74,8 @@ class AccountUISettings(object):
         'enable_easy_sign_template_upload_metadata': 'enableEasySignTemplateUploadMetadata',
         'enable_envelope_copy_with_data': 'enableEnvelopeCopyWithData',
         'enable_envelope_copy_with_data_metadata': 'enableEnvelopeCopyWithDataMetadata',
-        'enable_legacy_homepage_link': 'enableLegacyHomepageLink',
-        'enable_legacy_homepage_link_metadata': 'enableLegacyHomepageLinkMetadata',
+        'enable_legacy_sendflow_link': 'enableLegacySendflowLink',
+        'enable_legacy_sendflow_link_metadata': 'enableLegacySendflowLinkMetadata',
         'has_external_linked_accounts': 'hasExternalLinkedAccounts',
         'has_external_linked_accounts_metadata': 'hasExternalLinkedAccountsMetadata',
         'hide_send_an_envelope': 'hideSendAnEnvelope',
@@ -110,8 +110,8 @@ class AccountUISettings(object):
         self._enable_easy_sign_template_upload_metadata = None
         self._enable_envelope_copy_with_data = None
         self._enable_envelope_copy_with_data_metadata = None
-        self._enable_legacy_homepage_link = None
-        self._enable_legacy_homepage_link_metadata = None
+        self._enable_legacy_sendflow_link = None
+        self._enable_legacy_sendflow_link_metadata = None
         self._has_external_linked_accounts = None
         self._has_external_linked_accounts_metadata = None
         self._hide_send_an_envelope = None
@@ -140,8 +140,8 @@ class AccountUISettings(object):
         setattr(self, "_{}".format('enable_easy_sign_template_upload_metadata'), kwargs.get('enable_easy_sign_template_upload_metadata', None))
         setattr(self, "_{}".format('enable_envelope_copy_with_data'), kwargs.get('enable_envelope_copy_with_data', None))
         setattr(self, "_{}".format('enable_envelope_copy_with_data_metadata'), kwargs.get('enable_envelope_copy_with_data_metadata', None))
-        setattr(self, "_{}".format('enable_legacy_homepage_link'), kwargs.get('enable_legacy_homepage_link', None))
-        setattr(self, "_{}".format('enable_legacy_homepage_link_metadata'), kwargs.get('enable_legacy_homepage_link_metadata', None))
+        setattr(self, "_{}".format('enable_legacy_sendflow_link'), kwargs.get('enable_legacy_sendflow_link', None))
+        setattr(self, "_{}".format('enable_legacy_sendflow_link_metadata'), kwargs.get('enable_legacy_sendflow_link_metadata', None))
         setattr(self, "_{}".format('has_external_linked_accounts'), kwargs.get('has_external_linked_accounts', None))
         setattr(self, "_{}".format('has_external_linked_accounts_metadata'), kwargs.get('has_external_linked_accounts_metadata', None))
         setattr(self, "_{}".format('hide_send_an_envelope'), kwargs.get('hide_send_an_envelope', None))
@@ -378,48 +378,48 @@ class AccountUISettings(object):
         self._enable_envelope_copy_with_data_metadata = enable_envelope_copy_with_data_metadata
 
     @property
-    def enable_legacy_homepage_link(self):
-        """Gets the enable_legacy_homepage_link of this AccountUISettings.  # noqa: E501
+    def enable_legacy_sendflow_link(self):
+        """Gets the enable_legacy_sendflow_link of this AccountUISettings.  # noqa: E501
 
           # noqa: E501
 
-        :return: The enable_legacy_homepage_link of this AccountUISettings.  # noqa: E501
+        :return: The enable_legacy_sendflow_link of this AccountUISettings.  # noqa: E501
         :rtype: str
         """
-        return self._enable_legacy_homepage_link
+        return self._enable_legacy_sendflow_link
 
-    @enable_legacy_homepage_link.setter
-    def enable_legacy_homepage_link(self, enable_legacy_homepage_link):
-        """Sets the enable_legacy_homepage_link of this AccountUISettings.
+    @enable_legacy_sendflow_link.setter
+    def enable_legacy_sendflow_link(self, enable_legacy_sendflow_link):
+        """Sets the enable_legacy_sendflow_link of this AccountUISettings.
 
           # noqa: E501
 
-        :param enable_legacy_homepage_link: The enable_legacy_homepage_link of this AccountUISettings.  # noqa: E501
+        :param enable_legacy_sendflow_link: The enable_legacy_sendflow_link of this AccountUISettings.  # noqa: E501
         :type: str
         """
 
-        self._enable_legacy_homepage_link = enable_legacy_homepage_link
+        self._enable_legacy_sendflow_link = enable_legacy_sendflow_link
 
     @property
-    def enable_legacy_homepage_link_metadata(self):
-        """Gets the enable_legacy_homepage_link_metadata of this AccountUISettings.  # noqa: E501
+    def enable_legacy_sendflow_link_metadata(self):
+        """Gets the enable_legacy_sendflow_link_metadata of this AccountUISettings.  # noqa: E501
 
 
-        :return: The enable_legacy_homepage_link_metadata of this AccountUISettings.  # noqa: E501
+        :return: The enable_legacy_sendflow_link_metadata of this AccountUISettings.  # noqa: E501
         :rtype: SettingsMetadata
         """
-        return self._enable_legacy_homepage_link_metadata
+        return self._enable_legacy_sendflow_link_metadata
 
-    @enable_legacy_homepage_link_metadata.setter
-    def enable_legacy_homepage_link_metadata(self, enable_legacy_homepage_link_metadata):
-        """Sets the enable_legacy_homepage_link_metadata of this AccountUISettings.
+    @enable_legacy_sendflow_link_metadata.setter
+    def enable_legacy_sendflow_link_metadata(self, enable_legacy_sendflow_link_metadata):
+        """Sets the enable_legacy_sendflow_link_metadata of this AccountUISettings.
 
 
-        :param enable_legacy_homepage_link_metadata: The enable_legacy_homepage_link_metadata of this AccountUISettings.  # noqa: E501
+        :param enable_legacy_sendflow_link_metadata: The enable_legacy_sendflow_link_metadata of this AccountUISettings.  # noqa: E501
         :type: SettingsMetadata
         """
 
-        self._enable_legacy_homepage_link_metadata = enable_legacy_homepage_link_metadata
+        self._enable_legacy_sendflow_link_metadata = enable_legacy_sendflow_link_metadata
 
     @property
     def has_external_linked_accounts(self):
