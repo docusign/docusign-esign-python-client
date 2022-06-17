@@ -46,6 +46,7 @@ class Witness(object):
         'can_sign_offline': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
+        'consent_details_list': 'list[ConsentDetails]',
         'creation_reason': 'str',
         'custom_fields': 'list[str]',
         'declined_date_time': 'str',
@@ -147,6 +148,7 @@ class Witness(object):
         'can_sign_offline': 'canSignOffline',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
+        'consent_details_list': 'consentDetailsList',
         'creation_reason': 'creationReason',
         'custom_fields': 'customFields',
         'declined_date_time': 'declinedDateTime',
@@ -253,6 +255,7 @@ class Witness(object):
         self._can_sign_offline = None
         self._client_user_id = None
         self._completed_count = None
+        self._consent_details_list = None
         self._creation_reason = None
         self._custom_fields = None
         self._declined_date_time = None
@@ -353,6 +356,7 @@ class Witness(object):
         setattr(self, "_{}".format('can_sign_offline'), kwargs.get('can_sign_offline', None))
         setattr(self, "_{}".format('client_user_id'), kwargs.get('client_user_id', None))
         setattr(self, "_{}".format('completed_count'), kwargs.get('completed_count', None))
+        setattr(self, "_{}".format('consent_details_list'), kwargs.get('consent_details_list', None))
         setattr(self, "_{}".format('creation_reason'), kwargs.get('creation_reason', None))
         setattr(self, "_{}".format('custom_fields'), kwargs.get('custom_fields', None))
         setattr(self, "_{}".format('declined_date_time'), kwargs.get('declined_date_time', None))
@@ -735,6 +739,29 @@ class Witness(object):
         """
 
         self._completed_count = completed_count
+
+    @property
+    def consent_details_list(self):
+        """Gets the consent_details_list of this Witness.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The consent_details_list of this Witness.  # noqa: E501
+        :rtype: list[ConsentDetails]
+        """
+        return self._consent_details_list
+
+    @consent_details_list.setter
+    def consent_details_list(self, consent_details_list):
+        """Sets the consent_details_list of this Witness.
+
+          # noqa: E501
+
+        :param consent_details_list: The consent_details_list of this Witness.  # noqa: E501
+        :type: list[ConsentDetails]
+        """
+
+        self._consent_details_list = consent_details_list
 
     @property
     def creation_reason(self):

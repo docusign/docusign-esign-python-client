@@ -53,6 +53,8 @@ class UserAccountManagementGranularInformation(object):
         'can_manage_sharing_metadata': 'SettingsMetadata',
         'can_manage_signing_groups': 'str',
         'can_manage_signing_groups_metadata': 'SettingsMetadata',
+        'can_manage_stamps': 'str',
+        'can_manage_stamps_metadata': 'SettingsMetadata',
         'can_manage_users': 'str',
         'can_manage_users_metadata': 'SettingsMetadata',
         'can_view_users': 'str'
@@ -79,6 +81,8 @@ class UserAccountManagementGranularInformation(object):
         'can_manage_sharing_metadata': 'canManageSharingMetadata',
         'can_manage_signing_groups': 'canManageSigningGroups',
         'can_manage_signing_groups_metadata': 'canManageSigningGroupsMetadata',
+        'can_manage_stamps': 'canManageStamps',
+        'can_manage_stamps_metadata': 'canManageStampsMetadata',
         'can_manage_users': 'canManageUsers',
         'can_manage_users_metadata': 'canManageUsersMetadata',
         'can_view_users': 'canViewUsers'
@@ -110,6 +114,8 @@ class UserAccountManagementGranularInformation(object):
         self._can_manage_sharing_metadata = None
         self._can_manage_signing_groups = None
         self._can_manage_signing_groups_metadata = None
+        self._can_manage_stamps = None
+        self._can_manage_stamps_metadata = None
         self._can_manage_users = None
         self._can_manage_users_metadata = None
         self._can_view_users = None
@@ -135,6 +141,8 @@ class UserAccountManagementGranularInformation(object):
         setattr(self, "_{}".format('can_manage_sharing_metadata'), kwargs.get('can_manage_sharing_metadata', None))
         setattr(self, "_{}".format('can_manage_signing_groups'), kwargs.get('can_manage_signing_groups', None))
         setattr(self, "_{}".format('can_manage_signing_groups_metadata'), kwargs.get('can_manage_signing_groups_metadata', None))
+        setattr(self, "_{}".format('can_manage_stamps'), kwargs.get('can_manage_stamps', None))
+        setattr(self, "_{}".format('can_manage_stamps_metadata'), kwargs.get('can_manage_stamps_metadata', None))
         setattr(self, "_{}".format('can_manage_users'), kwargs.get('can_manage_users', None))
         setattr(self, "_{}".format('can_manage_users_metadata'), kwargs.get('can_manage_users_metadata', None))
         setattr(self, "_{}".format('can_view_users'), kwargs.get('can_view_users', None))
@@ -578,6 +586,50 @@ class UserAccountManagementGranularInformation(object):
         """
 
         self._can_manage_signing_groups_metadata = can_manage_signing_groups_metadata
+
+    @property
+    def can_manage_stamps(self):
+        """Gets the can_manage_stamps of this UserAccountManagementGranularInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_manage_stamps of this UserAccountManagementGranularInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_manage_stamps
+
+    @can_manage_stamps.setter
+    def can_manage_stamps(self, can_manage_stamps):
+        """Sets the can_manage_stamps of this UserAccountManagementGranularInformation.
+
+          # noqa: E501
+
+        :param can_manage_stamps: The can_manage_stamps of this UserAccountManagementGranularInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._can_manage_stamps = can_manage_stamps
+
+    @property
+    def can_manage_stamps_metadata(self):
+        """Gets the can_manage_stamps_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+
+
+        :return: The can_manage_stamps_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_manage_stamps_metadata
+
+    @can_manage_stamps_metadata.setter
+    def can_manage_stamps_metadata(self, can_manage_stamps_metadata):
+        """Sets the can_manage_stamps_metadata of this UserAccountManagementGranularInformation.
+
+
+        :param can_manage_stamps_metadata: The can_manage_stamps_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_manage_stamps_metadata = can_manage_stamps_metadata
 
     @property
     def can_manage_users(self):

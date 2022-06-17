@@ -46,6 +46,7 @@ class NotaryRecipient(object):
         'can_sign_offline': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
+        'consent_details_list': 'list[ConsentDetails]',
         'creation_reason': 'str',
         'custom_fields': 'list[str]',
         'declined_date_time': 'str',
@@ -89,6 +90,7 @@ class NotaryRecipient(object):
         'notary_id': 'str',
         'notary_signer_email_sent': 'str',
         'notary_signers': 'list[str]',
+        'notary_source_type': 'str',
         'notary_type': 'str',
         'note': 'str',
         'note_metadata': 'PropertyMetadata',
@@ -148,6 +150,7 @@ class NotaryRecipient(object):
         'can_sign_offline': 'canSignOffline',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
+        'consent_details_list': 'consentDetailsList',
         'creation_reason': 'creationReason',
         'custom_fields': 'customFields',
         'declined_date_time': 'declinedDateTime',
@@ -191,6 +194,7 @@ class NotaryRecipient(object):
         'notary_id': 'notaryId',
         'notary_signer_email_sent': 'notarySignerEmailSent',
         'notary_signers': 'notarySigners',
+        'notary_source_type': 'notarySourceType',
         'notary_type': 'notaryType',
         'note': 'note',
         'note_metadata': 'noteMetadata',
@@ -255,6 +259,7 @@ class NotaryRecipient(object):
         self._can_sign_offline = None
         self._client_user_id = None
         self._completed_count = None
+        self._consent_details_list = None
         self._creation_reason = None
         self._custom_fields = None
         self._declined_date_time = None
@@ -298,6 +303,7 @@ class NotaryRecipient(object):
         self._notary_id = None
         self._notary_signer_email_sent = None
         self._notary_signers = None
+        self._notary_source_type = None
         self._notary_type = None
         self._note = None
         self._note_metadata = None
@@ -356,6 +362,7 @@ class NotaryRecipient(object):
         setattr(self, "_{}".format('can_sign_offline'), kwargs.get('can_sign_offline', None))
         setattr(self, "_{}".format('client_user_id'), kwargs.get('client_user_id', None))
         setattr(self, "_{}".format('completed_count'), kwargs.get('completed_count', None))
+        setattr(self, "_{}".format('consent_details_list'), kwargs.get('consent_details_list', None))
         setattr(self, "_{}".format('creation_reason'), kwargs.get('creation_reason', None))
         setattr(self, "_{}".format('custom_fields'), kwargs.get('custom_fields', None))
         setattr(self, "_{}".format('declined_date_time'), kwargs.get('declined_date_time', None))
@@ -399,6 +406,7 @@ class NotaryRecipient(object):
         setattr(self, "_{}".format('notary_id'), kwargs.get('notary_id', None))
         setattr(self, "_{}".format('notary_signer_email_sent'), kwargs.get('notary_signer_email_sent', None))
         setattr(self, "_{}".format('notary_signers'), kwargs.get('notary_signers', None))
+        setattr(self, "_{}".format('notary_source_type'), kwargs.get('notary_source_type', None))
         setattr(self, "_{}".format('notary_type'), kwargs.get('notary_type', None))
         setattr(self, "_{}".format('note'), kwargs.get('note', None))
         setattr(self, "_{}".format('note_metadata'), kwargs.get('note_metadata', None))
@@ -739,6 +747,29 @@ class NotaryRecipient(object):
         """
 
         self._completed_count = completed_count
+
+    @property
+    def consent_details_list(self):
+        """Gets the consent_details_list of this NotaryRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The consent_details_list of this NotaryRecipient.  # noqa: E501
+        :rtype: list[ConsentDetails]
+        """
+        return self._consent_details_list
+
+    @consent_details_list.setter
+    def consent_details_list(self, consent_details_list):
+        """Sets the consent_details_list of this NotaryRecipient.
+
+          # noqa: E501
+
+        :param consent_details_list: The consent_details_list of this NotaryRecipient.  # noqa: E501
+        :type: list[ConsentDetails]
+        """
+
+        self._consent_details_list = consent_details_list
 
     @property
     def creation_reason(self):
@@ -1700,6 +1731,29 @@ class NotaryRecipient(object):
         """
 
         self._notary_signers = notary_signers
+
+    @property
+    def notary_source_type(self):
+        """Gets the notary_source_type of this NotaryRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notary_source_type of this NotaryRecipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._notary_source_type
+
+    @notary_source_type.setter
+    def notary_source_type(self, notary_source_type):
+        """Sets the notary_source_type of this NotaryRecipient.
+
+          # noqa: E501
+
+        :param notary_source_type: The notary_source_type of this NotaryRecipient.  # noqa: E501
+        :type: str
+        """
+
+        self._notary_source_type = notary_source_type
 
     @property
     def notary_type(self):

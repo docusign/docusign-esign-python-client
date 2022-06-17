@@ -122,6 +122,8 @@ class AccountSettingsInformation(object):
         'allow_in_person_metadata': 'SettingsMetadata',
         'allow_managed_stamps': 'str',
         'allow_managed_stamps_metadata': 'SettingsMetadata',
+        'allow_managing_envelopes_on_behalf_of_others': 'str',
+        'allow_managing_envelopes_on_behalf_of_others_metadata': 'SettingsMetadata',
         'allow_markup': 'str',
         'allow_markup_metadata': 'SettingsMetadata',
         'allow_member_time_zone': 'str',
@@ -152,6 +154,8 @@ class AccountSettingsInformation(object):
         'allow_organization_to_use_in_person_electronic_notary_metadata': 'SettingsMetadata',
         'allow_organization_to_use_remote_notary': 'str',
         'allow_organization_to_use_remote_notary_metadata': 'SettingsMetadata',
+        'allow_organization_to_use_third_party_electronic_notary': 'str',
+        'allow_organization_to_use_third_party_electronic_notary_metadata': 'SettingsMetadata',
         'allow_payment_processing': 'str',
         'allow_payment_processing_metadata': 'SettingsMetadata',
         'allow_phone_authentication': 'str',
@@ -174,6 +178,8 @@ class AccountSettingsInformation(object):
         'allow_scheduled_sending_metadata': 'SettingsMetadata',
         'allow_security_appliance': 'str',
         'allow_security_appliance_metadata': 'SettingsMetadata',
+        'allow_sending_envelopes_on_behalf_of_others': 'str',
+        'allow_sending_envelopes_on_behalf_of_others_metadata': 'SettingsMetadata',
         'allow_send_to_certified_delivery': 'str',
         'allow_send_to_certified_delivery_metadata': 'SettingsMetadata',
         'allow_send_to_intermediary': 'str',
@@ -208,6 +214,8 @@ class AccountSettingsInformation(object):
         'allow_social_id_login_metadata': 'SettingsMetadata',
         'allow_supplemental_documents': 'str',
         'allow_supplemental_documents_metadata': 'SettingsMetadata',
+        'allow_third_party_electronic_notary': 'str',
+        'allow_third_party_electronic_notary_metadata': 'SettingsMetadata',
         'allow_users_to_access_directory': 'str',
         'allow_users_to_access_directory_metadata': 'SettingsMetadata',
         'allow_value_insights': 'str',
@@ -726,6 +734,8 @@ class AccountSettingsInformation(object):
         'allow_in_person_metadata': 'allowInPersonMetadata',
         'allow_managed_stamps': 'allowManagedStamps',
         'allow_managed_stamps_metadata': 'allowManagedStampsMetadata',
+        'allow_managing_envelopes_on_behalf_of_others': 'allowManagingEnvelopesOnBehalfOfOthers',
+        'allow_managing_envelopes_on_behalf_of_others_metadata': 'allowManagingEnvelopesOnBehalfOfOthersMetadata',
         'allow_markup': 'allowMarkup',
         'allow_markup_metadata': 'allowMarkupMetadata',
         'allow_member_time_zone': 'allowMemberTimeZone',
@@ -756,6 +766,8 @@ class AccountSettingsInformation(object):
         'allow_organization_to_use_in_person_electronic_notary_metadata': 'allowOrganizationToUseInPersonElectronicNotaryMetadata',
         'allow_organization_to_use_remote_notary': 'allowOrganizationToUseRemoteNotary',
         'allow_organization_to_use_remote_notary_metadata': 'allowOrganizationToUseRemoteNotaryMetadata',
+        'allow_organization_to_use_third_party_electronic_notary': 'allowOrganizationToUseThirdPartyElectronicNotary',
+        'allow_organization_to_use_third_party_electronic_notary_metadata': 'allowOrganizationToUseThirdPartyElectronicNotaryMetadata',
         'allow_payment_processing': 'allowPaymentProcessing',
         'allow_payment_processing_metadata': 'allowPaymentProcessingMetadata',
         'allow_phone_authentication': 'allowPhoneAuthentication',
@@ -778,6 +790,8 @@ class AccountSettingsInformation(object):
         'allow_scheduled_sending_metadata': 'allowScheduledSendingMetadata',
         'allow_security_appliance': 'allowSecurityAppliance',
         'allow_security_appliance_metadata': 'allowSecurityApplianceMetadata',
+        'allow_sending_envelopes_on_behalf_of_others': 'allowSendingEnvelopesOnBehalfOfOthers',
+        'allow_sending_envelopes_on_behalf_of_others_metadata': 'allowSendingEnvelopesOnBehalfOfOthersMetadata',
         'allow_send_to_certified_delivery': 'allowSendToCertifiedDelivery',
         'allow_send_to_certified_delivery_metadata': 'allowSendToCertifiedDeliveryMetadata',
         'allow_send_to_intermediary': 'allowSendToIntermediary',
@@ -812,6 +826,8 @@ class AccountSettingsInformation(object):
         'allow_social_id_login_metadata': 'allowSocialIdLoginMetadata',
         'allow_supplemental_documents': 'allowSupplementalDocuments',
         'allow_supplemental_documents_metadata': 'allowSupplementalDocumentsMetadata',
+        'allow_third_party_electronic_notary': 'allowThirdPartyElectronicNotary',
+        'allow_third_party_electronic_notary_metadata': 'allowThirdPartyElectronicNotaryMetadata',
         'allow_users_to_access_directory': 'allowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata': 'allowUsersToAccessDirectoryMetadata',
         'allow_value_insights': 'allowValueInsights',
@@ -1335,6 +1351,8 @@ class AccountSettingsInformation(object):
         self._allow_in_person_metadata = None
         self._allow_managed_stamps = None
         self._allow_managed_stamps_metadata = None
+        self._allow_managing_envelopes_on_behalf_of_others = None
+        self._allow_managing_envelopes_on_behalf_of_others_metadata = None
         self._allow_markup = None
         self._allow_markup_metadata = None
         self._allow_member_time_zone = None
@@ -1365,6 +1383,8 @@ class AccountSettingsInformation(object):
         self._allow_organization_to_use_in_person_electronic_notary_metadata = None
         self._allow_organization_to_use_remote_notary = None
         self._allow_organization_to_use_remote_notary_metadata = None
+        self._allow_organization_to_use_third_party_electronic_notary = None
+        self._allow_organization_to_use_third_party_electronic_notary_metadata = None
         self._allow_payment_processing = None
         self._allow_payment_processing_metadata = None
         self._allow_phone_authentication = None
@@ -1387,6 +1407,8 @@ class AccountSettingsInformation(object):
         self._allow_scheduled_sending_metadata = None
         self._allow_security_appliance = None
         self._allow_security_appliance_metadata = None
+        self._allow_sending_envelopes_on_behalf_of_others = None
+        self._allow_sending_envelopes_on_behalf_of_others_metadata = None
         self._allow_send_to_certified_delivery = None
         self._allow_send_to_certified_delivery_metadata = None
         self._allow_send_to_intermediary = None
@@ -1421,6 +1443,8 @@ class AccountSettingsInformation(object):
         self._allow_social_id_login_metadata = None
         self._allow_supplemental_documents = None
         self._allow_supplemental_documents_metadata = None
+        self._allow_third_party_electronic_notary = None
+        self._allow_third_party_electronic_notary_metadata = None
         self._allow_users_to_access_directory = None
         self._allow_users_to_access_directory_metadata = None
         self._allow_value_insights = None
@@ -1938,6 +1962,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_in_person_metadata'), kwargs.get('allow_in_person_metadata', None))
         setattr(self, "_{}".format('allow_managed_stamps'), kwargs.get('allow_managed_stamps', None))
         setattr(self, "_{}".format('allow_managed_stamps_metadata'), kwargs.get('allow_managed_stamps_metadata', None))
+        setattr(self, "_{}".format('allow_managing_envelopes_on_behalf_of_others'), kwargs.get('allow_managing_envelopes_on_behalf_of_others', None))
+        setattr(self, "_{}".format('allow_managing_envelopes_on_behalf_of_others_metadata'), kwargs.get('allow_managing_envelopes_on_behalf_of_others_metadata', None))
         setattr(self, "_{}".format('allow_markup'), kwargs.get('allow_markup', None))
         setattr(self, "_{}".format('allow_markup_metadata'), kwargs.get('allow_markup_metadata', None))
         setattr(self, "_{}".format('allow_member_time_zone'), kwargs.get('allow_member_time_zone', None))
@@ -1968,6 +1994,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_organization_to_use_in_person_electronic_notary_metadata'), kwargs.get('allow_organization_to_use_in_person_electronic_notary_metadata', None))
         setattr(self, "_{}".format('allow_organization_to_use_remote_notary'), kwargs.get('allow_organization_to_use_remote_notary', None))
         setattr(self, "_{}".format('allow_organization_to_use_remote_notary_metadata'), kwargs.get('allow_organization_to_use_remote_notary_metadata', None))
+        setattr(self, "_{}".format('allow_organization_to_use_third_party_electronic_notary'), kwargs.get('allow_organization_to_use_third_party_electronic_notary', None))
+        setattr(self, "_{}".format('allow_organization_to_use_third_party_electronic_notary_metadata'), kwargs.get('allow_organization_to_use_third_party_electronic_notary_metadata', None))
         setattr(self, "_{}".format('allow_payment_processing'), kwargs.get('allow_payment_processing', None))
         setattr(self, "_{}".format('allow_payment_processing_metadata'), kwargs.get('allow_payment_processing_metadata', None))
         setattr(self, "_{}".format('allow_phone_authentication'), kwargs.get('allow_phone_authentication', None))
@@ -1990,6 +2018,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_scheduled_sending_metadata'), kwargs.get('allow_scheduled_sending_metadata', None))
         setattr(self, "_{}".format('allow_security_appliance'), kwargs.get('allow_security_appliance', None))
         setattr(self, "_{}".format('allow_security_appliance_metadata'), kwargs.get('allow_security_appliance_metadata', None))
+        setattr(self, "_{}".format('allow_sending_envelopes_on_behalf_of_others'), kwargs.get('allow_sending_envelopes_on_behalf_of_others', None))
+        setattr(self, "_{}".format('allow_sending_envelopes_on_behalf_of_others_metadata'), kwargs.get('allow_sending_envelopes_on_behalf_of_others_metadata', None))
         setattr(self, "_{}".format('allow_send_to_certified_delivery'), kwargs.get('allow_send_to_certified_delivery', None))
         setattr(self, "_{}".format('allow_send_to_certified_delivery_metadata'), kwargs.get('allow_send_to_certified_delivery_metadata', None))
         setattr(self, "_{}".format('allow_send_to_intermediary'), kwargs.get('allow_send_to_intermediary', None))
@@ -2024,6 +2054,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_social_id_login_metadata'), kwargs.get('allow_social_id_login_metadata', None))
         setattr(self, "_{}".format('allow_supplemental_documents'), kwargs.get('allow_supplemental_documents', None))
         setattr(self, "_{}".format('allow_supplemental_documents_metadata'), kwargs.get('allow_supplemental_documents_metadata', None))
+        setattr(self, "_{}".format('allow_third_party_electronic_notary'), kwargs.get('allow_third_party_electronic_notary', None))
+        setattr(self, "_{}".format('allow_third_party_electronic_notary_metadata'), kwargs.get('allow_third_party_electronic_notary_metadata', None))
         setattr(self, "_{}".format('allow_users_to_access_directory'), kwargs.get('allow_users_to_access_directory', None))
         setattr(self, "_{}".format('allow_users_to_access_directory_metadata'), kwargs.get('allow_users_to_access_directory_metadata', None))
         setattr(self, "_{}".format('allow_value_insights'), kwargs.get('allow_value_insights', None))
@@ -4411,6 +4443,50 @@ class AccountSettingsInformation(object):
         self._allow_managed_stamps_metadata = allow_managed_stamps_metadata
 
     @property
+    def allow_managing_envelopes_on_behalf_of_others(self):
+        """Gets the allow_managing_envelopes_on_behalf_of_others of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_managing_envelopes_on_behalf_of_others of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_managing_envelopes_on_behalf_of_others
+
+    @allow_managing_envelopes_on_behalf_of_others.setter
+    def allow_managing_envelopes_on_behalf_of_others(self, allow_managing_envelopes_on_behalf_of_others):
+        """Sets the allow_managing_envelopes_on_behalf_of_others of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_managing_envelopes_on_behalf_of_others: The allow_managing_envelopes_on_behalf_of_others of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_managing_envelopes_on_behalf_of_others = allow_managing_envelopes_on_behalf_of_others
+
+    @property
+    def allow_managing_envelopes_on_behalf_of_others_metadata(self):
+        """Gets the allow_managing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_managing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_managing_envelopes_on_behalf_of_others_metadata
+
+    @allow_managing_envelopes_on_behalf_of_others_metadata.setter
+    def allow_managing_envelopes_on_behalf_of_others_metadata(self, allow_managing_envelopes_on_behalf_of_others_metadata):
+        """Sets the allow_managing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.
+
+
+        :param allow_managing_envelopes_on_behalf_of_others_metadata: The allow_managing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_managing_envelopes_on_behalf_of_others_metadata = allow_managing_envelopes_on_behalf_of_others_metadata
+
+    @property
     def allow_markup(self):
         """Gets the allow_markup of this AccountSettingsInformation.  # noqa: E501
 
@@ -5073,6 +5149,50 @@ class AccountSettingsInformation(object):
         self._allow_organization_to_use_remote_notary_metadata = allow_organization_to_use_remote_notary_metadata
 
     @property
+    def allow_organization_to_use_third_party_electronic_notary(self):
+        """Gets the allow_organization_to_use_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_organization_to_use_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_organization_to_use_third_party_electronic_notary
+
+    @allow_organization_to_use_third_party_electronic_notary.setter
+    def allow_organization_to_use_third_party_electronic_notary(self, allow_organization_to_use_third_party_electronic_notary):
+        """Sets the allow_organization_to_use_third_party_electronic_notary of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_organization_to_use_third_party_electronic_notary: The allow_organization_to_use_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_organization_to_use_third_party_electronic_notary = allow_organization_to_use_third_party_electronic_notary
+
+    @property
+    def allow_organization_to_use_third_party_electronic_notary_metadata(self):
+        """Gets the allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_organization_to_use_third_party_electronic_notary_metadata
+
+    @allow_organization_to_use_third_party_electronic_notary_metadata.setter
+    def allow_organization_to_use_third_party_electronic_notary_metadata(self, allow_organization_to_use_third_party_electronic_notary_metadata):
+        """Sets the allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.
+
+
+        :param allow_organization_to_use_third_party_electronic_notary_metadata: The allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_organization_to_use_third_party_electronic_notary_metadata = allow_organization_to_use_third_party_electronic_notary_metadata
+
+    @property
     def allow_payment_processing(self):
         """Gets the allow_payment_processing of this AccountSettingsInformation.  # noqa: E501
 
@@ -5555,6 +5675,50 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_security_appliance_metadata = allow_security_appliance_metadata
+
+    @property
+    def allow_sending_envelopes_on_behalf_of_others(self):
+        """Gets the allow_sending_envelopes_on_behalf_of_others of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_sending_envelopes_on_behalf_of_others of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_sending_envelopes_on_behalf_of_others
+
+    @allow_sending_envelopes_on_behalf_of_others.setter
+    def allow_sending_envelopes_on_behalf_of_others(self, allow_sending_envelopes_on_behalf_of_others):
+        """Sets the allow_sending_envelopes_on_behalf_of_others of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_sending_envelopes_on_behalf_of_others: The allow_sending_envelopes_on_behalf_of_others of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_sending_envelopes_on_behalf_of_others = allow_sending_envelopes_on_behalf_of_others
+
+    @property
+    def allow_sending_envelopes_on_behalf_of_others_metadata(self):
+        """Gets the allow_sending_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_sending_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_sending_envelopes_on_behalf_of_others_metadata
+
+    @allow_sending_envelopes_on_behalf_of_others_metadata.setter
+    def allow_sending_envelopes_on_behalf_of_others_metadata(self, allow_sending_envelopes_on_behalf_of_others_metadata):
+        """Sets the allow_sending_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.
+
+
+        :param allow_sending_envelopes_on_behalf_of_others_metadata: The allow_sending_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_sending_envelopes_on_behalf_of_others_metadata = allow_sending_envelopes_on_behalf_of_others_metadata
 
     @property
     def allow_send_to_certified_delivery(self):
@@ -6305,6 +6469,50 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_supplemental_documents_metadata = allow_supplemental_documents_metadata
+
+    @property
+    def allow_third_party_electronic_notary(self):
+        """Gets the allow_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_third_party_electronic_notary
+
+    @allow_third_party_electronic_notary.setter
+    def allow_third_party_electronic_notary(self, allow_third_party_electronic_notary):
+        """Sets the allow_third_party_electronic_notary of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_third_party_electronic_notary: The allow_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_third_party_electronic_notary = allow_third_party_electronic_notary
+
+    @property
+    def allow_third_party_electronic_notary_metadata(self):
+        """Gets the allow_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_third_party_electronic_notary_metadata
+
+    @allow_third_party_electronic_notary_metadata.setter
+    def allow_third_party_electronic_notary_metadata(self, allow_third_party_electronic_notary_metadata):
+        """Sets the allow_third_party_electronic_notary_metadata of this AccountSettingsInformation.
+
+
+        :param allow_third_party_electronic_notary_metadata: The allow_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_third_party_electronic_notary_metadata = allow_third_party_electronic_notary_metadata
 
     @property
     def allow_users_to_access_directory(self):

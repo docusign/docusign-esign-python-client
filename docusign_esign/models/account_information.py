@@ -43,6 +43,7 @@ class AccountInformation(object):
         'billing_period_envelopes_sent': 'str',
         'billing_period_start_date': 'str',
         'billing_profile': 'str',
+        'brands': 'BrandsResponse',
         'can_upgrade': 'str',
         'connect_permission': 'str',
         'created_date': 'str',
@@ -83,6 +84,7 @@ class AccountInformation(object):
         'billing_period_envelopes_sent': 'billingPeriodEnvelopesSent',
         'billing_period_start_date': 'billingPeriodStartDate',
         'billing_profile': 'billingProfile',
+        'brands': 'brands',
         'can_upgrade': 'canUpgrade',
         'connect_permission': 'connectPermission',
         'created_date': 'createdDate',
@@ -128,6 +130,7 @@ class AccountInformation(object):
         self._billing_period_envelopes_sent = None
         self._billing_period_start_date = None
         self._billing_profile = None
+        self._brands = None
         self._can_upgrade = None
         self._connect_permission = None
         self._created_date = None
@@ -167,6 +170,7 @@ class AccountInformation(object):
         setattr(self, "_{}".format('billing_period_envelopes_sent'), kwargs.get('billing_period_envelopes_sent', None))
         setattr(self, "_{}".format('billing_period_start_date'), kwargs.get('billing_period_start_date', None))
         setattr(self, "_{}".format('billing_profile'), kwargs.get('billing_profile', None))
+        setattr(self, "_{}".format('brands'), kwargs.get('brands', None))
         setattr(self, "_{}".format('can_upgrade'), kwargs.get('can_upgrade', None))
         setattr(self, "_{}".format('connect_permission'), kwargs.get('connect_permission', None))
         setattr(self, "_{}".format('created_date'), kwargs.get('created_date', None))
@@ -422,6 +426,27 @@ class AccountInformation(object):
         """
 
         self._billing_profile = billing_profile
+
+    @property
+    def brands(self):
+        """Gets the brands of this AccountInformation.  # noqa: E501
+
+
+        :return: The brands of this AccountInformation.  # noqa: E501
+        :rtype: BrandsResponse
+        """
+        return self._brands
+
+    @brands.setter
+    def brands(self, brands):
+        """Sets the brands of this AccountInformation.
+
+
+        :param brands: The brands of this AccountInformation.  # noqa: E501
+        :type: BrandsResponse
+        """
+
+        self._brands = brands
 
     @property
     def can_upgrade(self):
