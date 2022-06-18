@@ -33,12 +33,14 @@ class ScheduledSending(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'bulk_list_id': 'str',
         'resume_date': 'str',
         'rules': 'list[EnvelopeDelayRule]',
         'status': 'str'
     }
 
     attribute_map = {
+        'bulk_list_id': 'bulkListId',
         'resume_date': 'resumeDate',
         'rules': 'rules',
         'status': 'status'
@@ -50,14 +52,39 @@ class ScheduledSending(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._bulk_list_id = None
         self._resume_date = None
         self._rules = None
         self._status = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('bulk_list_id'), kwargs.get('bulk_list_id', None))
         setattr(self, "_{}".format('resume_date'), kwargs.get('resume_date', None))
         setattr(self, "_{}".format('rules'), kwargs.get('rules', None))
         setattr(self, "_{}".format('status'), kwargs.get('status', None))
+
+    @property
+    def bulk_list_id(self):
+        """Gets the bulk_list_id of this ScheduledSending.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The bulk_list_id of this ScheduledSending.  # noqa: E501
+        :rtype: str
+        """
+        return self._bulk_list_id
+
+    @bulk_list_id.setter
+    def bulk_list_id(self, bulk_list_id):
+        """Sets the bulk_list_id of this ScheduledSending.
+
+          # noqa: E501
+
+        :param bulk_list_id: The bulk_list_id of this ScheduledSending.  # noqa: E501
+        :type: str
+        """
+
+        self._bulk_list_id = bulk_list_id
 
     @property
     def resume_date(self):

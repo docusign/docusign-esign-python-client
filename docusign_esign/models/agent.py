@@ -41,6 +41,7 @@ class Agent(object):
         'auto_responded_reason': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
+        'consent_details_list': 'list[ConsentDetails]',
         'custom_fields': 'list[str]',
         'declined_date_time': 'str',
         'declined_reason': 'str',
@@ -116,6 +117,7 @@ class Agent(object):
         'auto_responded_reason': 'autoRespondedReason',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
+        'consent_details_list': 'consentDetailsList',
         'custom_fields': 'customFields',
         'declined_date_time': 'declinedDateTime',
         'declined_reason': 'declinedReason',
@@ -196,6 +198,7 @@ class Agent(object):
         self._auto_responded_reason = None
         self._client_user_id = None
         self._completed_count = None
+        self._consent_details_list = None
         self._custom_fields = None
         self._declined_date_time = None
         self._declined_reason = None
@@ -270,6 +273,7 @@ class Agent(object):
         setattr(self, "_{}".format('auto_responded_reason'), kwargs.get('auto_responded_reason', None))
         setattr(self, "_{}".format('client_user_id'), kwargs.get('client_user_id', None))
         setattr(self, "_{}".format('completed_count'), kwargs.get('completed_count', None))
+        setattr(self, "_{}".format('consent_details_list'), kwargs.get('consent_details_list', None))
         setattr(self, "_{}".format('custom_fields'), kwargs.get('custom_fields', None))
         setattr(self, "_{}".format('declined_date_time'), kwargs.get('declined_date_time', None))
         setattr(self, "_{}".format('declined_reason'), kwargs.get('declined_reason', None))
@@ -516,6 +520,29 @@ class Agent(object):
         """
 
         self._completed_count = completed_count
+
+    @property
+    def consent_details_list(self):
+        """Gets the consent_details_list of this Agent.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The consent_details_list of this Agent.  # noqa: E501
+        :rtype: list[ConsentDetails]
+        """
+        return self._consent_details_list
+
+    @consent_details_list.setter
+    def consent_details_list(self, consent_details_list):
+        """Sets the consent_details_list of this Agent.
+
+          # noqa: E501
+
+        :param consent_details_list: The consent_details_list of this Agent.  # noqa: E501
+        :type: list[ConsentDetails]
+        """
+
+        self._consent_details_list = consent_details_list
 
     @property
     def custom_fields(self):

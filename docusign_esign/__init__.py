@@ -193,12 +193,14 @@ from docusign_esign.models.connect_event_data import ConnectEventData
 from docusign_esign.models.connect_failure_filter import ConnectFailureFilter
 from docusign_esign.models.connect_failure_result import ConnectFailureResult
 from docusign_esign.models.connect_failure_results import ConnectFailureResults
+from docusign_esign.models.connect_historical_envelope_republish import ConnectHistoricalEnvelopeRepublish
 from docusign_esign.models.connect_log import ConnectLog
 from docusign_esign.models.connect_logs import ConnectLogs
 from docusign_esign.models.connect_salesforce_field import ConnectSalesforceField
 from docusign_esign.models.connect_salesforce_object import ConnectSalesforceObject
 from docusign_esign.models.connect_user_info import ConnectUserInfo
 from docusign_esign.models.connect_user_object import ConnectUserObject
+from docusign_esign.models.consent_details import ConsentDetails
 from docusign_esign.models.console_view_request import ConsoleViewRequest
 from docusign_esign.models.consumer_disclosure import ConsumerDisclosure
 from docusign_esign.models.contact import Contact
@@ -265,6 +267,8 @@ from docusign_esign.models.envelope_id import EnvelopeId
 from docusign_esign.models.envelope_ids_request import EnvelopeIdsRequest
 from docusign_esign.models.envelope_metadata import EnvelopeMetadata
 from docusign_esign.models.envelope_notification_request import EnvelopeNotificationRequest
+from docusign_esign.models.envelope_publish_transaction import EnvelopePublishTransaction
+from docusign_esign.models.envelope_publish_transaction_error_rollup import EnvelopePublishTransactionErrorRollup
 from docusign_esign.models.envelope_purge_configuration import EnvelopePurgeConfiguration
 from docusign_esign.models.envelope_summary import EnvelopeSummary
 from docusign_esign.models.envelope_template import EnvelopeTemplate

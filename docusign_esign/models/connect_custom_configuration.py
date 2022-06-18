@@ -40,6 +40,7 @@ class ConnectCustomConfiguration(object):
         'configuration_type': 'str',
         'connect_id': 'str',
         'delivery_mode': 'str',
+        'disabled_by': 'str',
         'enable_log': 'str',
         'envelope_events': 'list[str]',
         'event_data': 'ConnectEventData',
@@ -83,6 +84,7 @@ class ConnectCustomConfiguration(object):
         'configuration_type': 'configurationType',
         'connect_id': 'connectId',
         'delivery_mode': 'deliveryMode',
+        'disabled_by': 'disabledBy',
         'enable_log': 'enableLog',
         'envelope_events': 'envelopeEvents',
         'event_data': 'eventData',
@@ -131,6 +133,7 @@ class ConnectCustomConfiguration(object):
         self._configuration_type = None
         self._connect_id = None
         self._delivery_mode = None
+        self._disabled_by = None
         self._enable_log = None
         self._envelope_events = None
         self._event_data = None
@@ -173,6 +176,7 @@ class ConnectCustomConfiguration(object):
         setattr(self, "_{}".format('configuration_type'), kwargs.get('configuration_type', None))
         setattr(self, "_{}".format('connect_id'), kwargs.get('connect_id', None))
         setattr(self, "_{}".format('delivery_mode'), kwargs.get('delivery_mode', None))
+        setattr(self, "_{}".format('disabled_by'), kwargs.get('disabled_by', None))
         setattr(self, "_{}".format('enable_log'), kwargs.get('enable_log', None))
         setattr(self, "_{}".format('envelope_events'), kwargs.get('envelope_events', None))
         setattr(self, "_{}".format('event_data'), kwargs.get('event_data', None))
@@ -367,6 +371,29 @@ class ConnectCustomConfiguration(object):
         """
 
         self._delivery_mode = delivery_mode
+
+    @property
+    def disabled_by(self):
+        """Gets the disabled_by of this ConnectCustomConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The disabled_by of this ConnectCustomConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._disabled_by
+
+    @disabled_by.setter
+    def disabled_by(self, disabled_by):
+        """Sets the disabled_by of this ConnectCustomConfiguration.
+
+          # noqa: E501
+
+        :param disabled_by: The disabled_by of this ConnectCustomConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._disabled_by = disabled_by
 
     @property
     def enable_log(self):
