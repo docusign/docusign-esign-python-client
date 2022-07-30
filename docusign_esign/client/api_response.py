@@ -16,6 +16,7 @@ import ssl
 import re
 import json
 import logging
+import os
 
 from six import PY3
 from six.moves.urllib.parse import urlencode
@@ -81,14 +82,26 @@ class RESTClientObject(object):
         key_file = Configuration().key_file
 
         # https pool manager
-        self.pool_manager = urllib3.PoolManager(
-            num_pools=pools_size,
-            maxsize=maxsize,
-            cert_reqs=cert_reqs,
-            ca_certs=ca_certs,
-            cert_file=cert_file,
-            key_file=key_file
-        )
+        proxy_url = os.environ.get("HTTPS_PROXY", os.environ.get("HTTP_PROXY"))
+        if proxy_url is None:
+            self.pool_manager = urllib3.PoolManager(
+                num_pools=pools_size,
+                maxsize=maxsize,
+                cert_reqs=cert_reqs,
+                ca_certs=ca_certs,
+                cert_file=cert_file,
+                key_file=key_file
+            )
+        else:
+            self.pool_manager = urllib3.ProxyManager(
+                proxy_url=proxy_url,
+                num_pools=pools_size,
+                maxsize=maxsize,
+                cert_reqs=cert_reqs,
+                ca_certs=ca_certs,
+                cert_file=cert_file,
+                key_file=key_file
+            )
 
     def request(self, method, url, query_params=None, headers=None,
                 body=None, post_params=None, _preload_content=True, _request_timeout=None):
