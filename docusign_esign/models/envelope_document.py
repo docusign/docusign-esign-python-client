@@ -224,6 +224,7 @@ class EnvelopeDocument(object):
     def authoritative_copy_metadata(self):
         """Gets the authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
 
+        Metadata that indicates if the sender can edit the `authoritativeCopy` property. Not applicable for template documents.  # noqa: E501
 
         :return: The authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
         :rtype: PropertyMetadata
@@ -234,6 +235,7 @@ class EnvelopeDocument(object):
     def authoritative_copy_metadata(self, authoritative_copy_metadata):
         """Sets the authoritative_copy_metadata of this EnvelopeDocument.
 
+        Metadata that indicates if the sender can edit the `authoritativeCopy` property. Not applicable for template documents.  # noqa: E501
 
         :param authoritative_copy_metadata: The authoritative_copy_metadata of this EnvelopeDocument.  # noqa: E501
         :type: PropertyMetadata
@@ -314,6 +316,7 @@ class EnvelopeDocument(object):
     def display_metadata(self):
         """Gets the display_metadata of this EnvelopeDocument.  # noqa: E501
 
+        Metadata that indicates if the sender can edit the `display` property. Not applicable for template documents.  # noqa: E501
 
         :return: The display_metadata of this EnvelopeDocument.  # noqa: E501
         :rtype: PropertyMetadata
@@ -324,6 +327,7 @@ class EnvelopeDocument(object):
     def display_metadata(self, display_metadata):
         """Sets the display_metadata of this EnvelopeDocument.
 
+        Metadata that indicates if the sender can edit the `display` property. Not applicable for template documents.  # noqa: E501
 
         :param display_metadata: The display_metadata of this EnvelopeDocument.  # noqa: E501
         :type: PropertyMetadata
@@ -427,6 +431,7 @@ class EnvelopeDocument(object):
     def error_details(self):
         """Gets the error_details of this EnvelopeDocument.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this EnvelopeDocument.  # noqa: E501
         :rtype: ErrorDetails
@@ -437,6 +442,7 @@ class EnvelopeDocument(object):
     def error_details(self, error_details):
         """Sets the error_details of this EnvelopeDocument.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this EnvelopeDocument.  # noqa: E501
         :type: ErrorDetails
@@ -471,6 +477,7 @@ class EnvelopeDocument(object):
     def include_in_download_metadata(self):
         """Gets the include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
 
+        Metadata that indicates if the sender can edit the `includeInDownload` property. Not applicable for template documents.  # noqa: E501
 
         :return: The include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
         :rtype: PropertyMetadata
@@ -481,6 +488,7 @@ class EnvelopeDocument(object):
     def include_in_download_metadata(self, include_in_download_metadata):
         """Sets the include_in_download_metadata of this EnvelopeDocument.
 
+        Metadata that indicates if the sender can edit the `includeInDownload` property. Not applicable for template documents.  # noqa: E501
 
         :param include_in_download_metadata: The include_in_download_metadata of this EnvelopeDocument.  # noqa: E501
         :type: PropertyMetadata
@@ -515,6 +523,7 @@ class EnvelopeDocument(object):
     def name_metadata(self):
         """Gets the name_metadata of this EnvelopeDocument.  # noqa: E501
 
+        Metadata that indicates if the sender can edit the `name` property. Not applicable for template documents.  # noqa: E501
 
         :return: The name_metadata of this EnvelopeDocument.  # noqa: E501
         :rtype: PropertyMetadata
@@ -525,6 +534,7 @@ class EnvelopeDocument(object):
     def name_metadata(self, name_metadata):
         """Sets the name_metadata of this EnvelopeDocument.
 
+        Metadata that indicates if the sender can edit the `name` property. Not applicable for template documents.  # noqa: E501
 
         :param name_metadata: The name_metadata of this EnvelopeDocument.  # noqa: E501
         :type: PropertyMetadata
@@ -605,6 +615,7 @@ class EnvelopeDocument(object):
     def signer_must_acknowledge_metadata(self):
         """Gets the signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
 
+        Metadata that indicates if the sender can edit the `signerMustAcknowledge` property. Not applicable for template documents.  # noqa: E501
 
         :return: The signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
         :rtype: PropertyMetadata
@@ -615,6 +626,7 @@ class EnvelopeDocument(object):
     def signer_must_acknowledge_metadata(self, signer_must_acknowledge_metadata):
         """Sets the signer_must_acknowledge_metadata of this EnvelopeDocument.
 
+        Metadata that indicates if the sender can edit the `signerMustAcknowledge` property. Not applicable for template documents.  # noqa: E501
 
         :param signer_must_acknowledge_metadata: The signer_must_acknowledge_metadata of this EnvelopeDocument.  # noqa: E501
         :type: PropertyMetadata

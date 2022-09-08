@@ -109,6 +109,7 @@ class RecipientIdentityVerification(object):
     def workflow_id_metadata(self):
         """Gets the workflow_id_metadata of this RecipientIdentityVerification.  # noqa: E501
 
+          # noqa: E501
 
         :return: The workflow_id_metadata of this RecipientIdentityVerification.  # noqa: E501
         :rtype: PropertyMetadata
@@ -119,6 +120,7 @@ class RecipientIdentityVerification(object):
     def workflow_id_metadata(self, workflow_id_metadata):
         """Sets the workflow_id_metadata of this RecipientIdentityVerification.
 
+          # noqa: E501
 
         :param workflow_id_metadata: The workflow_id_metadata of this RecipientIdentityVerification.  # noqa: E501
         :type: PropertyMetadata

@@ -67,6 +67,7 @@ class IdCheckInformationInput(object):
     def address_information_input(self):
         """Gets the address_information_input of this IdCheckInformationInput.  # noqa: E501
 
+        An object that specifies recipient address information and how it is displayed.  # noqa: E501
 
         :return: The address_information_input of this IdCheckInformationInput.  # noqa: E501
         :rtype: AddressInformationInput
@@ -77,6 +78,7 @@ class IdCheckInformationInput(object):
     def address_information_input(self, address_information_input):
         """Sets the address_information_input of this IdCheckInformationInput.
 
+        An object that specifies recipient address information and how it is displayed.  # noqa: E501
 
         :param address_information_input: The address_information_input of this IdCheckInformationInput.  # noqa: E501
         :type: AddressInformationInput
@@ -88,6 +90,7 @@ class IdCheckInformationInput(object):
     def dob_information_input(self):
         """Gets the dob_information_input of this IdCheckInformationInput.  # noqa: E501
 
+        An object that specifies recipient date of birth information and how it is displayed.  # noqa: E501
 
         :return: The dob_information_input of this IdCheckInformationInput.  # noqa: E501
         :rtype: DobInformationInput
@@ -98,6 +101,7 @@ class IdCheckInformationInput(object):
     def dob_information_input(self, dob_information_input):
         """Sets the dob_information_input of this IdCheckInformationInput.
 
+        An object that specifies recipient date of birth information and how it is displayed.  # noqa: E501
 
         :param dob_information_input: The dob_information_input of this IdCheckInformationInput.  # noqa: E501
         :type: DobInformationInput
@@ -109,6 +113,7 @@ class IdCheckInformationInput(object):
     def ssn4_information_input(self):
         """Gets the ssn4_information_input of this IdCheckInformationInput.  # noqa: E501
 
+        An object that specifies the last four digits of the recipient's Social Security Number (SSN).  # noqa: E501
 
         :return: The ssn4_information_input of this IdCheckInformationInput.  # noqa: E501
         :rtype: Ssn4InformationInput
@@ -119,6 +124,7 @@ class IdCheckInformationInput(object):
     def ssn4_information_input(self, ssn4_information_input):
         """Sets the ssn4_information_input of this IdCheckInformationInput.
 
+        An object that specifies the last four digits of the recipient's Social Security Number (SSN).  # noqa: E501
 
         :param ssn4_information_input: The ssn4_information_input of this IdCheckInformationInput.  # noqa: E501
         :type: Ssn4InformationInput
@@ -130,6 +136,7 @@ class IdCheckInformationInput(object):
     def ssn9_information_input(self):
         """Gets the ssn9_information_input of this IdCheckInformationInput.  # noqa: E501
 
+        An object that specifies the recipient's Social Security Number (SSN) information. Note that ssn9 information cannot be returned in a response.  # noqa: E501
 
         :return: The ssn9_information_input of this IdCheckInformationInput.  # noqa: E501
         :rtype: Ssn9InformationInput
@@ -140,6 +147,7 @@ class IdCheckInformationInput(object):
     def ssn9_information_input(self, ssn9_information_input):
         """Sets the ssn9_information_input of this IdCheckInformationInput.
 
+        An object that specifies the recipient's Social Security Number (SSN) information. Note that ssn9 information cannot be returned in a response.  # noqa: E501
 
         :param ssn9_information_input: The ssn9_information_input of this IdCheckInformationInput.  # noqa: E501
         :type: Ssn9InformationInput

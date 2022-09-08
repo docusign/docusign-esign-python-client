@@ -98,6 +98,7 @@ class ListItem(object):
     def selected_metadata(self):
         """Gets the selected_metadata of this ListItem.  # noqa: E501
 
+        Metadata that indicates whether the `selected` property is editable.  # noqa: E501
 
         :return: The selected_metadata of this ListItem.  # noqa: E501
         :rtype: PropertyMetadata
@@ -108,6 +109,7 @@ class ListItem(object):
     def selected_metadata(self, selected_metadata):
         """Sets the selected_metadata of this ListItem.
 
+        Metadata that indicates whether the `selected` property is editable.  # noqa: E501
 
         :param selected_metadata: The selected_metadata of this ListItem.  # noqa: E501
         :type: PropertyMetadata
@@ -142,6 +144,7 @@ class ListItem(object):
     def text_metadata(self):
         """Gets the text_metadata of this ListItem.  # noqa: E501
 
+          # noqa: E501
 
         :return: The text_metadata of this ListItem.  # noqa: E501
         :rtype: PropertyMetadata
@@ -152,6 +155,7 @@ class ListItem(object):
     def text_metadata(self, text_metadata):
         """Sets the text_metadata of this ListItem.
 
+          # noqa: E501
 
         :param text_metadata: The text_metadata of this ListItem.  # noqa: E501
         :type: PropertyMetadata
@@ -186,6 +190,7 @@ class ListItem(object):
     def value_metadata(self):
         """Gets the value_metadata of this ListItem.  # noqa: E501
 
+        Metadata that indicates whether the `value` property is editable.  # noqa: E501
 
         :return: The value_metadata of this ListItem.  # noqa: E501
         :rtype: PropertyMetadata
@@ -196,6 +201,7 @@ class ListItem(object):
     def value_metadata(self, value_metadata):
         """Sets the value_metadata of this ListItem.
 
+        Metadata that indicates whether the `value` property is editable.  # noqa: E501
 
         :param value_metadata: The value_metadata of this ListItem.  # noqa: E501
         :type: PropertyMetadata

@@ -226,6 +226,7 @@ class TemplateRole(object):
     def email_notification(self):
         """Gets the email_notification of this TemplateRole.  # noqa: E501
 
+        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
 
         :return: The email_notification of this TemplateRole.  # noqa: E501
         :rtype: RecipientEmailNotification
@@ -236,6 +237,7 @@ class TemplateRole(object):
     def email_notification(self, email_notification):
         """Sets the email_notification of this TemplateRole.
 
+        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
 
         :param email_notification: The email_notification of this TemplateRole.  # noqa: E501
         :type: RecipientEmailNotification
@@ -316,6 +318,7 @@ class TemplateRole(object):
     def phone_number(self):
         """Gets the phone_number of this TemplateRole.  # noqa: E501
 
+        Describes the recipient phone number.  # noqa: E501
 
         :return: The phone_number of this TemplateRole.  # noqa: E501
         :rtype: RecipientPhoneNumber
@@ -326,6 +329,7 @@ class TemplateRole(object):
     def phone_number(self, phone_number):
         """Sets the phone_number of this TemplateRole.
 
+        Describes the recipient phone number.  # noqa: E501
 
         :param phone_number: The phone_number of this TemplateRole.  # noqa: E501
         :type: RecipientPhoneNumber
@@ -429,6 +433,7 @@ class TemplateRole(object):
     def tabs(self):
         """Gets the tabs of this TemplateRole.  # noqa: E501
 
+        A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.  # noqa: E501
 
         :return: The tabs of this TemplateRole.  # noqa: E501
         :rtype: Tabs
@@ -439,6 +444,7 @@ class TemplateRole(object):
     def tabs(self, tabs):
         """Sets the tabs of this TemplateRole.
 
+        A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.  # noqa: E501
 
         :param tabs: The tabs of this TemplateRole.  # noqa: E501
         :type: Tabs

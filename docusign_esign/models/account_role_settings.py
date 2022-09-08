@@ -390,6 +390,7 @@ class AccountRoleSettings(object):
     def allow_account_management_metadata(self):
         """Gets the allow_account_management_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowAccountManagement` property is editable.   # noqa: E501
 
         :return: The allow_account_management_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -400,6 +401,7 @@ class AccountRoleSettings(object):
     def allow_account_management_metadata(self, allow_account_management_metadata):
         """Sets the allow_account_management_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowAccountManagement` property is editable.   # noqa: E501
 
         :param allow_account_management_metadata: The allow_account_management_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -434,6 +436,7 @@ class AccountRoleSettings(object):
     def allow_api_access_metadata(self):
         """Gets the allow_api_access_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowApiAccess` property is editable.   # noqa: E501
 
         :return: The allow_api_access_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -444,6 +447,7 @@ class AccountRoleSettings(object):
     def allow_api_access_metadata(self, allow_api_access_metadata):
         """Sets the allow_api_access_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowApiAccess` property is editable.   # noqa: E501
 
         :param allow_api_access_metadata: The allow_api_access_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -478,6 +482,7 @@ class AccountRoleSettings(object):
     def allow_api_access_to_account_metadata(self):
         """Gets the allow_api_access_to_account_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowApiAccessToAccount` property is editable.   # noqa: E501
 
         :return: The allow_api_access_to_account_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -488,6 +493,7 @@ class AccountRoleSettings(object):
     def allow_api_access_to_account_metadata(self, allow_api_access_to_account_metadata):
         """Sets the allow_api_access_to_account_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowApiAccessToAccount` property is editable.   # noqa: E501
 
         :param allow_api_access_to_account_metadata: The allow_api_access_to_account_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -522,6 +528,7 @@ class AccountRoleSettings(object):
     def allow_api_sending_on_behalf_of_others_metadata(self):
         """Gets the allow_api_sending_on_behalf_of_others_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowApiSendingOnBehalfOfOthers` property is editable.   # noqa: E501
 
         :return: The allow_api_sending_on_behalf_of_others_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -532,6 +539,7 @@ class AccountRoleSettings(object):
     def allow_api_sending_on_behalf_of_others_metadata(self, allow_api_sending_on_behalf_of_others_metadata):
         """Sets the allow_api_sending_on_behalf_of_others_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowApiSendingOnBehalfOfOthers` property is editable.   # noqa: E501
 
         :param allow_api_sending_on_behalf_of_others_metadata: The allow_api_sending_on_behalf_of_others_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -566,6 +574,7 @@ class AccountRoleSettings(object):
     def allow_api_sequential_signing_metadata(self):
         """Gets the allow_api_sequential_signing_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowApiSequentialSigning` property is editable.   # noqa: E501
 
         :return: The allow_api_sequential_signing_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -576,6 +585,7 @@ class AccountRoleSettings(object):
     def allow_api_sequential_signing_metadata(self, allow_api_sequential_signing_metadata):
         """Sets the allow_api_sequential_signing_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowApiSequentialSigning` property is editable.   # noqa: E501
 
         :param allow_api_sequential_signing_metadata: The allow_api_sequential_signing_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -610,6 +620,7 @@ class AccountRoleSettings(object):
     def allow_auto_tagging_metadata(self):
         """Gets the allow_auto_tagging_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowAutoTagging` property is editable.  # noqa: E501
 
         :return: The allow_auto_tagging_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -620,6 +631,7 @@ class AccountRoleSettings(object):
     def allow_auto_tagging_metadata(self, allow_auto_tagging_metadata):
         """Sets the allow_auto_tagging_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowAutoTagging` property is editable.  # noqa: E501
 
         :param allow_auto_tagging_metadata: The allow_auto_tagging_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -654,6 +666,7 @@ class AccountRoleSettings(object):
     def allow_bulk_sending_metadata(self):
         """Gets the allow_bulk_sending_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowBulkSending` property is editable.   # noqa: E501
 
         :return: The allow_bulk_sending_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -664,6 +677,7 @@ class AccountRoleSettings(object):
     def allow_bulk_sending_metadata(self, allow_bulk_sending_metadata):
         """Sets the allow_bulk_sending_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowBulkSending` property is editable.   # noqa: E501
 
         :param allow_bulk_sending_metadata: The allow_bulk_sending_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -698,6 +712,7 @@ class AccountRoleSettings(object):
     def allow_docu_sign_desktop_client_metadata(self):
         """Gets the allow_docu_sign_desktop_client_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowDocuSignDesktopClient` property is editable.   # noqa: E501
 
         :return: The allow_docu_sign_desktop_client_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -708,6 +723,7 @@ class AccountRoleSettings(object):
     def allow_docu_sign_desktop_client_metadata(self, allow_docu_sign_desktop_client_metadata):
         """Sets the allow_docu_sign_desktop_client_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowDocuSignDesktopClient` property is editable.   # noqa: E501
 
         :param allow_docu_sign_desktop_client_metadata: The allow_docu_sign_desktop_client_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -742,6 +758,7 @@ class AccountRoleSettings(object):
     def allowed_address_book_access_metadata(self):
         """Gets the allowed_address_book_access_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowedAddressBookAccess` property is editable.   # noqa: E501
 
         :return: The allowed_address_book_access_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -752,6 +769,7 @@ class AccountRoleSettings(object):
     def allowed_address_book_access_metadata(self, allowed_address_book_access_metadata):
         """Sets the allowed_address_book_access_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowedAddressBookAccess` property is editable.   # noqa: E501
 
         :param allowed_address_book_access_metadata: The allowed_address_book_access_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -786,6 +804,7 @@ class AccountRoleSettings(object):
     def allowed_clickwraps_access_metadata(self):
         """Gets the allowed_clickwraps_access_metadata of this AccountRoleSettings.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allowed_clickwraps_access_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -796,6 +815,7 @@ class AccountRoleSettings(object):
     def allowed_clickwraps_access_metadata(self, allowed_clickwraps_access_metadata):
         """Sets the allowed_clickwraps_access_metadata of this AccountRoleSettings.
 
+          # noqa: E501
 
         :param allowed_clickwraps_access_metadata: The allowed_clickwraps_access_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -830,6 +850,7 @@ class AccountRoleSettings(object):
     def allowed_template_access_metadata(self):
         """Gets the allowed_template_access_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowedTemplateAccess` property is editable.   # noqa: E501
 
         :return: The allowed_template_access_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -840,6 +861,7 @@ class AccountRoleSettings(object):
     def allowed_template_access_metadata(self, allowed_template_access_metadata):
         """Sets the allowed_template_access_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowedTemplateAccess` property is editable.   # noqa: E501
 
         :param allowed_template_access_metadata: The allowed_template_access_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -874,6 +896,7 @@ class AccountRoleSettings(object):
     def allowed_to_be_envelope_transfer_recipient_metadata(self):
         """Gets the allowed_to_be_envelope_transfer_recipient_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowedToBeEnvelopeTransferRecipient` property is editable.   # noqa: E501
 
         :return: The allowed_to_be_envelope_transfer_recipient_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -884,6 +907,7 @@ class AccountRoleSettings(object):
     def allowed_to_be_envelope_transfer_recipient_metadata(self, allowed_to_be_envelope_transfer_recipient_metadata):
         """Sets the allowed_to_be_envelope_transfer_recipient_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowedToBeEnvelopeTransferRecipient` property is editable.   # noqa: E501
 
         :param allowed_to_be_envelope_transfer_recipient_metadata: The allowed_to_be_envelope_transfer_recipient_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -918,6 +942,7 @@ class AccountRoleSettings(object):
     def allow_envelope_sending_metadata(self):
         """Gets the allow_envelope_sending_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowEnvelopeSending` property is editable.   # noqa: E501
 
         :return: The allow_envelope_sending_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -928,6 +953,7 @@ class AccountRoleSettings(object):
     def allow_envelope_sending_metadata(self, allow_envelope_sending_metadata):
         """Sets the allow_envelope_sending_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowEnvelopeSending` property is editable.   # noqa: E501
 
         :param allow_envelope_sending_metadata: The allow_envelope_sending_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -962,6 +988,7 @@ class AccountRoleSettings(object):
     def allow_e_seal_recipients_metadata(self):
         """Gets the allow_e_seal_recipients_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowESealRecipients` property is editable.  # noqa: E501
 
         :return: The allow_e_seal_recipients_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -972,6 +999,7 @@ class AccountRoleSettings(object):
     def allow_e_seal_recipients_metadata(self, allow_e_seal_recipients_metadata):
         """Sets the allow_e_seal_recipients_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowESealRecipients` property is editable.  # noqa: E501
 
         :param allow_e_seal_recipients_metadata: The allow_e_seal_recipients_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1006,6 +1034,7 @@ class AccountRoleSettings(object):
     def allow_power_forms_admin_to_access_all_power_form_envelopes_metadata(self):
         """Gets the allow_power_forms_admin_to_access_all_power_form_envelopes_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowPowerFormsAdminToAccessAllPowerFormEnvelopes` property is editable.  # noqa: E501
 
         :return: The allow_power_forms_admin_to_access_all_power_form_envelopes_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1016,6 +1045,7 @@ class AccountRoleSettings(object):
     def allow_power_forms_admin_to_access_all_power_form_envelopes_metadata(self, allow_power_forms_admin_to_access_all_power_form_envelopes_metadata):
         """Sets the allow_power_forms_admin_to_access_all_power_form_envelopes_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowPowerFormsAdminToAccessAllPowerFormEnvelopes` property is editable.  # noqa: E501
 
         :param allow_power_forms_admin_to_access_all_power_form_envelopes_metadata: The allow_power_forms_admin_to_access_all_power_form_envelopes_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1050,6 +1080,7 @@ class AccountRoleSettings(object):
     def allow_senders_to_set_recipient_email_language_metadata(self):
         """Gets the allow_senders_to_set_recipient_email_language_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowSendersToSetRecipientEmailLanguage` property is editable.   # noqa: E501
 
         :return: The allow_senders_to_set_recipient_email_language_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1060,6 +1091,7 @@ class AccountRoleSettings(object):
     def allow_senders_to_set_recipient_email_language_metadata(self, allow_senders_to_set_recipient_email_language_metadata):
         """Sets the allow_senders_to_set_recipient_email_language_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowSendersToSetRecipientEmailLanguage` property is editable.   # noqa: E501
 
         :param allow_senders_to_set_recipient_email_language_metadata: The allow_senders_to_set_recipient_email_language_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1094,6 +1126,7 @@ class AccountRoleSettings(object):
     def allow_signer_attachments_metadata(self):
         """Gets the allow_signer_attachments_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowSignerAttachments` property is editable.   # noqa: E501
 
         :return: The allow_signer_attachments_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1104,6 +1137,7 @@ class AccountRoleSettings(object):
     def allow_signer_attachments_metadata(self, allow_signer_attachments_metadata):
         """Sets the allow_signer_attachments_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowSignerAttachments` property is editable.   # noqa: E501
 
         :param allow_signer_attachments_metadata: The allow_signer_attachments_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1138,6 +1172,7 @@ class AccountRoleSettings(object):
     def allow_supplemental_documents_metadata(self):
         """Gets the allow_supplemental_documents_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowSupplementalDocuments` property is editable.  # noqa: E501
 
         :return: The allow_supplemental_documents_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1148,6 +1183,7 @@ class AccountRoleSettings(object):
     def allow_supplemental_documents_metadata(self, allow_supplemental_documents_metadata):
         """Sets the allow_supplemental_documents_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowSupplementalDocuments` property is editable.  # noqa: E501
 
         :param allow_supplemental_documents_metadata: The allow_supplemental_documents_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1182,6 +1218,7 @@ class AccountRoleSettings(object):
     def allow_tagging_in_send_and_correct_metadata(self):
         """Gets the allow_tagging_in_send_and_correct_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowTaggingInSendAndCorrect` property is editable.   # noqa: E501
 
         :return: The allow_tagging_in_send_and_correct_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1192,6 +1229,7 @@ class AccountRoleSettings(object):
     def allow_tagging_in_send_and_correct_metadata(self, allow_tagging_in_send_and_correct_metadata):
         """Sets the allow_tagging_in_send_and_correct_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowTaggingInSendAndCorrect` property is editable.   # noqa: E501
 
         :param allow_tagging_in_send_and_correct_metadata: The allow_tagging_in_send_and_correct_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1226,6 +1264,7 @@ class AccountRoleSettings(object):
     def allow_vaulting_metadata(self):
         """Gets the allow_vaulting_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The allow_vaulting_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1236,6 +1275,7 @@ class AccountRoleSettings(object):
     def allow_vaulting_metadata(self, allow_vaulting_metadata):
         """Sets the allow_vaulting_metadata of this AccountRoleSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param allow_vaulting_metadata: The allow_vaulting_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1270,6 +1310,7 @@ class AccountRoleSettings(object):
     def allow_wet_signing_override_metadata(self):
         """Gets the allow_wet_signing_override_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowWetSigningOverride` property is editable.   # noqa: E501
 
         :return: The allow_wet_signing_override_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1280,6 +1321,7 @@ class AccountRoleSettings(object):
     def allow_wet_signing_override_metadata(self, allow_wet_signing_override_metadata):
         """Sets the allow_wet_signing_override_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `allowWetSigningOverride` property is editable.   # noqa: E501
 
         :param allow_wet_signing_override_metadata: The allow_wet_signing_override_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1314,6 +1356,7 @@ class AccountRoleSettings(object):
     def can_create_workspaces_metadata(self):
         """Gets the can_create_workspaces_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The can_create_workspaces_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1324,6 +1367,7 @@ class AccountRoleSettings(object):
     def can_create_workspaces_metadata(self, can_create_workspaces_metadata):
         """Sets the can_create_workspaces_metadata of this AccountRoleSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param can_create_workspaces_metadata: The can_create_workspaces_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1358,6 +1402,7 @@ class AccountRoleSettings(object):
     def can_send_envelopes_via_sms_metadata(self):
         """Gets the can_send_envelopes_via_sms_metadata of this AccountRoleSettings.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_send_envelopes_via_sms_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1368,6 +1413,7 @@ class AccountRoleSettings(object):
     def can_send_envelopes_via_sms_metadata(self, can_send_envelopes_via_sms_metadata):
         """Sets the can_send_envelopes_via_sms_metadata of this AccountRoleSettings.
 
+          # noqa: E501
 
         :param can_send_envelopes_via_sms_metadata: The can_send_envelopes_via_sms_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1402,6 +1448,7 @@ class AccountRoleSettings(object):
     def disable_document_upload_metadata(self):
         """Gets the disable_document_upload_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `disableDocumentUpload` property is editable.   # noqa: E501
 
         :return: The disable_document_upload_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1412,6 +1459,7 @@ class AccountRoleSettings(object):
     def disable_document_upload_metadata(self, disable_document_upload_metadata):
         """Sets the disable_document_upload_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `disableDocumentUpload` property is editable.   # noqa: E501
 
         :param disable_document_upload_metadata: The disable_document_upload_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1446,6 +1494,7 @@ class AccountRoleSettings(object):
     def disable_other_actions_metadata(self):
         """Gets the disable_other_actions_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `disableOtherActions` property is editable.   # noqa: E501
 
         :return: The disable_other_actions_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1456,6 +1505,7 @@ class AccountRoleSettings(object):
     def disable_other_actions_metadata(self, disable_other_actions_metadata):
         """Sets the disable_other_actions_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `disableOtherActions` property is editable.   # noqa: E501
 
         :param disable_other_actions_metadata: The disable_other_actions_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1490,6 +1540,7 @@ class AccountRoleSettings(object):
     def enable_api_request_logging_metadata(self):
         """Gets the enable_api_request_logging_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `enableApiRequestLogging` property is editable.   # noqa: E501
 
         :return: The enable_api_request_logging_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1500,6 +1551,7 @@ class AccountRoleSettings(object):
     def enable_api_request_logging_metadata(self, enable_api_request_logging_metadata):
         """Sets the enable_api_request_logging_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `enableApiRequestLogging` property is editable.   # noqa: E501
 
         :param enable_api_request_logging_metadata: The enable_api_request_logging_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1578,6 +1630,7 @@ class AccountRoleSettings(object):
     def enable_recipient_viewing_notifications_metadata(self):
         """Gets the enable_recipient_viewing_notifications_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `enableRecipientViewingNotifications` property is editable.   # noqa: E501
 
         :return: The enable_recipient_viewing_notifications_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1588,6 +1641,7 @@ class AccountRoleSettings(object):
     def enable_recipient_viewing_notifications_metadata(self, enable_recipient_viewing_notifications_metadata):
         """Sets the enable_recipient_viewing_notifications_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `enableRecipientViewingNotifications` property is editable.   # noqa: E501
 
         :param enable_recipient_viewing_notifications_metadata: The enable_recipient_viewing_notifications_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1622,6 +1676,7 @@ class AccountRoleSettings(object):
     def enable_sequential_signing_interface_metadata(self):
         """Gets the enable_sequential_signing_interface_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `enableSequentialSigningInterface` property is editable.   # noqa: E501
 
         :return: The enable_sequential_signing_interface_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1632,6 +1687,7 @@ class AccountRoleSettings(object):
     def enable_sequential_signing_interface_metadata(self, enable_sequential_signing_interface_metadata):
         """Sets the enable_sequential_signing_interface_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `enableSequentialSigningInterface` property is editable.   # noqa: E501
 
         :param enable_sequential_signing_interface_metadata: The enable_sequential_signing_interface_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1666,6 +1722,7 @@ class AccountRoleSettings(object):
     def enable_transaction_point_integration_metadata(self):
         """Gets the enable_transaction_point_integration_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The enable_transaction_point_integration_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1676,6 +1733,7 @@ class AccountRoleSettings(object):
     def enable_transaction_point_integration_metadata(self, enable_transaction_point_integration_metadata):
         """Sets the enable_transaction_point_integration_metadata of this AccountRoleSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param enable_transaction_point_integration_metadata: The enable_transaction_point_integration_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1710,6 +1768,7 @@ class AccountRoleSettings(object):
     def power_form_role_metadata(self):
         """Gets the power_form_role_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `powerFormRole` property is editable.   # noqa: E501
 
         :return: The power_form_role_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1720,6 +1779,7 @@ class AccountRoleSettings(object):
     def power_form_role_metadata(self, power_form_role_metadata):
         """Sets the power_form_role_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `powerFormRole` property is editable.   # noqa: E501
 
         :param power_form_role_metadata: The power_form_role_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1754,6 +1814,7 @@ class AccountRoleSettings(object):
     def receive_completed_self_signed_documents_as_email_links_metadata(self):
         """Gets the receive_completed_self_signed_documents_as_email_links_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `receiveCompletedSelfSignedDocumentsAsEmailLinks` property is editable.   # noqa: E501
 
         :return: The receive_completed_self_signed_documents_as_email_links_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1764,6 +1825,7 @@ class AccountRoleSettings(object):
     def receive_completed_self_signed_documents_as_email_links_metadata(self, receive_completed_self_signed_documents_as_email_links_metadata):
         """Sets the receive_completed_self_signed_documents_as_email_links_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `receiveCompletedSelfSignedDocumentsAsEmailLinks` property is editable.   # noqa: E501
 
         :param receive_completed_self_signed_documents_as_email_links_metadata: The receive_completed_self_signed_documents_as_email_links_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1775,6 +1837,7 @@ class AccountRoleSettings(object):
     def signing_ui_version_metadata(self):
         """Gets the signing_ui_version_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The signing_ui_version_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1785,6 +1848,7 @@ class AccountRoleSettings(object):
     def signing_ui_version_metadata(self, signing_ui_version_metadata):
         """Sets the signing_ui_version_metadata of this AccountRoleSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param signing_ui_version_metadata: The signing_ui_version_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1819,6 +1883,7 @@ class AccountRoleSettings(object):
     def supplemental_documents_must_accept_metadata(self):
         """Gets the supplemental_documents_must_accept_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable.   # noqa: E501
 
         :return: The supplemental_documents_must_accept_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1829,6 +1894,7 @@ class AccountRoleSettings(object):
     def supplemental_documents_must_accept_metadata(self, supplemental_documents_must_accept_metadata):
         """Sets the supplemental_documents_must_accept_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable.   # noqa: E501
 
         :param supplemental_documents_must_accept_metadata: The supplemental_documents_must_accept_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1863,6 +1929,7 @@ class AccountRoleSettings(object):
     def supplemental_documents_must_read_metadata(self):
         """Gets the supplemental_documents_must_read_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable.   # noqa: E501
 
         :return: The supplemental_documents_must_read_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1873,6 +1940,7 @@ class AccountRoleSettings(object):
     def supplemental_documents_must_read_metadata(self, supplemental_documents_must_read_metadata):
         """Sets the supplemental_documents_must_read_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable.   # noqa: E501
 
         :param supplemental_documents_must_read_metadata: The supplemental_documents_must_read_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1907,6 +1975,7 @@ class AccountRoleSettings(object):
     def supplemental_documents_must_view_metadata(self):
         """Gets the supplemental_documents_must_view_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Metadata that indicates whether the `supplementalDocumentsMustView` property is editable.   # noqa: E501
 
         :return: The supplemental_documents_must_view_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1917,6 +1986,7 @@ class AccountRoleSettings(object):
     def supplemental_documents_must_view_metadata(self, supplemental_documents_must_view_metadata):
         """Sets the supplemental_documents_must_view_metadata of this AccountRoleSettings.
 
+        Metadata that indicates whether the `supplementalDocumentsMustView` property is editable.   # noqa: E501
 
         :param supplemental_documents_must_view_metadata: The supplemental_documents_must_view_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1951,6 +2021,7 @@ class AccountRoleSettings(object):
     def use_new_docu_sign_experience_interface_metadata(self):
         """Gets the use_new_docu_sign_experience_interface_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The use_new_docu_sign_experience_interface_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1961,6 +2032,7 @@ class AccountRoleSettings(object):
     def use_new_docu_sign_experience_interface_metadata(self, use_new_docu_sign_experience_interface_metadata):
         """Sets the use_new_docu_sign_experience_interface_metadata of this AccountRoleSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param use_new_docu_sign_experience_interface_metadata: The use_new_docu_sign_experience_interface_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1995,6 +2067,7 @@ class AccountRoleSettings(object):
     def use_new_sending_interface_metadata(self):
         """Gets the use_new_sending_interface_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The use_new_sending_interface_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2005,6 +2078,7 @@ class AccountRoleSettings(object):
     def use_new_sending_interface_metadata(self, use_new_sending_interface_metadata):
         """Sets the use_new_sending_interface_metadata of this AccountRoleSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param use_new_sending_interface_metadata: The use_new_sending_interface_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -2039,6 +2113,7 @@ class AccountRoleSettings(object):
     def vaulting_mode_metadata(self):
         """Gets the vaulting_mode_metadata of this AccountRoleSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The vaulting_mode_metadata of this AccountRoleSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2049,6 +2124,7 @@ class AccountRoleSettings(object):
     def vaulting_mode_metadata(self, vaulting_mode_metadata):
         """Sets the vaulting_mode_metadata of this AccountRoleSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param vaulting_mode_metadata: The vaulting_mode_metadata of this AccountRoleSettings.  # noqa: E501
         :type: SettingsMetadata

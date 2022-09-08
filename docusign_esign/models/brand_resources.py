@@ -83,6 +83,7 @@ class BrandResources(object):
     def created_by_user_info(self):
         """Gets the created_by_user_info of this BrandResources.  # noqa: E501
 
+        The user ID of the user who created the brand resource.  # noqa: E501
 
         :return: The created_by_user_info of this BrandResources.  # noqa: E501
         :rtype: UserInfo
@@ -93,6 +94,7 @@ class BrandResources(object):
     def created_by_user_info(self, created_by_user_info):
         """Sets the created_by_user_info of this BrandResources.
 
+        The user ID of the user who created the brand resource.  # noqa: E501
 
         :param created_by_user_info: The created_by_user_info of this BrandResources.  # noqa: E501
         :type: UserInfo
@@ -150,6 +152,7 @@ class BrandResources(object):
     def modified_by_user_info(self):
         """Gets the modified_by_user_info of this BrandResources.  # noqa: E501
 
+        Information about the user who last modified the brand resource.  # noqa: E501
 
         :return: The modified_by_user_info of this BrandResources.  # noqa: E501
         :rtype: UserInfo
@@ -160,6 +163,7 @@ class BrandResources(object):
     def modified_by_user_info(self, modified_by_user_info):
         """Sets the modified_by_user_info of this BrandResources.
 
+        Information about the user who last modified the brand resource.  # noqa: E501
 
         :param modified_by_user_info: The modified_by_user_info of this BrandResources.  # noqa: E501
         :type: UserInfo

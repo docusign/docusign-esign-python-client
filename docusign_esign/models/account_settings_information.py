@@ -58,6 +58,8 @@ class AccountSettingsInformation(object):
         'allow_agent_name_email_edit_metadata': 'SettingsMetadata',
         'allow_agreement_actions': 'str',
         'allow_agreement_actions_metadata': 'SettingsMetadata',
+        'allow_agreement_orchestration_workflows': 'str',
+        'allow_agreement_orchestration_workflows_metadata': 'SettingsMetadata',
         'allow_auto_nav_settings': 'str',
         'allow_auto_nav_settings_metadata': 'SettingsMetadata',
         'allow_auto_tagging': 'str',
@@ -67,6 +69,7 @@ class AccountSettingsInformation(object):
         'allow_cd_withdraw': 'str',
         'allow_cd_withdraw_metadata': 'SettingsMetadata',
         'allow_connect_http_listener_configs': 'str',
+        'allow_connect_o_auth_ui': 'str',
         'allow_connect_send_finish_later': 'str',
         'allow_connect_send_finish_later_metadata': 'SettingsMetadata',
         'allow_connect_unified_payload_ui': 'str',
@@ -78,6 +81,8 @@ class AccountSettingsInformation(object):
         'allow_delayed_routing_metadata': 'SettingsMetadata',
         'allow_delegated_signing': 'str',
         'allow_delegated_signing_metadata': 'SettingsMetadata',
+        'allow_doc_gen_documents': 'str',
+        'allow_doc_gen_documents_metadata': 'SettingsMetadata',
         'allow_document_disclosures': 'str',
         'allow_document_disclosures_metadata': 'SettingsMetadata',
         'allow_documents_on_signed_envelopes': 'str',
@@ -108,6 +113,8 @@ class AccountSettingsInformation(object):
         'allow_external_linked_accounts_metadata': 'SettingsMetadata',
         'allow_external_signature_pad': 'str',
         'allow_external_signature_pad_metadata': 'SettingsMetadata',
+        'allow_idv_for_eu_qualified_signatures': 'str',
+        'allow_idv_for_eu_qualified_signatures_metadata': 'SettingsMetadata',
         'allow_idv_level1': 'str',
         'allow_idv_level1_metadata': 'SettingsMetadata',
         'allow_idv_level2': 'str',
@@ -156,8 +163,12 @@ class AccountSettingsInformation(object):
         'allow_organization_to_use_remote_notary_metadata': 'SettingsMetadata',
         'allow_organization_to_use_third_party_electronic_notary': 'str',
         'allow_organization_to_use_third_party_electronic_notary_metadata': 'SettingsMetadata',
+        'allow_participant_recipient_type': 'str',
+        'allow_participant_recipient_type_metadata': 'SettingsMetadata',
         'allow_payment_processing': 'str',
         'allow_payment_processing_metadata': 'SettingsMetadata',
+        'allow_performance_analytics': 'str',
+        'allow_performance_analytics_metadata': 'SettingsMetadata',
         'allow_phone_authentication': 'str',
         'allow_phone_authentication_metadata': 'SettingsMetadata',
         'allow_phone_auth_override': 'str',
@@ -328,6 +339,8 @@ class AccountSettingsInformation(object):
         'enable_combined_pdf_download_for_sbs': 'str',
         'enable_comments_history_download_in_signing': 'str',
         'enable_comments_history_download_in_signing_metadata': 'SettingsMetadata',
+        'enable_contact_suggestions': 'str',
+        'enable_contact_suggestions_metadata': 'SettingsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'str',
         'enable_customer_satisfaction_metric_tracking_metadata': 'SettingsMetadata',
         'enable_ds_pro': 'str',
@@ -336,6 +349,8 @@ class AccountSettingsInformation(object):
         'enable_envelope_stamping_by_account_admin_metadata': 'SettingsMetadata',
         'enable_envelope_stamping_by_ds_admin': 'str',
         'enable_envelope_stamping_by_ds_admin_metadata': 'SettingsMetadata',
+        'enable_e_sign_api_hourly_limit_management': 'str',
+        'enable_e_sign_api_hourly_limit_management_metadata': 'SettingsMetadata',
         'enable_esign_communities': 'str',
         'enable_esign_communities_metadata': 'SettingsMetadata',
         'enable_id_fx_accountless_sms_auth_for_part11': 'str',
@@ -348,6 +363,7 @@ class AccountSettingsInformation(object):
         'enable_in_browser_editor_metadata': 'SettingsMetadata',
         'enable_key_terms_suggestions_by_document_type': 'str',
         'enable_key_terms_suggestions_by_document_type_metadata': 'SettingsMetadata',
+        'enable_participant_recipient_setting_metadata': 'SettingsMetadata',
         'enable_payment_processing': 'str',
         'enable_payment_processing_metadata': 'SettingsMetadata',
         'enable_pdfa_conversion': 'str',
@@ -425,6 +441,10 @@ class AccountSettingsInformation(object):
         'envelope_integration_allowed_metadata': 'SettingsMetadata',
         'envelope_integration_enabled': 'str',
         'envelope_integration_enabled_metadata': 'SettingsMetadata',
+        'envelope_limits_total_document_size_allowed_in_mb': 'str',
+        'envelope_limits_total_document_size_allowed_in_mb_enabled': 'str',
+        'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata': 'SettingsMetadata',
+        'envelope_limits_total_document_size_allowed_in_mb_metadata': 'SettingsMetadata',
         'envelope_stamping_default_value': 'str',
         'envelope_stamping_default_value_metadata': 'SettingsMetadata',
         'exit_prompt': 'str',
@@ -485,6 +505,12 @@ class AccountSettingsInformation(object):
         'opt_out_auto_nav_text_and_tab_color_updates_metadata': 'SettingsMetadata',
         'opt_out_new_platform_seal': 'str',
         'opt_out_new_platform_seal_platform_metadata': 'SettingsMetadata',
+        'pdf_max_chunked_upload_part_size': 'str',
+        'pdf_max_chunked_upload_part_size_metadata': 'SettingsMetadata',
+        'pdf_max_chunked_upload_total_size': 'str',
+        'pdf_max_chunked_upload_total_size_metadata': 'SettingsMetadata',
+        'pdf_max_individual_upload_size': 'str',
+        'pdf_max_individual_upload_size_metadata': 'SettingsMetadata',
         'phone_auth_recipient_may_provide_phone_number': 'str',
         'phone_auth_recipient_may_provide_phone_number_metadata': 'SettingsMetadata',
         'pki_sign_downloaded_pdf_docs': 'str',
@@ -670,6 +696,8 @@ class AccountSettingsInformation(object):
         'allow_agent_name_email_edit_metadata': 'allowAgentNameEmailEditMetadata',
         'allow_agreement_actions': 'allowAgreementActions',
         'allow_agreement_actions_metadata': 'allowAgreementActionsMetadata',
+        'allow_agreement_orchestration_workflows': 'allowAgreementOrchestrationWorkflows',
+        'allow_agreement_orchestration_workflows_metadata': 'allowAgreementOrchestrationWorkflowsMetadata',
         'allow_auto_nav_settings': 'allowAutoNavSettings',
         'allow_auto_nav_settings_metadata': 'allowAutoNavSettingsMetadata',
         'allow_auto_tagging': 'allowAutoTagging',
@@ -679,6 +707,7 @@ class AccountSettingsInformation(object):
         'allow_cd_withdraw': 'allowCDWithdraw',
         'allow_cd_withdraw_metadata': 'allowCDWithdrawMetadata',
         'allow_connect_http_listener_configs': 'allowConnectHttpListenerConfigs',
+        'allow_connect_o_auth_ui': 'allowConnectOAuthUI',
         'allow_connect_send_finish_later': 'allowConnectSendFinishLater',
         'allow_connect_send_finish_later_metadata': 'allowConnectSendFinishLaterMetadata',
         'allow_connect_unified_payload_ui': 'allowConnectUnifiedPayloadUI',
@@ -690,6 +719,8 @@ class AccountSettingsInformation(object):
         'allow_delayed_routing_metadata': 'allowDelayedRoutingMetadata',
         'allow_delegated_signing': 'allowDelegatedSigning',
         'allow_delegated_signing_metadata': 'allowDelegatedSigningMetadata',
+        'allow_doc_gen_documents': 'allowDocGenDocuments',
+        'allow_doc_gen_documents_metadata': 'allowDocGenDocumentsMetadata',
         'allow_document_disclosures': 'allowDocumentDisclosures',
         'allow_document_disclosures_metadata': 'allowDocumentDisclosuresMetadata',
         'allow_documents_on_signed_envelopes': 'allowDocumentsOnSignedEnvelopes',
@@ -720,6 +751,8 @@ class AccountSettingsInformation(object):
         'allow_external_linked_accounts_metadata': 'allowExternalLinkedAccountsMetadata',
         'allow_external_signature_pad': 'allowExternalSignaturePad',
         'allow_external_signature_pad_metadata': 'allowExternalSignaturePadMetadata',
+        'allow_idv_for_eu_qualified_signatures': 'allowIDVForEUQualifiedSignatures',
+        'allow_idv_for_eu_qualified_signatures_metadata': 'allowIDVForEUQualifiedSignaturesMetadata',
         'allow_idv_level1': 'allowIDVLevel1',
         'allow_idv_level1_metadata': 'allowIDVLevel1Metadata',
         'allow_idv_level2': 'allowIDVLevel2',
@@ -768,8 +801,12 @@ class AccountSettingsInformation(object):
         'allow_organization_to_use_remote_notary_metadata': 'allowOrganizationToUseRemoteNotaryMetadata',
         'allow_organization_to_use_third_party_electronic_notary': 'allowOrganizationToUseThirdPartyElectronicNotary',
         'allow_organization_to_use_third_party_electronic_notary_metadata': 'allowOrganizationToUseThirdPartyElectronicNotaryMetadata',
+        'allow_participant_recipient_type': 'allowParticipantRecipientType',
+        'allow_participant_recipient_type_metadata': 'allowParticipantRecipientTypeMetadata',
         'allow_payment_processing': 'allowPaymentProcessing',
         'allow_payment_processing_metadata': 'allowPaymentProcessingMetadata',
+        'allow_performance_analytics': 'allowPerformanceAnalytics',
+        'allow_performance_analytics_metadata': 'allowPerformanceAnalyticsMetadata',
         'allow_phone_authentication': 'allowPhoneAuthentication',
         'allow_phone_authentication_metadata': 'allowPhoneAuthenticationMetadata',
         'allow_phone_auth_override': 'allowPhoneAuthOverride',
@@ -940,6 +977,8 @@ class AccountSettingsInformation(object):
         'enable_combined_pdf_download_for_sbs': 'enableCombinedPDFDownloadForSBS',
         'enable_comments_history_download_in_signing': 'enableCommentsHistoryDownloadInSigning',
         'enable_comments_history_download_in_signing_metadata': 'enableCommentsHistoryDownloadInSigningMetadata',
+        'enable_contact_suggestions': 'enableContactSuggestions',
+        'enable_contact_suggestions_metadata': 'enableContactSuggestionsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'enableCustomerSatisfactionMetricTracking',
         'enable_customer_satisfaction_metric_tracking_metadata': 'enableCustomerSatisfactionMetricTrackingMetadata',
         'enable_ds_pro': 'enableDSPro',
@@ -948,6 +987,8 @@ class AccountSettingsInformation(object):
         'enable_envelope_stamping_by_account_admin_metadata': 'enableEnvelopeStampingByAccountAdminMetadata',
         'enable_envelope_stamping_by_ds_admin': 'enableEnvelopeStampingByDSAdmin',
         'enable_envelope_stamping_by_ds_admin_metadata': 'enableEnvelopeStampingByDSAdminMetadata',
+        'enable_e_sign_api_hourly_limit_management': 'enableESignAPIHourlyLimitManagement',
+        'enable_e_sign_api_hourly_limit_management_metadata': 'enableESignAPIHourlyLimitManagementMetadata',
         'enable_esign_communities': 'enableEsignCommunities',
         'enable_esign_communities_metadata': 'enableEsignCommunitiesMetadata',
         'enable_id_fx_accountless_sms_auth_for_part11': 'enableIDFxAccountlessSMSAuthForPart11',
@@ -960,6 +1001,7 @@ class AccountSettingsInformation(object):
         'enable_in_browser_editor_metadata': 'enableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type': 'enableKeyTermsSuggestionsByDocumentType',
         'enable_key_terms_suggestions_by_document_type_metadata': 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
+        'enable_participant_recipient_setting_metadata': 'enableParticipantRecipientSettingMetadata',
         'enable_payment_processing': 'enablePaymentProcessing',
         'enable_payment_processing_metadata': 'enablePaymentProcessingMetadata',
         'enable_pdfa_conversion': 'enablePDFAConversion',
@@ -1037,6 +1079,10 @@ class AccountSettingsInformation(object):
         'envelope_integration_allowed_metadata': 'envelopeIntegrationAllowedMetadata',
         'envelope_integration_enabled': 'envelopeIntegrationEnabled',
         'envelope_integration_enabled_metadata': 'envelopeIntegrationEnabledMetadata',
+        'envelope_limits_total_document_size_allowed_in_mb': 'EnvelopeLimitsTotalDocumentSizeAllowedInMB',
+        'envelope_limits_total_document_size_allowed_in_mb_enabled': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled',
+        'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata',
+        'envelope_limits_total_document_size_allowed_in_mb_metadata': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata',
         'envelope_stamping_default_value': 'envelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata': 'envelopeStampingDefaultValueMetadata',
         'exit_prompt': 'exitPrompt',
@@ -1097,6 +1143,12 @@ class AccountSettingsInformation(object):
         'opt_out_auto_nav_text_and_tab_color_updates_metadata': 'optOutAutoNavTextAndTabColorUpdatesMetadata',
         'opt_out_new_platform_seal': 'optOutNewPlatformSeal',
         'opt_out_new_platform_seal_platform_metadata': 'optOutNewPlatformSealPlatformMetadata',
+        'pdf_max_chunked_upload_part_size': 'pdfMaxChunkedUploadPartSize',
+        'pdf_max_chunked_upload_part_size_metadata': 'pdfMaxChunkedUploadPartSizeMetadata',
+        'pdf_max_chunked_upload_total_size': 'pdfMaxChunkedUploadTotalSize',
+        'pdf_max_chunked_upload_total_size_metadata': 'pdfMaxChunkedUploadTotalSizeMetadata',
+        'pdf_max_individual_upload_size': 'pdfMaxIndividualUploadSize',
+        'pdf_max_individual_upload_size_metadata': 'pdfMaxIndividualUploadSizeMetadata',
         'phone_auth_recipient_may_provide_phone_number': 'phoneAuthRecipientMayProvidePhoneNumber',
         'phone_auth_recipient_may_provide_phone_number_metadata': 'phoneAuthRecipientMayProvidePhoneNumberMetadata',
         'pki_sign_downloaded_pdf_docs': 'pkiSignDownloadedPDFDocs',
@@ -1287,6 +1339,8 @@ class AccountSettingsInformation(object):
         self._allow_agent_name_email_edit_metadata = None
         self._allow_agreement_actions = None
         self._allow_agreement_actions_metadata = None
+        self._allow_agreement_orchestration_workflows = None
+        self._allow_agreement_orchestration_workflows_metadata = None
         self._allow_auto_nav_settings = None
         self._allow_auto_nav_settings_metadata = None
         self._allow_auto_tagging = None
@@ -1296,6 +1350,7 @@ class AccountSettingsInformation(object):
         self._allow_cd_withdraw = None
         self._allow_cd_withdraw_metadata = None
         self._allow_connect_http_listener_configs = None
+        self._allow_connect_o_auth_ui = None
         self._allow_connect_send_finish_later = None
         self._allow_connect_send_finish_later_metadata = None
         self._allow_connect_unified_payload_ui = None
@@ -1307,6 +1362,8 @@ class AccountSettingsInformation(object):
         self._allow_delayed_routing_metadata = None
         self._allow_delegated_signing = None
         self._allow_delegated_signing_metadata = None
+        self._allow_doc_gen_documents = None
+        self._allow_doc_gen_documents_metadata = None
         self._allow_document_disclosures = None
         self._allow_document_disclosures_metadata = None
         self._allow_documents_on_signed_envelopes = None
@@ -1337,6 +1394,8 @@ class AccountSettingsInformation(object):
         self._allow_external_linked_accounts_metadata = None
         self._allow_external_signature_pad = None
         self._allow_external_signature_pad_metadata = None
+        self._allow_idv_for_eu_qualified_signatures = None
+        self._allow_idv_for_eu_qualified_signatures_metadata = None
         self._allow_idv_level1 = None
         self._allow_idv_level1_metadata = None
         self._allow_idv_level2 = None
@@ -1385,8 +1444,12 @@ class AccountSettingsInformation(object):
         self._allow_organization_to_use_remote_notary_metadata = None
         self._allow_organization_to_use_third_party_electronic_notary = None
         self._allow_organization_to_use_third_party_electronic_notary_metadata = None
+        self._allow_participant_recipient_type = None
+        self._allow_participant_recipient_type_metadata = None
         self._allow_payment_processing = None
         self._allow_payment_processing_metadata = None
+        self._allow_performance_analytics = None
+        self._allow_performance_analytics_metadata = None
         self._allow_phone_authentication = None
         self._allow_phone_authentication_metadata = None
         self._allow_phone_auth_override = None
@@ -1557,6 +1620,8 @@ class AccountSettingsInformation(object):
         self._enable_combined_pdf_download_for_sbs = None
         self._enable_comments_history_download_in_signing = None
         self._enable_comments_history_download_in_signing_metadata = None
+        self._enable_contact_suggestions = None
+        self._enable_contact_suggestions_metadata = None
         self._enable_customer_satisfaction_metric_tracking = None
         self._enable_customer_satisfaction_metric_tracking_metadata = None
         self._enable_ds_pro = None
@@ -1565,6 +1630,8 @@ class AccountSettingsInformation(object):
         self._enable_envelope_stamping_by_account_admin_metadata = None
         self._enable_envelope_stamping_by_ds_admin = None
         self._enable_envelope_stamping_by_ds_admin_metadata = None
+        self._enable_e_sign_api_hourly_limit_management = None
+        self._enable_e_sign_api_hourly_limit_management_metadata = None
         self._enable_esign_communities = None
         self._enable_esign_communities_metadata = None
         self._enable_id_fx_accountless_sms_auth_for_part11 = None
@@ -1577,6 +1644,7 @@ class AccountSettingsInformation(object):
         self._enable_in_browser_editor_metadata = None
         self._enable_key_terms_suggestions_by_document_type = None
         self._enable_key_terms_suggestions_by_document_type_metadata = None
+        self._enable_participant_recipient_setting_metadata = None
         self._enable_payment_processing = None
         self._enable_payment_processing_metadata = None
         self._enable_pdfa_conversion = None
@@ -1654,6 +1722,10 @@ class AccountSettingsInformation(object):
         self._envelope_integration_allowed_metadata = None
         self._envelope_integration_enabled = None
         self._envelope_integration_enabled_metadata = None
+        self._envelope_limits_total_document_size_allowed_in_mb = None
+        self._envelope_limits_total_document_size_allowed_in_mb_enabled = None
+        self._envelope_limits_total_document_size_allowed_in_mb_enabled_metadata = None
+        self._envelope_limits_total_document_size_allowed_in_mb_metadata = None
         self._envelope_stamping_default_value = None
         self._envelope_stamping_default_value_metadata = None
         self._exit_prompt = None
@@ -1714,6 +1786,12 @@ class AccountSettingsInformation(object):
         self._opt_out_auto_nav_text_and_tab_color_updates_metadata = None
         self._opt_out_new_platform_seal = None
         self._opt_out_new_platform_seal_platform_metadata = None
+        self._pdf_max_chunked_upload_part_size = None
+        self._pdf_max_chunked_upload_part_size_metadata = None
+        self._pdf_max_chunked_upload_total_size = None
+        self._pdf_max_chunked_upload_total_size_metadata = None
+        self._pdf_max_individual_upload_size = None
+        self._pdf_max_individual_upload_size_metadata = None
         self._phone_auth_recipient_may_provide_phone_number = None
         self._phone_auth_recipient_may_provide_phone_number_metadata = None
         self._pki_sign_downloaded_pdf_docs = None
@@ -1898,6 +1976,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_agent_name_email_edit_metadata'), kwargs.get('allow_agent_name_email_edit_metadata', None))
         setattr(self, "_{}".format('allow_agreement_actions'), kwargs.get('allow_agreement_actions', None))
         setattr(self, "_{}".format('allow_agreement_actions_metadata'), kwargs.get('allow_agreement_actions_metadata', None))
+        setattr(self, "_{}".format('allow_agreement_orchestration_workflows'), kwargs.get('allow_agreement_orchestration_workflows', None))
+        setattr(self, "_{}".format('allow_agreement_orchestration_workflows_metadata'), kwargs.get('allow_agreement_orchestration_workflows_metadata', None))
         setattr(self, "_{}".format('allow_auto_nav_settings'), kwargs.get('allow_auto_nav_settings', None))
         setattr(self, "_{}".format('allow_auto_nav_settings_metadata'), kwargs.get('allow_auto_nav_settings_metadata', None))
         setattr(self, "_{}".format('allow_auto_tagging'), kwargs.get('allow_auto_tagging', None))
@@ -1907,6 +1987,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_cd_withdraw'), kwargs.get('allow_cd_withdraw', None))
         setattr(self, "_{}".format('allow_cd_withdraw_metadata'), kwargs.get('allow_cd_withdraw_metadata', None))
         setattr(self, "_{}".format('allow_connect_http_listener_configs'), kwargs.get('allow_connect_http_listener_configs', None))
+        setattr(self, "_{}".format('allow_connect_o_auth_ui'), kwargs.get('allow_connect_o_auth_ui', None))
         setattr(self, "_{}".format('allow_connect_send_finish_later'), kwargs.get('allow_connect_send_finish_later', None))
         setattr(self, "_{}".format('allow_connect_send_finish_later_metadata'), kwargs.get('allow_connect_send_finish_later_metadata', None))
         setattr(self, "_{}".format('allow_connect_unified_payload_ui'), kwargs.get('allow_connect_unified_payload_ui', None))
@@ -1918,6 +1999,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_delayed_routing_metadata'), kwargs.get('allow_delayed_routing_metadata', None))
         setattr(self, "_{}".format('allow_delegated_signing'), kwargs.get('allow_delegated_signing', None))
         setattr(self, "_{}".format('allow_delegated_signing_metadata'), kwargs.get('allow_delegated_signing_metadata', None))
+        setattr(self, "_{}".format('allow_doc_gen_documents'), kwargs.get('allow_doc_gen_documents', None))
+        setattr(self, "_{}".format('allow_doc_gen_documents_metadata'), kwargs.get('allow_doc_gen_documents_metadata', None))
         setattr(self, "_{}".format('allow_document_disclosures'), kwargs.get('allow_document_disclosures', None))
         setattr(self, "_{}".format('allow_document_disclosures_metadata'), kwargs.get('allow_document_disclosures_metadata', None))
         setattr(self, "_{}".format('allow_documents_on_signed_envelopes'), kwargs.get('allow_documents_on_signed_envelopes', None))
@@ -1948,6 +2031,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_external_linked_accounts_metadata'), kwargs.get('allow_external_linked_accounts_metadata', None))
         setattr(self, "_{}".format('allow_external_signature_pad'), kwargs.get('allow_external_signature_pad', None))
         setattr(self, "_{}".format('allow_external_signature_pad_metadata'), kwargs.get('allow_external_signature_pad_metadata', None))
+        setattr(self, "_{}".format('allow_idv_for_eu_qualified_signatures'), kwargs.get('allow_idv_for_eu_qualified_signatures', None))
+        setattr(self, "_{}".format('allow_idv_for_eu_qualified_signatures_metadata'), kwargs.get('allow_idv_for_eu_qualified_signatures_metadata', None))
         setattr(self, "_{}".format('allow_idv_level1'), kwargs.get('allow_idv_level1', None))
         setattr(self, "_{}".format('allow_idv_level1_metadata'), kwargs.get('allow_idv_level1_metadata', None))
         setattr(self, "_{}".format('allow_idv_level2'), kwargs.get('allow_idv_level2', None))
@@ -1996,8 +2081,12 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_organization_to_use_remote_notary_metadata'), kwargs.get('allow_organization_to_use_remote_notary_metadata', None))
         setattr(self, "_{}".format('allow_organization_to_use_third_party_electronic_notary'), kwargs.get('allow_organization_to_use_third_party_electronic_notary', None))
         setattr(self, "_{}".format('allow_organization_to_use_third_party_electronic_notary_metadata'), kwargs.get('allow_organization_to_use_third_party_electronic_notary_metadata', None))
+        setattr(self, "_{}".format('allow_participant_recipient_type'), kwargs.get('allow_participant_recipient_type', None))
+        setattr(self, "_{}".format('allow_participant_recipient_type_metadata'), kwargs.get('allow_participant_recipient_type_metadata', None))
         setattr(self, "_{}".format('allow_payment_processing'), kwargs.get('allow_payment_processing', None))
         setattr(self, "_{}".format('allow_payment_processing_metadata'), kwargs.get('allow_payment_processing_metadata', None))
+        setattr(self, "_{}".format('allow_performance_analytics'), kwargs.get('allow_performance_analytics', None))
+        setattr(self, "_{}".format('allow_performance_analytics_metadata'), kwargs.get('allow_performance_analytics_metadata', None))
         setattr(self, "_{}".format('allow_phone_authentication'), kwargs.get('allow_phone_authentication', None))
         setattr(self, "_{}".format('allow_phone_authentication_metadata'), kwargs.get('allow_phone_authentication_metadata', None))
         setattr(self, "_{}".format('allow_phone_auth_override'), kwargs.get('allow_phone_auth_override', None))
@@ -2168,6 +2257,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_combined_pdf_download_for_sbs'), kwargs.get('enable_combined_pdf_download_for_sbs', None))
         setattr(self, "_{}".format('enable_comments_history_download_in_signing'), kwargs.get('enable_comments_history_download_in_signing', None))
         setattr(self, "_{}".format('enable_comments_history_download_in_signing_metadata'), kwargs.get('enable_comments_history_download_in_signing_metadata', None))
+        setattr(self, "_{}".format('enable_contact_suggestions'), kwargs.get('enable_contact_suggestions', None))
+        setattr(self, "_{}".format('enable_contact_suggestions_metadata'), kwargs.get('enable_contact_suggestions_metadata', None))
         setattr(self, "_{}".format('enable_customer_satisfaction_metric_tracking'), kwargs.get('enable_customer_satisfaction_metric_tracking', None))
         setattr(self, "_{}".format('enable_customer_satisfaction_metric_tracking_metadata'), kwargs.get('enable_customer_satisfaction_metric_tracking_metadata', None))
         setattr(self, "_{}".format('enable_ds_pro'), kwargs.get('enable_ds_pro', None))
@@ -2176,6 +2267,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_envelope_stamping_by_account_admin_metadata'), kwargs.get('enable_envelope_stamping_by_account_admin_metadata', None))
         setattr(self, "_{}".format('enable_envelope_stamping_by_ds_admin'), kwargs.get('enable_envelope_stamping_by_ds_admin', None))
         setattr(self, "_{}".format('enable_envelope_stamping_by_ds_admin_metadata'), kwargs.get('enable_envelope_stamping_by_ds_admin_metadata', None))
+        setattr(self, "_{}".format('enable_e_sign_api_hourly_limit_management'), kwargs.get('enable_e_sign_api_hourly_limit_management', None))
+        setattr(self, "_{}".format('enable_e_sign_api_hourly_limit_management_metadata'), kwargs.get('enable_e_sign_api_hourly_limit_management_metadata', None))
         setattr(self, "_{}".format('enable_esign_communities'), kwargs.get('enable_esign_communities', None))
         setattr(self, "_{}".format('enable_esign_communities_metadata'), kwargs.get('enable_esign_communities_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_accountless_sms_auth_for_part11'), kwargs.get('enable_id_fx_accountless_sms_auth_for_part11', None))
@@ -2188,6 +2281,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_in_browser_editor_metadata'), kwargs.get('enable_in_browser_editor_metadata', None))
         setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type'), kwargs.get('enable_key_terms_suggestions_by_document_type', None))
         setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type_metadata'), kwargs.get('enable_key_terms_suggestions_by_document_type_metadata', None))
+        setattr(self, "_{}".format('enable_participant_recipient_setting_metadata'), kwargs.get('enable_participant_recipient_setting_metadata', None))
         setattr(self, "_{}".format('enable_payment_processing'), kwargs.get('enable_payment_processing', None))
         setattr(self, "_{}".format('enable_payment_processing_metadata'), kwargs.get('enable_payment_processing_metadata', None))
         setattr(self, "_{}".format('enable_pdfa_conversion'), kwargs.get('enable_pdfa_conversion', None))
@@ -2265,6 +2359,10 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('envelope_integration_allowed_metadata'), kwargs.get('envelope_integration_allowed_metadata', None))
         setattr(self, "_{}".format('envelope_integration_enabled'), kwargs.get('envelope_integration_enabled', None))
         setattr(self, "_{}".format('envelope_integration_enabled_metadata'), kwargs.get('envelope_integration_enabled_metadata', None))
+        setattr(self, "_{}".format('envelope_limits_total_document_size_allowed_in_mb'), kwargs.get('envelope_limits_total_document_size_allowed_in_mb', None))
+        setattr(self, "_{}".format('envelope_limits_total_document_size_allowed_in_mb_enabled'), kwargs.get('envelope_limits_total_document_size_allowed_in_mb_enabled', None))
+        setattr(self, "_{}".format('envelope_limits_total_document_size_allowed_in_mb_enabled_metadata'), kwargs.get('envelope_limits_total_document_size_allowed_in_mb_enabled_metadata', None))
+        setattr(self, "_{}".format('envelope_limits_total_document_size_allowed_in_mb_metadata'), kwargs.get('envelope_limits_total_document_size_allowed_in_mb_metadata', None))
         setattr(self, "_{}".format('envelope_stamping_default_value'), kwargs.get('envelope_stamping_default_value', None))
         setattr(self, "_{}".format('envelope_stamping_default_value_metadata'), kwargs.get('envelope_stamping_default_value_metadata', None))
         setattr(self, "_{}".format('exit_prompt'), kwargs.get('exit_prompt', None))
@@ -2325,6 +2423,12 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('opt_out_auto_nav_text_and_tab_color_updates_metadata'), kwargs.get('opt_out_auto_nav_text_and_tab_color_updates_metadata', None))
         setattr(self, "_{}".format('opt_out_new_platform_seal'), kwargs.get('opt_out_new_platform_seal', None))
         setattr(self, "_{}".format('opt_out_new_platform_seal_platform_metadata'), kwargs.get('opt_out_new_platform_seal_platform_metadata', None))
+        setattr(self, "_{}".format('pdf_max_chunked_upload_part_size'), kwargs.get('pdf_max_chunked_upload_part_size', None))
+        setattr(self, "_{}".format('pdf_max_chunked_upload_part_size_metadata'), kwargs.get('pdf_max_chunked_upload_part_size_metadata', None))
+        setattr(self, "_{}".format('pdf_max_chunked_upload_total_size'), kwargs.get('pdf_max_chunked_upload_total_size', None))
+        setattr(self, "_{}".format('pdf_max_chunked_upload_total_size_metadata'), kwargs.get('pdf_max_chunked_upload_total_size_metadata', None))
+        setattr(self, "_{}".format('pdf_max_individual_upload_size'), kwargs.get('pdf_max_individual_upload_size', None))
+        setattr(self, "_{}".format('pdf_max_individual_upload_size_metadata'), kwargs.get('pdf_max_individual_upload_size_metadata', None))
         setattr(self, "_{}".format('phone_auth_recipient_may_provide_phone_number'), kwargs.get('phone_auth_recipient_may_provide_phone_number', None))
         setattr(self, "_{}".format('phone_auth_recipient_may_provide_phone_number_metadata'), kwargs.get('phone_auth_recipient_may_provide_phone_number_metadata', None))
         setattr(self, "_{}".format('pki_sign_downloaded_pdf_docs'), kwargs.get('pki_sign_downloaded_pdf_docs', None))
@@ -2487,6 +2591,7 @@ class AccountSettingsInformation(object):
     def access_code_format(self):
         """Gets the access_code_format of this AccountSettingsInformation.  # noqa: E501
 
+        Format of the string provided to a recipient in order to access an envelope.  # noqa: E501
 
         :return: The access_code_format of this AccountSettingsInformation.  # noqa: E501
         :rtype: AccessCodeFormat
@@ -2497,6 +2602,7 @@ class AccountSettingsInformation(object):
     def access_code_format(self, access_code_format):
         """Sets the access_code_format of this AccountSettingsInformation.
 
+        Format of the string provided to a recipient in order to access an envelope.  # noqa: E501
 
         :param access_code_format: The access_code_format of this AccountSettingsInformation.  # noqa: E501
         :type: AccessCodeFormat
@@ -2531,6 +2637,7 @@ class AccountSettingsInformation(object):
     def account_date_time_format_metadata(self):
         """Gets the account_date_time_format_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `accountDateTimeFormat` property is editable.  # noqa: E501
 
         :return: The account_date_time_format_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2541,6 +2648,7 @@ class AccountSettingsInformation(object):
     def account_date_time_format_metadata(self, account_date_time_format_metadata):
         """Sets the account_date_time_format_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `accountDateTimeFormat` property is editable.  # noqa: E501
 
         :param account_date_time_format_metadata: The account_date_time_format_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2575,6 +2683,7 @@ class AccountSettingsInformation(object):
     def account_default_language_metadata(self):
         """Gets the account_default_language_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The account_default_language_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2585,6 +2694,7 @@ class AccountSettingsInformation(object):
     def account_default_language_metadata(self, account_default_language_metadata):
         """Sets the account_default_language_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param account_default_language_metadata: The account_default_language_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2619,6 +2729,7 @@ class AccountSettingsInformation(object):
     def account_name_metadata(self):
         """Gets the account_name_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `accountName` property is editable.  # noqa: E501
 
         :return: The account_name_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2629,6 +2740,7 @@ class AccountSettingsInformation(object):
     def account_name_metadata(self, account_name_metadata):
         """Sets the account_name_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `accountName` property is editable.  # noqa: E501
 
         :param account_name_metadata: The account_name_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2640,6 +2752,7 @@ class AccountSettingsInformation(object):
     def account_notification(self):
         """Gets the account_notification of this AccountSettingsInformation.  # noqa: E501
 
+        An object that specifies notifications (expirations and reminders) for the envelope.  # noqa: E501
 
         :return: The account_notification of this AccountSettingsInformation.  # noqa: E501
         :rtype: AccountNotification
@@ -2650,6 +2763,7 @@ class AccountSettingsInformation(object):
     def account_notification(self, account_notification):
         """Sets the account_notification of this AccountSettingsInformation.
 
+        An object that specifies notifications (expirations and reminders) for the envelope.  # noqa: E501
 
         :param account_notification: The account_notification of this AccountSettingsInformation.  # noqa: E501
         :type: AccountNotification
@@ -2661,6 +2775,7 @@ class AccountSettingsInformation(object):
     def account_ui_settings(self):
         """Gets the account_ui_settings of this AccountSettingsInformation.  # noqa: E501
 
+        An object that defines the settings to use in the UI.  # noqa: E501
 
         :return: The account_ui_settings of this AccountSettingsInformation.  # noqa: E501
         :rtype: AccountUISettings
@@ -2671,6 +2786,7 @@ class AccountSettingsInformation(object):
     def account_ui_settings(self, account_ui_settings):
         """Sets the account_ui_settings of this AccountSettingsInformation.
 
+        An object that defines the settings to use in the UI.  # noqa: E501
 
         :param account_ui_settings: The account_ui_settings of this AccountSettingsInformation.  # noqa: E501
         :type: AccountUISettings
@@ -2705,6 +2821,7 @@ class AccountSettingsInformation(object):
     def adopt_sig_config_metadata(self):
         """Gets the adopt_sig_config_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `adoptSigConfig` property is editable.   # noqa: E501
 
         :return: The adopt_sig_config_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2715,6 +2832,7 @@ class AccountSettingsInformation(object):
     def adopt_sig_config_metadata(self, adopt_sig_config_metadata):
         """Sets the adopt_sig_config_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `adoptSigConfig` property is editable.   # noqa: E501
 
         :param adopt_sig_config_metadata: The adopt_sig_config_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2749,6 +2867,7 @@ class AccountSettingsInformation(object):
     def advanced_correct_metadata(self):
         """Gets the advanced_correct_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `advancedCorrect` property is editable.   # noqa: E501
 
         :return: The advanced_correct_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2759,6 +2878,7 @@ class AccountSettingsInformation(object):
     def advanced_correct_metadata(self, advanced_correct_metadata):
         """Sets the advanced_correct_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `advancedCorrect` property is editable.   # noqa: E501
 
         :param advanced_correct_metadata: The advanced_correct_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2793,6 +2913,7 @@ class AccountSettingsInformation(object):
     def allow_access_code_format_metadata(self):
         """Gets the allow_access_code_format_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowAccessCodeFormat` property is editable.   # noqa: E501
 
         :return: The allow_access_code_format_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2803,6 +2924,7 @@ class AccountSettingsInformation(object):
     def allow_access_code_format_metadata(self, allow_access_code_format_metadata):
         """Sets the allow_access_code_format_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowAccessCodeFormat` property is editable.   # noqa: E501
 
         :param allow_access_code_format_metadata: The allow_access_code_format_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2837,6 +2959,7 @@ class AccountSettingsInformation(object):
     def allow_account_management_granular_metadata(self):
         """Gets the allow_account_management_granular_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowAccountManagementGranular` property is editable.   # noqa: E501
 
         :return: The allow_account_management_granular_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2847,6 +2970,7 @@ class AccountSettingsInformation(object):
     def allow_account_management_granular_metadata(self, allow_account_management_granular_metadata):
         """Sets the allow_account_management_granular_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowAccountManagementGranular` property is editable.   # noqa: E501
 
         :param allow_account_management_granular_metadata: The allow_account_management_granular_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2881,6 +3005,7 @@ class AccountSettingsInformation(object):
     def allow_account_member_name_change_metadata(self):
         """Gets the allow_account_member_name_change_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowAccountMemberNameChange` property is editable.   # noqa: E501
 
         :return: The allow_account_member_name_change_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2891,6 +3016,7 @@ class AccountSettingsInformation(object):
     def allow_account_member_name_change_metadata(self, allow_account_member_name_change_metadata):
         """Sets the allow_account_member_name_change_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowAccountMemberNameChange` property is editable.   # noqa: E501
 
         :param allow_account_member_name_change_metadata: The allow_account_member_name_change_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2925,6 +3051,7 @@ class AccountSettingsInformation(object):
     def allow_advanced_recipient_routing_conditional_metadata(self):
         """Gets the allow_advanced_recipient_routing_conditional_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the ` allowAdvancedRecipientRoutingConditional` property is editable.  # noqa: E501
 
         :return: The allow_advanced_recipient_routing_conditional_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2935,6 +3062,7 @@ class AccountSettingsInformation(object):
     def allow_advanced_recipient_routing_conditional_metadata(self, allow_advanced_recipient_routing_conditional_metadata):
         """Sets the allow_advanced_recipient_routing_conditional_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the ` allowAdvancedRecipientRoutingConditional` property is editable.  # noqa: E501
 
         :param allow_advanced_recipient_routing_conditional_metadata: The allow_advanced_recipient_routing_conditional_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2969,6 +3097,7 @@ class AccountSettingsInformation(object):
     def allow_agent_name_email_edit_metadata(self):
         """Gets the allow_agent_name_email_edit_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowAgentNameEmailEdit` property is editable.   # noqa: E501
 
         :return: The allow_agent_name_email_edit_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2979,6 +3108,7 @@ class AccountSettingsInformation(object):
     def allow_agent_name_email_edit_metadata(self, allow_agent_name_email_edit_metadata):
         """Sets the allow_agent_name_email_edit_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowAgentNameEmailEdit` property is editable.   # noqa: E501
 
         :param allow_agent_name_email_edit_metadata: The allow_agent_name_email_edit_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3013,6 +3143,7 @@ class AccountSettingsInformation(object):
     def allow_agreement_actions_metadata(self):
         """Gets the allow_agreement_actions_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata about the `allowAgreementActions` property.  # noqa: E501
 
         :return: The allow_agreement_actions_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3023,12 +3154,57 @@ class AccountSettingsInformation(object):
     def allow_agreement_actions_metadata(self, allow_agreement_actions_metadata):
         """Sets the allow_agreement_actions_metadata of this AccountSettingsInformation.
 
+        Metadata about the `allowAgreementActions` property.  # noqa: E501
 
         :param allow_agreement_actions_metadata: The allow_agreement_actions_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
         self._allow_agreement_actions_metadata = allow_agreement_actions_metadata
+
+    @property
+    def allow_agreement_orchestration_workflows(self):
+        """Gets the allow_agreement_orchestration_workflows of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_agreement_orchestration_workflows of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_agreement_orchestration_workflows
+
+    @allow_agreement_orchestration_workflows.setter
+    def allow_agreement_orchestration_workflows(self, allow_agreement_orchestration_workflows):
+        """Sets the allow_agreement_orchestration_workflows of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_agreement_orchestration_workflows: The allow_agreement_orchestration_workflows of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_agreement_orchestration_workflows = allow_agreement_orchestration_workflows
+
+    @property
+    def allow_agreement_orchestration_workflows_metadata(self):
+        """Gets the allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_agreement_orchestration_workflows_metadata
+
+    @allow_agreement_orchestration_workflows_metadata.setter
+    def allow_agreement_orchestration_workflows_metadata(self, allow_agreement_orchestration_workflows_metadata):
+        """Sets the allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.
+
+
+        :param allow_agreement_orchestration_workflows_metadata: The allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_agreement_orchestration_workflows_metadata = allow_agreement_orchestration_workflows_metadata
 
     @property
     def allow_auto_nav_settings(self):
@@ -3057,6 +3233,7 @@ class AccountSettingsInformation(object):
     def allow_auto_nav_settings_metadata(self):
         """Gets the allow_auto_nav_settings_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowAutoNavSettings` property is editable.   # noqa: E501
 
         :return: The allow_auto_nav_settings_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3067,6 +3244,7 @@ class AccountSettingsInformation(object):
     def allow_auto_nav_settings_metadata(self, allow_auto_nav_settings_metadata):
         """Sets the allow_auto_nav_settings_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowAutoNavSettings` property is editable.   # noqa: E501
 
         :param allow_auto_nav_settings_metadata: The allow_auto_nav_settings_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3101,6 +3279,7 @@ class AccountSettingsInformation(object):
     def allow_auto_tagging_metadata(self):
         """Gets the allow_auto_tagging_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowAutoTagging` property is editable.  # noqa: E501
 
         :return: The allow_auto_tagging_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3111,6 +3290,7 @@ class AccountSettingsInformation(object):
     def allow_auto_tagging_metadata(self, allow_auto_tagging_metadata):
         """Sets the allow_auto_tagging_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowAutoTagging` property is editable.  # noqa: E501
 
         :param allow_auto_tagging_metadata: The allow_auto_tagging_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3145,6 +3325,7 @@ class AccountSettingsInformation(object):
     def allow_bulk_send_metadata(self):
         """Gets the allow_bulk_send_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowBulkSend` property is editable.   # noqa: E501
 
         :return: The allow_bulk_send_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3155,6 +3336,7 @@ class AccountSettingsInformation(object):
     def allow_bulk_send_metadata(self, allow_bulk_send_metadata):
         """Sets the allow_bulk_send_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowBulkSend` property is editable.   # noqa: E501
 
         :param allow_bulk_send_metadata: The allow_bulk_send_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3189,6 +3371,7 @@ class AccountSettingsInformation(object):
     def allow_cd_withdraw_metadata(self):
         """Gets the allow_cd_withdraw_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowCDWithdraw` property is editable.   # noqa: E501
 
         :return: The allow_cd_withdraw_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3199,6 +3382,7 @@ class AccountSettingsInformation(object):
     def allow_cd_withdraw_metadata(self, allow_cd_withdraw_metadata):
         """Sets the allow_cd_withdraw_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowCDWithdraw` property is editable.   # noqa: E501
 
         :param allow_cd_withdraw_metadata: The allow_cd_withdraw_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3230,6 +3414,29 @@ class AccountSettingsInformation(object):
         self._allow_connect_http_listener_configs = allow_connect_http_listener_configs
 
     @property
+    def allow_connect_o_auth_ui(self):
+        """Gets the allow_connect_o_auth_ui of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_connect_o_auth_ui of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_connect_o_auth_ui
+
+    @allow_connect_o_auth_ui.setter
+    def allow_connect_o_auth_ui(self, allow_connect_o_auth_ui):
+        """Sets the allow_connect_o_auth_ui of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_connect_o_auth_ui: The allow_connect_o_auth_ui of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_connect_o_auth_ui = allow_connect_o_auth_ui
+
+    @property
     def allow_connect_send_finish_later(self):
         """Gets the allow_connect_send_finish_later of this AccountSettingsInformation.  # noqa: E501
 
@@ -3256,6 +3463,7 @@ class AccountSettingsInformation(object):
     def allow_connect_send_finish_later_metadata(self):
         """Gets the allow_connect_send_finish_later_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowConnectSendFinishLater` property is editable.   # noqa: E501
 
         :return: The allow_connect_send_finish_later_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3266,6 +3474,7 @@ class AccountSettingsInformation(object):
     def allow_connect_send_finish_later_metadata(self, allow_connect_send_finish_later_metadata):
         """Sets the allow_connect_send_finish_later_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowConnectSendFinishLater` property is editable.   # noqa: E501
 
         :param allow_connect_send_finish_later_metadata: The allow_connect_send_finish_later_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3323,6 +3532,7 @@ class AccountSettingsInformation(object):
     def allow_consumer_disclosure_override_metadata(self):
         """Gets the allow_consumer_disclosure_override_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowConsumerDisclosureOverride` property is editable.   # noqa: E501
 
         :return: The allow_consumer_disclosure_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3333,6 +3543,7 @@ class AccountSettingsInformation(object):
     def allow_consumer_disclosure_override_metadata(self, allow_consumer_disclosure_override_metadata):
         """Sets the allow_consumer_disclosure_override_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowConsumerDisclosureOverride` property is editable.   # noqa: E501
 
         :param allow_consumer_disclosure_override_metadata: The allow_consumer_disclosure_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3367,6 +3578,7 @@ class AccountSettingsInformation(object):
     def allow_data_download_metadata(self):
         """Gets the allow_data_download_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowDataDownload` property is editable.   # noqa: E501
 
         :return: The allow_data_download_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3377,6 +3589,7 @@ class AccountSettingsInformation(object):
     def allow_data_download_metadata(self, allow_data_download_metadata):
         """Sets the allow_data_download_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowDataDownload` property is editable.   # noqa: E501
 
         :param allow_data_download_metadata: The allow_data_download_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3411,6 +3624,7 @@ class AccountSettingsInformation(object):
     def allow_delayed_routing_metadata(self):
         """Gets the allow_delayed_routing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_delayed_routing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3421,6 +3635,7 @@ class AccountSettingsInformation(object):
     def allow_delayed_routing_metadata(self, allow_delayed_routing_metadata):
         """Sets the allow_delayed_routing_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_delayed_routing_metadata: The allow_delayed_routing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3455,6 +3670,7 @@ class AccountSettingsInformation(object):
     def allow_delegated_signing_metadata(self):
         """Gets the allow_delegated_signing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_delegated_signing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3465,12 +3681,57 @@ class AccountSettingsInformation(object):
     def allow_delegated_signing_metadata(self, allow_delegated_signing_metadata):
         """Sets the allow_delegated_signing_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_delegated_signing_metadata: The allow_delegated_signing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
         self._allow_delegated_signing_metadata = allow_delegated_signing_metadata
+
+    @property
+    def allow_doc_gen_documents(self):
+        """Gets the allow_doc_gen_documents of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_doc_gen_documents of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_doc_gen_documents
+
+    @allow_doc_gen_documents.setter
+    def allow_doc_gen_documents(self, allow_doc_gen_documents):
+        """Sets the allow_doc_gen_documents of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_doc_gen_documents: The allow_doc_gen_documents of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_doc_gen_documents = allow_doc_gen_documents
+
+    @property
+    def allow_doc_gen_documents_metadata(self):
+        """Gets the allow_doc_gen_documents_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_doc_gen_documents_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_doc_gen_documents_metadata
+
+    @allow_doc_gen_documents_metadata.setter
+    def allow_doc_gen_documents_metadata(self, allow_doc_gen_documents_metadata):
+        """Sets the allow_doc_gen_documents_metadata of this AccountSettingsInformation.
+
+
+        :param allow_doc_gen_documents_metadata: The allow_doc_gen_documents_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_doc_gen_documents_metadata = allow_doc_gen_documents_metadata
 
     @property
     def allow_document_disclosures(self):
@@ -3499,6 +3760,7 @@ class AccountSettingsInformation(object):
     def allow_document_disclosures_metadata(self):
         """Gets the allow_document_disclosures_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowDocumentDisclosures` property is editable.   # noqa: E501
 
         :return: The allow_document_disclosures_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3509,6 +3771,7 @@ class AccountSettingsInformation(object):
     def allow_document_disclosures_metadata(self, allow_document_disclosures_metadata):
         """Sets the allow_document_disclosures_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowDocumentDisclosures` property is editable.   # noqa: E501
 
         :param allow_document_disclosures_metadata: The allow_document_disclosures_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3543,6 +3806,7 @@ class AccountSettingsInformation(object):
     def allow_documents_on_signed_envelopes_metadata(self):
         """Gets the allow_documents_on_signed_envelopes_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowDocumentsOnSignedEnvelopes` property is editable.   # noqa: E501
 
         :return: The allow_documents_on_signed_envelopes_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3553,6 +3817,7 @@ class AccountSettingsInformation(object):
     def allow_documents_on_signed_envelopes_metadata(self, allow_documents_on_signed_envelopes_metadata):
         """Sets the allow_documents_on_signed_envelopes_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowDocumentsOnSignedEnvelopes` property is editable.   # noqa: E501
 
         :param allow_documents_on_signed_envelopes_metadata: The allow_documents_on_signed_envelopes_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3587,6 +3852,7 @@ class AccountSettingsInformation(object):
     def allow_document_visibility_metadata(self):
         """Gets the allow_document_visibility_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowDocumentVisibility` property is editable.   # noqa: E501
 
         :return: The allow_document_visibility_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3597,6 +3863,7 @@ class AccountSettingsInformation(object):
     def allow_document_visibility_metadata(self, allow_document_visibility_metadata):
         """Sets the allow_document_visibility_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowDocumentVisibility` property is editable.   # noqa: E501
 
         :param allow_document_visibility_metadata: The allow_document_visibility_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3631,6 +3898,7 @@ class AccountSettingsInformation(object):
     def allow_e_hanko_stamps_metadata(self):
         """Gets the allow_e_hanko_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowEHankoStamps` property is editable.   # noqa: E501
 
         :return: The allow_e_hanko_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3641,6 +3909,7 @@ class AccountSettingsInformation(object):
     def allow_e_hanko_stamps_metadata(self, allow_e_hanko_stamps_metadata):
         """Sets the allow_e_hanko_stamps_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowEHankoStamps` property is editable.   # noqa: E501
 
         :param allow_e_hanko_stamps_metadata: The allow_e_hanko_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3675,6 +3944,7 @@ class AccountSettingsInformation(object):
     def allow_e_note_e_original_metadata(self):
         """Gets the allow_e_note_e_original_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowENoteEOriginal` property is editable.   # noqa: E501
 
         :return: The allow_e_note_e_original_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3685,6 +3955,7 @@ class AccountSettingsInformation(object):
     def allow_e_note_e_original_metadata(self, allow_e_note_e_original_metadata):
         """Sets the allow_e_note_e_original_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowENoteEOriginal` property is editable.   # noqa: E501
 
         :param allow_e_note_e_original_metadata: The allow_e_note_e_original_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3719,6 +3990,7 @@ class AccountSettingsInformation(object):
     def allow_envelope_correct_metadata(self):
         """Gets the allow_envelope_correct_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowEnvelopeCorrect` property is editable.   # noqa: E501
 
         :return: The allow_envelope_correct_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3729,6 +4001,7 @@ class AccountSettingsInformation(object):
     def allow_envelope_correct_metadata(self, allow_envelope_correct_metadata):
         """Sets the allow_envelope_correct_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowEnvelopeCorrect` property is editable.   # noqa: E501
 
         :param allow_envelope_correct_metadata: The allow_envelope_correct_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3763,6 +4036,7 @@ class AccountSettingsInformation(object):
     def allow_envelope_custody_transfer_metadata(self):
         """Gets the allow_envelope_custody_transfer_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowEnvelopeCustodyTransfer` property is editable.   # noqa: E501
 
         :return: The allow_envelope_custody_transfer_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3773,6 +4047,7 @@ class AccountSettingsInformation(object):
     def allow_envelope_custody_transfer_metadata(self, allow_envelope_custody_transfer_metadata):
         """Sets the allow_envelope_custody_transfer_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowEnvelopeCustodyTransfer` property is editable.   # noqa: E501
 
         :param allow_envelope_custody_transfer_metadata: The allow_envelope_custody_transfer_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3807,6 +4082,7 @@ class AccountSettingsInformation(object):
     def allow_envelope_custom_fields_metadata(self):
         """Gets the allow_envelope_custom_fields_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowEnvelopeCustomFields` property is editable.   # noqa: E501
 
         :return: The allow_envelope_custom_fields_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3817,6 +4093,7 @@ class AccountSettingsInformation(object):
     def allow_envelope_custom_fields_metadata(self, allow_envelope_custom_fields_metadata):
         """Sets the allow_envelope_custom_fields_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowEnvelopeCustomFields` property is editable.   # noqa: E501
 
         :param allow_envelope_custom_fields_metadata: The allow_envelope_custom_fields_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3851,6 +4128,7 @@ class AccountSettingsInformation(object):
     def allow_envelope_publish_reporting_metadata(self):
         """Gets the allow_envelope_publish_reporting_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowEnvelopePublishReporting` property is editable.   # noqa: E501
 
         :return: The allow_envelope_publish_reporting_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3861,6 +4139,7 @@ class AccountSettingsInformation(object):
     def allow_envelope_publish_reporting_metadata(self, allow_envelope_publish_reporting_metadata):
         """Sets the allow_envelope_publish_reporting_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowEnvelopePublishReporting` property is editable.   # noqa: E501
 
         :param allow_envelope_publish_reporting_metadata: The allow_envelope_publish_reporting_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3895,6 +4174,7 @@ class AccountSettingsInformation(object):
     def allow_envelope_reporting_metadata(self):
         """Gets the allow_envelope_reporting_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowEnvelopeReporting` property is editable.   # noqa: E501
 
         :return: The allow_envelope_reporting_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3905,6 +4185,7 @@ class AccountSettingsInformation(object):
     def allow_envelope_reporting_metadata(self, allow_envelope_reporting_metadata):
         """Sets the allow_envelope_reporting_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowEnvelopeReporting` property is editable.   # noqa: E501
 
         :param allow_envelope_reporting_metadata: The allow_envelope_reporting_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3939,6 +4220,7 @@ class AccountSettingsInformation(object):
     def allow_expression_metadata(self):
         """Gets the allow_expression_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowExpression` property is editable.   # noqa: E501
 
         :return: The allow_expression_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3949,6 +4231,7 @@ class AccountSettingsInformation(object):
     def allow_expression_metadata(self, allow_expression_metadata):
         """Sets the allow_expression_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowExpression` property is editable.   # noqa: E501
 
         :param allow_expression_metadata: The allow_expression_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3983,6 +4266,7 @@ class AccountSettingsInformation(object):
     def allow_express_signer_certificate_metadata(self):
         """Gets the allow_express_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowExpressSignerCertificate` property is editable.   # noqa: E501
 
         :return: The allow_express_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3993,6 +4277,7 @@ class AccountSettingsInformation(object):
     def allow_express_signer_certificate_metadata(self, allow_express_signer_certificate_metadata):
         """Sets the allow_express_signer_certificate_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowExpressSignerCertificate` property is editable.   # noqa: E501
 
         :param allow_express_signer_certificate_metadata: The allow_express_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4027,6 +4312,7 @@ class AccountSettingsInformation(object):
     def allow_extended_sending_resource_file_metadata(self):
         """Gets the allow_extended_sending_resource_file_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowExtendedSendingResourceFile` property is editable.   # noqa: E501
 
         :return: The allow_extended_sending_resource_file_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4037,6 +4323,7 @@ class AccountSettingsInformation(object):
     def allow_extended_sending_resource_file_metadata(self, allow_extended_sending_resource_file_metadata):
         """Sets the allow_extended_sending_resource_file_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowExtendedSendingResourceFile` property is editable.   # noqa: E501
 
         :param allow_extended_sending_resource_file_metadata: The allow_extended_sending_resource_file_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4071,6 +4358,7 @@ class AccountSettingsInformation(object):
     def allow_external_linked_accounts_metadata(self):
         """Gets the allow_external_linked_accounts_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_external_linked_accounts_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4081,6 +4369,7 @@ class AccountSettingsInformation(object):
     def allow_external_linked_accounts_metadata(self, allow_external_linked_accounts_metadata):
         """Sets the allow_external_linked_accounts_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_external_linked_accounts_metadata: The allow_external_linked_accounts_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4115,6 +4404,7 @@ class AccountSettingsInformation(object):
     def allow_external_signature_pad_metadata(self):
         """Gets the allow_external_signature_pad_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowExternalSignaturePad` property is editable.   # noqa: E501
 
         :return: The allow_external_signature_pad_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4125,12 +4415,57 @@ class AccountSettingsInformation(object):
     def allow_external_signature_pad_metadata(self, allow_external_signature_pad_metadata):
         """Sets the allow_external_signature_pad_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowExternalSignaturePad` property is editable.   # noqa: E501
 
         :param allow_external_signature_pad_metadata: The allow_external_signature_pad_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
         self._allow_external_signature_pad_metadata = allow_external_signature_pad_metadata
+
+    @property
+    def allow_idv_for_eu_qualified_signatures(self):
+        """Gets the allow_idv_for_eu_qualified_signatures of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_idv_for_eu_qualified_signatures of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_idv_for_eu_qualified_signatures
+
+    @allow_idv_for_eu_qualified_signatures.setter
+    def allow_idv_for_eu_qualified_signatures(self, allow_idv_for_eu_qualified_signatures):
+        """Sets the allow_idv_for_eu_qualified_signatures of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_idv_for_eu_qualified_signatures: The allow_idv_for_eu_qualified_signatures of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_idv_for_eu_qualified_signatures = allow_idv_for_eu_qualified_signatures
+
+    @property
+    def allow_idv_for_eu_qualified_signatures_metadata(self):
+        """Gets the allow_idv_for_eu_qualified_signatures_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_idv_for_eu_qualified_signatures_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_idv_for_eu_qualified_signatures_metadata
+
+    @allow_idv_for_eu_qualified_signatures_metadata.setter
+    def allow_idv_for_eu_qualified_signatures_metadata(self, allow_idv_for_eu_qualified_signatures_metadata):
+        """Sets the allow_idv_for_eu_qualified_signatures_metadata of this AccountSettingsInformation.
+
+
+        :param allow_idv_for_eu_qualified_signatures_metadata: The allow_idv_for_eu_qualified_signatures_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_idv_for_eu_qualified_signatures_metadata = allow_idv_for_eu_qualified_signatures_metadata
 
     @property
     def allow_idv_level1(self):
@@ -4159,6 +4494,7 @@ class AccountSettingsInformation(object):
     def allow_idv_level1_metadata(self):
         """Gets the allow_idv_level1_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowIDVLevel1` property is editable.  # noqa: E501
 
         :return: The allow_idv_level1_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4169,6 +4505,7 @@ class AccountSettingsInformation(object):
     def allow_idv_level1_metadata(self, allow_idv_level1_metadata):
         """Sets the allow_idv_level1_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowIDVLevel1` property is editable.  # noqa: E501
 
         :param allow_idv_level1_metadata: The allow_idv_level1_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4203,6 +4540,7 @@ class AccountSettingsInformation(object):
     def allow_idv_level2_metadata(self):
         """Gets the allow_idv_level2_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_idv_level2_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4213,6 +4551,7 @@ class AccountSettingsInformation(object):
     def allow_idv_level2_metadata(self, allow_idv_level2_metadata):
         """Sets the allow_idv_level2_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_idv_level2_metadata: The allow_idv_level2_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4247,6 +4586,7 @@ class AccountSettingsInformation(object):
     def allow_idv_level3_metadata(self):
         """Gets the allow_idv_level3_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_idv_level3_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4257,6 +4597,7 @@ class AccountSettingsInformation(object):
     def allow_idv_level3_metadata(self, allow_idv_level3_metadata):
         """Sets the allow_idv_level3_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_idv_level3_metadata: The allow_idv_level3_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4291,6 +4632,7 @@ class AccountSettingsInformation(object):
     def allow_idv_platform_metadata(self):
         """Gets the allow_idv_platform_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowIDVPlatform` property is editable.  # noqa: E501
 
         :return: The allow_idv_platform_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4301,6 +4643,7 @@ class AccountSettingsInformation(object):
     def allow_idv_platform_metadata(self, allow_idv_platform_metadata):
         """Sets the allow_idv_platform_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowIDVPlatform` property is editable.  # noqa: E501
 
         :param allow_idv_platform_metadata: The allow_idv_platform_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4381,6 +4724,7 @@ class AccountSettingsInformation(object):
     def allow_in_person_metadata(self):
         """Gets the allow_in_person_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowInPerson` property is editable.   # noqa: E501
 
         :return: The allow_in_person_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4391,6 +4735,7 @@ class AccountSettingsInformation(object):
     def allow_in_person_metadata(self, allow_in_person_metadata):
         """Sets the allow_in_person_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowInPerson` property is editable.   # noqa: E501
 
         :param allow_in_person_metadata: The allow_in_person_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4425,6 +4770,7 @@ class AccountSettingsInformation(object):
     def allow_managed_stamps_metadata(self):
         """Gets the allow_managed_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowManagedStamps` property is editable.   # noqa: E501
 
         :return: The allow_managed_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4435,6 +4781,7 @@ class AccountSettingsInformation(object):
     def allow_managed_stamps_metadata(self, allow_managed_stamps_metadata):
         """Sets the allow_managed_stamps_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowManagedStamps` property is editable.   # noqa: E501
 
         :param allow_managed_stamps_metadata: The allow_managed_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4513,6 +4860,7 @@ class AccountSettingsInformation(object):
     def allow_markup_metadata(self):
         """Gets the allow_markup_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowMarkup` property is editable.   # noqa: E501
 
         :return: The allow_markup_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4523,6 +4871,7 @@ class AccountSettingsInformation(object):
     def allow_markup_metadata(self, allow_markup_metadata):
         """Sets the allow_markup_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowMarkup` property is editable.   # noqa: E501
 
         :param allow_markup_metadata: The allow_markup_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4557,6 +4906,7 @@ class AccountSettingsInformation(object):
     def allow_member_time_zone_metadata(self):
         """Gets the allow_member_time_zone_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowMemberTimeZone` property is editable.   # noqa: E501
 
         :return: The allow_member_time_zone_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4567,6 +4917,7 @@ class AccountSettingsInformation(object):
     def allow_member_time_zone_metadata(self, allow_member_time_zone_metadata):
         """Sets the allow_member_time_zone_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowMemberTimeZone` property is editable.   # noqa: E501
 
         :param allow_member_time_zone_metadata: The allow_member_time_zone_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4601,6 +4952,7 @@ class AccountSettingsInformation(object):
     def allow_merge_fields_metadata(self):
         """Gets the allow_merge_fields_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowMergeFields` property is editable.   # noqa: E501
 
         :return: The allow_merge_fields_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4611,6 +4963,7 @@ class AccountSettingsInformation(object):
     def allow_merge_fields_metadata(self, allow_merge_fields_metadata):
         """Sets the allow_merge_fields_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowMergeFields` property is editable.   # noqa: E501
 
         :param allow_merge_fields_metadata: The allow_merge_fields_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4645,6 +4998,7 @@ class AccountSettingsInformation(object):
     def allow_multiple_brand_profiles_metadata(self):
         """Gets the allow_multiple_brand_profiles_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowMultipleBrandProfiles` property is editable.   # noqa: E501
 
         :return: The allow_multiple_brand_profiles_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4655,6 +5009,7 @@ class AccountSettingsInformation(object):
     def allow_multiple_brand_profiles_metadata(self, allow_multiple_brand_profiles_metadata):
         """Sets the allow_multiple_brand_profiles_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowMultipleBrandProfiles` property is editable.   # noqa: E501
 
         :param allow_multiple_brand_profiles_metadata: The allow_multiple_brand_profiles_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4689,6 +5044,7 @@ class AccountSettingsInformation(object):
     def allow_multiple_signer_attachments_metadata(self):
         """Gets the allow_multiple_signer_attachments_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowMultipleSignerAttachments` property is editable.   # noqa: E501
 
         :return: The allow_multiple_signer_attachments_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4699,6 +5055,7 @@ class AccountSettingsInformation(object):
     def allow_multiple_signer_attachments_metadata(self, allow_multiple_signer_attachments_metadata):
         """Sets the allow_multiple_signer_attachments_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowMultipleSignerAttachments` property is editable.   # noqa: E501
 
         :param allow_multiple_signer_attachments_metadata: The allow_multiple_signer_attachments_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4733,6 +5090,7 @@ class AccountSettingsInformation(object):
     def allow_non_us_phone_auth_metadata(self):
         """Gets the allow_non_us_phone_auth_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowNonUSPhoneAuth` property is editable.   # noqa: E501
 
         :return: The allow_non_us_phone_auth_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4743,6 +5101,7 @@ class AccountSettingsInformation(object):
     def allow_non_us_phone_auth_metadata(self, allow_non_us_phone_auth_metadata):
         """Sets the allow_non_us_phone_auth_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowNonUSPhoneAuth` property is editable.   # noqa: E501
 
         :param allow_non_us_phone_auth_metadata: The allow_non_us_phone_auth_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4777,6 +5136,7 @@ class AccountSettingsInformation(object):
     def allow_ocr_of_envelope_documents_metadata(self):
         """Gets the allow_ocr_of_envelope_documents_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_ocr_of_envelope_documents_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4787,6 +5147,7 @@ class AccountSettingsInformation(object):
     def allow_ocr_of_envelope_documents_metadata(self, allow_ocr_of_envelope_documents_metadata):
         """Sets the allow_ocr_of_envelope_documents_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_ocr_of_envelope_documents_metadata: The allow_ocr_of_envelope_documents_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4821,6 +5182,7 @@ class AccountSettingsInformation(object):
     def allow_offline_signing_metadata(self):
         """Gets the allow_offline_signing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowOfflineSigning` property is editable.   # noqa: E501
 
         :return: The allow_offline_signing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4831,6 +5193,7 @@ class AccountSettingsInformation(object):
     def allow_offline_signing_metadata(self, allow_offline_signing_metadata):
         """Sets the allow_offline_signing_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowOfflineSigning` property is editable.   # noqa: E501
 
         :param allow_offline_signing_metadata: The allow_offline_signing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4865,6 +5228,7 @@ class AccountSettingsInformation(object):
     def allow_open_trust_signer_certificate_metadata(self):
         """Gets the allow_open_trust_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowOpenTrustSignerCertificate` property is editable.   # noqa: E501
 
         :return: The allow_open_trust_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4875,6 +5239,7 @@ class AccountSettingsInformation(object):
     def allow_open_trust_signer_certificate_metadata(self, allow_open_trust_signer_certificate_metadata):
         """Sets the allow_open_trust_signer_certificate_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowOpenTrustSignerCertificate` property is editable.   # noqa: E501
 
         :param allow_open_trust_signer_certificate_metadata: The allow_open_trust_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4909,6 +5274,7 @@ class AccountSettingsInformation(object):
     def allow_organization_docusign_monitor_metadata(self):
         """Gets the allow_organization_docusign_monitor_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_organization_docusign_monitor_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4919,6 +5285,7 @@ class AccountSettingsInformation(object):
     def allow_organization_docusign_monitor_metadata(self, allow_organization_docusign_monitor_metadata):
         """Sets the allow_organization_docusign_monitor_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_organization_docusign_monitor_metadata: The allow_organization_docusign_monitor_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4953,6 +5320,7 @@ class AccountSettingsInformation(object):
     def allow_organization_domain_user_management_metadata(self):
         """Gets the allow_organization_domain_user_management_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_organization_domain_user_management_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4963,6 +5331,7 @@ class AccountSettingsInformation(object):
     def allow_organization_domain_user_management_metadata(self, allow_organization_domain_user_management_metadata):
         """Sets the allow_organization_domain_user_management_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_organization_domain_user_management_metadata: The allow_organization_domain_user_management_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4997,6 +5366,7 @@ class AccountSettingsInformation(object):
     def allow_organizations_metadata(self):
         """Gets the allow_organizations_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowOrganizations` property is editable.   # noqa: E501
 
         :return: The allow_organizations_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5007,6 +5377,7 @@ class AccountSettingsInformation(object):
     def allow_organizations_metadata(self, allow_organizations_metadata):
         """Sets the allow_organizations_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowOrganizations` property is editable.   # noqa: E501
 
         :param allow_organizations_metadata: The allow_organizations_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5041,6 +5412,7 @@ class AccountSettingsInformation(object):
     def allow_organization_sso_management_metadata(self):
         """Gets the allow_organization_sso_management_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_organization_sso_management_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5051,6 +5423,7 @@ class AccountSettingsInformation(object):
     def allow_organization_sso_management_metadata(self, allow_organization_sso_management_metadata):
         """Sets the allow_organization_sso_management_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_organization_sso_management_metadata: The allow_organization_sso_management_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5131,6 +5504,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_remote_notary_metadata(self):
         """Gets the allow_organization_to_use_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_organization_to_use_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5141,6 +5515,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_remote_notary_metadata(self, allow_organization_to_use_remote_notary_metadata):
         """Sets the allow_organization_to_use_remote_notary_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_organization_to_use_remote_notary_metadata: The allow_organization_to_use_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5152,7 +5527,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_third_party_electronic_notary(self):
         """Gets the allow_organization_to_use_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
 
-          # noqa: E501
+        Org level flag that determines the abailability to perform Third Party Notary (3PN) actions.  # noqa: E501
 
         :return: The allow_organization_to_use_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
@@ -5163,7 +5538,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_third_party_electronic_notary(self, allow_organization_to_use_third_party_electronic_notary):
         """Sets the allow_organization_to_use_third_party_electronic_notary of this AccountSettingsInformation.
 
-          # noqa: E501
+        Org level flag that determines the abailability to perform Third Party Notary (3PN) actions.  # noqa: E501
 
         :param allow_organization_to_use_third_party_electronic_notary: The allow_organization_to_use_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
         :type: str
@@ -5193,6 +5568,50 @@ class AccountSettingsInformation(object):
         self._allow_organization_to_use_third_party_electronic_notary_metadata = allow_organization_to_use_third_party_electronic_notary_metadata
 
     @property
+    def allow_participant_recipient_type(self):
+        """Gets the allow_participant_recipient_type of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_participant_recipient_type of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_participant_recipient_type
+
+    @allow_participant_recipient_type.setter
+    def allow_participant_recipient_type(self, allow_participant_recipient_type):
+        """Sets the allow_participant_recipient_type of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_participant_recipient_type: The allow_participant_recipient_type of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_participant_recipient_type = allow_participant_recipient_type
+
+    @property
+    def allow_participant_recipient_type_metadata(self):
+        """Gets the allow_participant_recipient_type_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_participant_recipient_type_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_participant_recipient_type_metadata
+
+    @allow_participant_recipient_type_metadata.setter
+    def allow_participant_recipient_type_metadata(self, allow_participant_recipient_type_metadata):
+        """Sets the allow_participant_recipient_type_metadata of this AccountSettingsInformation.
+
+
+        :param allow_participant_recipient_type_metadata: The allow_participant_recipient_type_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_participant_recipient_type_metadata = allow_participant_recipient_type_metadata
+
+    @property
     def allow_payment_processing(self):
         """Gets the allow_payment_processing of this AccountSettingsInformation.  # noqa: E501
 
@@ -5219,6 +5638,7 @@ class AccountSettingsInformation(object):
     def allow_payment_processing_metadata(self):
         """Gets the allow_payment_processing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowPaymentProcessing` property is editable.   # noqa: E501
 
         :return: The allow_payment_processing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5229,12 +5649,57 @@ class AccountSettingsInformation(object):
     def allow_payment_processing_metadata(self, allow_payment_processing_metadata):
         """Sets the allow_payment_processing_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowPaymentProcessing` property is editable.   # noqa: E501
 
         :param allow_payment_processing_metadata: The allow_payment_processing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
         self._allow_payment_processing_metadata = allow_payment_processing_metadata
+
+    @property
+    def allow_performance_analytics(self):
+        """Gets the allow_performance_analytics of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_performance_analytics of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_performance_analytics
+
+    @allow_performance_analytics.setter
+    def allow_performance_analytics(self, allow_performance_analytics):
+        """Sets the allow_performance_analytics of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_performance_analytics: The allow_performance_analytics of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_performance_analytics = allow_performance_analytics
+
+    @property
+    def allow_performance_analytics_metadata(self):
+        """Gets the allow_performance_analytics_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_performance_analytics_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_performance_analytics_metadata
+
+    @allow_performance_analytics_metadata.setter
+    def allow_performance_analytics_metadata(self, allow_performance_analytics_metadata):
+        """Sets the allow_performance_analytics_metadata of this AccountSettingsInformation.
+
+
+        :param allow_performance_analytics_metadata: The allow_performance_analytics_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_performance_analytics_metadata = allow_performance_analytics_metadata
 
     @property
     def allow_phone_authentication(self):
@@ -5263,6 +5728,7 @@ class AccountSettingsInformation(object):
     def allow_phone_authentication_metadata(self):
         """Gets the allow_phone_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowPhoneAuthentication` property is editable.   # noqa: E501
 
         :return: The allow_phone_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5273,6 +5739,7 @@ class AccountSettingsInformation(object):
     def allow_phone_authentication_metadata(self, allow_phone_authentication_metadata):
         """Sets the allow_phone_authentication_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowPhoneAuthentication` property is editable.   # noqa: E501
 
         :param allow_phone_authentication_metadata: The allow_phone_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5307,6 +5774,7 @@ class AccountSettingsInformation(object):
     def allow_phone_auth_override_metadata(self):
         """Gets the allow_phone_auth_override_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowPhoneAuthOverride` property is editable.   # noqa: E501
 
         :return: The allow_phone_auth_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5317,6 +5785,7 @@ class AccountSettingsInformation(object):
     def allow_phone_auth_override_metadata(self, allow_phone_auth_override_metadata):
         """Sets the allow_phone_auth_override_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowPhoneAuthOverride` property is editable.   # noqa: E501
 
         :param allow_phone_auth_override_metadata: The allow_phone_auth_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5351,6 +5820,7 @@ class AccountSettingsInformation(object):
     def allow_private_signing_groups_metadata(self):
         """Gets the allow_private_signing_groups_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowPrivateSigningGroups` property is editable.   # noqa: E501
 
         :return: The allow_private_signing_groups_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5361,6 +5831,7 @@ class AccountSettingsInformation(object):
     def allow_private_signing_groups_metadata(self, allow_private_signing_groups_metadata):
         """Sets the allow_private_signing_groups_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowPrivateSigningGroups` property is editable.   # noqa: E501
 
         :param allow_private_signing_groups_metadata: The allow_private_signing_groups_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5395,6 +5866,7 @@ class AccountSettingsInformation(object):
     def allow_recipient_connect_metadata(self):
         """Gets the allow_recipient_connect_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_recipient_connect_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5405,6 +5877,7 @@ class AccountSettingsInformation(object):
     def allow_recipient_connect_metadata(self, allow_recipient_connect_metadata):
         """Sets the allow_recipient_connect_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_recipient_connect_metadata: The allow_recipient_connect_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5439,6 +5912,7 @@ class AccountSettingsInformation(object):
     def allow_reminders_metadata(self):
         """Gets the allow_reminders_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowReminders` property is editable.   # noqa: E501
 
         :return: The allow_reminders_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5449,6 +5923,7 @@ class AccountSettingsInformation(object):
     def allow_reminders_metadata(self, allow_reminders_metadata):
         """Sets the allow_reminders_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowReminders` property is editable.   # noqa: E501
 
         :param allow_reminders_metadata: The allow_reminders_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5483,6 +5958,7 @@ class AccountSettingsInformation(object):
     def allow_remote_notary_metadata(self):
         """Gets the allow_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5493,6 +5969,7 @@ class AccountSettingsInformation(object):
     def allow_remote_notary_metadata(self, allow_remote_notary_metadata):
         """Sets the allow_remote_notary_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_remote_notary_metadata: The allow_remote_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5527,6 +6004,7 @@ class AccountSettingsInformation(object):
     def allow_resource_file_branding_metadata(self):
         """Gets the allow_resource_file_branding_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowResourceFileBranding` property is editable.   # noqa: E501
 
         :return: The allow_resource_file_branding_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5537,6 +6015,7 @@ class AccountSettingsInformation(object):
     def allow_resource_file_branding_metadata(self, allow_resource_file_branding_metadata):
         """Sets the allow_resource_file_branding_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowResourceFileBranding` property is editable.   # noqa: E501
 
         :param allow_resource_file_branding_metadata: The allow_resource_file_branding_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5571,6 +6050,7 @@ class AccountSettingsInformation(object):
     def allow_safe_bio_pharma_signer_certificate_metadata(self):
         """Gets the allow_safe_bio_pharma_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSafeBioPharmaSignerCertificate` property is editable.   # noqa: E501
 
         :return: The allow_safe_bio_pharma_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5581,6 +6061,7 @@ class AccountSettingsInformation(object):
     def allow_safe_bio_pharma_signer_certificate_metadata(self, allow_safe_bio_pharma_signer_certificate_metadata):
         """Sets the allow_safe_bio_pharma_signer_certificate_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSafeBioPharmaSignerCertificate` property is editable.   # noqa: E501
 
         :param allow_safe_bio_pharma_signer_certificate_metadata: The allow_safe_bio_pharma_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5615,6 +6096,7 @@ class AccountSettingsInformation(object):
     def allow_scheduled_sending_metadata(self):
         """Gets the allow_scheduled_sending_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_scheduled_sending_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5625,6 +6107,7 @@ class AccountSettingsInformation(object):
     def allow_scheduled_sending_metadata(self, allow_scheduled_sending_metadata):
         """Sets the allow_scheduled_sending_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_scheduled_sending_metadata: The allow_scheduled_sending_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5659,6 +6142,7 @@ class AccountSettingsInformation(object):
     def allow_security_appliance_metadata(self):
         """Gets the allow_security_appliance_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSecurityAppliance` property is editable.   # noqa: E501
 
         :return: The allow_security_appliance_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5669,6 +6153,7 @@ class AccountSettingsInformation(object):
     def allow_security_appliance_metadata(self, allow_security_appliance_metadata):
         """Sets the allow_security_appliance_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSecurityAppliance` property is editable.   # noqa: E501
 
         :param allow_security_appliance_metadata: The allow_security_appliance_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5747,6 +6232,7 @@ class AccountSettingsInformation(object):
     def allow_send_to_certified_delivery_metadata(self):
         """Gets the allow_send_to_certified_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSendToCertifiedDelivery` property is editable.   # noqa: E501
 
         :return: The allow_send_to_certified_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5757,6 +6243,7 @@ class AccountSettingsInformation(object):
     def allow_send_to_certified_delivery_metadata(self, allow_send_to_certified_delivery_metadata):
         """Sets the allow_send_to_certified_delivery_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSendToCertifiedDelivery` property is editable.   # noqa: E501
 
         :param allow_send_to_certified_delivery_metadata: The allow_send_to_certified_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5791,6 +6278,7 @@ class AccountSettingsInformation(object):
     def allow_send_to_intermediary_metadata(self):
         """Gets the allow_send_to_intermediary_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSendToIntermediary` property is editable.   # noqa: E501
 
         :return: The allow_send_to_intermediary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5801,6 +6289,7 @@ class AccountSettingsInformation(object):
     def allow_send_to_intermediary_metadata(self, allow_send_to_intermediary_metadata):
         """Sets the allow_send_to_intermediary_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSendToIntermediary` property is editable.   # noqa: E501
 
         :param allow_send_to_intermediary_metadata: The allow_send_to_intermediary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5835,6 +6324,7 @@ class AccountSettingsInformation(object):
     def allow_server_templates_metadata(self):
         """Gets the allow_server_templates_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowServerTemplates` property is editable.   # noqa: E501
 
         :return: The allow_server_templates_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5845,6 +6335,7 @@ class AccountSettingsInformation(object):
     def allow_server_templates_metadata(self, allow_server_templates_metadata):
         """Sets the allow_server_templates_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowServerTemplates` property is editable.   # noqa: E501
 
         :param allow_server_templates_metadata: The allow_server_templates_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5879,6 +6370,7 @@ class AccountSettingsInformation(object):
     def allow_set_embedded_recipient_start_url_metadata(self):
         """Gets the allow_set_embedded_recipient_start_url_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_set_embedded_recipient_start_url_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5889,6 +6381,7 @@ class AccountSettingsInformation(object):
     def allow_set_embedded_recipient_start_url_metadata(self, allow_set_embedded_recipient_start_url_metadata):
         """Sets the allow_set_embedded_recipient_start_url_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_set_embedded_recipient_start_url_metadata: The allow_set_embedded_recipient_start_url_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5923,6 +6416,7 @@ class AccountSettingsInformation(object):
     def allow_shared_tabs_metadata(self):
         """Gets the allow_shared_tabs_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSharedTabs` property is editable.   # noqa: E501
 
         :return: The allow_shared_tabs_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5933,6 +6427,7 @@ class AccountSettingsInformation(object):
     def allow_shared_tabs_metadata(self, allow_shared_tabs_metadata):
         """Sets the allow_shared_tabs_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSharedTabs` property is editable.   # noqa: E501
 
         :param allow_shared_tabs_metadata: The allow_shared_tabs_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5967,6 +6462,7 @@ class AccountSettingsInformation(object):
     def allow_signature_stamps_metadata(self):
         """Gets the allow_signature_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSignatureStamps` property is editable.   # noqa: E501
 
         :return: The allow_signature_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5977,6 +6473,7 @@ class AccountSettingsInformation(object):
     def allow_signature_stamps_metadata(self, allow_signature_stamps_metadata):
         """Sets the allow_signature_stamps_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSignatureStamps` property is editable.   # noqa: E501
 
         :param allow_signature_stamps_metadata: The allow_signature_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6011,6 +6508,7 @@ class AccountSettingsInformation(object):
     def allow_sign_document_from_home_page_metadata(self):
         """Gets the allow_sign_document_from_home_page_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSignDocumentFromHomePage` property is editable.   # noqa: E501
 
         :return: The allow_sign_document_from_home_page_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6021,6 +6519,7 @@ class AccountSettingsInformation(object):
     def allow_sign_document_from_home_page_metadata(self, allow_sign_document_from_home_page_metadata):
         """Sets the allow_sign_document_from_home_page_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSignDocumentFromHomePage` property is editable.   # noqa: E501
 
         :param allow_sign_document_from_home_page_metadata: The allow_sign_document_from_home_page_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6055,6 +6554,7 @@ class AccountSettingsInformation(object):
     def allow_signer_reassign_metadata(self):
         """Gets the allow_signer_reassign_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSignerReassign` property is editable.   # noqa: E501
 
         :return: The allow_signer_reassign_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6065,6 +6565,7 @@ class AccountSettingsInformation(object):
     def allow_signer_reassign_metadata(self, allow_signer_reassign_metadata):
         """Sets the allow_signer_reassign_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSignerReassign` property is editable.   # noqa: E501
 
         :param allow_signer_reassign_metadata: The allow_signer_reassign_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6099,6 +6600,7 @@ class AccountSettingsInformation(object):
     def allow_signer_reassign_override_metadata(self):
         """Gets the allow_signer_reassign_override_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSignerReassignOverride` property is editable.   # noqa: E501
 
         :return: The allow_signer_reassign_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6109,6 +6611,7 @@ class AccountSettingsInformation(object):
     def allow_signer_reassign_override_metadata(self, allow_signer_reassign_override_metadata):
         """Sets the allow_signer_reassign_override_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSignerReassignOverride` property is editable.   # noqa: E501
 
         :param allow_signer_reassign_override_metadata: The allow_signer_reassign_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6143,6 +6646,7 @@ class AccountSettingsInformation(object):
     def allow_signing_extensions_metadata(self):
         """Gets the allow_signing_extensions_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSigningExtensions` property is editable.   # noqa: E501
 
         :return: The allow_signing_extensions_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6153,6 +6657,7 @@ class AccountSettingsInformation(object):
     def allow_signing_extensions_metadata(self, allow_signing_extensions_metadata):
         """Sets the allow_signing_extensions_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSigningExtensions` property is editable.   # noqa: E501
 
         :param allow_signing_extensions_metadata: The allow_signing_extensions_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6187,6 +6692,7 @@ class AccountSettingsInformation(object):
     def allow_signing_groups_metadata(self):
         """Gets the allow_signing_groups_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSigningGroups` property is editable.   # noqa: E501
 
         :return: The allow_signing_groups_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6197,6 +6703,7 @@ class AccountSettingsInformation(object):
     def allow_signing_groups_metadata(self, allow_signing_groups_metadata):
         """Sets the allow_signing_groups_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSigningGroups` property is editable.   # noqa: E501
 
         :param allow_signing_groups_metadata: The allow_signing_groups_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6231,6 +6738,7 @@ class AccountSettingsInformation(object):
     def allow_signing_insights_metadata(self):
         """Gets the allow_signing_insights_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_signing_insights_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6241,6 +6749,7 @@ class AccountSettingsInformation(object):
     def allow_signing_insights_metadata(self, allow_signing_insights_metadata):
         """Sets the allow_signing_insights_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_signing_insights_metadata: The allow_signing_insights_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6275,6 +6784,7 @@ class AccountSettingsInformation(object):
     def allow_signing_radio_deselect_metadata(self):
         """Gets the allow_signing_radio_deselect_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSigningRadioDeselect` property is editable.   # noqa: E501
 
         :return: The allow_signing_radio_deselect_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6285,6 +6795,7 @@ class AccountSettingsInformation(object):
     def allow_signing_radio_deselect_metadata(self, allow_signing_radio_deselect_metadata):
         """Sets the allow_signing_radio_deselect_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSigningRadioDeselect` property is editable.   # noqa: E501
 
         :param allow_signing_radio_deselect_metadata: The allow_signing_radio_deselect_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6365,6 +6876,7 @@ class AccountSettingsInformation(object):
     def allow_sms_delivery_metadata(self):
         """Gets the allow_sms_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_sms_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6375,6 +6887,7 @@ class AccountSettingsInformation(object):
     def allow_sms_delivery_metadata(self, allow_sms_delivery_metadata):
         """Sets the allow_sms_delivery_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_sms_delivery_metadata: The allow_sms_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6409,6 +6922,7 @@ class AccountSettingsInformation(object):
     def allow_social_id_login_metadata(self):
         """Gets the allow_social_id_login_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Deprecated.  # noqa: E501
 
         :return: The allow_social_id_login_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6419,6 +6933,7 @@ class AccountSettingsInformation(object):
     def allow_social_id_login_metadata(self, allow_social_id_login_metadata):
         """Sets the allow_social_id_login_metadata of this AccountSettingsInformation.
 
+        Deprecated.  # noqa: E501
 
         :param allow_social_id_login_metadata: The allow_social_id_login_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6453,6 +6968,7 @@ class AccountSettingsInformation(object):
     def allow_supplemental_documents_metadata(self):
         """Gets the allow_supplemental_documents_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSupplementalDocuments` property is editable.  # noqa: E501
 
         :return: The allow_supplemental_documents_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6463,6 +6979,7 @@ class AccountSettingsInformation(object):
     def allow_supplemental_documents_metadata(self, allow_supplemental_documents_metadata):
         """Sets the allow_supplemental_documents_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `allowSupplementalDocuments` property is editable.  # noqa: E501
 
         :param allow_supplemental_documents_metadata: The allow_supplemental_documents_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6474,7 +6991,7 @@ class AccountSettingsInformation(object):
     def allow_third_party_electronic_notary(self):
         """Gets the allow_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
 
-          # noqa: E501
+        Account level flag that determines the availability to perform Third Party Notary (3PN) actions.  # noqa: E501
 
         :return: The allow_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
@@ -6485,7 +7002,7 @@ class AccountSettingsInformation(object):
     def allow_third_party_electronic_notary(self, allow_third_party_electronic_notary):
         """Sets the allow_third_party_electronic_notary of this AccountSettingsInformation.
 
-          # noqa: E501
+        Account level flag that determines the availability to perform Third Party Notary (3PN) actions.  # noqa: E501
 
         :param allow_third_party_electronic_notary: The allow_third_party_electronic_notary of this AccountSettingsInformation.  # noqa: E501
         :type: str
@@ -6541,6 +7058,7 @@ class AccountSettingsInformation(object):
     def allow_users_to_access_directory_metadata(self):
         """Gets the allow_users_to_access_directory_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_users_to_access_directory_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6551,6 +7069,7 @@ class AccountSettingsInformation(object):
     def allow_users_to_access_directory_metadata(self, allow_users_to_access_directory_metadata):
         """Sets the allow_users_to_access_directory_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_users_to_access_directory_metadata: The allow_users_to_access_directory_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6585,6 +7104,7 @@ class AccountSettingsInformation(object):
     def allow_value_insights_metadata(self):
         """Gets the allow_value_insights_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_value_insights_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6595,6 +7115,7 @@ class AccountSettingsInformation(object):
     def allow_value_insights_metadata(self, allow_value_insights_metadata):
         """Sets the allow_value_insights_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_value_insights_metadata: The allow_value_insights_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6673,6 +7194,7 @@ class AccountSettingsInformation(object):
     def anchor_population_scope_metadata(self):
         """Gets the anchor_population_scope_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `anchorPopulationScope` property is editable.   # noqa: E501
 
         :return: The anchor_population_scope_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6683,6 +7205,7 @@ class AccountSettingsInformation(object):
     def anchor_population_scope_metadata(self, anchor_population_scope_metadata):
         """Sets the anchor_population_scope_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `anchorPopulationScope` property is editable.   # noqa: E501
 
         :param anchor_population_scope_metadata: The anchor_population_scope_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6717,6 +7240,7 @@ class AccountSettingsInformation(object):
     def anchor_tag_versioned_placement_metadata_enabled(self):
         """Gets the anchor_tag_versioned_placement_metadata_enabled of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The anchor_tag_versioned_placement_metadata_enabled of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6727,6 +7251,7 @@ class AccountSettingsInformation(object):
     def anchor_tag_versioned_placement_metadata_enabled(self, anchor_tag_versioned_placement_metadata_enabled):
         """Sets the anchor_tag_versioned_placement_metadata_enabled of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param anchor_tag_versioned_placement_metadata_enabled: The anchor_tag_versioned_placement_metadata_enabled of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6761,6 +7286,7 @@ class AccountSettingsInformation(object):
     def attach_completed_envelope_metadata(self):
         """Gets the attach_completed_envelope_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `attachCompletedEnvelope` property is editable.  # noqa: E501
 
         :return: The attach_completed_envelope_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6771,6 +7297,7 @@ class AccountSettingsInformation(object):
     def attach_completed_envelope_metadata(self, attach_completed_envelope_metadata):
         """Sets the attach_completed_envelope_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `attachCompletedEnvelope` property is editable.  # noqa: E501
 
         :param attach_completed_envelope_metadata: The attach_completed_envelope_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6805,6 +7332,7 @@ class AccountSettingsInformation(object):
     def authentication_check_metadata(self):
         """Gets the authentication_check_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `authenticationCheck` property is editable.   # noqa: E501
 
         :return: The authentication_check_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6815,6 +7343,7 @@ class AccountSettingsInformation(object):
     def authentication_check_metadata(self, authentication_check_metadata):
         """Sets the authentication_check_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `authenticationCheck` property is editable.   # noqa: E501
 
         :param authentication_check_metadata: The authentication_check_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6849,6 +7378,7 @@ class AccountSettingsInformation(object):
     def auto_nav_rule_metadata(self):
         """Gets the auto_nav_rule_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `autoNavRule` property is editable.   # noqa: E501
 
         :return: The auto_nav_rule_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6859,6 +7389,7 @@ class AccountSettingsInformation(object):
     def auto_nav_rule_metadata(self, auto_nav_rule_metadata):
         """Sets the auto_nav_rule_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `autoNavRule` property is editable.   # noqa: E501
 
         :param auto_nav_rule_metadata: The auto_nav_rule_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6893,6 +7424,7 @@ class AccountSettingsInformation(object):
     def auto_provision_signer_account_metadata(self):
         """Gets the auto_provision_signer_account_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `autoProvisionSignerAccount` property is editable.   # noqa: E501
 
         :return: The auto_provision_signer_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6903,6 +7435,7 @@ class AccountSettingsInformation(object):
     def auto_provision_signer_account_metadata(self, auto_provision_signer_account_metadata):
         """Sets the auto_provision_signer_account_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `autoProvisionSignerAccount` property is editable.   # noqa: E501
 
         :param auto_provision_signer_account_metadata: The auto_provision_signer_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6937,6 +7470,7 @@ class AccountSettingsInformation(object):
     def bcc_email_archive_metadata(self):
         """Gets the bcc_email_archive_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `bccEmailArchive` property is editable.   # noqa: E501
 
         :return: The bcc_email_archive_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6947,6 +7481,7 @@ class AccountSettingsInformation(object):
     def bcc_email_archive_metadata(self, bcc_email_archive_metadata):
         """Sets the bcc_email_archive_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `bccEmailArchive` property is editable.   # noqa: E501
 
         :param bcc_email_archive_metadata: The bcc_email_archive_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6981,6 +7516,7 @@ class AccountSettingsInformation(object):
     def beta_switch_configuration_metadata(self):
         """Gets the beta_switch_configuration_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The beta_switch_configuration_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6991,6 +7527,7 @@ class AccountSettingsInformation(object):
     def beta_switch_configuration_metadata(self, beta_switch_configuration_metadata):
         """Sets the beta_switch_configuration_metadata of this AccountSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param beta_switch_configuration_metadata: The beta_switch_configuration_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7002,6 +7539,7 @@ class AccountSettingsInformation(object):
     def billing_address(self):
         """Gets the billing_address of this AccountSettingsInformation.  # noqa: E501
 
+        The billing address for the account.  # noqa: E501
 
         :return: The billing_address of this AccountSettingsInformation.  # noqa: E501
         :rtype: AddressInformation
@@ -7012,6 +7550,7 @@ class AccountSettingsInformation(object):
     def billing_address(self, billing_address):
         """Sets the billing_address of this AccountSettingsInformation.
 
+        The billing address for the account.  # noqa: E501
 
         :param billing_address: The billing_address of this AccountSettingsInformation.  # noqa: E501
         :type: AddressInformation
@@ -7023,6 +7562,7 @@ class AccountSettingsInformation(object):
     def billing_address_metadata(self):
         """Gets the billing_address_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `billingAddress` property is editable.   # noqa: E501
 
         :return: The billing_address_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7033,6 +7573,7 @@ class AccountSettingsInformation(object):
     def billing_address_metadata(self, billing_address_metadata):
         """Sets the billing_address_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `billingAddress` property is editable.   # noqa: E501
 
         :param billing_address_metadata: The billing_address_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7136,6 +7677,7 @@ class AccountSettingsInformation(object):
     def bulk_send_metadata(self):
         """Gets the bulk_send_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `bulkSend` property is editable.   # noqa: E501
 
         :return: The bulk_send_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7146,6 +7688,7 @@ class AccountSettingsInformation(object):
     def bulk_send_metadata(self, bulk_send_metadata):
         """Sets the bulk_send_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `bulkSend` property is editable.   # noqa: E501
 
         :param bulk_send_metadata: The bulk_send_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7180,6 +7723,7 @@ class AccountSettingsInformation(object):
     def can_self_brand_send_metadata(self):
         """Gets the can_self_brand_send_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `canSelfBrandSend` property is editable.   # noqa: E501
 
         :return: The can_self_brand_send_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7190,6 +7734,7 @@ class AccountSettingsInformation(object):
     def can_self_brand_send_metadata(self, can_self_brand_send_metadata):
         """Sets the can_self_brand_send_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `canSelfBrandSend` property is editable.   # noqa: E501
 
         :param can_self_brand_send_metadata: The can_self_brand_send_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7224,6 +7769,7 @@ class AccountSettingsInformation(object):
     def can_self_brand_sign_metadata(self):
         """Gets the can_self_brand_sign_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `canSelfBrandSign` property is editable.   # noqa: E501
 
         :return: The can_self_brand_sign_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7234,6 +7780,7 @@ class AccountSettingsInformation(object):
     def can_self_brand_sign_metadata(self, can_self_brand_sign_metadata):
         """Sets the can_self_brand_sign_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `canSelfBrandSign` property is editable.   # noqa: E501
 
         :param can_self_brand_sign_metadata: The can_self_brand_sign_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7268,6 +7815,7 @@ class AccountSettingsInformation(object):
     def can_use_salesforce_o_auth_metadata(self):
         """Gets the can_use_salesforce_o_auth_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_use_salesforce_o_auth_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7278,6 +7826,7 @@ class AccountSettingsInformation(object):
     def can_use_salesforce_o_auth_metadata(self, can_use_salesforce_o_auth_metadata):
         """Sets the can_use_salesforce_o_auth_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param can_use_salesforce_o_auth_metadata: The can_use_salesforce_o_auth_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7312,6 +7861,7 @@ class AccountSettingsInformation(object):
     def capture_voice_recording_metadata(self):
         """Gets the capture_voice_recording_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The capture_voice_recording_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7322,6 +7872,7 @@ class AccountSettingsInformation(object):
     def capture_voice_recording_metadata(self, capture_voice_recording_metadata):
         """Sets the capture_voice_recording_metadata of this AccountSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param capture_voice_recording_metadata: The capture_voice_recording_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7356,6 +7907,7 @@ class AccountSettingsInformation(object):
     def cfr21_simplified_signing_enabled_metadata(self):
         """Gets the cfr21_simplified_signing_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The cfr21_simplified_signing_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7366,6 +7918,7 @@ class AccountSettingsInformation(object):
     def cfr21_simplified_signing_enabled_metadata(self, cfr21_simplified_signing_enabled_metadata):
         """Sets the cfr21_simplified_signing_enabled_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param cfr21_simplified_signing_enabled_metadata: The cfr21_simplified_signing_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7400,6 +7953,7 @@ class AccountSettingsInformation(object):
     def cfr_use_wide_image_metadata(self):
         """Gets the cfr_use_wide_image_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `cfrUseWideImage` property is editable.   # noqa: E501
 
         :return: The cfr_use_wide_image_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7410,6 +7964,7 @@ class AccountSettingsInformation(object):
     def cfr_use_wide_image_metadata(self, cfr_use_wide_image_metadata):
         """Sets the cfr_use_wide_image_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `cfrUseWideImage` property is editable.   # noqa: E501
 
         :param cfr_use_wide_image_metadata: The cfr_use_wide_image_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7444,6 +7999,7 @@ class AccountSettingsInformation(object):
     def check_for_multiple_admins_on_account_metadata(self):
         """Gets the check_for_multiple_admins_on_account_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `checkForMultipleAdminsOnAccount` property is editable.  # noqa: E501
 
         :return: The check_for_multiple_admins_on_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7454,6 +8010,7 @@ class AccountSettingsInformation(object):
     def check_for_multiple_admins_on_account_metadata(self, check_for_multiple_admins_on_account_metadata):
         """Sets the check_for_multiple_admins_on_account_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `checkForMultipleAdminsOnAccount` property is editable.  # noqa: E501
 
         :param check_for_multiple_admins_on_account_metadata: The check_for_multiple_admins_on_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7488,6 +8045,7 @@ class AccountSettingsInformation(object):
     def chrome_signature_enabled_metadata(self):
         """Gets the chrome_signature_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `chromeSignatureEnabled` property is editable.   # noqa: E501
 
         :return: The chrome_signature_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7498,6 +8056,7 @@ class AccountSettingsInformation(object):
     def chrome_signature_enabled_metadata(self, chrome_signature_enabled_metadata):
         """Sets the chrome_signature_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `chromeSignatureEnabled` property is editable.   # noqa: E501
 
         :param chrome_signature_enabled_metadata: The chrome_signature_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7532,6 +8091,7 @@ class AccountSettingsInformation(object):
     def comment_email_show_message_text_metadata(self):
         """Gets the comment_email_show_message_text_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `commentEmailShowMessageText` property is editable.   # noqa: E501
 
         :return: The comment_email_show_message_text_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7542,6 +8102,7 @@ class AccountSettingsInformation(object):
     def comment_email_show_message_text_metadata(self, comment_email_show_message_text_metadata):
         """Sets the comment_email_show_message_text_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `commentEmailShowMessageText` property is editable.   # noqa: E501
 
         :param comment_email_show_message_text_metadata: The comment_email_show_message_text_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7576,6 +8137,7 @@ class AccountSettingsInformation(object):
     def comments_allow_envelope_override_metadata(self):
         """Gets the comments_allow_envelope_override_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `commentsAllowEnvelopeOverride` property is editable.   # noqa: E501
 
         :return: The comments_allow_envelope_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7586,6 +8148,7 @@ class AccountSettingsInformation(object):
     def comments_allow_envelope_override_metadata(self, comments_allow_envelope_override_metadata):
         """Sets the comments_allow_envelope_override_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `commentsAllowEnvelopeOverride` property is editable.   # noqa: E501
 
         :param comments_allow_envelope_override_metadata: The comments_allow_envelope_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7620,6 +8183,7 @@ class AccountSettingsInformation(object):
     def conditional_fields_enabled_metadata(self):
         """Gets the conditional_fields_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `conditionalFieldsEnabled` property is editable.   # noqa: E501
 
         :return: The conditional_fields_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7630,6 +8194,7 @@ class AccountSettingsInformation(object):
     def conditional_fields_enabled_metadata(self, conditional_fields_enabled_metadata):
         """Sets the conditional_fields_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `conditionalFieldsEnabled` property is editable.   # noqa: E501
 
         :param conditional_fields_enabled_metadata: The conditional_fields_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7664,6 +8229,7 @@ class AccountSettingsInformation(object):
     def consumer_disclosure_frequency_metadata(self):
         """Gets the consumer_disclosure_frequency_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `consumerDisclosureFrequency` property is editable.   # noqa: E501
 
         :return: The consumer_disclosure_frequency_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7674,6 +8240,7 @@ class AccountSettingsInformation(object):
     def consumer_disclosure_frequency_metadata(self, consumer_disclosure_frequency_metadata):
         """Sets the consumer_disclosure_frequency_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `consumerDisclosureFrequency` property is editable.   # noqa: E501
 
         :param consumer_disclosure_frequency_metadata: The consumer_disclosure_frequency_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7708,6 +8275,7 @@ class AccountSettingsInformation(object):
     def convert_pdf_fields_metadata(self):
         """Gets the convert_pdf_fields_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `convertPdfFields` property is editable.   # noqa: E501
 
         :return: The convert_pdf_fields_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7718,6 +8286,7 @@ class AccountSettingsInformation(object):
     def convert_pdf_fields_metadata(self, convert_pdf_fields_metadata):
         """Sets the convert_pdf_fields_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `convertPdfFields` property is editable.   # noqa: E501
 
         :param convert_pdf_fields_metadata: The convert_pdf_fields_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7752,6 +8321,7 @@ class AccountSettingsInformation(object):
     def data_population_scope_metadata(self):
         """Gets the data_population_scope_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `dataPopulationScope` property is editable.   # noqa: E501
 
         :return: The data_population_scope_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7762,6 +8332,7 @@ class AccountSettingsInformation(object):
     def data_population_scope_metadata(self, data_population_scope_metadata):
         """Sets the data_population_scope_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `dataPopulationScope` property is editable.   # noqa: E501
 
         :param data_population_scope_metadata: The data_population_scope_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7796,6 +8367,7 @@ class AccountSettingsInformation(object):
     def disable_auto_template_matching_metadata(self):
         """Gets the disable_auto_template_matching_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The disable_auto_template_matching_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7806,6 +8378,7 @@ class AccountSettingsInformation(object):
     def disable_auto_template_matching_metadata(self, disable_auto_template_matching_metadata):
         """Sets the disable_auto_template_matching_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param disable_auto_template_matching_metadata: The disable_auto_template_matching_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7840,6 +8413,7 @@ class AccountSettingsInformation(object):
     def disable_mobile_app_metadata(self):
         """Gets the disable_mobile_app_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableMobileApp` property is editable.   # noqa: E501
 
         :return: The disable_mobile_app_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7850,6 +8424,7 @@ class AccountSettingsInformation(object):
     def disable_mobile_app_metadata(self, disable_mobile_app_metadata):
         """Sets the disable_mobile_app_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `disableMobileApp` property is editable.   # noqa: E501
 
         :param disable_mobile_app_metadata: The disable_mobile_app_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7884,6 +8459,7 @@ class AccountSettingsInformation(object):
     def disable_mobile_push_notifications_metadata(self):
         """Gets the disable_mobile_push_notifications_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableMobilePushNotifications` property is editable.   # noqa: E501
 
         :return: The disable_mobile_push_notifications_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7894,6 +8470,7 @@ class AccountSettingsInformation(object):
     def disable_mobile_push_notifications_metadata(self, disable_mobile_push_notifications_metadata):
         """Sets the disable_mobile_push_notifications_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `disableMobilePushNotifications` property is editable.   # noqa: E501
 
         :param disable_mobile_push_notifications_metadata: The disable_mobile_push_notifications_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7928,6 +8505,7 @@ class AccountSettingsInformation(object):
     def disable_mobile_sending_metadata(self):
         """Gets the disable_mobile_sending_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableMobileSending` property is editable.   # noqa: E501
 
         :return: The disable_mobile_sending_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7938,6 +8516,7 @@ class AccountSettingsInformation(object):
     def disable_mobile_sending_metadata(self, disable_mobile_sending_metadata):
         """Sets the disable_mobile_sending_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `disableMobileSending` property is editable.   # noqa: E501
 
         :param disable_mobile_sending_metadata: The disable_mobile_sending_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7972,6 +8551,7 @@ class AccountSettingsInformation(object):
     def disable_multiple_sessions_metadata(self):
         """Gets the disable_multiple_sessions_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableMultipleSessions` property is editable.   # noqa: E501
 
         :return: The disable_multiple_sessions_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7982,6 +8562,7 @@ class AccountSettingsInformation(object):
     def disable_multiple_sessions_metadata(self, disable_multiple_sessions_metadata):
         """Sets the disable_multiple_sessions_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `disableMultipleSessions` property is editable.   # noqa: E501
 
         :param disable_multiple_sessions_metadata: The disable_multiple_sessions_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7993,6 +8574,7 @@ class AccountSettingsInformation(object):
     def disable_purge_notifications_for_sender_metadata(self):
         """Gets the disable_purge_notifications_for_sender_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The disable_purge_notifications_for_sender_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8003,6 +8585,7 @@ class AccountSettingsInformation(object):
     def disable_purge_notifications_for_sender_metadata(self, disable_purge_notifications_for_sender_metadata):
         """Sets the disable_purge_notifications_for_sender_metadata of this AccountSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param disable_purge_notifications_for_sender_metadata: The disable_purge_notifications_for_sender_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8037,6 +8620,7 @@ class AccountSettingsInformation(object):
     def disable_signer_cert_view_metadata(self):
         """Gets the disable_signer_cert_view_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableSignerCertView` property is editable.   # noqa: E501
 
         :return: The disable_signer_cert_view_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8047,6 +8631,7 @@ class AccountSettingsInformation(object):
     def disable_signer_cert_view_metadata(self, disable_signer_cert_view_metadata):
         """Sets the disable_signer_cert_view_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `disableSignerCertView` property is editable.   # noqa: E501
 
         :param disable_signer_cert_view_metadata: The disable_signer_cert_view_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8081,6 +8666,7 @@ class AccountSettingsInformation(object):
     def disable_signer_history_view_metadata(self):
         """Gets the disable_signer_history_view_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableSignerHistoryView` property is editable.   # noqa: E501
 
         :return: The disable_signer_history_view_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8091,6 +8677,7 @@ class AccountSettingsInformation(object):
     def disable_signer_history_view_metadata(self, disable_signer_history_view_metadata):
         """Sets the disable_signer_history_view_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `disableSignerHistoryView` property is editable.   # noqa: E501
 
         :param disable_signer_history_view_metadata: The disable_signer_history_view_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8125,6 +8712,7 @@ class AccountSettingsInformation(object):
     def disable_style_signature_metadata(self):
         """Gets the disable_style_signature_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableStyleSignature` property is editable.   # noqa: E501
 
         :return: The disable_style_signature_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8135,6 +8723,7 @@ class AccountSettingsInformation(object):
     def disable_style_signature_metadata(self, disable_style_signature_metadata):
         """Sets the disable_style_signature_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `disableStyleSignature` property is editable.   # noqa: E501
 
         :param disable_style_signature_metadata: The disable_style_signature_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8169,6 +8758,7 @@ class AccountSettingsInformation(object):
     def disable_upload_signature_metadata(self):
         """Gets the disable_upload_signature_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableUploadSignature` property is editable.   # noqa: E501
 
         :return: The disable_upload_signature_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8179,6 +8769,7 @@ class AccountSettingsInformation(object):
     def disable_upload_signature_metadata(self, disable_upload_signature_metadata):
         """Sets the disable_upload_signature_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `disableUploadSignature` property is editable.   # noqa: E501
 
         :param disable_upload_signature_metadata: The disable_upload_signature_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8213,6 +8804,7 @@ class AccountSettingsInformation(object):
     def disable_user_sharing_metadata(self):
         """Gets the disable_user_sharing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableUserSharing` property is editable.   # noqa: E501
 
         :return: The disable_user_sharing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8223,6 +8815,7 @@ class AccountSettingsInformation(object):
     def disable_user_sharing_metadata(self, disable_user_sharing_metadata):
         """Sets the disable_user_sharing_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `disableUserSharing` property is editable.   # noqa: E501
 
         :param disable_user_sharing_metadata: The disable_user_sharing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8257,6 +8850,7 @@ class AccountSettingsInformation(object):
     def display_beta_switch_metadata(self):
         """Gets the display_beta_switch_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `displayBetaSwitch` property is editable.   # noqa: E501
 
         :return: The display_beta_switch_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8267,6 +8861,7 @@ class AccountSettingsInformation(object):
     def display_beta_switch_metadata(self, display_beta_switch_metadata):
         """Sets the display_beta_switch_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `displayBetaSwitch` property is editable.   # noqa: E501
 
         :param display_beta_switch_metadata: The display_beta_switch_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8301,6 +8896,7 @@ class AccountSettingsInformation(object):
     def document_conversion_restrictions_metadata(self):
         """Gets the document_conversion_restrictions_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `documentConversionRestrictions` property is editable.   # noqa: E501
 
         :return: The document_conversion_restrictions_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8311,6 +8907,7 @@ class AccountSettingsInformation(object):
     def document_conversion_restrictions_metadata(self, document_conversion_restrictions_metadata):
         """Sets the document_conversion_restrictions_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `documentConversionRestrictions` property is editable.   # noqa: E501
 
         :param document_conversion_restrictions_metadata: The document_conversion_restrictions_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8345,6 +8942,7 @@ class AccountSettingsInformation(object):
     def document_retention_metadata(self):
         """Gets the document_retention_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `documentRetention` property is editable.   # noqa: E501
 
         :return: The document_retention_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8355,6 +8953,7 @@ class AccountSettingsInformation(object):
     def document_retention_metadata(self, document_retention_metadata):
         """Sets the document_retention_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `documentRetention` property is editable.   # noqa: E501
 
         :param document_retention_metadata: The document_retention_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8412,6 +9011,7 @@ class AccountSettingsInformation(object):
     def document_visibility_metadata(self):
         """Gets the document_visibility_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `documentVisibility` property is editable.   # noqa: E501
 
         :return: The document_visibility_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8422,6 +9022,7 @@ class AccountSettingsInformation(object):
     def document_visibility_metadata(self, document_visibility_metadata):
         """Sets the document_visibility_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `documentVisibility` property is editable.   # noqa: E501
 
         :param document_visibility_metadata: The document_visibility_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8502,6 +9103,7 @@ class AccountSettingsInformation(object):
     def email_template_version_metadata(self):
         """Gets the email_template_version_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `emailTemplateVersion` property is editable.   # noqa: E501
 
         :return: The email_template_version_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8512,6 +9114,7 @@ class AccountSettingsInformation(object):
     def email_template_version_metadata(self, email_template_version_metadata):
         """Sets the email_template_version_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `emailTemplateVersion` property is editable.   # noqa: E501
 
         :param email_template_version_metadata: The email_template_version_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8546,6 +9149,7 @@ class AccountSettingsInformation(object):
     def enable_access_code_generator_metadata(self):
         """Gets the enable_access_code_generator_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableAccessCodeGenerator` property is editable.   # noqa: E501
 
         :return: The enable_access_code_generator_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8556,6 +9160,7 @@ class AccountSettingsInformation(object):
     def enable_access_code_generator_metadata(self, enable_access_code_generator_metadata):
         """Sets the enable_access_code_generator_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableAccessCodeGenerator` property is editable.   # noqa: E501
 
         :param enable_access_code_generator_metadata: The enable_access_code_generator_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8590,6 +9195,7 @@ class AccountSettingsInformation(object):
     def enable_advanced_payments_metadata(self):
         """Gets the enable_advanced_payments_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableAdvancedPayments` property is editable.   # noqa: E501
 
         :return: The enable_advanced_payments_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8600,6 +9206,7 @@ class AccountSettingsInformation(object):
     def enable_advanced_payments_metadata(self, enable_advanced_payments_metadata):
         """Sets the enable_advanced_payments_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableAdvancedPayments` property is editable.   # noqa: E501
 
         :param enable_advanced_payments_metadata: The enable_advanced_payments_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8634,6 +9241,7 @@ class AccountSettingsInformation(object):
     def enable_advanced_power_forms_metadata(self):
         """Gets the enable_advanced_power_forms_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableAdvancedPowerForms` property is editable.   # noqa: E501
 
         :return: The enable_advanced_power_forms_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8644,6 +9252,7 @@ class AccountSettingsInformation(object):
     def enable_advanced_power_forms_metadata(self, enable_advanced_power_forms_metadata):
         """Sets the enable_advanced_power_forms_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableAdvancedPowerForms` property is editable.   # noqa: E501
 
         :param enable_advanced_power_forms_metadata: The enable_advanced_power_forms_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8678,6 +9287,7 @@ class AccountSettingsInformation(object):
     def enable_agreement_actions_for_clm_metadata(self):
         """Gets the enable_agreement_actions_for_clm_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_agreement_actions_for_clm_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8688,6 +9298,7 @@ class AccountSettingsInformation(object):
     def enable_agreement_actions_for_clm_metadata(self, enable_agreement_actions_for_clm_metadata):
         """Sets the enable_agreement_actions_for_clm_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_agreement_actions_for_clm_metadata: The enable_agreement_actions_for_clm_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8722,6 +9333,7 @@ class AccountSettingsInformation(object):
     def enable_agreement_actions_for_e_sign_metadata(self):
         """Gets the enable_agreement_actions_for_e_sign_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_agreement_actions_for_e_sign_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8732,6 +9344,7 @@ class AccountSettingsInformation(object):
     def enable_agreement_actions_for_e_sign_metadata(self, enable_agreement_actions_for_e_sign_metadata):
         """Sets the enable_agreement_actions_for_e_sign_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_agreement_actions_for_e_sign_metadata: The enable_agreement_actions_for_e_sign_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8766,6 +9379,7 @@ class AccountSettingsInformation(object):
     def enable_auto_nav_metadata(self):
         """Gets the enable_auto_nav_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableAutoNav` property is editable.   # noqa: E501
 
         :return: The enable_auto_nav_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8776,6 +9390,7 @@ class AccountSettingsInformation(object):
     def enable_auto_nav_metadata(self, enable_auto_nav_metadata):
         """Sets the enable_auto_nav_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableAutoNav` property is editable.   # noqa: E501
 
         :param enable_auto_nav_metadata: The enable_auto_nav_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8810,6 +9425,7 @@ class AccountSettingsInformation(object):
     def enable_bcc_dummy_link_metadata(self):
         """Gets the enable_bcc_dummy_link_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_bcc_dummy_link_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8820,6 +9436,7 @@ class AccountSettingsInformation(object):
     def enable_bcc_dummy_link_metadata(self, enable_bcc_dummy_link_metadata):
         """Sets the enable_bcc_dummy_link_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_bcc_dummy_link_metadata: The enable_bcc_dummy_link_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8854,6 +9471,7 @@ class AccountSettingsInformation(object):
     def enable_calculated_fields_metadata(self):
         """Gets the enable_calculated_fields_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableCalculatedFields` property is editable.   # noqa: E501
 
         :return: The enable_calculated_fields_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8864,6 +9482,7 @@ class AccountSettingsInformation(object):
     def enable_calculated_fields_metadata(self, enable_calculated_fields_metadata):
         """Sets the enable_calculated_fields_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableCalculatedFields` property is editable.   # noqa: E501
 
         :param enable_calculated_fields_metadata: The enable_calculated_fields_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8898,6 +9517,7 @@ class AccountSettingsInformation(object):
     def enable_clickwraps_metadata(self):
         """Gets the enable_clickwraps_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableClickwraps` property is editable.   # noqa: E501
 
         :return: The enable_clickwraps_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8908,6 +9528,7 @@ class AccountSettingsInformation(object):
     def enable_clickwraps_metadata(self, enable_clickwraps_metadata):
         """Sets the enable_clickwraps_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableClickwraps` property is editable.   # noqa: E501
 
         :param enable_clickwraps_metadata: The enable_clickwraps_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8965,6 +9586,7 @@ class AccountSettingsInformation(object):
     def enable_comments_history_download_in_signing_metadata(self):
         """Gets the enable_comments_history_download_in_signing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_comments_history_download_in_signing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -8975,12 +9597,57 @@ class AccountSettingsInformation(object):
     def enable_comments_history_download_in_signing_metadata(self, enable_comments_history_download_in_signing_metadata):
         """Sets the enable_comments_history_download_in_signing_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_comments_history_download_in_signing_metadata: The enable_comments_history_download_in_signing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
         self._enable_comments_history_download_in_signing_metadata = enable_comments_history_download_in_signing_metadata
+
+    @property
+    def enable_contact_suggestions(self):
+        """Gets the enable_contact_suggestions of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_contact_suggestions of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_contact_suggestions
+
+    @enable_contact_suggestions.setter
+    def enable_contact_suggestions(self, enable_contact_suggestions):
+        """Sets the enable_contact_suggestions of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_contact_suggestions: The enable_contact_suggestions of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_contact_suggestions = enable_contact_suggestions
+
+    @property
+    def enable_contact_suggestions_metadata(self):
+        """Gets the enable_contact_suggestions_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_contact_suggestions_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_contact_suggestions_metadata
+
+    @enable_contact_suggestions_metadata.setter
+    def enable_contact_suggestions_metadata(self, enable_contact_suggestions_metadata):
+        """Sets the enable_contact_suggestions_metadata of this AccountSettingsInformation.
+
+
+        :param enable_contact_suggestions_metadata: The enable_contact_suggestions_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_contact_suggestions_metadata = enable_contact_suggestions_metadata
 
     @property
     def enable_customer_satisfaction_metric_tracking(self):
@@ -9009,6 +9676,7 @@ class AccountSettingsInformation(object):
     def enable_customer_satisfaction_metric_tracking_metadata(self):
         """Gets the enable_customer_satisfaction_metric_tracking_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableCustomerSatisfactionMetricTracking` property is editable.   # noqa: E501
 
         :return: The enable_customer_satisfaction_metric_tracking_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9019,6 +9687,7 @@ class AccountSettingsInformation(object):
     def enable_customer_satisfaction_metric_tracking_metadata(self, enable_customer_satisfaction_metric_tracking_metadata):
         """Sets the enable_customer_satisfaction_metric_tracking_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableCustomerSatisfactionMetricTracking` property is editable.   # noqa: E501
 
         :param enable_customer_satisfaction_metric_tracking_metadata: The enable_customer_satisfaction_metric_tracking_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9053,6 +9722,7 @@ class AccountSettingsInformation(object):
     def enable_ds_pro_metadata(self):
         """Gets the enable_ds_pro_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableDSPro` property is editable.   # noqa: E501
 
         :return: The enable_ds_pro_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9063,6 +9733,7 @@ class AccountSettingsInformation(object):
     def enable_ds_pro_metadata(self, enable_ds_pro_metadata):
         """Sets the enable_ds_pro_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableDSPro` property is editable.   # noqa: E501
 
         :param enable_ds_pro_metadata: The enable_ds_pro_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9097,6 +9768,7 @@ class AccountSettingsInformation(object):
     def enable_envelope_stamping_by_account_admin_metadata(self):
         """Gets the enable_envelope_stamping_by_account_admin_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableEnvelopeStampingByAccountAdmin` property is editable.   # noqa: E501
 
         :return: The enable_envelope_stamping_by_account_admin_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9107,6 +9779,7 @@ class AccountSettingsInformation(object):
     def enable_envelope_stamping_by_account_admin_metadata(self, enable_envelope_stamping_by_account_admin_metadata):
         """Sets the enable_envelope_stamping_by_account_admin_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableEnvelopeStampingByAccountAdmin` property is editable.   # noqa: E501
 
         :param enable_envelope_stamping_by_account_admin_metadata: The enable_envelope_stamping_by_account_admin_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9141,6 +9814,7 @@ class AccountSettingsInformation(object):
     def enable_envelope_stamping_by_ds_admin_metadata(self):
         """Gets the enable_envelope_stamping_by_ds_admin_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableEnvelopeStampingByDSAdmin` property is editable.   # noqa: E501
 
         :return: The enable_envelope_stamping_by_ds_admin_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9151,12 +9825,57 @@ class AccountSettingsInformation(object):
     def enable_envelope_stamping_by_ds_admin_metadata(self, enable_envelope_stamping_by_ds_admin_metadata):
         """Sets the enable_envelope_stamping_by_ds_admin_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableEnvelopeStampingByDSAdmin` property is editable.   # noqa: E501
 
         :param enable_envelope_stamping_by_ds_admin_metadata: The enable_envelope_stamping_by_ds_admin_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
         self._enable_envelope_stamping_by_ds_admin_metadata = enable_envelope_stamping_by_ds_admin_metadata
+
+    @property
+    def enable_e_sign_api_hourly_limit_management(self):
+        """Gets the enable_e_sign_api_hourly_limit_management of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_e_sign_api_hourly_limit_management of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_e_sign_api_hourly_limit_management
+
+    @enable_e_sign_api_hourly_limit_management.setter
+    def enable_e_sign_api_hourly_limit_management(self, enable_e_sign_api_hourly_limit_management):
+        """Sets the enable_e_sign_api_hourly_limit_management of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_e_sign_api_hourly_limit_management: The enable_e_sign_api_hourly_limit_management of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_e_sign_api_hourly_limit_management = enable_e_sign_api_hourly_limit_management
+
+    @property
+    def enable_e_sign_api_hourly_limit_management_metadata(self):
+        """Gets the enable_e_sign_api_hourly_limit_management_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_e_sign_api_hourly_limit_management_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_e_sign_api_hourly_limit_management_metadata
+
+    @enable_e_sign_api_hourly_limit_management_metadata.setter
+    def enable_e_sign_api_hourly_limit_management_metadata(self, enable_e_sign_api_hourly_limit_management_metadata):
+        """Sets the enable_e_sign_api_hourly_limit_management_metadata of this AccountSettingsInformation.
+
+
+        :param enable_e_sign_api_hourly_limit_management_metadata: The enable_e_sign_api_hourly_limit_management_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_e_sign_api_hourly_limit_management_metadata = enable_e_sign_api_hourly_limit_management_metadata
 
     @property
     def enable_esign_communities(self):
@@ -9185,6 +9904,7 @@ class AccountSettingsInformation(object):
     def enable_esign_communities_metadata(self):
         """Gets the enable_esign_communities_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_esign_communities_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9195,6 +9915,7 @@ class AccountSettingsInformation(object):
     def enable_esign_communities_metadata(self, enable_esign_communities_metadata):
         """Sets the enable_esign_communities_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_esign_communities_metadata: The enable_esign_communities_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9273,6 +9994,7 @@ class AccountSettingsInformation(object):
     def enable_id_fx_intuit_kba_metadata(self):
         """Gets the enable_id_fx_intuit_kba_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_id_fx_intuit_kba_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9283,6 +10005,7 @@ class AccountSettingsInformation(object):
     def enable_id_fx_intuit_kba_metadata(self, enable_id_fx_intuit_kba_metadata):
         """Sets the enable_id_fx_intuit_kba_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_id_fx_intuit_kba_metadata: The enable_id_fx_intuit_kba_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9317,6 +10040,7 @@ class AccountSettingsInformation(object):
     def enable_id_fx_phone_authentication_metadata(self):
         """Gets the enable_id_fx_phone_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_id_fx_phone_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9327,6 +10051,7 @@ class AccountSettingsInformation(object):
     def enable_id_fx_phone_authentication_metadata(self, enable_id_fx_phone_authentication_metadata):
         """Sets the enable_id_fx_phone_authentication_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_id_fx_phone_authentication_metadata: The enable_id_fx_phone_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9361,6 +10086,7 @@ class AccountSettingsInformation(object):
     def enable_in_browser_editor_metadata(self):
         """Gets the enable_in_browser_editor_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_in_browser_editor_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9371,6 +10097,7 @@ class AccountSettingsInformation(object):
     def enable_in_browser_editor_metadata(self, enable_in_browser_editor_metadata):
         """Sets the enable_in_browser_editor_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_in_browser_editor_metadata: The enable_in_browser_editor_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9423,6 +10150,27 @@ class AccountSettingsInformation(object):
         self._enable_key_terms_suggestions_by_document_type_metadata = enable_key_terms_suggestions_by_document_type_metadata
 
     @property
+    def enable_participant_recipient_setting_metadata(self):
+        """Gets the enable_participant_recipient_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_participant_recipient_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_participant_recipient_setting_metadata
+
+    @enable_participant_recipient_setting_metadata.setter
+    def enable_participant_recipient_setting_metadata(self, enable_participant_recipient_setting_metadata):
+        """Sets the enable_participant_recipient_setting_metadata of this AccountSettingsInformation.
+
+
+        :param enable_participant_recipient_setting_metadata: The enable_participant_recipient_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_participant_recipient_setting_metadata = enable_participant_recipient_setting_metadata
+
+    @property
     def enable_payment_processing(self):
         """Gets the enable_payment_processing of this AccountSettingsInformation.  # noqa: E501
 
@@ -9449,6 +10197,7 @@ class AccountSettingsInformation(object):
     def enable_payment_processing_metadata(self):
         """Gets the enable_payment_processing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enablePaymentProcessing` property is editable.   # noqa: E501
 
         :return: The enable_payment_processing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9459,6 +10208,7 @@ class AccountSettingsInformation(object):
     def enable_payment_processing_metadata(self, enable_payment_processing_metadata):
         """Sets the enable_payment_processing_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enablePaymentProcessing` property is editable.   # noqa: E501
 
         :param enable_payment_processing_metadata: The enable_payment_processing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9493,6 +10243,7 @@ class AccountSettingsInformation(object):
     def enable_pdfa_conversion_metadata(self):
         """Gets the enable_pdfa_conversion_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_pdfa_conversion_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9503,6 +10254,7 @@ class AccountSettingsInformation(object):
     def enable_pdfa_conversion_metadata(self, enable_pdfa_conversion_metadata):
         """Sets the enable_pdfa_conversion_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_pdfa_conversion_metadata: The enable_pdfa_conversion_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9560,6 +10312,7 @@ class AccountSettingsInformation(object):
     def enable_power_form_direct_metadata(self):
         """Gets the enable_power_form_direct_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enablePowerFormDirect` property is editable.   # noqa: E501
 
         :return: The enable_power_form_direct_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9570,6 +10323,7 @@ class AccountSettingsInformation(object):
     def enable_power_form_direct_metadata(self, enable_power_form_direct_metadata):
         """Sets the enable_power_form_direct_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enablePowerFormDirect` property is editable.   # noqa: E501
 
         :param enable_power_form_direct_metadata: The enable_power_form_direct_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9581,6 +10335,7 @@ class AccountSettingsInformation(object):
     def enable_power_form_metadata(self):
         """Gets the enable_power_form_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enablePowerForm` property is editable.   # noqa: E501
 
         :return: The enable_power_form_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9591,6 +10346,7 @@ class AccountSettingsInformation(object):
     def enable_power_form_metadata(self, enable_power_form_metadata):
         """Sets the enable_power_form_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enablePowerForm` property is editable.   # noqa: E501
 
         :param enable_power_form_metadata: The enable_power_form_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9625,6 +10381,7 @@ class AccountSettingsInformation(object):
     def enable_recipient_domain_validation_metadata(self):
         """Gets the enable_recipient_domain_validation_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableRecipientDomainValidation` property is editable.   # noqa: E501
 
         :return: The enable_recipient_domain_validation_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9635,6 +10392,7 @@ class AccountSettingsInformation(object):
     def enable_recipient_domain_validation_metadata(self, enable_recipient_domain_validation_metadata):
         """Sets the enable_recipient_domain_validation_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableRecipientDomainValidation` property is editable.   # noqa: E501
 
         :param enable_recipient_domain_validation_metadata: The enable_recipient_domain_validation_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9669,6 +10427,7 @@ class AccountSettingsInformation(object):
     def enable_recipient_may_provide_phone_number_metadata(self):
         """Gets the enable_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9679,6 +10438,7 @@ class AccountSettingsInformation(object):
     def enable_recipient_may_provide_phone_number_metadata(self, enable_recipient_may_provide_phone_number_metadata):
         """Sets the enable_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_recipient_may_provide_phone_number_metadata: The enable_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9713,6 +10473,7 @@ class AccountSettingsInformation(object):
     def enable_report_links_metadata(self):
         """Gets the enable_report_links_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableReportLinks` property is editable.   # noqa: E501
 
         :return: The enable_report_links_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9723,6 +10484,7 @@ class AccountSettingsInformation(object):
     def enable_report_links_metadata(self, enable_report_links_metadata):
         """Sets the enable_report_links_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableReportLinks` property is editable.   # noqa: E501
 
         :param enable_report_links_metadata: The enable_report_links_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9757,6 +10519,7 @@ class AccountSettingsInformation(object):
     def enable_require_sign_on_paper_metadata(self):
         """Gets the enable_require_sign_on_paper_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableRequireSignOnPaper` property is editable.   # noqa: E501
 
         :return: The enable_require_sign_on_paper_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9767,6 +10530,7 @@ class AccountSettingsInformation(object):
     def enable_require_sign_on_paper_metadata(self, enable_require_sign_on_paper_metadata):
         """Sets the enable_require_sign_on_paper_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableRequireSignOnPaper` property is editable.   # noqa: E501
 
         :param enable_require_sign_on_paper_metadata: The enable_require_sign_on_paper_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9801,6 +10565,7 @@ class AccountSettingsInformation(object):
     def enable_reserved_domain_metadata(self):
         """Gets the enable_reserved_domain_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableReservedDomain` property is editable.   # noqa: E501
 
         :return: The enable_reserved_domain_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9811,6 +10576,7 @@ class AccountSettingsInformation(object):
     def enable_reserved_domain_metadata(self, enable_reserved_domain_metadata):
         """Sets the enable_reserved_domain_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableReservedDomain` property is editable.   # noqa: E501
 
         :param enable_reserved_domain_metadata: The enable_reserved_domain_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9845,6 +10611,7 @@ class AccountSettingsInformation(object):
     def enable_responsive_signing_metadata(self):
         """Gets the enable_responsive_signing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableResponsiveSigning` property is editable.   # noqa: E501
 
         :return: The enable_responsive_signing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9855,6 +10622,7 @@ class AccountSettingsInformation(object):
     def enable_responsive_signing_metadata(self, enable_responsive_signing_metadata):
         """Sets the enable_responsive_signing_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableResponsiveSigning` property is editable.   # noqa: E501
 
         :param enable_responsive_signing_metadata: The enable_responsive_signing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9889,6 +10657,7 @@ class AccountSettingsInformation(object):
     def enable_scheduled_release_metadata(self):
         """Gets the enable_scheduled_release_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableScheduledRelease` property is editable.   # noqa: E501
 
         :return: The enable_scheduled_release_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9899,6 +10668,7 @@ class AccountSettingsInformation(object):
     def enable_scheduled_release_metadata(self, enable_scheduled_release_metadata):
         """Sets the enable_scheduled_release_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableScheduledRelease` property is editable.   # noqa: E501
 
         :param enable_scheduled_release_metadata: The enable_scheduled_release_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9933,6 +10703,7 @@ class AccountSettingsInformation(object):
     def enable_search_metadata(self):
         """Gets the enable_search_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_search_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9943,6 +10714,7 @@ class AccountSettingsInformation(object):
     def enable_search_metadata(self, enable_search_metadata):
         """Sets the enable_search_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_search_metadata: The enable_search_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10021,6 +10793,7 @@ class AccountSettingsInformation(object):
     def enable_search_ui_metadata(self):
         """Gets the enable_search_ui_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_search_ui_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10031,6 +10804,7 @@ class AccountSettingsInformation(object):
     def enable_search_ui_metadata(self, enable_search_ui_metadata):
         """Sets the enable_search_ui_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_search_ui_metadata: The enable_search_ui_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10065,6 +10839,7 @@ class AccountSettingsInformation(object):
     def enable_sending_tags_font_settings_metadata(self):
         """Gets the enable_sending_tags_font_settings_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSendingTagsFontSettings` property is editable.   # noqa: E501
 
         :return: The enable_sending_tags_font_settings_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10075,6 +10850,7 @@ class AccountSettingsInformation(object):
     def enable_sending_tags_font_settings_metadata(self, enable_sending_tags_font_settings_metadata):
         """Sets the enable_sending_tags_font_settings_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSendingTagsFontSettings` property is editable.   # noqa: E501
 
         :param enable_sending_tags_font_settings_metadata: The enable_sending_tags_font_settings_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10109,6 +10885,7 @@ class AccountSettingsInformation(object):
     def enable_send_to_agent_metadata(self):
         """Gets the enable_send_to_agent_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSendToAgent` property is editable.   # noqa: E501
 
         :return: The enable_send_to_agent_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10119,6 +10896,7 @@ class AccountSettingsInformation(object):
     def enable_send_to_agent_metadata(self, enable_send_to_agent_metadata):
         """Sets the enable_send_to_agent_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSendToAgent` property is editable.   # noqa: E501
 
         :param enable_send_to_agent_metadata: The enable_send_to_agent_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10153,6 +10931,7 @@ class AccountSettingsInformation(object):
     def enable_send_to_intermediary_metadata(self):
         """Gets the enable_send_to_intermediary_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSendToIntermediary` property is editable.   # noqa: E501
 
         :return: The enable_send_to_intermediary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10163,6 +10942,7 @@ class AccountSettingsInformation(object):
     def enable_send_to_intermediary_metadata(self, enable_send_to_intermediary_metadata):
         """Sets the enable_send_to_intermediary_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSendToIntermediary` property is editable.   # noqa: E501
 
         :param enable_send_to_intermediary_metadata: The enable_send_to_intermediary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10197,6 +10977,7 @@ class AccountSettingsInformation(object):
     def enable_send_to_manage_metadata(self):
         """Gets the enable_send_to_manage_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSendToManage` property is editable.   # noqa: E501
 
         :return: The enable_send_to_manage_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10207,6 +10988,7 @@ class AccountSettingsInformation(object):
     def enable_send_to_manage_metadata(self, enable_send_to_manage_metadata):
         """Sets the enable_send_to_manage_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSendToManage` property is editable.   # noqa: E501
 
         :param enable_send_to_manage_metadata: The enable_send_to_manage_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10241,6 +11023,7 @@ class AccountSettingsInformation(object):
     def enable_sequential_signing_api_metadata(self):
         """Gets the enable_sequential_signing_api_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSequentialSigningAPI` property is editable.   # noqa: E501
 
         :return: The enable_sequential_signing_api_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10251,6 +11034,7 @@ class AccountSettingsInformation(object):
     def enable_sequential_signing_api_metadata(self, enable_sequential_signing_api_metadata):
         """Sets the enable_sequential_signing_api_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSequentialSigningAPI` property is editable.   # noqa: E501
 
         :param enable_sequential_signing_api_metadata: The enable_sequential_signing_api_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10285,6 +11069,7 @@ class AccountSettingsInformation(object):
     def enable_sequential_signing_ui_metadata(self):
         """Gets the enable_sequential_signing_ui_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSequentialSigningUI` property is editable.   # noqa: E501
 
         :return: The enable_sequential_signing_ui_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10295,6 +11080,7 @@ class AccountSettingsInformation(object):
     def enable_sequential_signing_ui_metadata(self, enable_sequential_signing_ui_metadata):
         """Sets the enable_sequential_signing_ui_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSequentialSigningUI` property is editable.   # noqa: E501
 
         :param enable_sequential_signing_ui_metadata: The enable_sequential_signing_ui_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10329,6 +11115,7 @@ class AccountSettingsInformation(object):
     def enable_signer_attachments_metadata(self):
         """Gets the enable_signer_attachments_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSignerAttachments` property is editable.   # noqa: E501
 
         :return: The enable_signer_attachments_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10339,6 +11126,7 @@ class AccountSettingsInformation(object):
     def enable_signer_attachments_metadata(self, enable_signer_attachments_metadata):
         """Sets the enable_signer_attachments_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSignerAttachments` property is editable.   # noqa: E501
 
         :param enable_signer_attachments_metadata: The enable_signer_attachments_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10373,6 +11161,7 @@ class AccountSettingsInformation(object):
     def enable_signing_extension_comments_metadata(self):
         """Gets the enable_signing_extension_comments_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSigningExtensionComments` property is editable.   # noqa: E501
 
         :return: The enable_signing_extension_comments_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10383,6 +11172,7 @@ class AccountSettingsInformation(object):
     def enable_signing_extension_comments_metadata(self, enable_signing_extension_comments_metadata):
         """Sets the enable_signing_extension_comments_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSigningExtensionComments` property is editable.   # noqa: E501
 
         :param enable_signing_extension_comments_metadata: The enable_signing_extension_comments_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10417,6 +11207,7 @@ class AccountSettingsInformation(object):
     def enable_signing_extension_conversations_metadata(self):
         """Gets the enable_signing_extension_conversations_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSigningExtensionConversations` property is editable.   # noqa: E501
 
         :return: The enable_signing_extension_conversations_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10427,6 +11218,7 @@ class AccountSettingsInformation(object):
     def enable_signing_extension_conversations_metadata(self, enable_signing_extension_conversations_metadata):
         """Sets the enable_signing_extension_conversations_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSigningExtensionConversations` property is editable.   # noqa: E501
 
         :param enable_signing_extension_conversations_metadata: The enable_signing_extension_conversations_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10461,6 +11253,7 @@ class AccountSettingsInformation(object):
     def enable_signing_order_settings_for_account_metadata(self):
         """Gets the enable_signing_order_settings_for_account_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSigningOrderSettingsForAccount` property is editable.   # noqa: E501
 
         :return: The enable_signing_order_settings_for_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10471,6 +11264,7 @@ class AccountSettingsInformation(object):
     def enable_signing_order_settings_for_account_metadata(self, enable_signing_order_settings_for_account_metadata):
         """Sets the enable_signing_order_settings_for_account_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSigningOrderSettingsForAccount` property is editable.   # noqa: E501
 
         :param enable_signing_order_settings_for_account_metadata: The enable_signing_order_settings_for_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10505,6 +11299,7 @@ class AccountSettingsInformation(object):
     def enable_sign_on_paper_metadata(self):
         """Gets the enable_sign_on_paper_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSignOnPaper` property is editable.   # noqa: E501
 
         :return: The enable_sign_on_paper_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10515,6 +11310,7 @@ class AccountSettingsInformation(object):
     def enable_sign_on_paper_metadata(self, enable_sign_on_paper_metadata):
         """Sets the enable_sign_on_paper_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSignOnPaper` property is editable.   # noqa: E501
 
         :param enable_sign_on_paper_metadata: The enable_sign_on_paper_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10549,6 +11345,7 @@ class AccountSettingsInformation(object):
     def enable_sign_on_paper_override_metadata(self):
         """Gets the enable_sign_on_paper_override_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSignOnPaperOverride` property is editable.   # noqa: E501
 
         :return: The enable_sign_on_paper_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10559,6 +11356,7 @@ class AccountSettingsInformation(object):
     def enable_sign_on_paper_override_metadata(self, enable_sign_on_paper_override_metadata):
         """Sets the enable_sign_on_paper_override_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSignOnPaperOverride` property is editable.   # noqa: E501
 
         :param enable_sign_on_paper_override_metadata: The enable_sign_on_paper_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10593,6 +11391,7 @@ class AccountSettingsInformation(object):
     def enable_sign_with_notary_metadata(self):
         """Gets the enable_sign_with_notary_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSignWithNotary` property is editable.   # noqa: E501
 
         :return: The enable_sign_with_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10603,6 +11402,7 @@ class AccountSettingsInformation(object):
     def enable_sign_with_notary_metadata(self, enable_sign_with_notary_metadata):
         """Sets the enable_sign_with_notary_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSignWithNotary` property is editable.   # noqa: E501
 
         :param enable_sign_with_notary_metadata: The enable_sign_with_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10637,6 +11437,7 @@ class AccountSettingsInformation(object):
     def enable_smart_contracts_metadata(self):
         """Gets the enable_smart_contracts_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSmartContracts` property is editable.  # noqa: E501
 
         :return: The enable_smart_contracts_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10647,6 +11448,7 @@ class AccountSettingsInformation(object):
     def enable_smart_contracts_metadata(self, enable_smart_contracts_metadata):
         """Sets the enable_smart_contracts_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSmartContracts` property is editable.  # noqa: E501
 
         :param enable_smart_contracts_metadata: The enable_smart_contracts_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10681,6 +11483,7 @@ class AccountSettingsInformation(object):
     def enable_sms_authentication_metadata(self):
         """Gets the enable_sms_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSMSAuthentication` property is editable.   # noqa: E501
 
         :return: The enable_sms_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10691,6 +11494,7 @@ class AccountSettingsInformation(object):
     def enable_sms_authentication_metadata(self, enable_sms_authentication_metadata):
         """Sets the enable_sms_authentication_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableSMSAuthentication` property is editable.   # noqa: E501
 
         :param enable_sms_authentication_metadata: The enable_sms_authentication_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10725,6 +11529,7 @@ class AccountSettingsInformation(object):
     def enable_sms_delivery_additional_notification_metadata(self):
         """Gets the enable_sms_delivery_additional_notification_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_sms_delivery_additional_notification_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10735,6 +11540,7 @@ class AccountSettingsInformation(object):
     def enable_sms_delivery_additional_notification_metadata(self, enable_sms_delivery_additional_notification_metadata):
         """Sets the enable_sms_delivery_additional_notification_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_sms_delivery_additional_notification_metadata: The enable_sms_delivery_additional_notification_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10792,6 +11598,7 @@ class AccountSettingsInformation(object):
     def enable_social_id_login_metadata(self):
         """Gets the enable_social_id_login_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Deprecated.  # noqa: E501
 
         :return: The enable_social_id_login_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10802,6 +11609,7 @@ class AccountSettingsInformation(object):
     def enable_social_id_login_metadata(self, enable_social_id_login_metadata):
         """Sets the enable_social_id_login_metadata of this AccountSettingsInformation.
 
+        Deprecated.  # noqa: E501
 
         :param enable_social_id_login_metadata: The enable_social_id_login_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10836,6 +11644,7 @@ class AccountSettingsInformation(object):
     def enable_strike_through_metadata(self):
         """Gets the enable_strike_through_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableStrikeThrough` property is editable.   # noqa: E501
 
         :return: The enable_strike_through_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10846,6 +11655,7 @@ class AccountSettingsInformation(object):
     def enable_strike_through_metadata(self, enable_strike_through_metadata):
         """Sets the enable_strike_through_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableStrikeThrough` property is editable.   # noqa: E501
 
         :param enable_strike_through_metadata: The enable_strike_through_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10880,6 +11690,7 @@ class AccountSettingsInformation(object):
     def enable_transaction_point_metadata(self):
         """Gets the enable_transaction_point_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The enable_transaction_point_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10890,6 +11701,7 @@ class AccountSettingsInformation(object):
     def enable_transaction_point_metadata(self, enable_transaction_point_metadata):
         """Sets the enable_transaction_point_metadata of this AccountSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param enable_transaction_point_metadata: The enable_transaction_point_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10924,6 +11736,7 @@ class AccountSettingsInformation(object):
     def enable_vaulting_metadata(self):
         """Gets the enable_vaulting_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableVaulting` property is editable.   # noqa: E501
 
         :return: The enable_vaulting_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10934,6 +11747,7 @@ class AccountSettingsInformation(object):
     def enable_vaulting_metadata(self, enable_vaulting_metadata):
         """Sets the enable_vaulting_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableVaulting` property is editable.   # noqa: E501
 
         :param enable_vaulting_metadata: The enable_vaulting_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10968,6 +11782,7 @@ class AccountSettingsInformation(object):
     def enable_witnessing_metadata(self):
         """Gets the enable_witnessing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableWitnessing` property is editable.   # noqa: E501
 
         :return: The enable_witnessing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10978,6 +11793,7 @@ class AccountSettingsInformation(object):
     def enable_witnessing_metadata(self, enable_witnessing_metadata):
         """Sets the enable_witnessing_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enableWitnessing` property is editable.   # noqa: E501
 
         :param enable_witnessing_metadata: The enable_witnessing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11012,6 +11828,7 @@ class AccountSettingsInformation(object):
     def enforce_template_name_uniqueness_metadata(self):
         """Gets the enforce_template_name_uniqueness_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enforceTemplateNameUniqueness` property is editable.   # noqa: E501
 
         :return: The enforce_template_name_uniqueness_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11022,6 +11839,7 @@ class AccountSettingsInformation(object):
     def enforce_template_name_uniqueness_metadata(self, enforce_template_name_uniqueness_metadata):
         """Sets the enforce_template_name_uniqueness_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `enforceTemplateNameUniqueness` property is editable.   # noqa: E501
 
         :param enforce_template_name_uniqueness_metadata: The enforce_template_name_uniqueness_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11056,6 +11874,7 @@ class AccountSettingsInformation(object):
     def envelope_integration_allowed_metadata(self):
         """Gets the envelope_integration_allowed_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `envelopeIntegrationAllowed` property is editable.   # noqa: E501
 
         :return: The envelope_integration_allowed_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11066,6 +11885,7 @@ class AccountSettingsInformation(object):
     def envelope_integration_allowed_metadata(self, envelope_integration_allowed_metadata):
         """Sets the envelope_integration_allowed_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `envelopeIntegrationAllowed` property is editable.   # noqa: E501
 
         :param envelope_integration_allowed_metadata: The envelope_integration_allowed_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11100,6 +11920,7 @@ class AccountSettingsInformation(object):
     def envelope_integration_enabled_metadata(self):
         """Gets the envelope_integration_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `envelopeIntegrationEnabled` property is editable.   # noqa: E501
 
         :return: The envelope_integration_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11110,12 +11931,101 @@ class AccountSettingsInformation(object):
     def envelope_integration_enabled_metadata(self, envelope_integration_enabled_metadata):
         """Sets the envelope_integration_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `envelopeIntegrationEnabled` property is editable.   # noqa: E501
 
         :param envelope_integration_enabled_metadata: The envelope_integration_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
         self._envelope_integration_enabled_metadata = envelope_integration_enabled_metadata
+
+    @property
+    def envelope_limits_total_document_size_allowed_in_mb(self):
+        """Gets the envelope_limits_total_document_size_allowed_in_mb of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_limits_total_document_size_allowed_in_mb of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._envelope_limits_total_document_size_allowed_in_mb
+
+    @envelope_limits_total_document_size_allowed_in_mb.setter
+    def envelope_limits_total_document_size_allowed_in_mb(self, envelope_limits_total_document_size_allowed_in_mb):
+        """Sets the envelope_limits_total_document_size_allowed_in_mb of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param envelope_limits_total_document_size_allowed_in_mb: The envelope_limits_total_document_size_allowed_in_mb of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._envelope_limits_total_document_size_allowed_in_mb = envelope_limits_total_document_size_allowed_in_mb
+
+    @property
+    def envelope_limits_total_document_size_allowed_in_mb_enabled(self):
+        """Gets the envelope_limits_total_document_size_allowed_in_mb_enabled of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_limits_total_document_size_allowed_in_mb_enabled of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._envelope_limits_total_document_size_allowed_in_mb_enabled
+
+    @envelope_limits_total_document_size_allowed_in_mb_enabled.setter
+    def envelope_limits_total_document_size_allowed_in_mb_enabled(self, envelope_limits_total_document_size_allowed_in_mb_enabled):
+        """Sets the envelope_limits_total_document_size_allowed_in_mb_enabled of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param envelope_limits_total_document_size_allowed_in_mb_enabled: The envelope_limits_total_document_size_allowed_in_mb_enabled of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._envelope_limits_total_document_size_allowed_in_mb_enabled = envelope_limits_total_document_size_allowed_in_mb_enabled
+
+    @property
+    def envelope_limits_total_document_size_allowed_in_mb_enabled_metadata(self):
+        """Gets the envelope_limits_total_document_size_allowed_in_mb_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The envelope_limits_total_document_size_allowed_in_mb_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._envelope_limits_total_document_size_allowed_in_mb_enabled_metadata
+
+    @envelope_limits_total_document_size_allowed_in_mb_enabled_metadata.setter
+    def envelope_limits_total_document_size_allowed_in_mb_enabled_metadata(self, envelope_limits_total_document_size_allowed_in_mb_enabled_metadata):
+        """Sets the envelope_limits_total_document_size_allowed_in_mb_enabled_metadata of this AccountSettingsInformation.
+
+
+        :param envelope_limits_total_document_size_allowed_in_mb_enabled_metadata: The envelope_limits_total_document_size_allowed_in_mb_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._envelope_limits_total_document_size_allowed_in_mb_enabled_metadata = envelope_limits_total_document_size_allowed_in_mb_enabled_metadata
+
+    @property
+    def envelope_limits_total_document_size_allowed_in_mb_metadata(self):
+        """Gets the envelope_limits_total_document_size_allowed_in_mb_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The envelope_limits_total_document_size_allowed_in_mb_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._envelope_limits_total_document_size_allowed_in_mb_metadata
+
+    @envelope_limits_total_document_size_allowed_in_mb_metadata.setter
+    def envelope_limits_total_document_size_allowed_in_mb_metadata(self, envelope_limits_total_document_size_allowed_in_mb_metadata):
+        """Sets the envelope_limits_total_document_size_allowed_in_mb_metadata of this AccountSettingsInformation.
+
+
+        :param envelope_limits_total_document_size_allowed_in_mb_metadata: The envelope_limits_total_document_size_allowed_in_mb_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._envelope_limits_total_document_size_allowed_in_mb_metadata = envelope_limits_total_document_size_allowed_in_mb_metadata
 
     @property
     def envelope_stamping_default_value(self):
@@ -11144,6 +12054,7 @@ class AccountSettingsInformation(object):
     def envelope_stamping_default_value_metadata(self):
         """Gets the envelope_stamping_default_value_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `envelopeStampingDefaultValue` property is editable.   # noqa: E501
 
         :return: The envelope_stamping_default_value_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11154,6 +12065,7 @@ class AccountSettingsInformation(object):
     def envelope_stamping_default_value_metadata(self, envelope_stamping_default_value_metadata):
         """Sets the envelope_stamping_default_value_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `envelopeStampingDefaultValue` property is editable.   # noqa: E501
 
         :param envelope_stamping_default_value_metadata: The envelope_stamping_default_value_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11188,6 +12100,7 @@ class AccountSettingsInformation(object):
     def exit_prompt_metadata(self):
         """Gets the exit_prompt_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The exit_prompt_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11198,6 +12111,7 @@ class AccountSettingsInformation(object):
     def exit_prompt_metadata(self, exit_prompt_metadata):
         """Sets the exit_prompt_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param exit_prompt_metadata: The exit_prompt_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11255,6 +12169,7 @@ class AccountSettingsInformation(object):
     def express_send_allow_tabs_metadata(self):
         """Gets the express_send_allow_tabs_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `expressSendAllowTabs` property is editable.   # noqa: E501
 
         :return: The express_send_allow_tabs_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11265,6 +12180,7 @@ class AccountSettingsInformation(object):
     def express_send_allow_tabs_metadata(self, express_send_allow_tabs_metadata):
         """Sets the express_send_allow_tabs_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `expressSendAllowTabs` property is editable.   # noqa: E501
 
         :param express_send_allow_tabs_metadata: The express_send_allow_tabs_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11276,6 +12192,7 @@ class AccountSettingsInformation(object):
     def express_send_metadata(self):
         """Gets the express_send_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `expressSend` property is editable.   # noqa: E501
 
         :return: The express_send_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11286,6 +12203,7 @@ class AccountSettingsInformation(object):
     def express_send_metadata(self, express_send_metadata):
         """Sets the express_send_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `expressSend` property is editable.   # noqa: E501
 
         :param express_send_metadata: The express_send_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11297,6 +12215,7 @@ class AccountSettingsInformation(object):
     def external_document_sources(self):
         """Gets the external_document_sources of this AccountSettingsInformation.  # noqa: E501
 
+        A list of external document sources such as DropBox and OneDrive.  # noqa: E501
 
         :return: The external_document_sources of this AccountSettingsInformation.  # noqa: E501
         :rtype: ExternalDocumentSources
@@ -11307,6 +12226,7 @@ class AccountSettingsInformation(object):
     def external_document_sources(self, external_document_sources):
         """Sets the external_document_sources of this AccountSettingsInformation.
 
+        A list of external document sources such as DropBox and OneDrive.  # noqa: E501
 
         :param external_document_sources: The external_document_sources of this AccountSettingsInformation.  # noqa: E501
         :type: ExternalDocumentSources
@@ -11341,6 +12261,7 @@ class AccountSettingsInformation(object):
     def external_signature_pad_type_metadata(self):
         """Gets the external_signature_pad_type_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `externalSignaturePadType` property is editable.   # noqa: E501
 
         :return: The external_signature_pad_type_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11351,6 +12272,7 @@ class AccountSettingsInformation(object):
     def external_signature_pad_type_metadata(self, external_signature_pad_type_metadata):
         """Sets the external_signature_pad_type_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `externalSignaturePadType` property is editable.   # noqa: E501
 
         :param external_signature_pad_type_metadata: The external_signature_pad_type_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11385,6 +12307,7 @@ class AccountSettingsInformation(object):
     def fax_out_enabled_metadata(self):
         """Gets the fax_out_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `faxOutEnabled` property is editable.   # noqa: E501
 
         :return: The fax_out_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11395,6 +12318,7 @@ class AccountSettingsInformation(object):
     def fax_out_enabled_metadata(self, fax_out_enabled_metadata):
         """Sets the fax_out_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `faxOutEnabled` property is editable.   # noqa: E501
 
         :param fax_out_enabled_metadata: The fax_out_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11429,6 +12353,7 @@ class AccountSettingsInformation(object):
     def finish_reminder_metadata(self):
         """Gets the finish_reminder_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The finish_reminder_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11439,6 +12364,7 @@ class AccountSettingsInformation(object):
     def finish_reminder_metadata(self, finish_reminder_metadata):
         """Sets the finish_reminder_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param finish_reminder_metadata: The finish_reminder_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11473,6 +12399,7 @@ class AccountSettingsInformation(object):
     def guided_forms_html_allowed_metadata(self):
         """Gets the guided_forms_html_allowed_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The guided_forms_html_allowed_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11483,6 +12410,7 @@ class AccountSettingsInformation(object):
     def guided_forms_html_allowed_metadata(self, guided_forms_html_allowed_metadata):
         """Sets the guided_forms_html_allowed_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param guided_forms_html_allowed_metadata: The guided_forms_html_allowed_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11540,6 +12468,7 @@ class AccountSettingsInformation(object):
     def hide_account_address_in_co_c_metadata(self):
         """Gets the hide_account_address_in_co_c_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `hideAccountAddressInCoC` property is editable.   # noqa: E501
 
         :return: The hide_account_address_in_co_c_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11550,6 +12479,7 @@ class AccountSettingsInformation(object):
     def hide_account_address_in_co_c_metadata(self, hide_account_address_in_co_c_metadata):
         """Sets the hide_account_address_in_co_c_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `hideAccountAddressInCoC` property is editable.   # noqa: E501
 
         :param hide_account_address_in_co_c_metadata: The hide_account_address_in_co_c_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11584,6 +12514,7 @@ class AccountSettingsInformation(object):
     def hide_pricing_metadata(self):
         """Gets the hide_pricing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `hidePricing` property is editable.   # noqa: E501
 
         :return: The hide_pricing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11594,6 +12525,7 @@ class AccountSettingsInformation(object):
     def hide_pricing_metadata(self, hide_pricing_metadata):
         """Sets the hide_pricing_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `hidePricing` property is editable.   # noqa: E501
 
         :param hide_pricing_metadata: The hide_pricing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11674,6 +12606,7 @@ class AccountSettingsInformation(object):
     def id_check_expire_days_metadata(self):
         """Gets the id_check_expire_days_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `idCheckExpireDays` property is editable.   # noqa: E501
 
         :return: The id_check_expire_days_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11684,6 +12617,7 @@ class AccountSettingsInformation(object):
     def id_check_expire_days_metadata(self, id_check_expire_days_metadata):
         """Sets the id_check_expire_days_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `idCheckExpireDays` property is editable.   # noqa: E501
 
         :param id_check_expire_days_metadata: The id_check_expire_days_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11695,6 +12629,7 @@ class AccountSettingsInformation(object):
     def id_check_expire_metadata(self):
         """Gets the id_check_expire_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `idCheckExpire` property is editable.   # noqa: E501
 
         :return: The id_check_expire_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11705,6 +12640,7 @@ class AccountSettingsInformation(object):
     def id_check_expire_metadata(self, id_check_expire_metadata):
         """Sets the id_check_expire_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `idCheckExpire` property is editable.   # noqa: E501
 
         :param id_check_expire_metadata: The id_check_expire_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11739,6 +12675,7 @@ class AccountSettingsInformation(object):
     def id_check_expire_minutes_metadata(self):
         """Gets the id_check_expire_minutes_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `idCheckExpireMinutes` property is editable.   # noqa: E501
 
         :return: The id_check_expire_minutes_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11749,6 +12686,7 @@ class AccountSettingsInformation(object):
     def id_check_expire_minutes_metadata(self, id_check_expire_minutes_metadata):
         """Sets the id_check_expire_minutes_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `idCheckExpireMinutes` property is editable.   # noqa: E501
 
         :param id_check_expire_minutes_metadata: The id_check_expire_minutes_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11783,6 +12721,7 @@ class AccountSettingsInformation(object):
     def id_check_required_metadata(self):
         """Gets the id_check_required_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `idCheckRequired` property is editable.   # noqa: E501
 
         :return: The id_check_required_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11793,6 +12732,7 @@ class AccountSettingsInformation(object):
     def id_check_required_metadata(self, id_check_required_metadata):
         """Sets the id_check_required_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `idCheckRequired` property is editable.   # noqa: E501
 
         :param id_check_required_metadata: The id_check_required_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11827,6 +12767,7 @@ class AccountSettingsInformation(object):
     def identity_verification_metadata(self):
         """Gets the identity_verification_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `identityVerification` property is editable.   # noqa: E501
 
         :return: The identity_verification_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11837,6 +12778,7 @@ class AccountSettingsInformation(object):
     def identity_verification_metadata(self, identity_verification_metadata):
         """Sets the identity_verification_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `identityVerification` property is editable.   # noqa: E501
 
         :param identity_verification_metadata: The identity_verification_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11871,6 +12813,7 @@ class AccountSettingsInformation(object):
     def idfx_phone_authentication_override_metadata(self):
         """Gets the idfx_phone_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The idfx_phone_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11881,6 +12824,7 @@ class AccountSettingsInformation(object):
     def idfx_phone_authentication_override_metadata(self, idfx_phone_authentication_override_metadata):
         """Sets the idfx_phone_authentication_override_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param idfx_phone_authentication_override_metadata: The idfx_phone_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11915,6 +12859,7 @@ class AccountSettingsInformation(object):
     def ignore_error_if_anchor_tab_not_found_metadata_enabled(self):
         """Gets the ignore_error_if_anchor_tab_not_found_metadata_enabled of this AccountSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The ignore_error_if_anchor_tab_not_found_metadata_enabled of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11925,6 +12870,7 @@ class AccountSettingsInformation(object):
     def ignore_error_if_anchor_tab_not_found_metadata_enabled(self, ignore_error_if_anchor_tab_not_found_metadata_enabled):
         """Sets the ignore_error_if_anchor_tab_not_found_metadata_enabled of this AccountSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param ignore_error_if_anchor_tab_not_found_metadata_enabled: The ignore_error_if_anchor_tab_not_found_metadata_enabled of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11959,6 +12905,7 @@ class AccountSettingsInformation(object):
     def in_person_id_check_question_metadata(self):
         """Gets the in_person_id_check_question_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `inPersonIDCheckQuestion` property is editable.   # noqa: E501
 
         :return: The in_person_id_check_question_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11969,6 +12916,7 @@ class AccountSettingsInformation(object):
     def in_person_id_check_question_metadata(self, in_person_id_check_question_metadata):
         """Sets the in_person_id_check_question_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `inPersonIDCheckQuestion` property is editable.   # noqa: E501
 
         :param in_person_id_check_question_metadata: The in_person_id_check_question_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12003,6 +12951,7 @@ class AccountSettingsInformation(object):
     def in_person_signing_enabled_metadata(self):
         """Gets the in_person_signing_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `inPersonSigningEnabled` property is editable.   # noqa: E501
 
         :return: The in_person_signing_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12013,6 +12962,7 @@ class AccountSettingsInformation(object):
     def in_person_signing_enabled_metadata(self, in_person_signing_enabled_metadata):
         """Sets the in_person_signing_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `inPersonSigningEnabled` property is editable.   # noqa: E501
 
         :param in_person_signing_enabled_metadata: The in_person_signing_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12047,6 +12997,7 @@ class AccountSettingsInformation(object):
     def in_session_enabled_metadata(self):
         """Gets the in_session_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `inSessionEnabled` property is editable.   # noqa: E501
 
         :return: The in_session_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12057,6 +13008,7 @@ class AccountSettingsInformation(object):
     def in_session_enabled_metadata(self, in_session_enabled_metadata):
         """Sets the in_session_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `inSessionEnabled` property is editable.   # noqa: E501
 
         :param in_session_enabled_metadata: The in_session_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12091,6 +13043,7 @@ class AccountSettingsInformation(object):
     def in_session_suppress_emails_metadata(self):
         """Gets the in_session_suppress_emails_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `inSessionSuppressEmails` property is editable.   # noqa: E501
 
         :return: The in_session_suppress_emails_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12101,6 +13054,7 @@ class AccountSettingsInformation(object):
     def in_session_suppress_emails_metadata(self, in_session_suppress_emails_metadata):
         """Sets the in_session_suppress_emails_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `inSessionSuppressEmails` property is editable.   # noqa: E501
 
         :param in_session_suppress_emails_metadata: The in_session_suppress_emails_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12158,6 +13112,7 @@ class AccountSettingsInformation(object):
     def maximum_signing_groups_metadata(self):
         """Gets the maximum_signing_groups_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `maximumSigningGroups` property is editable.   # noqa: E501
 
         :return: The maximum_signing_groups_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12168,6 +13123,7 @@ class AccountSettingsInformation(object):
     def maximum_signing_groups_metadata(self, maximum_signing_groups_metadata):
         """Sets the maximum_signing_groups_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `maximumSigningGroups` property is editable.   # noqa: E501
 
         :param maximum_signing_groups_metadata: The maximum_signing_groups_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12202,6 +13158,7 @@ class AccountSettingsInformation(object):
     def maximum_users_per_signing_group_metadata(self):
         """Gets the maximum_users_per_signing_group_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `maximumUsersPerSigningGroup` property is editable.   # noqa: E501
 
         :return: The maximum_users_per_signing_group_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12212,6 +13169,7 @@ class AccountSettingsInformation(object):
     def maximum_users_per_signing_group_metadata(self, maximum_users_per_signing_group_metadata):
         """Sets the maximum_users_per_signing_group_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `maximumUsersPerSigningGroup` property is editable.   # noqa: E501
 
         :param maximum_users_per_signing_group_metadata: The maximum_users_per_signing_group_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12269,6 +13227,7 @@ class AccountSettingsInformation(object):
     def mobile_session_timeout_metadata(self):
         """Gets the mobile_session_timeout_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `mobileSessionTimeout` property is editable.   # noqa: E501
 
         :return: The mobile_session_timeout_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12279,6 +13238,7 @@ class AccountSettingsInformation(object):
     def mobile_session_timeout_metadata(self, mobile_session_timeout_metadata):
         """Sets the mobile_session_timeout_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `mobileSessionTimeout` property is editable.   # noqa: E501
 
         :param mobile_session_timeout_metadata: The mobile_session_timeout_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12336,6 +13296,7 @@ class AccountSettingsInformation(object):
     def opt_in_mobile_signing_v02_metadata(self):
         """Gets the opt_in_mobile_signing_v02_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `optInMobileSigningV02` property is editable.   # noqa: E501
 
         :return: The opt_in_mobile_signing_v02_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12346,6 +13307,7 @@ class AccountSettingsInformation(object):
     def opt_in_mobile_signing_v02_metadata(self, opt_in_mobile_signing_v02_metadata):
         """Sets the opt_in_mobile_signing_v02_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `optInMobileSigningV02` property is editable.   # noqa: E501
 
         :param opt_in_mobile_signing_v02_metadata: The opt_in_mobile_signing_v02_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12380,6 +13342,7 @@ class AccountSettingsInformation(object):
     def opt_out_auto_nav_text_and_tab_color_updates_metadata(self):
         """Gets the opt_out_auto_nav_text_and_tab_color_updates_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `optOutAutoNavTextAndTabColorUpdates` property is editable.   # noqa: E501
 
         :return: The opt_out_auto_nav_text_and_tab_color_updates_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12390,6 +13353,7 @@ class AccountSettingsInformation(object):
     def opt_out_auto_nav_text_and_tab_color_updates_metadata(self, opt_out_auto_nav_text_and_tab_color_updates_metadata):
         """Sets the opt_out_auto_nav_text_and_tab_color_updates_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `optOutAutoNavTextAndTabColorUpdates` property is editable.   # noqa: E501
 
         :param opt_out_auto_nav_text_and_tab_color_updates_metadata: The opt_out_auto_nav_text_and_tab_color_updates_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12424,6 +13388,7 @@ class AccountSettingsInformation(object):
     def opt_out_new_platform_seal_platform_metadata(self):
         """Gets the opt_out_new_platform_seal_platform_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `optOutNewPlatformSealPlatform` property is editable.   # noqa: E501
 
         :return: The opt_out_new_platform_seal_platform_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12434,12 +13399,145 @@ class AccountSettingsInformation(object):
     def opt_out_new_platform_seal_platform_metadata(self, opt_out_new_platform_seal_platform_metadata):
         """Sets the opt_out_new_platform_seal_platform_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `optOutNewPlatformSealPlatform` property is editable.   # noqa: E501
 
         :param opt_out_new_platform_seal_platform_metadata: The opt_out_new_platform_seal_platform_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
         self._opt_out_new_platform_seal_platform_metadata = opt_out_new_platform_seal_platform_metadata
+
+    @property
+    def pdf_max_chunked_upload_part_size(self):
+        """Gets the pdf_max_chunked_upload_part_size of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pdf_max_chunked_upload_part_size of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._pdf_max_chunked_upload_part_size
+
+    @pdf_max_chunked_upload_part_size.setter
+    def pdf_max_chunked_upload_part_size(self, pdf_max_chunked_upload_part_size):
+        """Sets the pdf_max_chunked_upload_part_size of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param pdf_max_chunked_upload_part_size: The pdf_max_chunked_upload_part_size of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._pdf_max_chunked_upload_part_size = pdf_max_chunked_upload_part_size
+
+    @property
+    def pdf_max_chunked_upload_part_size_metadata(self):
+        """Gets the pdf_max_chunked_upload_part_size_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The pdf_max_chunked_upload_part_size_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._pdf_max_chunked_upload_part_size_metadata
+
+    @pdf_max_chunked_upload_part_size_metadata.setter
+    def pdf_max_chunked_upload_part_size_metadata(self, pdf_max_chunked_upload_part_size_metadata):
+        """Sets the pdf_max_chunked_upload_part_size_metadata of this AccountSettingsInformation.
+
+
+        :param pdf_max_chunked_upload_part_size_metadata: The pdf_max_chunked_upload_part_size_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._pdf_max_chunked_upload_part_size_metadata = pdf_max_chunked_upload_part_size_metadata
+
+    @property
+    def pdf_max_chunked_upload_total_size(self):
+        """Gets the pdf_max_chunked_upload_total_size of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pdf_max_chunked_upload_total_size of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._pdf_max_chunked_upload_total_size
+
+    @pdf_max_chunked_upload_total_size.setter
+    def pdf_max_chunked_upload_total_size(self, pdf_max_chunked_upload_total_size):
+        """Sets the pdf_max_chunked_upload_total_size of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param pdf_max_chunked_upload_total_size: The pdf_max_chunked_upload_total_size of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._pdf_max_chunked_upload_total_size = pdf_max_chunked_upload_total_size
+
+    @property
+    def pdf_max_chunked_upload_total_size_metadata(self):
+        """Gets the pdf_max_chunked_upload_total_size_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The pdf_max_chunked_upload_total_size_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._pdf_max_chunked_upload_total_size_metadata
+
+    @pdf_max_chunked_upload_total_size_metadata.setter
+    def pdf_max_chunked_upload_total_size_metadata(self, pdf_max_chunked_upload_total_size_metadata):
+        """Sets the pdf_max_chunked_upload_total_size_metadata of this AccountSettingsInformation.
+
+
+        :param pdf_max_chunked_upload_total_size_metadata: The pdf_max_chunked_upload_total_size_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._pdf_max_chunked_upload_total_size_metadata = pdf_max_chunked_upload_total_size_metadata
+
+    @property
+    def pdf_max_individual_upload_size(self):
+        """Gets the pdf_max_individual_upload_size of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pdf_max_individual_upload_size of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._pdf_max_individual_upload_size
+
+    @pdf_max_individual_upload_size.setter
+    def pdf_max_individual_upload_size(self, pdf_max_individual_upload_size):
+        """Sets the pdf_max_individual_upload_size of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param pdf_max_individual_upload_size: The pdf_max_individual_upload_size of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._pdf_max_individual_upload_size = pdf_max_individual_upload_size
+
+    @property
+    def pdf_max_individual_upload_size_metadata(self):
+        """Gets the pdf_max_individual_upload_size_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The pdf_max_individual_upload_size_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._pdf_max_individual_upload_size_metadata
+
+    @pdf_max_individual_upload_size_metadata.setter
+    def pdf_max_individual_upload_size_metadata(self, pdf_max_individual_upload_size_metadata):
+        """Sets the pdf_max_individual_upload_size_metadata of this AccountSettingsInformation.
+
+
+        :param pdf_max_individual_upload_size_metadata: The pdf_max_individual_upload_size_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._pdf_max_individual_upload_size_metadata = pdf_max_individual_upload_size_metadata
 
     @property
     def phone_auth_recipient_may_provide_phone_number(self):
@@ -12468,6 +13566,7 @@ class AccountSettingsInformation(object):
     def phone_auth_recipient_may_provide_phone_number_metadata(self):
         """Gets the phone_auth_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `phoneAuthRecipientMayProvidePhoneNumber` property is editable.   # noqa: E501
 
         :return: The phone_auth_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12478,6 +13577,7 @@ class AccountSettingsInformation(object):
     def phone_auth_recipient_may_provide_phone_number_metadata(self, phone_auth_recipient_may_provide_phone_number_metadata):
         """Sets the phone_auth_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `phoneAuthRecipientMayProvidePhoneNumber` property is editable.   # noqa: E501
 
         :param phone_auth_recipient_may_provide_phone_number_metadata: The phone_auth_recipient_may_provide_phone_number_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12512,6 +13612,7 @@ class AccountSettingsInformation(object):
     def pki_sign_downloaded_pdf_docs_metadata(self):
         """Gets the pki_sign_downloaded_pdf_docs_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `pkiSignDownloadedPDFDocs` property is editable.   # noqa: E501
 
         :return: The pki_sign_downloaded_pdf_docs_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12522,6 +13623,7 @@ class AccountSettingsInformation(object):
     def pki_sign_downloaded_pdf_docs_metadata(self, pki_sign_downloaded_pdf_docs_metadata):
         """Sets the pki_sign_downloaded_pdf_docs_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `pkiSignDownloadedPDFDocs` property is editable.   # noqa: E501
 
         :param pki_sign_downloaded_pdf_docs_metadata: The pki_sign_downloaded_pdf_docs_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12556,6 +13658,7 @@ class AccountSettingsInformation(object):
     def read_only_mode_metadata(self):
         """Gets the read_only_mode_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The read_only_mode_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12566,6 +13669,7 @@ class AccountSettingsInformation(object):
     def read_only_mode_metadata(self, read_only_mode_metadata):
         """Sets the read_only_mode_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param read_only_mode_metadata: The read_only_mode_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12600,6 +13704,7 @@ class AccountSettingsInformation(object):
     def recipients_can_sign_offline_metadata(self):
         """Gets the recipients_can_sign_offline_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `recipientsCanSignOffline` property is editable.   # noqa: E501
 
         :return: The recipients_can_sign_offline_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12610,6 +13715,7 @@ class AccountSettingsInformation(object):
     def recipients_can_sign_offline_metadata(self, recipients_can_sign_offline_metadata):
         """Sets the recipients_can_sign_offline_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `recipientsCanSignOffline` property is editable.   # noqa: E501
 
         :param recipients_can_sign_offline_metadata: The recipients_can_sign_offline_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12644,6 +13750,7 @@ class AccountSettingsInformation(object):
     def recipient_signing_auto_navigation_control_metadata(self):
         """Gets the recipient_signing_auto_navigation_control_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `recipientSigningAutoNavigationControl` property is editable.   # noqa: E501
 
         :return: The recipient_signing_auto_navigation_control_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12654,6 +13761,7 @@ class AccountSettingsInformation(object):
     def recipient_signing_auto_navigation_control_metadata(self, recipient_signing_auto_navigation_control_metadata):
         """Sets the recipient_signing_auto_navigation_control_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `recipientSigningAutoNavigationControl` property is editable.   # noqa: E501
 
         :param recipient_signing_auto_navigation_control_metadata: The recipient_signing_auto_navigation_control_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12688,6 +13796,7 @@ class AccountSettingsInformation(object):
     def require21_cf_rpt11_compliance_metadata(self):
         """Gets the require21_cf_rpt11_compliance_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `require21CFRpt11Compliance` property is editable.   # noqa: E501
 
         :return: The require21_cf_rpt11_compliance_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12698,6 +13807,7 @@ class AccountSettingsInformation(object):
     def require21_cf_rpt11_compliance_metadata(self, require21_cf_rpt11_compliance_metadata):
         """Sets the require21_cf_rpt11_compliance_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `require21CFRpt11Compliance` property is editable.   # noqa: E501
 
         :param require21_cf_rpt11_compliance_metadata: The require21_cf_rpt11_compliance_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12732,6 +13842,7 @@ class AccountSettingsInformation(object):
     def require_decline_reason_metadata(self):
         """Gets the require_decline_reason_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `requireDeclineReason` property is editable.   # noqa: E501
 
         :return: The require_decline_reason_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12742,6 +13853,7 @@ class AccountSettingsInformation(object):
     def require_decline_reason_metadata(self, require_decline_reason_metadata):
         """Sets the require_decline_reason_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `requireDeclineReason` property is editable.   # noqa: E501
 
         :param require_decline_reason_metadata: The require_decline_reason_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12776,6 +13888,7 @@ class AccountSettingsInformation(object):
     def require_external_user_management_metadata(self):
         """Gets the require_external_user_management_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `requireExternalUserManagement` property is editable.   # noqa: E501
 
         :return: The require_external_user_management_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12786,6 +13899,7 @@ class AccountSettingsInformation(object):
     def require_external_user_management_metadata(self, require_external_user_management_metadata):
         """Sets the require_external_user_management_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `requireExternalUserManagement` property is editable.   # noqa: E501
 
         :param require_external_user_management_metadata: The require_external_user_management_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12820,6 +13934,7 @@ class AccountSettingsInformation(object):
     def require_signer_certificate_type_metadata(self):
         """Gets the require_signer_certificate_type_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `requireSignerCertificateType` property is editable.   # noqa: E501
 
         :return: The require_signer_certificate_type_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12830,6 +13945,7 @@ class AccountSettingsInformation(object):
     def require_signer_certificate_type_metadata(self, require_signer_certificate_type_metadata):
         """Sets the require_signer_certificate_type_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `requireSignerCertificateType` property is editable.   # noqa: E501
 
         :param require_signer_certificate_type_metadata: The require_signer_certificate_type_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12956,6 +14072,7 @@ class AccountSettingsInformation(object):
     def self_signed_recipient_email_document_metadata(self):
         """Gets the self_signed_recipient_email_document_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable.   # noqa: E501
 
         :return: The self_signed_recipient_email_document_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12966,6 +14083,7 @@ class AccountSettingsInformation(object):
     def self_signed_recipient_email_document_metadata(self, self_signed_recipient_email_document_metadata):
         """Sets the self_signed_recipient_email_document_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable.   # noqa: E501
 
         :param self_signed_recipient_email_document_metadata: The self_signed_recipient_email_document_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13000,6 +14118,7 @@ class AccountSettingsInformation(object):
     def self_signed_recipient_email_document_user_override_metadata(self):
         """Gets the self_signed_recipient_email_document_user_override_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `selfSignedRecipientEmailDocumentUserOverride` property is editable.   # noqa: E501
 
         :return: The self_signed_recipient_email_document_user_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13010,6 +14129,7 @@ class AccountSettingsInformation(object):
     def self_signed_recipient_email_document_user_override_metadata(self, self_signed_recipient_email_document_user_override_metadata):
         """Sets the self_signed_recipient_email_document_user_override_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `selfSignedRecipientEmailDocumentUserOverride` property is editable.   # noqa: E501
 
         :param self_signed_recipient_email_document_user_override_metadata: The self_signed_recipient_email_document_user_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13044,6 +14164,7 @@ class AccountSettingsInformation(object):
     def sender_can_sign_in_each_location_metadata(self):
         """Gets the sender_can_sign_in_each_location_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `senderCanSignInEachLocation` property is editable.   # noqa: E501
 
         :return: The sender_can_sign_in_each_location_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13054,6 +14175,7 @@ class AccountSettingsInformation(object):
     def sender_can_sign_in_each_location_metadata(self, sender_can_sign_in_each_location_metadata):
         """Sets the sender_can_sign_in_each_location_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `senderCanSignInEachLocation` property is editable.   # noqa: E501
 
         :param sender_can_sign_in_each_location_metadata: The sender_can_sign_in_each_location_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13088,6 +14210,7 @@ class AccountSettingsInformation(object):
     def sender_must_authenticate_signing_metadata(self):
         """Gets the sender_must_authenticate_signing_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `senderMustAuthenticateSigning` property is editable.   # noqa: E501
 
         :return: The sender_must_authenticate_signing_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13098,6 +14221,7 @@ class AccountSettingsInformation(object):
     def sender_must_authenticate_signing_metadata(self, sender_must_authenticate_signing_metadata):
         """Sets the sender_must_authenticate_signing_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `senderMustAuthenticateSigning` property is editable.   # noqa: E501
 
         :param sender_must_authenticate_signing_metadata: The sender_must_authenticate_signing_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13132,6 +14256,7 @@ class AccountSettingsInformation(object):
     def sending_tags_font_color_metadata(self):
         """Gets the sending_tags_font_color_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `sendingTagsFontColor` property is editable.   # noqa: E501
 
         :return: The sending_tags_font_color_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13142,6 +14267,7 @@ class AccountSettingsInformation(object):
     def sending_tags_font_color_metadata(self, sending_tags_font_color_metadata):
         """Sets the sending_tags_font_color_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `sendingTagsFontColor` property is editable.   # noqa: E501
 
         :param sending_tags_font_color_metadata: The sending_tags_font_color_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13176,6 +14302,7 @@ class AccountSettingsInformation(object):
     def sending_tags_font_name_metadata(self):
         """Gets the sending_tags_font_name_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `sendingTagsFontName` property is editable.   # noqa: E501
 
         :return: The sending_tags_font_name_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13186,6 +14313,7 @@ class AccountSettingsInformation(object):
     def sending_tags_font_name_metadata(self, sending_tags_font_name_metadata):
         """Sets the sending_tags_font_name_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `sendingTagsFontName` property is editable.   # noqa: E501
 
         :param sending_tags_font_name_metadata: The sending_tags_font_name_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13220,6 +14348,7 @@ class AccountSettingsInformation(object):
     def sending_tags_font_size_metadata(self):
         """Gets the sending_tags_font_size_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `sendingTagsFontSize` property is editable.   # noqa: E501
 
         :return: The sending_tags_font_size_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13230,6 +14359,7 @@ class AccountSettingsInformation(object):
     def sending_tags_font_size_metadata(self, sending_tags_font_size_metadata):
         """Sets the sending_tags_font_size_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `sendingTagsFontSize` property is editable.   # noqa: E501
 
         :param sending_tags_font_size_metadata: The sending_tags_font_size_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13264,6 +14394,7 @@ class AccountSettingsInformation(object):
     def send_lockout_recipient_notification_metadata(self):
         """Gets the send_lockout_recipient_notification_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The send_lockout_recipient_notification_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13274,6 +14405,7 @@ class AccountSettingsInformation(object):
     def send_lockout_recipient_notification_metadata(self, send_lockout_recipient_notification_metadata):
         """Sets the send_lockout_recipient_notification_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param send_lockout_recipient_notification_metadata: The send_lockout_recipient_notification_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13308,6 +14440,7 @@ class AccountSettingsInformation(object):
     def send_to_certified_delivery_enabled_metadata(self):
         """Gets the send_to_certified_delivery_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `sendToCertifiedDeliveryEnabled` property is editable.   # noqa: E501
 
         :return: The send_to_certified_delivery_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13318,6 +14451,7 @@ class AccountSettingsInformation(object):
     def send_to_certified_delivery_enabled_metadata(self, send_to_certified_delivery_enabled_metadata):
         """Sets the send_to_certified_delivery_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `sendToCertifiedDeliveryEnabled` property is editable.   # noqa: E501
 
         :param send_to_certified_delivery_enabled_metadata: The send_to_certified_delivery_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13352,6 +14486,7 @@ class AccountSettingsInformation(object):
     def session_timeout_metadata(self):
         """Gets the session_timeout_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `sessionTimeout` property is editable.   # noqa: E501
 
         :return: The session_timeout_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13362,6 +14497,7 @@ class AccountSettingsInformation(object):
     def session_timeout_metadata(self, session_timeout_metadata):
         """Sets the session_timeout_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `sessionTimeout` property is editable.   # noqa: E501
 
         :param session_timeout_metadata: The session_timeout_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13396,6 +14532,7 @@ class AccountSettingsInformation(object):
     def set_recip_email_lang_metadata(self):
         """Gets the set_recip_email_lang_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `setRecipEmailLang` property is editable.   # noqa: E501
 
         :return: The set_recip_email_lang_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13406,6 +14543,7 @@ class AccountSettingsInformation(object):
     def set_recip_email_lang_metadata(self, set_recip_email_lang_metadata):
         """Sets the set_recip_email_lang_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `setRecipEmailLang` property is editable.   # noqa: E501
 
         :param set_recip_email_lang_metadata: The set_recip_email_lang_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13440,6 +14578,7 @@ class AccountSettingsInformation(object):
     def set_recip_sign_lang_metadata(self):
         """Gets the set_recip_sign_lang_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `setRecipSignLang` property is editable.   # noqa: E501
 
         :return: The set_recip_sign_lang_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13450,6 +14589,7 @@ class AccountSettingsInformation(object):
     def set_recip_sign_lang_metadata(self, set_recip_sign_lang_metadata):
         """Sets the set_recip_sign_lang_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `setRecipSignLang` property is editable.   # noqa: E501
 
         :param set_recip_sign_lang_metadata: The set_recip_sign_lang_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13484,6 +14624,7 @@ class AccountSettingsInformation(object):
     def shared_template_folders_metadata(self):
         """Gets the shared_template_folders_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `sharedTemplateFolders` property is editable.   # noqa: E501
 
         :return: The shared_template_folders_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13494,6 +14635,7 @@ class AccountSettingsInformation(object):
     def shared_template_folders_metadata(self, shared_template_folders_metadata):
         """Sets the shared_template_folders_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `sharedTemplateFolders` property is editable.   # noqa: E501
 
         :param shared_template_folders_metadata: The shared_template_folders_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13528,6 +14670,7 @@ class AccountSettingsInformation(object):
     def show_complete_dialog_in_embedded_session_metadata(self):
         """Gets the show_complete_dialog_in_embedded_session_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `showCompleteDialogInEmbeddedSession` property is editable.   # noqa: E501
 
         :return: The show_complete_dialog_in_embedded_session_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13538,6 +14681,7 @@ class AccountSettingsInformation(object):
     def show_complete_dialog_in_embedded_session_metadata(self, show_complete_dialog_in_embedded_session_metadata):
         """Sets the show_complete_dialog_in_embedded_session_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `showCompleteDialogInEmbeddedSession` property is editable.   # noqa: E501
 
         :param show_complete_dialog_in_embedded_session_metadata: The show_complete_dialog_in_embedded_session_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13572,6 +14716,7 @@ class AccountSettingsInformation(object):
     def show_conditional_routing_on_send_metadata(self):
         """Gets the show_conditional_routing_on_send_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The show_conditional_routing_on_send_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13582,6 +14727,7 @@ class AccountSettingsInformation(object):
     def show_conditional_routing_on_send_metadata(self, show_conditional_routing_on_send_metadata):
         """Sets the show_conditional_routing_on_send_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param show_conditional_routing_on_send_metadata: The show_conditional_routing_on_send_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13616,6 +14762,7 @@ class AccountSettingsInformation(object):
     def show_initial_conditional_fields_metadata(self):
         """Gets the show_initial_conditional_fields_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `showInitialConditionalFields` property is editable.   # noqa: E501
 
         :return: The show_initial_conditional_fields_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13626,6 +14773,7 @@ class AccountSettingsInformation(object):
     def show_initial_conditional_fields_metadata(self, show_initial_conditional_fields_metadata):
         """Sets the show_initial_conditional_fields_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `showInitialConditionalFields` property is editable.   # noqa: E501
 
         :param show_initial_conditional_fields_metadata: The show_initial_conditional_fields_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13660,6 +14808,7 @@ class AccountSettingsInformation(object):
     def show_localized_watermarks_metadata(self):
         """Gets the show_localized_watermarks_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `showLocalizedWatermarks` property is editable.   # noqa: E501
 
         :return: The show_localized_watermarks_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13670,6 +14819,7 @@ class AccountSettingsInformation(object):
     def show_localized_watermarks_metadata(self, show_localized_watermarks_metadata):
         """Sets the show_localized_watermarks_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `showLocalizedWatermarks` property is editable.   # noqa: E501
 
         :param show_localized_watermarks_metadata: The show_localized_watermarks_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13704,6 +14854,7 @@ class AccountSettingsInformation(object):
     def show_masked_fields_when_downloading_document_as_sender_metadata(self):
         """Gets the show_masked_fields_when_downloading_document_as_sender_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The show_masked_fields_when_downloading_document_as_sender_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13714,6 +14865,7 @@ class AccountSettingsInformation(object):
     def show_masked_fields_when_downloading_document_as_sender_metadata(self, show_masked_fields_when_downloading_document_as_sender_metadata):
         """Sets the show_masked_fields_when_downloading_document_as_sender_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param show_masked_fields_when_downloading_document_as_sender_metadata: The show_masked_fields_when_downloading_document_as_sender_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13748,6 +14900,7 @@ class AccountSettingsInformation(object):
     def show_tutorials_metadata(self):
         """Gets the show_tutorials_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `showTutorials` property is editable.   # noqa: E501
 
         :return: The show_tutorials_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13758,6 +14911,7 @@ class AccountSettingsInformation(object):
     def show_tutorials_metadata(self, show_tutorials_metadata):
         """Sets the show_tutorials_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `showTutorials` property is editable.   # noqa: E501
 
         :param show_tutorials_metadata: The show_tutorials_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13792,6 +14946,7 @@ class AccountSettingsInformation(object):
     def signature_providers_metadata(self):
         """Gets the signature_providers_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signatureProviders` property is editable.   # noqa: E501
 
         :return: The signature_providers_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13802,6 +14957,7 @@ class AccountSettingsInformation(object):
     def signature_providers_metadata(self, signature_providers_metadata):
         """Sets the signature_providers_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signatureProviders` property is editable.   # noqa: E501
 
         :param signature_providers_metadata: The signature_providers_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13836,6 +14992,7 @@ class AccountSettingsInformation(object):
     def sign_date_format_metadata(self):
         """Gets the sign_date_format_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signDateFormat` property is editable.   # noqa: E501
 
         :return: The sign_date_format_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13846,6 +15003,7 @@ class AccountSettingsInformation(object):
     def sign_date_format_metadata(self, sign_date_format_metadata):
         """Sets the sign_date_format_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signDateFormat` property is editable.   # noqa: E501
 
         :param sign_date_format_metadata: The sign_date_format_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13880,6 +15038,7 @@ class AccountSettingsInformation(object):
     def sign_date_time_account_language_override_metadata(self):
         """Gets the sign_date_time_account_language_override_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The sign_date_time_account_language_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13890,6 +15049,7 @@ class AccountSettingsInformation(object):
     def sign_date_time_account_language_override_metadata(self, sign_date_time_account_language_override_metadata):
         """Sets the sign_date_time_account_language_override_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param sign_date_time_account_language_override_metadata: The sign_date_time_account_language_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13924,6 +15084,7 @@ class AccountSettingsInformation(object):
     def sign_date_time_account_timezone_override_metadata(self):
         """Gets the sign_date_time_account_timezone_override_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The sign_date_time_account_timezone_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13934,6 +15095,7 @@ class AccountSettingsInformation(object):
     def sign_date_time_account_timezone_override_metadata(self, sign_date_time_account_timezone_override_metadata):
         """Sets the sign_date_time_account_timezone_override_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param sign_date_time_account_timezone_override_metadata: The sign_date_time_account_timezone_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13968,6 +15130,7 @@ class AccountSettingsInformation(object):
     def signer_attach_certificate_to_envelope_pdf_metadata(self):
         """Gets the signer_attach_certificate_to_envelope_pdf_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signerAttachCertificateToEnvelopePDF` property is editable.   # noqa: E501
 
         :return: The signer_attach_certificate_to_envelope_pdf_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13978,6 +15141,7 @@ class AccountSettingsInformation(object):
     def signer_attach_certificate_to_envelope_pdf_metadata(self, signer_attach_certificate_to_envelope_pdf_metadata):
         """Sets the signer_attach_certificate_to_envelope_pdf_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signerAttachCertificateToEnvelopePDF` property is editable.   # noqa: E501
 
         :param signer_attach_certificate_to_envelope_pdf_metadata: The signer_attach_certificate_to_envelope_pdf_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14012,6 +15176,7 @@ class AccountSettingsInformation(object):
     def signer_attach_concat_metadata(self):
         """Gets the signer_attach_concat_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signerAttachConcat` property is editable.   # noqa: E501
 
         :return: The signer_attach_concat_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14022,6 +15187,7 @@ class AccountSettingsInformation(object):
     def signer_attach_concat_metadata(self, signer_attach_concat_metadata):
         """Sets the signer_attach_concat_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signerAttachConcat` property is editable.   # noqa: E501
 
         :param signer_attach_concat_metadata: The signer_attach_concat_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14056,6 +15222,7 @@ class AccountSettingsInformation(object):
     def signer_can_create_account_metadata(self):
         """Gets the signer_can_create_account_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signerCanCreateAccount` property is editable.   # noqa: E501
 
         :return: The signer_can_create_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14066,6 +15233,7 @@ class AccountSettingsInformation(object):
     def signer_can_create_account_metadata(self, signer_can_create_account_metadata):
         """Sets the signer_can_create_account_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signerCanCreateAccount` property is editable.   # noqa: E501
 
         :param signer_can_create_account_metadata: The signer_can_create_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14100,6 +15268,7 @@ class AccountSettingsInformation(object):
     def signer_can_sign_on_mobile_metadata(self):
         """Gets the signer_can_sign_on_mobile_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signerCanSignOnMobile` property is editable.   # noqa: E501
 
         :return: The signer_can_sign_on_mobile_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14110,6 +15279,7 @@ class AccountSettingsInformation(object):
     def signer_can_sign_on_mobile_metadata(self, signer_can_sign_on_mobile_metadata):
         """Sets the signer_can_sign_on_mobile_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signerCanSignOnMobile` property is editable.   # noqa: E501
 
         :param signer_can_sign_on_mobile_metadata: The signer_can_sign_on_mobile_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14144,6 +15314,7 @@ class AccountSettingsInformation(object):
     def signer_in_session_use_envelope_complete_email_metadata(self):
         """Gets the signer_in_session_use_envelope_complete_email_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signerInSessionUseEnvelopeCompleteEmail` property is editable.   # noqa: E501
 
         :return: The signer_in_session_use_envelope_complete_email_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14154,6 +15325,7 @@ class AccountSettingsInformation(object):
     def signer_in_session_use_envelope_complete_email_metadata(self, signer_in_session_use_envelope_complete_email_metadata):
         """Sets the signer_in_session_use_envelope_complete_email_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signerInSessionUseEnvelopeCompleteEmail` property is editable.   # noqa: E501
 
         :param signer_in_session_use_envelope_complete_email_metadata: The signer_in_session_use_envelope_complete_email_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14188,6 +15360,7 @@ class AccountSettingsInformation(object):
     def signer_login_requirements_metadata(self):
         """Gets the signer_login_requirements_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signerLoginRequirements` property is editable.   # noqa: E501
 
         :return: The signer_login_requirements_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14198,6 +15371,7 @@ class AccountSettingsInformation(object):
     def signer_login_requirements_metadata(self, signer_login_requirements_metadata):
         """Sets the signer_login_requirements_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signerLoginRequirements` property is editable.   # noqa: E501
 
         :param signer_login_requirements_metadata: The signer_login_requirements_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14232,6 +15406,7 @@ class AccountSettingsInformation(object):
     def signer_must_have_account_metadata(self):
         """Gets the signer_must_have_account_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signerMustHaveAccount` property is editable.   # noqa: E501
 
         :return: The signer_must_have_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14242,6 +15417,7 @@ class AccountSettingsInformation(object):
     def signer_must_have_account_metadata(self, signer_must_have_account_metadata):
         """Sets the signer_must_have_account_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signerMustHaveAccount` property is editable.   # noqa: E501
 
         :param signer_must_have_account_metadata: The signer_must_have_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14276,6 +15452,7 @@ class AccountSettingsInformation(object):
     def signer_must_login_to_sign_metadata(self):
         """Gets the signer_must_login_to_sign_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signerMustLoginToSign` property is editable.   # noqa: E501
 
         :return: The signer_must_login_to_sign_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14286,6 +15463,7 @@ class AccountSettingsInformation(object):
     def signer_must_login_to_sign_metadata(self, signer_must_login_to_sign_metadata):
         """Sets the signer_must_login_to_sign_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signerMustLoginToSign` property is editable.   # noqa: E501
 
         :param signer_must_login_to_sign_metadata: The signer_must_login_to_sign_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14320,6 +15498,7 @@ class AccountSettingsInformation(object):
     def signer_show_secure_field_initial_values_metadata(self):
         """Gets the signer_show_secure_field_initial_values_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signerShowSecureFieldInitialValues` property is editable.   # noqa: E501
 
         :return: The signer_show_secure_field_initial_values_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14330,6 +15509,7 @@ class AccountSettingsInformation(object):
     def signer_show_secure_field_initial_values_metadata(self, signer_show_secure_field_initial_values_metadata):
         """Sets the signer_show_secure_field_initial_values_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signerShowSecureFieldInitialValues` property is editable.   # noqa: E501
 
         :param signer_show_secure_field_initial_values_metadata: The signer_show_secure_field_initial_values_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14364,6 +15544,7 @@ class AccountSettingsInformation(object):
     def signing_session_timeout_metadata(self):
         """Gets the signing_session_timeout_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signingSessionTimeout` property is editable.   # noqa: E501
 
         :return: The signing_session_timeout_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14374,6 +15555,7 @@ class AccountSettingsInformation(object):
     def signing_session_timeout_metadata(self, signing_session_timeout_metadata):
         """Sets the signing_session_timeout_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signingSessionTimeout` property is editable.   # noqa: E501
 
         :param signing_session_timeout_metadata: The signing_session_timeout_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14408,6 +15590,7 @@ class AccountSettingsInformation(object):
     def signing_ui_version_metadata(self):
         """Gets the signing_ui_version_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The signing_ui_version_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14418,6 +15601,7 @@ class AccountSettingsInformation(object):
     def signing_ui_version_metadata(self, signing_ui_version_metadata):
         """Sets the signing_ui_version_metadata of this AccountSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param signing_ui_version_metadata: The signing_ui_version_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14452,6 +15636,7 @@ class AccountSettingsInformation(object):
     def sign_time_format_metadata(self):
         """Gets the sign_time_format_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signTimeFormat` property is editable.   # noqa: E501
 
         :return: The sign_time_format_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14462,6 +15647,7 @@ class AccountSettingsInformation(object):
     def sign_time_format_metadata(self, sign_time_format_metadata):
         """Sets the sign_time_format_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signTimeFormat` property is editable.   # noqa: E501
 
         :param sign_time_format_metadata: The sign_time_format_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14496,6 +15682,7 @@ class AccountSettingsInformation(object):
     def sign_time_show_am_pm_metadata(self):
         """Gets the sign_time_show_am_pm_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `signTimeShowAmPm` property is editable.   # noqa: E501
 
         :return: The sign_time_show_am_pm_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14506,6 +15693,7 @@ class AccountSettingsInformation(object):
     def sign_time_show_am_pm_metadata(self, sign_time_show_am_pm_metadata):
         """Sets the sign_time_show_am_pm_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `signTimeShowAmPm` property is editable.   # noqa: E501
 
         :param sign_time_show_am_pm_metadata: The sign_time_show_am_pm_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14540,6 +15728,7 @@ class AccountSettingsInformation(object):
     def simplified_sending_enabled_metadata(self):
         """Gets the simplified_sending_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `simplifiedSendingEnabled` property is editable.   # noqa: E501
 
         :return: The simplified_sending_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14550,6 +15739,7 @@ class AccountSettingsInformation(object):
     def simplified_sending_enabled_metadata(self, simplified_sending_enabled_metadata):
         """Sets the simplified_sending_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `simplifiedSendingEnabled` property is editable.   # noqa: E501
 
         :param simplified_sending_enabled_metadata: The simplified_sending_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14584,6 +15774,7 @@ class AccountSettingsInformation(object):
     def single_sign_on_enabled_metadata(self):
         """Gets the single_sign_on_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `singleSignOnEnabled` property is editable.   # noqa: E501
 
         :return: The single_sign_on_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14594,6 +15785,7 @@ class AccountSettingsInformation(object):
     def single_sign_on_enabled_metadata(self, single_sign_on_enabled_metadata):
         """Sets the single_sign_on_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `singleSignOnEnabled` property is editable.   # noqa: E501
 
         :param single_sign_on_enabled_metadata: The single_sign_on_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14628,6 +15820,7 @@ class AccountSettingsInformation(object):
     def skip_auth_completed_envelopes_metadata(self):
         """Gets the skip_auth_completed_envelopes_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `skipAuthCompletedEnvelopes` property is editable.   # noqa: E501
 
         :return: The skip_auth_completed_envelopes_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14638,6 +15831,7 @@ class AccountSettingsInformation(object):
     def skip_auth_completed_envelopes_metadata(self, skip_auth_completed_envelopes_metadata):
         """Sets the skip_auth_completed_envelopes_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `skipAuthCompletedEnvelopes` property is editable.   # noqa: E501
 
         :param skip_auth_completed_envelopes_metadata: The skip_auth_completed_envelopes_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14672,6 +15866,7 @@ class AccountSettingsInformation(object):
     def social_id_recip_auth_metadata(self):
         """Gets the social_id_recip_auth_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `socialIdRecipAuth` property is editable.   # noqa: E501
 
         :return: The social_id_recip_auth_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14682,6 +15877,7 @@ class AccountSettingsInformation(object):
     def social_id_recip_auth_metadata(self, social_id_recip_auth_metadata):
         """Sets the social_id_recip_auth_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `socialIdRecipAuth` property is editable.   # noqa: E501
 
         :param social_id_recip_auth_metadata: The social_id_recip_auth_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14716,6 +15912,7 @@ class AccountSettingsInformation(object):
     def specify_document_visibility_metadata(self):
         """Gets the specify_document_visibility_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `specifyDocumentVisibility` property is editable.   # noqa: E501
 
         :return: The specify_document_visibility_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14726,6 +15923,7 @@ class AccountSettingsInformation(object):
     def specify_document_visibility_metadata(self, specify_document_visibility_metadata):
         """Sets the specify_document_visibility_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `specifyDocumentVisibility` property is editable.   # noqa: E501
 
         :param specify_document_visibility_metadata: The specify_document_visibility_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14760,6 +15958,7 @@ class AccountSettingsInformation(object):
     def start_in_advanced_correct_metadata(self):
         """Gets the start_in_advanced_correct_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `startInAdvancedCorrect` property is editable.   # noqa: E501
 
         :return: The start_in_advanced_correct_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14770,6 +15969,7 @@ class AccountSettingsInformation(object):
     def start_in_advanced_correct_metadata(self, start_in_advanced_correct_metadata):
         """Sets the start_in_advanced_correct_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `startInAdvancedCorrect` property is editable.   # noqa: E501
 
         :param start_in_advanced_correct_metadata: The start_in_advanced_correct_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14804,6 +16004,7 @@ class AccountSettingsInformation(object):
     def supplemental_documents_must_accept_metadata(self):
         """Gets the supplemental_documents_must_accept_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable.   # noqa: E501
 
         :return: The supplemental_documents_must_accept_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14814,6 +16015,7 @@ class AccountSettingsInformation(object):
     def supplemental_documents_must_accept_metadata(self, supplemental_documents_must_accept_metadata):
         """Sets the supplemental_documents_must_accept_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable.   # noqa: E501
 
         :param supplemental_documents_must_accept_metadata: The supplemental_documents_must_accept_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14848,6 +16050,7 @@ class AccountSettingsInformation(object):
     def supplemental_documents_must_read_metadata(self):
         """Gets the supplemental_documents_must_read_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable.   # noqa: E501
 
         :return: The supplemental_documents_must_read_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14858,6 +16061,7 @@ class AccountSettingsInformation(object):
     def supplemental_documents_must_read_metadata(self, supplemental_documents_must_read_metadata):
         """Sets the supplemental_documents_must_read_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable.   # noqa: E501
 
         :param supplemental_documents_must_read_metadata: The supplemental_documents_must_read_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14892,6 +16096,7 @@ class AccountSettingsInformation(object):
     def supplemental_documents_must_view_metadata(self):
         """Gets the supplemental_documents_must_view_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `supplementalDocumentsMustView` property is editable.   # noqa: E501
 
         :return: The supplemental_documents_must_view_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14902,6 +16107,7 @@ class AccountSettingsInformation(object):
     def supplemental_documents_must_view_metadata(self, supplemental_documents_must_view_metadata):
         """Sets the supplemental_documents_must_view_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `supplementalDocumentsMustView` property is editable.   # noqa: E501
 
         :param supplemental_documents_must_view_metadata: The supplemental_documents_must_view_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14936,6 +16142,7 @@ class AccountSettingsInformation(object):
     def suppress_certificate_enforcement_metadata(self):
         """Gets the suppress_certificate_enforcement_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `suppressCertificateEnforcement` property is editable.   # noqa: E501
 
         :return: The suppress_certificate_enforcement_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14946,6 +16153,7 @@ class AccountSettingsInformation(object):
     def suppress_certificate_enforcement_metadata(self, suppress_certificate_enforcement_metadata):
         """Sets the suppress_certificate_enforcement_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `suppressCertificateEnforcement` property is editable.   # noqa: E501
 
         :param suppress_certificate_enforcement_metadata: The suppress_certificate_enforcement_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14957,6 +16165,7 @@ class AccountSettingsInformation(object):
     def tab_account_settings(self):
         """Gets the tab_account_settings of this AccountSettingsInformation.  # noqa: E501
 
+        Account-wide tab settings.  # noqa: E501
 
         :return: The tab_account_settings of this AccountSettingsInformation.  # noqa: E501
         :rtype: TabAccountSettings
@@ -14967,6 +16176,7 @@ class AccountSettingsInformation(object):
     def tab_account_settings(self, tab_account_settings):
         """Sets the tab_account_settings of this AccountSettingsInformation.
 
+        Account-wide tab settings.  # noqa: E501
 
         :param tab_account_settings: The tab_account_settings of this AccountSettingsInformation.  # noqa: E501
         :type: TabAccountSettings
@@ -15001,6 +16211,7 @@ class AccountSettingsInformation(object):
     def timezone_offset_api_metadata(self):
         """Gets the timezone_offset_api_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `timezoneOffsetAPI` property is editable.   # noqa: E501
 
         :return: The timezone_offset_api_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15011,6 +16222,7 @@ class AccountSettingsInformation(object):
     def timezone_offset_api_metadata(self, timezone_offset_api_metadata):
         """Sets the timezone_offset_api_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `timezoneOffsetAPI` property is editable.   # noqa: E501
 
         :param timezone_offset_api_metadata: The timezone_offset_api_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15045,6 +16257,7 @@ class AccountSettingsInformation(object):
     def timezone_offset_ui_metadata(self):
         """Gets the timezone_offset_ui_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `timezoneOffsetUI` property is editable.   # noqa: E501
 
         :return: The timezone_offset_ui_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15055,6 +16268,7 @@ class AccountSettingsInformation(object):
     def timezone_offset_ui_metadata(self, timezone_offset_ui_metadata):
         """Sets the timezone_offset_ui_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `timezoneOffsetUI` property is editable.   # noqa: E501
 
         :param timezone_offset_ui_metadata: The timezone_offset_ui_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15112,6 +16326,7 @@ class AccountSettingsInformation(object):
     def use_account_level_email_metadata(self):
         """Gets the use_account_level_email_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `useAccountLevelEmail` property is editable.   # noqa: E501
 
         :return: The use_account_level_email_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15122,6 +16337,7 @@ class AccountSettingsInformation(object):
     def use_account_level_email_metadata(self, use_account_level_email_metadata):
         """Sets the use_account_level_email_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `useAccountLevelEmail` property is editable.   # noqa: E501
 
         :param use_account_level_email_metadata: The use_account_level_email_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15156,6 +16372,7 @@ class AccountSettingsInformation(object):
     def use_consumer_disclosure_metadata(self):
         """Gets the use_consumer_disclosure_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `useConsumerDisclosure` property is editable.   # noqa: E501
 
         :return: The use_consumer_disclosure_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15166,6 +16383,7 @@ class AccountSettingsInformation(object):
     def use_consumer_disclosure_metadata(self, use_consumer_disclosure_metadata):
         """Sets the use_consumer_disclosure_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `useConsumerDisclosure` property is editable.   # noqa: E501
 
         :param use_consumer_disclosure_metadata: The use_consumer_disclosure_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15200,6 +16418,7 @@ class AccountSettingsInformation(object):
     def use_consumer_disclosure_within_account_metadata(self):
         """Gets the use_consumer_disclosure_within_account_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable.   # noqa: E501
 
         :return: The use_consumer_disclosure_within_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15210,6 +16429,7 @@ class AccountSettingsInformation(object):
     def use_consumer_disclosure_within_account_metadata(self, use_consumer_disclosure_within_account_metadata):
         """Sets the use_consumer_disclosure_within_account_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable.   # noqa: E501
 
         :param use_consumer_disclosure_within_account_metadata: The use_consumer_disclosure_within_account_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15244,6 +16464,7 @@ class AccountSettingsInformation(object):
     def use_derived_keys_metadata(self):
         """Gets the use_derived_keys_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `useDerivedKeys` property is editable.   # noqa: E501
 
         :return: The use_derived_keys_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15254,6 +16475,7 @@ class AccountSettingsInformation(object):
     def use_derived_keys_metadata(self, use_derived_keys_metadata):
         """Sets the use_derived_keys_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `useDerivedKeys` property is editable.   # noqa: E501
 
         :param use_derived_keys_metadata: The use_derived_keys_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15288,6 +16510,7 @@ class AccountSettingsInformation(object):
     def use_docu_sign_express_signer_certificate_metadata(self):
         """Gets the use_docu_sign_express_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `useDocuSignExpressSignerCertificate` property is editable.   # noqa: E501
 
         :return: The use_docu_sign_express_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15298,6 +16521,7 @@ class AccountSettingsInformation(object):
     def use_docu_sign_express_signer_certificate_metadata(self, use_docu_sign_express_signer_certificate_metadata):
         """Sets the use_docu_sign_express_signer_certificate_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `useDocuSignExpressSignerCertificate` property is editable.   # noqa: E501
 
         :param use_docu_sign_express_signer_certificate_metadata: The use_docu_sign_express_signer_certificate_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15332,6 +16556,7 @@ class AccountSettingsInformation(object):
     def use_multi_app_groups_data_metadata(self):
         """Gets the use_multi_app_groups_data_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The use_multi_app_groups_data_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15342,6 +16567,7 @@ class AccountSettingsInformation(object):
     def use_multi_app_groups_data_metadata(self, use_multi_app_groups_data_metadata):
         """Sets the use_multi_app_groups_data_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param use_multi_app_groups_data_metadata: The use_multi_app_groups_data_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15376,6 +16602,7 @@ class AccountSettingsInformation(object):
     def use_new_blob_for_pdf_metadata(self):
         """Gets the use_new_blob_for_pdf_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `useNewBlobForPdf` property is editable.   # noqa: E501
 
         :return: The use_new_blob_for_pdf_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15386,6 +16613,7 @@ class AccountSettingsInformation(object):
     def use_new_blob_for_pdf_metadata(self, use_new_blob_for_pdf_metadata):
         """Sets the use_new_blob_for_pdf_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `useNewBlobForPdf` property is editable.   # noqa: E501
 
         :param use_new_blob_for_pdf_metadata: The use_new_blob_for_pdf_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15420,6 +16648,7 @@ class AccountSettingsInformation(object):
     def use_safe_signer_certificates_metadata(self):
         """Gets the use_safe_signer_certificates_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `useSAFESignerCertificates` property is editable.   # noqa: E501
 
         :return: The use_safe_signer_certificates_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15430,6 +16659,7 @@ class AccountSettingsInformation(object):
     def use_safe_signer_certificates_metadata(self, use_safe_signer_certificates_metadata):
         """Sets the use_safe_signer_certificates_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `useSAFESignerCertificates` property is editable.   # noqa: E501
 
         :param use_safe_signer_certificates_metadata: The use_safe_signer_certificates_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15464,6 +16694,7 @@ class AccountSettingsInformation(object):
     def uses_api_metadata(self):
         """Gets the uses_api_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `usesAPI` property is editable.   # noqa: E501
 
         :return: The uses_api_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15474,6 +16705,7 @@ class AccountSettingsInformation(object):
     def uses_api_metadata(self, uses_api_metadata):
         """Sets the uses_api_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `usesAPI` property is editable.   # noqa: E501
 
         :param uses_api_metadata: The uses_api_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15508,6 +16740,7 @@ class AccountSettingsInformation(object):
     def use_signature_provider_platform_metadata(self):
         """Gets the use_signature_provider_platform_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `useSignatureProviderPlatform` property is editable.   # noqa: E501
 
         :return: The use_signature_provider_platform_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15518,6 +16751,7 @@ class AccountSettingsInformation(object):
     def use_signature_provider_platform_metadata(self, use_signature_provider_platform_metadata):
         """Sets the use_signature_provider_platform_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `useSignatureProviderPlatform` property is editable.   # noqa: E501
 
         :param use_signature_provider_platform_metadata: The use_signature_provider_platform_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15575,6 +16809,7 @@ class AccountSettingsInformation(object):
     def validations_allowed_metadata(self):
         """Gets the validations_allowed_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `validationsAllowed` property is editable.   # noqa: E501
 
         :return: The validations_allowed_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15585,6 +16820,7 @@ class AccountSettingsInformation(object):
     def validations_allowed_metadata(self, validations_allowed_metadata):
         """Sets the validations_allowed_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `validationsAllowed` property is editable.   # noqa: E501
 
         :param validations_allowed_metadata: The validations_allowed_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15619,6 +16855,7 @@ class AccountSettingsInformation(object):
     def validations_brand_metadata(self):
         """Gets the validations_brand_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `validationsBrand` property is editable.   # noqa: E501
 
         :return: The validations_brand_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15629,6 +16866,7 @@ class AccountSettingsInformation(object):
     def validations_brand_metadata(self, validations_brand_metadata):
         """Sets the validations_brand_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `validationsBrand` property is editable.   # noqa: E501
 
         :param validations_brand_metadata: The validations_brand_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15663,6 +16901,7 @@ class AccountSettingsInformation(object):
     def validations_cadence_metadata(self):
         """Gets the validations_cadence_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `validationsCadence` property is editable.   # noqa: E501
 
         :return: The validations_cadence_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15673,6 +16912,7 @@ class AccountSettingsInformation(object):
     def validations_cadence_metadata(self, validations_cadence_metadata):
         """Sets the validations_cadence_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `validationsCadence` property is editable.   # noqa: E501
 
         :param validations_cadence_metadata: The validations_cadence_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15707,6 +16947,7 @@ class AccountSettingsInformation(object):
     def validations_enabled_metadata(self):
         """Gets the validations_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `validationsEnabled` property is editable.   # noqa: E501
 
         :return: The validations_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15717,6 +16958,7 @@ class AccountSettingsInformation(object):
     def validations_enabled_metadata(self, validations_enabled_metadata):
         """Sets the validations_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `validationsEnabled` property is editable.   # noqa: E501
 
         :param validations_enabled_metadata: The validations_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15751,6 +16993,7 @@ class AccountSettingsInformation(object):
     def validations_report_metadata(self):
         """Gets the validations_report_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `validationsReport` property is editable.   # noqa: E501
 
         :return: The validations_report_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15761,6 +17004,7 @@ class AccountSettingsInformation(object):
     def validations_report_metadata(self, validations_report_metadata):
         """Sets the validations_report_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `validationsReport` property is editable.   # noqa: E501
 
         :param validations_report_metadata: The validations_report_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15795,6 +17039,7 @@ class AccountSettingsInformation(object):
     def water_mark_enabled_metadata(self):
         """Gets the water_mark_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `waterMarkEnabled` property is editable.   # noqa: E501
 
         :return: The water_mark_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15805,6 +17050,7 @@ class AccountSettingsInformation(object):
     def water_mark_enabled_metadata(self, water_mark_enabled_metadata):
         """Sets the water_mark_enabled_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `waterMarkEnabled` property is editable.   # noqa: E501
 
         :param water_mark_enabled_metadata: The water_mark_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15839,6 +17085,7 @@ class AccountSettingsInformation(object):
     def write_reminder_to_envelope_history_metadata(self):
         """Gets the write_reminder_to_envelope_history_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `writeReminderToEnvelopeHistory` property is editable.   # noqa: E501
 
         :return: The write_reminder_to_envelope_history_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15849,6 +17096,7 @@ class AccountSettingsInformation(object):
     def write_reminder_to_envelope_history_metadata(self, write_reminder_to_envelope_history_metadata):
         """Sets the write_reminder_to_envelope_history_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `writeReminderToEnvelopeHistory` property is editable.   # noqa: E501
 
         :param write_reminder_to_envelope_history_metadata: The write_reminder_to_envelope_history_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -15883,6 +17131,7 @@ class AccountSettingsInformation(object):
     def wurfl_min_allowable_screen_size_metadata(self):
         """Gets the wurfl_min_allowable_screen_size_metadata of this AccountSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `wurflMinAllowableScreenSize` property is editable.   # noqa: E501
 
         :return: The wurfl_min_allowable_screen_size_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -15893,6 +17142,7 @@ class AccountSettingsInformation(object):
     def wurfl_min_allowable_screen_size_metadata(self, wurfl_min_allowable_screen_size_metadata):
         """Sets the wurfl_min_allowable_screen_size_metadata of this AccountSettingsInformation.
 
+        Metadata that indicates whether the `wurflMinAllowableScreenSize` property is editable.   # noqa: E501
 
         :param wurfl_min_allowable_screen_size_metadata: The wurfl_min_allowable_screen_size_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata

@@ -890,6 +890,7 @@ class EnvelopeDefinition(object):
     def custom_fields(self):
         """Gets the custom_fields of this EnvelopeDefinition.  # noqa: E501
 
+        An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.   **Note:** Any custom fields you set with this API method will _replace_ custom fields you have defined with [Envelope Custom Fields in Admin](https://support.docusign.com/en/guides/ndse-admin-guide-document-labels), whether the **Show field to envelope creators** or **Make fields required for envelopes** options are checked or not.   # noqa: E501
 
         :return: The custom_fields of this EnvelopeDefinition.  # noqa: E501
         :rtype: CustomFields
@@ -900,6 +901,7 @@ class EnvelopeDefinition(object):
     def custom_fields(self, custom_fields):
         """Sets the custom_fields of this EnvelopeDefinition.
 
+        An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.   **Note:** Any custom fields you set with this API method will _replace_ custom fields you have defined with [Envelope Custom Fields in Admin](https://support.docusign.com/en/guides/ndse-admin-guide-document-labels), whether the **Show field to envelope creators** or **Make fields required for envelopes** options are checked or not.   # noqa: E501
 
         :param custom_fields: The custom_fields of this EnvelopeDefinition.  # noqa: E501
         :type: CustomFields
@@ -1141,6 +1143,7 @@ class EnvelopeDefinition(object):
     def email_settings(self):
         """Gets the email_settings of this EnvelopeDefinition.  # noqa: E501
 
+        This optional complex element enables the sender to override some envelope email setting information. This can be used to override the Reply To email address and name associated with the envelope, as well as the BCC email addresses to which an envelope is sent. When the `emailSettings` information is used for an envelope, it only applies to that envelope.  **Important Note:** The `emailSettings` information is not returned in the GET method for envelope status. Use GET /email_settings to return information about the emailSettings.  # noqa: E501
 
         :return: The email_settings of this EnvelopeDefinition.  # noqa: E501
         :rtype: EmailSettings
@@ -1151,6 +1154,7 @@ class EnvelopeDefinition(object):
     def email_settings(self, email_settings):
         """Sets the email_settings of this EnvelopeDefinition.
 
+        This optional complex element enables the sender to override some envelope email setting information. This can be used to override the Reply To email address and name associated with the envelope, as well as the BCC email addresses to which an envelope is sent. When the `emailSettings` information is used for an envelope, it only applies to that envelope.  **Important Note:** The `emailSettings` information is not returned in the GET method for envelope status. Use GET /email_settings to return information about the emailSettings.  # noqa: E501
 
         :param email_settings: The email_settings of this EnvelopeDefinition.  # noqa: E501
         :type: EmailSettings
@@ -1254,6 +1258,7 @@ class EnvelopeDefinition(object):
     def envelope_custom_metadata(self):
         """Gets the envelope_custom_metadata of this EnvelopeDefinition.  # noqa: E501
 
+          # noqa: E501
 
         :return: The envelope_custom_metadata of this EnvelopeDefinition.  # noqa: E501
         :rtype: EnvelopeCustomMetadata
@@ -1264,6 +1269,7 @@ class EnvelopeDefinition(object):
     def envelope_custom_metadata(self, envelope_custom_metadata):
         """Sets the envelope_custom_metadata of this EnvelopeDefinition.
 
+          # noqa: E501
 
         :param envelope_custom_metadata: The envelope_custom_metadata of this EnvelopeDefinition.  # noqa: E501
         :type: EnvelopeCustomMetadata
@@ -1367,6 +1373,7 @@ class EnvelopeDefinition(object):
     def envelope_metadata(self):
         """Gets the envelope_metadata of this EnvelopeDefinition.  # noqa: E501
 
+        Metadata about the features that are enabled for the envelope.  # noqa: E501
 
         :return: The envelope_metadata of this EnvelopeDefinition.  # noqa: E501
         :rtype: EnvelopeMetadata
@@ -1377,6 +1384,7 @@ class EnvelopeDefinition(object):
     def envelope_metadata(self, envelope_metadata):
         """Sets the envelope_metadata of this EnvelopeDefinition.
 
+        Metadata about the features that are enabled for the envelope.  # noqa: E501
 
         :param envelope_metadata: The envelope_metadata of this EnvelopeDefinition.  # noqa: E501
         :type: EnvelopeMetadata
@@ -1411,6 +1419,7 @@ class EnvelopeDefinition(object):
     def event_notification(self):
         """Gets the event_notification of this EnvelopeDefinition.  # noqa: E501
 
+        This optional object is used to register a webhook that will receive status changes for this envelope.  # noqa: E501
 
         :return: The event_notification of this EnvelopeDefinition.  # noqa: E501
         :rtype: EventNotification
@@ -1421,6 +1430,7 @@ class EnvelopeDefinition(object):
     def event_notification(self, event_notification):
         """Sets the event_notification of this EnvelopeDefinition.
 
+        This optional object is used to register a webhook that will receive status changes for this envelope.  # noqa: E501
 
         :param event_notification: The event_notification of this EnvelopeDefinition.  # noqa: E501
         :type: EventNotification
@@ -1800,6 +1810,7 @@ class EnvelopeDefinition(object):
     def lock_information(self):
         """Gets the lock_information of this EnvelopeDefinition.  # noqa: E501
 
+        Provides lock information about an envelope that a user has locked.  # noqa: E501
 
         :return: The lock_information of this EnvelopeDefinition.  # noqa: E501
         :rtype: LockInformation
@@ -1810,6 +1821,7 @@ class EnvelopeDefinition(object):
     def lock_information(self, lock_information):
         """Sets the lock_information of this EnvelopeDefinition.
 
+        Provides lock information about an envelope that a user has locked.  # noqa: E501
 
         :param lock_information: The lock_information of this EnvelopeDefinition.  # noqa: E501
         :type: LockInformation
@@ -1844,6 +1856,7 @@ class EnvelopeDefinition(object):
     def notification(self):
         """Gets the notification of this EnvelopeDefinition.  # noqa: E501
 
+        An optional complex element that specifies the notification options for the envelope.  # noqa: E501
 
         :return: The notification of this EnvelopeDefinition.  # noqa: E501
         :rtype: Notification
@@ -1854,6 +1867,7 @@ class EnvelopeDefinition(object):
     def notification(self, notification):
         """Sets the notification of this EnvelopeDefinition.
 
+        An optional complex element that specifies the notification options for the envelope.  # noqa: E501
 
         :param notification: The notification of this EnvelopeDefinition.  # noqa: E501
         :type: Notification
@@ -1911,6 +1925,7 @@ class EnvelopeDefinition(object):
     def power_form(self):
         """Gets the power_form of this EnvelopeDefinition.  # noqa: E501
 
+        Information about any PowerForms that are included in the envelope.  # noqa: E501
 
         :return: The power_form of this EnvelopeDefinition.  # noqa: E501
         :rtype: PowerForm
@@ -1921,6 +1936,7 @@ class EnvelopeDefinition(object):
     def power_form(self, power_form):
         """Sets the power_form of this EnvelopeDefinition.
 
+        Information about any PowerForms that are included in the envelope.  # noqa: E501
 
         :param power_form: The power_form of this EnvelopeDefinition.  # noqa: E501
         :type: PowerForm
@@ -2001,6 +2017,7 @@ class EnvelopeDefinition(object):
     def recipients(self):
         """Gets the recipients of this EnvelopeDefinition.  # noqa: E501
 
+        Specifies the envelope recipients.  # noqa: E501
 
         :return: The recipients of this EnvelopeDefinition.  # noqa: E501
         :rtype: Recipients
@@ -2011,6 +2028,7 @@ class EnvelopeDefinition(object):
     def recipients(self, recipients):
         """Sets the recipients of this EnvelopeDefinition.
 
+        Specifies the envelope recipients.  # noqa: E501
 
         :param recipients: The recipients of this EnvelopeDefinition.  # noqa: E501
         :type: Recipients
@@ -2068,6 +2086,7 @@ class EnvelopeDefinition(object):
     def recipient_view_request(self):
         """Gets the recipient_view_request of this EnvelopeDefinition.  # noqa: E501
 
+          # noqa: E501
 
         :return: The recipient_view_request of this EnvelopeDefinition.  # noqa: E501
         :rtype: RecipientViewRequest
@@ -2078,6 +2097,7 @@ class EnvelopeDefinition(object):
     def recipient_view_request(self, recipient_view_request):
         """Sets the recipient_view_request of this EnvelopeDefinition.
 
+          # noqa: E501
 
         :param recipient_view_request: The recipient_view_request of this EnvelopeDefinition.  # noqa: E501
         :type: RecipientViewRequest
@@ -2089,6 +2109,7 @@ class EnvelopeDefinition(object):
     def sender(self):
         """Gets the sender of this EnvelopeDefinition.  # noqa: E501
 
+        Information about the sender of the envelope.  # noqa: E501
 
         :return: The sender of this EnvelopeDefinition.  # noqa: E501
         :rtype: UserInfo
@@ -2099,6 +2120,7 @@ class EnvelopeDefinition(object):
     def sender(self, sender):
         """Sets the sender of this EnvelopeDefinition.
 
+        Information about the sender of the envelope.  # noqa: E501
 
         :param sender: The sender of this EnvelopeDefinition.  # noqa: E501
         :type: UserInfo
@@ -2409,6 +2431,7 @@ class EnvelopeDefinition(object):
     def workflow(self):
         """Gets the workflow of this EnvelopeDefinition.  # noqa: E501
 
+        Describes the workflow for this envelope.  # noqa: E501
 
         :return: The workflow of this EnvelopeDefinition.  # noqa: E501
         :rtype: Workflow
@@ -2419,6 +2442,7 @@ class EnvelopeDefinition(object):
     def workflow(self, workflow):
         """Sets the workflow of this EnvelopeDefinition.
 
+        Describes the workflow for this envelope.  # noqa: E501
 
         :param workflow: The workflow of this EnvelopeDefinition.  # noqa: E501
         :type: Workflow

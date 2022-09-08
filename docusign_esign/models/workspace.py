@@ -126,6 +126,7 @@ class Workspace(object):
     def caller_information(self):
         """Gets the caller_information of this Workspace.  # noqa: E501
 
+          # noqa: E501
 
         :return: The caller_information of this Workspace.  # noqa: E501
         :rtype: WorkspaceUser
@@ -136,6 +137,7 @@ class Workspace(object):
     def caller_information(self, caller_information):
         """Sets the caller_information of this Workspace.
 
+          # noqa: E501
 
         :param caller_information: The caller_information of this Workspace.  # noqa: E501
         :type: WorkspaceUser
@@ -170,6 +172,7 @@ class Workspace(object):
     def created_by_information(self):
         """Gets the created_by_information of this Workspace.  # noqa: E501
 
+        Details about the user who created the workspace.  # noqa: E501
 
         :return: The created_by_information of this Workspace.  # noqa: E501
         :rtype: WorkspaceUser
@@ -180,6 +183,7 @@ class Workspace(object):
     def created_by_information(self, created_by_information):
         """Sets the created_by_information of this Workspace.
 
+        Details about the user who created the workspace.  # noqa: E501
 
         :param created_by_information: The created_by_information of this Workspace.  # noqa: E501
         :type: WorkspaceUser
@@ -214,6 +218,7 @@ class Workspace(object):
     def last_modified_by_information(self):
         """Gets the last_modified_by_information of this Workspace.  # noqa: E501
 
+        Details about the user who last modified the workspace.  # noqa: E501
 
         :return: The last_modified_by_information of this Workspace.  # noqa: E501
         :rtype: WorkspaceUser
@@ -224,6 +229,7 @@ class Workspace(object):
     def last_modified_by_information(self, last_modified_by_information):
         """Sets the last_modified_by_information of this Workspace.
 
+        Details about the user who last modified the workspace.  # noqa: E501
 
         :param last_modified_by_information: The last_modified_by_information of this Workspace.  # noqa: E501
         :type: WorkspaceUser
@@ -235,6 +241,7 @@ class Workspace(object):
     def settings(self):
         """Gets the settings of this Workspace.  # noqa: E501
 
+        Information about the settings for the workspace.  # noqa: E501
 
         :return: The settings of this Workspace.  # noqa: E501
         :rtype: WorkspaceSettings
@@ -245,6 +252,7 @@ class Workspace(object):
     def settings(self, settings):
         """Sets the settings of this Workspace.
 
+        Information about the settings for the workspace.  # noqa: E501
 
         :param settings: The settings of this Workspace.  # noqa: E501
         :type: WorkspaceSettings

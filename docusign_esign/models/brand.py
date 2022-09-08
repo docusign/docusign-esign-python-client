@@ -272,6 +272,7 @@ class Brand(object):
     def error_details(self):
         """Gets the error_details of this Brand.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this Brand.  # noqa: E501
         :rtype: ErrorDetails
@@ -282,6 +283,7 @@ class Brand(object):
     def error_details(self, error_details):
         """Sets the error_details of this Brand.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this Brand.  # noqa: E501
         :type: ErrorDetails
@@ -408,6 +410,7 @@ class Brand(object):
     def logos(self):
         """Gets the logos of this Brand.  # noqa: E501
 
+        The URIs for retrieving the logos that are associated with the brand.  # noqa: E501
 
         :return: The logos of this Brand.  # noqa: E501
         :rtype: BrandLogos
@@ -418,6 +421,7 @@ class Brand(object):
     def logos(self, logos):
         """Sets the logos of this Brand.
 
+        The URIs for retrieving the logos that are associated with the brand.  # noqa: E501
 
         :param logos: The logos of this Brand.  # noqa: E501
         :type: BrandLogos
@@ -429,6 +433,7 @@ class Brand(object):
     def resources(self):
         """Gets the resources of this Brand.  # noqa: E501
 
+        An object containing the URLs for the four DocuSign master resource files that the brand uses for sending, signing, email messages, and captive (embedded) signing. You can modify the default email messages and formats in these file to customize the user experience.  **Note:** This object is returned only when the `resourceContentType` is `sending`, `signing`, `email`, or `signing_captive`.  # noqa: E501
 
         :return: The resources of this Brand.  # noqa: E501
         :rtype: BrandResourceUrls
@@ -439,6 +444,7 @@ class Brand(object):
     def resources(self, resources):
         """Sets the resources of this Brand.
 
+        An object containing the URLs for the four DocuSign master resource files that the brand uses for sending, signing, email messages, and captive (embedded) signing. You can modify the default email messages and formats in these file to customize the user experience.  **Note:** This object is returned only when the `resourceContentType` is `sending`, `signing`, `email`, or `signing_captive`.  # noqa: E501
 
         :param resources: The resources of this Brand.  # noqa: E501
         :type: BrandResourceUrls

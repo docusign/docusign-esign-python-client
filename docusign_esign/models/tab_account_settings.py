@@ -250,6 +250,7 @@ class TabAccountSettings(object):
     def allow_tab_order_metadata(self):
         """Gets the allow_tab_order_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `allowTabOrder` property is editable.   # noqa: E501
 
         :return: The allow_tab_order_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -260,6 +261,7 @@ class TabAccountSettings(object):
     def allow_tab_order_metadata(self, allow_tab_order_metadata):
         """Sets the allow_tab_order_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `allowTabOrder` property is editable.   # noqa: E501
 
         :param allow_tab_order_metadata: The allow_tab_order_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -294,6 +296,7 @@ class TabAccountSettings(object):
     def approve_decline_tabs_metadata(self):
         """Gets the approve_decline_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `approveDeclineTabs` property is editable.   # noqa: E501
 
         :return: The approve_decline_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -304,6 +307,7 @@ class TabAccountSettings(object):
     def approve_decline_tabs_metadata(self, approve_decline_tabs_metadata):
         """Sets the approve_decline_tabs_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `approveDeclineTabs` property is editable.   # noqa: E501
 
         :param approve_decline_tabs_metadata: The approve_decline_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -338,6 +342,7 @@ class TabAccountSettings(object):
     def calculated_fields_metadata(self):
         """Gets the calculated_fields_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `calculatedFields` property is editable.   # noqa: E501
 
         :return: The calculated_fields_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -348,6 +353,7 @@ class TabAccountSettings(object):
     def calculated_fields_metadata(self, calculated_fields_metadata):
         """Sets the calculated_fields_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `calculatedFields` property is editable.   # noqa: E501
 
         :param calculated_fields_metadata: The calculated_fields_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -382,6 +388,7 @@ class TabAccountSettings(object):
     def check_box_tabs_metadata(self):
         """Gets the check_box_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `checkBoxTabs` property is editable.  # noqa: E501
 
         :return: The check_box_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -392,6 +399,7 @@ class TabAccountSettings(object):
     def check_box_tabs_metadata(self, check_box_tabs_metadata):
         """Sets the check_box_tabs_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `checkBoxTabs` property is editable.  # noqa: E501
 
         :param check_box_tabs_metadata: The check_box_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -426,6 +434,7 @@ class TabAccountSettings(object):
     def currency_tabs_metadata(self):
         """Gets the currency_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+          # noqa: E501
 
         :return: The currency_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -436,6 +445,7 @@ class TabAccountSettings(object):
     def currency_tabs_metadata(self, currency_tabs_metadata):
         """Sets the currency_tabs_metadata of this TabAccountSettings.
 
+          # noqa: E501
 
         :param currency_tabs_metadata: The currency_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -470,6 +480,7 @@ class TabAccountSettings(object):
     def data_field_regex_metadata(self):
         """Gets the data_field_regex_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `dataFieldRegex` property is editable.   # noqa: E501
 
         :return: The data_field_regex_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -480,6 +491,7 @@ class TabAccountSettings(object):
     def data_field_regex_metadata(self, data_field_regex_metadata):
         """Sets the data_field_regex_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `dataFieldRegex` property is editable.   # noqa: E501
 
         :param data_field_regex_metadata: The data_field_regex_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -514,6 +526,7 @@ class TabAccountSettings(object):
     def data_field_size_metadata(self):
         """Gets the data_field_size_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `dataFieldSize` property is editable.   # noqa: E501
 
         :return: The data_field_size_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -524,6 +537,7 @@ class TabAccountSettings(object):
     def data_field_size_metadata(self, data_field_size_metadata):
         """Sets the data_field_size_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `dataFieldSize` property is editable.   # noqa: E501
 
         :param data_field_size_metadata: The data_field_size_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -558,6 +572,7 @@ class TabAccountSettings(object):
     def draw_tabs_metadata(self):
         """Gets the draw_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+          # noqa: E501
 
         :return: The draw_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -568,6 +583,7 @@ class TabAccountSettings(object):
     def draw_tabs_metadata(self, draw_tabs_metadata):
         """Sets the draw_tabs_metadata of this TabAccountSettings.
 
+          # noqa: E501
 
         :param draw_tabs_metadata: The draw_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -602,6 +618,7 @@ class TabAccountSettings(object):
     def first_last_email_tabs_metadata(self):
         """Gets the first_last_email_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The first_last_email_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -612,6 +629,7 @@ class TabAccountSettings(object):
     def first_last_email_tabs_metadata(self, first_last_email_tabs_metadata):
         """Sets the first_last_email_tabs_metadata of this TabAccountSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param first_last_email_tabs_metadata: The first_last_email_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -646,6 +664,7 @@ class TabAccountSettings(object):
     def list_tabs_metadata(self):
         """Gets the list_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `listTabs` property is editable.   # noqa: E501
 
         :return: The list_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -656,6 +675,7 @@ class TabAccountSettings(object):
     def list_tabs_metadata(self, list_tabs_metadata):
         """Sets the list_tabs_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `listTabs` property is editable.   # noqa: E501
 
         :param list_tabs_metadata: The list_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -690,6 +710,7 @@ class TabAccountSettings(object):
     def note_tabs_metadata(self):
         """Gets the note_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `noteTabs` property is editable.   # noqa: E501
 
         :return: The note_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -700,6 +721,7 @@ class TabAccountSettings(object):
     def note_tabs_metadata(self, note_tabs_metadata):
         """Sets the note_tabs_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `noteTabs` property is editable.   # noqa: E501
 
         :param note_tabs_metadata: The note_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -734,6 +756,7 @@ class TabAccountSettings(object):
     def prefill_tabs_metadata(self):
         """Gets the prefill_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+          # noqa: E501
 
         :return: The prefill_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -744,6 +767,7 @@ class TabAccountSettings(object):
     def prefill_tabs_metadata(self, prefill_tabs_metadata):
         """Sets the prefill_tabs_metadata of this TabAccountSettings.
 
+          # noqa: E501
 
         :param prefill_tabs_metadata: The prefill_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -778,6 +802,7 @@ class TabAccountSettings(object):
     def radio_tabs_metadata(self):
         """Gets the radio_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `radioTabs` property is editable.   # noqa: E501
 
         :return: The radio_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -788,6 +813,7 @@ class TabAccountSettings(object):
     def radio_tabs_metadata(self, radio_tabs_metadata):
         """Sets the radio_tabs_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `radioTabs` property is editable.   # noqa: E501
 
         :param radio_tabs_metadata: The radio_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -822,6 +848,7 @@ class TabAccountSettings(object):
     def saving_custom_tabs_metadata(self):
         """Gets the saving_custom_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `savingCustomTabs` property is editable.   # noqa: E501
 
         :return: The saving_custom_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -832,6 +859,7 @@ class TabAccountSettings(object):
     def saving_custom_tabs_metadata(self, saving_custom_tabs_metadata):
         """Sets the saving_custom_tabs_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `savingCustomTabs` property is editable.   # noqa: E501
 
         :param saving_custom_tabs_metadata: The saving_custom_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -866,6 +894,7 @@ class TabAccountSettings(object):
     def sender_to_change_tab_assignments_metadata(self):
         """Gets the sender_to_change_tab_assignments_metadata of this TabAccountSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The sender_to_change_tab_assignments_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -876,6 +905,7 @@ class TabAccountSettings(object):
     def sender_to_change_tab_assignments_metadata(self, sender_to_change_tab_assignments_metadata):
         """Sets the sender_to_change_tab_assignments_metadata of this TabAccountSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param sender_to_change_tab_assignments_metadata: The sender_to_change_tab_assignments_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -910,6 +940,7 @@ class TabAccountSettings(object):
     def shared_custom_tabs_metadata(self):
         """Gets the shared_custom_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `sharedCustomTabs` property is editable.   # noqa: E501
 
         :return: The shared_custom_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -920,6 +951,7 @@ class TabAccountSettings(object):
     def shared_custom_tabs_metadata(self, shared_custom_tabs_metadata):
         """Sets the shared_custom_tabs_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `sharedCustomTabs` property is editable.   # noqa: E501
 
         :param shared_custom_tabs_metadata: The shared_custom_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -954,6 +986,7 @@ class TabAccountSettings(object):
     def tab_data_label_metadata(self):
         """Gets the tab_data_label_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `tabDataLabel` property is editable.   # noqa: E501
 
         :return: The tab_data_label_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -964,6 +997,7 @@ class TabAccountSettings(object):
     def tab_data_label_metadata(self, tab_data_label_metadata):
         """Sets the tab_data_label_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `tabDataLabel` property is editable.   # noqa: E501
 
         :param tab_data_label_metadata: The tab_data_label_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -998,6 +1032,7 @@ class TabAccountSettings(object):
     def tab_location_metadata(self):
         """Gets the tab_location_metadata of this TabAccountSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The tab_location_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1008,6 +1043,7 @@ class TabAccountSettings(object):
     def tab_location_metadata(self, tab_location_metadata):
         """Sets the tab_location_metadata of this TabAccountSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param tab_location_metadata: The tab_location_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1042,6 +1078,7 @@ class TabAccountSettings(object):
     def tab_locking_metadata(self):
         """Gets the tab_locking_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `tabLocking` property is editable.   # noqa: E501
 
         :return: The tab_locking_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1052,6 +1089,7 @@ class TabAccountSettings(object):
     def tab_locking_metadata(self, tab_locking_metadata):
         """Sets the tab_locking_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `tabLocking` property is editable.   # noqa: E501
 
         :param tab_locking_metadata: The tab_locking_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1086,6 +1124,7 @@ class TabAccountSettings(object):
     def tab_scale_metadata(self):
         """Gets the tab_scale_metadata of this TabAccountSettings.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The tab_scale_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1096,6 +1135,7 @@ class TabAccountSettings(object):
     def tab_scale_metadata(self, tab_scale_metadata):
         """Sets the tab_scale_metadata of this TabAccountSettings.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param tab_scale_metadata: The tab_scale_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1130,6 +1170,7 @@ class TabAccountSettings(object):
     def tab_text_formatting_metadata(self):
         """Gets the tab_text_formatting_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `tabTextFormatting` property is editable.   # noqa: E501
 
         :return: The tab_text_formatting_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1140,6 +1181,7 @@ class TabAccountSettings(object):
     def tab_text_formatting_metadata(self, tab_text_formatting_metadata):
         """Sets the tab_text_formatting_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `tabTextFormatting` property is editable.   # noqa: E501
 
         :param tab_text_formatting_metadata: The tab_text_formatting_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata
@@ -1174,6 +1216,7 @@ class TabAccountSettings(object):
     def text_tabs_metadata(self):
         """Gets the text_tabs_metadata of this TabAccountSettings.  # noqa: E501
 
+        Metadata that indicates whether the `textTabs` property is editable.   # noqa: E501
 
         :return: The text_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1184,6 +1227,7 @@ class TabAccountSettings(object):
     def text_tabs_metadata(self, text_tabs_metadata):
         """Sets the text_tabs_metadata of this TabAccountSettings.
 
+        Metadata that indicates whether the `textTabs` property is editable.   # noqa: E501
 
         :param text_tabs_metadata: The text_tabs_metadata of this TabAccountSettings.  # noqa: E501
         :type: SettingsMetadata

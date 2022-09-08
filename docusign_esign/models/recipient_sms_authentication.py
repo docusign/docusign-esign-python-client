@@ -82,6 +82,7 @@ class RecipientSMSAuthentication(object):
     def sender_provided_numbers_metadata(self):
         """Gets the sender_provided_numbers_metadata of this RecipientSMSAuthentication.  # noqa: E501
 
+        Metadata that indicates whether the `senderProvidedNumbers` property can be edited.  # noqa: E501
 
         :return: The sender_provided_numbers_metadata of this RecipientSMSAuthentication.  # noqa: E501
         :rtype: PropertyMetadata
@@ -92,6 +93,7 @@ class RecipientSMSAuthentication(object):
     def sender_provided_numbers_metadata(self, sender_provided_numbers_metadata):
         """Sets the sender_provided_numbers_metadata of this RecipientSMSAuthentication.
 
+        Metadata that indicates whether the `senderProvidedNumbers` property can be edited.  # noqa: E501
 
         :param sender_provided_numbers_metadata: The sender_provided_numbers_metadata of this RecipientSMSAuthentication.  # noqa: E501
         :type: PropertyMetadata

@@ -87,6 +87,7 @@ class TemplateUpdateSummary(object):
     def bulk_envelope_status(self):
         """Gets the bulk_envelope_status of this TemplateUpdateSummary.  # noqa: E501
 
+        An object that describes the status of the bulk send envelopes.  # noqa: E501
 
         :return: The bulk_envelope_status of this TemplateUpdateSummary.  # noqa: E501
         :rtype: BulkEnvelopeStatus
@@ -97,6 +98,7 @@ class TemplateUpdateSummary(object):
     def bulk_envelope_status(self, bulk_envelope_status):
         """Sets the bulk_envelope_status of this TemplateUpdateSummary.
 
+        An object that describes the status of the bulk send envelopes.  # noqa: E501
 
         :param bulk_envelope_status: The bulk_envelope_status of this TemplateUpdateSummary.  # noqa: E501
         :type: BulkEnvelopeStatus
@@ -131,6 +133,7 @@ class TemplateUpdateSummary(object):
     def error_details(self):
         """Gets the error_details of this TemplateUpdateSummary.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this TemplateUpdateSummary.  # noqa: E501
         :rtype: ErrorDetails
@@ -141,6 +144,7 @@ class TemplateUpdateSummary(object):
     def error_details(self, error_details):
         """Sets the error_details of this TemplateUpdateSummary.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this TemplateUpdateSummary.  # noqa: E501
         :type: ErrorDetails
@@ -175,6 +179,7 @@ class TemplateUpdateSummary(object):
     def lock_information(self):
         """Gets the lock_information of this TemplateUpdateSummary.  # noqa: E501
 
+        Provides lock information about an envelope that a user has locked.  # noqa: E501
 
         :return: The lock_information of this TemplateUpdateSummary.  # noqa: E501
         :rtype: LockInformation
@@ -185,6 +190,7 @@ class TemplateUpdateSummary(object):
     def lock_information(self, lock_information):
         """Sets the lock_information of this TemplateUpdateSummary.
 
+        Provides lock information about an envelope that a user has locked.  # noqa: E501
 
         :param lock_information: The lock_information of this TemplateUpdateSummary.  # noqa: E501
         :type: LockInformation
@@ -242,6 +248,7 @@ class TemplateUpdateSummary(object):
     def tab_update_results(self):
         """Gets the tab_update_results of this TemplateUpdateSummary.  # noqa: E501
 
+          # noqa: E501
 
         :return: The tab_update_results of this TemplateUpdateSummary.  # noqa: E501
         :rtype: Tabs
@@ -252,6 +259,7 @@ class TemplateUpdateSummary(object):
     def tab_update_results(self, tab_update_results):
         """Sets the tab_update_results of this TemplateUpdateSummary.
 
+          # noqa: E501
 
         :param tab_update_results: The tab_update_results of this TemplateUpdateSummary.  # noqa: E501
         :type: Tabs

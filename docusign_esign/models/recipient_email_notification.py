@@ -98,6 +98,7 @@ class RecipientEmailNotification(object):
     def email_body_metadata(self):
         """Gets the email_body_metadata of this RecipientEmailNotification.  # noqa: E501
 
+        Metadata that indicates whether the `emailBody` property can be edited.  # noqa: E501
 
         :return: The email_body_metadata of this RecipientEmailNotification.  # noqa: E501
         :rtype: PropertyMetadata
@@ -108,6 +109,7 @@ class RecipientEmailNotification(object):
     def email_body_metadata(self, email_body_metadata):
         """Sets the email_body_metadata of this RecipientEmailNotification.
 
+        Metadata that indicates whether the `emailBody` property can be edited.  # noqa: E501
 
         :param email_body_metadata: The email_body_metadata of this RecipientEmailNotification.  # noqa: E501
         :type: PropertyMetadata
@@ -142,6 +144,7 @@ class RecipientEmailNotification(object):
     def email_subject_metadata(self):
         """Gets the email_subject_metadata of this RecipientEmailNotification.  # noqa: E501
 
+        Metadata that indicates whether the `emailSubject` property can be edited.  # noqa: E501
 
         :return: The email_subject_metadata of this RecipientEmailNotification.  # noqa: E501
         :rtype: PropertyMetadata
@@ -152,6 +155,7 @@ class RecipientEmailNotification(object):
     def email_subject_metadata(self, email_subject_metadata):
         """Sets the email_subject_metadata of this RecipientEmailNotification.
 
+        Metadata that indicates whether the `emailSubject` property can be edited.  # noqa: E501
 
         :param email_subject_metadata: The email_subject_metadata of this RecipientEmailNotification.  # noqa: E501
         :type: PropertyMetadata
@@ -186,6 +190,7 @@ class RecipientEmailNotification(object):
     def supported_language_metadata(self):
         """Gets the supported_language_metadata of this RecipientEmailNotification.  # noqa: E501
 
+        Metadata that indicates whether the `supportedLanguage` property can be edited.  # noqa: E501
 
         :return: The supported_language_metadata of this RecipientEmailNotification.  # noqa: E501
         :rtype: PropertyMetadata
@@ -196,6 +201,7 @@ class RecipientEmailNotification(object):
     def supported_language_metadata(self, supported_language_metadata):
         """Sets the supported_language_metadata of this RecipientEmailNotification.
 
+        Metadata that indicates whether the `supportedLanguage` property can be edited.  # noqa: E501
 
         :param supported_language_metadata: The supported_language_metadata of this RecipientEmailNotification.  # noqa: E501
         :type: PropertyMetadata

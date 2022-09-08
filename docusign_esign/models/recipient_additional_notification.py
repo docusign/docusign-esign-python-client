@@ -67,6 +67,7 @@ class RecipientAdditionalNotification(object):
     def phone_number(self):
         """Gets the phone_number of this RecipientAdditionalNotification.  # noqa: E501
 
+        The phone number to receive the additional notifcation.  # noqa: E501
 
         :return: The phone_number of this RecipientAdditionalNotification.  # noqa: E501
         :rtype: RecipientPhoneNumber
@@ -77,6 +78,7 @@ class RecipientAdditionalNotification(object):
     def phone_number(self, phone_number):
         """Sets the phone_number of this RecipientAdditionalNotification.
 
+        The phone number to receive the additional notifcation.  # noqa: E501
 
         :param phone_number: The phone_number of this RecipientAdditionalNotification.  # noqa: E501
         :type: RecipientPhoneNumber
@@ -111,6 +113,7 @@ class RecipientAdditionalNotification(object):
     def secondary_delivery_method_metadata(self):
         """Gets the secondary_delivery_method_metadata of this RecipientAdditionalNotification.  # noqa: E501
 
+        Metadata about the delivery method.  # noqa: E501
 
         :return: The secondary_delivery_method_metadata of this RecipientAdditionalNotification.  # noqa: E501
         :rtype: PropertyMetadata
@@ -121,6 +124,7 @@ class RecipientAdditionalNotification(object):
     def secondary_delivery_method_metadata(self, secondary_delivery_method_metadata):
         """Sets the secondary_delivery_method_metadata of this RecipientAdditionalNotification.
 
+        Metadata about the delivery method.  # noqa: E501
 
         :param secondary_delivery_method_metadata: The secondary_delivery_method_metadata of this RecipientAdditionalNotification.  # noqa: E501
         :type: PropertyMetadata

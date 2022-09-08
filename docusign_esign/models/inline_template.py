@@ -71,6 +71,7 @@ class InlineTemplate(object):
     def custom_fields(self):
         """Gets the custom_fields of this InlineTemplate.  # noqa: E501
 
+        An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.  # noqa: E501
 
         :return: The custom_fields of this InlineTemplate.  # noqa: E501
         :rtype: CustomFields
@@ -81,6 +82,7 @@ class InlineTemplate(object):
     def custom_fields(self, custom_fields):
         """Sets the custom_fields of this InlineTemplate.
 
+        An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.  # noqa: E501
 
         :param custom_fields: The custom_fields of this InlineTemplate.  # noqa: E501
         :type: CustomFields
@@ -115,6 +117,7 @@ class InlineTemplate(object):
     def envelope(self):
         """Gets the envelope of this InlineTemplate.  # noqa: E501
 
+        A container used to send documents to recipients. The envelope carries information about the sender and timestamps to indicate the progress of the delivery procedure. It can contain collections of Documents, Tabs and Recipients.  # noqa: E501
 
         :return: The envelope of this InlineTemplate.  # noqa: E501
         :rtype: Envelope
@@ -125,6 +128,7 @@ class InlineTemplate(object):
     def envelope(self, envelope):
         """Sets the envelope of this InlineTemplate.
 
+        A container used to send documents to recipients. The envelope carries information about the sender and timestamps to indicate the progress of the delivery procedure. It can contain collections of Documents, Tabs and Recipients.  # noqa: E501
 
         :param envelope: The envelope of this InlineTemplate.  # noqa: E501
         :type: Envelope
@@ -136,6 +140,7 @@ class InlineTemplate(object):
     def recipients(self):
         """Gets the recipients of this InlineTemplate.  # noqa: E501
 
+        An array of recipient objects that provides details about the recipients of the envelope.  # noqa: E501
 
         :return: The recipients of this InlineTemplate.  # noqa: E501
         :rtype: Recipients
@@ -146,6 +151,7 @@ class InlineTemplate(object):
     def recipients(self, recipients):
         """Sets the recipients of this InlineTemplate.
 
+        An array of recipient objects that provides details about the recipients of the envelope.  # noqa: E501
 
         :param recipients: The recipients of this InlineTemplate.  # noqa: E501
         :type: Recipients

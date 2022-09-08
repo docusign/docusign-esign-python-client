@@ -482,6 +482,7 @@ class CommissionState(object):
     def anchor_allow_white_space_in_characters_metadata(self):
         """Gets the anchor_allow_white_space_in_characters_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.  # noqa: E501
 
         :return: The anchor_allow_white_space_in_characters_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -492,6 +493,7 @@ class CommissionState(object):
     def anchor_allow_white_space_in_characters_metadata(self, anchor_allow_white_space_in_characters_metadata):
         """Sets the anchor_allow_white_space_in_characters_metadata of this CommissionState.
 
+        Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.  # noqa: E501
 
         :param anchor_allow_white_space_in_characters_metadata: The anchor_allow_white_space_in_characters_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -526,6 +528,7 @@ class CommissionState(object):
     def anchor_case_sensitive_metadata(self):
         """Gets the anchor_case_sensitive_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `anchorCaseSensitive` property is editable.  # noqa: E501
 
         :return: The anchor_case_sensitive_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -536,6 +539,7 @@ class CommissionState(object):
     def anchor_case_sensitive_metadata(self, anchor_case_sensitive_metadata):
         """Sets the anchor_case_sensitive_metadata of this CommissionState.
 
+        Metadata that indicates whether the `anchorCaseSensitive` property is editable.  # noqa: E501
 
         :param anchor_case_sensitive_metadata: The anchor_case_sensitive_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -570,6 +574,7 @@ class CommissionState(object):
     def anchor_horizontal_alignment_metadata(self):
         """Gets the anchor_horizontal_alignment_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.  # noqa: E501
 
         :return: The anchor_horizontal_alignment_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -580,6 +585,7 @@ class CommissionState(object):
     def anchor_horizontal_alignment_metadata(self, anchor_horizontal_alignment_metadata):
         """Sets the anchor_horizontal_alignment_metadata of this CommissionState.
 
+        Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.  # noqa: E501
 
         :param anchor_horizontal_alignment_metadata: The anchor_horizontal_alignment_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -614,6 +620,7 @@ class CommissionState(object):
     def anchor_ignore_if_not_present_metadata(self):
         """Gets the anchor_ignore_if_not_present_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.  # noqa: E501
 
         :return: The anchor_ignore_if_not_present_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -624,6 +631,7 @@ class CommissionState(object):
     def anchor_ignore_if_not_present_metadata(self, anchor_ignore_if_not_present_metadata):
         """Sets the anchor_ignore_if_not_present_metadata of this CommissionState.
 
+        Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.  # noqa: E501
 
         :param anchor_ignore_if_not_present_metadata: The anchor_ignore_if_not_present_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -658,6 +666,7 @@ class CommissionState(object):
     def anchor_match_whole_word_metadata(self):
         """Gets the anchor_match_whole_word_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `anchorMatchWholeWord` property is editable.  # noqa: E501
 
         :return: The anchor_match_whole_word_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -668,6 +677,7 @@ class CommissionState(object):
     def anchor_match_whole_word_metadata(self, anchor_match_whole_word_metadata):
         """Sets the anchor_match_whole_word_metadata of this CommissionState.
 
+        Metadata that indicates whether the `anchorMatchWholeWord` property is editable.  # noqa: E501
 
         :param anchor_match_whole_word_metadata: The anchor_match_whole_word_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -702,6 +712,7 @@ class CommissionState(object):
     def anchor_string_metadata(self):
         """Gets the anchor_string_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `anchorString` property is editable.  # noqa: E501
 
         :return: The anchor_string_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -712,6 +723,7 @@ class CommissionState(object):
     def anchor_string_metadata(self, anchor_string_metadata):
         """Sets the anchor_string_metadata of this CommissionState.
 
+        Metadata that indicates whether the `anchorString` property is editable.  # noqa: E501
 
         :param anchor_string_metadata: The anchor_string_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -746,6 +758,7 @@ class CommissionState(object):
     def anchor_tab_processor_version_metadata(self):
         """Gets the anchor_tab_processor_version_metadata of this CommissionState.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The anchor_tab_processor_version_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -756,6 +769,7 @@ class CommissionState(object):
     def anchor_tab_processor_version_metadata(self, anchor_tab_processor_version_metadata):
         """Sets the anchor_tab_processor_version_metadata of this CommissionState.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param anchor_tab_processor_version_metadata: The anchor_tab_processor_version_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -790,6 +804,7 @@ class CommissionState(object):
     def anchor_units_metadata(self):
         """Gets the anchor_units_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `anchorUnits` property is editable.  # noqa: E501
 
         :return: The anchor_units_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -800,6 +815,7 @@ class CommissionState(object):
     def anchor_units_metadata(self, anchor_units_metadata):
         """Sets the anchor_units_metadata of this CommissionState.
 
+        Metadata that indicates whether the `anchorUnits` property is editable.  # noqa: E501
 
         :param anchor_units_metadata: The anchor_units_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -834,6 +850,7 @@ class CommissionState(object):
     def anchor_x_offset_metadata(self):
         """Gets the anchor_x_offset_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `anchorXOffset` property is editable.  # noqa: E501
 
         :return: The anchor_x_offset_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -844,6 +861,7 @@ class CommissionState(object):
     def anchor_x_offset_metadata(self, anchor_x_offset_metadata):
         """Sets the anchor_x_offset_metadata of this CommissionState.
 
+        Metadata that indicates whether the `anchorXOffset` property is editable.  # noqa: E501
 
         :param anchor_x_offset_metadata: The anchor_x_offset_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -878,6 +896,7 @@ class CommissionState(object):
     def anchor_y_offset_metadata(self):
         """Gets the anchor_y_offset_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `anchorYOffset` property is editable.  # noqa: E501
 
         :return: The anchor_y_offset_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -888,6 +907,7 @@ class CommissionState(object):
     def anchor_y_offset_metadata(self, anchor_y_offset_metadata):
         """Sets the anchor_y_offset_metadata of this CommissionState.
 
+        Metadata that indicates whether the `anchorYOffset` property is editable.  # noqa: E501
 
         :param anchor_y_offset_metadata: The anchor_y_offset_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -922,6 +942,7 @@ class CommissionState(object):
     def bold_metadata(self):
         """Gets the bold_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `bold` property is editable.  # noqa: E501
 
         :return: The bold_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -932,6 +953,7 @@ class CommissionState(object):
     def bold_metadata(self, bold_metadata):
         """Sets the bold_metadata of this CommissionState.
 
+        Metadata that indicates whether the `bold` property is editable.  # noqa: E501
 
         :param bold_metadata: The bold_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1010,6 +1032,7 @@ class CommissionState(object):
     def conceal_value_on_document_metadata(self):
         """Gets the conceal_value_on_document_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `concealValueOnDocument` property is editable.  # noqa: E501
 
         :return: The conceal_value_on_document_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1020,6 +1043,7 @@ class CommissionState(object):
     def conceal_value_on_document_metadata(self, conceal_value_on_document_metadata):
         """Sets the conceal_value_on_document_metadata of this CommissionState.
 
+        Metadata that indicates whether the `concealValueOnDocument` property is editable.  # noqa: E501
 
         :param conceal_value_on_document_metadata: The conceal_value_on_document_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1054,6 +1078,7 @@ class CommissionState(object):
     def conditional_parent_label_metadata(self):
         """Gets the conditional_parent_label_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `conditionalParentLabel` property is editable.  # noqa: E501
 
         :return: The conditional_parent_label_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1064,6 +1089,7 @@ class CommissionState(object):
     def conditional_parent_label_metadata(self, conditional_parent_label_metadata):
         """Sets the conditional_parent_label_metadata of this CommissionState.
 
+        Metadata that indicates whether the `conditionalParentLabel` property is editable.  # noqa: E501
 
         :param conditional_parent_label_metadata: The conditional_parent_label_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1098,6 +1124,7 @@ class CommissionState(object):
     def conditional_parent_value_metadata(self):
         """Gets the conditional_parent_value_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `conditionalParentValue` property is editable.  # noqa: E501
 
         :return: The conditional_parent_value_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1108,6 +1135,7 @@ class CommissionState(object):
     def conditional_parent_value_metadata(self, conditional_parent_value_metadata):
         """Sets the conditional_parent_value_metadata of this CommissionState.
 
+        Metadata that indicates whether the `conditionalParentValue` property is editable.  # noqa: E501
 
         :param conditional_parent_value_metadata: The conditional_parent_value_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1142,6 +1170,7 @@ class CommissionState(object):
     def custom_tab_id_metadata(self):
         """Gets the custom_tab_id_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `customTabId` property is editable.  # noqa: E501
 
         :return: The custom_tab_id_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1152,6 +1181,7 @@ class CommissionState(object):
     def custom_tab_id_metadata(self, custom_tab_id_metadata):
         """Sets the custom_tab_id_metadata of this CommissionState.
 
+        Metadata that indicates whether the `customTabId` property is editable.  # noqa: E501
 
         :param custom_tab_id_metadata: The custom_tab_id_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1186,6 +1216,7 @@ class CommissionState(object):
     def disable_auto_size_metadata(self):
         """Gets the disable_auto_size_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `disableAutoSize` property is editable.  # noqa: E501
 
         :return: The disable_auto_size_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1196,6 +1227,7 @@ class CommissionState(object):
     def disable_auto_size_metadata(self, disable_auto_size_metadata):
         """Sets the disable_auto_size_metadata of this CommissionState.
 
+        Metadata that indicates whether the `disableAutoSize` property is editable.  # noqa: E501
 
         :param disable_auto_size_metadata: The disable_auto_size_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1230,6 +1262,7 @@ class CommissionState(object):
     def document_id_metadata(self):
         """Gets the document_id_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `documentId` property is editable.  # noqa: E501
 
         :return: The document_id_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1240,6 +1273,7 @@ class CommissionState(object):
     def document_id_metadata(self, document_id_metadata):
         """Sets the document_id_metadata of this CommissionState.
 
+        Metadata that indicates whether the `documentId` property is editable.  # noqa: E501
 
         :param document_id_metadata: The document_id_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1251,6 +1285,7 @@ class CommissionState(object):
     def error_details(self):
         """Gets the error_details of this CommissionState.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this CommissionState.  # noqa: E501
         :rtype: ErrorDetails
@@ -1261,6 +1296,7 @@ class CommissionState(object):
     def error_details(self, error_details):
         """Sets the error_details of this CommissionState.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this CommissionState.  # noqa: E501
         :type: ErrorDetails
@@ -1318,6 +1354,7 @@ class CommissionState(object):
     def font_color_metadata(self):
         """Gets the font_color_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `fontColor` property is editable.  # noqa: E501
 
         :return: The font_color_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1328,6 +1365,7 @@ class CommissionState(object):
     def font_color_metadata(self, font_color_metadata):
         """Sets the font_color_metadata of this CommissionState.
 
+        Metadata that indicates whether the `fontColor` property is editable.  # noqa: E501
 
         :param font_color_metadata: The font_color_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1339,6 +1377,7 @@ class CommissionState(object):
     def font_metadata(self):
         """Gets the font_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `font` property is editable.  # noqa: E501
 
         :return: The font_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1349,6 +1388,7 @@ class CommissionState(object):
     def font_metadata(self, font_metadata):
         """Sets the font_metadata of this CommissionState.
 
+        Metadata that indicates whether the `font` property is editable.  # noqa: E501
 
         :param font_metadata: The font_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1383,6 +1423,7 @@ class CommissionState(object):
     def font_size_metadata(self):
         """Gets the font_size_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `fontSize` property is editable.  # noqa: E501
 
         :return: The font_size_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1393,6 +1434,7 @@ class CommissionState(object):
     def font_size_metadata(self, font_size_metadata):
         """Sets the font_size_metadata of this CommissionState.
 
+        Metadata that indicates whether the `fontSize` property is editable.  # noqa: E501
 
         :param font_size_metadata: The font_size_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1427,6 +1469,7 @@ class CommissionState(object):
     def form_order_metadata(self):
         """Gets the form_order_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `formOrder` property is editable.  # noqa: E501
 
         :return: The form_order_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1437,6 +1480,7 @@ class CommissionState(object):
     def form_order_metadata(self, form_order_metadata):
         """Sets the form_order_metadata of this CommissionState.
 
+        Metadata that indicates whether the `formOrder` property is editable.  # noqa: E501
 
         :param form_order_metadata: The form_order_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1471,6 +1515,7 @@ class CommissionState(object):
     def form_page_label_metadata(self):
         """Gets the form_page_label_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `formPageLabel` property is editable.  # noqa: E501
 
         :return: The form_page_label_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1481,6 +1526,7 @@ class CommissionState(object):
     def form_page_label_metadata(self, form_page_label_metadata):
         """Sets the form_page_label_metadata of this CommissionState.
 
+        Metadata that indicates whether the `formPageLabel` property is editable.  # noqa: E501
 
         :param form_page_label_metadata: The form_page_label_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1515,6 +1561,7 @@ class CommissionState(object):
     def form_page_number_metadata(self):
         """Gets the form_page_number_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `fromPageNumber` property is editable.  # noqa: E501
 
         :return: The form_page_number_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1525,6 +1572,7 @@ class CommissionState(object):
     def form_page_number_metadata(self, form_page_number_metadata):
         """Sets the form_page_number_metadata of this CommissionState.
 
+        Metadata that indicates whether the `fromPageNumber` property is editable.  # noqa: E501
 
         :param form_page_number_metadata: The form_page_number_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1559,6 +1607,7 @@ class CommissionState(object):
     def height_metadata(self):
         """Gets the height_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `height` property is editable.  # noqa: E501
 
         :return: The height_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1569,6 +1618,7 @@ class CommissionState(object):
     def height_metadata(self, height_metadata):
         """Sets the height_metadata of this CommissionState.
 
+        Metadata that indicates whether the `height` property is editable.  # noqa: E501
 
         :param height_metadata: The height_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1603,6 +1653,7 @@ class CommissionState(object):
     def italic_metadata(self):
         """Gets the italic_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `italic` property is editable.  # noqa: E501
 
         :return: The italic_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1613,6 +1664,7 @@ class CommissionState(object):
     def italic_metadata(self, italic_metadata):
         """Sets the italic_metadata of this CommissionState.
 
+        Metadata that indicates whether the `italic` property is editable.  # noqa: E501
 
         :param italic_metadata: The italic_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1624,6 +1676,7 @@ class CommissionState(object):
     def locale_policy(self):
         """Gets the locale_policy of this CommissionState.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The locale_policy of this CommissionState.  # noqa: E501
         :rtype: LocalePolicyTab
@@ -1634,6 +1687,7 @@ class CommissionState(object):
     def locale_policy(self, locale_policy):
         """Sets the locale_policy of this CommissionState.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param locale_policy: The locale_policy of this CommissionState.  # noqa: E501
         :type: LocalePolicyTab
@@ -1668,6 +1722,7 @@ class CommissionState(object):
     def locked_metadata(self):
         """Gets the locked_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `locked` property is editable.  # noqa: E501
 
         :return: The locked_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1678,6 +1733,7 @@ class CommissionState(object):
     def locked_metadata(self, locked_metadata):
         """Sets the locked_metadata of this CommissionState.
 
+        Metadata that indicates whether the `locked` property is editable.  # noqa: E501
 
         :param locked_metadata: The locked_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1712,6 +1768,7 @@ class CommissionState(object):
     def max_length_metadata(self):
         """Gets the max_length_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `maxLength` property is editable.  # noqa: E501
 
         :return: The max_length_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1722,6 +1779,7 @@ class CommissionState(object):
     def max_length_metadata(self, max_length_metadata):
         """Sets the max_length_metadata of this CommissionState.
 
+        Metadata that indicates whether the `maxLength` property is editable.  # noqa: E501
 
         :param max_length_metadata: The max_length_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1733,6 +1791,7 @@ class CommissionState(object):
     def merge_field(self):
         """Gets the merge_field of this CommissionState.  # noqa: E501
 
+        Contains the information necessary to map the tab to a field in SalesForce.  # noqa: E501
 
         :return: The merge_field of this CommissionState.  # noqa: E501
         :rtype: MergeField
@@ -1743,6 +1802,7 @@ class CommissionState(object):
     def merge_field(self, merge_field):
         """Sets the merge_field of this CommissionState.
 
+        Contains the information necessary to map the tab to a field in SalesForce.  # noqa: E501
 
         :param merge_field: The merge_field of this CommissionState.  # noqa: E501
         :type: MergeField
@@ -1800,6 +1860,7 @@ class CommissionState(object):
     def name_metadata(self):
         """Gets the name_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `name` property is editable. This property is read-only.  # noqa: E501
 
         :return: The name_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1810,6 +1871,7 @@ class CommissionState(object):
     def name_metadata(self, name_metadata):
         """Sets the name_metadata of this CommissionState.
 
+        Metadata that indicates whether the `name` property is editable. This property is read-only.  # noqa: E501
 
         :param name_metadata: The name_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1844,6 +1906,7 @@ class CommissionState(object):
     def original_value_metadata(self):
         """Gets the original_value_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `originalValue` property is editable.  # noqa: E501
 
         :return: The original_value_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1854,6 +1917,7 @@ class CommissionState(object):
     def original_value_metadata(self, original_value_metadata):
         """Sets the original_value_metadata of this CommissionState.
 
+        Metadata that indicates whether the `originalValue` property is editable.  # noqa: E501
 
         :param original_value_metadata: The original_value_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1888,6 +1952,7 @@ class CommissionState(object):
     def page_number_metadata(self):
         """Gets the page_number_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `pageNumber` property is editable.  # noqa: E501
 
         :return: The page_number_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1898,6 +1963,7 @@ class CommissionState(object):
     def page_number_metadata(self, page_number_metadata):
         """Sets the page_number_metadata of this CommissionState.
 
+        Metadata that indicates whether the `pageNumber` property is editable.  # noqa: E501
 
         :param page_number_metadata: The page_number_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1955,6 +2021,7 @@ class CommissionState(object):
     def recipient_id_guid_metadata(self):
         """Gets the recipient_id_guid_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `recipientIdGuid` property is editable.  # noqa: E501
 
         :return: The recipient_id_guid_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1965,6 +2032,7 @@ class CommissionState(object):
     def recipient_id_guid_metadata(self, recipient_id_guid_metadata):
         """Sets the recipient_id_guid_metadata of this CommissionState.
 
+        Metadata that indicates whether the `recipientIdGuid` property is editable.  # noqa: E501
 
         :param recipient_id_guid_metadata: The recipient_id_guid_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -1976,6 +2044,7 @@ class CommissionState(object):
     def recipient_id_metadata(self):
         """Gets the recipient_id_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `recipientId` property is editable.  # noqa: E501
 
         :return: The recipient_id_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1986,6 +2055,7 @@ class CommissionState(object):
     def recipient_id_metadata(self, recipient_id_metadata):
         """Sets the recipient_id_metadata of this CommissionState.
 
+        Metadata that indicates whether the `recipientId` property is editable.  # noqa: E501
 
         :param recipient_id_metadata: The recipient_id_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2020,6 +2090,7 @@ class CommissionState(object):
     def required_metadata(self):
         """Gets the required_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `required` property is editable.  # noqa: E501
 
         :return: The required_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2030,6 +2101,7 @@ class CommissionState(object):
     def required_metadata(self, required_metadata):
         """Sets the required_metadata of this CommissionState.
 
+        Metadata that indicates whether the `required` property is editable.  # noqa: E501
 
         :param required_metadata: The required_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2041,6 +2113,7 @@ class CommissionState(object):
     def smart_contract_information(self):
         """Gets the smart_contract_information of this CommissionState.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The smart_contract_information of this CommissionState.  # noqa: E501
         :rtype: SmartContractInformation
@@ -2051,6 +2124,7 @@ class CommissionState(object):
     def smart_contract_information(self, smart_contract_information):
         """Sets the smart_contract_information of this CommissionState.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param smart_contract_information: The smart_contract_information of this CommissionState.  # noqa: E501
         :type: SmartContractInformation
@@ -2108,6 +2182,7 @@ class CommissionState(object):
     def status_metadata(self):
         """Gets the status_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `status` property is editable.  # noqa: E501
 
         :return: The status_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2118,6 +2193,7 @@ class CommissionState(object):
     def status_metadata(self, status_metadata):
         """Sets the status_metadata of this CommissionState.
 
+        Metadata that indicates whether the `status` property is editable.  # noqa: E501
 
         :param status_metadata: The status_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2152,6 +2228,7 @@ class CommissionState(object):
     def tab_group_labels_metadata(self):
         """Gets the tab_group_labels_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `tabGroupLabels` property is editable.  # noqa: E501
 
         :return: The tab_group_labels_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2162,6 +2239,7 @@ class CommissionState(object):
     def tab_group_labels_metadata(self, tab_group_labels_metadata):
         """Sets the tab_group_labels_metadata of this CommissionState.
 
+        Metadata that indicates whether the `tabGroupLabels` property is editable.  # noqa: E501
 
         :param tab_group_labels_metadata: The tab_group_labels_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2196,6 +2274,7 @@ class CommissionState(object):
     def tab_id_metadata(self):
         """Gets the tab_id_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `tabId` property is editable.  # noqa: E501
 
         :return: The tab_id_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2206,6 +2285,7 @@ class CommissionState(object):
     def tab_id_metadata(self, tab_id_metadata):
         """Sets the tab_id_metadata of this CommissionState.
 
+        Metadata that indicates whether the `tabId` property is editable.  # noqa: E501
 
         :param tab_id_metadata: The tab_id_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2240,6 +2320,7 @@ class CommissionState(object):
     def tab_label_metadata(self):
         """Gets the tab_label_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `tabLabel` property is editable.  # noqa: E501
 
         :return: The tab_label_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2250,6 +2331,7 @@ class CommissionState(object):
     def tab_label_metadata(self, tab_label_metadata):
         """Sets the tab_label_metadata of this CommissionState.
 
+        Metadata that indicates whether the `tabLabel` property is editable.  # noqa: E501
 
         :param tab_label_metadata: The tab_label_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2284,6 +2366,7 @@ class CommissionState(object):
     def tab_order_metadata(self):
         """Gets the tab_order_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `tabOrder` property is editable.  # noqa: E501
 
         :return: The tab_order_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2294,6 +2377,7 @@ class CommissionState(object):
     def tab_order_metadata(self, tab_order_metadata):
         """Sets the tab_order_metadata of this CommissionState.
 
+        Metadata that indicates whether the `tabOrder` property is editable.  # noqa: E501
 
         :param tab_order_metadata: The tab_order_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2328,6 +2412,7 @@ class CommissionState(object):
     def tab_type_metadata(self):
         """Gets the tab_type_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `tabType` property is editable.  # noqa: E501
 
         :return: The tab_type_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2338,6 +2423,7 @@ class CommissionState(object):
     def tab_type_metadata(self, tab_type_metadata):
         """Sets the tab_type_metadata of this CommissionState.
 
+        Metadata that indicates whether the `tabType` property is editable.  # noqa: E501
 
         :param tab_type_metadata: The tab_type_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2372,6 +2458,7 @@ class CommissionState(object):
     def template_locked_metadata(self):
         """Gets the template_locked_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `templateLocked` property is editable.  # noqa: E501
 
         :return: The template_locked_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2382,6 +2469,7 @@ class CommissionState(object):
     def template_locked_metadata(self, template_locked_metadata):
         """Sets the template_locked_metadata of this CommissionState.
 
+        Metadata that indicates whether the `templateLocked` property is editable.  # noqa: E501
 
         :param template_locked_metadata: The template_locked_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2416,6 +2504,7 @@ class CommissionState(object):
     def template_required_metadata(self):
         """Gets the template_required_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `templateRequired` property is editable.  # noqa: E501
 
         :return: The template_required_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2426,6 +2515,7 @@ class CommissionState(object):
     def template_required_metadata(self, template_required_metadata):
         """Sets the template_required_metadata of this CommissionState.
 
+        Metadata that indicates whether the `templateRequired` property is editable.  # noqa: E501
 
         :param template_required_metadata: The template_required_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2460,6 +2550,7 @@ class CommissionState(object):
     def tool_tip_metadata(self):
         """Gets the tool_tip_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `toolTip` property is editable.  # noqa: E501
 
         :return: The tool_tip_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2470,6 +2561,7 @@ class CommissionState(object):
     def tool_tip_metadata(self, tool_tip_metadata):
         """Sets the tool_tip_metadata of this CommissionState.
 
+        Metadata that indicates whether the `toolTip` property is editable.  # noqa: E501
 
         :param tool_tip_metadata: The tool_tip_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2504,6 +2596,7 @@ class CommissionState(object):
     def underline_metadata(self):
         """Gets the underline_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `underline` property is editable.  # noqa: E501
 
         :return: The underline_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2514,6 +2607,7 @@ class CommissionState(object):
     def underline_metadata(self, underline_metadata):
         """Sets the underline_metadata of this CommissionState.
 
+        Metadata that indicates whether the `underline` property is editable.  # noqa: E501
 
         :param underline_metadata: The underline_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2548,6 +2642,7 @@ class CommissionState(object):
     def value_metadata(self):
         """Gets the value_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `value` property is editable.  # noqa: E501
 
         :return: The value_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2558,6 +2653,7 @@ class CommissionState(object):
     def value_metadata(self, value_metadata):
         """Sets the value_metadata of this CommissionState.
 
+        Metadata that indicates whether the `value` property is editable.  # noqa: E501
 
         :param value_metadata: The value_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2592,6 +2688,7 @@ class CommissionState(object):
     def width_metadata(self):
         """Gets the width_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `width` property is editable.  # noqa: E501
 
         :return: The width_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2602,6 +2699,7 @@ class CommissionState(object):
     def width_metadata(self, width_metadata):
         """Sets the width_metadata of this CommissionState.
 
+        Metadata that indicates whether the `width` property is editable.  # noqa: E501
 
         :param width_metadata: The width_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2636,6 +2734,7 @@ class CommissionState(object):
     def x_position_metadata(self):
         """Gets the x_position_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `xPosition` property is editable.  # noqa: E501
 
         :return: The x_position_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2646,6 +2745,7 @@ class CommissionState(object):
     def x_position_metadata(self, x_position_metadata):
         """Sets the x_position_metadata of this CommissionState.
 
+        Metadata that indicates whether the `xPosition` property is editable.  # noqa: E501
 
         :param x_position_metadata: The x_position_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata
@@ -2680,6 +2780,7 @@ class CommissionState(object):
     def y_position_metadata(self):
         """Gets the y_position_metadata of this CommissionState.  # noqa: E501
 
+        Metadata that indicates whether the `yPosition` property is editable.  # noqa: E501
 
         :return: The y_position_metadata of this CommissionState.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2690,6 +2791,7 @@ class CommissionState(object):
     def y_position_metadata(self, y_position_metadata):
         """Sets the y_position_metadata of this CommissionState.
 
+        Metadata that indicates whether the `yPosition` property is editable.  # noqa: E501
 
         :param y_position_metadata: The y_position_metadata of this CommissionState.  # noqa: E501
         :type: PropertyMetadata

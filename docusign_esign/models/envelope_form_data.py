@@ -148,6 +148,7 @@ class EnvelopeFormData(object):
     def prefill_form_data(self):
         """Gets the prefill_form_data of this EnvelopeFormData.  # noqa: E501
 
+        An array of `formDataItem` objects for [prefill tabs](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs).   # noqa: E501
 
         :return: The prefill_form_data of this EnvelopeFormData.  # noqa: E501
         :rtype: PrefillFormData
@@ -158,6 +159,7 @@ class EnvelopeFormData(object):
     def prefill_form_data(self, prefill_form_data):
         """Sets the prefill_form_data of this EnvelopeFormData.
 
+        An array of `formDataItem` objects for [prefill tabs](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs).   # noqa: E501
 
         :param prefill_form_data: The prefill_form_data of this EnvelopeFormData.  # noqa: E501
         :type: PrefillFormData

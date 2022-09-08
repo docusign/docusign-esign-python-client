@@ -87,6 +87,7 @@ class CreditCardInformation(object):
     def address(self):
         """Gets the address of this CreditCardInformation.  # noqa: E501
 
+        A complex element containing the credit card billing address information.  # noqa: E501
 
         :return: The address of this CreditCardInformation.  # noqa: E501
         :rtype: AddressInformation
@@ -97,6 +98,7 @@ class CreditCardInformation(object):
     def address(self, address):
         """Sets the address of this CreditCardInformation.
 
+        A complex element containing the credit card billing address information.  # noqa: E501
 
         :param address: The address of this CreditCardInformation.  # noqa: E501
         :type: AddressInformation

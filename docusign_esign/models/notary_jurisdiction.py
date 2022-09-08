@@ -148,6 +148,7 @@ class NotaryJurisdiction(object):
     def error_details(self):
         """Gets the error_details of this NotaryJurisdiction.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this NotaryJurisdiction.  # noqa: E501
         :rtype: ErrorDetails
@@ -158,6 +159,7 @@ class NotaryJurisdiction(object):
     def error_details(self, error_details):
         """Sets the error_details of this NotaryJurisdiction.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this NotaryJurisdiction.  # noqa: E501
         :type: ErrorDetails
@@ -169,6 +171,7 @@ class NotaryJurisdiction(object):
     def jurisdiction(self):
         """Gets the jurisdiction of this NotaryJurisdiction.  # noqa: E501
 
+        Description of the jurisdiction for this notary. This is a read-only property.  # noqa: E501
 
         :return: The jurisdiction of this NotaryJurisdiction.  # noqa: E501
         :rtype: Jurisdiction
@@ -179,6 +182,7 @@ class NotaryJurisdiction(object):
     def jurisdiction(self, jurisdiction):
         """Sets the jurisdiction of this NotaryJurisdiction.
 
+        Description of the jurisdiction for this notary. This is a read-only property.  # noqa: E501
 
         :param jurisdiction: The jurisdiction of this NotaryJurisdiction.  # noqa: E501
         :type: Jurisdiction

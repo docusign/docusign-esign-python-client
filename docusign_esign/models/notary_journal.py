@@ -121,6 +121,7 @@ class NotaryJournal(object):
     def jurisdiction(self):
         """Gets the jurisdiction of this NotaryJournal.  # noqa: E501
 
+        The notary's jurisdiction.   # noqa: E501
 
         :return: The jurisdiction of this NotaryJournal.  # noqa: E501
         :rtype: Jurisdiction
@@ -131,6 +132,7 @@ class NotaryJournal(object):
     def jurisdiction(self, jurisdiction):
         """Sets the jurisdiction of this NotaryJournal.
 
+        The notary's jurisdiction.   # noqa: E501
 
         :param jurisdiction: The jurisdiction of this NotaryJournal.  # noqa: E501
         :type: Jurisdiction
@@ -165,6 +167,7 @@ class NotaryJournal(object):
     def notary_journal_meta_data(self):
         """Gets the notary_journal_meta_data of this NotaryJournal.  # noqa: E501
 
+        Additional journal data such as the witness list and signature image.  # noqa: E501
 
         :return: The notary_journal_meta_data of this NotaryJournal.  # noqa: E501
         :rtype: NotaryJournalMetaData
@@ -175,6 +178,7 @@ class NotaryJournal(object):
     def notary_journal_meta_data(self, notary_journal_meta_data):
         """Sets the notary_journal_meta_data of this NotaryJournal.
 
+        Additional journal data such as the witness list and signature image.  # noqa: E501
 
         :param notary_journal_meta_data: The notary_journal_meta_data of this NotaryJournal.  # noqa: E501
         :type: NotaryJournalMetaData

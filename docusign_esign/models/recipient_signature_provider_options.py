@@ -106,6 +106,7 @@ class RecipientSignatureProviderOptions(object):
     def cpf_number_metadata(self):
         """Gets the cpf_number_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The cpf_number_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
         :rtype: PropertyMetadata
@@ -116,6 +117,7 @@ class RecipientSignatureProviderOptions(object):
     def cpf_number_metadata(self, cpf_number_metadata):
         """Sets the cpf_number_metadata of this RecipientSignatureProviderOptions.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param cpf_number_metadata: The cpf_number_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
         :type: PropertyMetadata
@@ -150,6 +152,7 @@ class RecipientSignatureProviderOptions(object):
     def one_time_password_metadata(self):
         """Gets the one_time_password_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
 
+        Metadata that indicates whether the `oneTimePassword` property is editable.  # noqa: E501
 
         :return: The one_time_password_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
         :rtype: PropertyMetadata
@@ -160,6 +163,7 @@ class RecipientSignatureProviderOptions(object):
     def one_time_password_metadata(self, one_time_password_metadata):
         """Sets the one_time_password_metadata of this RecipientSignatureProviderOptions.
 
+        Metadata that indicates whether the `oneTimePassword` property is editable.  # noqa: E501
 
         :param one_time_password_metadata: The one_time_password_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
         :type: PropertyMetadata
@@ -194,6 +198,7 @@ class RecipientSignatureProviderOptions(object):
     def signer_role_metadata(self):
         """Gets the signer_role_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
 
+        Metadata that indicates whether the `signerRole` property is editable.  # noqa: E501
 
         :return: The signer_role_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
         :rtype: PropertyMetadata
@@ -204,6 +209,7 @@ class RecipientSignatureProviderOptions(object):
     def signer_role_metadata(self, signer_role_metadata):
         """Sets the signer_role_metadata of this RecipientSignatureProviderOptions.
 
+        Metadata that indicates whether the `signerRole` property is editable.  # noqa: E501
 
         :param signer_role_metadata: The signer_role_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
         :type: PropertyMetadata
@@ -238,6 +244,7 @@ class RecipientSignatureProviderOptions(object):
     def sms_metadata(self):
         """Gets the sms_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
 
+        Metadata that indicates whether the `sms` property is editable.  # noqa: E501
 
         :return: The sms_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
         :rtype: PropertyMetadata
@@ -248,6 +255,7 @@ class RecipientSignatureProviderOptions(object):
     def sms_metadata(self, sms_metadata):
         """Sets the sms_metadata of this RecipientSignatureProviderOptions.
 
+        Metadata that indicates whether the `sms` property is editable.  # noqa: E501
 
         :param sms_metadata: The sms_metadata of this RecipientSignatureProviderOptions.  # noqa: E501
         :type: PropertyMetadata

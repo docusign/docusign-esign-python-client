@@ -94,6 +94,7 @@ class RecipientUpdateResponse(object):
     def error_details(self):
         """Gets the error_details of this RecipientUpdateResponse.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this RecipientUpdateResponse.  # noqa: E501
         :rtype: ErrorDetails
@@ -104,6 +105,7 @@ class RecipientUpdateResponse(object):
     def error_details(self, error_details):
         """Sets the error_details of this RecipientUpdateResponse.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this RecipientUpdateResponse.  # noqa: E501
         :type: ErrorDetails
@@ -161,6 +163,7 @@ class RecipientUpdateResponse(object):
     def tabs(self):
         """Gets the tabs of this RecipientUpdateResponse.  # noqa: E501
 
+        All of the tabs associated with the recipient.  # noqa: E501
 
         :return: The tabs of this RecipientUpdateResponse.  # noqa: E501
         :rtype: Tabs
@@ -171,6 +174,7 @@ class RecipientUpdateResponse(object):
     def tabs(self, tabs):
         """Sets the tabs of this RecipientUpdateResponse.
 
+        All of the tabs associated with the recipient.  # noqa: E501
 
         :param tabs: The tabs of this RecipientUpdateResponse.  # noqa: E501
         :type: Tabs

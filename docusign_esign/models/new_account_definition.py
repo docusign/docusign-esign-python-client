@@ -44,6 +44,7 @@ class NewAccountDefinition(object):
         'envelope_partition_id': 'str',
         'initial_user': 'UserInformation',
         'payment_method': 'str',
+        'payment_processor': 'str',
         'payment_processor_information': 'PaymentProcessorInformation',
         'plan_information': 'PlanInformation',
         'process_payment': 'str',
@@ -64,6 +65,7 @@ class NewAccountDefinition(object):
         'envelope_partition_id': 'envelopePartitionId',
         'initial_user': 'initialUser',
         'payment_method': 'paymentMethod',
+        'payment_processor': 'paymentProcessor',
         'payment_processor_information': 'paymentProcessorInformation',
         'plan_information': 'planInformation',
         'process_payment': 'processPayment',
@@ -89,6 +91,7 @@ class NewAccountDefinition(object):
         self._envelope_partition_id = None
         self._initial_user = None
         self._payment_method = None
+        self._payment_processor = None
         self._payment_processor_information = None
         self._plan_information = None
         self._process_payment = None
@@ -108,6 +111,7 @@ class NewAccountDefinition(object):
         setattr(self, "_{}".format('envelope_partition_id'), kwargs.get('envelope_partition_id', None))
         setattr(self, "_{}".format('initial_user'), kwargs.get('initial_user', None))
         setattr(self, "_{}".format('payment_method'), kwargs.get('payment_method', None))
+        setattr(self, "_{}".format('payment_processor'), kwargs.get('payment_processor', None))
         setattr(self, "_{}".format('payment_processor_information'), kwargs.get('payment_processor_information', None))
         setattr(self, "_{}".format('plan_information'), kwargs.get('plan_information', None))
         setattr(self, "_{}".format('process_payment'), kwargs.get('process_payment', None))
@@ -142,6 +146,7 @@ class NewAccountDefinition(object):
     def account_settings(self):
         """Gets the account_settings of this NewAccountDefinition.  # noqa: E501
 
+        The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.    # noqa: E501
 
         :return: The account_settings of this NewAccountDefinition.  # noqa: E501
         :rtype: AccountSettingsInformation
@@ -152,6 +157,7 @@ class NewAccountDefinition(object):
     def account_settings(self, account_settings):
         """Sets the account_settings of this NewAccountDefinition.
 
+        The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.    # noqa: E501
 
         :param account_settings: The account_settings of this NewAccountDefinition.  # noqa: E501
         :type: AccountSettingsInformation
@@ -163,6 +169,7 @@ class NewAccountDefinition(object):
     def address_information(self):
         """Gets the address_information of this NewAccountDefinition.  # noqa: E501
 
+        A complex type that contains the following information for the new account: `Street1`, `Street2`, `City`, `State`, `Zip`, `Phone`, and `Fax`.  # noqa: E501
 
         :return: The address_information of this NewAccountDefinition.  # noqa: E501
         :rtype: AccountAddress
@@ -173,6 +180,7 @@ class NewAccountDefinition(object):
     def address_information(self, address_information):
         """Sets the address_information of this NewAccountDefinition.
 
+        A complex type that contains the following information for the new account: `Street1`, `Street2`, `City`, `State`, `Zip`, `Phone`, and `Fax`.  # noqa: E501
 
         :param address_information: The address_information of this NewAccountDefinition.  # noqa: E501
         :type: AccountAddress
@@ -184,6 +192,7 @@ class NewAccountDefinition(object):
     def credit_card_information(self):
         """Gets the credit_card_information of this NewAccountDefinition.  # noqa: E501
 
+        A complex type that has information about the credit card used to pay for this account.  # noqa: E501
 
         :return: The credit_card_information of this NewAccountDefinition.  # noqa: E501
         :rtype: CreditCardInformation
@@ -194,6 +203,7 @@ class NewAccountDefinition(object):
     def credit_card_information(self, credit_card_information):
         """Sets the credit_card_information of this NewAccountDefinition.
 
+        A complex type that has information about the credit card used to pay for this account.  # noqa: E501
 
         :param credit_card_information: The credit_card_information of this NewAccountDefinition.  # noqa: E501
         :type: CreditCardInformation
@@ -205,6 +215,7 @@ class NewAccountDefinition(object):
     def direct_debit_processor_information(self):
         """Gets the direct_debit_processor_information of this NewAccountDefinition.  # noqa: E501
 
+        Information about the bank that processes direct debits for the payment plan.  # noqa: E501
 
         :return: The direct_debit_processor_information of this NewAccountDefinition.  # noqa: E501
         :rtype: DirectDebitProcessorInformation
@@ -215,6 +226,7 @@ class NewAccountDefinition(object):
     def direct_debit_processor_information(self, direct_debit_processor_information):
         """Sets the direct_debit_processor_information of this NewAccountDefinition.
 
+        Information about the bank that processes direct debits for the payment plan.  # noqa: E501
 
         :param direct_debit_processor_information: The direct_debit_processor_information of this NewAccountDefinition.  # noqa: E501
         :type: DirectDebitProcessorInformation
@@ -318,6 +330,7 @@ class NewAccountDefinition(object):
     def initial_user(self):
         """Gets the initial_user of this NewAccountDefinition.  # noqa: E501
 
+        A complex type with the initial user information for the new account. Note that some user information is set internally based on the plan and cannot be overridden.  # noqa: E501
 
         :return: The initial_user of this NewAccountDefinition.  # noqa: E501
         :rtype: UserInformation
@@ -328,6 +341,7 @@ class NewAccountDefinition(object):
     def initial_user(self, initial_user):
         """Sets the initial_user of this NewAccountDefinition.
 
+        A complex type with the initial user information for the new account. Note that some user information is set internally based on the plan and cannot be overridden.  # noqa: E501
 
         :param initial_user: The initial_user of this NewAccountDefinition.  # noqa: E501
         :type: UserInformation
@@ -359,9 +373,33 @@ class NewAccountDefinition(object):
         self._payment_method = payment_method
 
     @property
+    def payment_processor(self):
+        """Gets the payment_processor of this NewAccountDefinition.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_processor of this NewAccountDefinition.  # noqa: E501
+        :rtype: str
+        """
+        return self._payment_processor
+
+    @payment_processor.setter
+    def payment_processor(self, payment_processor):
+        """Sets the payment_processor of this NewAccountDefinition.
+
+          # noqa: E501
+
+        :param payment_processor: The payment_processor of this NewAccountDefinition.  # noqa: E501
+        :type: str
+        """
+
+        self._payment_processor = payment_processor
+
+    @property
     def payment_processor_information(self):
         """Gets the payment_processor_information of this NewAccountDefinition.  # noqa: E501
 
+        Information about the entity that processes payments for the billing plan.  # noqa: E501
 
         :return: The payment_processor_information of this NewAccountDefinition.  # noqa: E501
         :rtype: PaymentProcessorInformation
@@ -372,6 +410,7 @@ class NewAccountDefinition(object):
     def payment_processor_information(self, payment_processor_information):
         """Sets the payment_processor_information of this NewAccountDefinition.
 
+        Information about the entity that processes payments for the billing plan.  # noqa: E501
 
         :param payment_processor_information: The payment_processor_information of this NewAccountDefinition.  # noqa: E501
         :type: PaymentProcessorInformation
@@ -383,6 +422,7 @@ class NewAccountDefinition(object):
     def plan_information(self):
         """Gets the plan_information of this NewAccountDefinition.  # noqa: E501
 
+        An object used to identify the features and attributes of the account being created.  # noqa: E501
 
         :return: The plan_information of this NewAccountDefinition.  # noqa: E501
         :rtype: PlanInformation
@@ -393,6 +433,7 @@ class NewAccountDefinition(object):
     def plan_information(self, plan_information):
         """Sets the plan_information of this NewAccountDefinition.
 
+        An object used to identify the features and attributes of the account being created.  # noqa: E501
 
         :param plan_information: The plan_information of this NewAccountDefinition.  # noqa: E501
         :type: PlanInformation
@@ -427,6 +468,7 @@ class NewAccountDefinition(object):
     def referral_information(self):
         """Gets the referral_information of this NewAccountDefinition.  # noqa: E501
 
+        A complex type that contains properties for entering referral and discount information.  # noqa: E501
 
         :return: The referral_information of this NewAccountDefinition.  # noqa: E501
         :rtype: ReferralInformation
@@ -437,6 +479,7 @@ class NewAccountDefinition(object):
     def referral_information(self, referral_information):
         """Sets the referral_information of this NewAccountDefinition.
 
+        A complex type that contains properties for entering referral and discount information.  # noqa: E501
 
         :param referral_information: The referral_information of this NewAccountDefinition.  # noqa: E501
         :type: ReferralInformation
@@ -448,6 +491,7 @@ class NewAccountDefinition(object):
     def social_account_information(self):
         """Gets the social_account_information of this NewAccountDefinition.  # noqa: E501
 
+        Contains properties that map a DocuSign user to a social account such as Facebook or Yahoo.  # noqa: E501
 
         :return: The social_account_information of this NewAccountDefinition.  # noqa: E501
         :rtype: SocialAccountInformation
@@ -458,6 +502,7 @@ class NewAccountDefinition(object):
     def social_account_information(self, social_account_information):
         """Sets the social_account_information of this NewAccountDefinition.
 
+        Contains properties that map a DocuSign user to a social account such as Facebook or Yahoo.  # noqa: E501
 
         :param social_account_information: The social_account_information of this NewAccountDefinition.  # noqa: E501
         :type: SocialAccountInformation

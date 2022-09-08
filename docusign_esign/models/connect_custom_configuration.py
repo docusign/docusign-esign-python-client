@@ -445,6 +445,7 @@ class ConnectCustomConfiguration(object):
     def event_data(self):
         """Gets the event_data of this ConnectCustomConfiguration.  # noqa: E501
 
+        Allows you to specify the format of the information the Connect webhooks returns. For more information, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications)  # noqa: E501
 
         :return: The event_data of this ConnectCustomConfiguration.  # noqa: E501
         :rtype: ConnectEventData
@@ -455,6 +456,7 @@ class ConnectCustomConfiguration(object):
     def event_data(self, event_data):
         """Sets the event_data of this ConnectCustomConfiguration.
 
+        Allows you to specify the format of the information the Connect webhooks returns. For more information, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications)  # noqa: E501
 
         :param event_data: The event_data of this ConnectCustomConfiguration.  # noqa: E501
         :type: ConnectEventData

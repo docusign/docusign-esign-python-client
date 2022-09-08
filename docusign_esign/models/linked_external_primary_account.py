@@ -198,6 +198,7 @@ class LinkedExternalPrimaryAccount(object):
     def recipient_auth_requirements(self):
         """Gets the recipient_auth_requirements of this LinkedExternalPrimaryAccount.  # noqa: E501
 
+          # noqa: E501
 
         :return: The recipient_auth_requirements of this LinkedExternalPrimaryAccount.  # noqa: E501
         :rtype: ExternalPrimaryAccountRecipientAuthRequirements
@@ -208,6 +209,7 @@ class LinkedExternalPrimaryAccount(object):
     def recipient_auth_requirements(self, recipient_auth_requirements):
         """Sets the recipient_auth_requirements of this LinkedExternalPrimaryAccount.
 
+          # noqa: E501
 
         :param recipient_auth_requirements: The recipient_auth_requirements of this LinkedExternalPrimaryAccount.  # noqa: E501
         :type: ExternalPrimaryAccountRecipientAuthRequirements

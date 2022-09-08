@@ -114,6 +114,7 @@ class AccessCodeFormat(object):
     def format_required_metadata(self):
         """Gets the format_required_metadata of this AccessCodeFormat.  # noqa: E501
 
+        Metadata indicating whether the `formatRequired` property is editable.  # noqa: E501
 
         :return: The format_required_metadata of this AccessCodeFormat.  # noqa: E501
         :rtype: SettingsMetadata
@@ -124,6 +125,7 @@ class AccessCodeFormat(object):
     def format_required_metadata(self, format_required_metadata):
         """Sets the format_required_metadata of this AccessCodeFormat.
 
+        Metadata indicating whether the `formatRequired` property is editable.  # noqa: E501
 
         :param format_required_metadata: The format_required_metadata of this AccessCodeFormat.  # noqa: E501
         :type: SettingsMetadata
@@ -158,6 +160,7 @@ class AccessCodeFormat(object):
     def letter_required_metadata(self):
         """Gets the letter_required_metadata of this AccessCodeFormat.  # noqa: E501
 
+        Metadata indicating whether the `letterRequired` property is editable.  # noqa: E501
 
         :return: The letter_required_metadata of this AccessCodeFormat.  # noqa: E501
         :rtype: SettingsMetadata
@@ -168,6 +171,7 @@ class AccessCodeFormat(object):
     def letter_required_metadata(self, letter_required_metadata):
         """Sets the letter_required_metadata of this AccessCodeFormat.
 
+        Metadata indicating whether the `letterRequired` property is editable.  # noqa: E501
 
         :param letter_required_metadata: The letter_required_metadata of this AccessCodeFormat.  # noqa: E501
         :type: SettingsMetadata
@@ -202,6 +206,7 @@ class AccessCodeFormat(object):
     def minimum_length_metadata(self):
         """Gets the minimum_length_metadata of this AccessCodeFormat.  # noqa: E501
 
+        Metadata indicating whether the `minimumLength` property is editable.  # noqa: E501
 
         :return: The minimum_length_metadata of this AccessCodeFormat.  # noqa: E501
         :rtype: SettingsMetadata
@@ -212,6 +217,7 @@ class AccessCodeFormat(object):
     def minimum_length_metadata(self, minimum_length_metadata):
         """Sets the minimum_length_metadata of this AccessCodeFormat.
 
+        Metadata indicating whether the `minimumLength` property is editable.  # noqa: E501
 
         :param minimum_length_metadata: The minimum_length_metadata of this AccessCodeFormat.  # noqa: E501
         :type: SettingsMetadata
@@ -246,6 +252,7 @@ class AccessCodeFormat(object):
     def number_required_metadata(self):
         """Gets the number_required_metadata of this AccessCodeFormat.  # noqa: E501
 
+        Metadata indicating whether the `numberRequired` property is editable.  # noqa: E501
 
         :return: The number_required_metadata of this AccessCodeFormat.  # noqa: E501
         :rtype: SettingsMetadata
@@ -256,6 +263,7 @@ class AccessCodeFormat(object):
     def number_required_metadata(self, number_required_metadata):
         """Sets the number_required_metadata of this AccessCodeFormat.
 
+        Metadata indicating whether the `numberRequired` property is editable.  # noqa: E501
 
         :param number_required_metadata: The number_required_metadata of this AccessCodeFormat.  # noqa: E501
         :type: SettingsMetadata
@@ -290,6 +298,7 @@ class AccessCodeFormat(object):
     def special_character_required_metadata(self):
         """Gets the special_character_required_metadata of this AccessCodeFormat.  # noqa: E501
 
+        Metadata indicating whether the `specialCharacterRequired` property is editable.  # noqa: E501
 
         :return: The special_character_required_metadata of this AccessCodeFormat.  # noqa: E501
         :rtype: SettingsMetadata
@@ -300,6 +309,7 @@ class AccessCodeFormat(object):
     def special_character_required_metadata(self, special_character_required_metadata):
         """Sets the special_character_required_metadata of this AccessCodeFormat.
 
+        Metadata indicating whether the `specialCharacterRequired` property is editable.  # noqa: E501
 
         :param special_character_required_metadata: The special_character_required_metadata of this AccessCodeFormat.  # noqa: E501
         :type: SettingsMetadata

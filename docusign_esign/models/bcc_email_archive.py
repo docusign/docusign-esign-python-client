@@ -160,6 +160,7 @@ class BccEmailArchive(object):
     def created_by(self):
         """Gets the created_by of this BccEmailArchive.  # noqa: E501
 
+        Details about the user who created the BCC email archive configuration.  # noqa: E501
 
         :return: The created_by of this BccEmailArchive.  # noqa: E501
         :rtype: UserInfo
@@ -170,6 +171,7 @@ class BccEmailArchive(object):
     def created_by(self, created_by):
         """Sets the created_by of this BccEmailArchive.
 
+        Details about the user who created the BCC email archive configuration.  # noqa: E501
 
         :param created_by: The created_by of this BccEmailArchive.  # noqa: E501
         :type: UserInfo
@@ -250,6 +252,7 @@ class BccEmailArchive(object):
     def modified_by(self):
         """Gets the modified_by of this BccEmailArchive.  # noqa: E501
 
+        Details about the user who last modified the BCC email archive configuration.  # noqa: E501
 
         :return: The modified_by of this BccEmailArchive.  # noqa: E501
         :rtype: UserInfo
@@ -260,6 +263,7 @@ class BccEmailArchive(object):
     def modified_by(self, modified_by):
         """Sets the modified_by of this BccEmailArchive.
 
+        Details about the user who last modified the BCC email archive configuration.  # noqa: E501
 
         :param modified_by: The modified_by of this BccEmailArchive.  # noqa: E501
         :type: UserInfo

@@ -77,6 +77,7 @@ class TabMetadata(object):
         'scale_value': 'str',
         'selected': 'str',
         'shared': 'str',
+        'signature_provider_id': 'str',
         'stamp_type': 'str',
         'stamp_type_metadata': 'PropertyMetadata',
         'tab_label': 'str',
@@ -132,6 +133,7 @@ class TabMetadata(object):
         'scale_value': 'scaleValue',
         'selected': 'selected',
         'shared': 'shared',
+        'signature_provider_id': 'signatureProviderId',
         'stamp_type': 'stampType',
         'stamp_type_metadata': 'stampTypeMetadata',
         'tab_label': 'tabLabel',
@@ -192,6 +194,7 @@ class TabMetadata(object):
         self._scale_value = None
         self._selected = None
         self._shared = None
+        self._signature_provider_id = None
         self._stamp_type = None
         self._stamp_type_metadata = None
         self._tab_label = None
@@ -246,6 +249,7 @@ class TabMetadata(object):
         setattr(self, "_{}".format('scale_value'), kwargs.get('scale_value', None))
         setattr(self, "_{}".format('selected'), kwargs.get('selected', None))
         setattr(self, "_{}".format('shared'), kwargs.get('shared', None))
+        setattr(self, "_{}".format('signature_provider_id'), kwargs.get('signature_provider_id', None))
         setattr(self, "_{}".format('stamp_type'), kwargs.get('stamp_type', None))
         setattr(self, "_{}".format('stamp_type_metadata'), kwargs.get('stamp_type_metadata', None))
         setattr(self, "_{}".format('tab_label'), kwargs.get('tab_label', None))
@@ -880,6 +884,7 @@ class TabMetadata(object):
     def locale_policy(self):
         """Gets the locale_policy of this TabMetadata.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The locale_policy of this TabMetadata.  # noqa: E501
         :rtype: LocalePolicyTab
@@ -890,6 +895,7 @@ class TabMetadata(object):
     def locale_policy(self, locale_policy):
         """Sets the locale_policy of this TabMetadata.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param locale_policy: The locale_policy of this TabMetadata.  # noqa: E501
         :type: LocalePolicyTab
@@ -970,6 +976,7 @@ class TabMetadata(object):
     def merge_field(self):
         """Gets the merge_field of this TabMetadata.  # noqa: E501
 
+        Contains the information necessary to map the tab to a field in SalesForce.  # noqa: E501
 
         :return: The merge_field of this TabMetadata.  # noqa: E501
         :rtype: MergeField
@@ -980,6 +987,7 @@ class TabMetadata(object):
     def merge_field(self, merge_field):
         """Sets the merge_field of this TabMetadata.
 
+        Contains the information necessary to map the tab to a field in SalesForce.  # noqa: E501
 
         :param merge_field: The merge_field of this TabMetadata.  # noqa: E501
         :type: MergeField
@@ -1264,6 +1272,29 @@ class TabMetadata(object):
         self._shared = shared
 
     @property
+    def signature_provider_id(self):
+        """Gets the signature_provider_id of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_provider_id of this TabMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._signature_provider_id
+
+    @signature_provider_id.setter
+    def signature_provider_id(self, signature_provider_id):
+        """Sets the signature_provider_id of this TabMetadata.
+
+          # noqa: E501
+
+        :param signature_provider_id: The signature_provider_id of this TabMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._signature_provider_id = signature_provider_id
+
+    @property
     def stamp_type(self):
         """Gets the stamp_type of this TabMetadata.  # noqa: E501
 
@@ -1290,6 +1321,7 @@ class TabMetadata(object):
     def stamp_type_metadata(self):
         """Gets the stamp_type_metadata of this TabMetadata.  # noqa: E501
 
+        Metadata that indicates whether the `stampType` property is editable.  # noqa: E501
 
         :return: The stamp_type_metadata of this TabMetadata.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1300,6 +1332,7 @@ class TabMetadata(object):
     def stamp_type_metadata(self, stamp_type_metadata):
         """Sets the stamp_type_metadata of this TabMetadata.
 
+        Metadata that indicates whether the `stampType` property is editable.  # noqa: E501
 
         :param stamp_type_metadata: The stamp_type_metadata of this TabMetadata.  # noqa: E501
         :type: PropertyMetadata

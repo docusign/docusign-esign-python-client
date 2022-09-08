@@ -55,6 +55,7 @@ class RecipientRouting(object):
     def rules(self):
         """Gets the rules of this RecipientRouting.  # noqa: E501
 
+        The recipient routing rules.  # noqa: E501
 
         :return: The rules of this RecipientRouting.  # noqa: E501
         :rtype: RecipientRules
@@ -65,6 +66,7 @@ class RecipientRouting(object):
     def rules(self, rules):
         """Sets the rules of this RecipientRouting.
 
+        The recipient routing rules.  # noqa: E501
 
         :param rules: The rules of this RecipientRouting.  # noqa: E501
         :type: RecipientRules

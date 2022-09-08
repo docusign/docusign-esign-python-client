@@ -59,6 +59,7 @@ class BillingPlanResponse(object):
     def billing_plan(self):
         """Gets the billing_plan of this BillingPlanResponse.  # noqa: E501
 
+        An object that contains details about the billing plan.  # noqa: E501
 
         :return: The billing_plan of this BillingPlanResponse.  # noqa: E501
         :rtype: BillingPlan
@@ -69,6 +70,7 @@ class BillingPlanResponse(object):
     def billing_plan(self, billing_plan):
         """Sets the billing_plan of this BillingPlanResponse.
 
+        An object that contains details about the billing plan.  # noqa: E501
 
         :param billing_plan: The billing_plan of this BillingPlanResponse.  # noqa: E501
         :type: BillingPlan

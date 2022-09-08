@@ -174,6 +174,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_account_security_settings_metadata(self):
         """Gets the can_manage_account_security_settings_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_manage_account_security_settings_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -184,6 +185,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_account_security_settings_metadata(self, can_manage_account_security_settings_metadata):
         """Sets the can_manage_account_security_settings_metadata of this UserAccountManagementGranularInformation.
 
+          # noqa: E501
 
         :param can_manage_account_security_settings_metadata: The can_manage_account_security_settings_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -218,6 +220,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_account_settings_metadata(self):
         """Gets the can_manage_account_settings_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_manage_account_settings_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -228,6 +231,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_account_settings_metadata(self, can_manage_account_settings_metadata):
         """Sets the can_manage_account_settings_metadata of this UserAccountManagementGranularInformation.
 
+          # noqa: E501
 
         :param can_manage_account_settings_metadata: The can_manage_account_settings_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -262,6 +266,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_admins_metadata(self):
         """Gets the can_manage_admins_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+        Metadata that indicates whether the `canManageAdmins` property is editable.   # noqa: E501
 
         :return: The can_manage_admins_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -272,6 +277,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_admins_metadata(self, can_manage_admins_metadata):
         """Sets the can_manage_admins_metadata of this UserAccountManagementGranularInformation.
 
+        Metadata that indicates whether the `canManageAdmins` property is editable.   # noqa: E501
 
         :param can_manage_admins_metadata: The can_manage_admins_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -306,6 +312,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_connect_metadata(self):
         """Gets the can_manage_connect_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_manage_connect_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -316,6 +323,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_connect_metadata(self, can_manage_connect_metadata):
         """Sets the can_manage_connect_metadata of this UserAccountManagementGranularInformation.
 
+          # noqa: E501
 
         :param can_manage_connect_metadata: The can_manage_connect_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -350,6 +358,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_document_retention_metadata(self):
         """Gets the can_manage_document_retention_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_manage_document_retention_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -360,6 +369,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_document_retention_metadata(self, can_manage_document_retention_metadata):
         """Sets the can_manage_document_retention_metadata of this UserAccountManagementGranularInformation.
 
+          # noqa: E501
 
         :param can_manage_document_retention_metadata: The can_manage_document_retention_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -394,6 +404,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_envelope_transfer_metadata(self):
         """Gets the can_manage_envelope_transfer_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_manage_envelope_transfer_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -404,6 +415,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_envelope_transfer_metadata(self, can_manage_envelope_transfer_metadata):
         """Sets the can_manage_envelope_transfer_metadata of this UserAccountManagementGranularInformation.
 
+          # noqa: E501
 
         :param can_manage_envelope_transfer_metadata: The can_manage_envelope_transfer_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -438,6 +450,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_groups_but_not_users_metadata(self):
         """Gets the can_manage_groups_but_not_users_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_manage_groups_but_not_users_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -448,6 +461,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_groups_but_not_users_metadata(self, can_manage_groups_but_not_users_metadata):
         """Sets the can_manage_groups_but_not_users_metadata of this UserAccountManagementGranularInformation.
 
+          # noqa: E501
 
         :param can_manage_groups_but_not_users_metadata: The can_manage_groups_but_not_users_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -482,6 +496,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_reporting_metadata(self):
         """Gets the can_manage_reporting_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_manage_reporting_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -492,6 +507,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_reporting_metadata(self, can_manage_reporting_metadata):
         """Sets the can_manage_reporting_metadata of this UserAccountManagementGranularInformation.
 
+          # noqa: E501
 
         :param can_manage_reporting_metadata: The can_manage_reporting_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -526,6 +542,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_sharing_metadata(self):
         """Gets the can_manage_sharing_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+        Metadata that indicates whether the `canManageSharing` property is editable.   # noqa: E501
 
         :return: The can_manage_sharing_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -536,6 +553,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_sharing_metadata(self, can_manage_sharing_metadata):
         """Sets the can_manage_sharing_metadata of this UserAccountManagementGranularInformation.
 
+        Metadata that indicates whether the `canManageSharing` property is editable.   # noqa: E501
 
         :param can_manage_sharing_metadata: The can_manage_sharing_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -570,6 +588,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_signing_groups_metadata(self):
         """Gets the can_manage_signing_groups_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_manage_signing_groups_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -580,6 +599,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_signing_groups_metadata(self, can_manage_signing_groups_metadata):
         """Sets the can_manage_signing_groups_metadata of this UserAccountManagementGranularInformation.
 
+          # noqa: E501
 
         :param can_manage_signing_groups_metadata: The can_manage_signing_groups_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -658,6 +678,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_users_metadata(self):
         """Gets the can_manage_users_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+        Metadata that indicates whether the `canManageUsers` property is editable.   # noqa: E501
 
         :return: The can_manage_users_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -668,6 +689,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_users_metadata(self, can_manage_users_metadata):
         """Sets the can_manage_users_metadata of this UserAccountManagementGranularInformation.
 
+        Metadata that indicates whether the `canManageUsers` property is editable.   # noqa: E501
 
         :param can_manage_users_metadata: The can_manage_users_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata

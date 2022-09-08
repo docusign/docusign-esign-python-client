@@ -196,6 +196,7 @@ from docusign_esign.models.connect_failure_results import ConnectFailureResults
 from docusign_esign.models.connect_historical_envelope_republish import ConnectHistoricalEnvelopeRepublish
 from docusign_esign.models.connect_log import ConnectLog
 from docusign_esign.models.connect_logs import ConnectLogs
+from docusign_esign.models.connect_o_auth_config import ConnectOAuthConfig
 from docusign_esign.models.connect_salesforce_field import ConnectSalesforceField
 from docusign_esign.models.connect_salesforce_object import ConnectSalesforceObject
 from docusign_esign.models.connect_user_info import ConnectUserInfo
@@ -522,6 +523,7 @@ from docusign_esign.models.workspace_settings import WorkspaceSettings
 from docusign_esign.models.workspace_user import WorkspaceUser
 from docusign_esign.models.workspace_user_authorization import WorkspaceUserAuthorization
 from docusign_esign.models.zip import Zip
+from docusign_esign.models.date import Date
 
 
 configuration = Configuration()

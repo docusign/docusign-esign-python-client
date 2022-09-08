@@ -86,6 +86,7 @@ class BulkSendBatchActionRequest(object):
     def notification(self):
         """Gets the notification of this BulkSendBatchActionRequest.  # noqa: E501
 
+          # noqa: E501
 
         :return: The notification of this BulkSendBatchActionRequest.  # noqa: E501
         :rtype: Notification
@@ -96,6 +97,7 @@ class BulkSendBatchActionRequest(object):
     def notification(self, notification):
         """Sets the notification of this BulkSendBatchActionRequest.
 
+          # noqa: E501
 
         :param notification: The notification of this BulkSendBatchActionRequest.  # noqa: E501
         :type: Notification

@@ -63,6 +63,7 @@ class FavoriteTemplatesInfo(object):
     def error_details(self):
         """Gets the error_details of this FavoriteTemplatesInfo.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this FavoriteTemplatesInfo.  # noqa: E501
         :rtype: ErrorDetails
@@ -73,6 +74,7 @@ class FavoriteTemplatesInfo(object):
     def error_details(self, error_details):
         """Sets the error_details of this FavoriteTemplatesInfo.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this FavoriteTemplatesInfo.  # noqa: E501
         :type: ErrorDetails

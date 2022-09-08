@@ -252,6 +252,7 @@ class EnvelopeTransferRuleRequest(object):
     def modified_user(self):
         """Gets the modified_user of this EnvelopeTransferRuleRequest.  # noqa: E501
 
+        Information about the user who last modified the envelope transfer rule.  # noqa: E501
 
         :return: The modified_user of this EnvelopeTransferRuleRequest.  # noqa: E501
         :rtype: UserInformation
@@ -262,6 +263,7 @@ class EnvelopeTransferRuleRequest(object):
     def modified_user(self, modified_user):
         """Sets the modified_user of this EnvelopeTransferRuleRequest.
 
+        Information about the user who last modified the envelope transfer rule.  # noqa: E501
 
         :param modified_user: The modified_user of this EnvelopeTransferRuleRequest.  # noqa: E501
         :type: UserInformation
@@ -273,6 +275,7 @@ class EnvelopeTransferRuleRequest(object):
     def to_folder(self):
         """Gets the to_folder of this EnvelopeTransferRuleRequest.  # noqa: E501
 
+        Information about the destination folder to which the envelope is transferred.  # noqa: E501
 
         :return: The to_folder of this EnvelopeTransferRuleRequest.  # noqa: E501
         :rtype: Folder
@@ -283,6 +286,7 @@ class EnvelopeTransferRuleRequest(object):
     def to_folder(self, to_folder):
         """Sets the to_folder of this EnvelopeTransferRuleRequest.
 
+        Information about the destination folder to which the envelope is transferred.  # noqa: E501
 
         :param to_folder: The to_folder of this EnvelopeTransferRuleRequest.  # noqa: E501
         :type: Folder
@@ -294,6 +298,7 @@ class EnvelopeTransferRuleRequest(object):
     def to_user(self):
         """Gets the to_user of this EnvelopeTransferRuleRequest.  # noqa: E501
 
+        Information about the user to which the envelope is transferred.  # noqa: E501
 
         :return: The to_user of this EnvelopeTransferRuleRequest.  # noqa: E501
         :rtype: UserInformation
@@ -304,6 +309,7 @@ class EnvelopeTransferRuleRequest(object):
     def to_user(self, to_user):
         """Sets the to_user of this EnvelopeTransferRuleRequest.
 
+        Information about the user to which the envelope is transferred.  # noqa: E501
 
         :param to_user: The to_user of this EnvelopeTransferRuleRequest.  # noqa: E501
         :type: UserInformation

@@ -99,6 +99,7 @@ class UserProfile(object):
     def address(self):
         """Gets the address of this UserProfile.  # noqa: E501
 
+        The user's address.  # noqa: E501
 
         :return: The address of this UserProfile.  # noqa: E501
         :rtype: AddressInformation
@@ -109,6 +110,7 @@ class UserProfile(object):
     def address(self, address):
         """Sets the address of this UserProfile.
 
+        The user's address.  # noqa: E501
 
         :param address: The address of this UserProfile.  # noqa: E501
         :type: AddressInformation
@@ -304,6 +306,7 @@ class UserProfile(object):
     def usage_history(self):
         """Gets the usage_history of this UserProfile.  # noqa: E501
 
+        A complex element consisting of:   - `lastSentDateTime`: The date and time the user last sent an envelope.  - `lastSignedDateTime`: The date and time the user last signed an envelope. - `sentCount`: The number of envelopes the user has sent. - `signedCount`: The number of envelopes the user has signed.    # noqa: E501
 
         :return: The usage_history of this UserProfile.  # noqa: E501
         :rtype: UsageHistory
@@ -314,6 +317,7 @@ class UserProfile(object):
     def usage_history(self, usage_history):
         """Sets the usage_history of this UserProfile.
 
+        A complex element consisting of:   - `lastSentDateTime`: The date and time the user last sent an envelope.  - `lastSignedDateTime`: The date and time the user last signed an envelope. - `sentCount`: The number of envelopes the user has sent. - `signedCount`: The number of envelopes the user has signed.    # noqa: E501
 
         :param usage_history: The usage_history of this UserProfile.  # noqa: E501
         :type: UsageHistory
@@ -325,6 +329,7 @@ class UserProfile(object):
     def user_details(self):
         """Gets the user_details of this UserProfile.  # noqa: E501
 
+          # noqa: E501
 
         :return: The user_details of this UserProfile.  # noqa: E501
         :rtype: UserInformation
@@ -335,6 +340,7 @@ class UserProfile(object):
     def user_details(self, user_details):
         """Sets the user_details of this UserProfile.
 
+          # noqa: E501
 
         :param user_details: The user_details of this UserProfile.  # noqa: E501
         :type: UserInformation

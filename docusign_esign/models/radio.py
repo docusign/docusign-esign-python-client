@@ -294,6 +294,7 @@ class Radio(object):
     def anchor_allow_white_space_in_characters_metadata(self):
         """Gets the anchor_allow_white_space_in_characters_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.  # noqa: E501
 
         :return: The anchor_allow_white_space_in_characters_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -304,6 +305,7 @@ class Radio(object):
     def anchor_allow_white_space_in_characters_metadata(self, anchor_allow_white_space_in_characters_metadata):
         """Sets the anchor_allow_white_space_in_characters_metadata of this Radio.
 
+        Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.  # noqa: E501
 
         :param anchor_allow_white_space_in_characters_metadata: The anchor_allow_white_space_in_characters_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -338,6 +340,7 @@ class Radio(object):
     def anchor_case_sensitive_metadata(self):
         """Gets the anchor_case_sensitive_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `anchorCaseSensitive` property is editable.  # noqa: E501
 
         :return: The anchor_case_sensitive_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -348,6 +351,7 @@ class Radio(object):
     def anchor_case_sensitive_metadata(self, anchor_case_sensitive_metadata):
         """Sets the anchor_case_sensitive_metadata of this Radio.
 
+        Metadata that indicates whether the `anchorCaseSensitive` property is editable.  # noqa: E501
 
         :param anchor_case_sensitive_metadata: The anchor_case_sensitive_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -382,6 +386,7 @@ class Radio(object):
     def anchor_horizontal_alignment_metadata(self):
         """Gets the anchor_horizontal_alignment_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.  # noqa: E501
 
         :return: The anchor_horizontal_alignment_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -392,6 +397,7 @@ class Radio(object):
     def anchor_horizontal_alignment_metadata(self, anchor_horizontal_alignment_metadata):
         """Sets the anchor_horizontal_alignment_metadata of this Radio.
 
+        Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.  # noqa: E501
 
         :param anchor_horizontal_alignment_metadata: The anchor_horizontal_alignment_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -426,6 +432,7 @@ class Radio(object):
     def anchor_ignore_if_not_present_metadata(self):
         """Gets the anchor_ignore_if_not_present_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.  # noqa: E501
 
         :return: The anchor_ignore_if_not_present_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -436,6 +443,7 @@ class Radio(object):
     def anchor_ignore_if_not_present_metadata(self, anchor_ignore_if_not_present_metadata):
         """Sets the anchor_ignore_if_not_present_metadata of this Radio.
 
+        Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.  # noqa: E501
 
         :param anchor_ignore_if_not_present_metadata: The anchor_ignore_if_not_present_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -470,6 +478,7 @@ class Radio(object):
     def anchor_match_whole_word_metadata(self):
         """Gets the anchor_match_whole_word_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `anchorMatchWholeWord` property is editable.  # noqa: E501
 
         :return: The anchor_match_whole_word_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -480,6 +489,7 @@ class Radio(object):
     def anchor_match_whole_word_metadata(self, anchor_match_whole_word_metadata):
         """Sets the anchor_match_whole_word_metadata of this Radio.
 
+        Metadata that indicates whether the `anchorMatchWholeWord` property is editable.  # noqa: E501
 
         :param anchor_match_whole_word_metadata: The anchor_match_whole_word_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -514,6 +524,7 @@ class Radio(object):
     def anchor_string_metadata(self):
         """Gets the anchor_string_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `anchorString` property is editable.  # noqa: E501
 
         :return: The anchor_string_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -524,6 +535,7 @@ class Radio(object):
     def anchor_string_metadata(self, anchor_string_metadata):
         """Sets the anchor_string_metadata of this Radio.
 
+        Metadata that indicates whether the `anchorString` property is editable.  # noqa: E501
 
         :param anchor_string_metadata: The anchor_string_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -558,6 +570,7 @@ class Radio(object):
     def anchor_tab_processor_version_metadata(self):
         """Gets the anchor_tab_processor_version_metadata of this Radio.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The anchor_tab_processor_version_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -568,6 +581,7 @@ class Radio(object):
     def anchor_tab_processor_version_metadata(self, anchor_tab_processor_version_metadata):
         """Sets the anchor_tab_processor_version_metadata of this Radio.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param anchor_tab_processor_version_metadata: The anchor_tab_processor_version_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -602,6 +616,7 @@ class Radio(object):
     def anchor_units_metadata(self):
         """Gets the anchor_units_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `anchorUnits` property is editable.  # noqa: E501
 
         :return: The anchor_units_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -612,6 +627,7 @@ class Radio(object):
     def anchor_units_metadata(self, anchor_units_metadata):
         """Sets the anchor_units_metadata of this Radio.
 
+        Metadata that indicates whether the `anchorUnits` property is editable.  # noqa: E501
 
         :param anchor_units_metadata: The anchor_units_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -646,6 +662,7 @@ class Radio(object):
     def anchor_x_offset_metadata(self):
         """Gets the anchor_x_offset_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `anchorXOffset` property is editable.  # noqa: E501
 
         :return: The anchor_x_offset_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -656,6 +673,7 @@ class Radio(object):
     def anchor_x_offset_metadata(self, anchor_x_offset_metadata):
         """Sets the anchor_x_offset_metadata of this Radio.
 
+        Metadata that indicates whether the `anchorXOffset` property is editable.  # noqa: E501
 
         :param anchor_x_offset_metadata: The anchor_x_offset_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -690,6 +708,7 @@ class Radio(object):
     def anchor_y_offset_metadata(self):
         """Gets the anchor_y_offset_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `anchorYOffset` property is editable.  # noqa: E501
 
         :return: The anchor_y_offset_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -700,6 +719,7 @@ class Radio(object):
     def anchor_y_offset_metadata(self, anchor_y_offset_metadata):
         """Sets the anchor_y_offset_metadata of this Radio.
 
+        Metadata that indicates whether the `anchorYOffset` property is editable.  # noqa: E501
 
         :param anchor_y_offset_metadata: The anchor_y_offset_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -734,6 +754,7 @@ class Radio(object):
     def bold_metadata(self):
         """Gets the bold_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `bold` property is editable.  # noqa: E501
 
         :return: The bold_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -744,6 +765,7 @@ class Radio(object):
     def bold_metadata(self, bold_metadata):
         """Sets the bold_metadata of this Radio.
 
+        Metadata that indicates whether the `bold` property is editable.  # noqa: E501
 
         :param bold_metadata: The bold_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -799,6 +821,7 @@ class Radio(object):
     def error_details(self):
         """Gets the error_details of this Radio.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this Radio.  # noqa: E501
         :rtype: ErrorDetails
@@ -809,6 +832,7 @@ class Radio(object):
     def error_details(self, error_details):
         """Sets the error_details of this Radio.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this Radio.  # noqa: E501
         :type: ErrorDetails
@@ -866,6 +890,7 @@ class Radio(object):
     def font_color_metadata(self):
         """Gets the font_color_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `fontColor` property is editable.  # noqa: E501
 
         :return: The font_color_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -876,6 +901,7 @@ class Radio(object):
     def font_color_metadata(self, font_color_metadata):
         """Sets the font_color_metadata of this Radio.
 
+        Metadata that indicates whether the `fontColor` property is editable.  # noqa: E501
 
         :param font_color_metadata: The font_color_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -887,6 +913,7 @@ class Radio(object):
     def font_metadata(self):
         """Gets the font_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `font` property is editable.  # noqa: E501
 
         :return: The font_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -897,6 +924,7 @@ class Radio(object):
     def font_metadata(self, font_metadata):
         """Sets the font_metadata of this Radio.
 
+        Metadata that indicates whether the `font` property is editable.  # noqa: E501
 
         :param font_metadata: The font_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -931,6 +959,7 @@ class Radio(object):
     def font_size_metadata(self):
         """Gets the font_size_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `fontSize` property is editable.  # noqa: E501
 
         :return: The font_size_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -941,6 +970,7 @@ class Radio(object):
     def font_size_metadata(self, font_size_metadata):
         """Sets the font_size_metadata of this Radio.
 
+        Metadata that indicates whether the `fontSize` property is editable.  # noqa: E501
 
         :param font_size_metadata: The font_size_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -975,6 +1005,7 @@ class Radio(object):
     def italic_metadata(self):
         """Gets the italic_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `italic` property is editable.  # noqa: E501
 
         :return: The italic_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -985,6 +1016,7 @@ class Radio(object):
     def italic_metadata(self, italic_metadata):
         """Sets the italic_metadata of this Radio.
 
+        Metadata that indicates whether the `italic` property is editable.  # noqa: E501
 
         :param italic_metadata: The italic_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1019,6 +1051,7 @@ class Radio(object):
     def locked_metadata(self):
         """Gets the locked_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `locked` property is editable.  # noqa: E501
 
         :return: The locked_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1029,6 +1062,7 @@ class Radio(object):
     def locked_metadata(self, locked_metadata):
         """Sets the locked_metadata of this Radio.
 
+        Metadata that indicates whether the `locked` property is editable.  # noqa: E501
 
         :param locked_metadata: The locked_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1063,6 +1097,7 @@ class Radio(object):
     def page_number_metadata(self):
         """Gets the page_number_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `pageNumber` property is editable.  # noqa: E501
 
         :return: The page_number_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1073,6 +1108,7 @@ class Radio(object):
     def page_number_metadata(self, page_number_metadata):
         """Sets the page_number_metadata of this Radio.
 
+        Metadata that indicates whether the `pageNumber` property is editable.  # noqa: E501
 
         :param page_number_metadata: The page_number_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1107,6 +1143,7 @@ class Radio(object):
     def required_metadata(self):
         """Gets the required_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `required` property is editable.  # noqa: E501
 
         :return: The required_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1117,6 +1154,7 @@ class Radio(object):
     def required_metadata(self, required_metadata):
         """Sets the required_metadata of this Radio.
 
+        Metadata that indicates whether the `required` property is editable.  # noqa: E501
 
         :param required_metadata: The required_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1151,6 +1189,7 @@ class Radio(object):
     def selected_metadata(self):
         """Gets the selected_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `selected` property is editable.  # noqa: E501
 
         :return: The selected_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1161,6 +1200,7 @@ class Radio(object):
     def selected_metadata(self, selected_metadata):
         """Sets the selected_metadata of this Radio.
 
+        Metadata that indicates whether the `selected` property is editable.  # noqa: E501
 
         :param selected_metadata: The selected_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1195,6 +1235,7 @@ class Radio(object):
     def status_metadata(self):
         """Gets the status_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `status` property is editable.  # noqa: E501
 
         :return: The status_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1205,6 +1246,7 @@ class Radio(object):
     def status_metadata(self, status_metadata):
         """Sets the status_metadata of this Radio.
 
+        Metadata that indicates whether the `status` property is editable.  # noqa: E501
 
         :param status_metadata: The status_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1239,6 +1281,7 @@ class Radio(object):
     def tab_id_metadata(self):
         """Gets the tab_id_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `tabId` property is editable.  # noqa: E501
 
         :return: The tab_id_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1249,6 +1292,7 @@ class Radio(object):
     def tab_id_metadata(self, tab_id_metadata):
         """Sets the tab_id_metadata of this Radio.
 
+        Metadata that indicates whether the `tabId` property is editable.  # noqa: E501
 
         :param tab_id_metadata: The tab_id_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1283,6 +1327,7 @@ class Radio(object):
     def tab_order_metadata(self):
         """Gets the tab_order_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `tabOrder` property is editable.  # noqa: E501
 
         :return: The tab_order_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1293,6 +1338,7 @@ class Radio(object):
     def tab_order_metadata(self, tab_order_metadata):
         """Sets the tab_order_metadata of this Radio.
 
+        Metadata that indicates whether the `tabOrder` property is editable.  # noqa: E501
 
         :param tab_order_metadata: The tab_order_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1327,6 +1373,7 @@ class Radio(object):
     def underline_metadata(self):
         """Gets the underline_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `underline` property is editable.  # noqa: E501
 
         :return: The underline_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1337,6 +1384,7 @@ class Radio(object):
     def underline_metadata(self, underline_metadata):
         """Sets the underline_metadata of this Radio.
 
+        Metadata that indicates whether the `underline` property is editable.  # noqa: E501
 
         :param underline_metadata: The underline_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1371,6 +1419,7 @@ class Radio(object):
     def value_metadata(self):
         """Gets the value_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `value` property is editable.  # noqa: E501
 
         :return: The value_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1381,6 +1430,7 @@ class Radio(object):
     def value_metadata(self, value_metadata):
         """Sets the value_metadata of this Radio.
 
+        Metadata that indicates whether the `value` property is editable.  # noqa: E501
 
         :param value_metadata: The value_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1415,6 +1465,7 @@ class Radio(object):
     def x_position_metadata(self):
         """Gets the x_position_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `xPosition` property is editable.  # noqa: E501
 
         :return: The x_position_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1425,6 +1476,7 @@ class Radio(object):
     def x_position_metadata(self, x_position_metadata):
         """Sets the x_position_metadata of this Radio.
 
+        Metadata that indicates whether the `xPosition` property is editable.  # noqa: E501
 
         :param x_position_metadata: The x_position_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -1459,6 +1511,7 @@ class Radio(object):
     def y_position_metadata(self):
         """Gets the y_position_metadata of this Radio.  # noqa: E501
 
+        Metadata that indicates whether the `yPosition` property is editable.  # noqa: E501
 
         :return: The y_position_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1469,6 +1522,7 @@ class Radio(object):
     def y_position_metadata(self, y_position_metadata):
         """Sets the y_position_metadata of this Radio.
 
+        Metadata that indicates whether the `yPosition` property is editable.  # noqa: E501
 
         :param y_position_metadata: The y_position_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata

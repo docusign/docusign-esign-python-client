@@ -83,6 +83,7 @@ class EnvelopeSummary(object):
     def bulk_envelope_status(self):
         """Gets the bulk_envelope_status of this EnvelopeSummary.  # noqa: E501
 
+        An object that describes the status of the bulk send envelopes.  # noqa: E501
 
         :return: The bulk_envelope_status of this EnvelopeSummary.  # noqa: E501
         :rtype: BulkEnvelopeStatus
@@ -93,6 +94,7 @@ class EnvelopeSummary(object):
     def bulk_envelope_status(self, bulk_envelope_status):
         """Sets the bulk_envelope_status of this EnvelopeSummary.
 
+        An object that describes the status of the bulk send envelopes.  # noqa: E501
 
         :param bulk_envelope_status: The bulk_envelope_status of this EnvelopeSummary.  # noqa: E501
         :type: BulkEnvelopeStatus
@@ -127,6 +129,7 @@ class EnvelopeSummary(object):
     def error_details(self):
         """Gets the error_details of this EnvelopeSummary.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this EnvelopeSummary.  # noqa: E501
         :rtype: ErrorDetails
@@ -137,6 +140,7 @@ class EnvelopeSummary(object):
     def error_details(self, error_details):
         """Sets the error_details of this EnvelopeSummary.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this EnvelopeSummary.  # noqa: E501
         :type: ErrorDetails

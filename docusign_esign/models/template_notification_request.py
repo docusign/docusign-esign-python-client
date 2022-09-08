@@ -67,6 +67,7 @@ class TemplateNotificationRequest(object):
     def expirations(self):
         """Gets the expirations of this TemplateNotificationRequest.  # noqa: E501
 
+        A complex element that specifies the expiration settings for the envelope.  # noqa: E501
 
         :return: The expirations of this TemplateNotificationRequest.  # noqa: E501
         :rtype: Expirations
@@ -77,6 +78,7 @@ class TemplateNotificationRequest(object):
     def expirations(self, expirations):
         """Sets the expirations of this TemplateNotificationRequest.
 
+        A complex element that specifies the expiration settings for the envelope.  # noqa: E501
 
         :param expirations: The expirations of this TemplateNotificationRequest.  # noqa: E501
         :type: Expirations
@@ -111,6 +113,7 @@ class TemplateNotificationRequest(object):
     def reminders(self):
         """Gets the reminders of this TemplateNotificationRequest.  # noqa: E501
 
+        A complex element that specifies reminder settings for the envelope.  # noqa: E501
 
         :return: The reminders of this TemplateNotificationRequest.  # noqa: E501
         :rtype: Reminders
@@ -121,6 +124,7 @@ class TemplateNotificationRequest(object):
     def reminders(self, reminders):
         """Sets the reminders of this TemplateNotificationRequest.
 
+        A complex element that specifies reminder settings for the envelope.  # noqa: E501
 
         :param reminders: The reminders of this TemplateNotificationRequest.  # noqa: E501
         :type: Reminders

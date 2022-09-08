@@ -147,6 +147,7 @@ class AccountsApi(object):
     def create_account_signatures(self, account_id, **kwargs):
         """
         Adds/updates one or more account signatures. This request may include images in multi-part format.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -174,6 +175,7 @@ class AccountsApi(object):
     def create_account_signatures_with_http_info(self, account_id, **kwargs):
         """
         Adds/updates one or more account signatures. This request may include images in multi-part format.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -363,6 +365,7 @@ class AccountsApi(object):
     def create_custom_field(self, account_id, **kwargs):
         """
         Creates an acount custom field.
+        This method creates a custom field and makes it available for all new envelopes associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -390,6 +393,7 @@ class AccountsApi(object):
     def create_custom_field_with_http_info(self, account_id, **kwargs):
         """
         Creates an acount custom field.
+        This method creates a custom field and makes it available for all new envelopes associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -472,6 +476,7 @@ class AccountsApi(object):
     def create_permission_profile(self, account_id, **kwargs):
         """
         Creates a new permission profile in the specified account.
+        This method creates a new permission profile for an account.  ### Related topics  - [How to create a permission profile](/docs/esign-rest-api/how-to/permission-profile-creating/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -499,6 +504,7 @@ class AccountsApi(object):
     def create_permission_profile_with_http_info(self, account_id, **kwargs):
         """
         Creates a new permission profile in the specified account.
+        This method creates a new permission profile for an account.  ### Related topics  - [How to create a permission profile](/docs/esign-rest-api/how-to/permission-profile-creating/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -684,6 +690,7 @@ class AccountsApi(object):
     def delete_account_signature(self, account_id, signature_id, **kwargs):
         """
         Close the specified signature by Id.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -710,6 +717,7 @@ class AccountsApi(object):
     def delete_account_signature_with_http_info(self, account_id, signature_id, **kwargs):
         """
         Close the specified signature by Id.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -792,6 +800,7 @@ class AccountsApi(object):
     def delete_account_signature_image(self, account_id, image_type, signature_id, **kwargs):
         """
         Deletes a signature, initials, or stamps image.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -819,6 +828,7 @@ class AccountsApi(object):
     def delete_account_signature_image_with_http_info(self, account_id, image_type, signature_id, **kwargs):
         """
         Deletes a signature, initials, or stamps image.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -907,6 +917,7 @@ class AccountsApi(object):
     def delete_brand(self, account_id, brand_id, **kwargs):
         """
         Removes a brand.
+        This method deletes a brand from an account.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -933,6 +944,7 @@ class AccountsApi(object):
     def delete_brand_with_http_info(self, account_id, brand_id, **kwargs):
         """
         Removes a brand.
+        This method deletes a brand from an account.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1015,6 +1027,7 @@ class AccountsApi(object):
     def delete_brand_logo_by_type(self, account_id, brand_id, logo_type, **kwargs):
         """
         Delete one branding logo.
+        This method deletes a single logo from an account brand.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1042,6 +1055,7 @@ class AccountsApi(object):
     def delete_brand_logo_by_type_with_http_info(self, account_id, brand_id, logo_type, **kwargs):
         """
         Delete one branding logo.
+        This method deletes a single logo from an account brand.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1351,6 +1365,7 @@ class AccountsApi(object):
     def delete_custom_field(self, account_id, custom_field_id, **kwargs):
         """
         Delete an existing account custom field.
+        This method deletes an existing account custom field.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1378,6 +1393,7 @@ class AccountsApi(object):
     def delete_custom_field_with_http_info(self, account_id, custom_field_id, **kwargs):
         """
         Delete an existing account custom field.
+        This method deletes an existing account custom field.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1463,6 +1479,7 @@ class AccountsApi(object):
     def delete_e_note_configuration(self, account_id, **kwargs):
         """
         Deletes configuration information for the eNote eOriginal integration.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1488,6 +1505,7 @@ class AccountsApi(object):
     def delete_e_note_configuration_with_http_info(self, account_id, **kwargs):
         """
         Deletes configuration information for the eNote eOriginal integration.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1564,6 +1582,7 @@ class AccountsApi(object):
     def delete_permission_profile(self, account_id, permission_profile_id, **kwargs):
         """
         Deletes a permissions profile within the specified account.
+        This method deletes a permission profile from an account.  To delete a permission profile, it must not have any users associated with it. When you use this method to delete a permission profile, you can reassign the users associated with it to a new permission profile at the same time by using the `move_users_to` query parameter.   ### Related topics  - [How to delete a permission profile](/docs/esign-rest-api/how-to/permission-profile-deleting/)
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1591,6 +1610,7 @@ class AccountsApi(object):
     def delete_permission_profile_with_http_info(self, account_id, permission_profile_id, **kwargs):
         """
         Deletes a permissions profile within the specified account.
+        This method deletes a permission profile from an account.  To delete a permission profile, it must not have any users associated with it. When you use this method to delete a permission profile, you can reassign the users associated with it to a new permission profile at the same time by using the `move_users_to` query parameter.   ### Related topics  - [How to delete a permission profile](/docs/esign-rest-api/how-to/permission-profile-deleting/)
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1676,6 +1696,7 @@ class AccountsApi(object):
     def get_account_identity_verification(self, account_id, **kwargs):
         """
         Get the list of identity verification options for an account
+        This method returns a list of Identity Verification workflows that are available to an account.  **Note:** To use this method, you must either be an account administrator or a sender.  ### Related topics  - [How to require ID Verification (IDV) for a recipient](/docs/esign-rest-api/how-to/id-verification/)  
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1701,6 +1722,7 @@ class AccountsApi(object):
     def get_account_identity_verification_with_http_info(self, account_id, **kwargs):
         """
         Get the list of identity verification options for an account
+        This method returns a list of Identity Verification workflows that are available to an account.  **Note:** To use this method, you must either be an account administrator or a sender.  ### Related topics  - [How to require ID Verification (IDV) for a recipient](/docs/esign-rest-api/how-to/id-verification/)  
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1884,6 +1906,7 @@ class AccountsApi(object):
     def get_account_signature(self, account_id, signature_id, **kwargs):
         """
         Returns information about a single signature by specifed signatureId.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1910,6 +1933,7 @@ class AccountsApi(object):
     def get_account_signature_with_http_info(self, account_id, signature_id, **kwargs):
         """
         Returns information about a single signature by specifed signatureId.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1992,6 +2016,7 @@ class AccountsApi(object):
     def get_account_signature_image(self, account_id, image_type, signature_id, **kwargs):
         """
         Returns a signature, initials, or stamps image.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2020,6 +2045,7 @@ class AccountsApi(object):
     def get_account_signature_image_with_http_info(self, account_id, image_type, signature_id, **kwargs):
         """
         Returns a signature, initials, or stamps image.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2111,6 +2137,7 @@ class AccountsApi(object):
     def get_account_signatures(self, account_id, **kwargs):
         """
         Returns the managed signature definitions for the account
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2139,6 +2166,7 @@ class AccountsApi(object):
     def get_account_signatures_with_http_info(self, account_id, **kwargs):
         """
         Returns the managed signature definitions for the account
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2224,6 +2252,7 @@ class AccountsApi(object):
     def get_account_tab_settings(self, account_id, **kwargs):
         """
         Returns tab settings list for specified account
+        This method returns information about the tab types and tab functionality that is currently enabled for an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2249,6 +2278,7 @@ class AccountsApi(object):
     def get_account_tab_settings_with_http_info(self, account_id, **kwargs):
         """
         Returns tab settings list for specified account
+        This method returns information about the tab types and tab functionality that is currently enabled for an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2325,6 +2355,7 @@ class AccountsApi(object):
     def get_all_payment_gateway_accounts(self, account_id, **kwargs):
         """
         Get all payment gateway account for the provided accountId
+        This method returns a list of payment gateway accounts and basic information about them.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2350,6 +2381,7 @@ class AccountsApi(object):
     def get_all_payment_gateway_accounts_with_http_info(self, account_id, **kwargs):
         """
         Get all payment gateway account for the provided accountId
+        This method returns a list of payment gateway accounts and basic information about them.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2533,6 +2565,7 @@ class AccountsApi(object):
     def get_brand(self, account_id, brand_id, **kwargs):
         """
         Get information for a specific brand.
+        This method returns details about an account brand.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2561,6 +2594,7 @@ class AccountsApi(object):
     def get_brand_with_http_info(self, account_id, brand_id, **kwargs):
         """
         Get information for a specific brand.
+        This method returns details about an account brand.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2649,6 +2683,7 @@ class AccountsApi(object):
     def get_brand_export_file(self, account_id, brand_id, **kwargs):
         """
         Export a specific brand.
+        This method exports information about a brand to an XML file.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2675,6 +2710,7 @@ class AccountsApi(object):
     def get_brand_export_file_with_http_info(self, account_id, brand_id, **kwargs):
         """
         Export a specific brand.
+        This method exports information about a brand to an XML file.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2757,6 +2793,7 @@ class AccountsApi(object):
     def get_brand_logo_by_type(self, account_id, brand_id, logo_type, **kwargs):
         """
         Obtains the specified image for a brand.
+        This method returns a specific logo that is used in a brand.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2784,6 +2821,7 @@ class AccountsApi(object):
     def get_brand_logo_by_type_with_http_info(self, account_id, brand_id, logo_type, **kwargs):
         """
         Obtains the specified image for a brand.
+        This method returns a specific logo that is used in a brand.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2872,6 +2910,7 @@ class AccountsApi(object):
     def get_brand_resources(self, account_id, brand_id, **kwargs):
         """
         Returns the specified account's list of branding resources (metadata).
+        This method returns metadata about the branding resources that are associated with an account.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2898,6 +2937,7 @@ class AccountsApi(object):
     def get_brand_resources_with_http_info(self, account_id, brand_id, **kwargs):
         """
         Returns the specified account's list of branding resources (metadata).
+        This method returns metadata about the branding resources that are associated with an account.  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2980,6 +3020,7 @@ class AccountsApi(object):
     def get_brand_resources_by_content_type(self, account_id, brand_id, resource_content_type, **kwargs):
         """
         Returns the specified branding resource file.
+        This method returns a specific branding resource file.  A brand uses a set of brand resource files to control the sending, signing, email message, and captive (embedded) signing experiences.  You can modify the default email messages and formats in these files and upload them to your brand to customize the user experience.  **Important:** When you upload a modified resource file, only the elements that differ from the master resource file are saved as your resource file. Similarly, when you download your resource files, only the modified elements are included in the file.   **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3009,6 +3050,7 @@ class AccountsApi(object):
     def get_brand_resources_by_content_type_with_http_info(self, account_id, brand_id, resource_content_type, **kwargs):
         """
         Returns the specified branding resource file.
+        This method returns a specific branding resource file.  A brand uses a set of brand resource files to control the sending, signing, email message, and captive (embedded) signing experiences.  You can modify the default email messages and formats in these files and upload them to your brand to customize the user experience.  **Important:** When you upload a modified resource file, only the elements that differ from the master resource file are saved as your resource file. Similarly, when you download your resource files, only the modified elements are included in the file.   **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3320,6 +3362,7 @@ class AccountsApi(object):
     def get_e_note_configuration(self, account_id, **kwargs):
         """
         Returns the configuration information for the eNote eOriginal integration.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3345,6 +3388,7 @@ class AccountsApi(object):
     def get_e_note_configuration_with_http_info(self, account_id, **kwargs):
         """
         Returns the configuration information for the eNote eOriginal integration.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3421,6 +3465,7 @@ class AccountsApi(object):
     def get_envelope_purge_configuration(self, account_id, **kwargs):
         """
         Select envelope purge configuration.
+        An envelope purge configuration enables account administrators to permanently remove documents and their field data from completed and voided envelopes after a specified retention period (`retentionDays`). This method retrieves the current envelope purge configuration for your account.  **Note:** To use this method, you must be an account administrator.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3446,6 +3491,7 @@ class AccountsApi(object):
     def get_envelope_purge_configuration_with_http_info(self, account_id, **kwargs):
         """
         Select envelope purge configuration.
+        An envelope purge configuration enables account administrators to permanently remove documents and their field data from completed and voided envelopes after a specified retention period (`retentionDays`). This method retrieves the current envelope purge configuration for your account.  **Note:** To use this method, you must be an account administrator.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3522,6 +3568,7 @@ class AccountsApi(object):
     def get_favorite_templates(self, account_id, **kwargs):
         """
         Retrieves the list of favorited templates for this caller
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3547,6 +3594,7 @@ class AccountsApi(object):
     def get_favorite_templates_with_http_info(self, account_id, **kwargs):
         """
         Retrieves the list of favorited templates for this caller
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3623,6 +3671,7 @@ class AccountsApi(object):
     def get_notification_defaults(self, account_id, **kwargs):
         """
         Returns default user level settings for a specified account
+        This method returns the default settings for the email notifications that signers and senders receive about envelopes.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3648,6 +3697,7 @@ class AccountsApi(object):
     def get_notification_defaults_with_http_info(self, account_id, **kwargs):
         """
         Returns default user level settings for a specified account
+        This method returns the default settings for the email notifications that signers and senders receive about envelopes.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3724,6 +3774,7 @@ class AccountsApi(object):
     def get_password_rules(self, account_id, **kwargs):
         """
         Get the password rules
+        This method retrieves the password rules for an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3749,6 +3800,7 @@ class AccountsApi(object):
     def get_password_rules_with_http_info(self, account_id, **kwargs):
         """
         Get the password rules
+        This method retrieves the password rules for an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3825,6 +3877,7 @@ class AccountsApi(object):
     def get_password_rules_0(self, **kwargs):
         """
         Get membership account password rules
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3849,6 +3902,7 @@ class AccountsApi(object):
     def get_password_rules_0_with_http_info(self, **kwargs):
         """
         Get membership account password rules
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3918,6 +3972,7 @@ class AccountsApi(object):
     def get_permission_profile(self, account_id, permission_profile_id, **kwargs):
         """
         Returns a permissions profile in the specified account.
+        This method returns information about a specific permission profile that is associated with an account.  ### Related topics  - [How to set a permission profile](/docs/esign-rest-api/how-to/permission-profile-setting/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3945,6 +4000,7 @@ class AccountsApi(object):
     def get_permission_profile_with_http_info(self, account_id, permission_profile_id, **kwargs):
         """
         Returns a permissions profile in the specified account.
+        This method returns information about a specific permission profile that is associated with an account.  ### Related topics  - [How to set a permission profile](/docs/esign-rest-api/how-to/permission-profile-setting/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4125,6 +4181,7 @@ class AccountsApi(object):
     def get_supported_languages(self, account_id, **kwargs):
         """
         Gets list of supported languages for recipient language setting.
+        Retrieves a list of supported languages that you can set for an individual recipient when creating an envelope, as well as their simple type enumeration values. These are the languages that you can set for the standard email format and signing view for each recipient.  For example, in the recipient's email notification, this setting affects elements such as the standard introductory text describing the request to sign. It also determines the language used for buttons and tabs in both the email notification and the signing experience.  **Note:** Setting a language for a recipient affects only the DocuSign standard text. Any custom text that you enter for the `emailBody` and `emailSubject` of the notification is not translated, and appears exactly as you enter it.  For more information, see [Set Recipient Language and Specify Custom Email Messages](https://support.docusign.com/en/guides/ndse-user-guide-recipient-language).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4150,6 +4207,7 @@ class AccountsApi(object):
     def get_supported_languages_with_http_info(self, account_id, **kwargs):
         """
         Gets list of supported languages for recipient language setting.
+        Retrieves a list of supported languages that you can set for an individual recipient when creating an envelope, as well as their simple type enumeration values. These are the languages that you can set for the standard email format and signing view for each recipient.  For example, in the recipient's email notification, this setting affects elements such as the standard introductory text describing the request to sign. It also determines the language used for buttons and tabs in both the email notification and the signing experience.  **Note:** Setting a language for a recipient affects only the DocuSign standard text. Any custom text that you enter for the `emailBody` and `emailSubject` of the notification is not translated, and appears exactly as you enter it.  For more information, see [Set Recipient Language and Specify Custom Email Messages](https://support.docusign.com/en/guides/ndse-user-guide-recipient-language).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4226,6 +4284,7 @@ class AccountsApi(object):
     def get_watermark(self, account_id, **kwargs):
         """
         Get watermark information.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4251,6 +4310,7 @@ class AccountsApi(object):
     def get_watermark_with_http_info(self, account_id, **kwargs):
         """
         Get watermark information.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4327,6 +4387,7 @@ class AccountsApi(object):
     def get_watermark_preview(self, account_id, **kwargs):
         """
         Get watermark preview.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4353,6 +4414,7 @@ class AccountsApi(object):
     def get_watermark_preview_with_http_info(self, account_id, **kwargs):
         """
         Get watermark preview.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5098,6 +5160,7 @@ class AccountsApi(object):
     def list_signature_providers(self, account_id, **kwargs):
         """
         Returns Account available signature providers for specified account.
+        Returns a list of signature providers that the specified account can use.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5123,6 +5186,7 @@ class AccountsApi(object):
     def list_signature_providers_with_http_info(self, account_id, **kwargs):
         """
         Returns Account available signature providers for specified account.
+        Returns a list of signature providers that the specified account can use.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5302,6 +5366,7 @@ class AccountsApi(object):
     def un_favorite_template(self, account_id, **kwargs):
         """
         Unfavorite a template
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5328,6 +5393,7 @@ class AccountsApi(object):
     def un_favorite_template_with_http_info(self, account_id, **kwargs):
         """
         Unfavorite a template
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5407,6 +5473,7 @@ class AccountsApi(object):
     def update_account_signature(self, account_id, **kwargs):
         """
         Updates a account signature.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5433,6 +5500,7 @@ class AccountsApi(object):
     def update_account_signature_with_http_info(self, account_id, **kwargs):
         """
         Updates a account signature.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5512,6 +5580,7 @@ class AccountsApi(object):
     def update_account_signature_by_id(self, account_id, signature_id, **kwargs):
         """
         Updates a account signature.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5540,6 +5609,7 @@ class AccountsApi(object):
     def update_account_signature_by_id_with_http_info(self, account_id, signature_id, **kwargs):
         """
         Updates a account signature.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5628,6 +5698,7 @@ class AccountsApi(object):
     def update_account_signature_image(self, account_id, image_type, signature_id, **kwargs):
         """
         Sets a signature, initials, or stamps image.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5656,6 +5727,7 @@ class AccountsApi(object):
     def update_account_signature_image_with_http_info(self, account_id, image_type, signature_id, **kwargs):
         """
         Sets a signature, initials, or stamps image.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5751,6 +5823,7 @@ class AccountsApi(object):
     def update_account_tab_settings(self, account_id, **kwargs):
         """
         Modifies tab settings for specified account
+        This method modifies the tab types and tab functionality that is enabled for an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5777,6 +5850,7 @@ class AccountsApi(object):
     def update_account_tab_settings_with_http_info(self, account_id, **kwargs):
         """
         Modifies tab settings for specified account
+        This method modifies the tab types and tab functionality that is enabled for an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5856,6 +5930,7 @@ class AccountsApi(object):
     def update_brand(self, account_id, brand_id, **kwargs):
         """
         Updates an existing brand.
+        This method updates an account brand.   **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5884,6 +5959,7 @@ class AccountsApi(object):
     def update_brand_with_http_info(self, account_id, brand_id, **kwargs):
         """
         Updates an existing brand.
+        This method updates an account brand.   **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5972,6 +6048,7 @@ class AccountsApi(object):
     def update_brand_logo_by_type(self, account_id, brand_id, logo_type, logo_file_bytes, **kwargs):
         """
         Put one branding logo.
+        This method updates a single brand logo.  You pass in the new version of the resource in the `Content-Disposition` header. Example:  `Content-Disposition: form-data; name=\"file\"; filename=\"logo.jpg\"`  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6000,6 +6077,7 @@ class AccountsApi(object):
     def update_brand_logo_by_type_with_http_info(self, account_id, brand_id, logo_type, logo_file_bytes, **kwargs):
         """
         Put one branding logo.
+        This method updates a single brand logo.  You pass in the new version of the resource in the `Content-Disposition` header. Example:  `Content-Disposition: form-data; name=\"file\"; filename=\"logo.jpg\"`  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6098,6 +6176,7 @@ class AccountsApi(object):
     def update_brand_resources_by_content_type(self, account_id, brand_id, resource_content_type, file_xml, **kwargs):
         """
         Uploads a branding resource file.
+        This method updates a branding resource file.  You pass in the new version of the resource file in the `Content-Disposition` header. Example:  `Content-Disposition: form-data; name=\"file\"; filename=\"DocuSign_SigningResource_4328673.xml\"`  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).  **Important:** Customizing resource files is an advanced branding configuration option which can significantly impact your account, and should be done only by someone with expertise in XML and HTML. The master resource files are subject to change without notice. If you customize your resource files, after each release, DocuSign recommends you review any changes and update your custom files as needed.  When you upload a modified resource file, only the elements that differ from the master resource file are saved as your resource file. Similarly, when you download your resource files, only the modified elements are included in the file.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6126,6 +6205,7 @@ class AccountsApi(object):
     def update_brand_resources_by_content_type_with_http_info(self, account_id, brand_id, resource_content_type, file_xml, **kwargs):
         """
         Uploads a branding resource file.
+        This method updates a branding resource file.  You pass in the new version of the resource file in the `Content-Disposition` header. Example:  `Content-Disposition: form-data; name=\"file\"; filename=\"DocuSign_SigningResource_4328673.xml\"`  **Note:** Branding for either signing or sending must be enabled for the account (`canSelfBrandSend` , `canSelfBrandSign`, or both of these account settings must be **true**).  **Important:** Customizing resource files is an advanced branding configuration option which can significantly impact your account, and should be done only by someone with expertise in XML and HTML. The master resource files are subject to change without notice. If you customize your resource files, after each release, DocuSign recommends you review any changes and update your custom files as needed.  When you upload a modified resource file, only the elements that differ from the master resource file are saved as your resource file. Similarly, when you download your resource files, only the modified elements are included in the file.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6224,6 +6304,7 @@ class AccountsApi(object):
     def update_consumer_disclosure(self, account_id, lang_code, **kwargs):
         """
         Update Consumer Disclosure.
+        Account administrators can use this method to perform the following tasks:  - Customize values in the default disclosure. - Switch to a custom disclosure that uses your own text and HTML formatting. - Change values in your existing consumer disclosure.   To specify the signer language version of the disclosure that you are updating, use the optional `langCode` query parameter.  **Note:** Only account administrators can use this method. Each time you change the disclosure content, all unsigned recipients of outstanding documents will be required to accept a new version.   ## Updating the default disclosure  When you update the default disclosure, you can edit all properties except for the following ones:  - `accountEsignId`: This property is read-only. - `custom`: The default value is **false.** Editing this property causes the default disclosure to switch to a custom disclosure. - `esignAgreement`: This property is read-only. - `esignText`: You cannot edit this property when `custom` is set to **false.** The API returns a 200 OK HTTP response, but does not update the `esignText`. - Metadata properties: These properties are read-only.  **Note:** The text of the default disclosure is always in English.  ## Switching to a custom disclosure  To switch to a custom disclosure, set the `custom` property to **true** and customize the value for the `eSignText` property.   You can also edit all of the other properties except for the following ones:  - `accountEsignId`: This property is read-only. - `esignAgreement`: This property is read-only. - Metadata properties: These properties are read-only.  **Note:** When you use a custom disclosure, you can create versions of it in different signer languages and se the `langCode` parameter to specify the signer language version that you are updating.  **Important:**  When you switch from a default to a custom disclosure, note the following information:  - You will not be able to return to using the default disclosure. - Only the disclosure for the currently selected signer language is saved. DocuSign will not automatically translate your custom disclosure. You must create a disclosure for each language that your signers use.  ## Updating a custom disclosure  When you update a custom disclosure, you can update all of the properties except for the following ones:  - `accountEsignId`: This property is read-only.  - `esignAgreement`: This property is read-only. - Metadata properties: These properties are read-only.  **Important:** Only the disclosure for the currently selected signer language is saved. DocuSign will not automatically translate your custom disclosure. You must create a disclosure for each language that your signers use.  
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6252,6 +6333,7 @@ class AccountsApi(object):
     def update_consumer_disclosure_with_http_info(self, account_id, lang_code, **kwargs):
         """
         Update Consumer Disclosure.
+        Account administrators can use this method to perform the following tasks:  - Customize values in the default disclosure. - Switch to a custom disclosure that uses your own text and HTML formatting. - Change values in your existing consumer disclosure.   To specify the signer language version of the disclosure that you are updating, use the optional `langCode` query parameter.  **Note:** Only account administrators can use this method. Each time you change the disclosure content, all unsigned recipients of outstanding documents will be required to accept a new version.   ## Updating the default disclosure  When you update the default disclosure, you can edit all properties except for the following ones:  - `accountEsignId`: This property is read-only. - `custom`: The default value is **false.** Editing this property causes the default disclosure to switch to a custom disclosure. - `esignAgreement`: This property is read-only. - `esignText`: You cannot edit this property when `custom` is set to **false.** The API returns a 200 OK HTTP response, but does not update the `esignText`. - Metadata properties: These properties are read-only.  **Note:** The text of the default disclosure is always in English.  ## Switching to a custom disclosure  To switch to a custom disclosure, set the `custom` property to **true** and customize the value for the `eSignText` property.   You can also edit all of the other properties except for the following ones:  - `accountEsignId`: This property is read-only. - `esignAgreement`: This property is read-only. - Metadata properties: These properties are read-only.  **Note:** When you use a custom disclosure, you can create versions of it in different signer languages and se the `langCode` parameter to specify the signer language version that you are updating.  **Important:**  When you switch from a default to a custom disclosure, note the following information:  - You will not be able to return to using the default disclosure. - Only the disclosure for the currently selected signer language is saved. DocuSign will not automatically translate your custom disclosure. You must create a disclosure for each language that your signers use.  ## Updating a custom disclosure  When you update a custom disclosure, you can update all of the properties except for the following ones:  - `accountEsignId`: This property is read-only.  - `esignAgreement`: This property is read-only. - Metadata properties: These properties are read-only.  **Important:** Only the disclosure for the currently selected signer language is saved. DocuSign will not automatically translate your custom disclosure. You must create a disclosure for each language that your signers use.  
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6340,6 +6422,7 @@ class AccountsApi(object):
     def update_custom_field(self, account_id, custom_field_id, **kwargs):
         """
         Updates an existing account custom field.
+        This method updates an existing account custom field.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6368,6 +6451,7 @@ class AccountsApi(object):
     def update_custom_field_with_http_info(self, account_id, custom_field_id, **kwargs):
         """
         Updates an existing account custom field.
+        This method updates an existing account custom field.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6456,6 +6540,7 @@ class AccountsApi(object):
     def update_e_note_configuration(self, account_id, **kwargs):
         """
         Updates configuration information for the eNote eOriginal integration.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6482,6 +6567,7 @@ class AccountsApi(object):
     def update_e_note_configuration_with_http_info(self, account_id, **kwargs):
         """
         Updates configuration information for the eNote eOriginal integration.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6561,6 +6647,7 @@ class AccountsApi(object):
     def update_envelope_purge_configuration(self, account_id, **kwargs):
         """
         Updates envelope purge configuration.
+        An envelope purge configuration enables account administrators to permanently remove documents and their field data from completed and voided envelopes after a specified retention period (`retentionDays`). This method sets the envelope purge configuration for your account.  **Note:** To use this method, you must be an account administrator.  For more information, see [Purge Envelopes](https://support.docusign.com/en/guides/ndse-user-guide-purge-envelopes).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6587,6 +6674,7 @@ class AccountsApi(object):
     def update_envelope_purge_configuration_with_http_info(self, account_id, **kwargs):
         """
         Updates envelope purge configuration.
+        An envelope purge configuration enables account administrators to permanently remove documents and their field data from completed and voided envelopes after a specified retention period (`retentionDays`). This method sets the envelope purge configuration for your account.  **Note:** To use this method, you must be an account administrator.  For more information, see [Purge Envelopes](https://support.docusign.com/en/guides/ndse-user-guide-purge-envelopes).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6666,6 +6754,7 @@ class AccountsApi(object):
     def update_favorite_template(self, account_id, **kwargs):
         """
         Favorites a template
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6692,6 +6781,7 @@ class AccountsApi(object):
     def update_favorite_template_with_http_info(self, account_id, **kwargs):
         """
         Favorites a template
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6771,6 +6861,7 @@ class AccountsApi(object):
     def update_notification_defaults(self, account_id, **kwargs):
         """
         Updates default user level settings for a specified account
+        This method changes the default settings for the email notifications that signers and senders receive about envelopes.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6797,6 +6888,7 @@ class AccountsApi(object):
     def update_notification_defaults_with_http_info(self, account_id, **kwargs):
         """
         Updates default user level settings for a specified account
+        This method changes the default settings for the email notifications that signers and senders receive about envelopes.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6876,6 +6968,7 @@ class AccountsApi(object):
     def update_password_rules(self, account_id, **kwargs):
         """
         Update the password rules
+        This method updates the password rules for an account.  **Note:** To update the password rules for an account, you must be an account administrator.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6902,6 +6995,7 @@ class AccountsApi(object):
     def update_password_rules_with_http_info(self, account_id, **kwargs):
         """
         Update the password rules
+        This method updates the password rules for an account.  **Note:** To update the password rules for an account, you must be an account administrator.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6981,6 +7075,7 @@ class AccountsApi(object):
     def update_permission_profile(self, account_id, permission_profile_id, **kwargs):
         """
         Updates a permission profile within the specified account.
+        This method updates an account permission profile.  ### Related topics  - [How to update individual permission settings](/docs/esign-rest-api/how-to/permission-profile-updating/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7009,6 +7104,7 @@ class AccountsApi(object):
     def update_permission_profile_with_http_info(self, account_id, permission_profile_id, **kwargs):
         """
         Updates a permission profile within the specified account.
+        This method updates an account permission profile.  ### Related topics  - [How to update individual permission settings](/docs/esign-rest-api/how-to/permission-profile-updating/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7323,6 +7419,7 @@ class AccountsApi(object):
     def update_watermark(self, account_id, **kwargs):
         """
         Update watermark information.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7349,6 +7446,7 @@ class AccountsApi(object):
     def update_watermark_with_http_info(self, account_id, **kwargs):
         """
         Update watermark information.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

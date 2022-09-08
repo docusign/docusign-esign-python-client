@@ -150,6 +150,7 @@ class WorkspacesApi(object):
     def create_workspace_file(self, account_id, folder_id, workspace_id, **kwargs):
         """
         Creates a workspace file.
+        This method adds a file to a workspace.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -177,6 +178,7 @@ class WorkspacesApi(object):
     def create_workspace_file_with_http_info(self, account_id, folder_id, workspace_id, **kwargs):
         """
         Creates a workspace file.
+        This method adds a file to a workspace.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -375,6 +377,7 @@ class WorkspacesApi(object):
     def delete_workspace_folder_items(self, account_id, folder_id, workspace_id, **kwargs):
         """
         Deletes workspace one or more specific files/folders from the given folder or root.
+        This method deletes one or more files or sub-folders from a workspace folder or root.  Note: To delete items from a workspace, the `status` of the workspace must be `active`.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -403,6 +406,7 @@ class WorkspacesApi(object):
     def delete_workspace_folder_items_with_http_info(self, account_id, folder_id, workspace_id, **kwargs):
         """
         Deletes workspace one or more specific files/folders from the given folder or root.
+        This method deletes one or more files or sub-folders from a workspace folder or root.  Note: To delete items from a workspace, the `status` of the workspace must be `active`.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

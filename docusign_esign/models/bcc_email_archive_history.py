@@ -167,6 +167,7 @@ class BccEmailArchiveHistory(object):
     def modified_by(self):
         """Gets the modified_by of this BccEmailArchiveHistory.  # noqa: E501
 
+        Details about the user who last modified the BCC email archive configuration.  # noqa: E501
 
         :return: The modified_by of this BccEmailArchiveHistory.  # noqa: E501
         :rtype: UserInfo
@@ -177,6 +178,7 @@ class BccEmailArchiveHistory(object):
     def modified_by(self, modified_by):
         """Sets the modified_by of this BccEmailArchiveHistory.
 
+        Details about the user who last modified the BCC email archive configuration.  # noqa: E501
 
         :param modified_by: The modified_by of this BccEmailArchiveHistory.  # noqa: E501
         :type: UserInfo

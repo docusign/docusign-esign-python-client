@@ -140,6 +140,7 @@ class RecipientSignatureProvider(object):
     def signature_provider_name_metadata(self):
         """Gets the signature_provider_name_metadata of this RecipientSignatureProvider.  # noqa: E501
 
+        Metadata that indicates whether the `signatureProviderName` property is editable.   # noqa: E501
 
         :return: The signature_provider_name_metadata of this RecipientSignatureProvider.  # noqa: E501
         :rtype: PropertyMetadata
@@ -150,6 +151,7 @@ class RecipientSignatureProvider(object):
     def signature_provider_name_metadata(self, signature_provider_name_metadata):
         """Sets the signature_provider_name_metadata of this RecipientSignatureProvider.
 
+        Metadata that indicates whether the `signatureProviderName` property is editable.   # noqa: E501
 
         :param signature_provider_name_metadata: The signature_provider_name_metadata of this RecipientSignatureProvider.  # noqa: E501
         :type: PropertyMetadata
@@ -161,6 +163,7 @@ class RecipientSignatureProvider(object):
     def signature_provider_options(self):
         """Gets the signature_provider_options of this RecipientSignatureProvider.  # noqa: E501
 
+        Not applicable for this object.  # noqa: E501
 
         :return: The signature_provider_options of this RecipientSignatureProvider.  # noqa: E501
         :rtype: RecipientSignatureProviderOptions
@@ -171,6 +174,7 @@ class RecipientSignatureProvider(object):
     def signature_provider_options(self, signature_provider_options):
         """Sets the signature_provider_options of this RecipientSignatureProvider.
 
+        Not applicable for this object.  # noqa: E501
 
         :param signature_provider_options: The signature_provider_options of this RecipientSignatureProvider.  # noqa: E501
         :type: RecipientSignatureProviderOptions
