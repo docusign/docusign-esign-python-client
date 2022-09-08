@@ -33,12 +33,14 @@ class CorrectViewRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'begin_on_tagger': 'str',
         'return_url': 'str',
         'suppress_navigation': 'str',
         'view_url': 'str'
     }
 
     attribute_map = {
+        'begin_on_tagger': 'beginOnTagger',
         'return_url': 'returnUrl',
         'suppress_navigation': 'suppressNavigation',
         'view_url': 'viewUrl'
@@ -50,14 +52,39 @@ class CorrectViewRequest(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._begin_on_tagger = None
         self._return_url = None
         self._suppress_navigation = None
         self._view_url = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('begin_on_tagger'), kwargs.get('begin_on_tagger', None))
         setattr(self, "_{}".format('return_url'), kwargs.get('return_url', None))
         setattr(self, "_{}".format('suppress_navigation'), kwargs.get('suppress_navigation', None))
         setattr(self, "_{}".format('view_url'), kwargs.get('view_url', None))
+
+    @property
+    def begin_on_tagger(self):
+        """Gets the begin_on_tagger of this CorrectViewRequest.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The begin_on_tagger of this CorrectViewRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._begin_on_tagger
+
+    @begin_on_tagger.setter
+    def begin_on_tagger(self, begin_on_tagger):
+        """Sets the begin_on_tagger of this CorrectViewRequest.
+
+          # noqa: E501
+
+        :param begin_on_tagger: The begin_on_tagger of this CorrectViewRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._begin_on_tagger = begin_on_tagger
 
     @property
     def return_url(self):

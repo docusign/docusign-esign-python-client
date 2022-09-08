@@ -284,6 +284,7 @@ class BulkSendBatchStatus(object):
     def envelopes_info(self):
         """Gets the envelopes_info of this BulkSendBatchStatus.  # noqa: E501
 
+          # noqa: E501
 
         :return: The envelopes_info of this BulkSendBatchStatus.  # noqa: E501
         :rtype: BulkSendEnvelopesInfo
@@ -294,6 +295,7 @@ class BulkSendBatchStatus(object):
     def envelopes_info(self, envelopes_info):
         """Sets the envelopes_info of this BulkSendBatchStatus.
 
+          # noqa: E501
 
         :param envelopes_info: The envelopes_info of this BulkSendBatchStatus.  # noqa: E501
         :type: BulkSendEnvelopesInfo

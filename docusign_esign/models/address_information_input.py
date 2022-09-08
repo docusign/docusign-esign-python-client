@@ -63,6 +63,7 @@ class AddressInformationInput(object):
     def address_information(self):
         """Gets the address_information of this AddressInformationInput.  # noqa: E501
 
+        A complex type that contains the following information for the new account: `address1`, `address2`, `city`, `country`, `fax`, `phone`, `postalCode` and `stateOrProvince`.  The maximum characters for the strings are: * `address1`, `address2`, `city`, `country` and `stateOrProvince`: 100 characters * `postalCode`, `phone`, and `fax`: 20 characters  **Note:** If country is US (United States), `stateOrProvince` codes are validated. Otherwise, `stateOrProvince` is treated as a non-validated string used to specify a state, province, or region.  # noqa: E501
 
         :return: The address_information of this AddressInformationInput.  # noqa: E501
         :rtype: AddressInformation
@@ -73,6 +74,7 @@ class AddressInformationInput(object):
     def address_information(self, address_information):
         """Sets the address_information of this AddressInformationInput.
 
+        A complex type that contains the following information for the new account: `address1`, `address2`, `city`, `country`, `fax`, `phone`, `postalCode` and `stateOrProvince`.  The maximum characters for the strings are: * `address1`, `address2`, `city`, `country` and `stateOrProvince`: 100 characters * `postalCode`, `phone`, and `fax`: 20 characters  **Note:** If country is US (United States), `stateOrProvince` codes are validated. Otherwise, `stateOrProvince` is treated as a non-validated string used to specify a state, province, or region.  # noqa: E501
 
         :param address_information: The address_information of this AddressInformationInput.  # noqa: E501
         :type: AddressInformation

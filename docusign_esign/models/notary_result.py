@@ -82,6 +82,7 @@ class NotaryResult(object):
     def notary(self):
         """Gets the notary of this NotaryResult.  # noqa: E501
 
+          # noqa: E501
 
         :return: The notary of this NotaryResult.  # noqa: E501
         :rtype: Notary
@@ -92,6 +93,7 @@ class NotaryResult(object):
     def notary(self, notary):
         """Sets the notary of this NotaryResult.
 
+          # noqa: E501
 
         :param notary: The notary of this NotaryResult.  # noqa: E501
         :type: Notary

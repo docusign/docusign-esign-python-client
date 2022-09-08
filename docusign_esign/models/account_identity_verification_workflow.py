@@ -148,6 +148,7 @@ class AccountIdentityVerificationWorkflow(object):
     def signature_provider(self):
         """Gets the signature_provider of this AccountIdentityVerificationWorkflow.  # noqa: E501
 
+        The signature provider associated with the Identity Verification workflow.  # noqa: E501
 
         :return: The signature_provider of this AccountIdentityVerificationWorkflow.  # noqa: E501
         :rtype: AccountSignatureProvider
@@ -158,6 +159,7 @@ class AccountIdentityVerificationWorkflow(object):
     def signature_provider(self, signature_provider):
         """Sets the signature_provider of this AccountIdentityVerificationWorkflow.
 
+        The signature provider associated with the Identity Verification workflow.  # noqa: E501
 
         :param signature_provider: The signature_provider of this AccountIdentityVerificationWorkflow.  # noqa: E501
         :type: AccountSignatureProvider

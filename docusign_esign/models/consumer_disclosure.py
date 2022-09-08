@@ -225,6 +225,7 @@ class ConsumerDisclosure(object):
     def allow_cd_withdraw_metadata(self):
         """Gets the allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
 
+        Metadata that indicates whether the `allowCDWithdraw` property is editable.   # noqa: E501
 
         :return: The allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
         :rtype: SettingsMetadata
@@ -235,6 +236,7 @@ class ConsumerDisclosure(object):
     def allow_cd_withdraw_metadata(self, allow_cd_withdraw_metadata):
         """Sets the allow_cd_withdraw_metadata of this ConsumerDisclosure.
 
+        Metadata that indicates whether the `allowCDWithdraw` property is editable.   # noqa: E501
 
         :param allow_cd_withdraw_metadata: The allow_cd_withdraw_metadata of this ConsumerDisclosure.  # noqa: E501
         :type: SettingsMetadata
@@ -614,6 +616,7 @@ class ConsumerDisclosure(object):
     def use_consumer_disclosure_within_account_metadata(self):
         """Gets the use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
 
+        Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable.   # noqa: E501
 
         :return: The use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
         :rtype: SettingsMetadata
@@ -624,6 +627,7 @@ class ConsumerDisclosure(object):
     def use_consumer_disclosure_within_account_metadata(self, use_consumer_disclosure_within_account_metadata):
         """Sets the use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.
 
+        Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable.   # noqa: E501
 
         :param use_consumer_disclosure_within_account_metadata: The use_consumer_disclosure_within_account_metadata of this ConsumerDisclosure.  # noqa: E501
         :type: SettingsMetadata

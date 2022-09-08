@@ -43,6 +43,7 @@ class NotaryApi(object):
     def create_notary(self, **kwargs):
         """
         Add a notary to the system
+        Registers the current user as a notary.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -68,6 +69,7 @@ class NotaryApi(object):
     def create_notary_with_http_info(self, **kwargs):
         """
         Add a notary to the system
+        Registers the current user as a notary.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -141,6 +143,7 @@ class NotaryApi(object):
     def create_notary_jurisdictions(self, **kwargs):
         """
         Add a notary jurisdiction to the system
+        Creates a jurisdiction object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -166,6 +169,7 @@ class NotaryApi(object):
     def create_notary_jurisdictions_with_http_info(self, **kwargs):
         """
         Add a notary jurisdiction to the system
+        Creates a jurisdiction object.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -239,6 +243,7 @@ class NotaryApi(object):
     def delete_notary_jurisdiction(self, jurisdiction_id, **kwargs):
         """
         Delete a notary jurisdiction a specified user.
+        Deletes the specified jurisdiction.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -264,6 +269,7 @@ class NotaryApi(object):
     def delete_notary_jurisdiction_with_http_info(self, jurisdiction_id, **kwargs):
         """
         Delete a notary jurisdiction a specified user.
+        Deletes the specified jurisdiction.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -340,6 +346,7 @@ class NotaryApi(object):
     def get_notary(self, **kwargs):
         """
         Get notary settings for a user
+        Gets settings for a notary user. The current user must be a notary.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -365,6 +372,7 @@ class NotaryApi(object):
     def get_notary_with_http_info(self, **kwargs):
         """
         Get notary settings for a user
+        Gets settings for a notary user. The current user must be a notary.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -438,6 +446,7 @@ class NotaryApi(object):
     def get_notary_jurisdiction(self, jurisdiction_id, **kwargs):
         """
         Get notary a jurisdiction for a user
+        Gets a jurisdiction object for the current user.  The following restrictions apply:  - The current user must be a notary. - The `jurisdictionId` must be a jurisdiction that the notary is registered for. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -463,6 +472,7 @@ class NotaryApi(object):
     def get_notary_jurisdiction_with_http_info(self, jurisdiction_id, **kwargs):
         """
         Get notary a jurisdiction for a user
+        Gets a jurisdiction object for the current user.  The following restrictions apply:  - The current user must be a notary. - The `jurisdictionId` must be a jurisdiction that the notary is registered for. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -539,6 +549,7 @@ class NotaryApi(object):
     def get_notary_jurisdiction_seal(self, jurisdiction_id, **kwargs):
         """
         Get notary seal for a jurisdiction
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -564,6 +575,7 @@ class NotaryApi(object):
     def get_notary_jurisdiction_seal_with_http_info(self, jurisdiction_id, **kwargs):
         """
         Get notary seal for a jurisdiction
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -640,6 +652,7 @@ class NotaryApi(object):
     def get_notary_jurisdictions(self, **kwargs):
         """
         Get notary jurisdictions for a user
+        Returns a list of jurisdictions that the notary is registered in. The current user must be a notary.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -664,6 +677,7 @@ class NotaryApi(object):
     def get_notary_jurisdictions_with_http_info(self, **kwargs):
         """
         Get notary jurisdictions for a user
+        Returns a list of jurisdictions that the notary is registered in. The current user must be a notary.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -733,6 +747,7 @@ class NotaryApi(object):
     def list_notary_journals(self, **kwargs):
         """
         Get notary jurisdictions for a user
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -760,6 +775,7 @@ class NotaryApi(object):
     def list_notary_journals_with_http_info(self, **kwargs):
         """
         Get notary jurisdictions for a user
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -839,6 +855,7 @@ class NotaryApi(object):
     def update_notary(self, **kwargs):
         """
         Update a notary
+        Updates notary information for the current user.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -864,6 +881,7 @@ class NotaryApi(object):
     def update_notary_with_http_info(self, **kwargs):
         """
         Update a notary
+        Updates notary information for the current user.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -937,6 +955,7 @@ class NotaryApi(object):
     def update_notary_jurisdiction(self, jurisdiction_id, **kwargs):
         """
         Update a notary jurisdiction
+        Updates the jurisdiction information about a notary.  The following restrictions apply:  - The current user must be a notary. - The `jurisdictionId` path parameter must be a jurisdiction that the notary is registered for. - The `jurisdictionId` path parameter must match the request body's `jurisdiction.jurisdictionId`.  The request body must have a full `jurisdiction` object for the jurisdiction property. The best way to do this is to use `getNotaryJurisdiction` to obtain the current values and update the properties you want to change.  For example, assume `getNotaryJurisdiction` returns this:  ``` {     \"jurisdiction\": {         \"jurisdictionId\": \"15\",         \"name\": \"Iowa\",         \"county\": \"\",         \"enabled\": \"true\",         \"countyInSeal\": \"false\",         \"commissionIdInSeal\": \"true\",         \"stateNameInSeal\": \"true\",         \"notaryPublicInSeal\": \"true\",         \"allowSystemCreatedSeal\": \"true\",         \"allowUserUploadedSeal\": \"false\"     },     \"commissionId\": \"123456\",     \"commissionExpiration\": \"2020-08-31T07:00:00.0000000Z\",     \"registeredName\": \"Bob Notary\",     \"county\": \"Adams\",     \"sealType\": \"system_created\" } ```  If you want to change the name of the notary from \"Bob Notary\" to \"Robert Notary\", your request body would be:  ``` {     \"jurisdiction\": {         \"jurisdictionId\": \"15\",         \"name\": \"Iowa\",         \"county\": \"\",         \"enabled\": \"true\",         \"countyInSeal\": \"false\",         \"commissionIdInSeal\": \"true\",         \"stateNameInSeal\": \"true\",         \"notaryPublicInSeal\": \"true\",         \"allowSystemCreatedSeal\": \"true\",         \"allowUserUploadedSeal\": \"false\"     },     \"commissionId\": \"123456\",     \"commissionExpiration\": \"2020-08-31T07:00:00.0000000Z\",     \"registeredName\": \"Robert Notary\",     \"county\": \"Adams\",     \"sealType\": \"system_created\" } ``` 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -963,6 +982,7 @@ class NotaryApi(object):
     def update_notary_jurisdiction_with_http_info(self, jurisdiction_id, **kwargs):
         """
         Update a notary jurisdiction
+        Updates the jurisdiction information about a notary.  The following restrictions apply:  - The current user must be a notary. - The `jurisdictionId` path parameter must be a jurisdiction that the notary is registered for. - The `jurisdictionId` path parameter must match the request body's `jurisdiction.jurisdictionId`.  The request body must have a full `jurisdiction` object for the jurisdiction property. The best way to do this is to use `getNotaryJurisdiction` to obtain the current values and update the properties you want to change.  For example, assume `getNotaryJurisdiction` returns this:  ``` {     \"jurisdiction\": {         \"jurisdictionId\": \"15\",         \"name\": \"Iowa\",         \"county\": \"\",         \"enabled\": \"true\",         \"countyInSeal\": \"false\",         \"commissionIdInSeal\": \"true\",         \"stateNameInSeal\": \"true\",         \"notaryPublicInSeal\": \"true\",         \"allowSystemCreatedSeal\": \"true\",         \"allowUserUploadedSeal\": \"false\"     },     \"commissionId\": \"123456\",     \"commissionExpiration\": \"2020-08-31T07:00:00.0000000Z\",     \"registeredName\": \"Bob Notary\",     \"county\": \"Adams\",     \"sealType\": \"system_created\" } ```  If you want to change the name of the notary from \"Bob Notary\" to \"Robert Notary\", your request body would be:  ``` {     \"jurisdiction\": {         \"jurisdictionId\": \"15\",         \"name\": \"Iowa\",         \"county\": \"\",         \"enabled\": \"true\",         \"countyInSeal\": \"false\",         \"commissionIdInSeal\": \"true\",         \"stateNameInSeal\": \"true\",         \"notaryPublicInSeal\": \"true\",         \"allowSystemCreatedSeal\": \"true\",         \"allowUserUploadedSeal\": \"false\"     },     \"commissionId\": \"123456\",     \"commissionExpiration\": \"2020-08-31T07:00:00.0000000Z\",     \"registeredName\": \"Robert Notary\",     \"county\": \"Adams\",     \"sealType\": \"system_created\" } ``` 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

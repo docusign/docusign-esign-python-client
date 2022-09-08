@@ -144,6 +144,7 @@ class Workflow(object):
     def scheduled_sending(self):
         """Gets the scheduled_sending of this Workflow.  # noqa: E501
 
+        An object that describes the settings for scheduled sending.  # noqa: E501
 
         :return: The scheduled_sending of this Workflow.  # noqa: E501
         :rtype: ScheduledSending
@@ -154,6 +155,7 @@ class Workflow(object):
     def scheduled_sending(self, scheduled_sending):
         """Sets the scheduled_sending of this Workflow.
 
+        An object that describes the settings for scheduled sending.  # noqa: E501
 
         :param scheduled_sending: The scheduled_sending of this Workflow.  # noqa: E501
         :type: ScheduledSending

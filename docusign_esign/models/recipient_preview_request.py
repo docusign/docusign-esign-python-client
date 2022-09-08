@@ -164,6 +164,7 @@ class RecipientPreviewRequest(object):
     def client_ur_ls(self):
         """Gets the client_ur_ls of this RecipientPreviewRequest.  # noqa: E501
 
+          # noqa: E501
 
         :return: The client_ur_ls of this RecipientPreviewRequest.  # noqa: E501
         :rtype: RecipientTokenClientURLs
@@ -174,6 +175,7 @@ class RecipientPreviewRequest(object):
     def client_ur_ls(self, client_ur_ls):
         """Sets the client_ur_ls of this RecipientPreviewRequest.
 
+          # noqa: E501
 
         :param client_ur_ls: The client_ur_ls of this RecipientPreviewRequest.  # noqa: E501
         :type: RecipientTokenClientURLs

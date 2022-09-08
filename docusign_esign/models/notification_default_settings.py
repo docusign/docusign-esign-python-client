@@ -59,6 +59,7 @@ class NotificationDefaultSettings(object):
     def sender_email_notifications(self):
         """Gets the sender_email_notifications of this NotificationDefaultSettings.  # noqa: E501
 
+          An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed     # noqa: E501
 
         :return: The sender_email_notifications of this NotificationDefaultSettings.  # noqa: E501
         :rtype: SenderEmailNotifications
@@ -69,6 +70,7 @@ class NotificationDefaultSettings(object):
     def sender_email_notifications(self, sender_email_notifications):
         """Sets the sender_email_notifications of this NotificationDefaultSettings.
 
+          An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed     # noqa: E501
 
         :param sender_email_notifications: The sender_email_notifications of this NotificationDefaultSettings.  # noqa: E501
         :type: SenderEmailNotifications
@@ -80,6 +82,7 @@ class NotificationDefaultSettings(object):
     def signer_email_notifications(self):
         """Gets the signer_email_notifications of this NotificationDefaultSettings.  # noqa: E501
 
+        An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created.   # noqa: E501
 
         :return: The signer_email_notifications of this NotificationDefaultSettings.  # noqa: E501
         :rtype: SignerEmailNotifications
@@ -90,6 +93,7 @@ class NotificationDefaultSettings(object):
     def signer_email_notifications(self, signer_email_notifications):
         """Sets the signer_email_notifications of this NotificationDefaultSettings.
 
+        An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created.   # noqa: E501
 
         :param signer_email_notifications: The signer_email_notifications of this NotificationDefaultSettings.  # noqa: E501
         :type: SignerEmailNotifications

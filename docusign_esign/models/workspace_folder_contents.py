@@ -106,6 +106,7 @@ class WorkspaceFolderContents(object):
     def folder(self):
         """Gets the folder of this WorkspaceFolderContents.  # noqa: E501
 
+        The folder from which to return items. You can enter either the folder name or folder ID.  # noqa: E501
 
         :return: The folder of this WorkspaceFolderContents.  # noqa: E501
         :rtype: WorkspaceItem
@@ -116,6 +117,7 @@ class WorkspaceFolderContents(object):
     def folder(self, folder):
         """Sets the folder of this WorkspaceFolderContents.
 
+        The folder from which to return items. You can enter either the folder name or folder ID.  # noqa: E501
 
         :param folder: The folder of this WorkspaceFolderContents.  # noqa: E501
         :type: WorkspaceItem

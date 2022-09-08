@@ -98,6 +98,7 @@ class BillingPlanPreview(object):
     def invoice(self):
         """Gets the invoice of this BillingPlanPreview.  # noqa: E501
 
+          # noqa: E501
 
         :return: The invoice of this BillingPlanPreview.  # noqa: E501
         :rtype: BillingInvoice
@@ -108,6 +109,7 @@ class BillingPlanPreview(object):
     def invoice(self, invoice):
         """Sets the invoice of this BillingPlanPreview.
 
+          # noqa: E501
 
         :param invoice: The invoice of this BillingPlanPreview.  # noqa: E501
         :type: BillingInvoice

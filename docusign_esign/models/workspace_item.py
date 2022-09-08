@@ -147,6 +147,7 @@ class WorkspaceItem(object):
     def caller_authorization(self):
         """Gets the caller_authorization of this WorkspaceItem.  # noqa: E501
 
+          # noqa: E501
 
         :return: The caller_authorization of this WorkspaceItem.  # noqa: E501
         :rtype: WorkspaceUserAuthorization
@@ -157,6 +158,7 @@ class WorkspaceItem(object):
     def caller_authorization(self, caller_authorization):
         """Sets the caller_authorization of this WorkspaceItem.
 
+          # noqa: E501
 
         :param caller_authorization: The caller_authorization of this WorkspaceItem.  # noqa: E501
         :type: WorkspaceUserAuthorization
@@ -237,6 +239,7 @@ class WorkspaceItem(object):
     def created_by_information(self):
         """Gets the created_by_information of this WorkspaceItem.  # noqa: E501
 
+        Details about the user who created the workspace item.  # noqa: E501
 
         :return: The created_by_information of this WorkspaceItem.  # noqa: E501
         :rtype: WorkspaceUser
@@ -247,6 +250,7 @@ class WorkspaceItem(object):
     def created_by_information(self, created_by_information):
         """Sets the created_by_information of this WorkspaceItem.
 
+        Details about the user who created the workspace item.  # noqa: E501
 
         :param created_by_information: The created_by_information of this WorkspaceItem.  # noqa: E501
         :type: WorkspaceUser
@@ -419,6 +423,7 @@ class WorkspaceItem(object):
     def last_modified_by_information(self):
         """Gets the last_modified_by_information of this WorkspaceItem.  # noqa: E501
 
+        Details about the user who last modified the workspace item.  # noqa: E501
 
         :return: The last_modified_by_information of this WorkspaceItem.  # noqa: E501
         :rtype: WorkspaceUser
@@ -429,6 +434,7 @@ class WorkspaceItem(object):
     def last_modified_by_information(self, last_modified_by_information):
         """Sets the last_modified_by_information of this WorkspaceItem.
 
+        Details about the user who last modified the workspace item.  # noqa: E501
 
         :param last_modified_by_information: The last_modified_by_information of this WorkspaceItem.  # noqa: E501
         :type: WorkspaceUser
@@ -578,6 +584,7 @@ class WorkspaceItem(object):
     def thumbnail(self):
         """Gets the thumbnail of this WorkspaceItem.  # noqa: E501
 
+          # noqa: E501
 
         :return: The thumbnail of this WorkspaceItem.  # noqa: E501
         :rtype: Page
@@ -588,6 +595,7 @@ class WorkspaceItem(object):
     def thumbnail(self, thumbnail):
         """Sets the thumbnail of this WorkspaceItem.
 
+          # noqa: E501
 
         :param thumbnail: The thumbnail of this WorkspaceItem.  # noqa: E501
         :type: Page
@@ -668,6 +676,7 @@ class WorkspaceItem(object):
     def user_authorization(self):
         """Gets the user_authorization of this WorkspaceItem.  # noqa: E501
 
+          # noqa: E501
 
         :return: The user_authorization of this WorkspaceItem.  # noqa: E501
         :rtype: WorkspaceUserAuthorization
@@ -678,6 +687,7 @@ class WorkspaceItem(object):
     def user_authorization(self, user_authorization):
         """Sets the user_authorization of this WorkspaceItem.
 
+          # noqa: E501
 
         :param user_authorization: The user_authorization of this WorkspaceItem.  # noqa: E501
         :type: WorkspaceUserAuthorization

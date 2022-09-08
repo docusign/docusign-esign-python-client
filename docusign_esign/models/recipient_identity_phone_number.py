@@ -125,6 +125,7 @@ class RecipientIdentityPhoneNumber(object):
     def country_code_metadata(self):
         """Gets the country_code_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
 
+        Metadata that indicates if the `countryCode` property is editable.  # noqa: E501
 
         :return: The country_code_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
         :rtype: PropertyMetadata
@@ -135,6 +136,7 @@ class RecipientIdentityPhoneNumber(object):
     def country_code_metadata(self, country_code_metadata):
         """Sets the country_code_metadata of this RecipientIdentityPhoneNumber.
 
+        Metadata that indicates if the `countryCode` property is editable.  # noqa: E501
 
         :param country_code_metadata: The country_code_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
         :type: PropertyMetadata
@@ -169,6 +171,7 @@ class RecipientIdentityPhoneNumber(object):
     def extension_metadata(self):
         """Gets the extension_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
 
+        Metadata that indicates if the `extension` property is editable.  # noqa: E501
 
         :return: The extension_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
         :rtype: PropertyMetadata
@@ -179,6 +182,7 @@ class RecipientIdentityPhoneNumber(object):
     def extension_metadata(self, extension_metadata):
         """Sets the extension_metadata of this RecipientIdentityPhoneNumber.
 
+        Metadata that indicates if the `extension` property is editable.  # noqa: E501
 
         :param extension_metadata: The extension_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
         :type: PropertyMetadata
@@ -213,6 +217,7 @@ class RecipientIdentityPhoneNumber(object):
     def number_metadata(self):
         """Gets the number_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
 
+        Metadata that indicates if the `number` property is editable.  # noqa: E501
 
         :return: The number_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
         :rtype: PropertyMetadata
@@ -223,6 +228,7 @@ class RecipientIdentityPhoneNumber(object):
     def number_metadata(self, number_metadata):
         """Sets the number_metadata of this RecipientIdentityPhoneNumber.
 
+        Metadata that indicates if the `number` property is editable.  # noqa: E501
 
         :param number_metadata: The number_metadata of this RecipientIdentityPhoneNumber.  # noqa: E501
         :type: PropertyMetadata

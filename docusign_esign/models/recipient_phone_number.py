@@ -90,6 +90,7 @@ class RecipientPhoneNumber(object):
     def country_code_metadata(self):
         """Gets the country_code_metadata of this RecipientPhoneNumber.  # noqa: E501
 
+        Metadata that indicates if the `countryCode` property is editable.  # noqa: E501
 
         :return: The country_code_metadata of this RecipientPhoneNumber.  # noqa: E501
         :rtype: PropertyMetadata
@@ -100,6 +101,7 @@ class RecipientPhoneNumber(object):
     def country_code_metadata(self, country_code_metadata):
         """Sets the country_code_metadata of this RecipientPhoneNumber.
 
+        Metadata that indicates if the `countryCode` property is editable.  # noqa: E501
 
         :param country_code_metadata: The country_code_metadata of this RecipientPhoneNumber.  # noqa: E501
         :type: PropertyMetadata
@@ -134,6 +136,7 @@ class RecipientPhoneNumber(object):
     def number_metadata(self):
         """Gets the number_metadata of this RecipientPhoneNumber.  # noqa: E501
 
+        Metadata that indicates if the `number` property is editable.  # noqa: E501
 
         :return: The number_metadata of this RecipientPhoneNumber.  # noqa: E501
         :rtype: PropertyMetadata
@@ -144,6 +147,7 @@ class RecipientPhoneNumber(object):
     def number_metadata(self, number_metadata):
         """Sets the number_metadata of this RecipientPhoneNumber.
 
+        Metadata that indicates if the `number` property is editable.  # noqa: E501
 
         :param number_metadata: The number_metadata of this RecipientPhoneNumber.  # noqa: E501
         :type: PropertyMetadata

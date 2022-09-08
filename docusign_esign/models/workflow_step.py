@@ -133,6 +133,7 @@ class WorkflowStep(object):
     def delayed_routing(self):
         """Gets the delayed_routing of this WorkflowStep.  # noqa: E501
 
+        A complex element that specifies the delayed routing settings for the workflow step.  # noqa: E501
 
         :return: The delayed_routing of this WorkflowStep.  # noqa: E501
         :rtype: DelayedRouting
@@ -143,6 +144,7 @@ class WorkflowStep(object):
     def delayed_routing(self, delayed_routing):
         """Sets the delayed_routing of this WorkflowStep.
 
+        A complex element that specifies the delayed routing settings for the workflow step.  # noqa: E501
 
         :param delayed_routing: The delayed_routing of this WorkflowStep.  # noqa: E501
         :type: DelayedRouting
@@ -177,6 +179,7 @@ class WorkflowStep(object):
     def recipient_routing(self):
         """Gets the recipient_routing of this WorkflowStep.  # noqa: E501
 
+        The rules for recipient routing.  # noqa: E501
 
         :return: The recipient_routing of this WorkflowStep.  # noqa: E501
         :rtype: RecipientRouting
@@ -187,6 +190,7 @@ class WorkflowStep(object):
     def recipient_routing(self, recipient_routing):
         """Sets the recipient_routing of this WorkflowStep.
 
+        The rules for recipient routing.  # noqa: E501
 
         :param recipient_routing: The recipient_routing of this WorkflowStep.  # noqa: E501
         :type: RecipientRouting

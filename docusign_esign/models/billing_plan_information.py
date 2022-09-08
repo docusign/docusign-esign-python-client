@@ -43,6 +43,7 @@ class BillingPlanInformation(object):
         'included_seats': 'str',
         'incremental_seats': 'str',
         'payment_method': 'str',
+        'payment_processor': 'str',
         'payment_processor_information': 'PaymentProcessorInformation',
         'plan_information': 'PlanInformation',
         'process_payment': 'str',
@@ -67,6 +68,7 @@ class BillingPlanInformation(object):
         'included_seats': 'includedSeats',
         'incremental_seats': 'incrementalSeats',
         'payment_method': 'paymentMethod',
+        'payment_processor': 'paymentProcessor',
         'payment_processor_information': 'paymentProcessorInformation',
         'plan_information': 'planInformation',
         'process_payment': 'processPayment',
@@ -96,6 +98,7 @@ class BillingPlanInformation(object):
         self._included_seats = None
         self._incremental_seats = None
         self._payment_method = None
+        self._payment_processor = None
         self._payment_processor_information = None
         self._plan_information = None
         self._process_payment = None
@@ -119,6 +122,7 @@ class BillingPlanInformation(object):
         setattr(self, "_{}".format('included_seats'), kwargs.get('included_seats', None))
         setattr(self, "_{}".format('incremental_seats'), kwargs.get('incremental_seats', None))
         setattr(self, "_{}".format('payment_method'), kwargs.get('payment_method', None))
+        setattr(self, "_{}".format('payment_processor'), kwargs.get('payment_processor', None))
         setattr(self, "_{}".format('payment_processor_information'), kwargs.get('payment_processor_information', None))
         setattr(self, "_{}".format('plan_information'), kwargs.get('plan_information', None))
         setattr(self, "_{}".format('process_payment'), kwargs.get('process_payment', None))
@@ -135,6 +139,7 @@ class BillingPlanInformation(object):
     def app_store_receipt(self):
         """Gets the app_store_receipt of this BillingPlanInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The app_store_receipt of this BillingPlanInformation.  # noqa: E501
         :rtype: AppStoreReceipt
@@ -145,6 +150,7 @@ class BillingPlanInformation(object):
     def app_store_receipt(self, app_store_receipt):
         """Sets the app_store_receipt of this BillingPlanInformation.
 
+          # noqa: E501
 
         :param app_store_receipt: The app_store_receipt of this BillingPlanInformation.  # noqa: E501
         :type: AppStoreReceipt
@@ -156,6 +162,7 @@ class BillingPlanInformation(object):
     def billing_address(self):
         """Gets the billing_address of this BillingPlanInformation.  # noqa: E501
 
+        The billing address for the account.  # noqa: E501
 
         :return: The billing_address of this BillingPlanInformation.  # noqa: E501
         :rtype: AccountAddress
@@ -166,6 +173,7 @@ class BillingPlanInformation(object):
     def billing_address(self, billing_address):
         """Sets the billing_address of this BillingPlanInformation.
 
+        The billing address for the account.  # noqa: E501
 
         :param billing_address: The billing_address of this BillingPlanInformation.  # noqa: E501
         :type: AccountAddress
@@ -177,6 +185,7 @@ class BillingPlanInformation(object):
     def credit_card_information(self):
         """Gets the credit_card_information of this BillingPlanInformation.  # noqa: E501
 
+        A complex type that has information about the credit card used to pay for this account.  # noqa: E501
 
         :return: The credit_card_information of this BillingPlanInformation.  # noqa: E501
         :rtype: CreditCardInformation
@@ -187,6 +196,7 @@ class BillingPlanInformation(object):
     def credit_card_information(self, credit_card_information):
         """Sets the credit_card_information of this BillingPlanInformation.
 
+        A complex type that has information about the credit card used to pay for this account.  # noqa: E501
 
         :param credit_card_information: The credit_card_information of this BillingPlanInformation.  # noqa: E501
         :type: CreditCardInformation
@@ -198,6 +208,7 @@ class BillingPlanInformation(object):
     def direct_debit_processor_information(self):
         """Gets the direct_debit_processor_information of this BillingPlanInformation.  # noqa: E501
 
+        Information about the bank that processes direct debits for the payment plan.  # noqa: E501
 
         :return: The direct_debit_processor_information of this BillingPlanInformation.  # noqa: E501
         :rtype: DirectDebitProcessorInformation
@@ -208,6 +219,7 @@ class BillingPlanInformation(object):
     def direct_debit_processor_information(self, direct_debit_processor_information):
         """Sets the direct_debit_processor_information of this BillingPlanInformation.
 
+        Information about the bank that processes direct debits for the payment plan.  # noqa: E501
 
         :param direct_debit_processor_information: The direct_debit_processor_information of this BillingPlanInformation.  # noqa: E501
         :type: DirectDebitProcessorInformation
@@ -354,9 +366,33 @@ class BillingPlanInformation(object):
         self._payment_method = payment_method
 
     @property
+    def payment_processor(self):
+        """Gets the payment_processor of this BillingPlanInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_processor of this BillingPlanInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._payment_processor
+
+    @payment_processor.setter
+    def payment_processor(self, payment_processor):
+        """Sets the payment_processor of this BillingPlanInformation.
+
+          # noqa: E501
+
+        :param payment_processor: The payment_processor of this BillingPlanInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._payment_processor = payment_processor
+
+    @property
     def payment_processor_information(self):
         """Gets the payment_processor_information of this BillingPlanInformation.  # noqa: E501
 
+        Information about the entity that processes payments for the billing plan.  # noqa: E501
 
         :return: The payment_processor_information of this BillingPlanInformation.  # noqa: E501
         :rtype: PaymentProcessorInformation
@@ -367,6 +403,7 @@ class BillingPlanInformation(object):
     def payment_processor_information(self, payment_processor_information):
         """Sets the payment_processor_information of this BillingPlanInformation.
 
+        Information about the entity that processes payments for the billing plan.  # noqa: E501
 
         :param payment_processor_information: The payment_processor_information of this BillingPlanInformation.  # noqa: E501
         :type: PaymentProcessorInformation
@@ -378,6 +415,7 @@ class BillingPlanInformation(object):
     def plan_information(self):
         """Gets the plan_information of this BillingPlanInformation.  # noqa: E501
 
+        An object used to identify the features and attributes of the account being created.  # noqa: E501
 
         :return: The plan_information of this BillingPlanInformation.  # noqa: E501
         :rtype: PlanInformation
@@ -388,6 +426,7 @@ class BillingPlanInformation(object):
     def plan_information(self, plan_information):
         """Sets the plan_information of this BillingPlanInformation.
 
+        An object used to identify the features and attributes of the account being created.  # noqa: E501
 
         :param plan_information: The plan_information of this BillingPlanInformation.  # noqa: E501
         :type: PlanInformation
@@ -422,6 +461,7 @@ class BillingPlanInformation(object):
     def referral_information(self):
         """Gets the referral_information of this BillingPlanInformation.  # noqa: E501
 
+        A complex type that contains properties for entering referral and discount information.  # noqa: E501
 
         :return: The referral_information of this BillingPlanInformation.  # noqa: E501
         :rtype: ReferralInformation
@@ -432,6 +472,7 @@ class BillingPlanInformation(object):
     def referral_information(self, referral_information):
         """Sets the referral_information of this BillingPlanInformation.
 
+        A complex type that contains properties for entering referral and discount information.  # noqa: E501
 
         :param referral_information: The referral_information of this BillingPlanInformation.  # noqa: E501
         :type: ReferralInformation

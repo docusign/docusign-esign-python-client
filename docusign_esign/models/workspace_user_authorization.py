@@ -233,6 +233,7 @@ class WorkspaceUserAuthorization(object):
     def error_details(self):
         """Gets the error_details of this WorkspaceUserAuthorization.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this WorkspaceUserAuthorization.  # noqa: E501
         :rtype: ErrorDetails
@@ -243,6 +244,7 @@ class WorkspaceUserAuthorization(object):
     def error_details(self, error_details):
         """Sets the error_details of this WorkspaceUserAuthorization.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this WorkspaceUserAuthorization.  # noqa: E501
         :type: ErrorDetails
@@ -323,6 +325,7 @@ class WorkspaceUserAuthorization(object):
     def workspace_user_information(self):
         """Gets the workspace_user_information of this WorkspaceUserAuthorization.  # noqa: E501
 
+        An object that provides details about the workspace user.  # noqa: E501
 
         :return: The workspace_user_information of this WorkspaceUserAuthorization.  # noqa: E501
         :rtype: WorkspaceUser
@@ -333,6 +336,7 @@ class WorkspaceUserAuthorization(object):
     def workspace_user_information(self, workspace_user_information):
         """Sets the workspace_user_information of this WorkspaceUserAuthorization.
 
+        An object that provides details about the workspace user.  # noqa: E501
 
         :param workspace_user_information: The workspace_user_information of this WorkspaceUserAuthorization.  # noqa: E501
         :type: WorkspaceUser

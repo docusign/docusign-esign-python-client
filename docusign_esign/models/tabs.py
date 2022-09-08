@@ -851,6 +851,7 @@ class Tabs(object):
     def prefill_tabs(self):
         """Gets the prefill_tabs of this Tabs.  # noqa: E501
 
+        Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.   [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields  # noqa: E501
 
         :return: The prefill_tabs of this Tabs.  # noqa: E501
         :rtype: PrefillTabs
@@ -861,6 +862,7 @@ class Tabs(object):
     def prefill_tabs(self, prefill_tabs):
         """Sets the prefill_tabs of this Tabs.
 
+        Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.   [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields  # noqa: E501
 
         :param prefill_tabs: The prefill_tabs of this Tabs.  # noqa: E501
         :type: PrefillTabs

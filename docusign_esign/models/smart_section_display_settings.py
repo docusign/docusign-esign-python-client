@@ -122,6 +122,7 @@ class SmartSectionDisplaySettings(object):
     def collapsible_settings(self):
         """Gets the collapsible_settings of this SmartSectionDisplaySettings.  # noqa: E501
 
+        This object defines the appearance and function of a collapsible section or item.  # noqa: E501
 
         :return: The collapsible_settings of this SmartSectionDisplaySettings.  # noqa: E501
         :rtype: SmartSectionCollapsibleDisplaySettings
@@ -132,6 +133,7 @@ class SmartSectionDisplaySettings(object):
     def collapsible_settings(self, collapsible_settings):
         """Sets the collapsible_settings of this SmartSectionDisplaySettings.
 
+        This object defines the appearance and function of a collapsible section or item.  # noqa: E501
 
         :param collapsible_settings: The collapsible_settings of this SmartSectionDisplaySettings.  # noqa: E501
         :type: SmartSectionCollapsibleDisplaySettings

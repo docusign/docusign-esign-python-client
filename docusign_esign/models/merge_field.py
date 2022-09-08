@@ -122,6 +122,7 @@ class MergeField(object):
     def allow_sender_to_edit_metadata(self):
         """Gets the allow_sender_to_edit_metadata of this MergeField.  # noqa: E501
 
+        Metadata that indicates if the sender can edit the `allowSenderToEdit` property.  # noqa: E501
 
         :return: The allow_sender_to_edit_metadata of this MergeField.  # noqa: E501
         :rtype: PropertyMetadata
@@ -132,6 +133,7 @@ class MergeField(object):
     def allow_sender_to_edit_metadata(self, allow_sender_to_edit_metadata):
         """Sets the allow_sender_to_edit_metadata of this MergeField.
 
+        Metadata that indicates if the sender can edit the `allowSenderToEdit` property.  # noqa: E501
 
         :param allow_sender_to_edit_metadata: The allow_sender_to_edit_metadata of this MergeField.  # noqa: E501
         :type: PropertyMetadata
@@ -166,6 +168,7 @@ class MergeField(object):
     def configuration_type_metadata(self):
         """Gets the configuration_type_metadata of this MergeField.  # noqa: E501
 
+        Metadata that indicates if the sender can edit the `configurationType` property.  # noqa: E501
 
         :return: The configuration_type_metadata of this MergeField.  # noqa: E501
         :rtype: PropertyMetadata
@@ -176,6 +179,7 @@ class MergeField(object):
     def configuration_type_metadata(self, configuration_type_metadata):
         """Sets the configuration_type_metadata of this MergeField.
 
+        Metadata that indicates if the sender can edit the `configurationType` property.  # noqa: E501
 
         :param configuration_type_metadata: The configuration_type_metadata of this MergeField.  # noqa: E501
         :type: PropertyMetadata
@@ -233,6 +237,7 @@ class MergeField(object):
     def path_extended_metadata(self):
         """Gets the path_extended_metadata of this MergeField.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The path_extended_metadata of this MergeField.  # noqa: E501
         :rtype: PropertyMetadata
@@ -243,6 +248,7 @@ class MergeField(object):
     def path_extended_metadata(self, path_extended_metadata):
         """Sets the path_extended_metadata of this MergeField.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param path_extended_metadata: The path_extended_metadata of this MergeField.  # noqa: E501
         :type: PropertyMetadata
@@ -254,6 +260,7 @@ class MergeField(object):
     def path_metadata(self):
         """Gets the path_metadata of this MergeField.  # noqa: E501
 
+        Metadata that indicates whether the `path` property is editable.   # noqa: E501
 
         :return: The path_metadata of this MergeField.  # noqa: E501
         :rtype: PropertyMetadata
@@ -264,6 +271,7 @@ class MergeField(object):
     def path_metadata(self, path_metadata):
         """Sets the path_metadata of this MergeField.
 
+        Metadata that indicates whether the `path` property is editable.   # noqa: E501
 
         :param path_metadata: The path_metadata of this MergeField.  # noqa: E501
         :type: PropertyMetadata
@@ -298,6 +306,7 @@ class MergeField(object):
     def row_metadata(self):
         """Gets the row_metadata of this MergeField.  # noqa: E501
 
+        Metadata that indicates whether the `row` property is editable.   # noqa: E501
 
         :return: The row_metadata of this MergeField.  # noqa: E501
         :rtype: PropertyMetadata
@@ -308,6 +317,7 @@ class MergeField(object):
     def row_metadata(self, row_metadata):
         """Sets the row_metadata of this MergeField.
 
+        Metadata that indicates whether the `row` property is editable.   # noqa: E501
 
         :param row_metadata: The row_metadata of this MergeField.  # noqa: E501
         :type: PropertyMetadata
@@ -342,6 +352,7 @@ class MergeField(object):
     def write_back_metadata(self):
         """Gets the write_back_metadata of this MergeField.  # noqa: E501
 
+        Metadata that indicates if the sender can edit the `writeBack` property.  # noqa: E501
 
         :return: The write_back_metadata of this MergeField.  # noqa: E501
         :rtype: PropertyMetadata
@@ -352,6 +363,7 @@ class MergeField(object):
     def write_back_metadata(self, write_back_metadata):
         """Sets the write_back_metadata of this MergeField.
 
+        Metadata that indicates if the sender can edit the `writeBack` property.  # noqa: E501
 
         :param write_back_metadata: The write_back_metadata of this MergeField.  # noqa: E501
         :type: PropertyMetadata

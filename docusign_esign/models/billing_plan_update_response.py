@@ -106,6 +106,7 @@ class BillingPlanUpdateResponse(object):
     def billing_plan_preview(self):
         """Gets the billing_plan_preview of this BillingPlanUpdateResponse.  # noqa: E501
 
+          # noqa: E501
 
         :return: The billing_plan_preview of this BillingPlanUpdateResponse.  # noqa: E501
         :rtype: BillingPlanPreview
@@ -116,6 +117,7 @@ class BillingPlanUpdateResponse(object):
     def billing_plan_preview(self, billing_plan_preview):
         """Sets the billing_plan_preview of this BillingPlanUpdateResponse.
 
+          # noqa: E501
 
         :param billing_plan_preview: The billing_plan_preview of this BillingPlanUpdateResponse.  # noqa: E501
         :type: BillingPlanPreview

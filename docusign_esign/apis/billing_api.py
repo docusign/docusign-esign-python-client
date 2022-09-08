@@ -146,6 +146,7 @@ class BillingApi(object):
     def get_credit_card_info(self, account_id, **kwargs):
         """
         Get metadata for a given credit card.
+        This method returns information about a credit card associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -171,6 +172,7 @@ class BillingApi(object):
     def get_credit_card_info_with_http_info(self, account_id, **kwargs):
         """
         Get metadata for a given credit card.
+        This method returns information about a credit card associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -247,6 +249,7 @@ class BillingApi(object):
     def get_downgrade_request_billing_info(self, account_id, **kwargs):
         """
         Returns downgrade plan information for the specified account.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -272,6 +275,7 @@ class BillingApi(object):
     def get_downgrade_request_billing_info_with_http_info(self, account_id, **kwargs):
         """
         Returns downgrade plan information for the specified account.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1325,6 +1329,7 @@ class BillingApi(object):
     def update_downgrade_account_billing_plan(self, account_id, **kwargs):
         """
         Queues downgrade billing plan request for an account.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1351,6 +1356,7 @@ class BillingApi(object):
     def update_downgrade_account_billing_plan_with_http_info(self, account_id, **kwargs):
         """
         Queues downgrade billing plan request for an account.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

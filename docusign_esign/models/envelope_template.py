@@ -911,6 +911,7 @@ class EnvelopeTemplate(object):
     def custom_fields(self):
         """Gets the custom_fields of this EnvelopeTemplate.  # noqa: E501
 
+        An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.  # noqa: E501
 
         :return: The custom_fields of this EnvelopeTemplate.  # noqa: E501
         :rtype: CustomFields
@@ -921,6 +922,7 @@ class EnvelopeTemplate(object):
     def custom_fields(self, custom_fields):
         """Sets the custom_fields of this EnvelopeTemplate.
 
+        An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.  # noqa: E501
 
         :param custom_fields: The custom_fields of this EnvelopeTemplate.  # noqa: E501
         :type: CustomFields
@@ -1185,6 +1187,7 @@ class EnvelopeTemplate(object):
     def email_settings(self):
         """Gets the email_settings of this EnvelopeTemplate.  # noqa: E501
 
+        A complex type that contains email settings.  # noqa: E501
 
         :return: The email_settings of this EnvelopeTemplate.  # noqa: E501
         :rtype: EmailSettings
@@ -1195,6 +1198,7 @@ class EnvelopeTemplate(object):
     def email_settings(self, email_settings):
         """Sets the email_settings of this EnvelopeTemplate.
 
+        A complex type that contains email settings.  # noqa: E501
 
         :param email_settings: The email_settings of this EnvelopeTemplate.  # noqa: E501
         :type: EmailSettings
@@ -1298,6 +1302,7 @@ class EnvelopeTemplate(object):
     def envelope_custom_metadata(self):
         """Gets the envelope_custom_metadata of this EnvelopeTemplate.  # noqa: E501
 
+          # noqa: E501
 
         :return: The envelope_custom_metadata of this EnvelopeTemplate.  # noqa: E501
         :rtype: EnvelopeCustomMetadata
@@ -1308,6 +1313,7 @@ class EnvelopeTemplate(object):
     def envelope_custom_metadata(self, envelope_custom_metadata):
         """Sets the envelope_custom_metadata of this EnvelopeTemplate.
 
+          # noqa: E501
 
         :param envelope_custom_metadata: The envelope_custom_metadata of this EnvelopeTemplate.  # noqa: E501
         :type: EnvelopeCustomMetadata
@@ -1411,6 +1417,7 @@ class EnvelopeTemplate(object):
     def envelope_metadata(self):
         """Gets the envelope_metadata of this EnvelopeTemplate.  # noqa: E501
 
+        Provides information about the features and services that are enabled for the envelope, including the Correct feature, the Advanced Correct feature, and DocuSign eNotary service.  # noqa: E501
 
         :return: The envelope_metadata of this EnvelopeTemplate.  # noqa: E501
         :rtype: EnvelopeMetadata
@@ -1421,6 +1428,7 @@ class EnvelopeTemplate(object):
     def envelope_metadata(self, envelope_metadata):
         """Sets the envelope_metadata of this EnvelopeTemplate.
 
+        Provides information about the features and services that are enabled for the envelope, including the Correct feature, the Advanced Correct feature, and DocuSign eNotary service.  # noqa: E501
 
         :param envelope_metadata: The envelope_metadata of this EnvelopeTemplate.  # noqa: E501
         :type: EnvelopeMetadata
@@ -1869,6 +1877,7 @@ class EnvelopeTemplate(object):
     def last_modified_by(self):
         """Gets the last_modified_by of this EnvelopeTemplate.  # noqa: E501
 
+          # noqa: E501
 
         :return: The last_modified_by of this EnvelopeTemplate.  # noqa: E501
         :rtype: UserInfo
@@ -1879,6 +1888,7 @@ class EnvelopeTemplate(object):
     def last_modified_by(self, last_modified_by):
         """Sets the last_modified_by of this EnvelopeTemplate.
 
+          # noqa: E501
 
         :param last_modified_by: The last_modified_by of this EnvelopeTemplate.  # noqa: E501
         :type: UserInfo
@@ -1959,6 +1969,7 @@ class EnvelopeTemplate(object):
     def lock_information(self):
         """Gets the lock_information of this EnvelopeTemplate.  # noqa: E501
 
+        Provides lock information about an envelope that a user has locked.  # noqa: E501
 
         :return: The lock_information of this EnvelopeTemplate.  # noqa: E501
         :rtype: LockInformation
@@ -1969,6 +1980,7 @@ class EnvelopeTemplate(object):
     def lock_information(self, lock_information):
         """Sets the lock_information of this EnvelopeTemplate.
 
+        Provides lock information about an envelope that a user has locked.  # noqa: E501
 
         :param lock_information: The lock_information of this EnvelopeTemplate.  # noqa: E501
         :type: LockInformation
@@ -2049,6 +2061,7 @@ class EnvelopeTemplate(object):
     def notification(self):
         """Gets the notification of this EnvelopeTemplate.  # noqa: E501
 
+          # noqa: E501
 
         :return: The notification of this EnvelopeTemplate.  # noqa: E501
         :rtype: Notification
@@ -2059,6 +2072,7 @@ class EnvelopeTemplate(object):
     def notification(self, notification):
         """Sets the notification of this EnvelopeTemplate.
 
+          # noqa: E501
 
         :param notification: The notification of this EnvelopeTemplate.  # noqa: E501
         :type: Notification
@@ -2093,6 +2107,7 @@ class EnvelopeTemplate(object):
     def owner(self):
         """Gets the owner of this EnvelopeTemplate.  # noqa: E501
 
+          # noqa: E501
 
         :return: The owner of this EnvelopeTemplate.  # noqa: E501
         :rtype: UserInfo
@@ -2103,6 +2118,7 @@ class EnvelopeTemplate(object):
     def owner(self, owner):
         """Sets the owner of this EnvelopeTemplate.
 
+          # noqa: E501
 
         :param owner: The owner of this EnvelopeTemplate.  # noqa: E501
         :type: UserInfo
@@ -2183,6 +2199,7 @@ class EnvelopeTemplate(object):
     def power_form(self):
         """Gets the power_form of this EnvelopeTemplate.  # noqa: E501
 
+        Information about any PowerForms that are included in the envelope.  # noqa: E501
 
         :return: The power_form of this EnvelopeTemplate.  # noqa: E501
         :rtype: PowerForm
@@ -2193,6 +2210,7 @@ class EnvelopeTemplate(object):
     def power_form(self, power_form):
         """Sets the power_form of this EnvelopeTemplate.
 
+        Information about any PowerForms that are included in the envelope.  # noqa: E501
 
         :param power_form: The power_form of this EnvelopeTemplate.  # noqa: E501
         :type: PowerForm
@@ -2296,6 +2314,7 @@ class EnvelopeTemplate(object):
     def recipients(self):
         """Gets the recipients of this EnvelopeTemplate.  # noqa: E501
 
+        An array of recipient objects that provides details about the recipients of the envelope.  # noqa: E501
 
         :return: The recipients of this EnvelopeTemplate.  # noqa: E501
         :rtype: Recipients
@@ -2306,6 +2325,7 @@ class EnvelopeTemplate(object):
     def recipients(self, recipients):
         """Sets the recipients of this EnvelopeTemplate.
 
+        An array of recipient objects that provides details about the recipients of the envelope.  # noqa: E501
 
         :param recipients: The recipients of this EnvelopeTemplate.  # noqa: E501
         :type: Recipients
@@ -2363,6 +2383,7 @@ class EnvelopeTemplate(object):
     def sender(self):
         """Gets the sender of this EnvelopeTemplate.  # noqa: E501
 
+        Information about the sender of the envelope.  # noqa: E501
 
         :return: The sender of this EnvelopeTemplate.  # noqa: E501
         :rtype: UserInfo
@@ -2373,6 +2394,7 @@ class EnvelopeTemplate(object):
     def sender(self, sender):
         """Sets the sender of this EnvelopeTemplate.
 
+        Information about the sender of the envelope.  # noqa: E501
 
         :param sender: The sender of this EnvelopeTemplate.  # noqa: E501
         :type: UserInfo
@@ -2706,6 +2728,7 @@ class EnvelopeTemplate(object):
     def workflow(self):
         """Gets the workflow of this EnvelopeTemplate.  # noqa: E501
 
+          # noqa: E501
 
         :return: The workflow of this EnvelopeTemplate.  # noqa: E501
         :rtype: Workflow
@@ -2716,6 +2739,7 @@ class EnvelopeTemplate(object):
     def workflow(self, workflow):
         """Sets the workflow of this EnvelopeTemplate.
 
+          # noqa: E501
 
         :param workflow: The workflow of this EnvelopeTemplate.  # noqa: E501
         :type: Workflow

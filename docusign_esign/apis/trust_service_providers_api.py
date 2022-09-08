@@ -43,6 +43,7 @@ class TrustServiceProvidersApi(object):
     def get_seal_providers(self, account_id, **kwargs):
         """
         Returns Account available seals for specified account.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -68,6 +69,7 @@ class TrustServiceProvidersApi(object):
     def get_seal_providers_with_http_info(self, account_id, **kwargs):
         """
         Returns Account available seals for specified account.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

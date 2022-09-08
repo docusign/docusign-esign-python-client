@@ -286,6 +286,7 @@ class EnvelopesApi(object):
     def create_chunked_upload(self, account_id, **kwargs):
         """
         Initiate a new ChunkedUpload.
+        This method initiates a new chunked upload with the first part of the content.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -312,6 +313,7 @@ class EnvelopesApi(object):
     def create_chunked_upload_with_http_info(self, account_id, **kwargs):
         """
         Initiate a new ChunkedUpload.
+        This method initiates a new chunked upload with the first part of the content.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -847,6 +849,7 @@ class EnvelopesApi(object):
     def create_document_responsive_html_preview(self, account_id, document_id, envelope_id, **kwargs):
         """
         Get Responsive HTML Preview for a document in an envelope.
+        Creates a preview of the [responsive](/docs/esign-rest-api/esign101/concepts/responsive/) HTML version of a specific document. This method enables you to preview a PDF document conversion to responsive HTML across device types prior to sending.  The request body is a `documentHtmlDefinition` object, which holds the responsive signing parameters that define how to generate the HTML version of the signing document.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -875,6 +878,7 @@ class EnvelopesApi(object):
     def create_document_responsive_html_preview_with_http_info(self, account_id, document_id, envelope_id, **kwargs):
         """
         Get Responsive HTML Preview for a document in an envelope.
+        Creates a preview of the [responsive](/docs/esign-rest-api/esign101/concepts/responsive/) HTML version of a specific document. This method enables you to preview a PDF document conversion to responsive HTML across device types prior to sending.  The request body is a `documentHtmlDefinition` object, which holds the responsive signing parameters that define how to generate the HTML version of the signing document.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -966,6 +970,7 @@ class EnvelopesApi(object):
     def create_document_tabs(self, account_id, document_id, envelope_id, **kwargs):
         """
         Adds the tabs to an envelope document
+        Adds tabs to the document specified by `documentId` in the envelope specified by `envelopeId`.  In the request body, you only need to specify the tabs that your are adding. For example, to add a text [prefill tab](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs), your request body might look like this:  ``` {   \"prefillTabs\": {     \"textTabs\": [       {         \"value\": \"a prefill text tab\",         \"pageNumber\": \"1\",         \"documentId\": \"1\",         \"xPosition\": 316,         \"yPosition\": 97       }     ]   } } ``` 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -994,6 +999,7 @@ class EnvelopesApi(object):
     def create_document_tabs_with_http_info(self, account_id, document_id, envelope_id, **kwargs):
         """
         Adds the tabs to an envelope document
+        Adds tabs to the document specified by `documentId` in the envelope specified by `envelopeId`.  In the request body, you only need to specify the tabs that your are adding. For example, to add a text [prefill tab](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs), your request body might look like this:  ``` {   \"prefillTabs\": {     \"textTabs\": [       {         \"value\": \"a prefill text tab\",         \"pageNumber\": \"1\",         \"documentId\": \"1\",         \"xPosition\": 316,         \"yPosition\": 97       }     ]   } } ``` 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1440,6 +1446,7 @@ class EnvelopesApi(object):
     def create_envelope_comments(self, account_id, envelope_id, **kwargs):
         """
         Posts a list of comments for authorized user
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1467,6 +1474,7 @@ class EnvelopesApi(object):
     def create_envelope_comments_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Posts a list of comments for authorized user
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1552,6 +1560,7 @@ class EnvelopesApi(object):
     def create_envelope_recipient_preview(self, account_id, envelope_id, **kwargs):
         """
         Provides a URL to start a recipient view of the Envelope UI
+        This method returns a URL for an envelope recipient preview  in the DocuSign UI that you can embed in your application. You use this method to enable the sender to preview the recipients' experience.  For more information, see [Preview and Send](https://support.docusign.com/en/guides/ndse-user-guide-send-your-documents).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1579,6 +1588,7 @@ class EnvelopesApi(object):
     def create_envelope_recipient_preview_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Provides a URL to start a recipient view of the Envelope UI
+        This method returns a URL for an envelope recipient preview  in the DocuSign UI that you can embed in your application. You use this method to enable the sender to preview the recipients' experience.  For more information, see [Preview and Send](https://support.docusign.com/en/guides/ndse-user-guide-send-your-documents).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1664,6 +1674,7 @@ class EnvelopesApi(object):
     def create_envelope_recipient_shared_view(self, account_id, envelope_id, **kwargs):
         """
         Provides a URL to start a shared recipient view of the Envelope UI
+        Returns a URL that enables you to embed the DocuSign UI recipient view of a [shared envelope](https://support.docusign.com/en/guides/ndse-admin-guide-share-envelopes) in your applications. This is the view that a user sees of an envelope that a recipient on the same account has shared with them.  Due to screen space issues, do not use an `<iframe>` for embedded operations on mobile devices. For iOS devices, DocuSign recommends using a WebView.  ### Revoking the URL  You can revoke this URL by making a DELETE HTTP request to the URL with no request body.  ### Related topics  - [Embedded signing and sending](/docs/esign-rest-api/esign101/concepts/embedding/) - [How to send an envelope via your app](/docs/esign-rest-api/how-to/embedded-sending/) - [How to embed the DocuSign UI in your app](/docs/esign-rest-api/how-to/embed-ui/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1691,6 +1702,7 @@ class EnvelopesApi(object):
     def create_envelope_recipient_shared_view_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Provides a URL to start a shared recipient view of the Envelope UI
+        Returns a URL that enables you to embed the DocuSign UI recipient view of a [shared envelope](https://support.docusign.com/en/guides/ndse-admin-guide-share-envelopes) in your applications. This is the view that a user sees of an envelope that a recipient on the same account has shared with them.  Due to screen space issues, do not use an `<iframe>` for embedded operations on mobile devices. For iOS devices, DocuSign recommends using a WebView.  ### Revoking the URL  You can revoke this URL by making a DELETE HTTP request to the URL with no request body.  ### Related topics  - [Embedded signing and sending](/docs/esign-rest-api/esign101/concepts/embedding/) - [How to send an envelope via your app](/docs/esign-rest-api/how-to/embedded-sending/) - [How to embed the DocuSign UI in your app](/docs/esign-rest-api/how-to/embed-ui/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1776,6 +1788,7 @@ class EnvelopesApi(object):
     def create_envelope_transfer_rules(self, account_id, **kwargs):
         """
         Add envelope transfer rules to an account.
+        This method creates an envelope transfer rule.  When you create an envelope transfer rule, you specify the following properties:   - `eventType` - `fromGroups` - `toUser` - `toFolder` - `carbonCopyOriginalOwner` - `enabled`  **Note:** Only Administrators can create envelope transfer rules. In addition, to use envelope transfer rules, the **Transfer Custody** feature must be enabled for your account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1802,6 +1815,7 @@ class EnvelopesApi(object):
     def create_envelope_transfer_rules_with_http_info(self, account_id, **kwargs):
         """
         Add envelope transfer rules to an account.
+        This method creates an envelope transfer rule.  When you create an envelope transfer rule, you specify the following properties:   - `eventType` - `fromGroups` - `toUser` - `toFolder` - `carbonCopyOriginalOwner` - `enabled`  **Note:** Only Administrators can create envelope transfer rules. In addition, to use envelope transfer rules, the **Transfer Custody** feature must be enabled for your account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1871,6 +1885,118 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='EnvelopeTransferRuleInformation',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_envelope_workflow_step_definition(self, account_id, envelope_id, **kwargs):
+        """
+        Creates and adds a new workflow step definition for an envelope's workflow
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_envelope_workflow_step_definition(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param WorkflowStep workflow_step:
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.create_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def create_envelope_workflow_step_definition_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Creates and adds a new workflow step definition for an envelope's workflow
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param WorkflowStep workflow_step:
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'workflow_step']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_envelope_workflow_step_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_envelope_workflow_step_definition`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `create_envelope_workflow_step_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow/steps'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'workflow_step' in params:
+            body_params = params['workflow_step']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='WorkflowStep',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -2218,6 +2344,7 @@ class EnvelopesApi(object):
     def create_recipient_manual_review_view(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Provides a link to access the Identity manual review related to a recipient.
+        This method returns the URL of the page that allows a sender to [manually review](https://support.docusign.com/en/guides/ndse-user-guide-send-documents-with-id-verification) the ID of a recipient. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2245,6 +2372,7 @@ class EnvelopesApi(object):
     def create_recipient_manual_review_view_with_http_info(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Provides a link to access the Identity manual review related to a recipient.
+        This method returns the URL of the page that allows a sender to [manually review](https://support.docusign.com/en/guides/ndse-user-guide-send-documents-with-id-verification) the ID of a recipient. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2333,6 +2461,7 @@ class EnvelopesApi(object):
     def create_recipient_proof_file_link(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Returns a link to access to the identity events stored in the proof service related to this recipient.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2360,6 +2489,7 @@ class EnvelopesApi(object):
     def create_recipient_proof_file_link_with_http_info(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Returns a link to access to the identity events stored in the proof service related to this recipient.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2448,6 +2578,7 @@ class EnvelopesApi(object):
     def create_recipient_proof_file_resource_token(self, account_id, envelope_id, recipient_id, token_scopes, **kwargs):
         """
         Returns a resource token to get access to the identity events stored in the proof service related to this recipient.
+        Creates a resource token for a sender. This token allows a sender to return identification data for a recipient using the [ID Evidence API](/docs/idevidence-api/).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2476,6 +2607,7 @@ class EnvelopesApi(object):
     def create_recipient_proof_file_resource_token_with_http_info(self, account_id, envelope_id, recipient_id, token_scopes, **kwargs):
         """
         Returns a resource token to get access to the identity events stored in the proof service related to this recipient.
+        Creates a resource token for a sender. This token allows a sender to return identification data for a recipient using the [ID Evidence API](/docs/idevidence-api/).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2684,6 +2816,7 @@ class EnvelopesApi(object):
     def create_responsive_html_preview(self, account_id, envelope_id, **kwargs):
         """
         Get Responsive HTML Preview for all documents in an envelope.
+        Creates a preview of the [responsive](/docs/esign-rest-api/esign101/concepts/responsive/), HTML versions of all of the documents in an envelope. This method enables you to preview the PDF document conversions to responsive HTML across device types prior to sending.  The request body is a `documentHtmlDefinition` object, which holds the responsive signing parameters that define how to generate the HTML version of the documents. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2711,6 +2844,7 @@ class EnvelopesApi(object):
     def create_responsive_html_preview_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Get Responsive HTML Preview for all documents in an envelope.
+        Creates a preview of the [responsive](/docs/esign-rest-api/esign101/concepts/responsive/), HTML versions of all of the documents in an envelope. This method enables you to preview the PDF document conversions to responsive HTML across device types prior to sending.  The request body is a `documentHtmlDefinition` object, which holds the responsive signing parameters that define how to generate the HTML version of the documents. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3028,9 +3162,122 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def create_template_workflow_step_definition(self, account_id, template_id, **kwargs):
+        """
+        Creates and adds a new workflow step definition for a template's workflow
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_template_workflow_step_definition(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param WorkflowStep workflow_step:
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_template_workflow_step_definition_with_http_info(account_id, template_id, **kwargs)
+        else:
+            (data) = self.create_template_workflow_step_definition_with_http_info(account_id, template_id, **kwargs)
+            return data
+
+    def create_template_workflow_step_definition_with_http_info(self, account_id, template_id, **kwargs):
+        """
+        Creates and adds a new workflow step definition for a template's workflow
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_template_workflow_step_definition_with_http_info(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param WorkflowStep workflow_step:
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id', 'workflow_step']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_template_workflow_step_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_template_workflow_step_definition`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `create_template_workflow_step_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/workflow/steps'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'workflow_step' in params:
+            body_params = params['workflow_step']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='WorkflowStep',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def delete_attachments(self, account_id, envelope_id, **kwargs):
         """
         Delete one or more attachments from a DRAFT envelope.
+        Deletes one or more attachments from a draft envelope.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3058,6 +3305,7 @@ class EnvelopesApi(object):
     def delete_attachments_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Delete one or more attachments from a DRAFT envelope.
+        Deletes one or more attachments from a draft envelope.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3143,6 +3391,7 @@ class EnvelopesApi(object):
     def delete_chunked_upload(self, account_id, chunked_upload_id, **kwargs):
         """
         Delete an existing ChunkedUpload.
+        Deletes a chunked upload that has been committed but not yet consumed.  This method cannot be used to delete the following types of chunked uploads, which the system deletes automatically:   - Chunked uploads that have been consumed by use in another API call. - Expired chunked uploads.  **Note:** If you are aware of a chunked upload that can be discarded, the best practice is to explicitly delete it. If you wait for the system to automatically delete it after it expires, the chunked upload will continue to count against your quota.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3169,6 +3418,7 @@ class EnvelopesApi(object):
     def delete_chunked_upload_with_http_info(self, account_id, chunked_upload_id, **kwargs):
         """
         Delete an existing ChunkedUpload.
+        Deletes a chunked upload that has been committed but not yet consumed.  This method cannot be used to delete the following types of chunked uploads, which the system deletes automatically:   - Chunked uploads that have been consumed by use in another API call. - Expired chunked uploads.  **Note:** If you are aware of a chunked upload that can be discarded, the best practice is to explicitly delete it. If you wait for the system to automatically delete it after it expires, the chunked upload will continue to count against your quota.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3610,6 +3860,7 @@ class EnvelopesApi(object):
     def delete_document_tabs(self, account_id, document_id, envelope_id, **kwargs):
         """
         Deletes tabs from an envelope document
+        Deletes tabs from the document specified by `documentId` in the envelope specified by `envelopeId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3638,6 +3889,7 @@ class EnvelopesApi(object):
     def delete_document_tabs_with_http_info(self, account_id, document_id, envelope_id, **kwargs):
         """
         Deletes tabs from an envelope document
+        Deletes tabs from the document specified by `documentId` in the envelope specified by `envelopeId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3953,6 +4205,7 @@ class EnvelopesApi(object):
     def delete_envelope_correct_view(self, account_id, envelope_id, **kwargs):
         """
         Revokes the correction view URL to the Envelope UI
+        Revokes the correction view URL to the Envelope UI.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3980,6 +4233,7 @@ class EnvelopesApi(object):
     def delete_envelope_correct_view_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Revokes the correction view URL to the Envelope UI
+        Revokes the correction view URL to the Envelope UI.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4062,9 +4316,233 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def delete_envelope_delayed_routing_definition(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Deletes the delayed routing rules for the specified envelope workflow step.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_envelope_delayed_routing_definition(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_envelope_delayed_routing_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.delete_envelope_delayed_routing_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+            return data
+
+    def delete_envelope_delayed_routing_definition_with_http_info(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Deletes the delayed routing rules for the specified envelope workflow step.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_envelope_delayed_routing_definition_with_http_info(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'workflow_step_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_envelope_delayed_routing_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_envelope_delayed_routing_definition`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `delete_envelope_delayed_routing_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `delete_envelope_delayed_routing_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow/steps/{workflowStepId}/delayedRouting'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_envelope_scheduled_sending_definition(self, account_id, envelope_id, **kwargs):
+        """
+        Deletes the scheduled sending rules for the envelope's workflow.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_envelope_scheduled_sending_definition(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_envelope_scheduled_sending_definition_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.delete_envelope_scheduled_sending_definition_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def delete_envelope_scheduled_sending_definition_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Deletes the scheduled sending rules for the envelope's workflow.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_envelope_scheduled_sending_definition_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_envelope_scheduled_sending_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_envelope_scheduled_sending_definition`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `delete_envelope_scheduled_sending_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow/scheduledSending'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def delete_envelope_transfer_rules(self, account_id, envelope_transfer_rule_id, **kwargs):
         """
         Delete envelope transfer rules for an account.
+        This method deletes an envelope transfer rule.  **Note:** Only Administrators can delete envelope transfer rules. In addition, to use envelope transfer rules, the **Transfer Custody** feature must be enabled for your account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4091,6 +4569,7 @@ class EnvelopesApi(object):
     def delete_envelope_transfer_rules_with_http_info(self, account_id, envelope_transfer_rule_id, **kwargs):
         """
         Delete envelope transfer rules for an account.
+        This method deletes an envelope transfer rule.  **Note:** Only Administrators can delete envelope transfer rules. In addition, to use envelope transfer rules, the **Transfer Custody** feature must be enabled for your account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4173,6 +4652,7 @@ class EnvelopesApi(object):
     def delete_envelope_workflow_definition(self, account_id, envelope_id, **kwargs):
         """
         Delete the workflow definition for an envelope.
+        Deletes the specified envelope's workflow definition if it has one. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4199,6 +4679,7 @@ class EnvelopesApi(object):
     def delete_envelope_workflow_definition_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Delete the workflow definition for an envelope.
+        Deletes the specified envelope's workflow definition if it has one. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4247,6 +4728,121 @@ class EnvelopesApi(object):
             path_params['accountId'] = params['account_id']
         if 'envelope_id' in params:
             path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_envelope_workflow_step_definition(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Deletes the envelope workflow step definition for an envelope's workflow by step id.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_envelope_workflow_step_definition(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.delete_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+            return data
+
+    def delete_envelope_workflow_step_definition_with_http_info(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Deletes the envelope workflow step definition for an envelope's workflow by step id.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'workflow_step_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_envelope_workflow_step_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_envelope_workflow_step_definition`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `delete_envelope_workflow_step_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `delete_envelope_workflow_step_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow/steps/{workflowStepId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
 
         query_params = {}
 
@@ -4740,9 +5336,233 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def delete_template_delayed_routing_definition(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Deletes the delayed routing rules for the specified template workflow step.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_template_delayed_routing_definition(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_template_delayed_routing_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.delete_template_delayed_routing_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+            return data
+
+    def delete_template_delayed_routing_definition_with_http_info(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Deletes the delayed routing rules for the specified template workflow step.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_template_delayed_routing_definition_with_http_info(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id', 'workflow_step_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_template_delayed_routing_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_template_delayed_routing_definition`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `delete_template_delayed_routing_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `delete_template_delayed_routing_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/workflow/steps/{workflowStepId}/delayedRouting'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_template_scheduled_sending_definition(self, account_id, template_id, **kwargs):
+        """
+        Deletes the scheduled sending rules for the template's workflow.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_template_scheduled_sending_definition(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_template_scheduled_sending_definition_with_http_info(account_id, template_id, **kwargs)
+        else:
+            (data) = self.delete_template_scheduled_sending_definition_with_http_info(account_id, template_id, **kwargs)
+            return data
+
+    def delete_template_scheduled_sending_definition_with_http_info(self, account_id, template_id, **kwargs):
+        """
+        Deletes the scheduled sending rules for the template's workflow.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_template_scheduled_sending_definition_with_http_info(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_template_scheduled_sending_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_template_scheduled_sending_definition`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `delete_template_scheduled_sending_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/workflow/scheduledSending'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def delete_template_workflow_definition(self, account_id, template_id, **kwargs):
         """
         Delete the workflow definition for a template.
+        Deletes the specified template's workflow definition if it has one.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4769,6 +5589,7 @@ class EnvelopesApi(object):
     def delete_template_workflow_definition_with_http_info(self, account_id, template_id, **kwargs):
         """
         Delete the workflow definition for a template.
+        Deletes the specified template's workflow definition if it has one.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -4817,6 +5638,121 @@ class EnvelopesApi(object):
             path_params['accountId'] = params['account_id']
         if 'template_id' in params:
             path_params['templateId'] = params['template_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_template_workflow_step_definition(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Deletes the workflow step definition for an template's workflow by step id.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_template_workflow_step_definition(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_template_workflow_step_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.delete_template_workflow_step_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+            return data
+
+    def delete_template_workflow_step_definition_with_http_info(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Deletes the workflow step definition for an template's workflow by step id.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_template_workflow_step_definition_with_http_info(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id', 'workflow_step_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_template_workflow_step_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_template_workflow_step_definition`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `delete_template_workflow_step_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `delete_template_workflow_step_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/workflow/steps/{workflowStepId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
 
         query_params = {}
 
@@ -4975,6 +5911,7 @@ class EnvelopesApi(object):
     def get_attachment(self, account_id, attachment_id, envelope_id, **kwargs):
         """
         Retrieves an attachment from the envelope.
+        Retrieves an attachment from an envelope.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5002,6 +5939,7 @@ class EnvelopesApi(object):
     def get_attachment_with_http_info(self, account_id, attachment_id, envelope_id, **kwargs):
         """
         Retrieves an attachment from the envelope.
+        Retrieves an attachment from an envelope.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5090,6 +6028,7 @@ class EnvelopesApi(object):
     def get_attachments(self, account_id, envelope_id, **kwargs):
         """
         Returns a list of attachments associated with the specified envelope
+        Returns a list of attachments associated with a specified envelope
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5116,6 +6055,7 @@ class EnvelopesApi(object):
     def get_attachments_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Returns a list of attachments associated with the specified envelope
+        Returns a list of attachments associated with a specified envelope
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5198,6 +6138,7 @@ class EnvelopesApi(object):
     def get_chunked_upload(self, account_id, chunked_upload_id, **kwargs):
         """
         Retrieves the current metadata of a ChunkedUpload.
+        Returns the details (but not the content) about a chunked upload.  **Note:** You cannot obtain details about a chunked upload that has expired, been deleted, or consumed by other actions.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5225,6 +6166,7 @@ class EnvelopesApi(object):
     def get_chunked_upload_with_http_info(self, account_id, chunked_upload_id, **kwargs):
         """
         Retrieves the current metadata of a ChunkedUpload.
+        Returns the details (but not the content) about a chunked upload.  **Note:** You cannot obtain details about a chunked upload that has expired, been deleted, or consumed by other actions.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5310,6 +6252,7 @@ class EnvelopesApi(object):
     def get_comments_transcript(self, account_id, envelope_id, **kwargs):
         """
         Gets comment transcript for envelope and user
+        Retrieves a PDF file containing all of the comments that senders and recipients have added to the documents in an envelope.  The response body of this method is the PDF file as a byte stream.   **Note:** Comments are disabled by default. To use the comments feature, an account administrator must enable comments on the account (in the `accountSettingsInformation` object, set the `enableSigningExtensionComments` property to **true**). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5337,6 +6280,7 @@ class EnvelopesApi(object):
     def get_comments_transcript_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Gets comment transcript for envelope and user
+        Retrieves a PDF file containing all of the comments that senders and recipients have added to the documents in an envelope.  The response body of this method is the PDF file as a byte stream.   **Note:** Comments are disabled by default. To use the comments feature, an account administrator must enable comments on the account (in the `accountSettingsInformation` object, set the `enableSigningExtensionComments` property to **true**). 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5437,7 +6381,7 @@ class EnvelopesApi(object):
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str lang_code: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
-        :param str lang_code2: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+        :param str lang_code2: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
         :return: ConsumerDisclosure
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5467,7 +6411,7 @@ class EnvelopesApi(object):
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str lang_code: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
-        :param str lang_code2: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+        :param str lang_code2: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
         :return: ConsumerDisclosure
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5964,6 +6908,7 @@ class EnvelopesApi(object):
     def get_document_tabs(self, account_id, document_id, envelope_id, **kwargs):
         """
         Returns tabs on the document.
+        Returns the tabs on the document specified by `documentId` in the envelope specified by `envelopeId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -5993,6 +6938,7 @@ class EnvelopesApi(object):
     def get_document_tabs_with_http_info(self, account_id, document_id, envelope_id, **kwargs):
         """
         Returns tabs on the document.
+        Returns the tabs on the document specified by `documentId` in the envelope specified by `envelopeId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6312,9 +7258,125 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_envelope_delayed_routing_definition(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Returns the delayed routing rules for an envelope's workflow step definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelope_delayed_routing_definition(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: DelayedRouting
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_envelope_delayed_routing_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.get_envelope_delayed_routing_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+            return data
+
+    def get_envelope_delayed_routing_definition_with_http_info(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Returns the delayed routing rules for an envelope's workflow step definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelope_delayed_routing_definition_with_http_info(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: DelayedRouting
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'workflow_step_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_envelope_delayed_routing_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_envelope_delayed_routing_definition`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_envelope_delayed_routing_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `get_envelope_delayed_routing_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow/steps/{workflowStepId}/delayedRouting'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DelayedRouting',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_envelope_document_html_definitions(self, account_id, document_id, envelope_id, **kwargs):
         """
         Get the Original HTML Definition used to generate the Responsive HTML for a given document.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6342,6 +7404,7 @@ class EnvelopesApi(object):
     def get_envelope_document_html_definitions_with_http_info(self, account_id, document_id, envelope_id, **kwargs):
         """
         Get the Original HTML Definition used to generate the Responsive HTML for a given document.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6430,6 +7493,7 @@ class EnvelopesApi(object):
     def get_envelope_html_definitions(self, account_id, envelope_id, **kwargs):
         """
         Get the Original HTML Definition used to generate the Responsive HTML for the envelope.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6456,6 +7520,7 @@ class EnvelopesApi(object):
     def get_envelope_html_definitions_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Get the Original HTML Definition used to generate the Responsive HTML for the envelope.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6535,9 +7600,118 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_envelope_scheduled_sending_definition(self, account_id, envelope_id, **kwargs):
+        """
+        Returns the scheduled sending rules for an envelope's workflow definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelope_scheduled_sending_definition(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: ScheduledSending
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_envelope_scheduled_sending_definition_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_envelope_scheduled_sending_definition_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_envelope_scheduled_sending_definition_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Returns the scheduled sending rules for an envelope's workflow definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelope_scheduled_sending_definition_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: ScheduledSending
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_envelope_scheduled_sending_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_envelope_scheduled_sending_definition`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_envelope_scheduled_sending_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow/scheduledSending'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ScheduledSending',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_envelope_transfer_rules(self, account_id, **kwargs):
         """
         Returns a list of envelope transfer rules in the specified account.
+        This method retrieves a list of envelope transfer rules associated with an account.  **Note:** Only Administrators can create and use envelope transfer rules. In addition, to use envelope transfer rules, the **Transfer Custody** feature must be enabled for your account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6565,6 +7739,7 @@ class EnvelopesApi(object):
     def get_envelope_transfer_rules_with_http_info(self, account_id, **kwargs):
         """
         Returns a list of envelope transfer rules in the specified account.
+        This method retrieves a list of envelope transfer rules associated with an account.  **Note:** Only Administrators can create and use envelope transfer rules. In addition, to use envelope transfer rules, the **Transfer Custody** feature must be enabled for your account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6647,6 +7822,7 @@ class EnvelopesApi(object):
     def get_envelope_workflow_definition(self, account_id, envelope_id, **kwargs):
         """
         Returns the workflow definition for an envelope.
+        Returns an envelope's workflow definition if the envelope specified by `envelopeId` has one.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6673,6 +7849,7 @@ class EnvelopesApi(object):
     def get_envelope_workflow_definition_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Returns the workflow definition for an envelope.
+        Returns an envelope's workflow definition if the envelope specified by `envelopeId` has one.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6752,9 +7929,125 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_envelope_workflow_step_definition(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Returns the workflow step definition for an envelope by step id.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelope_workflow_step_definition(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.get_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+            return data
+
+    def get_envelope_workflow_step_definition_with_http_info(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Returns the workflow step definition for an envelope by step id.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'workflow_step_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_envelope_workflow_step_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_envelope_workflow_step_definition`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_envelope_workflow_step_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `get_envelope_workflow_step_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow/steps/{workflowStepId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='WorkflowStep',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_form_data(self, account_id, envelope_id, **kwargs):
         """
         Returns envelope form data for an existing envelope.
+        This method downloads the envelope and tab data (also called form data) from any in-process, completed, or canceled envelope that you sent or that is shared with you. Recipients who are also full administrators on an account can view form data for any envelopes that another user on the account has sent to them.  **Note:** To use this feature, the Sending Setting \"Allow sender to download form data\" must be enabled for the account.  ### Related topics  - [How to get envelope tab values](/docs/esign-rest-api/how-to/get-envelope-tab-values/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6781,6 +8074,7 @@ class EnvelopesApi(object):
     def get_form_data_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Returns envelope form data for an existing envelope.
+        This method downloads the envelope and tab data (also called form data) from any in-process, completed, or canceled envelope that you sent or that is shared with you. Recipients who are also full administrators on an account can view form data for any envelopes that another user on the account has sent to them.  **Note:** To use this feature, the Sending Setting \"Allow sender to download form data\" must be enabled for the account.  ### Related topics  - [How to get envelope tab values](/docs/esign-rest-api/how-to/get-envelope-tab-values/) 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7083,6 +8377,7 @@ class EnvelopesApi(object):
     def get_page_tabs(self, account_id, document_id, envelope_id, page_number, **kwargs):
         """
         Returns tabs on the specified page.
+        Returns the tabs from the page specified by `pageNumber` of the document specified by `documentId` in the envelope specified by `envelopeId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7111,6 +8406,7 @@ class EnvelopesApi(object):
     def get_page_tabs_with_http_info(self, account_id, document_id, envelope_id, page_number, **kwargs):
         """
         Returns tabs on the specified page.
+        Returns the tabs from the page specified by `pageNumber` of the document specified by `documentId` in the envelope specified by `envelopeId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7205,6 +8501,7 @@ class EnvelopesApi(object):
     def get_pages(self, account_id, document_id, envelope_id, **kwargs):
         """
         Returns document page image(s) based on input.
+        Returns images of the pages in a document for display based on the parameters that you specify.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7239,6 +8536,7 @@ class EnvelopesApi(object):
     def get_pages_with_http_info(self, account_id, document_id, envelope_id, **kwargs):
         """
         Returns document page image(s) based on input.
+        Returns images of the pages in a document for display based on the parameters that you specify.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7348,6 +8646,7 @@ class EnvelopesApi(object):
     def get_recipient_document_visibility(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Returns document visibility for the recipients
+        This method returns information about document visibility for a recipient.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7375,6 +8674,7 @@ class EnvelopesApi(object):
     def get_recipient_document_visibility_with_http_info(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Returns document visibility for the recipients
+        This method returns information about document visibility for a recipient.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7822,6 +9122,7 @@ class EnvelopesApi(object):
     def get_tabs_blob(self, account_id, envelope_id, **kwargs):
         """
         Get encrypted tabs for envelope.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7848,6 +9149,7 @@ class EnvelopesApi(object):
     def get_tabs_blob_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Get encrypted tabs for envelope.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7927,9 +9229,125 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_template_delayed_routing_definition(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Returns the delayed routing rules for a template's workflow step definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_template_delayed_routing_definition(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: DelayedRouting
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_template_delayed_routing_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.get_template_delayed_routing_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+            return data
+
+    def get_template_delayed_routing_definition_with_http_info(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Returns the delayed routing rules for a template's workflow step definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_template_delayed_routing_definition_with_http_info(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: DelayedRouting
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id', 'workflow_step_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_template_delayed_routing_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_template_delayed_routing_definition`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `get_template_delayed_routing_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `get_template_delayed_routing_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/workflow/steps/{workflowStepId}/delayedRouting'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DelayedRouting',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_template_recipient_document_visibility(self, account_id, recipient_id, template_id, **kwargs):
         """
         Returns document visibility for the recipients
+        This method returns information about document visibility for a template recipient.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -7957,6 +9375,7 @@ class EnvelopesApi(object):
     def get_template_recipient_document_visibility_with_http_info(self, account_id, recipient_id, template_id, **kwargs):
         """
         Returns document visibility for the recipients
+        This method returns information about document visibility for a template recipient.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -8042,9 +9461,118 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_template_scheduled_sending_definition(self, account_id, template_id, **kwargs):
+        """
+        Returns the scheduled sending rules for a template's workflow definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_template_scheduled_sending_definition(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :return: ScheduledSending
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_template_scheduled_sending_definition_with_http_info(account_id, template_id, **kwargs)
+        else:
+            (data) = self.get_template_scheduled_sending_definition_with_http_info(account_id, template_id, **kwargs)
+            return data
+
+    def get_template_scheduled_sending_definition_with_http_info(self, account_id, template_id, **kwargs):
+        """
+        Returns the scheduled sending rules for a template's workflow definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_template_scheduled_sending_definition_with_http_info(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :return: ScheduledSending
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_template_scheduled_sending_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_template_scheduled_sending_definition`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `get_template_scheduled_sending_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/workflow/scheduledSending'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ScheduledSending',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_template_workflow_definition(self, account_id, template_id, **kwargs):
         """
         Returns the workflow definition for a template.
+        Returns template's workflow definition if the template specified by `templateId` has one.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -8071,6 +9599,7 @@ class EnvelopesApi(object):
     def get_template_workflow_definition_with_http_info(self, account_id, template_id, **kwargs):
         """
         Returns the workflow definition for a template.
+        Returns template's workflow definition if the template specified by `templateId` has one.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -8143,6 +9672,121 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='Workflow',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_template_workflow_step_definition(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Returns the workflow step definition for a template by step id.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_template_workflow_step_definition(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_template_workflow_step_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.get_template_workflow_step_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+            return data
+
+    def get_template_workflow_step_definition_with_http_info(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Returns the workflow step definition for a template by step id.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_template_workflow_step_definition_with_http_info(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id', 'workflow_step_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_template_workflow_step_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_template_workflow_step_definition`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `get_template_workflow_step_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `get_template_workflow_step_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/workflow/steps/{workflowStepId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='WorkflowStep',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -9488,6 +11132,7 @@ class EnvelopesApi(object):
     def put_attachment(self, account_id, attachment_id, envelope_id, **kwargs):
         """
         Add an attachment to a DRAFT or IN-PROCESS envelope.
+        Adds an attachment to a draft or in-process envelope.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -9516,6 +11161,7 @@ class EnvelopesApi(object):
     def put_attachment_with_http_info(self, account_id, attachment_id, envelope_id, **kwargs):
         """
         Add an attachment to a DRAFT or IN-PROCESS envelope.
+        Adds an attachment to a draft or in-process envelope.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -9607,6 +11253,7 @@ class EnvelopesApi(object):
     def put_attachments(self, account_id, envelope_id, **kwargs):
         """
         Add one or more attachments to a DRAFT or IN-PROCESS envelope.
+        Adds one or more attachments to a draft or in-process envelope.  Envelope attachments are files that an application can include in an envelope. They are not converted to PDF. Envelope attachments are available only through the API. There is no user interface in the DocuSign web application for them.  For a list of supported file formats, see [Supported File Formats](https://support.docusign.com/guides/ndse-user-guide-supported-file-formats).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -9634,6 +11281,7 @@ class EnvelopesApi(object):
     def put_attachments_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Add one or more attachments to a DRAFT or IN-PROCESS envelope.
+        Adds one or more attachments to a draft or in-process envelope.  Envelope attachments are files that an application can include in an envelope. They are not converted to PDF. Envelope attachments are available only through the API. There is no user interface in the DocuSign web application for them.  For a list of supported file formats, see [Supported File Formats](https://support.docusign.com/guides/ndse-user-guide-supported-file-formats).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -9969,6 +11617,7 @@ class EnvelopesApi(object):
     def update_chunked_upload(self, account_id, chunked_upload_id, **kwargs):
         """
         Integrity-Check and Commit a ChunkedUpload, readying it for use elsewhere.
+        This method checks the integrity of a chunked upload and then commits it. When this request is successful, the chunked upload is then ready to be referenced in other API calls.  If the request is unsuccessful, ensure that you have uploaded all of the parts by using the Update method.  **Note:** After you commit a chunked upload, it no longer accepts additional parts.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -9996,6 +11645,7 @@ class EnvelopesApi(object):
     def update_chunked_upload_with_http_info(self, account_id, chunked_upload_id, **kwargs):
         """
         Integrity-Check and Commit a ChunkedUpload, readying it for use elsewhere.
+        This method checks the integrity of a chunked upload and then commits it. When this request is successful, the chunked upload is then ready to be referenced in other API calls.  If the request is unsuccessful, ensure that you have uploaded all of the parts by using the Update method.  **Note:** After you commit a chunked upload, it no longer accepts additional parts.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -10081,6 +11731,7 @@ class EnvelopesApi(object):
     def update_chunked_upload_part(self, account_id, chunked_upload_id, chunked_upload_part_seq, **kwargs):
         """
         Add a chunk, a chunk 'part', to an existing ChunkedUpload.
+        Adds a chunk or part to an existing chunked upload. After you use the Create method to initiate a new chunked upload and upload the first part,  use this method to upload subsequent parts.  For simplicity, DocuSign recommends that you upload the parts in their sequential order ( 1,2, 3, 4, etc.). The Create method adds the first part and assigns it the `sequence` value `0`. As a result, DocuSign recommends that you start with a `sequence` value of `1` when you use this method, and continue uploading parts contiguously until you have uploaded the entirety of the original content to DocuSign.  Example:   ``` PUT /v2.1/accounts/{accountId}/chunked_uploads/{chunkedUploadId}/1 PUT /v2.1/accounts/{accountId}/chunked_uploads/{chunkedUploadId}/2 PUT /v2.1/accounts/{accountId}/chunked_uploads/{chunkedUploadId}/3 ```  **Note:** You cannot replace a part that DocuSign has already received, or add parts to a chunked upload that is already successfully committed.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -10109,6 +11760,7 @@ class EnvelopesApi(object):
     def update_chunked_upload_part_with_http_info(self, account_id, chunked_upload_id, chunked_upload_part_seq, **kwargs):
         """
         Add a chunk, a chunk 'part', to an existing ChunkedUpload.
+        Adds a chunk or part to an existing chunked upload. After you use the Create method to initiate a new chunked upload and upload the first part,  use this method to upload subsequent parts.  For simplicity, DocuSign recommends that you upload the parts in their sequential order ( 1,2, 3, 4, etc.). The Create method adds the first part and assigns it the `sequence` value `0`. As a result, DocuSign recommends that you start with a `sequence` value of `1` when you use this method, and continue uploading parts contiguously until you have uploaded the entirety of the original content to DocuSign.  Example:   ``` PUT /v2.1/accounts/{accountId}/chunked_uploads/{chunkedUploadId}/1 PUT /v2.1/accounts/{accountId}/chunked_uploads/{chunkedUploadId}/2 PUT /v2.1/accounts/{accountId}/chunked_uploads/{chunkedUploadId}/3 ```  **Note:** You cannot replace a part that DocuSign has already received, or add parts to a chunked upload that is already successfully committed.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -10552,6 +12204,7 @@ class EnvelopesApi(object):
     def update_document_tabs(self, account_id, document_id, envelope_id, **kwargs):
         """
         Updates the tabs for an envelope document
+        Updates tabs in the document specified by `documentId` in the envelope specified by `envelopeId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -10580,6 +12233,7 @@ class EnvelopesApi(object):
     def update_document_tabs_with_http_info(self, account_id, document_id, envelope_id, **kwargs):
         """
         Updates the tabs for an envelope document
+        Updates tabs in the document specified by `documentId` in the envelope specified by `envelopeId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -10896,9 +12550,241 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def update_envelope_delayed_routing_definition(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Updates the delayed routing rules for an envelope's workflow step definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_envelope_delayed_routing_definition(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :param DelayedRouting delayed_routing:
+        :return: DelayedRouting
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_envelope_delayed_routing_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.update_envelope_delayed_routing_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+            return data
+
+    def update_envelope_delayed_routing_definition_with_http_info(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Updates the delayed routing rules for an envelope's workflow step definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_envelope_delayed_routing_definition_with_http_info(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :param DelayedRouting delayed_routing:
+        :return: DelayedRouting
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'workflow_step_id', 'delayed_routing']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_envelope_delayed_routing_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_envelope_delayed_routing_definition`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `update_envelope_delayed_routing_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `update_envelope_delayed_routing_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow/steps/{workflowStepId}/delayedRouting'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'delayed_routing' in params:
+            body_params = params['delayed_routing']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DelayedRouting',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_envelope_scheduled_sending_definition(self, account_id, envelope_id, **kwargs):
+        """
+        Updates the scheduled sending rules for an envelope's workflow definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_envelope_scheduled_sending_definition(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param ScheduledSending scheduled_sending:
+        :return: ScheduledSending
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_envelope_scheduled_sending_definition_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.update_envelope_scheduled_sending_definition_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def update_envelope_scheduled_sending_definition_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Updates the scheduled sending rules for an envelope's workflow definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_envelope_scheduled_sending_definition_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param ScheduledSending scheduled_sending:
+        :return: ScheduledSending
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'scheduled_sending']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_envelope_scheduled_sending_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_envelope_scheduled_sending_definition`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `update_envelope_scheduled_sending_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow/scheduledSending'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'scheduled_sending' in params:
+            body_params = params['scheduled_sending']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ScheduledSending',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def update_envelope_transfer_rule(self, account_id, envelope_transfer_rule_id, **kwargs):
         """
         Update an envelope transfer rule for an account.
+        This method changes the status of an envelope transfer rule. You use this method to change whether or not the rule is enabled.  You must include the `envelopeTransferRuleId` both as a query parameter, and in the request body.  **Note:** You cannot change any other information about the envelope transfer rule. Only Administrators can update an envelope transfer rule. In addition, to use envelope transfer rules, the **Transfer Custody** feature must be enabled for your account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -10926,6 +12812,7 @@ class EnvelopesApi(object):
     def update_envelope_transfer_rule_with_http_info(self, account_id, envelope_transfer_rule_id, **kwargs):
         """
         Update an envelope transfer rule for an account.
+        This method changes the status of an envelope transfer rule. You use this method to change whether or not the rule is enabled.  You must include the `envelopeTransferRuleId` both as a query parameter, and in the request body.  **Note:** You cannot change any other information about the envelope transfer rule. Only Administrators can update an envelope transfer rule. In addition, to use envelope transfer rules, the **Transfer Custody** feature must be enabled for your account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11011,6 +12898,7 @@ class EnvelopesApi(object):
     def update_envelope_transfer_rules(self, account_id, **kwargs):
         """
         Update envelope transfer rules for an account.
+        This method changes the status for one or more envelope transfer rules based on the `envelopeTransferRuleId`s in the request body. You use this method to change whether or not the rules are enabled.  **Note:** You cannot change any other information about the envelope transfer rule. Only Administrators can update envelope transfer rules. In addition, to use envelope transfer rules, the **Transfer Custody** feature must be enabled for your account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11037,6 +12925,7 @@ class EnvelopesApi(object):
     def update_envelope_transfer_rules_with_http_info(self, account_id, **kwargs):
         """
         Update envelope transfer rules for an account.
+        This method changes the status for one or more envelope transfer rules based on the `envelopeTransferRuleId`s in the request body. You use this method to change whether or not the rules are enabled.  **Note:** You cannot change any other information about the envelope transfer rule. Only Administrators can update envelope transfer rules. In addition, to use envelope transfer rules, the **Transfer Custody** feature must be enabled for your account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11116,6 +13005,7 @@ class EnvelopesApi(object):
     def update_envelope_workflow_definition(self, account_id, envelope_id, **kwargs):
         """
         Updates the envelope workflow definition for an envelope.
+        Updates the specified envelope's workflow definition if  it has one.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11143,6 +13033,7 @@ class EnvelopesApi(object):
     def update_envelope_workflow_definition_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Updates the envelope workflow definition for an envelope.
+        Updates the specified envelope's workflow definition if  it has one.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11218,6 +13109,125 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='Workflow',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_envelope_workflow_step_definition(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Updates the envelope workflow step definition for an envelope.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_envelope_workflow_step_definition(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :param WorkflowStep workflow_step:
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.update_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, workflow_step_id, **kwargs)
+            return data
+
+    def update_envelope_workflow_step_definition_with_http_info(self, account_id, envelope_id, workflow_step_id, **kwargs):
+        """
+        Updates the envelope workflow step definition for an envelope.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_envelope_workflow_step_definition_with_http_info(account_id, envelope_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str workflow_step_id: (required)
+        :param WorkflowStep workflow_step:
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'workflow_step_id', 'workflow_step']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_envelope_workflow_step_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_envelope_workflow_step_definition`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `update_envelope_workflow_step_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `update_envelope_workflow_step_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/workflow/steps/{workflowStepId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'workflow_step' in params:
+            body_params = params['workflow_step']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='WorkflowStep',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -11342,6 +13352,7 @@ class EnvelopesApi(object):
     def update_notification_settings(self, account_id, envelope_id, **kwargs):
         """
         Sets envelope notification (Reminders/Expirations) structure for an existing envelope.
+        This method sets the notifications (reminders and expirations) for an existing envelope. The request body sends a structure containing reminders and expirations settings. It also specifies whether to use the settings specified in the request, or the account default notification settings for the envelope.  Note that this request only specifies when notifications are sent; it does not initiate sending of email messages.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11369,6 +13380,7 @@ class EnvelopesApi(object):
     def update_notification_settings_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Sets envelope notification (Reminders/Expirations) structure for an existing envelope.
+        This method sets the notifications (reminders and expirations) for an existing envelope. The request body sends a structure containing reminders and expirations settings. It also specifies whether to use the settings specified in the request, or the account default notification settings for the envelope.  Note that this request only specifies when notifications are sent; it does not initiate sending of email messages.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11454,6 +13466,7 @@ class EnvelopesApi(object):
     def update_recipient_document_visibility(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Updates document visibility for the recipients
+        This method updates document visibility for a recipient.  **Note:** A document cannot be hidden from a recipient if the recipient has tabs assigned to them on the document. Carbon Copy, Certified Delivery (Needs to Sign), Editor, and Agent recipients can always see all documents.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11482,6 +13495,7 @@ class EnvelopesApi(object):
     def update_recipient_document_visibility_with_http_info(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Updates document visibility for the recipients
+        This method updates document visibility for a recipient.  **Note:** A document cannot be hidden from a recipient if the recipient has tabs assigned to them on the document. Carbon Copy, Certified Delivery (Needs to Sign), Editor, and Agent recipients can always see all documents.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11941,6 +13955,7 @@ class EnvelopesApi(object):
     def update_recipients_document_visibility(self, account_id, envelope_id, **kwargs):
         """
         Updates document visibility for the recipients
+        This method updates document visibility for one or more recipients based on the `recipientId` and `visible` values that you include in the request body.  **Note:** A document cannot be hidden from a recipient if the recipient has tabs assigned to them on the document. Carbon Copy, Certified Delivery (Needs to Sign), Editor, and Agent recipients can always see all documents.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -11968,6 +13983,7 @@ class EnvelopesApi(object):
     def update_recipients_document_visibility_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Updates document visibility for the recipients
+        This method updates document visibility for one or more recipients based on the `recipientId` and `visible` values that you include in the request body.  **Note:** A document cannot be hidden from a recipient if the recipient has tabs assigned to them on the document. Carbon Copy, Certified Delivery (Needs to Sign), Editor, and Agent recipients can always see all documents.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -12293,6 +14309,7 @@ class EnvelopesApi(object):
     def update_tabs_blob(self, account_id, envelope_id, **kwargs):
         """
         Update encrypted tabs for envelope.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -12319,6 +14336,7 @@ class EnvelopesApi(object):
     def update_tabs_blob_with_http_info(self, account_id, envelope_id, **kwargs):
         """
         Update encrypted tabs for envelope.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -12398,9 +14416,129 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def update_template_delayed_routing_definition(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Updates the delayed routing rules for a template's workflow step definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_template_delayed_routing_definition(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :param DelayedRouting delayed_routing:
+        :return: DelayedRouting
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_template_delayed_routing_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.update_template_delayed_routing_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+            return data
+
+    def update_template_delayed_routing_definition_with_http_info(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Updates the delayed routing rules for a template's workflow step definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_template_delayed_routing_definition_with_http_info(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :param DelayedRouting delayed_routing:
+        :return: DelayedRouting
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id', 'workflow_step_id', 'delayed_routing']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_template_delayed_routing_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_template_delayed_routing_definition`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `update_template_delayed_routing_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `update_template_delayed_routing_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/workflow/steps/{workflowStepId}/delayedRouting'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'delayed_routing' in params:
+            body_params = params['delayed_routing']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DelayedRouting',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def update_template_recipient_document_visibility(self, account_id, recipient_id, template_id, **kwargs):
         """
         Updates document visibility for the recipients
+        This method updates the document visibility for a template recipient.  **Note:** A document cannot be hidden from a recipient if the recipient has tabs assigned to them on the document. Carbon Copy, Certified Delivery (Needs to Sign), Editor, and Agent recipients can always see all documents.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -12429,6 +14567,7 @@ class EnvelopesApi(object):
     def update_template_recipient_document_visibility_with_http_info(self, account_id, recipient_id, template_id, **kwargs):
         """
         Updates document visibility for the recipients
+        This method updates the document visibility for a template recipient.  **Note:** A document cannot be hidden from a recipient if the recipient has tabs assigned to them on the document. Carbon Copy, Certified Delivery (Needs to Sign), Editor, and Agent recipients can always see all documents.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -12520,6 +14659,7 @@ class EnvelopesApi(object):
     def update_template_recipients_document_visibility(self, account_id, template_id, **kwargs):
         """
         Updates document visibility for the recipients
+        This method updates document visibility for one or more template recipients based on the `recipientId` and `visible` values that you include in the request body.   **Note:** A document cannot be hidden from a recipient if the recipient has tabs assigned to them on the document. Carbon Copy, Certified Delivery (Needs to Sign), Editor, and Agent recipients can always see all documents.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -12547,6 +14687,7 @@ class EnvelopesApi(object):
     def update_template_recipients_document_visibility_with_http_info(self, account_id, template_id, **kwargs):
         """
         Updates document visibility for the recipients
+        This method updates document visibility for one or more template recipients based on the `recipientId` and `visible` values that you include in the request body.   **Note:** A document cannot be hidden from a recipient if the recipient has tabs assigned to them on the document. Carbon Copy, Certified Delivery (Needs to Sign), Editor, and Agent recipients can always see all documents.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -12629,9 +14770,122 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def update_template_scheduled_sending_definition(self, account_id, template_id, **kwargs):
+        """
+        Updates the scheduled sending rules for a template's workflow definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_template_scheduled_sending_definition(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param ScheduledSending scheduled_sending:
+        :return: ScheduledSending
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_template_scheduled_sending_definition_with_http_info(account_id, template_id, **kwargs)
+        else:
+            (data) = self.update_template_scheduled_sending_definition_with_http_info(account_id, template_id, **kwargs)
+            return data
+
+    def update_template_scheduled_sending_definition_with_http_info(self, account_id, template_id, **kwargs):
+        """
+        Updates the scheduled sending rules for a template's workflow definition.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_template_scheduled_sending_definition_with_http_info(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param ScheduledSending scheduled_sending:
+        :return: ScheduledSending
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id', 'scheduled_sending']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_template_scheduled_sending_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_template_scheduled_sending_definition`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `update_template_scheduled_sending_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/workflow/scheduledSending'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'scheduled_sending' in params:
+            body_params = params['scheduled_sending']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ScheduledSending',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def update_template_workflow_definition(self, account_id, template_id, **kwargs):
         """
         Updates the workflow definition for a template.
+        Updates the specified template's workflow definition if  it has one.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -12659,6 +14913,7 @@ class EnvelopesApi(object):
     def update_template_workflow_definition_with_http_info(self, account_id, template_id, **kwargs):
         """
         Updates the workflow definition for a template.
+        Updates the specified template's workflow definition if  it has one.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -12734,6 +14989,125 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='Workflow',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_template_workflow_step_definition(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Updates the template workflow step definition for an envelope.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_template_workflow_step_definition(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :param WorkflowStep workflow_step:
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_template_workflow_step_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+        else:
+            (data) = self.update_template_workflow_step_definition_with_http_info(account_id, template_id, workflow_step_id, **kwargs)
+            return data
+
+    def update_template_workflow_step_definition_with_http_info(self, account_id, template_id, workflow_step_id, **kwargs):
+        """
+        Updates the template workflow step definition for an envelope.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_template_workflow_step_definition_with_http_info(account_id, template_id, workflow_step_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :param str workflow_step_id: (required)
+        :param WorkflowStep workflow_step:
+        :return: WorkflowStep
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id', 'workflow_step_id', 'workflow_step']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_template_workflow_step_definition" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_template_workflow_step_definition`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `update_template_workflow_step_definition`")
+        # verify the required parameter 'workflow_step_id' is set
+        if ('workflow_step_id' not in params) or (params['workflow_step_id'] is None):
+            raise ValueError("Missing the required parameter `workflow_step_id` when calling `update_template_workflow_step_definition`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/workflow/steps/{workflowStepId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+        if 'workflow_step_id' in params:
+            path_params['workflowStepId'] = params['workflow_step_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'workflow_step' in params:
+            body_params = params['workflow_step']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='WorkflowStep',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

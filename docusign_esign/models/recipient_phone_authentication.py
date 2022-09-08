@@ -106,6 +106,7 @@ class RecipientPhoneAuthentication(object):
     def recip_may_provide_number_metadata(self):
         """Gets the recip_may_provide_number_metadata of this RecipientPhoneAuthentication.  # noqa: E501
 
+        Metadata that indicates whether the `recipMayProvideNumber` property can be edited.  # noqa: E501
 
         :return: The recip_may_provide_number_metadata of this RecipientPhoneAuthentication.  # noqa: E501
         :rtype: PropertyMetadata
@@ -116,6 +117,7 @@ class RecipientPhoneAuthentication(object):
     def recip_may_provide_number_metadata(self, recip_may_provide_number_metadata):
         """Sets the recip_may_provide_number_metadata of this RecipientPhoneAuthentication.
 
+        Metadata that indicates whether the `recipMayProvideNumber` property can be edited.  # noqa: E501
 
         :param recip_may_provide_number_metadata: The recip_may_provide_number_metadata of this RecipientPhoneAuthentication.  # noqa: E501
         :type: PropertyMetadata
@@ -150,6 +152,7 @@ class RecipientPhoneAuthentication(object):
     def record_voice_print_metadata(self):
         """Gets the record_voice_print_metadata of this RecipientPhoneAuthentication.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The record_voice_print_metadata of this RecipientPhoneAuthentication.  # noqa: E501
         :rtype: PropertyMetadata
@@ -160,6 +163,7 @@ class RecipientPhoneAuthentication(object):
     def record_voice_print_metadata(self, record_voice_print_metadata):
         """Sets the record_voice_print_metadata of this RecipientPhoneAuthentication.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param record_voice_print_metadata: The record_voice_print_metadata of this RecipientPhoneAuthentication.  # noqa: E501
         :type: PropertyMetadata
@@ -194,6 +198,7 @@ class RecipientPhoneAuthentication(object):
     def sender_provided_numbers_metadata(self):
         """Gets the sender_provided_numbers_metadata of this RecipientPhoneAuthentication.  # noqa: E501
 
+        Metadata that indicates whether the `senderProvidedNumbers` property can be edited.  # noqa: E501
 
         :return: The sender_provided_numbers_metadata of this RecipientPhoneAuthentication.  # noqa: E501
         :rtype: PropertyMetadata
@@ -204,6 +209,7 @@ class RecipientPhoneAuthentication(object):
     def sender_provided_numbers_metadata(self, sender_provided_numbers_metadata):
         """Sets the sender_provided_numbers_metadata of this RecipientPhoneAuthentication.
 
+        Metadata that indicates whether the `senderProvidedNumbers` property can be edited.  # noqa: E501
 
         :param sender_provided_numbers_metadata: The sender_provided_numbers_metadata of this RecipientPhoneAuthentication.  # noqa: E501
         :type: PropertyMetadata
@@ -238,6 +244,7 @@ class RecipientPhoneAuthentication(object):
     def validate_recip_provided_number_metadata(self):
         """Gets the validate_recip_provided_number_metadata of this RecipientPhoneAuthentication.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The validate_recip_provided_number_metadata of this RecipientPhoneAuthentication.  # noqa: E501
         :rtype: PropertyMetadata
@@ -248,6 +255,7 @@ class RecipientPhoneAuthentication(object):
     def validate_recip_provided_number_metadata(self, validate_recip_provided_number_metadata):
         """Sets the validate_recip_provided_number_metadata of this RecipientPhoneAuthentication.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param validate_recip_provided_number_metadata: The validate_recip_provided_number_metadata of this RecipientPhoneAuthentication.  # noqa: E501
         :type: PropertyMetadata

@@ -366,6 +366,7 @@ class Intermediary(object):
     def access_code_metadata(self):
         """Gets the access_code_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `accessCode` property is editable. This property is read-only.  # noqa: E501
 
         :return: The access_code_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -376,6 +377,7 @@ class Intermediary(object):
     def access_code_metadata(self, access_code_metadata):
         """Sets the access_code_metadata of this Intermediary.
 
+        Metadata that indicates whether the `accessCode` property is editable. This property is read-only.  # noqa: E501
 
         :param access_code_metadata: The access_code_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -663,6 +665,7 @@ class Intermediary(object):
     def delivery_method_metadata(self):
         """Gets the delivery_method_metadata of this Intermediary.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The delivery_method_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -673,6 +676,7 @@ class Intermediary(object):
     def delivery_method_metadata(self, delivery_method_metadata):
         """Sets the delivery_method_metadata of this Intermediary.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param delivery_method_metadata: The delivery_method_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -776,6 +780,7 @@ class Intermediary(object):
     def email_metadata(self):
         """Gets the email_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `email` property is editable. This property is read-only.  # noqa: E501
 
         :return: The email_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -786,6 +791,7 @@ class Intermediary(object):
     def email_metadata(self, email_metadata):
         """Sets the email_metadata of this Intermediary.
 
+        Metadata that indicates whether the `email` property is editable. This property is read-only.  # noqa: E501
 
         :param email_metadata: The email_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -797,6 +803,7 @@ class Intermediary(object):
     def email_notification(self):
         """Gets the email_notification of this Intermediary.  # noqa: E501
 
+        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
 
         :return: The email_notification of this Intermediary.  # noqa: E501
         :rtype: RecipientEmailNotification
@@ -807,6 +814,7 @@ class Intermediary(object):
     def email_notification(self, email_notification):
         """Sets the email_notification of this Intermediary.
 
+        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
 
         :param email_notification: The email_notification of this Intermediary.  # noqa: E501
         :type: RecipientEmailNotification
@@ -864,6 +872,7 @@ class Intermediary(object):
     def error_details(self):
         """Gets the error_details of this Intermediary.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this Intermediary.  # noqa: E501
         :rtype: ErrorDetails
@@ -874,6 +883,7 @@ class Intermediary(object):
     def error_details(self, error_details):
         """Sets the error_details of this Intermediary.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this Intermediary.  # noqa: E501
         :type: ErrorDetails
@@ -931,6 +941,7 @@ class Intermediary(object):
     def fax_number_metadata(self):
         """Gets the fax_number_metadata of this Intermediary.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The fax_number_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -941,6 +952,7 @@ class Intermediary(object):
     def fax_number_metadata(self, fax_number_metadata):
         """Sets the fax_number_metadata of this Intermediary.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param fax_number_metadata: The fax_number_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -975,6 +987,7 @@ class Intermediary(object):
     def first_name_metadata(self):
         """Gets the first_name_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `firstName` property is editable. This property is read-only.  # noqa: E501
 
         :return: The first_name_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -985,6 +998,7 @@ class Intermediary(object):
     def first_name_metadata(self, first_name_metadata):
         """Sets the first_name_metadata of this Intermediary.
 
+        Metadata that indicates whether the `firstName` property is editable. This property is read-only.  # noqa: E501
 
         :param first_name_metadata: The first_name_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -1019,6 +1033,7 @@ class Intermediary(object):
     def full_name_metadata(self):
         """Gets the full_name_metadata of this Intermediary.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The full_name_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1029,6 +1044,7 @@ class Intermediary(object):
     def full_name_metadata(self, full_name_metadata):
         """Sets the full_name_metadata of this Intermediary.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param full_name_metadata: The full_name_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -1063,6 +1079,7 @@ class Intermediary(object):
     def id_check_configuration_name_metadata(self):
         """Gets the id_check_configuration_name_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only.  # noqa: E501
 
         :return: The id_check_configuration_name_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1073,6 +1090,7 @@ class Intermediary(object):
     def id_check_configuration_name_metadata(self, id_check_configuration_name_metadata):
         """Sets the id_check_configuration_name_metadata of this Intermediary.
 
+        Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only.  # noqa: E501
 
         :param id_check_configuration_name_metadata: The id_check_configuration_name_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -1084,6 +1102,7 @@ class Intermediary(object):
     def id_check_information_input(self):
         """Gets the id_check_information_input of this Intermediary.  # noqa: E501
 
+        An object that contains input information related to a recipient ID check.  # noqa: E501
 
         :return: The id_check_information_input of this Intermediary.  # noqa: E501
         :rtype: IdCheckInformationInput
@@ -1094,6 +1113,7 @@ class Intermediary(object):
     def id_check_information_input(self, id_check_information_input):
         """Sets the id_check_information_input of this Intermediary.
 
+        An object that contains input information related to a recipient ID check.  # noqa: E501
 
         :param id_check_information_input: The id_check_information_input of this Intermediary.  # noqa: E501
         :type: IdCheckInformationInput
@@ -1105,6 +1125,7 @@ class Intermediary(object):
     def identity_verification(self):
         """Gets the identity_verification of this Intermediary.  # noqa: E501
 
+        Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).  # noqa: E501
 
         :return: The identity_verification of this Intermediary.  # noqa: E501
         :rtype: RecipientIdentityVerification
@@ -1115,6 +1136,7 @@ class Intermediary(object):
     def identity_verification(self, identity_verification):
         """Sets the identity_verification of this Intermediary.
 
+        Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).  # noqa: E501
 
         :param identity_verification: The identity_verification of this Intermediary.  # noqa: E501
         :type: RecipientIdentityVerification
@@ -1172,6 +1194,7 @@ class Intermediary(object):
     def last_name_metadata(self):
         """Gets the last_name_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `lastName` property is editable. This property is read-only.  # noqa: E501
 
         :return: The last_name_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1182,6 +1205,7 @@ class Intermediary(object):
     def last_name_metadata(self, last_name_metadata):
         """Sets the last_name_metadata of this Intermediary.
 
+        Metadata that indicates whether the `lastName` property is editable. This property is read-only.  # noqa: E501
 
         :param last_name_metadata: The last_name_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -1262,6 +1286,7 @@ class Intermediary(object):
     def name_metadata(self):
         """Gets the name_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `name` property is editable. This property is read-only.  # noqa: E501
 
         :return: The name_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1272,6 +1297,7 @@ class Intermediary(object):
     def name_metadata(self, name_metadata):
         """Sets the name_metadata of this Intermediary.
 
+        Metadata that indicates whether the `name` property is editable. This property is read-only.  # noqa: E501
 
         :param name_metadata: The name_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -1306,6 +1332,7 @@ class Intermediary(object):
     def note_metadata(self):
         """Gets the note_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `note` property is editable. This property is read-only.  # noqa: E501
 
         :return: The note_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1316,6 +1343,7 @@ class Intermediary(object):
     def note_metadata(self, note_metadata):
         """Sets the note_metadata of this Intermediary.
 
+        Metadata that indicates whether the `note` property is editable. This property is read-only.  # noqa: E501
 
         :param note_metadata: The note_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -1327,6 +1355,7 @@ class Intermediary(object):
     def phone_authentication(self):
         """Gets the phone_authentication of this Intermediary.  # noqa: E501
 
+        When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.    # noqa: E501
 
         :return: The phone_authentication of this Intermediary.  # noqa: E501
         :rtype: RecipientPhoneAuthentication
@@ -1337,6 +1366,7 @@ class Intermediary(object):
     def phone_authentication(self, phone_authentication):
         """Sets the phone_authentication of this Intermediary.
 
+        When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.    # noqa: E501
 
         :param phone_authentication: The phone_authentication of this Intermediary.  # noqa: E501
         :type: RecipientPhoneAuthentication
@@ -1348,6 +1378,7 @@ class Intermediary(object):
     def phone_number(self):
         """Gets the phone_number of this Intermediary.  # noqa: E501
 
+        Describes the recipient phone number.  # noqa: E501
 
         :return: The phone_number of this Intermediary.  # noqa: E501
         :rtype: RecipientPhoneNumber
@@ -1358,6 +1389,7 @@ class Intermediary(object):
     def phone_number(self, phone_number):
         """Sets the phone_number of this Intermediary.
 
+        Describes the recipient phone number.  # noqa: E501
 
         :param phone_number: The phone_number of this Intermediary.  # noqa: E501
         :type: RecipientPhoneNumber
@@ -1392,6 +1424,7 @@ class Intermediary(object):
     def recipient_authentication_status(self):
         """Gets the recipient_authentication_status of this Intermediary.  # noqa: E501
 
+        Information about the recipient's authentication status. This property is read-only.  # noqa: E501
 
         :return: The recipient_authentication_status of this Intermediary.  # noqa: E501
         :rtype: AuthenticationStatus
@@ -1402,6 +1435,7 @@ class Intermediary(object):
     def recipient_authentication_status(self, recipient_authentication_status):
         """Sets the recipient_authentication_status of this Intermediary.
 
+        Information about the recipient's authentication status. This property is read-only.  # noqa: E501
 
         :param recipient_authentication_status: The recipient_authentication_status of this Intermediary.  # noqa: E501
         :type: AuthenticationStatus
@@ -1505,6 +1539,7 @@ class Intermediary(object):
     def recipient_type_metadata(self):
         """Gets the recipient_type_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `recipientType` property is editable. This property is read-only.  # noqa: E501
 
         :return: The recipient_type_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1515,6 +1550,7 @@ class Intermediary(object):
     def recipient_type_metadata(self, recipient_type_metadata):
         """Sets the recipient_type_metadata of this Intermediary.
 
+        Metadata that indicates whether the `recipientType` property is editable. This property is read-only.  # noqa: E501
 
         :param recipient_type_metadata: The recipient_type_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -1549,6 +1585,7 @@ class Intermediary(object):
     def require_id_lookup_metadata(self):
         """Gets the require_id_lookup_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only.  # noqa: E501
 
         :return: The require_id_lookup_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1559,6 +1596,7 @@ class Intermediary(object):
     def require_id_lookup_metadata(self, require_id_lookup_metadata):
         """Sets the require_id_lookup_metadata of this Intermediary.
 
+        Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only.  # noqa: E501
 
         :param require_id_lookup_metadata: The require_id_lookup_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -1616,6 +1654,7 @@ class Intermediary(object):
     def routing_order_metadata(self):
         """Gets the routing_order_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.  # noqa: E501
 
         :return: The routing_order_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1626,6 +1665,7 @@ class Intermediary(object):
     def routing_order_metadata(self, routing_order_metadata):
         """Sets the routing_order_metadata of this Intermediary.
 
+        Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.  # noqa: E501
 
         :param routing_order_metadata: The routing_order_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -1706,6 +1746,7 @@ class Intermediary(object):
     def signing_group_id_metadata(self):
         """Gets the signing_group_id_metadata of this Intermediary.  # noqa: E501
 
+        Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only.  # noqa: E501
 
         :return: The signing_group_id_metadata of this Intermediary.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1716,6 +1757,7 @@ class Intermediary(object):
     def signing_group_id_metadata(self, signing_group_id_metadata):
         """Sets the signing_group_id_metadata of this Intermediary.
 
+        Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only.  # noqa: E501
 
         :param signing_group_id_metadata: The signing_group_id_metadata of this Intermediary.  # noqa: E501
         :type: PropertyMetadata
@@ -1773,6 +1815,7 @@ class Intermediary(object):
     def sms_authentication(self):
         """Gets the sms_authentication of this Intermediary.  # noqa: E501
 
+        When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.     # noqa: E501
 
         :return: The sms_authentication of this Intermediary.  # noqa: E501
         :rtype: RecipientSMSAuthentication
@@ -1783,6 +1826,7 @@ class Intermediary(object):
     def sms_authentication(self, sms_authentication):
         """Sets the sms_authentication of this Intermediary.
 
+        When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.     # noqa: E501
 
         :param sms_authentication: The sms_authentication of this Intermediary.  # noqa: E501
         :type: RecipientSMSAuthentication

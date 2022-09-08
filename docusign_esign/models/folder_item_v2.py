@@ -365,6 +365,7 @@ class FolderItemV2(object):
     def recipients(self):
         """Gets the recipients of this FolderItemV2.  # noqa: E501
 
+        An array of recipient objects that provides details about the recipients of the envelope.  # noqa: E501
 
         :return: The recipients of this FolderItemV2.  # noqa: E501
         :rtype: Recipients
@@ -375,6 +376,7 @@ class FolderItemV2(object):
     def recipients(self, recipients):
         """Sets the recipients of this FolderItemV2.
 
+        An array of recipient objects that provides details about the recipients of the envelope.  # noqa: E501
 
         :param recipients: The recipients of this FolderItemV2.  # noqa: E501
         :type: Recipients

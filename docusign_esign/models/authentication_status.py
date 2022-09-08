@@ -127,6 +127,7 @@ class AuthenticationStatus(object):
     def access_code_result(self):
         """Gets the access_code_result of this AuthenticationStatus.  # noqa: E501
 
+        The result of a user's attempt to authenticate by using an access code. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :return: The access_code_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -137,6 +138,7 @@ class AuthenticationStatus(object):
     def access_code_result(self, access_code_result):
         """Sets the access_code_result of this AuthenticationStatus.
 
+        The result of a user's attempt to authenticate by using an access code. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :param access_code_result: The access_code_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -148,6 +150,7 @@ class AuthenticationStatus(object):
     def age_verify_result(self):
         """Gets the age_verify_result of this AuthenticationStatus.  # noqa: E501
 
+        The result of an age verification check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :return: The age_verify_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -158,6 +161,7 @@ class AuthenticationStatus(object):
     def age_verify_result(self, age_verify_result):
         """Sets the age_verify_result of this AuthenticationStatus.
 
+        The result of an age verification check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :param age_verify_result: The age_verify_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -169,6 +173,7 @@ class AuthenticationStatus(object):
     def any_social_id_result(self):
         """Gets the any_social_id_result of this AuthenticationStatus.  # noqa: E501
 
+        Deprecated.  # noqa: E501
 
         :return: The any_social_id_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -179,6 +184,7 @@ class AuthenticationStatus(object):
     def any_social_id_result(self, any_social_id_result):
         """Sets the any_social_id_result of this AuthenticationStatus.
 
+        Deprecated.  # noqa: E501
 
         :param any_social_id_result: The any_social_id_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -190,6 +196,7 @@ class AuthenticationStatus(object):
     def facebook_result(self):
         """Gets the facebook_result of this AuthenticationStatus.  # noqa: E501
 
+        Deprecated.  # noqa: E501
 
         :return: The facebook_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -200,6 +207,7 @@ class AuthenticationStatus(object):
     def facebook_result(self, facebook_result):
         """Sets the facebook_result of this AuthenticationStatus.
 
+        Deprecated.  # noqa: E501
 
         :param facebook_result: The facebook_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -211,6 +219,7 @@ class AuthenticationStatus(object):
     def google_result(self):
         """Gets the google_result of this AuthenticationStatus.  # noqa: E501
 
+        Deprecated.  # noqa: E501
 
         :return: The google_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -221,6 +230,7 @@ class AuthenticationStatus(object):
     def google_result(self, google_result):
         """Sets the google_result of this AuthenticationStatus.
 
+        Deprecated.  # noqa: E501
 
         :param google_result: The google_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -232,6 +242,7 @@ class AuthenticationStatus(object):
     def identity_verification_result(self):
         """Gets the identity_verification_result of this AuthenticationStatus.  # noqa: E501
 
+        The result of an [Identity Verification][IDV] workflow.  [IDV]: /docs/esign-rest-api/reference/accounts/identityverifications/  # noqa: E501
 
         :return: The identity_verification_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -242,6 +253,7 @@ class AuthenticationStatus(object):
     def identity_verification_result(self, identity_verification_result):
         """Sets the identity_verification_result of this AuthenticationStatus.
 
+        The result of an [Identity Verification][IDV] workflow.  [IDV]: /docs/esign-rest-api/reference/accounts/identityverifications/  # noqa: E501
 
         :param identity_verification_result: The identity_verification_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -253,6 +265,7 @@ class AuthenticationStatus(object):
     def id_lookup_result(self):
         """Gets the id_lookup_result of this AuthenticationStatus.  # noqa: E501
 
+        The result of an ID lookup authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :return: The id_lookup_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -263,6 +276,7 @@ class AuthenticationStatus(object):
     def id_lookup_result(self, id_lookup_result):
         """Sets the id_lookup_result of this AuthenticationStatus.
 
+        The result of an ID lookup authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :param id_lookup_result: The id_lookup_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -274,6 +288,7 @@ class AuthenticationStatus(object):
     def id_questions_result(self):
         """Gets the id_questions_result of this AuthenticationStatus.  # noqa: E501
 
+        The result of the user's answers to ID challenge questions. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :return: The id_questions_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -284,6 +299,7 @@ class AuthenticationStatus(object):
     def id_questions_result(self, id_questions_result):
         """Sets the id_questions_result of this AuthenticationStatus.
 
+        The result of the user's answers to ID challenge questions. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :param id_questions_result: The id_questions_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -295,6 +311,7 @@ class AuthenticationStatus(object):
     def linkedin_result(self):
         """Gets the linkedin_result of this AuthenticationStatus.  # noqa: E501
 
+        Deprecated.  # noqa: E501
 
         :return: The linkedin_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -305,6 +322,7 @@ class AuthenticationStatus(object):
     def linkedin_result(self, linkedin_result):
         """Sets the linkedin_result of this AuthenticationStatus.
 
+        Deprecated.  # noqa: E501
 
         :param linkedin_result: The linkedin_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -316,6 +334,7 @@ class AuthenticationStatus(object):
     def live_id_result(self):
         """Gets the live_id_result of this AuthenticationStatus.  # noqa: E501
 
+        Deprecated.  # noqa: E501
 
         :return: The live_id_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -326,6 +345,7 @@ class AuthenticationStatus(object):
     def live_id_result(self, live_id_result):
         """Sets the live_id_result of this AuthenticationStatus.
 
+        Deprecated.  # noqa: E501
 
         :param live_id_result: The live_id_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -337,6 +357,7 @@ class AuthenticationStatus(object):
     def ofac_result(self):
         """Gets the ofac_result of this AuthenticationStatus.  # noqa: E501
 
+        The result of an Office of Foreign Asset Control (OFAC) check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :return: The ofac_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -347,6 +368,7 @@ class AuthenticationStatus(object):
     def ofac_result(self, ofac_result):
         """Sets the ofac_result of this AuthenticationStatus.
 
+        The result of an Office of Foreign Asset Control (OFAC) check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :param ofac_result: The ofac_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -358,6 +380,7 @@ class AuthenticationStatus(object):
     def open_id_result(self):
         """Gets the open_id_result of this AuthenticationStatus.  # noqa: E501
 
+        Deprecated.  # noqa: E501
 
         :return: The open_id_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -368,6 +391,7 @@ class AuthenticationStatus(object):
     def open_id_result(self, open_id_result):
         """Sets the open_id_result of this AuthenticationStatus.
 
+        Deprecated.  # noqa: E501
 
         :param open_id_result: The open_id_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -379,6 +403,7 @@ class AuthenticationStatus(object):
     def phone_auth_result(self):
         """Gets the phone_auth_result of this AuthenticationStatus.  # noqa: E501
 
+        The result of the user's attempt to authenticate by using two-factor authentication (2FA) through phone messaging. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :return: The phone_auth_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -389,6 +414,7 @@ class AuthenticationStatus(object):
     def phone_auth_result(self, phone_auth_result):
         """Sets the phone_auth_result of this AuthenticationStatus.
 
+        The result of the user's attempt to authenticate by using two-factor authentication (2FA) through phone messaging. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :param phone_auth_result: The phone_auth_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -400,6 +426,7 @@ class AuthenticationStatus(object):
     def salesforce_result(self):
         """Gets the salesforce_result of this AuthenticationStatus.  # noqa: E501
 
+        Success/failure result of authentication using sign-in with a Salesforce account. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :return: The salesforce_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -410,6 +437,7 @@ class AuthenticationStatus(object):
     def salesforce_result(self, salesforce_result):
         """Sets the salesforce_result of this AuthenticationStatus.
 
+        Success/failure result of authentication using sign-in with a Salesforce account. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :param salesforce_result: The salesforce_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -421,6 +449,7 @@ class AuthenticationStatus(object):
     def signature_provider_result(self):
         """Gets the signature_provider_result of this AuthenticationStatus.  # noqa: E501
 
+        The result of the user's attempt to authenticate by using a signature provider.  # noqa: E501
 
         :return: The signature_provider_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -431,6 +460,7 @@ class AuthenticationStatus(object):
     def signature_provider_result(self, signature_provider_result):
         """Sets the signature_provider_result of this AuthenticationStatus.
 
+        The result of the user's attempt to authenticate by using a signature provider.  # noqa: E501
 
         :param signature_provider_result: The signature_provider_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -442,6 +472,7 @@ class AuthenticationStatus(object):
     def sms_auth_result(self):
         """Gets the sms_auth_result of this AuthenticationStatus.  # noqa: E501
 
+        The result of the user's attempt to authenticate by using two-factor authentication (2FA) through SMS messaging on a mobile phone.  # noqa: E501
 
         :return: The sms_auth_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -452,6 +483,7 @@ class AuthenticationStatus(object):
     def sms_auth_result(self, sms_auth_result):
         """Sets the sms_auth_result of this AuthenticationStatus.
 
+        The result of the user's attempt to authenticate by using two-factor authentication (2FA) through SMS messaging on a mobile phone.  # noqa: E501
 
         :param sms_auth_result: The sms_auth_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -463,6 +495,7 @@ class AuthenticationStatus(object):
     def s_tan_pin_result(self):
         """Gets the s_tan_pin_result of this AuthenticationStatus.  # noqa: E501
 
+        The result of a Student Authentication Network (STAN) authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :return: The s_tan_pin_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -473,6 +506,7 @@ class AuthenticationStatus(object):
     def s_tan_pin_result(self, s_tan_pin_result):
         """Sets the s_tan_pin_result of this AuthenticationStatus.
 
+        The result of a Student Authentication Network (STAN) authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication.   # noqa: E501
 
         :param s_tan_pin_result: The s_tan_pin_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -484,6 +518,7 @@ class AuthenticationStatus(object):
     def twitter_result(self):
         """Gets the twitter_result of this AuthenticationStatus.  # noqa: E501
 
+        Deprecated.  # noqa: E501
 
         :return: The twitter_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -494,6 +529,7 @@ class AuthenticationStatus(object):
     def twitter_result(self, twitter_result):
         """Sets the twitter_result of this AuthenticationStatus.
 
+        Deprecated.  # noqa: E501
 
         :param twitter_result: The twitter_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult
@@ -505,6 +541,7 @@ class AuthenticationStatus(object):
     def yahoo_result(self):
         """Gets the yahoo_result of this AuthenticationStatus.  # noqa: E501
 
+        Deprecated.  # noqa: E501
 
         :return: The yahoo_result of this AuthenticationStatus.  # noqa: E501
         :rtype: EventResult
@@ -515,6 +552,7 @@ class AuthenticationStatus(object):
     def yahoo_result(self, yahoo_result):
         """Sets the yahoo_result of this AuthenticationStatus.
 
+        Deprecated.  # noqa: E501
 
         :param yahoo_result: The yahoo_result of this AuthenticationStatus.  # noqa: E501
         :type: EventResult

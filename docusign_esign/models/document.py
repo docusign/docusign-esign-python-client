@@ -358,6 +358,7 @@ class Document(object):
     def html_definition(self):
         """Gets the html_definition of this Document.  # noqa: E501
 
+        Defines how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/).  # noqa: E501
 
         :return: The html_definition of this Document.  # noqa: E501
         :rtype: DocumentHtmlDefinition
@@ -368,6 +369,7 @@ class Document(object):
     def html_definition(self, html_definition):
         """Sets the html_definition of this Document.
 
+        Defines how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/).  # noqa: E501
 
         :param html_definition: The html_definition of this Document.  # noqa: E501
         :type: DocumentHtmlDefinition
@@ -609,6 +611,7 @@ class Document(object):
     def tabs(self):
         """Gets the tabs of this Document.  # noqa: E501
 
+        A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.  # noqa: E501
 
         :return: The tabs of this Document.  # noqa: E501
         :rtype: Tabs
@@ -619,6 +622,7 @@ class Document(object):
     def tabs(self, tabs):
         """Sets the tabs of this Document.
 
+        A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.  # noqa: E501
 
         :param tabs: The tabs of this Document.  # noqa: E501
         :type: Tabs

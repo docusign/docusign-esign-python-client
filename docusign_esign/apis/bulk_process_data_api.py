@@ -43,6 +43,7 @@ class BulkProcessDataApi(object):
     def create_bulk_process_request(self, account_id, process_action, **kwargs):
         """
         Uses the specified bulk envelopes list to update the envelopes specified in the payload
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,6 +70,7 @@ class BulkProcessDataApi(object):
     def create_bulk_process_request_with_http_info(self, account_id, process_action, **kwargs):
         """
         Uses the specified bulk envelopes list to update the envelopes specified in the payload
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -151,6 +153,7 @@ class BulkProcessDataApi(object):
     def create_bulk_process_request_to_queue(self, account_id, bulk_process_list_id, process_action, **kwargs):
         """
         Uses the specified bulk envelopes list to update the envelopes specified in the payload
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -179,6 +182,7 @@ class BulkProcessDataApi(object):
     def create_bulk_process_request_to_queue_with_http_info(self, account_id, bulk_process_list_id, process_action, **kwargs):
         """
         Uses the specified bulk envelopes list to update the envelopes specified in the payload
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -270,6 +274,7 @@ class BulkProcessDataApi(object):
     def delete_bulk_process_list(self, account_id, bulk_process_list_id, process_action, **kwargs):
         """
         Deletes a specific bulk process list
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -297,6 +302,7 @@ class BulkProcessDataApi(object):
     def delete_bulk_process_list_with_http_info(self, account_id, bulk_process_list_id, process_action, **kwargs):
         """
         Deletes a specific bulk process list
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -385,6 +391,7 @@ class BulkProcessDataApi(object):
     def delete_bulk_process_lists(self, account_id, process_action, **kwargs):
         """
         Deletes a specific bulk process list
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -412,6 +419,7 @@ class BulkProcessDataApi(object):
     def delete_bulk_process_lists_with_http_info(self, account_id, process_action, **kwargs):
         """
         Deletes a specific bulk process list
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -497,6 +505,7 @@ class BulkProcessDataApi(object):
     def get_bulk_process_list(self, account_id, bulk_process_list_id, process_action, **kwargs):
         """
         Gets a specific bulk process list
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -524,6 +533,7 @@ class BulkProcessDataApi(object):
     def get_bulk_process_list_with_http_info(self, account_id, bulk_process_list_id, process_action, **kwargs):
         """
         Gets a specific bulk process list
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -612,6 +622,7 @@ class BulkProcessDataApi(object):
     def get_bulk_process_lists(self, account_id, process_action, **kwargs):
         """
         Lists top-level details for all bulk process lists visible to the current user
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -638,6 +649,7 @@ class BulkProcessDataApi(object):
     def get_bulk_process_lists_with_http_info(self, account_id, process_action, **kwargs):
         """
         Lists top-level details for all bulk process lists visible to the current user
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -720,6 +732,7 @@ class BulkProcessDataApi(object):
     def update_bulk_process_list(self, account_id, bulk_process_list_id, process_action, **kwargs):
         """
         Updates a specific bulk process list
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -747,6 +760,7 @@ class BulkProcessDataApi(object):
     def update_bulk_process_list_with_http_info(self, account_id, bulk_process_list_id, process_action, **kwargs):
         """
         Updates a specific bulk process list
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

@@ -206,6 +206,7 @@ class RadioGroup(object):
     def conditional_parent_label_metadata(self):
         """Gets the conditional_parent_label_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `conditionalParentLabel` property is editable.  # noqa: E501
 
         :return: The conditional_parent_label_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -216,6 +217,7 @@ class RadioGroup(object):
     def conditional_parent_label_metadata(self, conditional_parent_label_metadata):
         """Sets the conditional_parent_label_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `conditionalParentLabel` property is editable.  # noqa: E501
 
         :param conditional_parent_label_metadata: The conditional_parent_label_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -250,6 +252,7 @@ class RadioGroup(object):
     def conditional_parent_value_metadata(self):
         """Gets the conditional_parent_value_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `conditionalParentValue` property is editable.  # noqa: E501
 
         :return: The conditional_parent_value_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -260,6 +263,7 @@ class RadioGroup(object):
     def conditional_parent_value_metadata(self, conditional_parent_value_metadata):
         """Sets the conditional_parent_value_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `conditionalParentValue` property is editable.  # noqa: E501
 
         :param conditional_parent_value_metadata: The conditional_parent_value_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -294,6 +298,7 @@ class RadioGroup(object):
     def document_id_metadata(self):
         """Gets the document_id_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `documentId` property is editable.  # noqa: E501
 
         :return: The document_id_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -304,6 +309,7 @@ class RadioGroup(object):
     def document_id_metadata(self, document_id_metadata):
         """Sets the document_id_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `documentId` property is editable.  # noqa: E501
 
         :param document_id_metadata: The document_id_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -338,6 +344,7 @@ class RadioGroup(object):
     def group_name_metadata(self):
         """Gets the group_name_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `groupName` property is editable.  # noqa: E501
 
         :return: The group_name_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -348,6 +355,7 @@ class RadioGroup(object):
     def group_name_metadata(self, group_name_metadata):
         """Sets the group_name_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `groupName` property is editable.  # noqa: E501
 
         :param group_name_metadata: The group_name_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -382,6 +390,7 @@ class RadioGroup(object):
     def original_value_metadata(self):
         """Gets the original_value_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `originalValue` property is editable.  # noqa: E501
 
         :return: The original_value_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -392,6 +401,7 @@ class RadioGroup(object):
     def original_value_metadata(self, original_value_metadata):
         """Sets the original_value_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `originalValue` property is editable.  # noqa: E501
 
         :param original_value_metadata: The original_value_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -472,6 +482,7 @@ class RadioGroup(object):
     def recipient_id_guid_metadata(self):
         """Gets the recipient_id_guid_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `recipientIdGuid` property is editable.  # noqa: E501
 
         :return: The recipient_id_guid_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -482,6 +493,7 @@ class RadioGroup(object):
     def recipient_id_guid_metadata(self, recipient_id_guid_metadata):
         """Sets the recipient_id_guid_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `recipientIdGuid` property is editable.  # noqa: E501
 
         :param recipient_id_guid_metadata: The recipient_id_guid_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -493,6 +505,7 @@ class RadioGroup(object):
     def recipient_id_metadata(self):
         """Gets the recipient_id_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `recipientId` property is editable.  # noqa: E501
 
         :return: The recipient_id_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -503,6 +516,7 @@ class RadioGroup(object):
     def recipient_id_metadata(self, recipient_id_metadata):
         """Sets the recipient_id_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `recipientId` property is editable.  # noqa: E501
 
         :param recipient_id_metadata: The recipient_id_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -537,6 +551,7 @@ class RadioGroup(object):
     def require_all_metadata(self):
         """Gets the require_all_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `requireAll` property is editable.  # noqa: E501
 
         :return: The require_all_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -547,6 +562,7 @@ class RadioGroup(object):
     def require_all_metadata(self, require_all_metadata):
         """Sets the require_all_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `requireAll` property is editable.  # noqa: E501
 
         :param require_all_metadata: The require_all_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -581,6 +597,7 @@ class RadioGroup(object):
     def require_initial_on_shared_change_metadata(self):
         """Gets the require_initial_on_shared_change_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.  # noqa: E501
 
         :return: The require_initial_on_shared_change_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -591,6 +608,7 @@ class RadioGroup(object):
     def require_initial_on_shared_change_metadata(self, require_initial_on_shared_change_metadata):
         """Sets the require_initial_on_shared_change_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.  # noqa: E501
 
         :param require_initial_on_shared_change_metadata: The require_initial_on_shared_change_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -625,6 +643,7 @@ class RadioGroup(object):
     def shared_metadata(self):
         """Gets the shared_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `shared` property is editable.  # noqa: E501
 
         :return: The shared_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -635,6 +654,7 @@ class RadioGroup(object):
     def shared_metadata(self, shared_metadata):
         """Sets the shared_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `shared` property is editable.  # noqa: E501
 
         :param shared_metadata: The shared_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -669,6 +689,7 @@ class RadioGroup(object):
     def share_to_recipients_metadata(self):
         """Gets the share_to_recipients_metadata of this RadioGroup.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The share_to_recipients_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -679,6 +700,7 @@ class RadioGroup(object):
     def share_to_recipients_metadata(self, share_to_recipients_metadata):
         """Sets the share_to_recipients_metadata of this RadioGroup.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param share_to_recipients_metadata: The share_to_recipients_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -713,6 +735,7 @@ class RadioGroup(object):
     def tab_type_metadata(self):
         """Gets the tab_type_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `tabType` property is editable.  # noqa: E501
 
         :return: The tab_type_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -723,6 +746,7 @@ class RadioGroup(object):
     def tab_type_metadata(self, tab_type_metadata):
         """Sets the tab_type_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `tabType` property is editable.  # noqa: E501
 
         :param tab_type_metadata: The tab_type_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -757,6 +781,7 @@ class RadioGroup(object):
     def template_locked_metadata(self):
         """Gets the template_locked_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `templateLocked` property is editable.  # noqa: E501
 
         :return: The template_locked_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -767,6 +792,7 @@ class RadioGroup(object):
     def template_locked_metadata(self, template_locked_metadata):
         """Sets the template_locked_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `templateLocked` property is editable.  # noqa: E501
 
         :param template_locked_metadata: The template_locked_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -801,6 +827,7 @@ class RadioGroup(object):
     def template_required_metadata(self):
         """Gets the template_required_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `templateRequired` property is editable.  # noqa: E501
 
         :return: The template_required_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -811,6 +838,7 @@ class RadioGroup(object):
     def template_required_metadata(self, template_required_metadata):
         """Sets the template_required_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `templateRequired` property is editable.  # noqa: E501
 
         :param template_required_metadata: The template_required_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -845,6 +873,7 @@ class RadioGroup(object):
     def tooltip_metadata(self):
         """Gets the tooltip_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `tooltip` property is editable.  # noqa: E501
 
         :return: The tooltip_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -855,6 +884,7 @@ class RadioGroup(object):
     def tooltip_metadata(self, tooltip_metadata):
         """Sets the tooltip_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `tooltip` property is editable.  # noqa: E501
 
         :param tooltip_metadata: The tooltip_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata
@@ -889,6 +919,7 @@ class RadioGroup(object):
     def value_metadata(self):
         """Gets the value_metadata of this RadioGroup.  # noqa: E501
 
+        Metadata that indicates whether the `value` property is editable.  # noqa: E501
 
         :return: The value_metadata of this RadioGroup.  # noqa: E501
         :rtype: PropertyMetadata
@@ -899,6 +930,7 @@ class RadioGroup(object):
     def value_metadata(self, value_metadata):
         """Sets the value_metadata of this RadioGroup.
 
+        Metadata that indicates whether the `value` property is editable.  # noqa: E501
 
         :param value_metadata: The value_metadata of this RadioGroup.  # noqa: E501
         :type: PropertyMetadata

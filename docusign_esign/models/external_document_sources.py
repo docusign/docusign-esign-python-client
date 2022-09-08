@@ -114,6 +114,7 @@ class ExternalDocumentSources(object):
     def boxnet_metadata(self):
         """Gets the boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
 
+        Metadata indicating whether the `boxnetEnabled` property is editable.  # noqa: E501
 
         :return: The boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
         :rtype: SettingsMetadata
@@ -124,6 +125,7 @@ class ExternalDocumentSources(object):
     def boxnet_metadata(self, boxnet_metadata):
         """Sets the boxnet_metadata of this ExternalDocumentSources.
 
+        Metadata indicating whether the `boxnetEnabled` property is editable.  # noqa: E501
 
         :param boxnet_metadata: The boxnet_metadata of this ExternalDocumentSources.  # noqa: E501
         :type: SettingsMetadata
@@ -158,6 +160,7 @@ class ExternalDocumentSources(object):
     def dropbox_metadata(self):
         """Gets the dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
 
+        Metadata indicating whether the `dropboxEnabled` property is editable.  # noqa: E501
 
         :return: The dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
         :rtype: SettingsMetadata
@@ -168,6 +171,7 @@ class ExternalDocumentSources(object):
     def dropbox_metadata(self, dropbox_metadata):
         """Sets the dropbox_metadata of this ExternalDocumentSources.
 
+        Metadata indicating whether the `dropboxEnabled` property is editable.  # noqa: E501
 
         :param dropbox_metadata: The dropbox_metadata of this ExternalDocumentSources.  # noqa: E501
         :type: SettingsMetadata
@@ -202,6 +206,7 @@ class ExternalDocumentSources(object):
     def google_drive_metadata(self):
         """Gets the google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
 
+        Metadata indicating whether the `googleDriveEnabled` property is editable.  # noqa: E501
 
         :return: The google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
         :rtype: SettingsMetadata
@@ -212,6 +217,7 @@ class ExternalDocumentSources(object):
     def google_drive_metadata(self, google_drive_metadata):
         """Sets the google_drive_metadata of this ExternalDocumentSources.
 
+        Metadata indicating whether the `googleDriveEnabled` property is editable.  # noqa: E501
 
         :param google_drive_metadata: The google_drive_metadata of this ExternalDocumentSources.  # noqa: E501
         :type: SettingsMetadata
@@ -246,6 +252,7 @@ class ExternalDocumentSources(object):
     def one_drive_metadata(self):
         """Gets the one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
 
+        Metadata indicating whether the `oneDriveEnabled` property is editable.  # noqa: E501
 
         :return: The one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
         :rtype: SettingsMetadata
@@ -256,6 +263,7 @@ class ExternalDocumentSources(object):
     def one_drive_metadata(self, one_drive_metadata):
         """Sets the one_drive_metadata of this ExternalDocumentSources.
 
+        Metadata indicating whether the `oneDriveEnabled` property is editable.  # noqa: E501
 
         :param one_drive_metadata: The one_drive_metadata of this ExternalDocumentSources.  # noqa: E501
         :type: SettingsMetadata
@@ -290,6 +298,7 @@ class ExternalDocumentSources(object):
     def salesforce_metadata(self):
         """Gets the salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
 
+        Metadata indicating whether the `salesforceEnabled` property is editable.  # noqa: E501
 
         :return: The salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
         :rtype: SettingsMetadata
@@ -300,6 +309,7 @@ class ExternalDocumentSources(object):
     def salesforce_metadata(self, salesforce_metadata):
         """Sets the salesforce_metadata of this ExternalDocumentSources.
 
+        Metadata indicating whether the `salesforceEnabled` property is editable.  # noqa: E501
 
         :param salesforce_metadata: The salesforce_metadata of this ExternalDocumentSources.  # noqa: E501
         :type: SettingsMetadata

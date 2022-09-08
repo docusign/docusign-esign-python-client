@@ -462,6 +462,7 @@ class Signer(object):
     def access_code_metadata(self):
         """Gets the access_code_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `accessCode` property is editable. This property is read-only.  # noqa: E501
 
         :return: The access_code_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -472,6 +473,7 @@ class Signer(object):
     def access_code_metadata(self, access_code_metadata):
         """Sets the access_code_metadata of this Signer.
 
+        Metadata that indicates whether the `accessCode` property is editable. This property is read-only.  # noqa: E501
 
         :param access_code_metadata: The access_code_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -874,6 +876,7 @@ class Signer(object):
     def delegated_by(self):
         """Gets the delegated_by of this Signer.  # noqa: E501
 
+          # noqa: E501
 
         :return: The delegated_by of this Signer.  # noqa: E501
         :rtype: DelegationInfo
@@ -884,6 +887,7 @@ class Signer(object):
     def delegated_by(self, delegated_by):
         """Sets the delegated_by of this Signer.
 
+          # noqa: E501
 
         :param delegated_by: The delegated_by of this Signer.  # noqa: E501
         :type: DelegationInfo
@@ -964,6 +968,7 @@ class Signer(object):
     def delivery_method_metadata(self):
         """Gets the delivery_method_metadata of this Signer.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The delivery_method_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -974,6 +979,7 @@ class Signer(object):
     def delivery_method_metadata(self, delivery_method_metadata):
         """Sets the delivery_method_metadata of this Signer.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param delivery_method_metadata: The delivery_method_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -1077,6 +1083,7 @@ class Signer(object):
     def email_metadata(self):
         """Gets the email_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `email` property is editable. This property is read-only.  # noqa: E501
 
         :return: The email_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1087,6 +1094,7 @@ class Signer(object):
     def email_metadata(self, email_metadata):
         """Sets the email_metadata of this Signer.
 
+        Metadata that indicates whether the `email` property is editable. This property is read-only.  # noqa: E501
 
         :param email_metadata: The email_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -1098,6 +1106,7 @@ class Signer(object):
     def email_notification(self):
         """Gets the email_notification of this Signer.  # noqa: E501
 
+        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
 
         :return: The email_notification of this Signer.  # noqa: E501
         :rtype: RecipientEmailNotification
@@ -1108,6 +1117,7 @@ class Signer(object):
     def email_notification(self, email_notification):
         """Sets the email_notification of this Signer.
 
+        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
 
         :param email_notification: The email_notification of this Signer.  # noqa: E501
         :type: RecipientEmailNotification
@@ -1165,6 +1175,7 @@ class Signer(object):
     def error_details(self):
         """Gets the error_details of this Signer.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this Signer.  # noqa: E501
         :rtype: ErrorDetails
@@ -1175,6 +1186,7 @@ class Signer(object):
     def error_details(self, error_details):
         """Sets the error_details of this Signer.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this Signer.  # noqa: E501
         :type: ErrorDetails
@@ -1232,6 +1244,7 @@ class Signer(object):
     def fax_number_metadata(self):
         """Gets the fax_number_metadata of this Signer.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The fax_number_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1242,6 +1255,7 @@ class Signer(object):
     def fax_number_metadata(self, fax_number_metadata):
         """Sets the fax_number_metadata of this Signer.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param fax_number_metadata: The fax_number_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -1276,6 +1290,7 @@ class Signer(object):
     def first_name_metadata(self):
         """Gets the first_name_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `firstName` property is editable. This property is read-only.  # noqa: E501
 
         :return: The first_name_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1286,6 +1301,7 @@ class Signer(object):
     def first_name_metadata(self, first_name_metadata):
         """Sets the first_name_metadata of this Signer.
 
+        Metadata that indicates whether the `firstName` property is editable. This property is read-only.  # noqa: E501
 
         :param first_name_metadata: The first_name_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -1320,6 +1336,7 @@ class Signer(object):
     def full_name_metadata(self):
         """Gets the full_name_metadata of this Signer.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The full_name_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1330,6 +1347,7 @@ class Signer(object):
     def full_name_metadata(self, full_name_metadata):
         """Sets the full_name_metadata of this Signer.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param full_name_metadata: The full_name_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -1364,6 +1382,7 @@ class Signer(object):
     def id_check_configuration_name_metadata(self):
         """Gets the id_check_configuration_name_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only.  # noqa: E501
 
         :return: The id_check_configuration_name_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1374,6 +1393,7 @@ class Signer(object):
     def id_check_configuration_name_metadata(self, id_check_configuration_name_metadata):
         """Sets the id_check_configuration_name_metadata of this Signer.
 
+        Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only.  # noqa: E501
 
         :param id_check_configuration_name_metadata: The id_check_configuration_name_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -1385,6 +1405,7 @@ class Signer(object):
     def id_check_information_input(self):
         """Gets the id_check_information_input of this Signer.  # noqa: E501
 
+        An object that contains input information related to a recipient ID check.  # noqa: E501
 
         :return: The id_check_information_input of this Signer.  # noqa: E501
         :rtype: IdCheckInformationInput
@@ -1395,6 +1416,7 @@ class Signer(object):
     def id_check_information_input(self, id_check_information_input):
         """Sets the id_check_information_input of this Signer.
 
+        An object that contains input information related to a recipient ID check.  # noqa: E501
 
         :param id_check_information_input: The id_check_information_input of this Signer.  # noqa: E501
         :type: IdCheckInformationInput
@@ -1406,6 +1428,7 @@ class Signer(object):
     def identity_verification(self):
         """Gets the identity_verification of this Signer.  # noqa: E501
 
+        Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).  # noqa: E501
 
         :return: The identity_verification of this Signer.  # noqa: E501
         :rtype: RecipientIdentityVerification
@@ -1416,6 +1439,7 @@ class Signer(object):
     def identity_verification(self, identity_verification):
         """Sets the identity_verification of this Signer.
 
+        Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).  # noqa: E501
 
         :param identity_verification: The identity_verification of this Signer.  # noqa: E501
         :type: RecipientIdentityVerification
@@ -1473,6 +1497,7 @@ class Signer(object):
     def is_bulk_recipient_metadata(self):
         """Gets the is_bulk_recipient_metadata of this Signer.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The is_bulk_recipient_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1483,6 +1508,7 @@ class Signer(object):
     def is_bulk_recipient_metadata(self, is_bulk_recipient_metadata):
         """Sets the is_bulk_recipient_metadata of this Signer.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param is_bulk_recipient_metadata: The is_bulk_recipient_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -1517,6 +1543,7 @@ class Signer(object):
     def last_name_metadata(self):
         """Gets the last_name_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `lastName` property is editable. This property is read-only.  # noqa: E501
 
         :return: The last_name_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1527,6 +1554,7 @@ class Signer(object):
     def last_name_metadata(self, last_name_metadata):
         """Sets the last_name_metadata of this Signer.
 
+        Metadata that indicates whether the `lastName` property is editable. This property is read-only.  # noqa: E501
 
         :param last_name_metadata: The last_name_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -1607,6 +1635,7 @@ class Signer(object):
     def name_metadata(self):
         """Gets the name_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `name` property is editable. This property is read-only.  # noqa: E501
 
         :return: The name_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1617,6 +1646,7 @@ class Signer(object):
     def name_metadata(self, name_metadata):
         """Sets the name_metadata of this Signer.
 
+        Metadata that indicates whether the `name` property is editable. This property is read-only.  # noqa: E501
 
         :param name_metadata: The name_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -1697,6 +1727,7 @@ class Signer(object):
     def note_metadata(self):
         """Gets the note_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `note` property is editable. This property is read-only.  # noqa: E501
 
         :return: The note_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1707,6 +1738,7 @@ class Signer(object):
     def note_metadata(self, note_metadata):
         """Sets the note_metadata of this Signer.
 
+        Metadata that indicates whether the `note` property is editable. This property is read-only.  # noqa: E501
 
         :param note_metadata: The note_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -1718,6 +1750,7 @@ class Signer(object):
     def offline_attributes(self):
         """Gets the offline_attributes of this Signer.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The offline_attributes of this Signer.  # noqa: E501
         :rtype: OfflineAttributes
@@ -1728,6 +1761,7 @@ class Signer(object):
     def offline_attributes(self, offline_attributes):
         """Sets the offline_attributes of this Signer.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param offline_attributes: The offline_attributes of this Signer.  # noqa: E501
         :type: OfflineAttributes
@@ -1739,6 +1773,7 @@ class Signer(object):
     def phone_authentication(self):
         """Gets the phone_authentication of this Signer.  # noqa: E501
 
+        When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.    # noqa: E501
 
         :return: The phone_authentication of this Signer.  # noqa: E501
         :rtype: RecipientPhoneAuthentication
@@ -1749,6 +1784,7 @@ class Signer(object):
     def phone_authentication(self, phone_authentication):
         """Sets the phone_authentication of this Signer.
 
+        When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.    # noqa: E501
 
         :param phone_authentication: The phone_authentication of this Signer.  # noqa: E501
         :type: RecipientPhoneAuthentication
@@ -1760,6 +1796,7 @@ class Signer(object):
     def phone_number(self):
         """Gets the phone_number of this Signer.  # noqa: E501
 
+        Describes the recipient phone number.  # noqa: E501
 
         :return: The phone_number of this Signer.  # noqa: E501
         :rtype: RecipientPhoneNumber
@@ -1770,6 +1807,7 @@ class Signer(object):
     def phone_number(self, phone_number):
         """Sets the phone_number of this Signer.
 
+        Describes the recipient phone number.  # noqa: E501
 
         :param phone_number: The phone_number of this Signer.  # noqa: E501
         :type: RecipientPhoneNumber
@@ -1781,6 +1819,7 @@ class Signer(object):
     def proof_file(self):
         """Gets the proof_file of this Signer.  # noqa: E501
 
+        The proof file of the recipient.  # noqa: E501
 
         :return: The proof_file of this Signer.  # noqa: E501
         :rtype: RecipientProofFile
@@ -1791,6 +1830,7 @@ class Signer(object):
     def proof_file(self, proof_file):
         """Sets the proof_file of this Signer.
 
+        The proof file of the recipient.  # noqa: E501
 
         :param proof_file: The proof_file of this Signer.  # noqa: E501
         :type: RecipientProofFile
@@ -1825,6 +1865,7 @@ class Signer(object):
     def recipient_authentication_status(self):
         """Gets the recipient_authentication_status of this Signer.  # noqa: E501
 
+        Information about the recipient's authentication status. This property is read-only.  # noqa: E501
 
         :return: The recipient_authentication_status of this Signer.  # noqa: E501
         :rtype: AuthenticationStatus
@@ -1835,6 +1876,7 @@ class Signer(object):
     def recipient_authentication_status(self, recipient_authentication_status):
         """Sets the recipient_authentication_status of this Signer.
 
+        Information about the recipient's authentication status. This property is read-only.  # noqa: E501
 
         :param recipient_authentication_status: The recipient_authentication_status of this Signer.  # noqa: E501
         :type: AuthenticationStatus
@@ -1984,6 +2026,7 @@ class Signer(object):
     def recipient_type_metadata(self):
         """Gets the recipient_type_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `recipientType` property is editable. This property is read-only.  # noqa: E501
 
         :return: The recipient_type_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1994,6 +2037,7 @@ class Signer(object):
     def recipient_type_metadata(self, recipient_type_metadata):
         """Sets the recipient_type_metadata of this Signer.
 
+        Metadata that indicates whether the `recipientType` property is editable. This property is read-only.  # noqa: E501
 
         :param recipient_type_metadata: The recipient_type_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -2028,6 +2072,7 @@ class Signer(object):
     def require_id_lookup_metadata(self):
         """Gets the require_id_lookup_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only.  # noqa: E501
 
         :return: The require_id_lookup_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2038,6 +2083,7 @@ class Signer(object):
     def require_id_lookup_metadata(self, require_id_lookup_metadata):
         """Sets the require_id_lookup_metadata of this Signer.
 
+        Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only.  # noqa: E501
 
         :param require_id_lookup_metadata: The require_id_lookup_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -2164,6 +2210,7 @@ class Signer(object):
     def routing_order_metadata(self):
         """Gets the routing_order_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.  # noqa: E501
 
         :return: The routing_order_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2174,6 +2221,7 @@ class Signer(object):
     def routing_order_metadata(self, routing_order_metadata):
         """Sets the routing_order_metadata of this Signer.
 
+        Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.  # noqa: E501
 
         :param routing_order_metadata: The routing_order_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -2208,6 +2256,7 @@ class Signer(object):
     def signature_info(self):
         """Gets the signature_info of this Signer.  # noqa: E501
 
+        Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers.  # noqa: E501
 
         :return: The signature_info of this Signer.  # noqa: E501
         :rtype: RecipientSignatureInformation
@@ -2218,6 +2267,7 @@ class Signer(object):
     def signature_info(self, signature_info):
         """Sets the signature_info of this Signer.
 
+        Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers.  # noqa: E501
 
         :param signature_info: The signature_info of this Signer.  # noqa: E501
         :type: RecipientSignatureInformation
@@ -2275,6 +2325,7 @@ class Signer(object):
     def sign_in_each_location_metadata(self):
         """Gets the sign_in_each_location_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `signInEachLocation` property is editable. This property is read-only.  # noqa: E501
 
         :return: The sign_in_each_location_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2285,6 +2336,7 @@ class Signer(object):
     def sign_in_each_location_metadata(self, sign_in_each_location_metadata):
         """Sets the sign_in_each_location_metadata of this Signer.
 
+        Metadata that indicates whether the `signInEachLocation` property is editable. This property is read-only.  # noqa: E501
 
         :param sign_in_each_location_metadata: The sign_in_each_location_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -2319,6 +2371,7 @@ class Signer(object):
     def signing_group_id_metadata(self):
         """Gets the signing_group_id_metadata of this Signer.  # noqa: E501
 
+        Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only.  # noqa: E501
 
         :return: The signing_group_id_metadata of this Signer.  # noqa: E501
         :rtype: PropertyMetadata
@@ -2329,6 +2382,7 @@ class Signer(object):
     def signing_group_id_metadata(self, signing_group_id_metadata):
         """Sets the signing_group_id_metadata of this Signer.
 
+        Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only.  # noqa: E501
 
         :param signing_group_id_metadata: The signing_group_id_metadata of this Signer.  # noqa: E501
         :type: PropertyMetadata
@@ -2386,6 +2440,7 @@ class Signer(object):
     def sms_authentication(self):
         """Gets the sms_authentication of this Signer.  # noqa: E501
 
+        When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.     # noqa: E501
 
         :return: The sms_authentication of this Signer.  # noqa: E501
         :rtype: RecipientSMSAuthentication
@@ -2396,6 +2451,7 @@ class Signer(object):
     def sms_authentication(self, sms_authentication):
         """Sets the sms_authentication of this Signer.
 
+        When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.     # noqa: E501
 
         :param sms_authentication: The sms_authentication of this Signer.  # noqa: E501
         :type: RecipientSMSAuthentication
@@ -2499,6 +2555,7 @@ class Signer(object):
     def tabs(self):
         """Gets the tabs of this Signer.  # noqa: E501
 
+        The tabs to assign to the recipient. [More information](/docs/esign-rest-api/esign101/concepts/tabs/).  # noqa: E501
 
         :return: The tabs of this Signer.  # noqa: E501
         :rtype: Tabs
@@ -2509,6 +2566,7 @@ class Signer(object):
     def tabs(self, tabs):
         """Sets the tabs of this Signer.
 
+        The tabs to assign to the recipient. [More information](/docs/esign-rest-api/esign101/concepts/tabs/).  # noqa: E501
 
         :param tabs: The tabs of this Signer.  # noqa: E501
         :type: Tabs

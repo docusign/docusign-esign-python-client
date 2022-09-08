@@ -63,6 +63,7 @@ class PaymentProcessorInformation(object):
     def address(self):
         """Gets the address of this PaymentProcessorInformation.  # noqa: E501
 
+        The mailing address associated with the payment processor.  # noqa: E501
 
         :return: The address of this PaymentProcessorInformation.  # noqa: E501
         :rtype: AddressInformation
@@ -73,6 +74,7 @@ class PaymentProcessorInformation(object):
     def address(self, address):
         """Sets the address of this PaymentProcessorInformation.
 
+        The mailing address associated with the payment processor.  # noqa: E501
 
         :param address: The address of this PaymentProcessorInformation.  # noqa: E501
         :type: AddressInformation

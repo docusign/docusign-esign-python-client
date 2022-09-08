@@ -59,6 +59,7 @@ class DowngradRequestBillingInfoResponse(object):
     def downgrade_plan_information(self):
         """Gets the downgrade_plan_information of this DowngradRequestBillingInfoResponse.  # noqa: E501
 
+          # noqa: E501
 
         :return: The downgrade_plan_information of this DowngradRequestBillingInfoResponse.  # noqa: E501
         :rtype: DowngradePlanUpdateResponse
@@ -69,6 +70,7 @@ class DowngradRequestBillingInfoResponse(object):
     def downgrade_plan_information(self, downgrade_plan_information):
         """Sets the downgrade_plan_information of this DowngradRequestBillingInfoResponse.
 
+          # noqa: E501
 
         :param downgrade_plan_information: The downgrade_plan_information of this DowngradRequestBillingInfoResponse.  # noqa: E501
         :type: DowngradePlanUpdateResponse

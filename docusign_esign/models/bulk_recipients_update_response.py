@@ -55,6 +55,7 @@ class BulkRecipientsUpdateResponse(object):
     def signer(self):
         """Gets the signer of this BulkRecipientsUpdateResponse.  # noqa: E501
 
+          # noqa: E501
 
         :return: The signer of this BulkRecipientsUpdateResponse.  # noqa: E501
         :rtype: Signer
@@ -65,6 +66,7 @@ class BulkRecipientsUpdateResponse(object):
     def signer(self, signer):
         """Sets the signer of this BulkRecipientsUpdateResponse.
 
+          # noqa: E501
 
         :param signer: The signer of this BulkRecipientsUpdateResponse.  # noqa: E501
         :type: Signer

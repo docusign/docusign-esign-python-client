@@ -177,6 +177,7 @@ class AccountPasswordRules(object):
     def expire_password_days_metadata(self):
         """Gets the expire_password_days_metadata of this AccountPasswordRules.  # noqa: E501
 
+        Metadata that indicates whether the `expirePasswordDays` property is editable.   # noqa: E501
 
         :return: The expire_password_days_metadata of this AccountPasswordRules.  # noqa: E501
         :rtype: AccountPasswordExpirePasswordDays
@@ -187,6 +188,7 @@ class AccountPasswordRules(object):
     def expire_password_days_metadata(self, expire_password_days_metadata):
         """Sets the expire_password_days_metadata of this AccountPasswordRules.
 
+        Metadata that indicates whether the `expirePasswordDays` property is editable.   # noqa: E501
 
         :param expire_password_days_metadata: The expire_password_days_metadata of this AccountPasswordRules.  # noqa: E501
         :type: AccountPasswordExpirePasswordDays
@@ -221,6 +223,7 @@ class AccountPasswordRules(object):
     def lockout_duration_minutes_metadata(self):
         """Gets the lockout_duration_minutes_metadata of this AccountPasswordRules.  # noqa: E501
 
+        Metadata that indicates whether the `lockoutDurationMinutes` property is editable.   # noqa: E501
 
         :return: The lockout_duration_minutes_metadata of this AccountPasswordRules.  # noqa: E501
         :rtype: AccountPasswordLockoutDurationMinutes
@@ -231,6 +234,7 @@ class AccountPasswordRules(object):
     def lockout_duration_minutes_metadata(self, lockout_duration_minutes_metadata):
         """Sets the lockout_duration_minutes_metadata of this AccountPasswordRules.
 
+        Metadata that indicates whether the `lockoutDurationMinutes` property is editable.   # noqa: E501
 
         :param lockout_duration_minutes_metadata: The lockout_duration_minutes_metadata of this AccountPasswordRules.  # noqa: E501
         :type: AccountPasswordLockoutDurationMinutes
@@ -265,6 +269,7 @@ class AccountPasswordRules(object):
     def lockout_duration_type_metadata(self):
         """Gets the lockout_duration_type_metadata of this AccountPasswordRules.  # noqa: E501
 
+        Metadata that indicates whether the `lockoutDurationType` property is editable.   # noqa: E501
 
         :return: The lockout_duration_type_metadata of this AccountPasswordRules.  # noqa: E501
         :rtype: AccountPasswordLockoutDurationType
@@ -275,6 +280,7 @@ class AccountPasswordRules(object):
     def lockout_duration_type_metadata(self, lockout_duration_type_metadata):
         """Sets the lockout_duration_type_metadata of this AccountPasswordRules.
 
+        Metadata that indicates whether the `lockoutDurationType` property is editable.   # noqa: E501
 
         :param lockout_duration_type_metadata: The lockout_duration_type_metadata of this AccountPasswordRules.  # noqa: E501
         :type: AccountPasswordLockoutDurationType
@@ -309,6 +315,7 @@ class AccountPasswordRules(object):
     def minimum_password_age_days_metadata(self):
         """Gets the minimum_password_age_days_metadata of this AccountPasswordRules.  # noqa: E501
 
+        Metadata that indicates whether the `minimumPasswordAgeDays` property is editable.   # noqa: E501
 
         :return: The minimum_password_age_days_metadata of this AccountPasswordRules.  # noqa: E501
         :rtype: AccountPasswordMinimumPasswordAgeDays
@@ -319,6 +326,7 @@ class AccountPasswordRules(object):
     def minimum_password_age_days_metadata(self, minimum_password_age_days_metadata):
         """Sets the minimum_password_age_days_metadata of this AccountPasswordRules.
 
+        Metadata that indicates whether the `minimumPasswordAgeDays` property is editable.   # noqa: E501
 
         :param minimum_password_age_days_metadata: The minimum_password_age_days_metadata of this AccountPasswordRules.  # noqa: E501
         :type: AccountPasswordMinimumPasswordAgeDays
@@ -353,6 +361,7 @@ class AccountPasswordRules(object):
     def minimum_password_length_metadata(self):
         """Gets the minimum_password_length_metadata of this AccountPasswordRules.  # noqa: E501
 
+        Metadata that indicates whether the `minimumPasswordLength` property is editable.   # noqa: E501
 
         :return: The minimum_password_length_metadata of this AccountPasswordRules.  # noqa: E501
         :rtype: AccountMinimumPasswordLength
@@ -363,6 +372,7 @@ class AccountPasswordRules(object):
     def minimum_password_length_metadata(self, minimum_password_length_metadata):
         """Sets the minimum_password_length_metadata of this AccountPasswordRules.
 
+        Metadata that indicates whether the `minimumPasswordLength` property is editable.   # noqa: E501
 
         :param minimum_password_length_metadata: The minimum_password_length_metadata of this AccountPasswordRules.  # noqa: E501
         :type: AccountMinimumPasswordLength
@@ -512,6 +522,7 @@ class AccountPasswordRules(object):
     def password_strength_type_metadata(self):
         """Gets the password_strength_type_metadata of this AccountPasswordRules.  # noqa: E501
 
+        Metadata that indicates whether the `passwordStrengthType` property is editable.   # noqa: E501
 
         :return: The password_strength_type_metadata of this AccountPasswordRules.  # noqa: E501
         :rtype: AccountPasswordStrengthType
@@ -522,6 +533,7 @@ class AccountPasswordRules(object):
     def password_strength_type_metadata(self, password_strength_type_metadata):
         """Sets the password_strength_type_metadata of this AccountPasswordRules.
 
+        Metadata that indicates whether the `passwordStrengthType` property is editable.   # noqa: E501
 
         :param password_strength_type_metadata: The password_strength_type_metadata of this AccountPasswordRules.  # noqa: E501
         :type: AccountPasswordStrengthType
@@ -556,6 +568,7 @@ class AccountPasswordRules(object):
     def questions_required_metadata(self):
         """Gets the questions_required_metadata of this AccountPasswordRules.  # noqa: E501
 
+        Metadata that indicates whether the `questionsRequired` property is editable.   # noqa: E501
 
         :return: The questions_required_metadata of this AccountPasswordRules.  # noqa: E501
         :rtype: AccountPasswordQuestionsRequired
@@ -566,6 +579,7 @@ class AccountPasswordRules(object):
     def questions_required_metadata(self, questions_required_metadata):
         """Sets the questions_required_metadata of this AccountPasswordRules.
 
+        Metadata that indicates whether the `questionsRequired` property is editable.   # noqa: E501
 
         :param questions_required_metadata: The questions_required_metadata of this AccountPasswordRules.  # noqa: E501
         :type: AccountPasswordQuestionsRequired

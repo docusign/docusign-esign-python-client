@@ -59,6 +59,7 @@ class UserPasswordRules(object):
     def password_rules(self):
         """Gets the password_rules of this UserPasswordRules.  # noqa: E501
 
+        Contains details about the password rules for the user.  # noqa: E501
 
         :return: The password_rules of this UserPasswordRules.  # noqa: E501
         :rtype: AccountPasswordRules
@@ -69,6 +70,7 @@ class UserPasswordRules(object):
     def password_rules(self, password_rules):
         """Sets the password_rules of this UserPasswordRules.
 
+        Contains details about the password rules for the user.  # noqa: E501
 
         :param password_rules: The password_rules of this UserPasswordRules.  # noqa: E501
         :type: AccountPasswordRules

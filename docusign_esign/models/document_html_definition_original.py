@@ -109,6 +109,7 @@ class DocumentHtmlDefinitionOriginal(object):
     def html_definition(self):
         """Gets the html_definition of this DocumentHtmlDefinitionOriginal.  # noqa: E501
 
+        Defines how to generate the responsive-formatted HTML for the document.  # noqa: E501
 
         :return: The html_definition of this DocumentHtmlDefinitionOriginal.  # noqa: E501
         :rtype: DocumentHtmlDefinition
@@ -119,6 +120,7 @@ class DocumentHtmlDefinitionOriginal(object):
     def html_definition(self, html_definition):
         """Sets the html_definition of this DocumentHtmlDefinitionOriginal.
 
+        Defines how to generate the responsive-formatted HTML for the document.  # noqa: E501
 
         :param html_definition: The html_definition of this DocumentHtmlDefinitionOriginal.  # noqa: E501
         :type: DocumentHtmlDefinition

@@ -103,6 +103,7 @@ class AccountBillingPlanResponse(object):
     def billing_address(self):
         """Gets the billing_address of this AccountBillingPlanResponse.  # noqa: E501
 
+        The billing address for the account.  # noqa: E501
 
         :return: The billing_address of this AccountBillingPlanResponse.  # noqa: E501
         :rtype: AccountAddress
@@ -113,6 +114,7 @@ class AccountBillingPlanResponse(object):
     def billing_address(self, billing_address):
         """Sets the billing_address of this AccountBillingPlanResponse.
 
+        The billing address for the account.  # noqa: E501
 
         :param billing_address: The billing_address of this AccountBillingPlanResponse.  # noqa: E501
         :type: AccountAddress
@@ -147,6 +149,7 @@ class AccountBillingPlanResponse(object):
     def billing_plan(self):
         """Gets the billing_plan of this AccountBillingPlanResponse.  # noqa: E501
 
+        An object that contains details about the billing plan.  # noqa: E501
 
         :return: The billing_plan of this AccountBillingPlanResponse.  # noqa: E501
         :rtype: AccountBillingPlan
@@ -157,6 +160,7 @@ class AccountBillingPlanResponse(object):
     def billing_plan(self, billing_plan):
         """Sets the billing_plan of this AccountBillingPlanResponse.
 
+        An object that contains details about the billing plan.  # noqa: E501
 
         :param billing_plan: The billing_plan of this AccountBillingPlanResponse.  # noqa: E501
         :type: AccountBillingPlan
@@ -168,6 +172,7 @@ class AccountBillingPlanResponse(object):
     def credit_card_information(self):
         """Gets the credit_card_information of this AccountBillingPlanResponse.  # noqa: E501
 
+        A complex type that has information about the credit card used to pay for this account.  # noqa: E501
 
         :return: The credit_card_information of this AccountBillingPlanResponse.  # noqa: E501
         :rtype: CreditCardInformation
@@ -178,6 +183,7 @@ class AccountBillingPlanResponse(object):
     def credit_card_information(self, credit_card_information):
         """Sets the credit_card_information of this AccountBillingPlanResponse.
 
+        A complex type that has information about the credit card used to pay for this account.  # noqa: E501
 
         :param credit_card_information: The credit_card_information of this AccountBillingPlanResponse.  # noqa: E501
         :type: CreditCardInformation
@@ -189,6 +195,7 @@ class AccountBillingPlanResponse(object):
     def direct_debit_processor_information(self):
         """Gets the direct_debit_processor_information of this AccountBillingPlanResponse.  # noqa: E501
 
+        Information about the bank that processes direct debits for the payment plan.  # noqa: E501
 
         :return: The direct_debit_processor_information of this AccountBillingPlanResponse.  # noqa: E501
         :rtype: DirectDebitProcessorInformation
@@ -199,6 +206,7 @@ class AccountBillingPlanResponse(object):
     def direct_debit_processor_information(self, direct_debit_processor_information):
         """Sets the direct_debit_processor_information of this AccountBillingPlanResponse.
 
+        Information about the bank that processes direct debits for the payment plan.  # noqa: E501
 
         :param direct_debit_processor_information: The direct_debit_processor_information of this AccountBillingPlanResponse.  # noqa: E501
         :type: DirectDebitProcessorInformation
@@ -210,6 +218,7 @@ class AccountBillingPlanResponse(object):
     def downgrade_plan_information(self):
         """Gets the downgrade_plan_information of this AccountBillingPlanResponse.  # noqa: E501
 
+          # noqa: E501
 
         :return: The downgrade_plan_information of this AccountBillingPlanResponse.  # noqa: E501
         :rtype: DowngradePlanUpdateResponse
@@ -220,6 +229,7 @@ class AccountBillingPlanResponse(object):
     def downgrade_plan_information(self, downgrade_plan_information):
         """Sets the downgrade_plan_information of this AccountBillingPlanResponse.
 
+          # noqa: E501
 
         :param downgrade_plan_information: The downgrade_plan_information of this AccountBillingPlanResponse.  # noqa: E501
         :type: DowngradePlanUpdateResponse
@@ -231,6 +241,7 @@ class AccountBillingPlanResponse(object):
     def downgrade_request_information(self):
         """Gets the downgrade_request_information of this AccountBillingPlanResponse.  # noqa: E501
 
+          # noqa: E501
 
         :return: The downgrade_request_information of this AccountBillingPlanResponse.  # noqa: E501
         :rtype: DowngradeRequestInformation
@@ -241,6 +252,7 @@ class AccountBillingPlanResponse(object):
     def downgrade_request_information(self, downgrade_request_information):
         """Sets the downgrade_request_information of this AccountBillingPlanResponse.
 
+          # noqa: E501
 
         :param downgrade_request_information: The downgrade_request_information of this AccountBillingPlanResponse.  # noqa: E501
         :type: DowngradeRequestInformation
@@ -252,6 +264,7 @@ class AccountBillingPlanResponse(object):
     def entity_information(self):
         """Gets the entity_information of this AccountBillingPlanResponse.  # noqa: E501
 
+          # noqa: E501
 
         :return: The entity_information of this AccountBillingPlanResponse.  # noqa: E501
         :rtype: BillingEntityInformationResponse
@@ -262,6 +275,7 @@ class AccountBillingPlanResponse(object):
     def entity_information(self, entity_information):
         """Sets the entity_information of this AccountBillingPlanResponse.
 
+          # noqa: E501
 
         :param entity_information: The entity_information of this AccountBillingPlanResponse.  # noqa: E501
         :type: BillingEntityInformationResponse
@@ -296,6 +310,7 @@ class AccountBillingPlanResponse(object):
     def payment_processor_information(self):
         """Gets the payment_processor_information of this AccountBillingPlanResponse.  # noqa: E501
 
+        Information about the entity that processes payments for the billing plan.  # noqa: E501
 
         :return: The payment_processor_information of this AccountBillingPlanResponse.  # noqa: E501
         :rtype: PaymentProcessorInformation
@@ -306,6 +321,7 @@ class AccountBillingPlanResponse(object):
     def payment_processor_information(self, payment_processor_information):
         """Sets the payment_processor_information of this AccountBillingPlanResponse.
 
+        Information about the entity that processes payments for the billing plan.  # noqa: E501
 
         :param payment_processor_information: The payment_processor_information of this AccountBillingPlanResponse.  # noqa: E501
         :type: PaymentProcessorInformation
@@ -317,6 +333,7 @@ class AccountBillingPlanResponse(object):
     def referral_information(self):
         """Gets the referral_information of this AccountBillingPlanResponse.  # noqa: E501
 
+        A complex type that contains properties for entering referral and discount information.  # noqa: E501
 
         :return: The referral_information of this AccountBillingPlanResponse.  # noqa: E501
         :rtype: ReferralInformation
@@ -327,6 +344,7 @@ class AccountBillingPlanResponse(object):
     def referral_information(self, referral_information):
         """Sets the referral_information of this AccountBillingPlanResponse.
 
+        A complex type that contains properties for entering referral and discount information.  # noqa: E501
 
         :param referral_information: The referral_information of this AccountBillingPlanResponse.  # noqa: E501
         :type: ReferralInformation

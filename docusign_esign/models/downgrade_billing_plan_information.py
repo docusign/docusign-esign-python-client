@@ -98,6 +98,7 @@ class DowngradeBillingPlanInformation(object):
     def plan_information(self):
         """Gets the plan_information of this DowngradeBillingPlanInformation.  # noqa: E501
 
+        An object used to identify the features and attributes of the account being created.  # noqa: E501
 
         :return: The plan_information of this DowngradeBillingPlanInformation.  # noqa: E501
         :rtype: PlanInformation
@@ -108,6 +109,7 @@ class DowngradeBillingPlanInformation(object):
     def plan_information(self, plan_information):
         """Sets the plan_information of this DowngradeBillingPlanInformation.
 
+        An object used to identify the features and attributes of the account being created.  # noqa: E501
 
         :param plan_information: The plan_information of this DowngradeBillingPlanInformation.  # noqa: E501
         :type: PlanInformation

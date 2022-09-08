@@ -59,6 +59,7 @@ class NotificationDefaults(object):
     def api_email_notifications(self):
         """Gets the api_email_notifications of this NotificationDefaults.  # noqa: E501
 
+        The default notification settings for envelopes sent by using the console.  # noqa: E501
 
         :return: The api_email_notifications of this NotificationDefaults.  # noqa: E501
         :rtype: NotificationDefaultSettings
@@ -69,6 +70,7 @@ class NotificationDefaults(object):
     def api_email_notifications(self, api_email_notifications):
         """Sets the api_email_notifications of this NotificationDefaults.
 
+        The default notification settings for envelopes sent by using the console.  # noqa: E501
 
         :param api_email_notifications: The api_email_notifications of this NotificationDefaults.  # noqa: E501
         :type: NotificationDefaultSettings
@@ -80,6 +82,7 @@ class NotificationDefaults(object):
     def email_notifications(self):
         """Gets the email_notifications of this NotificationDefaults.  # noqa: E501
 
+        The default notification settings for envelopes sent by using the API.  # noqa: E501
 
         :return: The email_notifications of this NotificationDefaults.  # noqa: E501
         :rtype: NotificationDefaultSettings
@@ -90,6 +93,7 @@ class NotificationDefaults(object):
     def email_notifications(self, email_notifications):
         """Sets the email_notifications of this NotificationDefaults.
 
+        The default notification settings for envelopes sent by using the API.  # noqa: E501
 
         :param email_notifications: The email_notifications of this NotificationDefaults.  # noqa: E501
         :type: NotificationDefaultSettings

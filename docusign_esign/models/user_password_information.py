@@ -113,6 +113,7 @@ class UserPasswordInformation(object):
     def forgotten_password_info(self):
         """Gets the forgotten_password_info of this UserPasswordInformation.  # noqa: E501
 
+        A complex element containing up to four Question/Answer pairs for forgotten password information.  # noqa: E501
 
         :return: The forgotten_password_info of this UserPasswordInformation.  # noqa: E501
         :rtype: ForgottenPasswordInformation
@@ -123,6 +124,7 @@ class UserPasswordInformation(object):
     def forgotten_password_info(self, forgotten_password_info):
         """Sets the forgotten_password_info of this UserPasswordInformation.
 
+        A complex element containing up to four Question/Answer pairs for forgotten password information.  # noqa: E501
 
         :param forgotten_password_info: The forgotten_password_info of this UserPasswordInformation.  # noqa: E501
         :type: ForgottenPasswordInformation

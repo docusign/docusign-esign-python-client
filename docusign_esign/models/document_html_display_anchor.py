@@ -98,6 +98,7 @@ class DocumentHtmlDisplayAnchor(object):
     def display_settings(self):
         """Gets the display_settings of this DocumentHtmlDisplayAnchor.  # noqa: E501
 
+        This object defines how the HTML section inside the `startAnchor` and `endAnchor` displays.  # noqa: E501
 
         :return: The display_settings of this DocumentHtmlDisplayAnchor.  # noqa: E501
         :rtype: DocumentHtmlDisplaySettings
@@ -108,6 +109,7 @@ class DocumentHtmlDisplayAnchor(object):
     def display_settings(self, display_settings):
         """Sets the display_settings of this DocumentHtmlDisplayAnchor.
 
+        This object defines how the HTML section inside the `startAnchor` and `endAnchor` displays.  # noqa: E501
 
         :param display_settings: The display_settings of this DocumentHtmlDisplayAnchor.  # noqa: E501
         :type: DocumentHtmlDisplaySettings

@@ -43,6 +43,7 @@ class EmailArchiveApi(object):
     def create_bcc_email_archive(self, account_id, **kwargs):
         """
         Creates a blind carbon copy email archive entry
+        This method creates a BCC email archive configuration for an account (adds a BCC email address to the account for archiving the emails that DocuSign generates).  The only property that you must set in the request body is the BCC email address that you want to use.  **Note:** An account can have up to five active and pending email archive addresses combined, but you must use this method to add them to the account one at a time. Each email address is considered a separate BCC email archive configuration. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,6 +70,7 @@ class EmailArchiveApi(object):
     def create_bcc_email_archive_with_http_info(self, account_id, **kwargs):
         """
         Creates a blind carbon copy email archive entry
+        This method creates a BCC email archive configuration for an account (adds a BCC email address to the account for archiving the emails that DocuSign generates).  The only property that you must set in the request body is the BCC email address that you want to use.  **Note:** An account can have up to five active and pending email archive addresses combined, but you must use this method to add them to the account one at a time. Each email address is considered a separate BCC email archive configuration. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -148,6 +150,7 @@ class EmailArchiveApi(object):
     def delete_bcc_email_archive(self, account_id, bcc_email_archive_id, **kwargs):
         """
         Delete a blind carbon copy email archive for an account.
+        This method deletes a BCC email archive configuration from an account.  When you use this method, the status of the BCC email archive configuration switches to `closed` and the BCC email address is no longer used to archive DocuSign-generated email messages. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -174,6 +177,7 @@ class EmailArchiveApi(object):
     def delete_bcc_email_archive_with_http_info(self, account_id, bcc_email_archive_id, **kwargs):
         """
         Delete a blind carbon copy email archive for an account.
+        This method deletes a BCC email archive configuration from an account.  When you use this method, the status of the BCC email archive configuration switches to `closed` and the BCC email address is no longer used to archive DocuSign-generated email messages. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -256,6 +260,7 @@ class EmailArchiveApi(object):
     def get_bcc_email_archive_history_list(self, account_id, bcc_email_archive_id, **kwargs):
         """
         Get the blind carbon copy email archive history entries for the specified archive
+        This method returns a specific BCC email archive configuration for an account, as well as the history of changes to the email address.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -284,6 +289,7 @@ class EmailArchiveApi(object):
     def get_bcc_email_archive_history_list_with_http_info(self, account_id, bcc_email_archive_id, **kwargs):
         """
         Get the blind carbon copy email archive history entries for the specified archive
+        This method returns a specific BCC email archive configuration for an account, as well as the history of changes to the email address.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -372,6 +378,7 @@ class EmailArchiveApi(object):
     def get_bcc_email_archive_list(self, account_id, **kwargs):
         """
         Get the blind carbon copy email archive entries owned by the specified account
+        This method retrieves all of the BCC email archive configurations associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -399,6 +406,7 @@ class EmailArchiveApi(object):
     def get_bcc_email_archive_list_with_http_info(self, account_id, **kwargs):
         """
         Get the blind carbon copy email archive entries owned by the specified account
+        This method retrieves all of the BCC email archive configurations associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

@@ -94,6 +94,7 @@ class CompositeTemplate(object):
     def document(self):
         """Gets the document of this CompositeTemplate.  # noqa: E501
 
+        An optional document object that will act as the primary document in the composite template object. If the document node is present, it will take precedence over any server template or inline template documents. It always comes first. Only use this when you want to supply the document dynamically.  # noqa: E501
 
         :return: The document of this CompositeTemplate.  # noqa: E501
         :rtype: Document
@@ -104,6 +105,7 @@ class CompositeTemplate(object):
     def document(self, document):
         """Sets the document of this CompositeTemplate.
 
+        An optional document object that will act as the primary document in the composite template object. If the document node is present, it will take precedence over any server template or inline template documents. It always comes first. Only use this when you want to supply the document dynamically.  # noqa: E501
 
         :param document: The document of this CompositeTemplate.  # noqa: E501
         :type: Document

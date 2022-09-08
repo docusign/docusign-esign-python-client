@@ -43,6 +43,7 @@ class OrganizationsApi(object):
     def get_report_v2(self, organization_id, report_correlation_id, **kwargs):
         """
         Retrieves org level report by correlation id and site.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -69,6 +70,7 @@ class OrganizationsApi(object):
     def get_report_v2_with_http_info(self, organization_id, report_correlation_id, **kwargs):
         """
         Retrieves org level report by correlation id and site.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

@@ -171,6 +171,7 @@ class PermissionProfile(object):
     def settings(self):
         """Gets the settings of this PermissionProfile.  # noqa: E501
 
+        This object specifies the permissions that are associated with the account permission profile.  # noqa: E501
 
         :return: The settings of this PermissionProfile.  # noqa: E501
         :rtype: AccountRoleSettings
@@ -181,6 +182,7 @@ class PermissionProfile(object):
     def settings(self, settings):
         """Sets the settings of this PermissionProfile.
 
+        This object specifies the permissions that are associated with the account permission profile.  # noqa: E501
 
         :param settings: The settings of this PermissionProfile.  # noqa: E501
         :type: AccountRoleSettings

@@ -83,6 +83,7 @@ class LockInformation(object):
     def error_details(self):
         """Gets the error_details of this LockInformation.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this LockInformation.  # noqa: E501
         :rtype: ErrorDetails
@@ -93,6 +94,7 @@ class LockInformation(object):
     def error_details(self, error_details):
         """Sets the error_details of this LockInformation.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this LockInformation.  # noqa: E501
         :type: ErrorDetails
@@ -150,6 +152,7 @@ class LockInformation(object):
     def locked_by_user(self):
         """Gets the locked_by_user of this LockInformation.  # noqa: E501
 
+        A complex type containing information about the user that has the envelope or template locked.  # noqa: E501
 
         :return: The locked_by_user of this LockInformation.  # noqa: E501
         :rtype: UserInfo
@@ -160,6 +163,7 @@ class LockInformation(object):
     def locked_by_user(self, locked_by_user):
         """Sets the locked_by_user of this LockInformation.
 
+        A complex type containing information about the user that has the envelope or template locked.  # noqa: E501
 
         :param locked_by_user: The locked_by_user of this LockInformation.  # noqa: E501
         :type: UserInfo

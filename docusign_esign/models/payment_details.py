@@ -192,6 +192,7 @@ class PaymentDetails(object):
     def currency_code_metadata(self):
         """Gets the currency_code_metadata of this PaymentDetails.  # noqa: E501
 
+        Metadata that indicates whether the `currencyCode` property is editable.  # noqa: E501
 
         :return: The currency_code_metadata of this PaymentDetails.  # noqa: E501
         :rtype: PropertyMetadata
@@ -202,6 +203,7 @@ class PaymentDetails(object):
     def currency_code_metadata(self, currency_code_metadata):
         """Sets the currency_code_metadata of this PaymentDetails.
 
+        Metadata that indicates whether the `currencyCode` property is editable.  # noqa: E501
 
         :param currency_code_metadata: The currency_code_metadata of this PaymentDetails.  # noqa: E501
         :type: PropertyMetadata
@@ -305,6 +307,7 @@ class PaymentDetails(object):
     def gateway_account_id_metadata(self):
         """Gets the gateway_account_id_metadata of this PaymentDetails.  # noqa: E501
 
+        Metadata that indicates whether the `gatewayAccountId` property is editable.  # noqa: E501
 
         :return: The gateway_account_id_metadata of this PaymentDetails.  # noqa: E501
         :rtype: PropertyMetadata
@@ -315,6 +318,7 @@ class PaymentDetails(object):
     def gateway_account_id_metadata(self, gateway_account_id_metadata):
         """Sets the gateway_account_id_metadata of this PaymentDetails.
 
+        Metadata that indicates whether the `gatewayAccountId` property is editable.  # noqa: E501
 
         :param gateway_account_id_metadata: The gateway_account_id_metadata of this PaymentDetails.  # noqa: E501
         :type: PropertyMetadata
@@ -441,6 +445,7 @@ class PaymentDetails(object):
     def signer_values(self):
         """Gets the signer_values of this PaymentDetails.  # noqa: E501
 
+          # noqa: E501
 
         :return: The signer_values of this PaymentDetails.  # noqa: E501
         :rtype: PaymentSignerValues
@@ -451,6 +456,7 @@ class PaymentDetails(object):
     def signer_values(self, signer_values):
         """Sets the signer_values of this PaymentDetails.
 
+          # noqa: E501
 
         :param signer_values: The signer_values of this PaymentDetails.  # noqa: E501
         :type: PaymentSignerValues
@@ -508,6 +514,7 @@ class PaymentDetails(object):
     def total(self):
         """Gets the total of this PaymentDetails.  # noqa: E501
 
+        This read-only property is a currency-formatted string that represents the total of all the line items. The total is available only after the document is completed, which is when all recipients have paid and have completed all required fields.   # noqa: E501
 
         :return: The total of this PaymentDetails.  # noqa: E501
         :rtype: Money
@@ -518,6 +525,7 @@ class PaymentDetails(object):
     def total(self, total):
         """Sets the total of this PaymentDetails.
 
+        This read-only property is a currency-formatted string that represents the total of all the line items. The total is available only after the document is completed, which is when all recipients have paid and have completed all required fields.   # noqa: E501
 
         :param total: The total of this PaymentDetails.  # noqa: E501
         :type: Money

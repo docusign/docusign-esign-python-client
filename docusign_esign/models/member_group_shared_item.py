@@ -63,6 +63,7 @@ class MemberGroupSharedItem(object):
     def error_details(self):
         """Gets the error_details of this MemberGroupSharedItem.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this MemberGroupSharedItem.  # noqa: E501
         :rtype: ErrorDetails
@@ -73,6 +74,7 @@ class MemberGroupSharedItem(object):
     def error_details(self, error_details):
         """Sets the error_details of this MemberGroupSharedItem.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this MemberGroupSharedItem.  # noqa: E501
         :type: ErrorDetails
@@ -84,6 +86,7 @@ class MemberGroupSharedItem(object):
     def group(self):
         """Gets the group of this MemberGroupSharedItem.  # noqa: E501
 
+        The group sharing the item.  # noqa: E501
 
         :return: The group of this MemberGroupSharedItem.  # noqa: E501
         :rtype: Group
@@ -94,6 +97,7 @@ class MemberGroupSharedItem(object):
     def group(self, group):
         """Sets the group of this MemberGroupSharedItem.
 
+        The group sharing the item.  # noqa: E501
 
         :param group: The group of this MemberGroupSharedItem.  # noqa: E501
         :type: Group

@@ -262,6 +262,7 @@ class BulkSendingCopyRecipient(object):
     def email_notification(self):
         """Gets the email_notification of this BulkSendingCopyRecipient.  # noqa: E501
 
+        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
 
         :return: The email_notification of this BulkSendingCopyRecipient.  # noqa: E501
         :rtype: RecipientEmailNotification
@@ -272,6 +273,7 @@ class BulkSendingCopyRecipient(object):
     def email_notification(self, email_notification):
         """Sets the email_notification of this BulkSendingCopyRecipient.
 
+        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
 
         :param email_notification: The email_notification of this BulkSendingCopyRecipient.  # noqa: E501
         :type: RecipientEmailNotification
@@ -398,6 +400,7 @@ class BulkSendingCopyRecipient(object):
     def id_check_information_input(self):
         """Gets the id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
 
+        An object that contains input information related to a recipient ID check.  # noqa: E501
 
         :return: The id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
         :rtype: IdCheckInformationInput
@@ -408,6 +411,7 @@ class BulkSendingCopyRecipient(object):
     def id_check_information_input(self, id_check_information_input):
         """Sets the id_check_information_input of this BulkSendingCopyRecipient.
 
+        An object that contains input information related to a recipient ID check.  # noqa: E501
 
         :param id_check_information_input: The id_check_information_input of this BulkSendingCopyRecipient.  # noqa: E501
         :type: IdCheckInformationInput
@@ -488,6 +492,7 @@ class BulkSendingCopyRecipient(object):
     def phone_authentication(self):
         """Gets the phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
 
+        When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.    # noqa: E501
 
         :return: The phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
         :rtype: RecipientPhoneAuthentication
@@ -498,6 +503,7 @@ class BulkSendingCopyRecipient(object):
     def phone_authentication(self, phone_authentication):
         """Sets the phone_authentication of this BulkSendingCopyRecipient.
 
+        When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.    # noqa: E501
 
         :param phone_authentication: The phone_authentication of this BulkSendingCopyRecipient.  # noqa: E501
         :type: RecipientPhoneAuthentication
@@ -624,6 +630,7 @@ class BulkSendingCopyRecipient(object):
     def sms_authentication(self):
         """Gets the sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
 
+        When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.     # noqa: E501
 
         :return: The sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
         :rtype: RecipientSMSAuthentication
@@ -634,6 +641,7 @@ class BulkSendingCopyRecipient(object):
     def sms_authentication(self, sms_authentication):
         """Sets the sms_authentication of this BulkSendingCopyRecipient.
 
+        When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.     # noqa: E501
 
         :param sms_authentication: The sms_authentication of this BulkSendingCopyRecipient.  # noqa: E501
         :type: RecipientSMSAuthentication

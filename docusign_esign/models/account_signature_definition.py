@@ -119,6 +119,7 @@ class AccountSignatureDefinition(object):
     def date_stamp_properties(self):
         """Gets the date_stamp_properties of this AccountSignatureDefinition.  # noqa: E501
 
+        Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.  # noqa: E501
 
         :return: The date_stamp_properties of this AccountSignatureDefinition.  # noqa: E501
         :rtype: DateStampProperties
@@ -129,6 +130,7 @@ class AccountSignatureDefinition(object):
     def date_stamp_properties(self, date_stamp_properties):
         """Sets the date_stamp_properties of this AccountSignatureDefinition.
 
+        Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.  # noqa: E501
 
         :param date_stamp_properties: The date_stamp_properties of this AccountSignatureDefinition.  # noqa: E501
         :type: DateStampProperties

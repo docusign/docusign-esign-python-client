@@ -375,6 +375,7 @@ class UsersApi(object):
     def delete_contact_with_id(self, account_id, contact_id, **kwargs):
         """
         Replaces a particular contact associated with an account for the DocuSign service.
+        This method deletes a contact associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -401,6 +402,7 @@ class UsersApi(object):
     def delete_contact_with_id_with_http_info(self, account_id, contact_id, **kwargs):
         """
         Replaces a particular contact associated with an account for the DocuSign service.
+        This method deletes a contact associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -483,6 +485,7 @@ class UsersApi(object):
     def delete_contacts(self, account_id, **kwargs):
         """
         Delete contacts associated with an account for the DocuSign service.
+        This method deletes multiple contacts associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -509,6 +512,7 @@ class UsersApi(object):
     def delete_contacts_with_http_info(self, account_id, **kwargs):
         """
         Delete contacts associated with an account for the DocuSign service.
+        This method deletes multiple contacts associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1053,6 +1057,7 @@ class UsersApi(object):
     def get_contact_by_id(self, account_id, contact_id, **kwargs):
         """
         Gets a particular contact associated with the user's account.
+        This method returns one or more contacts associated with a DocuSign account. You can also retrieve contacts from connected [cloud storage][CloudStorage] providers by using the `cloud_provider` query parameter. By default, contacts are retrieved from the DocuSign account's default address book.  To return a specific contact, use the `contactId` query parameter. To return all contacts associated with an account, omit this parameter.  [CloudStorage]: /docs/esign-rest-api/reference/cloudstorage/
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1080,6 +1085,7 @@ class UsersApi(object):
     def get_contact_by_id_with_http_info(self, account_id, contact_id, **kwargs):
         """
         Gets a particular contact associated with the user's account.
+        This method returns one or more contacts associated with a DocuSign account. You can also retrieve contacts from connected [cloud storage][CloudStorage] providers by using the `cloud_provider` query parameter. By default, contacts are retrieved from the DocuSign account's default address book.  To return a specific contact, use the `contactId` query parameter. To return all contacts associated with an account, omit this parameter.  [CloudStorage]: /docs/esign-rest-api/reference/cloudstorage/
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2241,6 +2247,7 @@ class UsersApi(object):
     def post_contacts(self, account_id, **kwargs):
         """
         Imports multiple new contacts into the contacts collection from CSV, JSON, or XML (based on content type).
+        This method adds multiple contacts into a contacts list.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2267,6 +2274,7 @@ class UsersApi(object):
     def post_contacts_with_http_info(self, account_id, **kwargs):
         """
         Imports multiple new contacts into the contacts collection from CSV, JSON, or XML (based on content type).
+        This method adds multiple contacts into a contacts list.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2346,6 +2354,7 @@ class UsersApi(object):
     def put_contacts(self, account_id, **kwargs):
         """
         Replaces contacts associated with an account for the DocuSign service.
+        This method updates one or more contacts associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2372,6 +2381,7 @@ class UsersApi(object):
     def put_contacts_with_http_info(self, account_id, **kwargs):
         """
         Replaces contacts associated with an account for the DocuSign service.
+        This method updates one or more contacts associated with an account.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3168,6 +3178,7 @@ class UsersApi(object):
     def update_signatures(self, account_id, user_id, **kwargs):
         """
         Adds/updates a user signature.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3195,6 +3206,7 @@ class UsersApi(object):
     def update_signatures_with_http_info(self, account_id, user_id, **kwargs):
         """
         Adds/updates a user signature.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3280,6 +3292,7 @@ class UsersApi(object):
     def update_user(self, account_id, user_id, **kwargs):
         """
         Updates the specified user information.
+        To update user information for a specific user, submit a [Users](#Users) object with updated field values in the request body of this operation.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3308,6 +3321,7 @@ class UsersApi(object):
     def update_user_with_http_info(self, account_id, user_id, **kwargs):
         """
         Updates the specified user information.
+        To update user information for a specific user, submit a [Users](#Users) object with updated field values in the request body of this operation.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3396,6 +3410,7 @@ class UsersApi(object):
     def update_users(self, account_id, **kwargs):
         """
         Change one or more user in the specified account.
+        This method updates the information about one or more account users.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3423,6 +3438,7 @@ class UsersApi(object):
     def update_users_with_http_info(self, account_id, **kwargs):
         """
         Change one or more user in the specified account.
+        This method updates the information about one or more account users.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

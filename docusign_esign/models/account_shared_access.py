@@ -133,6 +133,7 @@ class AccountSharedAccess(object):
     def error_details(self):
         """Gets the error_details of this AccountSharedAccess.  # noqa: E501
 
+        A complex type containing an errorCode and message identifying the error that occurred.  # noqa: E501
 
         :return: The error_details of this AccountSharedAccess.  # noqa: E501
         :rtype: ErrorDetails
@@ -143,6 +144,7 @@ class AccountSharedAccess(object):
     def error_details(self, error_details):
         """Sets the error_details of this AccountSharedAccess.
 
+        A complex type containing an errorCode and message identifying the error that occurred.  # noqa: E501
 
         :param error_details: The error_details of this AccountSharedAccess.  # noqa: E501
         :type: ErrorDetails

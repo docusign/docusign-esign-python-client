@@ -113,6 +113,7 @@ class ConditionalRecipientRule(object):
     def recipient_group(self):
         """Gets the recipient_group of this ConditionalRecipientRule.  # noqa: E501
 
+        A set of recipients that may be used for the envelope, depending on the `conditions` defined.  # noqa: E501
 
         :return: The recipient_group of this ConditionalRecipientRule.  # noqa: E501
         :rtype: RecipientGroup
@@ -123,6 +124,7 @@ class ConditionalRecipientRule(object):
     def recipient_group(self, recipient_group):
         """Sets the recipient_group of this ConditionalRecipientRule.
 
+        A set of recipients that may be used for the envelope, depending on the `conditions` defined.  # noqa: E501
 
         :param recipient_group: The recipient_group of this ConditionalRecipientRule.  # noqa: E501
         :type: RecipientGroup

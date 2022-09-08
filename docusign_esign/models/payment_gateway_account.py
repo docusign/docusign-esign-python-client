@@ -130,6 +130,7 @@ class PaymentGatewayAccount(object):
     def config(self):
         """Gets the config of this PaymentGatewayAccount.  # noqa: E501
 
+        This property contains metadata about the payment gateway account's configuration such as the API key, `userId`, and `merchantId` details.  # noqa: E501
 
         :return: The config of this PaymentGatewayAccount.  # noqa: E501
         :rtype: PaymentGatewayAccountSetting
@@ -140,6 +141,7 @@ class PaymentGatewayAccount(object):
     def config(self, config):
         """Sets the config of this PaymentGatewayAccount.
 
+        This property contains metadata about the payment gateway account's configuration such as the API key, `userId`, and `merchantId` details.  # noqa: E501
 
         :param config: The config of this PaymentGatewayAccount.  # noqa: E501
         :type: PaymentGatewayAccountSetting
@@ -312,6 +314,7 @@ class PaymentGatewayAccount(object):
     def pay_pal_legacy_settings(self):
         """Gets the pay_pal_legacy_settings of this PaymentGatewayAccount.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The pay_pal_legacy_settings of this PaymentGatewayAccount.  # noqa: E501
         :rtype: PayPalLegacySettings
@@ -322,6 +325,7 @@ class PaymentGatewayAccount(object):
     def pay_pal_legacy_settings(self, pay_pal_legacy_settings):
         """Sets the pay_pal_legacy_settings of this PaymentGatewayAccount.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param pay_pal_legacy_settings: The pay_pal_legacy_settings of this PaymentGatewayAccount.  # noqa: E501
         :type: PayPalLegacySettings

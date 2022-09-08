@@ -551,6 +551,7 @@ class UserSettingsInformation(object):
     def account_management_granular(self):
         """Gets the account_management_granular of this UserSettingsInformation.  # noqa: E501
 
+        Describes which account management capabilities a user has.  # noqa: E501
 
         :return: The account_management_granular of this UserSettingsInformation.  # noqa: E501
         :rtype: UserAccountManagementGranularInformation
@@ -561,6 +562,7 @@ class UserSettingsInformation(object):
     def account_management_granular(self, account_management_granular):
         """Sets the account_management_granular of this UserSettingsInformation.
 
+        Describes which account management capabilities a user has.  # noqa: E501
 
         :param account_management_granular: The account_management_granular of this UserSettingsInformation.  # noqa: E501
         :type: UserAccountManagementGranularInformation
@@ -595,6 +597,7 @@ class UserSettingsInformation(object):
     def admin_only_metadata(self):
         """Gets the admin_only_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The admin_only_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -605,6 +608,7 @@ class UserSettingsInformation(object):
     def admin_only_metadata(self, admin_only_metadata):
         """Sets the admin_only_metadata of this UserSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param admin_only_metadata: The admin_only_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -662,6 +666,7 @@ class UserSettingsInformation(object):
     def allow_envelope_transfer_to_metadata(self):
         """Gets the allow_envelope_transfer_to_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The allow_envelope_transfer_to_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -672,6 +677,7 @@ class UserSettingsInformation(object):
     def allow_envelope_transfer_to_metadata(self, allow_envelope_transfer_to_metadata):
         """Sets the allow_envelope_transfer_to_metadata of this UserSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param allow_envelope_transfer_to_metadata: The allow_envelope_transfer_to_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -706,6 +712,7 @@ class UserSettingsInformation(object):
     def allow_eseal_recipients_metadata(self):
         """Gets the allow_eseal_recipients_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `allowEsealRecipientsMetadata` property.  # noqa: E501
 
         :return: The allow_eseal_recipients_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -716,6 +723,7 @@ class UserSettingsInformation(object):
     def allow_eseal_recipients_metadata(self, allow_eseal_recipients_metadata):
         """Sets the allow_eseal_recipients_metadata of this UserSettingsInformation.
 
+        Metadata about the `allowEsealRecipientsMetadata` property.  # noqa: E501
 
         :param allow_eseal_recipients_metadata: The allow_eseal_recipients_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -750,6 +758,7 @@ class UserSettingsInformation(object):
     def allow_power_forms_admin_to_access_all_power_form_envelope_metadata(self):
         """Gets the allow_power_forms_admin_to_access_all_power_form_envelope_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata` property.  # noqa: E501
 
         :return: The allow_power_forms_admin_to_access_all_power_form_envelope_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -760,6 +769,7 @@ class UserSettingsInformation(object):
     def allow_power_forms_admin_to_access_all_power_form_envelope_metadata(self, allow_power_forms_admin_to_access_all_power_form_envelope_metadata):
         """Sets the allow_power_forms_admin_to_access_all_power_form_envelope_metadata of this UserSettingsInformation.
 
+        Metadata about the `allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata` property.  # noqa: E501
 
         :param allow_power_forms_admin_to_access_all_power_form_envelope_metadata: The allow_power_forms_admin_to_access_all_power_form_envelope_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -794,6 +804,7 @@ class UserSettingsInformation(object):
     def allow_recipient_language_selection_metadata(self):
         """Gets the allow_recipient_language_selection_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata for allowRecipientLanguageSelection.  # noqa: E501
 
         :return: The allow_recipient_language_selection_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -804,6 +815,7 @@ class UserSettingsInformation(object):
     def allow_recipient_language_selection_metadata(self, allow_recipient_language_selection_metadata):
         """Sets the allow_recipient_language_selection_metadata of this UserSettingsInformation.
 
+        Metadata for allowRecipientLanguageSelection.  # noqa: E501
 
         :param allow_recipient_language_selection_metadata: The allow_recipient_language_selection_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -838,6 +850,7 @@ class UserSettingsInformation(object):
     def allow_send_on_behalf_of_metadata(self):
         """Gets the allow_send_on_behalf_of_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata for allowSendOnBehalfOf.  # noqa: E501
 
         :return: The allow_send_on_behalf_of_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -848,6 +861,7 @@ class UserSettingsInformation(object):
     def allow_send_on_behalf_of_metadata(self, allow_send_on_behalf_of_metadata):
         """Sets the allow_send_on_behalf_of_metadata of this UserSettingsInformation.
 
+        Metadata for allowSendOnBehalfOf.  # noqa: E501
 
         :param allow_send_on_behalf_of_metadata: The allow_send_on_behalf_of_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -882,6 +896,7 @@ class UserSettingsInformation(object):
     def allow_supplemental_documents_metadata(self):
         """Gets the allow_supplemental_documents_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `allowSupplementalDocuments` property is editable.  # noqa: E501
 
         :return: The allow_supplemental_documents_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -892,6 +907,7 @@ class UserSettingsInformation(object):
     def allow_supplemental_documents_metadata(self, allow_supplemental_documents_metadata):
         """Sets the allow_supplemental_documents_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `allowSupplementalDocuments` property is editable.  # noqa: E501
 
         :param allow_supplemental_documents_metadata: The allow_supplemental_documents_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -949,6 +965,7 @@ class UserSettingsInformation(object):
     def api_account_wide_access_metadata(self):
         """Gets the api_account_wide_access_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata for apiAccountWideAccess.  # noqa: E501
 
         :return: The api_account_wide_access_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -959,6 +976,7 @@ class UserSettingsInformation(object):
     def api_account_wide_access_metadata(self, api_account_wide_access_metadata):
         """Sets the api_account_wide_access_metadata of this UserSettingsInformation.
 
+        Metadata for apiAccountWideAccess.  # noqa: E501
 
         :param api_account_wide_access_metadata: The api_account_wide_access_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -993,6 +1011,7 @@ class UserSettingsInformation(object):
     def api_can_export_ac_metadata(self):
         """Gets the api_can_export_ac_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `apiCanExportACMetadata` property.  # noqa: E501
 
         :return: The api_can_export_ac_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1003,6 +1022,7 @@ class UserSettingsInformation(object):
     def api_can_export_ac_metadata(self, api_can_export_ac_metadata):
         """Sets the api_can_export_ac_metadata of this UserSettingsInformation.
 
+        Metadata about the `apiCanExportACMetadata` property.  # noqa: E501
 
         :param api_can_export_ac_metadata: The api_can_export_ac_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1037,6 +1057,7 @@ class UserSettingsInformation(object):
     def bulk_send_metadata(self):
         """Gets the bulk_send_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `bulkSend` property is editable.   # noqa: E501
 
         :return: The bulk_send_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1047,6 +1068,7 @@ class UserSettingsInformation(object):
     def bulk_send_metadata(self, bulk_send_metadata):
         """Sets the bulk_send_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `bulkSend` property is editable.   # noqa: E501
 
         :param bulk_send_metadata: The bulk_send_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1081,6 +1103,7 @@ class UserSettingsInformation(object):
     def can_charge_account_metadata(self):
         """Gets the can_charge_account_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The can_charge_account_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1091,6 +1114,7 @@ class UserSettingsInformation(object):
     def can_charge_account_metadata(self, can_charge_account_metadata):
         """Sets the can_charge_account_metadata of this UserSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param can_charge_account_metadata: The can_charge_account_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1125,6 +1149,7 @@ class UserSettingsInformation(object):
     def can_edit_shared_addressbook_metadata(self):
         """Gets the can_edit_shared_addressbook_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `canEditSharedAddressbookMetadata` property.  # noqa: E501
 
         :return: The can_edit_shared_addressbook_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1135,6 +1160,7 @@ class UserSettingsInformation(object):
     def can_edit_shared_addressbook_metadata(self, can_edit_shared_addressbook_metadata):
         """Sets the can_edit_shared_addressbook_metadata of this UserSettingsInformation.
 
+        Metadata about the `canEditSharedAddressbookMetadata` property.  # noqa: E501
 
         :param can_edit_shared_addressbook_metadata: The can_edit_shared_addressbook_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1169,6 +1195,7 @@ class UserSettingsInformation(object):
     def can_lock_envelopes_metadata(self):
         """Gets the can_lock_envelopes_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `canLockEnvelopes` property.  # noqa: E501
 
         :return: The can_lock_envelopes_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1179,6 +1206,7 @@ class UserSettingsInformation(object):
     def can_lock_envelopes_metadata(self, can_lock_envelopes_metadata):
         """Sets the can_lock_envelopes_metadata of this UserSettingsInformation.
 
+        Metadata about the `canLockEnvelopes` property.  # noqa: E501
 
         :param can_lock_envelopes_metadata: The can_lock_envelopes_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1213,6 +1241,7 @@ class UserSettingsInformation(object):
     def can_manage_account_metadata(self):
         """Gets the can_manage_account_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `canManageAccountMetadata` property.  # noqa: E501
 
         :return: The can_manage_account_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1223,6 +1252,7 @@ class UserSettingsInformation(object):
     def can_manage_account_metadata(self, can_manage_account_metadata):
         """Sets the can_manage_account_metadata of this UserSettingsInformation.
 
+        Metadata about the `canManageAccountMetadata` property.  # noqa: E501
 
         :param can_manage_account_metadata: The can_manage_account_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1257,6 +1287,7 @@ class UserSettingsInformation(object):
     def can_manage_distributor_metadata(self):
         """Gets the can_manage_distributor_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `canManageDistributor` property.  # noqa: E501
 
         :return: The can_manage_distributor_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1267,6 +1298,7 @@ class UserSettingsInformation(object):
     def can_manage_distributor_metadata(self, can_manage_distributor_metadata):
         """Sets the can_manage_distributor_metadata of this UserSettingsInformation.
 
+        Metadata about the `canManageDistributor` property.  # noqa: E501
 
         :param can_manage_distributor_metadata: The can_manage_distributor_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1301,6 +1333,7 @@ class UserSettingsInformation(object):
     def can_manage_templates_metadata(self):
         """Gets the can_manage_templates_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `canManageTemplates` property.  # noqa: E501
 
         :return: The can_manage_templates_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1311,6 +1344,7 @@ class UserSettingsInformation(object):
     def can_manage_templates_metadata(self, can_manage_templates_metadata):
         """Sets the can_manage_templates_metadata of this UserSettingsInformation.
 
+        Metadata about the `canManageTemplates` property.  # noqa: E501
 
         :param can_manage_templates_metadata: The can_manage_templates_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1345,6 +1379,7 @@ class UserSettingsInformation(object):
     def can_send_api_requests_metadata(self):
         """Gets the can_send_api_requests_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `canSendAPIRequests` property.  # noqa: E501
 
         :return: The can_send_api_requests_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1355,6 +1390,7 @@ class UserSettingsInformation(object):
     def can_send_api_requests_metadata(self, can_send_api_requests_metadata):
         """Sets the can_send_api_requests_metadata of this UserSettingsInformation.
 
+        Metadata about the `canSendAPIRequests` property.  # noqa: E501
 
         :param can_send_api_requests_metadata: The can_send_api_requests_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1389,6 +1425,7 @@ class UserSettingsInformation(object):
     def can_send_envelope_metadata(self):
         """Gets the can_send_envelope_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `canSendEnvelope` property.  # noqa: E501
 
         :return: The can_send_envelope_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1399,6 +1436,7 @@ class UserSettingsInformation(object):
     def can_send_envelope_metadata(self, can_send_envelope_metadata):
         """Sets the can_send_envelope_metadata of this UserSettingsInformation.
 
+        Metadata about the `canSendEnvelope` property.  # noqa: E501
 
         :param can_send_envelope_metadata: The can_send_envelope_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1433,6 +1471,7 @@ class UserSettingsInformation(object):
     def can_send_envelopes_via_sms_metadata(self):
         """Gets the can_send_envelopes_via_sms_metadata of this UserSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_send_envelopes_via_sms_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1443,6 +1482,7 @@ class UserSettingsInformation(object):
     def can_send_envelopes_via_sms_metadata(self, can_send_envelopes_via_sms_metadata):
         """Sets the can_send_envelopes_via_sms_metadata of this UserSettingsInformation.
 
+          # noqa: E501
 
         :param can_send_envelopes_via_sms_metadata: The can_send_envelopes_via_sms_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1477,6 +1517,7 @@ class UserSettingsInformation(object):
     def can_sign_envelope_metadata(self):
         """Gets the can_sign_envelope_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `canSignEnvelope` property.  # noqa: E501
 
         :return: The can_sign_envelope_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1487,6 +1528,7 @@ class UserSettingsInformation(object):
     def can_sign_envelope_metadata(self, can_sign_envelope_metadata):
         """Sets the can_sign_envelope_metadata of this UserSettingsInformation.
 
+        Metadata about the `canSignEnvelope` property.  # noqa: E501
 
         :param can_sign_envelope_metadata: The can_sign_envelope_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1521,6 +1563,7 @@ class UserSettingsInformation(object):
     def can_use_scratchpad_metadata(self):
         """Gets the can_use_scratchpad_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `canUseScratchpad` property.  # noqa: E501
 
         :return: The can_use_scratchpad_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1531,6 +1574,7 @@ class UserSettingsInformation(object):
     def can_use_scratchpad_metadata(self, can_use_scratchpad_metadata):
         """Sets the can_use_scratchpad_metadata of this UserSettingsInformation.
 
+        Metadata about the `canUseScratchpad` property.  # noqa: E501
 
         :param can_use_scratchpad_metadata: The can_use_scratchpad_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1565,6 +1609,7 @@ class UserSettingsInformation(object):
     def can_use_smart_contracts_metadata(self):
         """Gets the can_use_smart_contracts_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The can_use_smart_contracts_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1575,6 +1620,7 @@ class UserSettingsInformation(object):
     def can_use_smart_contracts_metadata(self, can_use_smart_contracts_metadata):
         """Sets the can_use_smart_contracts_metadata of this UserSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param can_use_smart_contracts_metadata: The can_use_smart_contracts_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1609,6 +1655,7 @@ class UserSettingsInformation(object):
     def disable_document_upload_metadata(self):
         """Gets the disable_document_upload_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableDocumentUpload` property is editable.   # noqa: E501
 
         :return: The disable_document_upload_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1619,6 +1666,7 @@ class UserSettingsInformation(object):
     def disable_document_upload_metadata(self, disable_document_upload_metadata):
         """Sets the disable_document_upload_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `disableDocumentUpload` property is editable.   # noqa: E501
 
         :param disable_document_upload_metadata: The disable_document_upload_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1653,6 +1701,7 @@ class UserSettingsInformation(object):
     def disable_other_actions_metadata(self):
         """Gets the disable_other_actions_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `disableOtherActions` property is editable.   # noqa: E501
 
         :return: The disable_other_actions_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1663,6 +1712,7 @@ class UserSettingsInformation(object):
     def disable_other_actions_metadata(self, disable_other_actions_metadata):
         """Sets the disable_other_actions_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `disableOtherActions` property is editable.   # noqa: E501
 
         :param disable_other_actions_metadata: The disable_other_actions_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1697,6 +1747,7 @@ class UserSettingsInformation(object):
     def enable_ds_pro_metadata(self):
         """Gets the enable_ds_pro_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableDSPro` property is editable.   # noqa: E501
 
         :return: The enable_ds_pro_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1707,6 +1758,7 @@ class UserSettingsInformation(object):
     def enable_ds_pro_metadata(self, enable_ds_pro_metadata):
         """Sets the enable_ds_pro_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `enableDSPro` property is editable.   # noqa: E501
 
         :param enable_ds_pro_metadata: The enable_ds_pro_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1785,6 +1837,7 @@ class UserSettingsInformation(object):
     def enable_sequential_signing_api_metadata(self):
         """Gets the enable_sequential_signing_api_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSequentialSigningAPI` property is editable.   # noqa: E501
 
         :return: The enable_sequential_signing_api_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1795,6 +1848,7 @@ class UserSettingsInformation(object):
     def enable_sequential_signing_api_metadata(self, enable_sequential_signing_api_metadata):
         """Sets the enable_sequential_signing_api_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `enableSequentialSigningAPI` property is editable.   # noqa: E501
 
         :param enable_sequential_signing_api_metadata: The enable_sequential_signing_api_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1829,6 +1883,7 @@ class UserSettingsInformation(object):
     def enable_sequential_signing_ui_metadata(self):
         """Gets the enable_sequential_signing_ui_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSequentialSigningUI` property is editable.   # noqa: E501
 
         :return: The enable_sequential_signing_ui_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1839,6 +1894,7 @@ class UserSettingsInformation(object):
     def enable_sequential_signing_ui_metadata(self, enable_sequential_signing_ui_metadata):
         """Sets the enable_sequential_signing_ui_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `enableSequentialSigningUI` property is editable.   # noqa: E501
 
         :param enable_sequential_signing_ui_metadata: The enable_sequential_signing_ui_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1873,6 +1929,7 @@ class UserSettingsInformation(object):
     def enable_signer_attachments_metadata(self):
         """Gets the enable_signer_attachments_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSignerAttachments` property is editable.   # noqa: E501
 
         :return: The enable_signer_attachments_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1883,6 +1940,7 @@ class UserSettingsInformation(object):
     def enable_signer_attachments_metadata(self, enable_signer_attachments_metadata):
         """Sets the enable_signer_attachments_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `enableSignerAttachments` property is editable.   # noqa: E501
 
         :param enable_signer_attachments_metadata: The enable_signer_attachments_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1917,6 +1975,7 @@ class UserSettingsInformation(object):
     def enable_sign_on_paper_override_metadata(self):
         """Gets the enable_sign_on_paper_override_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableSignOnPaperOverride` property is editable.   # noqa: E501
 
         :return: The enable_sign_on_paper_override_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1927,6 +1986,7 @@ class UserSettingsInformation(object):
     def enable_sign_on_paper_override_metadata(self, enable_sign_on_paper_override_metadata):
         """Sets the enable_sign_on_paper_override_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `enableSignOnPaperOverride` property is editable.   # noqa: E501
 
         :param enable_sign_on_paper_override_metadata: The enable_sign_on_paper_override_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -1961,6 +2021,7 @@ class UserSettingsInformation(object):
     def enable_transaction_point_metadata(self):
         """Gets the enable_transaction_point_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The enable_transaction_point_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1971,6 +2032,7 @@ class UserSettingsInformation(object):
     def enable_transaction_point_metadata(self, enable_transaction_point_metadata):
         """Sets the enable_transaction_point_metadata of this UserSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param enable_transaction_point_metadata: The enable_transaction_point_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2005,6 +2067,7 @@ class UserSettingsInformation(object):
     def enable_vaulting_metadata(self):
         """Gets the enable_vaulting_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `enableVaulting` property is editable.   # noqa: E501
 
         :return: The enable_vaulting_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2015,6 +2078,7 @@ class UserSettingsInformation(object):
     def enable_vaulting_metadata(self, enable_vaulting_metadata):
         """Sets the enable_vaulting_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `enableVaulting` property is editable.   # noqa: E501
 
         :param enable_vaulting_metadata: The enable_vaulting_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2072,6 +2136,7 @@ class UserSettingsInformation(object):
     def locale_metadata(self):
         """Gets the locale_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `locale` property.  # noqa: E501
 
         :return: The locale_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2082,6 +2147,7 @@ class UserSettingsInformation(object):
     def locale_metadata(self, locale_metadata):
         """Sets the locale_metadata of this UserSettingsInformation.
 
+        Metadata about the `locale` property.  # noqa: E501
 
         :param locale_metadata: The locale_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2093,6 +2159,7 @@ class UserSettingsInformation(object):
     def locale_policy(self):
         """Gets the locale_policy of this UserSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The locale_policy of this UserSettingsInformation.  # noqa: E501
         :rtype: LocalePolicy
@@ -2103,6 +2170,7 @@ class UserSettingsInformation(object):
     def locale_policy(self, locale_policy):
         """Sets the locale_policy of this UserSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param locale_policy: The locale_policy of this UserSettingsInformation.  # noqa: E501
         :type: LocalePolicy
@@ -2137,6 +2205,7 @@ class UserSettingsInformation(object):
     def manage_clickwraps_mode_metadata(self):
         """Gets the manage_clickwraps_mode_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `manageClickwrapsMode` property.  # noqa: E501
 
         :return: The manage_clickwraps_mode_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2147,6 +2216,7 @@ class UserSettingsInformation(object):
     def manage_clickwraps_mode_metadata(self, manage_clickwraps_mode_metadata):
         """Sets the manage_clickwraps_mode_metadata of this UserSettingsInformation.
 
+        Metadata about the `manageClickwrapsMode` property.  # noqa: E501
 
         :param manage_clickwraps_mode_metadata: The manage_clickwraps_mode_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2181,6 +2251,7 @@ class UserSettingsInformation(object):
     def modified_by_metadata(self):
         """Gets the modified_by_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `modifiedBy` property.  # noqa: E501
 
         :return: The modified_by_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2191,6 +2262,7 @@ class UserSettingsInformation(object):
     def modified_by_metadata(self, modified_by_metadata):
         """Sets the modified_by_metadata of this UserSettingsInformation.
 
+        Metadata about the `modifiedBy` property.  # noqa: E501
 
         :param modified_by_metadata: The modified_by_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2225,6 +2297,7 @@ class UserSettingsInformation(object):
     def modified_date_metadata(self):
         """Gets the modified_date_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `modifiedDate` property.  # noqa: E501
 
         :return: The modified_date_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2235,6 +2308,7 @@ class UserSettingsInformation(object):
     def modified_date_metadata(self, modified_date_metadata):
         """Sets the modified_date_metadata of this UserSettingsInformation.
 
+        Metadata about the `modifiedDate` property.  # noqa: E501
 
         :param modified_date_metadata: The modified_date_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2269,6 +2343,7 @@ class UserSettingsInformation(object):
     def modified_page_metadata(self):
         """Gets the modified_page_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `modifiedPage` property.  # noqa: E501
 
         :return: The modified_page_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2279,6 +2354,7 @@ class UserSettingsInformation(object):
     def modified_page_metadata(self, modified_page_metadata):
         """Sets the modified_page_metadata of this UserSettingsInformation.
 
+        Metadata about the `modifiedPage` property.  # noqa: E501
 
         :param modified_page_metadata: The modified_page_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2313,6 +2389,7 @@ class UserSettingsInformation(object):
     def new_send_ui_metadata(self):
         """Gets the new_send_ui_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `newSendUI` property.  # noqa: E501
 
         :return: The new_send_ui_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2323,6 +2400,7 @@ class UserSettingsInformation(object):
     def new_send_ui_metadata(self, new_send_ui_metadata):
         """Sets the new_send_ui_metadata of this UserSettingsInformation.
 
+        Metadata about the `newSendUI` property.  # noqa: E501
 
         :param new_send_ui_metadata: The new_send_ui_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2357,6 +2435,7 @@ class UserSettingsInformation(object):
     def power_form_mode_metadata(self):
         """Gets the power_form_mode_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `powerFormMode` property.  # noqa: E501
 
         :return: The power_form_mode_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2367,6 +2446,7 @@ class UserSettingsInformation(object):
     def power_form_mode_metadata(self, power_form_mode_metadata):
         """Sets the power_form_mode_metadata of this UserSettingsInformation.
 
+        Metadata about the `powerFormMode` property.  # noqa: E501
 
         :param power_form_mode_metadata: The power_form_mode_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2401,6 +2481,7 @@ class UserSettingsInformation(object):
     def recipient_viewed_notification_metadata(self):
         """Gets the recipient_viewed_notification_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `recipientViewedNotification` property.  # noqa: E501
 
         :return: The recipient_viewed_notification_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2411,6 +2492,7 @@ class UserSettingsInformation(object):
     def recipient_viewed_notification_metadata(self, recipient_viewed_notification_metadata):
         """Sets the recipient_viewed_notification_metadata of this UserSettingsInformation.
 
+        Metadata about the `recipientViewedNotification` property.  # noqa: E501
 
         :param recipient_viewed_notification_metadata: The recipient_viewed_notification_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2468,6 +2550,7 @@ class UserSettingsInformation(object):
     def self_signed_recipient_email_document_metadata(self):
         """Gets the self_signed_recipient_email_document_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable.   # noqa: E501
 
         :return: The self_signed_recipient_email_document_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2478,6 +2561,7 @@ class UserSettingsInformation(object):
     def self_signed_recipient_email_document_metadata(self, self_signed_recipient_email_document_metadata):
         """Sets the self_signed_recipient_email_document_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable.   # noqa: E501
 
         :param self_signed_recipient_email_document_metadata: The self_signed_recipient_email_document_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2489,6 +2573,7 @@ class UserSettingsInformation(object):
     def sender_email_notifications(self):
         """Gets the sender_email_notifications of this UserSettingsInformation.  # noqa: E501
 
+          An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed     # noqa: E501
 
         :return: The sender_email_notifications of this UserSettingsInformation.  # noqa: E501
         :rtype: SenderEmailNotifications
@@ -2499,6 +2584,7 @@ class UserSettingsInformation(object):
     def sender_email_notifications(self, sender_email_notifications):
         """Sets the sender_email_notifications of this UserSettingsInformation.
 
+          An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed     # noqa: E501
 
         :param sender_email_notifications: The sender_email_notifications of this UserSettingsInformation.  # noqa: E501
         :type: SenderEmailNotifications
@@ -2510,6 +2596,7 @@ class UserSettingsInformation(object):
     def signer_email_notifications(self):
         """Gets the signer_email_notifications of this UserSettingsInformation.  # noqa: E501
 
+        An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created.   # noqa: E501
 
         :return: The signer_email_notifications of this UserSettingsInformation.  # noqa: E501
         :rtype: SignerEmailNotifications
@@ -2520,6 +2607,7 @@ class UserSettingsInformation(object):
     def signer_email_notifications(self, signer_email_notifications):
         """Sets the signer_email_notifications of this UserSettingsInformation.
 
+        An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created.   # noqa: E501
 
         :param signer_email_notifications: The signer_email_notifications of this UserSettingsInformation.  # noqa: E501
         :type: SignerEmailNotifications
@@ -2577,6 +2665,7 @@ class UserSettingsInformation(object):
     def supplemental_documents_must_accept_metadata(self):
         """Gets the supplemental_documents_must_accept_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable.   # noqa: E501
 
         :return: The supplemental_documents_must_accept_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2587,6 +2676,7 @@ class UserSettingsInformation(object):
     def supplemental_documents_must_accept_metadata(self, supplemental_documents_must_accept_metadata):
         """Sets the supplemental_documents_must_accept_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable.   # noqa: E501
 
         :param supplemental_documents_must_accept_metadata: The supplemental_documents_must_accept_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2621,6 +2711,7 @@ class UserSettingsInformation(object):
     def supplemental_documents_must_read_metadata(self):
         """Gets the supplemental_documents_must_read_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable.   # noqa: E501
 
         :return: The supplemental_documents_must_read_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2631,6 +2722,7 @@ class UserSettingsInformation(object):
     def supplemental_documents_must_read_metadata(self, supplemental_documents_must_read_metadata):
         """Sets the supplemental_documents_must_read_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable.   # noqa: E501
 
         :param supplemental_documents_must_read_metadata: The supplemental_documents_must_read_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2665,6 +2757,7 @@ class UserSettingsInformation(object):
     def supplemental_documents_must_view_metadata(self):
         """Gets the supplemental_documents_must_view_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata that indicates whether the `supplementalDocumentsMustView` property is editable.   # noqa: E501
 
         :return: The supplemental_documents_must_view_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2675,6 +2768,7 @@ class UserSettingsInformation(object):
     def supplemental_documents_must_view_metadata(self, supplemental_documents_must_view_metadata):
         """Sets the supplemental_documents_must_view_metadata of this UserSettingsInformation.
 
+        Metadata that indicates whether the `supplementalDocumentsMustView` property is editable.   # noqa: E501
 
         :param supplemental_documents_must_view_metadata: The supplemental_documents_must_view_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2709,6 +2803,7 @@ class UserSettingsInformation(object):
     def template_active_creation_metadata(self):
         """Gets the template_active_creation_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `templateActiveCreation` property.  # noqa: E501
 
         :return: The template_active_creation_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2719,6 +2814,7 @@ class UserSettingsInformation(object):
     def template_active_creation_metadata(self, template_active_creation_metadata):
         """Sets the template_active_creation_metadata of this UserSettingsInformation.
 
+        Metadata about the `templateActiveCreation` property.  # noqa: E501
 
         :param template_active_creation_metadata: The template_active_creation_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2753,6 +2849,7 @@ class UserSettingsInformation(object):
     def template_apply_notify_metadata(self):
         """Gets the template_apply_notify_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `templateApplyNotify` property.  # noqa: E501
 
         :return: The template_apply_notify_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2763,6 +2860,7 @@ class UserSettingsInformation(object):
     def template_apply_notify_metadata(self, template_apply_notify_metadata):
         """Sets the template_apply_notify_metadata of this UserSettingsInformation.
 
+        Metadata about the `templateApplyNotify` property.  # noqa: E501
 
         :param template_apply_notify_metadata: The template_apply_notify_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2797,6 +2895,7 @@ class UserSettingsInformation(object):
     def template_auto_matching_metadata(self):
         """Gets the template_auto_matching_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `templateAutoMatching` property.  # noqa: E501
 
         :return: The template_auto_matching_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2807,6 +2906,7 @@ class UserSettingsInformation(object):
     def template_auto_matching_metadata(self, template_auto_matching_metadata):
         """Sets the template_auto_matching_metadata of this UserSettingsInformation.
 
+        Metadata about the `templateAutoMatching` property.  # noqa: E501
 
         :param template_auto_matching_metadata: The template_auto_matching_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2841,6 +2941,7 @@ class UserSettingsInformation(object):
     def template_matching_sensitivity_metadata(self):
         """Gets the template_matching_sensitivity_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `tempalteMatchingSensitivity` property.  # noqa: E501
 
         :return: The template_matching_sensitivity_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2851,6 +2952,7 @@ class UserSettingsInformation(object):
     def template_matching_sensitivity_metadata(self, template_matching_sensitivity_metadata):
         """Sets the template_matching_sensitivity_metadata of this UserSettingsInformation.
 
+        Metadata about the `tempalteMatchingSensitivity` property.  # noqa: E501
 
         :param template_matching_sensitivity_metadata: The template_matching_sensitivity_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2885,6 +2987,7 @@ class UserSettingsInformation(object):
     def template_page_level_matching_metadata(self):
         """Gets the template_page_level_matching_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `templatePageLevelMatching` property.  # noqa: E501
 
         :return: The template_page_level_matching_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2895,6 +2998,7 @@ class UserSettingsInformation(object):
     def template_page_level_matching_metadata(self, template_page_level_matching_metadata):
         """Sets the template_page_level_matching_metadata of this UserSettingsInformation.
 
+        Metadata about the `templatePageLevelMatching` property.  # noqa: E501
 
         :param template_page_level_matching_metadata: The template_page_level_matching_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2929,6 +3033,7 @@ class UserSettingsInformation(object):
     def timezone_dst_metadata(self):
         """Gets the timezone_dst_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `timezoneDST` property.  # noqa: E501
 
         :return: The timezone_dst_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2939,6 +3044,7 @@ class UserSettingsInformation(object):
     def timezone_dst_metadata(self, timezone_dst_metadata):
         """Sets the timezone_dst_metadata of this UserSettingsInformation.
 
+        Metadata about the `timezoneDST` property.  # noqa: E501
 
         :param timezone_dst_metadata: The timezone_dst_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -2973,6 +3079,7 @@ class UserSettingsInformation(object):
     def timezone_mask_metadata(self):
         """Gets the timezone_mask_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `timezoneMask` property.  # noqa: E501
 
         :return: The timezone_mask_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -2983,6 +3090,7 @@ class UserSettingsInformation(object):
     def timezone_mask_metadata(self, timezone_mask_metadata):
         """Sets the timezone_mask_metadata of this UserSettingsInformation.
 
+        Metadata about the `timezoneMask` property.  # noqa: E501
 
         :param timezone_mask_metadata: The timezone_mask_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3017,6 +3125,7 @@ class UserSettingsInformation(object):
     def timezone_offset_metadata(self):
         """Gets the timezone_offset_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `timezoneOffset` property.  # noqa: E501
 
         :return: The timezone_offset_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3027,6 +3136,7 @@ class UserSettingsInformation(object):
     def timezone_offset_metadata(self, timezone_offset_metadata):
         """Sets the timezone_offset_metadata of this UserSettingsInformation.
 
+        Metadata about the `timezoneOffset` property.  # noqa: E501
 
         :param timezone_offset_metadata: The timezone_offset_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3061,6 +3171,7 @@ class UserSettingsInformation(object):
     def timezone_sending_pref_metadata(self):
         """Gets the timezone_sending_pref_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The timezone_sending_pref_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3071,6 +3182,7 @@ class UserSettingsInformation(object):
     def timezone_sending_pref_metadata(self, timezone_sending_pref_metadata):
         """Sets the timezone_sending_pref_metadata of this UserSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param timezone_sending_pref_metadata: The timezone_sending_pref_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3105,6 +3217,7 @@ class UserSettingsInformation(object):
     def timezone_signing_pref_metadata(self):
         """Gets the timezone_signing_pref_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The timezone_signing_pref_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3115,6 +3228,7 @@ class UserSettingsInformation(object):
     def timezone_signing_pref_metadata(self, timezone_signing_pref_metadata):
         """Sets the timezone_signing_pref_metadata of this UserSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param timezone_signing_pref_metadata: The timezone_signing_pref_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3149,6 +3263,7 @@ class UserSettingsInformation(object):
     def transaction_point_site_name_url_metadata(self):
         """Gets the transaction_point_site_name_url_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The transaction_point_site_name_url_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3159,6 +3274,7 @@ class UserSettingsInformation(object):
     def transaction_point_site_name_url_metadata(self, transaction_point_site_name_url_metadata):
         """Sets the transaction_point_site_name_url_metadata of this UserSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param transaction_point_site_name_url_metadata: The transaction_point_site_name_url_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3193,6 +3309,7 @@ class UserSettingsInformation(object):
     def transaction_point_user_name_metadata(self):
         """Gets the transaction_point_user_name_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Reserved for DocuSign.  # noqa: E501
 
         :return: The transaction_point_user_name_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3203,6 +3320,7 @@ class UserSettingsInformation(object):
     def transaction_point_user_name_metadata(self, transaction_point_user_name_metadata):
         """Sets the transaction_point_user_name_metadata of this UserSettingsInformation.
 
+        Reserved for DocuSign.  # noqa: E501
 
         :param transaction_point_user_name_metadata: The transaction_point_user_name_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3237,6 +3355,7 @@ class UserSettingsInformation(object):
     def vaulting_mode_metadata(self):
         """Gets the vaulting_mode_metadata of this UserSettingsInformation.  # noqa: E501
 
+        Metadata about the `vaultingMode` property.  # noqa: E501
 
         :return: The vaulting_mode_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3247,6 +3366,7 @@ class UserSettingsInformation(object):
     def vaulting_mode_metadata(self, vaulting_mode_metadata):
         """Sets the vaulting_mode_metadata of this UserSettingsInformation.
 
+        Metadata about the `vaultingMode` property.  # noqa: E501
 
         :param vaulting_mode_metadata: The vaulting_mode_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata

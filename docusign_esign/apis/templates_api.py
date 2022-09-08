@@ -278,6 +278,7 @@ class TemplatesApi(object):
     def create_edit_view(self, account_id, template_id, **kwargs):
         """
         Provides a URL to start an edit view of the Template UI
+        This method returns a URL for starting an edit view of a template that uses the DocuSign Template UI.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -305,6 +306,7 @@ class TemplatesApi(object):
     def create_edit_view_with_http_info(self, account_id, template_id, **kwargs):
         """
         Provides a URL to start an edit view of the Template UI
+        This method returns a URL for starting an edit view of a template that uses the DocuSign Template UI.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -850,6 +852,7 @@ class TemplatesApi(object):
     def create_template_document_responsive_html_preview(self, account_id, document_id, template_id, **kwargs):
         """
         Post Responsive HTML Preview for a document in a template.
+        Creates a preview of the [responsive](/docs/esign-rest-api/esign101/concepts/responsive/), HTML version of a specific template document. This method enables you to preview a PDF document conversion to responsive HTML across device types prior to sending.  The request body is a `documentHtmlDefinition` object, which holds the responsive signing parameters that define how to generate the HTML version of the signing document.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -878,6 +881,7 @@ class TemplatesApi(object):
     def create_template_document_responsive_html_preview_with_http_info(self, account_id, document_id, template_id, **kwargs):
         """
         Post Responsive HTML Preview for a document in a template.
+        Creates a preview of the [responsive](/docs/esign-rest-api/esign101/concepts/responsive/), HTML version of a specific template document. This method enables you to preview a PDF document conversion to responsive HTML across device types prior to sending.  The request body is a `documentHtmlDefinition` object, which holds the responsive signing parameters that define how to generate the HTML version of the signing document.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -969,6 +973,7 @@ class TemplatesApi(object):
     def create_template_document_tabs(self, account_id, document_id, template_id, **kwargs):
         """
         Adds the tabs to a tempate
+        Adds tabs to the document specified by `documentId` in the template specified by `templateId`.  In the request body, you only need to specify the tabs that your are adding. For example, to add a text [prefill tab](/docs/esign-rest-api/reference/templates/templatedocumenttabs/create/#definition__templatetabs_prefilltabs), your request body might look like this:  ``` {   \"prefillTabs\": {     \"textTabs\": [       {         \"value\": \"a prefill text tab\",         \"pageNumber\": \"1\",         \"documentId\": \"1\",         \"xPosition\": 316,         \"yPosition\": 97       }     ]   } } ``` 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -997,6 +1002,7 @@ class TemplatesApi(object):
     def create_template_document_tabs_with_http_info(self, account_id, document_id, template_id, **kwargs):
         """
         Adds the tabs to a tempate
+        Adds tabs to the document specified by `documentId` in the template specified by `templateId`.  In the request body, you only need to specify the tabs that your are adding. For example, to add a text [prefill tab](/docs/esign-rest-api/reference/templates/templatedocumenttabs/create/#definition__templatetabs_prefilltabs), your request body might look like this:  ``` {   \"prefillTabs\": {     \"textTabs\": [       {         \"value\": \"a prefill text tab\",         \"pageNumber\": \"1\",         \"documentId\": \"1\",         \"xPosition\": 316,         \"yPosition\": 97       }     ]   } } ``` 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1088,6 +1094,7 @@ class TemplatesApi(object):
     def create_template_recipient_preview(self, account_id, template_id, **kwargs):
         """
         Provides a URL to start a recipient view of the Envelope UI
+        This method returns a URL for a template recipient preview  in the DocuSign UI that you can embed in your application. You use this method to enable the sender to preview the recipients' experience.  For more information, see [Preview and Send](https://support.docusign.com/en/guides/ndse-user-guide-send-your-documents).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1115,6 +1122,7 @@ class TemplatesApi(object):
     def create_template_recipient_preview_with_http_info(self, account_id, template_id, **kwargs):
         """
         Provides a URL to start a recipient view of the Envelope UI
+        This method returns a URL for a template recipient preview  in the DocuSign UI that you can embed in your application. You use this method to enable the sender to preview the recipients' experience.  For more information, see [Preview and Send](https://support.docusign.com/en/guides/ndse-user-guide-send-your-documents).
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1200,6 +1208,7 @@ class TemplatesApi(object):
     def create_template_responsive_html_preview(self, account_id, template_id, **kwargs):
         """
         Get Responsive HTML Preview for all documents in a template.
+        Creates a preview of the [responsive](/docs/esign-rest-api/esign101/concepts/responsive/), HTML versions of all of the documents associated with a template. This method enables you to preview the PDF document conversions to responsive HTML across device types prior to sending.  The request body is a `documentHtmlDefinition` object, which holds the responsive signing parameters that define how to generate the HTML version of the documents.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -1227,6 +1236,7 @@ class TemplatesApi(object):
     def create_template_responsive_html_preview_with_http_info(self, account_id, template_id, **kwargs):
         """
         Get Responsive HTML Preview for all documents in a template.
+        Creates a preview of the [responsive](/docs/esign-rest-api/esign101/concepts/responsive/), HTML versions of all of the documents associated with a template. This method enables you to preview the PDF document conversions to responsive HTML across device types prior to sending.  The request body is a `documentHtmlDefinition` object, which holds the responsive signing parameters that define how to generate the HTML version of the documents.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2497,6 +2507,7 @@ class TemplatesApi(object):
     def delete_template_document_tabs(self, account_id, document_id, template_id, **kwargs):
         """
         Deletes tabs from an envelope document
+        Deletes tabs from the document specified by `documentId` in the template specified by `templateId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2525,6 +2536,7 @@ class TemplatesApi(object):
     def delete_template_document_tabs_with_http_info(self, account_id, document_id, template_id, **kwargs):
         """
         Deletes tabs from an envelope document
+        Deletes tabs from the document specified by `documentId` in the template specified by `templateId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -2995,6 +3007,7 @@ class TemplatesApi(object):
     def get_document_tabs(self, account_id, document_id, template_id, **kwargs):
         """
         Returns tabs on the document.
+        Returns the tabs on the document specified by `documentId` in the template specified by `templateId`.  
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3023,6 +3036,7 @@ class TemplatesApi(object):
     def get_document_tabs_with_http_info(self, account_id, document_id, template_id, **kwargs):
         """
         Returns tabs on the document.
+        Returns the tabs on the document specified by `documentId` in the template specified by `templateId`.  
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3334,6 +3348,7 @@ class TemplatesApi(object):
     def get_page_tabs(self, account_id, document_id, page_number, template_id, **kwargs):
         """
         Returns tabs on the specified page.
+        Returns the tabs from the page specified by `pageNumber` of the document specified by `documentId` in the template specified by `templateId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3362,6 +3377,7 @@ class TemplatesApi(object):
     def get_page_tabs_with_http_info(self, account_id, document_id, page_number, template_id, **kwargs):
         """
         Returns tabs on the specified page.
+        Returns the tabs from the page specified by `pageNumber` of the document specified by `documentId` in the template specified by `templateId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3456,6 +3472,7 @@ class TemplatesApi(object):
     def get_pages(self, account_id, document_id, template_id, **kwargs):
         """
         Returns document page image(s) based on input.
+        Returns images of the pages in a template document for display based on the parameters that you specify.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3490,6 +3507,7 @@ class TemplatesApi(object):
     def get_pages_with_http_info(self, account_id, document_id, template_id, **kwargs):
         """
         Returns document page image(s) based on input.
+        Returns images of the pages in a template document for display based on the parameters that you specify.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3599,6 +3617,7 @@ class TemplatesApi(object):
     def get_template_document_html_definitions(self, account_id, document_id, template_id, **kwargs):
         """
         Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3626,6 +3645,7 @@ class TemplatesApi(object):
     def get_template_document_html_definitions_with_http_info(self, account_id, document_id, template_id, **kwargs):
         """
         Get the Original HTML Definition used to generate the Responsive HTML for a given document in a template.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3714,6 +3734,7 @@ class TemplatesApi(object):
     def get_template_html_definitions(self, account_id, template_id, **kwargs):
         """
         Get the Original HTML Definition used to generate the Responsive HTML for the template.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -3740,6 +3761,7 @@ class TemplatesApi(object):
     def get_template_html_definitions_with_http_info(self, account_id, template_id, **kwargs):
         """
         Get the Original HTML Definition used to generate the Responsive HTML for the template.
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6034,6 +6056,7 @@ class TemplatesApi(object):
     def update_template_document_tabs(self, account_id, document_id, template_id, **kwargs):
         """
         Updates the tabs for a template
+        Updates tabs in the document specified by `documentId` in the template specified by `templateId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -6062,6 +6085,7 @@ class TemplatesApi(object):
     def update_template_document_tabs_with_http_info(self, account_id, document_id, template_id, **kwargs):
         """
         Updates the tabs for a template
+        Updates tabs in the document specified by `documentId` in the template specified by `templateId`. 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.

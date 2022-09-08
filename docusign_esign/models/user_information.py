@@ -434,6 +434,7 @@ class UserInformation(object):
     def error_details(self):
         """Gets the error_details of this UserInformation.  # noqa: E501
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :return: The error_details of this UserInformation.  # noqa: E501
         :rtype: ErrorDetails
@@ -444,6 +445,7 @@ class UserInformation(object):
     def error_details(self, error_details):
         """Sets the error_details of this UserInformation.
 
+        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
 
         :param error_details: The error_details of this UserInformation.  # noqa: E501
         :type: ErrorDetails
@@ -478,6 +480,7 @@ class UserInformation(object):
     def forgotten_password_info(self):
         """Gets the forgotten_password_info of this UserInformation.  # noqa: E501
 
+        A complex element containing up to four Question/Answer pairs for forgotten password information.  # noqa: E501
 
         :return: The forgotten_password_info of this UserInformation.  # noqa: E501
         :rtype: ForgottenPasswordInformation
@@ -488,6 +491,7 @@ class UserInformation(object):
     def forgotten_password_info(self, forgotten_password_info):
         """Sets the forgotten_password_info of this UserInformation.
 
+        A complex element containing up to four Question/Answer pairs for forgotten password information.  # noqa: E501
 
         :param forgotten_password_info: The forgotten_password_info of this UserInformation.  # noqa: E501
         :type: ForgottenPasswordInformation
@@ -545,6 +549,7 @@ class UserInformation(object):
     def home_address(self):
         """Gets the home_address of this UserInformation.  # noqa: E501
 
+        Specifies the email for the signing host. It is a Required element for In Person Signers recipient Type.  Maximum Length: 100 characters.  # noqa: E501
 
         :return: The home_address of this UserInformation.  # noqa: E501
         :rtype: AddressInformation
@@ -555,6 +560,7 @@ class UserInformation(object):
     def home_address(self, home_address):
         """Sets the home_address of this UserInformation.
 
+        Specifies the email for the signing host. It is a Required element for In Person Signers recipient Type.  Maximum Length: 100 characters.  # noqa: E501
 
         :param home_address: The home_address of this UserInformation.  # noqa: E501
         :type: AddressInformation
@@ -1141,6 +1147,7 @@ class UserInformation(object):
     def user_settings(self):
         """Gets the user_settings of this UserInformation.  # noqa: E501
 
+        The collection of settings representing the actions a user can perform. See [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation) for available settings.  # noqa: E501
 
         :return: The user_settings of this UserInformation.  # noqa: E501
         :rtype: UserSettingsInformation
@@ -1151,6 +1158,7 @@ class UserInformation(object):
     def user_settings(self, user_settings):
         """Sets the user_settings of this UserInformation.
 
+        The collection of settings representing the actions a user can perform. See [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation) for available settings.  # noqa: E501
 
         :param user_settings: The user_settings of this UserInformation.  # noqa: E501
         :type: UserSettingsInformation
@@ -1208,6 +1216,7 @@ class UserInformation(object):
     def work_address(self):
         """Gets the work_address of this UserInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The work_address of this UserInformation.  # noqa: E501
         :rtype: AddressInformation
@@ -1218,6 +1227,7 @@ class UserInformation(object):
     def work_address(self, work_address):
         """Sets the work_address of this UserInformation.
 
+          # noqa: E501
 
         :param work_address: The work_address of this UserInformation.  # noqa: E501
         :type: AddressInformation

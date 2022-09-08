@@ -136,6 +136,7 @@ class Notary(object):
     def user_info(self):
         """Gets the user_info of this Notary.  # noqa: E501
 
+        Information about the user registering to be a notary.  # noqa: E501
 
         :return: The user_info of this Notary.  # noqa: E501
         :rtype: UserInformation
@@ -146,6 +147,7 @@ class Notary(object):
     def user_info(self, user_info):
         """Sets the user_info of this Notary.
 
+        Information about the user registering to be a notary.  # noqa: E501
 
         :param user_info: The user_info of this Notary.  # noqa: E501
         :type: UserInformation
