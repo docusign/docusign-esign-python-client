@@ -77,7 +77,7 @@ The DocuSign eSignature Python Client SDK is licensed under the [MIT License](ht
 *   [DocuSign Developer Center](https://developers.docusign.com/)
 *   [DocuSign API on Twitter](https://twitter.com/docusignapi)
 *   [DocuSign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)
-*   [DocuSign For Developers on YouTube](https://www.youtube.com/channel/UCJSJ2kMs_qeQotmw4-lX2)
+*   [DocuSign For Developers on YouTube](https://www.youtube.com/c/DocuSignforDevelopers)
 
 [pypi-image]: https://img.shields.io/pypi/v/docusign_esign.svg?style=flat
 [pypi-url]: https://pypi.python.org/pypi/docusign_esign
