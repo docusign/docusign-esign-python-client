@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.18.1] - eSignature API v2.1-22.3.00.00 - 2022-10-25
+### Changed
+- Added support for version v2.1-22.3.00.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+### Fixed
+- Setup.py version limitation for PyJwt removed
+
 ## [v3.18.0] - eSignature API v2.1-22.3.00.00 - 2022-09-07
 ### Changed
 - Added support for version v2.1-22.3.00.00 of the DocuSign ESignature API.
