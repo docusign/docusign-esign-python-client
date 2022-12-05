@@ -41,6 +41,9 @@ class EnvelopeDocument(object):
         'contains_pdf_form_fields': 'str',
         'display': 'str',
         'display_metadata': 'PropertyMetadata',
+        'doc_gen_document_status': 'str',
+        'doc_gen_errors': 'list[DocGenSyntaxError]',
+        'doc_gen_form_fields': 'list[DocGenFormField]',
         'document_base64': 'str',
         'document_fields': 'list[NameValue]',
         'document_id': 'str',
@@ -48,6 +51,7 @@ class EnvelopeDocument(object):
         'error_details': 'ErrorDetails',
         'include_in_download': 'str',
         'include_in_download_metadata': 'PropertyMetadata',
+        'is_doc_gen_document': 'str',
         'name': 'str',
         'name_metadata': 'PropertyMetadata',
         'order': 'str',
@@ -70,6 +74,9 @@ class EnvelopeDocument(object):
         'contains_pdf_form_fields': 'containsPdfFormFields',
         'display': 'display',
         'display_metadata': 'displayMetadata',
+        'doc_gen_document_status': 'docGenDocumentStatus',
+        'doc_gen_errors': 'docGenErrors',
+        'doc_gen_form_fields': 'docGenFormFields',
         'document_base64': 'documentBase64',
         'document_fields': 'documentFields',
         'document_id': 'documentId',
@@ -77,6 +84,7 @@ class EnvelopeDocument(object):
         'error_details': 'errorDetails',
         'include_in_download': 'includeInDownload',
         'include_in_download_metadata': 'includeInDownloadMetadata',
+        'is_doc_gen_document': 'isDocGenDocument',
         'name': 'name',
         'name_metadata': 'nameMetadata',
         'order': 'order',
@@ -104,6 +112,9 @@ class EnvelopeDocument(object):
         self._contains_pdf_form_fields = None
         self._display = None
         self._display_metadata = None
+        self._doc_gen_document_status = None
+        self._doc_gen_errors = None
+        self._doc_gen_form_fields = None
         self._document_base64 = None
         self._document_fields = None
         self._document_id = None
@@ -111,6 +122,7 @@ class EnvelopeDocument(object):
         self._error_details = None
         self._include_in_download = None
         self._include_in_download_metadata = None
+        self._is_doc_gen_document = None
         self._name = None
         self._name_metadata = None
         self._order = None
@@ -132,6 +144,9 @@ class EnvelopeDocument(object):
         setattr(self, "_{}".format('contains_pdf_form_fields'), kwargs.get('contains_pdf_form_fields', None))
         setattr(self, "_{}".format('display'), kwargs.get('display', None))
         setattr(self, "_{}".format('display_metadata'), kwargs.get('display_metadata', None))
+        setattr(self, "_{}".format('doc_gen_document_status'), kwargs.get('doc_gen_document_status', None))
+        setattr(self, "_{}".format('doc_gen_errors'), kwargs.get('doc_gen_errors', None))
+        setattr(self, "_{}".format('doc_gen_form_fields'), kwargs.get('doc_gen_form_fields', None))
         setattr(self, "_{}".format('document_base64'), kwargs.get('document_base64', None))
         setattr(self, "_{}".format('document_fields'), kwargs.get('document_fields', None))
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
@@ -139,6 +154,7 @@ class EnvelopeDocument(object):
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
         setattr(self, "_{}".format('include_in_download'), kwargs.get('include_in_download', None))
         setattr(self, "_{}".format('include_in_download_metadata'), kwargs.get('include_in_download_metadata', None))
+        setattr(self, "_{}".format('is_doc_gen_document'), kwargs.get('is_doc_gen_document', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('name_metadata'), kwargs.get('name_metadata', None))
         setattr(self, "_{}".format('order'), kwargs.get('order', None))
@@ -336,6 +352,75 @@ class EnvelopeDocument(object):
         self._display_metadata = display_metadata
 
     @property
+    def doc_gen_document_status(self):
+        """Gets the doc_gen_document_status of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The doc_gen_document_status of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._doc_gen_document_status
+
+    @doc_gen_document_status.setter
+    def doc_gen_document_status(self, doc_gen_document_status):
+        """Sets the doc_gen_document_status of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param doc_gen_document_status: The doc_gen_document_status of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._doc_gen_document_status = doc_gen_document_status
+
+    @property
+    def doc_gen_errors(self):
+        """Gets the doc_gen_errors of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The doc_gen_errors of this EnvelopeDocument.  # noqa: E501
+        :rtype: list[DocGenSyntaxError]
+        """
+        return self._doc_gen_errors
+
+    @doc_gen_errors.setter
+    def doc_gen_errors(self, doc_gen_errors):
+        """Sets the doc_gen_errors of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param doc_gen_errors: The doc_gen_errors of this EnvelopeDocument.  # noqa: E501
+        :type: list[DocGenSyntaxError]
+        """
+
+        self._doc_gen_errors = doc_gen_errors
+
+    @property
+    def doc_gen_form_fields(self):
+        """Gets the doc_gen_form_fields of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The doc_gen_form_fields of this EnvelopeDocument.  # noqa: E501
+        :rtype: list[DocGenFormField]
+        """
+        return self._doc_gen_form_fields
+
+    @doc_gen_form_fields.setter
+    def doc_gen_form_fields(self, doc_gen_form_fields):
+        """Sets the doc_gen_form_fields of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param doc_gen_form_fields: The doc_gen_form_fields of this EnvelopeDocument.  # noqa: E501
+        :type: list[DocGenFormField]
+        """
+
+        self._doc_gen_form_fields = doc_gen_form_fields
+
+    @property
     def document_base64(self):
         """Gets the document_base64 of this EnvelopeDocument.  # noqa: E501
 
@@ -495,6 +580,29 @@ class EnvelopeDocument(object):
         """
 
         self._include_in_download_metadata = include_in_download_metadata
+
+    @property
+    def is_doc_gen_document(self):
+        """Gets the is_doc_gen_document of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_doc_gen_document of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_doc_gen_document
+
+    @is_doc_gen_document.setter
+    def is_doc_gen_document(self, is_doc_gen_document):
+        """Sets the is_doc_gen_document of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param is_doc_gen_document: The is_doc_gen_document of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._is_doc_gen_document = is_doc_gen_document
 
     @property
     def name(self):

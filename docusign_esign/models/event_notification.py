@@ -43,6 +43,7 @@ class EventNotification(object):
         'include_documents': 'str',
         'include_envelope_void_reason': 'str',
         'include_hmac': 'str',
+        'include_o_auth': 'str',
         'include_sender_account_as_custom_field': 'str',
         'include_time_zone': 'str',
         'logging_enabled': 'str',
@@ -65,6 +66,7 @@ class EventNotification(object):
         'include_documents': 'includeDocuments',
         'include_envelope_void_reason': 'includeEnvelopeVoidReason',
         'include_hmac': 'includeHMAC',
+        'include_o_auth': 'includeOAuth',
         'include_sender_account_as_custom_field': 'includeSenderAccountAsCustomField',
         'include_time_zone': 'includeTimeZone',
         'logging_enabled': 'loggingEnabled',
@@ -92,6 +94,7 @@ class EventNotification(object):
         self._include_documents = None
         self._include_envelope_void_reason = None
         self._include_hmac = None
+        self._include_o_auth = None
         self._include_sender_account_as_custom_field = None
         self._include_time_zone = None
         self._logging_enabled = None
@@ -113,6 +116,7 @@ class EventNotification(object):
         setattr(self, "_{}".format('include_documents'), kwargs.get('include_documents', None))
         setattr(self, "_{}".format('include_envelope_void_reason'), kwargs.get('include_envelope_void_reason', None))
         setattr(self, "_{}".format('include_hmac'), kwargs.get('include_hmac', None))
+        setattr(self, "_{}".format('include_o_auth'), kwargs.get('include_o_auth', None))
         setattr(self, "_{}".format('include_sender_account_as_custom_field'), kwargs.get('include_sender_account_as_custom_field', None))
         setattr(self, "_{}".format('include_time_zone'), kwargs.get('include_time_zone', None))
         setattr(self, "_{}".format('logging_enabled'), kwargs.get('logging_enabled', None))
@@ -352,6 +356,29 @@ class EventNotification(object):
         """
 
         self._include_hmac = include_hmac
+
+    @property
+    def include_o_auth(self):
+        """Gets the include_o_auth of this EventNotification.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The include_o_auth of this EventNotification.  # noqa: E501
+        :rtype: str
+        """
+        return self._include_o_auth
+
+    @include_o_auth.setter
+    def include_o_auth(self, include_o_auth):
+        """Sets the include_o_auth of this EventNotification.
+
+          # noqa: E501
+
+        :param include_o_auth: The include_o_auth of this EventNotification.  # noqa: E501
+        :type: str
+        """
+
+        self._include_o_auth = include_o_auth
 
     @property
     def include_sender_account_as_custom_field(self):

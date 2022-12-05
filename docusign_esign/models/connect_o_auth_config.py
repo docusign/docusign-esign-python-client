@@ -36,6 +36,7 @@ class ConnectOAuthConfig(object):
         'authorization_server_url': 'str',
         'client_id': 'str',
         'client_secret': 'str',
+        'custom_parameters': 'str',
         'scope': 'str'
     }
 
@@ -43,6 +44,7 @@ class ConnectOAuthConfig(object):
         'authorization_server_url': 'authorizationServerUrl',
         'client_id': 'clientId',
         'client_secret': 'clientSecret',
+        'custom_parameters': 'customParameters',
         'scope': 'scope'
     }
 
@@ -55,12 +57,14 @@ class ConnectOAuthConfig(object):
         self._authorization_server_url = None
         self._client_id = None
         self._client_secret = None
+        self._custom_parameters = None
         self._scope = None
         self.discriminator = None
 
         setattr(self, "_{}".format('authorization_server_url'), kwargs.get('authorization_server_url', None))
         setattr(self, "_{}".format('client_id'), kwargs.get('client_id', None))
         setattr(self, "_{}".format('client_secret'), kwargs.get('client_secret', None))
+        setattr(self, "_{}".format('custom_parameters'), kwargs.get('custom_parameters', None))
         setattr(self, "_{}".format('scope'), kwargs.get('scope', None))
 
     @property
@@ -131,6 +135,29 @@ class ConnectOAuthConfig(object):
         """
 
         self._client_secret = client_secret
+
+    @property
+    def custom_parameters(self):
+        """Gets the custom_parameters of this ConnectOAuthConfig.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_parameters of this ConnectOAuthConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._custom_parameters
+
+    @custom_parameters.setter
+    def custom_parameters(self, custom_parameters):
+        """Sets the custom_parameters of this ConnectOAuthConfig.
+
+          # noqa: E501
+
+        :param custom_parameters: The custom_parameters of this ConnectOAuthConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._custom_parameters = custom_parameters
 
     @property
     def scope(self):

@@ -35,6 +35,8 @@ class AccountUISettings(object):
     swagger_types = {
         'admin_message': 'AdminMessage',
         'ask_an_admin': 'AskAnAdmin',
+        'clickwrap_schema_version': 'str',
+        'clickwrap_schema_version_metadata': 'SettingsMetadata',
         'enable_admin_message': 'str',
         'enable_admin_message_metadata': 'SettingsMetadata',
         'enable_easy_sign_can_use_multi_template_apply': 'str',
@@ -66,6 +68,8 @@ class AccountUISettings(object):
     attribute_map = {
         'admin_message': 'adminMessage',
         'ask_an_admin': 'askAnAdmin',
+        'clickwrap_schema_version': 'clickwrapSchemaVersion',
+        'clickwrap_schema_version_metadata': 'clickwrapSchemaVersionMetadata',
         'enable_admin_message': 'enableAdminMessage',
         'enable_admin_message_metadata': 'enableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply': 'enableEasySignCanUseMultiTemplateApply',
@@ -102,6 +106,8 @@ class AccountUISettings(object):
 
         self._admin_message = None
         self._ask_an_admin = None
+        self._clickwrap_schema_version = None
+        self._clickwrap_schema_version_metadata = None
         self._enable_admin_message = None
         self._enable_admin_message_metadata = None
         self._enable_easy_sign_can_use_multi_template_apply = None
@@ -132,6 +138,8 @@ class AccountUISettings(object):
 
         setattr(self, "_{}".format('admin_message'), kwargs.get('admin_message', None))
         setattr(self, "_{}".format('ask_an_admin'), kwargs.get('ask_an_admin', None))
+        setattr(self, "_{}".format('clickwrap_schema_version'), kwargs.get('clickwrap_schema_version', None))
+        setattr(self, "_{}".format('clickwrap_schema_version_metadata'), kwargs.get('clickwrap_schema_version_metadata', None))
         setattr(self, "_{}".format('enable_admin_message'), kwargs.get('enable_admin_message', None))
         setattr(self, "_{}".format('enable_admin_message_metadata'), kwargs.get('enable_admin_message_metadata', None))
         setattr(self, "_{}".format('enable_easy_sign_can_use_multi_template_apply'), kwargs.get('enable_easy_sign_can_use_multi_template_apply', None))
@@ -204,6 +212,50 @@ class AccountUISettings(object):
         """
 
         self._ask_an_admin = ask_an_admin
+
+    @property
+    def clickwrap_schema_version(self):
+        """Gets the clickwrap_schema_version of this AccountUISettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The clickwrap_schema_version of this AccountUISettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._clickwrap_schema_version
+
+    @clickwrap_schema_version.setter
+    def clickwrap_schema_version(self, clickwrap_schema_version):
+        """Sets the clickwrap_schema_version of this AccountUISettings.
+
+          # noqa: E501
+
+        :param clickwrap_schema_version: The clickwrap_schema_version of this AccountUISettings.  # noqa: E501
+        :type: str
+        """
+
+        self._clickwrap_schema_version = clickwrap_schema_version
+
+    @property
+    def clickwrap_schema_version_metadata(self):
+        """Gets the clickwrap_schema_version_metadata of this AccountUISettings.  # noqa: E501
+
+
+        :return: The clickwrap_schema_version_metadata of this AccountUISettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._clickwrap_schema_version_metadata
+
+    @clickwrap_schema_version_metadata.setter
+    def clickwrap_schema_version_metadata(self, clickwrap_schema_version_metadata):
+        """Sets the clickwrap_schema_version_metadata of this AccountUISettings.
+
+
+        :param clickwrap_schema_version_metadata: The clickwrap_schema_version_metadata of this AccountUISettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._clickwrap_schema_version_metadata = clickwrap_schema_version_metadata
 
     @property
     def enable_admin_message(self):

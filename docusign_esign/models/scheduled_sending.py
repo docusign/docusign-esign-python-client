@@ -90,7 +90,7 @@ class ScheduledSending(object):
     def resume_date(self):
         """Gets the resume_date of this ScheduledSending.  # noqa: E501
 
-          # noqa: E501
+        An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent.  # noqa: E501
 
         :return: The resume_date of this ScheduledSending.  # noqa: E501
         :rtype: str
@@ -101,7 +101,7 @@ class ScheduledSending(object):
     def resume_date(self, resume_date):
         """Sets the resume_date of this ScheduledSending.
 
-          # noqa: E501
+        An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent.  # noqa: E501
 
         :param resume_date: The resume_date of this ScheduledSending.  # noqa: E501
         :type: str
@@ -113,7 +113,7 @@ class ScheduledSending(object):
     def rules(self):
         """Gets the rules of this ScheduledSending.  # noqa: E501
 
-          # noqa: E501
+        A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified.  # noqa: E501
 
         :return: The rules of this ScheduledSending.  # noqa: E501
         :rtype: list[EnvelopeDelayRule]
@@ -124,7 +124,7 @@ class ScheduledSending(object):
     def rules(self, rules):
         """Sets the rules of this ScheduledSending.
 
-          # noqa: E501
+        A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified.  # noqa: E501
 
         :param rules: The rules of this ScheduledSending.  # noqa: E501
         :type: list[EnvelopeDelayRule]
@@ -136,7 +136,7 @@ class ScheduledSending(object):
     def status(self):
         """Gets the status of this ScheduledSending.  # noqa: E501
 
-        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.  # noqa: E501
+        \\\"pending\\\" if the envelope has not yet been sent and the scheduled sending delay has not iniaited. \\\"started\\\" if the scheduled sending delay is in progress. \\\"completed\\\" if the scheduled sending delay has elapsed and the envelope has been sent.  # noqa: E501
 
         :return: The status of this ScheduledSending.  # noqa: E501
         :rtype: str
@@ -147,7 +147,7 @@ class ScheduledSending(object):
     def status(self, status):
         """Sets the status of this ScheduledSending.
 
-        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.  # noqa: E501
+        \\\"pending\\\" if the envelope has not yet been sent and the scheduled sending delay has not iniaited. \\\"started\\\" if the scheduled sending delay is in progress. \\\"completed\\\" if the scheduled sending delay has elapsed and the envelope has been sent.  # noqa: E501
 
         :param status: The status of this ScheduledSending.  # noqa: E501
         :type: str

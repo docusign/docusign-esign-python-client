@@ -36,6 +36,7 @@ class Document(object):
         'apply_anchor_tabs': 'str',
         'assign_tabs_to_recipient_id': 'str',
         'display': 'str',
+        'doc_gen_form_fields': 'list[DocGenFormField]',
         'document_base64': 'str',
         'document_fields': 'list[NameValue]',
         'document_id': 'str',
@@ -44,6 +45,7 @@ class Document(object):
         'file_format_hint': 'str',
         'html_definition': 'DocumentHtmlDefinition',
         'include_in_download': 'str',
+        'is_doc_gen_document': 'str',
         'match_boxes': 'list[MatchBox]',
         'name': 'str',
         'order': 'str',
@@ -64,6 +66,7 @@ class Document(object):
         'apply_anchor_tabs': 'applyAnchorTabs',
         'assign_tabs_to_recipient_id': 'assignTabsToRecipientId',
         'display': 'display',
+        'doc_gen_form_fields': 'docGenFormFields',
         'document_base64': 'documentBase64',
         'document_fields': 'documentFields',
         'document_id': 'documentId',
@@ -72,6 +75,7 @@ class Document(object):
         'file_format_hint': 'fileFormatHint',
         'html_definition': 'htmlDefinition',
         'include_in_download': 'includeInDownload',
+        'is_doc_gen_document': 'isDocGenDocument',
         'match_boxes': 'matchBoxes',
         'name': 'name',
         'order': 'order',
@@ -97,6 +101,7 @@ class Document(object):
         self._apply_anchor_tabs = None
         self._assign_tabs_to_recipient_id = None
         self._display = None
+        self._doc_gen_form_fields = None
         self._document_base64 = None
         self._document_fields = None
         self._document_id = None
@@ -105,6 +110,7 @@ class Document(object):
         self._file_format_hint = None
         self._html_definition = None
         self._include_in_download = None
+        self._is_doc_gen_document = None
         self._match_boxes = None
         self._name = None
         self._order = None
@@ -124,6 +130,7 @@ class Document(object):
         setattr(self, "_{}".format('apply_anchor_tabs'), kwargs.get('apply_anchor_tabs', None))
         setattr(self, "_{}".format('assign_tabs_to_recipient_id'), kwargs.get('assign_tabs_to_recipient_id', None))
         setattr(self, "_{}".format('display'), kwargs.get('display', None))
+        setattr(self, "_{}".format('doc_gen_form_fields'), kwargs.get('doc_gen_form_fields', None))
         setattr(self, "_{}".format('document_base64'), kwargs.get('document_base64', None))
         setattr(self, "_{}".format('document_fields'), kwargs.get('document_fields', None))
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
@@ -132,6 +139,7 @@ class Document(object):
         setattr(self, "_{}".format('file_format_hint'), kwargs.get('file_format_hint', None))
         setattr(self, "_{}".format('html_definition'), kwargs.get('html_definition', None))
         setattr(self, "_{}".format('include_in_download'), kwargs.get('include_in_download', None))
+        setattr(self, "_{}".format('is_doc_gen_document'), kwargs.get('is_doc_gen_document', None))
         setattr(self, "_{}".format('match_boxes'), kwargs.get('match_boxes', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('order'), kwargs.get('order', None))
@@ -215,6 +223,29 @@ class Document(object):
         """
 
         self._display = display
+
+    @property
+    def doc_gen_form_fields(self):
+        """Gets the doc_gen_form_fields of this Document.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The doc_gen_form_fields of this Document.  # noqa: E501
+        :rtype: list[DocGenFormField]
+        """
+        return self._doc_gen_form_fields
+
+    @doc_gen_form_fields.setter
+    def doc_gen_form_fields(self, doc_gen_form_fields):
+        """Sets the doc_gen_form_fields of this Document.
+
+          # noqa: E501
+
+        :param doc_gen_form_fields: The doc_gen_form_fields of this Document.  # noqa: E501
+        :type: list[DocGenFormField]
+        """
+
+        self._doc_gen_form_fields = doc_gen_form_fields
 
     @property
     def document_base64(self):
@@ -399,6 +430,29 @@ class Document(object):
         """
 
         self._include_in_download = include_in_download
+
+    @property
+    def is_doc_gen_document(self):
+        """Gets the is_doc_gen_document of this Document.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_doc_gen_document of this Document.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_doc_gen_document
+
+    @is_doc_gen_document.setter
+    def is_doc_gen_document(self, is_doc_gen_document):
+        """Sets the is_doc_gen_document of this Document.
+
+          # noqa: E501
+
+        :param is_doc_gen_document: The is_doc_gen_document of this Document.  # noqa: E501
+        :type: str
+        """
+
+        self._is_doc_gen_document = is_doc_gen_document
 
     @property
     def match_boxes(self):
