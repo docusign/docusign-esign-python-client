@@ -63,7 +63,7 @@ class DelayedRouting(object):
     def resume_date(self):
         """Gets the resume_date of this DelayedRouting.  # noqa: E501
 
-          # noqa: E501
+        An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent to the recipients associated with the current workflow step or null if the envelope has not yet begun processing the current workflow step.  # noqa: E501
 
         :return: The resume_date of this DelayedRouting.  # noqa: E501
         :rtype: str
@@ -74,7 +74,7 @@ class DelayedRouting(object):
     def resume_date(self, resume_date):
         """Sets the resume_date of this DelayedRouting.
 
-          # noqa: E501
+        An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent to the recipients associated with the current workflow step or null if the envelope has not yet begun processing the current workflow step.  # noqa: E501
 
         :param resume_date: The resume_date of this DelayedRouting.  # noqa: E501
         :type: str
@@ -86,7 +86,7 @@ class DelayedRouting(object):
     def rules(self):
         """Gets the rules of this DelayedRouting.  # noqa: E501
 
-          # noqa: E501
+        A list of envelope delay rules specified by the user indicating how and when the envelope should be sent in the future for the current workflow step and its associated recipients. Currently only 1 rule may be specified.  # noqa: E501
 
         :return: The rules of this DelayedRouting.  # noqa: E501
         :rtype: list[EnvelopeDelayRule]
@@ -97,7 +97,7 @@ class DelayedRouting(object):
     def rules(self, rules):
         """Sets the rules of this DelayedRouting.
 
-          # noqa: E501
+        A list of envelope delay rules specified by the user indicating how and when the envelope should be sent in the future for the current workflow step and its associated recipients. Currently only 1 rule may be specified.  # noqa: E501
 
         :param rules: The rules of this DelayedRouting.  # noqa: E501
         :type: list[EnvelopeDelayRule]
@@ -109,7 +109,7 @@ class DelayedRouting(object):
     def status(self):
         """Gets the status of this DelayedRouting.  # noqa: E501
 
-        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.  # noqa: E501
+        \\\"pending\\\" if the current workflow step has not been reached and the delay has not yet started. \\\"started\\\" if the delay is in progress. \\\"completed\\\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients.  # noqa: E501
 
         :return: The status of this DelayedRouting.  # noqa: E501
         :rtype: str
@@ -120,7 +120,7 @@ class DelayedRouting(object):
     def status(self, status):
         """Sets the status of this DelayedRouting.
 
-        Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.  # noqa: E501
+        \\\"pending\\\" if the current workflow step has not been reached and the delay has not yet started. \\\"started\\\" if the delay is in progress. \\\"completed\\\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients.  # noqa: E501
 
         :param status: The status of this DelayedRouting.  # noqa: E501
         :type: str

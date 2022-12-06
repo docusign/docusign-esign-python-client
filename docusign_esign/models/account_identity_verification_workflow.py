@@ -39,6 +39,7 @@ class AccountIdentityVerificationWorkflow(object):
         'signature_provider': 'AccountSignatureProvider',
         'steps': 'list[AccountIdentityVerificationStep]',
         'workflow_id': 'str',
+        'workflow_label': 'str',
         'workflow_resource_key': 'str'
     }
 
@@ -49,6 +50,7 @@ class AccountIdentityVerificationWorkflow(object):
         'signature_provider': 'signatureProvider',
         'steps': 'steps',
         'workflow_id': 'workflowId',
+        'workflow_label': 'workflowLabel',
         'workflow_resource_key': 'workflowResourceKey'
     }
 
@@ -64,6 +66,7 @@ class AccountIdentityVerificationWorkflow(object):
         self._signature_provider = None
         self._steps = None
         self._workflow_id = None
+        self._workflow_label = None
         self._workflow_resource_key = None
         self.discriminator = None
 
@@ -73,6 +76,7 @@ class AccountIdentityVerificationWorkflow(object):
         setattr(self, "_{}".format('signature_provider'), kwargs.get('signature_provider', None))
         setattr(self, "_{}".format('steps'), kwargs.get('steps', None))
         setattr(self, "_{}".format('workflow_id'), kwargs.get('workflow_id', None))
+        setattr(self, "_{}".format('workflow_label'), kwargs.get('workflow_label', None))
         setattr(self, "_{}".format('workflow_resource_key'), kwargs.get('workflow_resource_key', None))
 
     @property
@@ -212,6 +216,29 @@ class AccountIdentityVerificationWorkflow(object):
         """
 
         self._workflow_id = workflow_id
+
+    @property
+    def workflow_label(self):
+        """Gets the workflow_label of this AccountIdentityVerificationWorkflow.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The workflow_label of this AccountIdentityVerificationWorkflow.  # noqa: E501
+        :rtype: str
+        """
+        return self._workflow_label
+
+    @workflow_label.setter
+    def workflow_label(self, workflow_label):
+        """Sets the workflow_label of this AccountIdentityVerificationWorkflow.
+
+          # noqa: E501
+
+        :param workflow_label: The workflow_label of this AccountIdentityVerificationWorkflow.  # noqa: E501
+        :type: str
+        """
+
+        self._workflow_label = workflow_label
 
     @property
     def workflow_resource_key(self):

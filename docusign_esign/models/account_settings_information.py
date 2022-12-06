@@ -320,6 +320,8 @@ class AccountSettingsInformation(object):
         'email_template_version_metadata': 'SettingsMetadata',
         'enable_access_code_generator': 'str',
         'enable_access_code_generator_metadata': 'SettingsMetadata',
+        'enable_adm_healthcare': 'str',
+        'enable_adm_healthcare_metadata': 'SettingsMetadata',
         'enable_advanced_payments': 'str',
         'enable_advanced_payments_metadata': 'SettingsMetadata',
         'enable_advanced_power_forms': 'str',
@@ -334,6 +336,16 @@ class AccountSettingsInformation(object):
         'enable_bcc_dummy_link_metadata': 'SettingsMetadata',
         'enable_calculated_fields': 'str',
         'enable_calculated_fields_metadata': 'SettingsMetadata',
+        'enable_click_plus': 'str',
+        'enable_click_plus_conditional_content': 'str',
+        'enable_click_plus_conditional_content_meta_data': 'SettingsMetadata',
+        'enable_click_plus_custom_fields': 'str',
+        'enable_click_plus_custom_fields_meta_data': 'SettingsMetadata',
+        'enable_click_plus_custom_style': 'str',
+        'enable_click_plus_custom_style_meta_data': 'SettingsMetadata',
+        'enable_click_plus_dynamic_content': 'str',
+        'enable_click_plus_dynamic_content_meta_data': 'SettingsMetadata',
+        'enable_click_plus_meta_data': 'SettingsMetadata',
         'enable_clickwraps': 'str',
         'enable_clickwraps_metadata': 'SettingsMetadata',
         'enable_combined_pdf_download_for_sbs': 'str',
@@ -445,6 +457,8 @@ class AccountSettingsInformation(object):
         'envelope_limits_total_document_size_allowed_in_mb_enabled': 'str',
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata': 'SettingsMetadata',
         'envelope_limits_total_document_size_allowed_in_mb_metadata': 'SettingsMetadata',
+        'envelope_search_mode': 'str',
+        'envelope_search_mode_metadata': 'SettingsMetadata',
         'envelope_stamping_default_value': 'str',
         'envelope_stamping_default_value_metadata': 'SettingsMetadata',
         'exit_prompt': 'str',
@@ -478,6 +492,8 @@ class AccountSettingsInformation(object):
         'id_check_required_metadata': 'SettingsMetadata',
         'identity_verification': 'list[AccountIdentityVerificationWorkflow]',
         'identity_verification_metadata': 'SettingsMetadata',
+        'idfx_kba_authentication_override': 'str',
+        'idfx_kba_authentication_override_metadata': 'SettingsMetadata',
         'idfx_phone_authentication_override': 'str',
         'idfx_phone_authentication_override_metadata': 'SettingsMetadata',
         'ignore_error_if_anchor_tab_not_found': 'str',
@@ -496,6 +512,8 @@ class AccountSettingsInformation(object):
         'maximum_users_per_signing_group': 'str',
         'maximum_users_per_signing_group_metadata': 'SettingsMetadata',
         'max_number_of_custom_stamps': 'str',
+        'merge_mixed_mode_results': 'str',
+        'merge_mixed_mode_results_metadata': 'SettingsMetadata',
         'mobile_session_timeout': 'str',
         'mobile_session_timeout_metadata': 'SettingsMetadata',
         'number_of_active_custom_stamps': 'str',
@@ -641,10 +659,14 @@ class AccountSettingsInformation(object):
         'use_derived_keys_metadata': 'SettingsMetadata',
         'use_docu_sign_express_signer_certificate': 'str',
         'use_docu_sign_express_signer_certificate_metadata': 'SettingsMetadata',
+        'use_envelope_search_mixed_mode': 'str',
+        'use_envelope_search_mixed_mode_metadata': 'SettingsMetadata',
         'use_multi_app_groups_data': 'str',
         'use_multi_app_groups_data_metadata': 'SettingsMetadata',
         'use_new_blob_for_pdf': 'str',
         'use_new_blob_for_pdf_metadata': 'SettingsMetadata',
+        'use_new_envelope_search': 'str',
+        'use_new_envelope_search_metadata': 'SettingsMetadata',
         'use_safe_signer_certificates': 'str',
         'use_safe_signer_certificates_metadata': 'SettingsMetadata',
         'uses_api': 'str',
@@ -958,6 +980,8 @@ class AccountSettingsInformation(object):
         'email_template_version_metadata': 'emailTemplateVersionMetadata',
         'enable_access_code_generator': 'enableAccessCodeGenerator',
         'enable_access_code_generator_metadata': 'enableAccessCodeGeneratorMetadata',
+        'enable_adm_healthcare': 'enableAdmHealthcare',
+        'enable_adm_healthcare_metadata': 'enableAdmHealthcareMetadata',
         'enable_advanced_payments': 'enableAdvancedPayments',
         'enable_advanced_payments_metadata': 'enableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms': 'enableAdvancedPowerForms',
@@ -972,6 +996,16 @@ class AccountSettingsInformation(object):
         'enable_bcc_dummy_link_metadata': 'enableBccDummyLinkMetadata',
         'enable_calculated_fields': 'enableCalculatedFields',
         'enable_calculated_fields_metadata': 'enableCalculatedFieldsMetadata',
+        'enable_click_plus': 'enableClickPlus',
+        'enable_click_plus_conditional_content': 'enableClickPlusConditionalContent',
+        'enable_click_plus_conditional_content_meta_data': 'enableClickPlusConditionalContentMetaData',
+        'enable_click_plus_custom_fields': 'enableClickPlusCustomFields',
+        'enable_click_plus_custom_fields_meta_data': 'enableClickPlusCustomFieldsMetaData',
+        'enable_click_plus_custom_style': 'enableClickPlusCustomStyle',
+        'enable_click_plus_custom_style_meta_data': 'enableClickPlusCustomStyleMetaData',
+        'enable_click_plus_dynamic_content': 'enableClickPlusDynamicContent',
+        'enable_click_plus_dynamic_content_meta_data': 'enableClickPlusDynamicContentMetaData',
+        'enable_click_plus_meta_data': 'enableClickPlusMetaData',
         'enable_clickwraps': 'enableClickwraps',
         'enable_clickwraps_metadata': 'enableClickwrapsMetadata',
         'enable_combined_pdf_download_for_sbs': 'enableCombinedPDFDownloadForSBS',
@@ -1083,6 +1117,8 @@ class AccountSettingsInformation(object):
         'envelope_limits_total_document_size_allowed_in_mb_enabled': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled',
         'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata',
         'envelope_limits_total_document_size_allowed_in_mb_metadata': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata',
+        'envelope_search_mode': 'envelopeSearchMode',
+        'envelope_search_mode_metadata': 'envelopeSearchModeMetadata',
         'envelope_stamping_default_value': 'envelopeStampingDefaultValue',
         'envelope_stamping_default_value_metadata': 'envelopeStampingDefaultValueMetadata',
         'exit_prompt': 'exitPrompt',
@@ -1116,6 +1152,8 @@ class AccountSettingsInformation(object):
         'id_check_required_metadata': 'idCheckRequiredMetadata',
         'identity_verification': 'identityVerification',
         'identity_verification_metadata': 'identityVerificationMetadata',
+        'idfx_kba_authentication_override': 'idfxKBAAuthenticationOverride',
+        'idfx_kba_authentication_override_metadata': 'idfxKBAAuthenticationOverrideMetadata',
         'idfx_phone_authentication_override': 'idfxPhoneAuthenticationOverride',
         'idfx_phone_authentication_override_metadata': 'idfxPhoneAuthenticationOverrideMetadata',
         'ignore_error_if_anchor_tab_not_found': 'ignoreErrorIfAnchorTabNotFound',
@@ -1134,6 +1172,8 @@ class AccountSettingsInformation(object):
         'maximum_users_per_signing_group': 'maximumUsersPerSigningGroup',
         'maximum_users_per_signing_group_metadata': 'maximumUsersPerSigningGroupMetadata',
         'max_number_of_custom_stamps': 'maxNumberOfCustomStamps',
+        'merge_mixed_mode_results': 'mergeMixedModeResults',
+        'merge_mixed_mode_results_metadata': 'mergeMixedModeResultsMetadata',
         'mobile_session_timeout': 'mobileSessionTimeout',
         'mobile_session_timeout_metadata': 'mobileSessionTimeoutMetadata',
         'number_of_active_custom_stamps': 'numberOfActiveCustomStamps',
@@ -1279,10 +1319,14 @@ class AccountSettingsInformation(object):
         'use_derived_keys_metadata': 'useDerivedKeysMetadata',
         'use_docu_sign_express_signer_certificate': 'useDocuSignExpressSignerCertificate',
         'use_docu_sign_express_signer_certificate_metadata': 'useDocuSignExpressSignerCertificateMetadata',
+        'use_envelope_search_mixed_mode': 'useEnvelopeSearchMixedMode',
+        'use_envelope_search_mixed_mode_metadata': 'useEnvelopeSearchMixedModeMetadata',
         'use_multi_app_groups_data': 'useMultiAppGroupsData',
         'use_multi_app_groups_data_metadata': 'useMultiAppGroupsDataMetadata',
         'use_new_blob_for_pdf': 'useNewBlobForPdf',
         'use_new_blob_for_pdf_metadata': 'useNewBlobForPdfMetadata',
+        'use_new_envelope_search': 'useNewEnvelopeSearch',
+        'use_new_envelope_search_metadata': 'useNewEnvelopeSearchMetadata',
         'use_safe_signer_certificates': 'useSAFESignerCertificates',
         'use_safe_signer_certificates_metadata': 'useSAFESignerCertificatesMetadata',
         'uses_api': 'usesAPI',
@@ -1601,6 +1645,8 @@ class AccountSettingsInformation(object):
         self._email_template_version_metadata = None
         self._enable_access_code_generator = None
         self._enable_access_code_generator_metadata = None
+        self._enable_adm_healthcare = None
+        self._enable_adm_healthcare_metadata = None
         self._enable_advanced_payments = None
         self._enable_advanced_payments_metadata = None
         self._enable_advanced_power_forms = None
@@ -1615,6 +1661,16 @@ class AccountSettingsInformation(object):
         self._enable_bcc_dummy_link_metadata = None
         self._enable_calculated_fields = None
         self._enable_calculated_fields_metadata = None
+        self._enable_click_plus = None
+        self._enable_click_plus_conditional_content = None
+        self._enable_click_plus_conditional_content_meta_data = None
+        self._enable_click_plus_custom_fields = None
+        self._enable_click_plus_custom_fields_meta_data = None
+        self._enable_click_plus_custom_style = None
+        self._enable_click_plus_custom_style_meta_data = None
+        self._enable_click_plus_dynamic_content = None
+        self._enable_click_plus_dynamic_content_meta_data = None
+        self._enable_click_plus_meta_data = None
         self._enable_clickwraps = None
         self._enable_clickwraps_metadata = None
         self._enable_combined_pdf_download_for_sbs = None
@@ -1726,6 +1782,8 @@ class AccountSettingsInformation(object):
         self._envelope_limits_total_document_size_allowed_in_mb_enabled = None
         self._envelope_limits_total_document_size_allowed_in_mb_enabled_metadata = None
         self._envelope_limits_total_document_size_allowed_in_mb_metadata = None
+        self._envelope_search_mode = None
+        self._envelope_search_mode_metadata = None
         self._envelope_stamping_default_value = None
         self._envelope_stamping_default_value_metadata = None
         self._exit_prompt = None
@@ -1759,6 +1817,8 @@ class AccountSettingsInformation(object):
         self._id_check_required_metadata = None
         self._identity_verification = None
         self._identity_verification_metadata = None
+        self._idfx_kba_authentication_override = None
+        self._idfx_kba_authentication_override_metadata = None
         self._idfx_phone_authentication_override = None
         self._idfx_phone_authentication_override_metadata = None
         self._ignore_error_if_anchor_tab_not_found = None
@@ -1777,6 +1837,8 @@ class AccountSettingsInformation(object):
         self._maximum_users_per_signing_group = None
         self._maximum_users_per_signing_group_metadata = None
         self._max_number_of_custom_stamps = None
+        self._merge_mixed_mode_results = None
+        self._merge_mixed_mode_results_metadata = None
         self._mobile_session_timeout = None
         self._mobile_session_timeout_metadata = None
         self._number_of_active_custom_stamps = None
@@ -1922,10 +1984,14 @@ class AccountSettingsInformation(object):
         self._use_derived_keys_metadata = None
         self._use_docu_sign_express_signer_certificate = None
         self._use_docu_sign_express_signer_certificate_metadata = None
+        self._use_envelope_search_mixed_mode = None
+        self._use_envelope_search_mixed_mode_metadata = None
         self._use_multi_app_groups_data = None
         self._use_multi_app_groups_data_metadata = None
         self._use_new_blob_for_pdf = None
         self._use_new_blob_for_pdf_metadata = None
+        self._use_new_envelope_search = None
+        self._use_new_envelope_search_metadata = None
         self._use_safe_signer_certificates = None
         self._use_safe_signer_certificates_metadata = None
         self._uses_api = None
@@ -2238,6 +2304,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('email_template_version_metadata'), kwargs.get('email_template_version_metadata', None))
         setattr(self, "_{}".format('enable_access_code_generator'), kwargs.get('enable_access_code_generator', None))
         setattr(self, "_{}".format('enable_access_code_generator_metadata'), kwargs.get('enable_access_code_generator_metadata', None))
+        setattr(self, "_{}".format('enable_adm_healthcare'), kwargs.get('enable_adm_healthcare', None))
+        setattr(self, "_{}".format('enable_adm_healthcare_metadata'), kwargs.get('enable_adm_healthcare_metadata', None))
         setattr(self, "_{}".format('enable_advanced_payments'), kwargs.get('enable_advanced_payments', None))
         setattr(self, "_{}".format('enable_advanced_payments_metadata'), kwargs.get('enable_advanced_payments_metadata', None))
         setattr(self, "_{}".format('enable_advanced_power_forms'), kwargs.get('enable_advanced_power_forms', None))
@@ -2252,6 +2320,16 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_bcc_dummy_link_metadata'), kwargs.get('enable_bcc_dummy_link_metadata', None))
         setattr(self, "_{}".format('enable_calculated_fields'), kwargs.get('enable_calculated_fields', None))
         setattr(self, "_{}".format('enable_calculated_fields_metadata'), kwargs.get('enable_calculated_fields_metadata', None))
+        setattr(self, "_{}".format('enable_click_plus'), kwargs.get('enable_click_plus', None))
+        setattr(self, "_{}".format('enable_click_plus_conditional_content'), kwargs.get('enable_click_plus_conditional_content', None))
+        setattr(self, "_{}".format('enable_click_plus_conditional_content_meta_data'), kwargs.get('enable_click_plus_conditional_content_meta_data', None))
+        setattr(self, "_{}".format('enable_click_plus_custom_fields'), kwargs.get('enable_click_plus_custom_fields', None))
+        setattr(self, "_{}".format('enable_click_plus_custom_fields_meta_data'), kwargs.get('enable_click_plus_custom_fields_meta_data', None))
+        setattr(self, "_{}".format('enable_click_plus_custom_style'), kwargs.get('enable_click_plus_custom_style', None))
+        setattr(self, "_{}".format('enable_click_plus_custom_style_meta_data'), kwargs.get('enable_click_plus_custom_style_meta_data', None))
+        setattr(self, "_{}".format('enable_click_plus_dynamic_content'), kwargs.get('enable_click_plus_dynamic_content', None))
+        setattr(self, "_{}".format('enable_click_plus_dynamic_content_meta_data'), kwargs.get('enable_click_plus_dynamic_content_meta_data', None))
+        setattr(self, "_{}".format('enable_click_plus_meta_data'), kwargs.get('enable_click_plus_meta_data', None))
         setattr(self, "_{}".format('enable_clickwraps'), kwargs.get('enable_clickwraps', None))
         setattr(self, "_{}".format('enable_clickwraps_metadata'), kwargs.get('enable_clickwraps_metadata', None))
         setattr(self, "_{}".format('enable_combined_pdf_download_for_sbs'), kwargs.get('enable_combined_pdf_download_for_sbs', None))
@@ -2363,6 +2441,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('envelope_limits_total_document_size_allowed_in_mb_enabled'), kwargs.get('envelope_limits_total_document_size_allowed_in_mb_enabled', None))
         setattr(self, "_{}".format('envelope_limits_total_document_size_allowed_in_mb_enabled_metadata'), kwargs.get('envelope_limits_total_document_size_allowed_in_mb_enabled_metadata', None))
         setattr(self, "_{}".format('envelope_limits_total_document_size_allowed_in_mb_metadata'), kwargs.get('envelope_limits_total_document_size_allowed_in_mb_metadata', None))
+        setattr(self, "_{}".format('envelope_search_mode'), kwargs.get('envelope_search_mode', None))
+        setattr(self, "_{}".format('envelope_search_mode_metadata'), kwargs.get('envelope_search_mode_metadata', None))
         setattr(self, "_{}".format('envelope_stamping_default_value'), kwargs.get('envelope_stamping_default_value', None))
         setattr(self, "_{}".format('envelope_stamping_default_value_metadata'), kwargs.get('envelope_stamping_default_value_metadata', None))
         setattr(self, "_{}".format('exit_prompt'), kwargs.get('exit_prompt', None))
@@ -2396,6 +2476,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('id_check_required_metadata'), kwargs.get('id_check_required_metadata', None))
         setattr(self, "_{}".format('identity_verification'), kwargs.get('identity_verification', None))
         setattr(self, "_{}".format('identity_verification_metadata'), kwargs.get('identity_verification_metadata', None))
+        setattr(self, "_{}".format('idfx_kba_authentication_override'), kwargs.get('idfx_kba_authentication_override', None))
+        setattr(self, "_{}".format('idfx_kba_authentication_override_metadata'), kwargs.get('idfx_kba_authentication_override_metadata', None))
         setattr(self, "_{}".format('idfx_phone_authentication_override'), kwargs.get('idfx_phone_authentication_override', None))
         setattr(self, "_{}".format('idfx_phone_authentication_override_metadata'), kwargs.get('idfx_phone_authentication_override_metadata', None))
         setattr(self, "_{}".format('ignore_error_if_anchor_tab_not_found'), kwargs.get('ignore_error_if_anchor_tab_not_found', None))
@@ -2414,6 +2496,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('maximum_users_per_signing_group'), kwargs.get('maximum_users_per_signing_group', None))
         setattr(self, "_{}".format('maximum_users_per_signing_group_metadata'), kwargs.get('maximum_users_per_signing_group_metadata', None))
         setattr(self, "_{}".format('max_number_of_custom_stamps'), kwargs.get('max_number_of_custom_stamps', None))
+        setattr(self, "_{}".format('merge_mixed_mode_results'), kwargs.get('merge_mixed_mode_results', None))
+        setattr(self, "_{}".format('merge_mixed_mode_results_metadata'), kwargs.get('merge_mixed_mode_results_metadata', None))
         setattr(self, "_{}".format('mobile_session_timeout'), kwargs.get('mobile_session_timeout', None))
         setattr(self, "_{}".format('mobile_session_timeout_metadata'), kwargs.get('mobile_session_timeout_metadata', None))
         setattr(self, "_{}".format('number_of_active_custom_stamps'), kwargs.get('number_of_active_custom_stamps', None))
@@ -2559,10 +2643,14 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('use_derived_keys_metadata'), kwargs.get('use_derived_keys_metadata', None))
         setattr(self, "_{}".format('use_docu_sign_express_signer_certificate'), kwargs.get('use_docu_sign_express_signer_certificate', None))
         setattr(self, "_{}".format('use_docu_sign_express_signer_certificate_metadata'), kwargs.get('use_docu_sign_express_signer_certificate_metadata', None))
+        setattr(self, "_{}".format('use_envelope_search_mixed_mode'), kwargs.get('use_envelope_search_mixed_mode', None))
+        setattr(self, "_{}".format('use_envelope_search_mixed_mode_metadata'), kwargs.get('use_envelope_search_mixed_mode_metadata', None))
         setattr(self, "_{}".format('use_multi_app_groups_data'), kwargs.get('use_multi_app_groups_data', None))
         setattr(self, "_{}".format('use_multi_app_groups_data_metadata'), kwargs.get('use_multi_app_groups_data_metadata', None))
         setattr(self, "_{}".format('use_new_blob_for_pdf'), kwargs.get('use_new_blob_for_pdf', None))
         setattr(self, "_{}".format('use_new_blob_for_pdf_metadata'), kwargs.get('use_new_blob_for_pdf_metadata', None))
+        setattr(self, "_{}".format('use_new_envelope_search'), kwargs.get('use_new_envelope_search', None))
+        setattr(self, "_{}".format('use_new_envelope_search_metadata'), kwargs.get('use_new_envelope_search_metadata', None))
         setattr(self, "_{}".format('use_safe_signer_certificates'), kwargs.get('use_safe_signer_certificates', None))
         setattr(self, "_{}".format('use_safe_signer_certificates_metadata'), kwargs.get('use_safe_signer_certificates_metadata', None))
         setattr(self, "_{}".format('uses_api'), kwargs.get('uses_api', None))
@@ -3601,7 +3689,7 @@ class AccountSettingsInformation(object):
     def allow_delayed_routing(self):
         """Gets the allow_delayed_routing of this AccountSettingsInformation.  # noqa: E501
 
-        \"true\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \"false\" otherwise.  # noqa: E501
+        \\\"true\\\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \\\"false\\\" otherwise.  # noqa: E501
 
         :return: The allow_delayed_routing of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
@@ -3612,7 +3700,7 @@ class AccountSettingsInformation(object):
     def allow_delayed_routing(self, allow_delayed_routing):
         """Sets the allow_delayed_routing of this AccountSettingsInformation.
 
-        \"true\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \"false\" otherwise.  # noqa: E501
+        \\\"true\\\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \\\"false\\\" otherwise.  # noqa: E501
 
         :param allow_delayed_routing: The allow_delayed_routing of this AccountSettingsInformation.  # noqa: E501
         :type: str
@@ -6073,7 +6161,7 @@ class AccountSettingsInformation(object):
     def allow_scheduled_sending(self):
         """Gets the allow_scheduled_sending of this AccountSettingsInformation.  # noqa: E501
 
-        \"true\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \"false\" otherwise.  # noqa: E501
+        \\\"true\\\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \\\"false\\\" otherwise.  # noqa: E501
 
         :return: The allow_scheduled_sending of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
@@ -6084,7 +6172,7 @@ class AccountSettingsInformation(object):
     def allow_scheduled_sending(self, allow_scheduled_sending):
         """Sets the allow_scheduled_sending of this AccountSettingsInformation.
 
-        \"true\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \"false\" otherwise.  # noqa: E501
+        \\\"true\\\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \\\"false\\\" otherwise.  # noqa: E501
 
         :param allow_scheduled_sending: The allow_scheduled_sending of this AccountSettingsInformation.  # noqa: E501
         :type: str
@@ -9169,6 +9257,50 @@ class AccountSettingsInformation(object):
         self._enable_access_code_generator_metadata = enable_access_code_generator_metadata
 
     @property
+    def enable_adm_healthcare(self):
+        """Gets the enable_adm_healthcare of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_adm_healthcare of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_adm_healthcare
+
+    @enable_adm_healthcare.setter
+    def enable_adm_healthcare(self, enable_adm_healthcare):
+        """Sets the enable_adm_healthcare of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_adm_healthcare: The enable_adm_healthcare of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_adm_healthcare = enable_adm_healthcare
+
+    @property
+    def enable_adm_healthcare_metadata(self):
+        """Gets the enable_adm_healthcare_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_adm_healthcare_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_adm_healthcare_metadata
+
+    @enable_adm_healthcare_metadata.setter
+    def enable_adm_healthcare_metadata(self, enable_adm_healthcare_metadata):
+        """Sets the enable_adm_healthcare_metadata of this AccountSettingsInformation.
+
+
+        :param enable_adm_healthcare_metadata: The enable_adm_healthcare_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_adm_healthcare_metadata = enable_adm_healthcare_metadata
+
+    @property
     def enable_advanced_payments(self):
         """Gets the enable_advanced_payments of this AccountSettingsInformation.  # noqa: E501
 
@@ -9489,6 +9621,226 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_calculated_fields_metadata = enable_calculated_fields_metadata
+
+    @property
+    def enable_click_plus(self):
+        """Gets the enable_click_plus of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_click_plus of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_click_plus
+
+    @enable_click_plus.setter
+    def enable_click_plus(self, enable_click_plus):
+        """Sets the enable_click_plus of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_click_plus: The enable_click_plus of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_click_plus = enable_click_plus
+
+    @property
+    def enable_click_plus_conditional_content(self):
+        """Gets the enable_click_plus_conditional_content of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_click_plus_conditional_content of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_click_plus_conditional_content
+
+    @enable_click_plus_conditional_content.setter
+    def enable_click_plus_conditional_content(self, enable_click_plus_conditional_content):
+        """Sets the enable_click_plus_conditional_content of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_click_plus_conditional_content: The enable_click_plus_conditional_content of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_click_plus_conditional_content = enable_click_plus_conditional_content
+
+    @property
+    def enable_click_plus_conditional_content_meta_data(self):
+        """Gets the enable_click_plus_conditional_content_meta_data of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_click_plus_conditional_content_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_click_plus_conditional_content_meta_data
+
+    @enable_click_plus_conditional_content_meta_data.setter
+    def enable_click_plus_conditional_content_meta_data(self, enable_click_plus_conditional_content_meta_data):
+        """Sets the enable_click_plus_conditional_content_meta_data of this AccountSettingsInformation.
+
+
+        :param enable_click_plus_conditional_content_meta_data: The enable_click_plus_conditional_content_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_click_plus_conditional_content_meta_data = enable_click_plus_conditional_content_meta_data
+
+    @property
+    def enable_click_plus_custom_fields(self):
+        """Gets the enable_click_plus_custom_fields of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_click_plus_custom_fields of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_click_plus_custom_fields
+
+    @enable_click_plus_custom_fields.setter
+    def enable_click_plus_custom_fields(self, enable_click_plus_custom_fields):
+        """Sets the enable_click_plus_custom_fields of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_click_plus_custom_fields: The enable_click_plus_custom_fields of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_click_plus_custom_fields = enable_click_plus_custom_fields
+
+    @property
+    def enable_click_plus_custom_fields_meta_data(self):
+        """Gets the enable_click_plus_custom_fields_meta_data of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_click_plus_custom_fields_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_click_plus_custom_fields_meta_data
+
+    @enable_click_plus_custom_fields_meta_data.setter
+    def enable_click_plus_custom_fields_meta_data(self, enable_click_plus_custom_fields_meta_data):
+        """Sets the enable_click_plus_custom_fields_meta_data of this AccountSettingsInformation.
+
+
+        :param enable_click_plus_custom_fields_meta_data: The enable_click_plus_custom_fields_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_click_plus_custom_fields_meta_data = enable_click_plus_custom_fields_meta_data
+
+    @property
+    def enable_click_plus_custom_style(self):
+        """Gets the enable_click_plus_custom_style of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_click_plus_custom_style of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_click_plus_custom_style
+
+    @enable_click_plus_custom_style.setter
+    def enable_click_plus_custom_style(self, enable_click_plus_custom_style):
+        """Sets the enable_click_plus_custom_style of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_click_plus_custom_style: The enable_click_plus_custom_style of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_click_plus_custom_style = enable_click_plus_custom_style
+
+    @property
+    def enable_click_plus_custom_style_meta_data(self):
+        """Gets the enable_click_plus_custom_style_meta_data of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_click_plus_custom_style_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_click_plus_custom_style_meta_data
+
+    @enable_click_plus_custom_style_meta_data.setter
+    def enable_click_plus_custom_style_meta_data(self, enable_click_plus_custom_style_meta_data):
+        """Sets the enable_click_plus_custom_style_meta_data of this AccountSettingsInformation.
+
+
+        :param enable_click_plus_custom_style_meta_data: The enable_click_plus_custom_style_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_click_plus_custom_style_meta_data = enable_click_plus_custom_style_meta_data
+
+    @property
+    def enable_click_plus_dynamic_content(self):
+        """Gets the enable_click_plus_dynamic_content of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_click_plus_dynamic_content of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_click_plus_dynamic_content
+
+    @enable_click_plus_dynamic_content.setter
+    def enable_click_plus_dynamic_content(self, enable_click_plus_dynamic_content):
+        """Sets the enable_click_plus_dynamic_content of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_click_plus_dynamic_content: The enable_click_plus_dynamic_content of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_click_plus_dynamic_content = enable_click_plus_dynamic_content
+
+    @property
+    def enable_click_plus_dynamic_content_meta_data(self):
+        """Gets the enable_click_plus_dynamic_content_meta_data of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_click_plus_dynamic_content_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_click_plus_dynamic_content_meta_data
+
+    @enable_click_plus_dynamic_content_meta_data.setter
+    def enable_click_plus_dynamic_content_meta_data(self, enable_click_plus_dynamic_content_meta_data):
+        """Sets the enable_click_plus_dynamic_content_meta_data of this AccountSettingsInformation.
+
+
+        :param enable_click_plus_dynamic_content_meta_data: The enable_click_plus_dynamic_content_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_click_plus_dynamic_content_meta_data = enable_click_plus_dynamic_content_meta_data
+
+    @property
+    def enable_click_plus_meta_data(self):
+        """Gets the enable_click_plus_meta_data of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_click_plus_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_click_plus_meta_data
+
+    @enable_click_plus_meta_data.setter
+    def enable_click_plus_meta_data(self, enable_click_plus_meta_data):
+        """Sets the enable_click_plus_meta_data of this AccountSettingsInformation.
+
+
+        :param enable_click_plus_meta_data: The enable_click_plus_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_click_plus_meta_data = enable_click_plus_meta_data
 
     @property
     def enable_clickwraps(self):
@@ -12028,6 +12380,50 @@ class AccountSettingsInformation(object):
         self._envelope_limits_total_document_size_allowed_in_mb_metadata = envelope_limits_total_document_size_allowed_in_mb_metadata
 
     @property
+    def envelope_search_mode(self):
+        """Gets the envelope_search_mode of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_search_mode of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._envelope_search_mode
+
+    @envelope_search_mode.setter
+    def envelope_search_mode(self, envelope_search_mode):
+        """Sets the envelope_search_mode of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param envelope_search_mode: The envelope_search_mode of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._envelope_search_mode = envelope_search_mode
+
+    @property
+    def envelope_search_mode_metadata(self):
+        """Gets the envelope_search_mode_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The envelope_search_mode_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._envelope_search_mode_metadata
+
+    @envelope_search_mode_metadata.setter
+    def envelope_search_mode_metadata(self, envelope_search_mode_metadata):
+        """Sets the envelope_search_mode_metadata of this AccountSettingsInformation.
+
+
+        :param envelope_search_mode_metadata: The envelope_search_mode_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._envelope_search_mode_metadata = envelope_search_mode_metadata
+
+    @property
     def envelope_stamping_default_value(self):
         """Gets the envelope_stamping_default_value of this AccountSettingsInformation.  # noqa: E501
 
@@ -12787,6 +13183,50 @@ class AccountSettingsInformation(object):
         self._identity_verification_metadata = identity_verification_metadata
 
     @property
+    def idfx_kba_authentication_override(self):
+        """Gets the idfx_kba_authentication_override of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The idfx_kba_authentication_override of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._idfx_kba_authentication_override
+
+    @idfx_kba_authentication_override.setter
+    def idfx_kba_authentication_override(self, idfx_kba_authentication_override):
+        """Sets the idfx_kba_authentication_override of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param idfx_kba_authentication_override: The idfx_kba_authentication_override of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._idfx_kba_authentication_override = idfx_kba_authentication_override
+
+    @property
+    def idfx_kba_authentication_override_metadata(self):
+        """Gets the idfx_kba_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The idfx_kba_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._idfx_kba_authentication_override_metadata
+
+    @idfx_kba_authentication_override_metadata.setter
+    def idfx_kba_authentication_override_metadata(self, idfx_kba_authentication_override_metadata):
+        """Sets the idfx_kba_authentication_override_metadata of this AccountSettingsInformation.
+
+
+        :param idfx_kba_authentication_override_metadata: The idfx_kba_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._idfx_kba_authentication_override_metadata = idfx_kba_authentication_override_metadata
+
+    @property
     def idfx_phone_authentication_override(self):
         """Gets the idfx_phone_authentication_override of this AccountSettingsInformation.  # noqa: E501
 
@@ -13199,6 +13639,50 @@ class AccountSettingsInformation(object):
         """
 
         self._max_number_of_custom_stamps = max_number_of_custom_stamps
+
+    @property
+    def merge_mixed_mode_results(self):
+        """Gets the merge_mixed_mode_results of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The merge_mixed_mode_results of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._merge_mixed_mode_results
+
+    @merge_mixed_mode_results.setter
+    def merge_mixed_mode_results(self, merge_mixed_mode_results):
+        """Sets the merge_mixed_mode_results of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param merge_mixed_mode_results: The merge_mixed_mode_results of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._merge_mixed_mode_results = merge_mixed_mode_results
+
+    @property
+    def merge_mixed_mode_results_metadata(self):
+        """Gets the merge_mixed_mode_results_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The merge_mixed_mode_results_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._merge_mixed_mode_results_metadata
+
+    @merge_mixed_mode_results_metadata.setter
+    def merge_mixed_mode_results_metadata(self, merge_mixed_mode_results_metadata):
+        """Sets the merge_mixed_mode_results_metadata of this AccountSettingsInformation.
+
+
+        :param merge_mixed_mode_results_metadata: The merge_mixed_mode_results_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._merge_mixed_mode_results_metadata = merge_mixed_mode_results_metadata
 
     @property
     def mobile_session_timeout(self):
@@ -16530,6 +17014,50 @@ class AccountSettingsInformation(object):
         self._use_docu_sign_express_signer_certificate_metadata = use_docu_sign_express_signer_certificate_metadata
 
     @property
+    def use_envelope_search_mixed_mode(self):
+        """Gets the use_envelope_search_mixed_mode of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_envelope_search_mixed_mode of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._use_envelope_search_mixed_mode
+
+    @use_envelope_search_mixed_mode.setter
+    def use_envelope_search_mixed_mode(self, use_envelope_search_mixed_mode):
+        """Sets the use_envelope_search_mixed_mode of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param use_envelope_search_mixed_mode: The use_envelope_search_mixed_mode of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._use_envelope_search_mixed_mode = use_envelope_search_mixed_mode
+
+    @property
+    def use_envelope_search_mixed_mode_metadata(self):
+        """Gets the use_envelope_search_mixed_mode_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The use_envelope_search_mixed_mode_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._use_envelope_search_mixed_mode_metadata
+
+    @use_envelope_search_mixed_mode_metadata.setter
+    def use_envelope_search_mixed_mode_metadata(self, use_envelope_search_mixed_mode_metadata):
+        """Sets the use_envelope_search_mixed_mode_metadata of this AccountSettingsInformation.
+
+
+        :param use_envelope_search_mixed_mode_metadata: The use_envelope_search_mixed_mode_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._use_envelope_search_mixed_mode_metadata = use_envelope_search_mixed_mode_metadata
+
+    @property
     def use_multi_app_groups_data(self):
         """Gets the use_multi_app_groups_data of this AccountSettingsInformation.  # noqa: E501
 
@@ -16620,6 +17148,50 @@ class AccountSettingsInformation(object):
         """
 
         self._use_new_blob_for_pdf_metadata = use_new_blob_for_pdf_metadata
+
+    @property
+    def use_new_envelope_search(self):
+        """Gets the use_new_envelope_search of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_new_envelope_search of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._use_new_envelope_search
+
+    @use_new_envelope_search.setter
+    def use_new_envelope_search(self, use_new_envelope_search):
+        """Sets the use_new_envelope_search of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param use_new_envelope_search: The use_new_envelope_search of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._use_new_envelope_search = use_new_envelope_search
+
+    @property
+    def use_new_envelope_search_metadata(self):
+        """Gets the use_new_envelope_search_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The use_new_envelope_search_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._use_new_envelope_search_metadata
+
+    @use_new_envelope_search_metadata.setter
+    def use_new_envelope_search_metadata(self, use_new_envelope_search_metadata):
+        """Sets the use_new_envelope_search_metadata of this AccountSettingsInformation.
+
+
+        :param use_new_envelope_search_metadata: The use_new_envelope_search_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._use_new_envelope_search_metadata = use_new_envelope_search_metadata
 
     @property
     def use_safe_signer_certificates(self):

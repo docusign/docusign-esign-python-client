@@ -92,6 +92,7 @@ class EnvelopeTemplate(object):
         'holder': 'str',
         'initial_sent_date_time': 'str',
         'is21_cfr_part11': 'str',
+        'is_doc_gen_template': 'str',
         'is_dynamic_envelope': 'str',
         'is_signature_provider_envelope': 'str',
         'last_modified': 'str',
@@ -195,6 +196,7 @@ class EnvelopeTemplate(object):
         'holder': 'holder',
         'initial_sent_date_time': 'initialSentDateTime',
         'is21_cfr_part11': 'is21CFRPart11',
+        'is_doc_gen_template': 'isDocGenTemplate',
         'is_dynamic_envelope': 'isDynamicEnvelope',
         'is_signature_provider_envelope': 'isSignatureProviderEnvelope',
         'last_modified': 'lastModified',
@@ -303,6 +305,7 @@ class EnvelopeTemplate(object):
         self._holder = None
         self._initial_sent_date_time = None
         self._is21_cfr_part11 = None
+        self._is_doc_gen_template = None
         self._is_dynamic_envelope = None
         self._is_signature_provider_envelope = None
         self._last_modified = None
@@ -405,6 +408,7 @@ class EnvelopeTemplate(object):
         setattr(self, "_{}".format('holder'), kwargs.get('holder', None))
         setattr(self, "_{}".format('initial_sent_date_time'), kwargs.get('initial_sent_date_time', None))
         setattr(self, "_{}".format('is21_cfr_part11'), kwargs.get('is21_cfr_part11', None))
+        setattr(self, "_{}".format('is_doc_gen_template'), kwargs.get('is_doc_gen_template', None))
         setattr(self, "_{}".format('is_dynamic_envelope'), kwargs.get('is_dynamic_envelope', None))
         setattr(self, "_{}".format('is_signature_provider_envelope'), kwargs.get('is_signature_provider_envelope', None))
         setattr(self, "_{}".format('last_modified'), kwargs.get('last_modified', None))
@@ -1803,6 +1807,29 @@ class EnvelopeTemplate(object):
         """
 
         self._is21_cfr_part11 = is21_cfr_part11
+
+    @property
+    def is_doc_gen_template(self):
+        """Gets the is_doc_gen_template of this EnvelopeTemplate.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_doc_gen_template of this EnvelopeTemplate.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_doc_gen_template
+
+    @is_doc_gen_template.setter
+    def is_doc_gen_template(self, is_doc_gen_template):
+        """Sets the is_doc_gen_template of this EnvelopeTemplate.
+
+          # noqa: E501
+
+        :param is_doc_gen_template: The is_doc_gen_template of this EnvelopeTemplate.  # noqa: E501
+        :type: str
+        """
+
+        self._is_doc_gen_template = is_doc_gen_template
 
     @property
     def is_dynamic_envelope(self):
