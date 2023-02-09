@@ -46,6 +46,7 @@ class BulkSendingCopyRecipient(object):
         'id_check_configuration_name': 'str',
         'id_check_information_input': 'IdCheckInformationInput',
         'identification_method': 'str',
+        'identity_verification': 'RecipientIdentityVerification',
         'name': 'str',
         'note': 'str',
         'phone_authentication': 'RecipientPhoneAuthentication',
@@ -73,6 +74,7 @@ class BulkSendingCopyRecipient(object):
         'id_check_configuration_name': 'idCheckConfigurationName',
         'id_check_information_input': 'idCheckInformationInput',
         'identification_method': 'identificationMethod',
+        'identity_verification': 'identityVerification',
         'name': 'name',
         'note': 'note',
         'phone_authentication': 'phoneAuthentication',
@@ -105,6 +107,7 @@ class BulkSendingCopyRecipient(object):
         self._id_check_configuration_name = None
         self._id_check_information_input = None
         self._identification_method = None
+        self._identity_verification = None
         self._name = None
         self._note = None
         self._phone_authentication = None
@@ -131,6 +134,7 @@ class BulkSendingCopyRecipient(object):
         setattr(self, "_{}".format('id_check_configuration_name'), kwargs.get('id_check_configuration_name', None))
         setattr(self, "_{}".format('id_check_information_input'), kwargs.get('id_check_information_input', None))
         setattr(self, "_{}".format('identification_method'), kwargs.get('identification_method', None))
+        setattr(self, "_{}".format('identity_verification'), kwargs.get('identity_verification', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('note'), kwargs.get('note', None))
         setattr(self, "_{}".format('phone_authentication'), kwargs.get('phone_authentication', None))
@@ -441,6 +445,27 @@ class BulkSendingCopyRecipient(object):
         """
 
         self._identification_method = identification_method
+
+    @property
+    def identity_verification(self):
+        """Gets the identity_verification of this BulkSendingCopyRecipient.  # noqa: E501
+
+
+        :return: The identity_verification of this BulkSendingCopyRecipient.  # noqa: E501
+        :rtype: RecipientIdentityVerification
+        """
+        return self._identity_verification
+
+    @identity_verification.setter
+    def identity_verification(self, identity_verification):
+        """Sets the identity_verification of this BulkSendingCopyRecipient.
+
+
+        :param identity_verification: The identity_verification of this BulkSendingCopyRecipient.  # noqa: E501
+        :type: RecipientIdentityVerification
+        """
+
+        self._identity_verification = identity_verification
 
     @property
     def name(self):

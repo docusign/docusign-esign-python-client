@@ -46,6 +46,7 @@ class EventNotification(object):
         'include_o_auth': 'str',
         'include_sender_account_as_custom_field': 'str',
         'include_time_zone': 'str',
+        'integrator_managed': 'str',
         'logging_enabled': 'str',
         'recipient_events': 'list[RecipientEvent]',
         'require_acknowledgment': 'str',
@@ -69,6 +70,7 @@ class EventNotification(object):
         'include_o_auth': 'includeOAuth',
         'include_sender_account_as_custom_field': 'includeSenderAccountAsCustomField',
         'include_time_zone': 'includeTimeZone',
+        'integrator_managed': 'integratorManaged',
         'logging_enabled': 'loggingEnabled',
         'recipient_events': 'recipientEvents',
         'require_acknowledgment': 'requireAcknowledgment',
@@ -97,6 +99,7 @@ class EventNotification(object):
         self._include_o_auth = None
         self._include_sender_account_as_custom_field = None
         self._include_time_zone = None
+        self._integrator_managed = None
         self._logging_enabled = None
         self._recipient_events = None
         self._require_acknowledgment = None
@@ -119,6 +122,7 @@ class EventNotification(object):
         setattr(self, "_{}".format('include_o_auth'), kwargs.get('include_o_auth', None))
         setattr(self, "_{}".format('include_sender_account_as_custom_field'), kwargs.get('include_sender_account_as_custom_field', None))
         setattr(self, "_{}".format('include_time_zone'), kwargs.get('include_time_zone', None))
+        setattr(self, "_{}".format('integrator_managed'), kwargs.get('integrator_managed', None))
         setattr(self, "_{}".format('logging_enabled'), kwargs.get('logging_enabled', None))
         setattr(self, "_{}".format('recipient_events'), kwargs.get('recipient_events', None))
         setattr(self, "_{}".format('require_acknowledgment'), kwargs.get('require_acknowledgment', None))
@@ -425,6 +429,29 @@ class EventNotification(object):
         """
 
         self._include_time_zone = include_time_zone
+
+    @property
+    def integrator_managed(self):
+        """Gets the integrator_managed of this EventNotification.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The integrator_managed of this EventNotification.  # noqa: E501
+        :rtype: str
+        """
+        return self._integrator_managed
+
+    @integrator_managed.setter
+    def integrator_managed(self, integrator_managed):
+        """Sets the integrator_managed of this EventNotification.
+
+          # noqa: E501
+
+        :param integrator_managed: The integrator_managed of this EventNotification.  # noqa: E501
+        :type: str
+        """
+
+        self._integrator_managed = integrator_managed
 
     @property
     def logging_enabled(self):

@@ -59,6 +59,7 @@ class Tabs(object):
         'notary_seal_tabs': 'list[NotarySeal]',
         'note_tabs': 'list[Note]',
         'number_tabs': 'list[Number]',
+        'numerical_tabs': 'list[Numerical]',
         'phone_number_tabs': 'list[PhoneNumber]',
         'poly_line_overlay_tabs': 'list[PolyLineOverlay]',
         'prefill_tabs': 'PrefillTabs',
@@ -101,6 +102,7 @@ class Tabs(object):
         'notary_seal_tabs': 'notarySealTabs',
         'note_tabs': 'noteTabs',
         'number_tabs': 'numberTabs',
+        'numerical_tabs': 'numericalTabs',
         'phone_number_tabs': 'phoneNumberTabs',
         'poly_line_overlay_tabs': 'polyLineOverlayTabs',
         'prefill_tabs': 'prefillTabs',
@@ -148,6 +150,7 @@ class Tabs(object):
         self._notary_seal_tabs = None
         self._note_tabs = None
         self._number_tabs = None
+        self._numerical_tabs = None
         self._phone_number_tabs = None
         self._poly_line_overlay_tabs = None
         self._prefill_tabs = None
@@ -189,6 +192,7 @@ class Tabs(object):
         setattr(self, "_{}".format('notary_seal_tabs'), kwargs.get('notary_seal_tabs', None))
         setattr(self, "_{}".format('note_tabs'), kwargs.get('note_tabs', None))
         setattr(self, "_{}".format('number_tabs'), kwargs.get('number_tabs', None))
+        setattr(self, "_{}".format('numerical_tabs'), kwargs.get('numerical_tabs', None))
         setattr(self, "_{}".format('phone_number_tabs'), kwargs.get('phone_number_tabs', None))
         setattr(self, "_{}".format('poly_line_overlay_tabs'), kwargs.get('poly_line_overlay_tabs', None))
         setattr(self, "_{}".format('prefill_tabs'), kwargs.get('prefill_tabs', None))
@@ -800,6 +804,29 @@ class Tabs(object):
         """
 
         self._number_tabs = number_tabs
+
+    @property
+    def numerical_tabs(self):
+        """Gets the numerical_tabs of this Tabs.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The numerical_tabs of this Tabs.  # noqa: E501
+        :rtype: list[Numerical]
+        """
+        return self._numerical_tabs
+
+    @numerical_tabs.setter
+    def numerical_tabs(self, numerical_tabs):
+        """Sets the numerical_tabs of this Tabs.
+
+          # noqa: E501
+
+        :param numerical_tabs: The numerical_tabs of this Tabs.  # noqa: E501
+        :type: list[Numerical]
+        """
+
+        self._numerical_tabs = numerical_tabs
 
     @property
     def phone_number_tabs(self):

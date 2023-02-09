@@ -34,6 +34,7 @@ class BulkSendingCopy(object):
     """
     swagger_types = {
         'custom_fields': 'list[BulkSendingCopyCustomField]',
+        'doc_gen_form_fields': 'list[BulksendingCopyDocGenFormField]',
         'email_blurb': 'str',
         'email_subject': 'str',
         'recipients': 'list[BulkSendingCopyRecipient]'
@@ -41,6 +42,7 @@ class BulkSendingCopy(object):
 
     attribute_map = {
         'custom_fields': 'customFields',
+        'doc_gen_form_fields': 'docGenFormFields',
         'email_blurb': 'emailBlurb',
         'email_subject': 'emailSubject',
         'recipients': 'recipients'
@@ -53,12 +55,14 @@ class BulkSendingCopy(object):
         self._configuration = _configuration
 
         self._custom_fields = None
+        self._doc_gen_form_fields = None
         self._email_blurb = None
         self._email_subject = None
         self._recipients = None
         self.discriminator = None
 
         setattr(self, "_{}".format('custom_fields'), kwargs.get('custom_fields', None))
+        setattr(self, "_{}".format('doc_gen_form_fields'), kwargs.get('doc_gen_form_fields', None))
         setattr(self, "_{}".format('email_blurb'), kwargs.get('email_blurb', None))
         setattr(self, "_{}".format('email_subject'), kwargs.get('email_subject', None))
         setattr(self, "_{}".format('recipients'), kwargs.get('recipients', None))
@@ -85,6 +89,29 @@ class BulkSendingCopy(object):
         """
 
         self._custom_fields = custom_fields
+
+    @property
+    def doc_gen_form_fields(self):
+        """Gets the doc_gen_form_fields of this BulkSendingCopy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The doc_gen_form_fields of this BulkSendingCopy.  # noqa: E501
+        :rtype: list[BulksendingCopyDocGenFormField]
+        """
+        return self._doc_gen_form_fields
+
+    @doc_gen_form_fields.setter
+    def doc_gen_form_fields(self, doc_gen_form_fields):
+        """Sets the doc_gen_form_fields of this BulkSendingCopy.
+
+          # noqa: E501
+
+        :param doc_gen_form_fields: The doc_gen_form_fields of this BulkSendingCopy.  # noqa: E501
+        :type: list[BulksendingCopyDocGenFormField]
+        """
+
+        self._doc_gen_form_fields = doc_gen_form_fields
 
     @property
     def email_blurb(self):

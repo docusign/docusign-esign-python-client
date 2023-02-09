@@ -55,9 +55,11 @@ class FoldersApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str count:
         :param str include:
         :param str include_items:
         :param str start_position:
+        :param str sub_folder_depth:
         :param str template: Specifies the items that are returned. Valid values are:   * include - The folder list will return normal folders plus template folders.  * only - Only the list of template folders are returned.
         :param str user_filter:
         :return: FoldersResponse
@@ -86,9 +88,11 @@ class FoldersApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str count:
         :param str include:
         :param str include_items:
         :param str start_position:
+        :param str sub_folder_depth:
         :param str template: Specifies the items that are returned. Valid values are:   * include - The folder list will return normal folders plus template folders.  * only - Only the list of template folders are returned.
         :param str user_filter:
         :return: FoldersResponse
@@ -96,7 +100,7 @@ class FoldersApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'include', 'include_items', 'start_position', 'template', 'user_filter']
+        all_params = ['account_id', 'count', 'include', 'include_items', 'start_position', 'sub_folder_depth', 'template', 'user_filter']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -124,12 +128,16 @@ class FoldersApi(object):
             path_params['accountId'] = params['account_id']
 
         query_params = {}
+        if 'count' in params:
+            query_params['count'] = params['count']
         if 'include' in params:
             query_params['include'] = params['include']
         if 'include_items' in params:
             query_params['include_items'] = params['include_items']
         if 'start_position' in params:
             query_params['start_position'] = params['start_position']
+        if 'sub_folder_depth' in params:
+            query_params['sub_folder_depth'] = params['sub_folder_depth']
         if 'template' in params:
             query_params['template'] = params['template']
         if 'user_filter' in params:
