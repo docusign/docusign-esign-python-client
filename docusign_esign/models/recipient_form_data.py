@@ -44,14 +44,14 @@ class RecipientFormData(object):
     }
 
     attribute_map = {
-        'declined_time': 'DeclinedTime',
-        'delivered_time': 'DeliveredTime',
+        'declined_time': 'declinedTime',
+        'delivered_time': 'deliveredTime',
         'email': 'email',
         'form_data': 'formData',
         'name': 'name',
         'recipient_id': 'recipientId',
-        'sent_time': 'SentTime',
-        'signed_time': 'SignedTime'
+        'sent_time': 'sentTime',
+        'signed_time': 'signedTime'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501

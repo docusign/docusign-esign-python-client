@@ -42,6 +42,7 @@ class Contact(object):
         'error_details': 'ErrorDetails',
         'is_owner': 'bool',
         'name': 'str',
+        'notary_contact_details': 'NotaryContactDetails',
         'organization': 'str',
         'room_contact_type': 'str',
         'shared': 'str',
@@ -59,6 +60,7 @@ class Contact(object):
         'error_details': 'errorDetails',
         'is_owner': 'isOwner',
         'name': 'name',
+        'notary_contact_details': 'notaryContactDetails',
         'organization': 'organization',
         'room_contact_type': 'roomContactType',
         'shared': 'shared',
@@ -81,6 +83,7 @@ class Contact(object):
         self._error_details = None
         self._is_owner = None
         self._name = None
+        self._notary_contact_details = None
         self._organization = None
         self._room_contact_type = None
         self._shared = None
@@ -97,6 +100,7 @@ class Contact(object):
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
         setattr(self, "_{}".format('is_owner'), kwargs.get('is_owner', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
+        setattr(self, "_{}".format('notary_contact_details'), kwargs.get('notary_contact_details', None))
         setattr(self, "_{}".format('organization'), kwargs.get('organization', None))
         setattr(self, "_{}".format('room_contact_type'), kwargs.get('room_contact_type', None))
         setattr(self, "_{}".format('shared'), kwargs.get('shared', None))
@@ -309,6 +313,27 @@ class Contact(object):
         """
 
         self._name = name
+
+    @property
+    def notary_contact_details(self):
+        """Gets the notary_contact_details of this Contact.  # noqa: E501
+
+
+        :return: The notary_contact_details of this Contact.  # noqa: E501
+        :rtype: NotaryContactDetails
+        """
+        return self._notary_contact_details
+
+    @notary_contact_details.setter
+    def notary_contact_details(self, notary_contact_details):
+        """Sets the notary_contact_details of this Contact.
+
+
+        :param notary_contact_details: The notary_contact_details of this Contact.  # noqa: E501
+        :type: NotaryContactDetails
+        """
+
+        self._notary_contact_details = notary_contact_details
 
     @property
     def organization(self):

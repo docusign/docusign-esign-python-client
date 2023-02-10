@@ -35,13 +35,15 @@ class RecipientIdentityVerification(object):
     swagger_types = {
         'input_options': 'list[RecipientIdentityInputOption]',
         'workflow_id': 'str',
-        'workflow_id_metadata': 'PropertyMetadata'
+        'workflow_id_metadata': 'PropertyMetadata',
+        'workflow_label': 'str'
     }
 
     attribute_map = {
         'input_options': 'inputOptions',
         'workflow_id': 'workflowId',
-        'workflow_id_metadata': 'workflowIdMetadata'
+        'workflow_id_metadata': 'workflowIdMetadata',
+        'workflow_label': 'workflowLabel'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -53,11 +55,13 @@ class RecipientIdentityVerification(object):
         self._input_options = None
         self._workflow_id = None
         self._workflow_id_metadata = None
+        self._workflow_label = None
         self.discriminator = None
 
         setattr(self, "_{}".format('input_options'), kwargs.get('input_options', None))
         setattr(self, "_{}".format('workflow_id'), kwargs.get('workflow_id', None))
         setattr(self, "_{}".format('workflow_id_metadata'), kwargs.get('workflow_id_metadata', None))
+        setattr(self, "_{}".format('workflow_label'), kwargs.get('workflow_label', None))
 
     @property
     def input_options(self):
@@ -127,6 +131,29 @@ class RecipientIdentityVerification(object):
         """
 
         self._workflow_id_metadata = workflow_id_metadata
+
+    @property
+    def workflow_label(self):
+        """Gets the workflow_label of this RecipientIdentityVerification.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The workflow_label of this RecipientIdentityVerification.  # noqa: E501
+        :rtype: str
+        """
+        return self._workflow_label
+
+    @workflow_label.setter
+    def workflow_label(self, workflow_label):
+        """Sets the workflow_label of this RecipientIdentityVerification.
+
+          # noqa: E501
+
+        :param workflow_label: The workflow_label of this RecipientIdentityVerification.  # noqa: E501
+        :type: str
+        """
+
+        self._workflow_label = workflow_label
 
     def to_dict(self):
         """Returns the model properties as a dict"""

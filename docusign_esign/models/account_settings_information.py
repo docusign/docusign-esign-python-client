@@ -227,12 +227,16 @@ class AccountSettingsInformation(object):
         'allow_supplemental_documents_metadata': 'SettingsMetadata',
         'allow_third_party_electronic_notary': 'str',
         'allow_third_party_electronic_notary_metadata': 'SettingsMetadata',
+        'allow_transactions_workspace': 'str',
+        'allow_transactions_workspace_metadata': 'SettingsMetadata',
         'allow_users_to_access_directory': 'str',
         'allow_users_to_access_directory_metadata': 'SettingsMetadata',
         'allow_value_insights': 'str',
         'allow_value_insights_metadata': 'SettingsMetadata',
         'allow_web_forms': 'str',
         'allow_web_forms_metadata': 'SettingsMetadata',
+        'allow_whats_app_delivery': 'str',
+        'allow_whats_app_delivery_metadata': 'SettingsMetadata',
         'anchor_population_scope': 'str',
         'anchor_population_scope_metadata': 'SettingsMetadata',
         'anchor_tag_versioned_placement_enabled': 'str',
@@ -357,6 +361,7 @@ class AccountSettingsInformation(object):
         'enable_customer_satisfaction_metric_tracking_metadata': 'SettingsMetadata',
         'enable_ds_pro': 'str',
         'enable_ds_pro_metadata': 'SettingsMetadata',
+        'enable_enforce_tls_emails_setting_metadata': 'SettingsMetadata',
         'enable_envelope_stamping_by_account_admin': 'str',
         'enable_envelope_stamping_by_account_admin_metadata': 'SettingsMetadata',
         'enable_envelope_stamping_by_ds_admin': 'str',
@@ -371,6 +376,8 @@ class AccountSettingsInformation(object):
         'enable_id_fx_intuit_kba_metadata': 'SettingsMetadata',
         'enable_id_fx_phone_authentication': 'str',
         'enable_id_fx_phone_authentication_metadata': 'SettingsMetadata',
+        'enable_idfx_phone_auth_signature_auth_status': 'str',
+        'enable_idfx_phone_auth_signature_auth_status_metadata': 'SettingsMetadata',
         'enable_in_browser_editor': 'str',
         'enable_in_browser_editor_metadata': 'SettingsMetadata',
         'enable_key_terms_suggestions_by_document_type': 'str',
@@ -449,6 +456,8 @@ class AccountSettingsInformation(object):
         'enable_witnessing_metadata': 'SettingsMetadata',
         'enforce_template_name_uniqueness': 'str',
         'enforce_template_name_uniqueness_metadata': 'SettingsMetadata',
+        'enforce_tls_emails': 'str',
+        'enforce_tls_emails_metadata': 'SettingsMetadata',
         'envelope_integration_allowed': 'str',
         'envelope_integration_allowed_metadata': 'SettingsMetadata',
         'envelope_integration_enabled': 'str',
@@ -476,6 +485,8 @@ class AccountSettingsInformation(object):
         'finish_reminder_metadata': 'SettingsMetadata',
         'guided_forms_html_allowed': 'str',
         'guided_forms_html_allowed_metadata': 'SettingsMetadata',
+        'guided_forms_html_conversion_policy': 'str',
+        'guided_forms_html_conversion_policy_metadata': 'SettingsMetadata',
         'has_recipient_connect_claimed_domain': 'str',
         'hide_account_address_in_co_c': 'str',
         'hide_account_address_in_co_c_metadata': 'SettingsMetadata',
@@ -551,6 +562,7 @@ class AccountSettingsInformation(object):
         'rsa_verid_password': 'str',
         'rsa_verid_ruleset': 'str',
         'rsa_verid_user_id': 'str',
+        'sbs_transaction_level': 'str',
         'self_signed_recipient_email_document': 'str',
         'self_signed_recipient_email_document_metadata': 'SettingsMetadata',
         'self_signed_recipient_email_document_user_override': 'str',
@@ -887,12 +899,16 @@ class AccountSettingsInformation(object):
         'allow_supplemental_documents_metadata': 'allowSupplementalDocumentsMetadata',
         'allow_third_party_electronic_notary': 'allowThirdPartyElectronicNotary',
         'allow_third_party_electronic_notary_metadata': 'allowThirdPartyElectronicNotaryMetadata',
+        'allow_transactions_workspace': 'allowTransactionsWorkspace',
+        'allow_transactions_workspace_metadata': 'allowTransactionsWorkspaceMetadata',
         'allow_users_to_access_directory': 'allowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata': 'allowUsersToAccessDirectoryMetadata',
         'allow_value_insights': 'allowValueInsights',
         'allow_value_insights_metadata': 'allowValueInsightsMetadata',
         'allow_web_forms': 'allowWebForms',
         'allow_web_forms_metadata': 'allowWebFormsMetadata',
+        'allow_whats_app_delivery': 'allowWhatsAppDelivery',
+        'allow_whats_app_delivery_metadata': 'allowWhatsAppDeliveryMetadata',
         'anchor_population_scope': 'anchorPopulationScope',
         'anchor_population_scope_metadata': 'anchorPopulationScopeMetadata',
         'anchor_tag_versioned_placement_enabled': 'anchorTagVersionedPlacementEnabled',
@@ -1017,6 +1033,7 @@ class AccountSettingsInformation(object):
         'enable_customer_satisfaction_metric_tracking_metadata': 'enableCustomerSatisfactionMetricTrackingMetadata',
         'enable_ds_pro': 'enableDSPro',
         'enable_ds_pro_metadata': 'enableDSProMetadata',
+        'enable_enforce_tls_emails_setting_metadata': 'enableEnforceTlsEmailsSettingMetadata',
         'enable_envelope_stamping_by_account_admin': 'enableEnvelopeStampingByAccountAdmin',
         'enable_envelope_stamping_by_account_admin_metadata': 'enableEnvelopeStampingByAccountAdminMetadata',
         'enable_envelope_stamping_by_ds_admin': 'enableEnvelopeStampingByDSAdmin',
@@ -1031,6 +1048,8 @@ class AccountSettingsInformation(object):
         'enable_id_fx_intuit_kba_metadata': 'enableIDFxIntuitKBAMetadata',
         'enable_id_fx_phone_authentication': 'enableIDFxPhoneAuthentication',
         'enable_id_fx_phone_authentication_metadata': 'enableIDFxPhoneAuthenticationMetadata',
+        'enable_idfx_phone_auth_signature_auth_status': 'enableIdfxPhoneAuthSignatureAuthStatus',
+        'enable_idfx_phone_auth_signature_auth_status_metadata': 'enableIdfxPhoneAuthSignatureAuthStatusMetadata',
         'enable_in_browser_editor': 'enableInBrowserEditor',
         'enable_in_browser_editor_metadata': 'enableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type': 'enableKeyTermsSuggestionsByDocumentType',
@@ -1109,14 +1128,16 @@ class AccountSettingsInformation(object):
         'enable_witnessing_metadata': 'enableWitnessingMetadata',
         'enforce_template_name_uniqueness': 'enforceTemplateNameUniqueness',
         'enforce_template_name_uniqueness_metadata': 'enforceTemplateNameUniquenessMetadata',
+        'enforce_tls_emails': 'enforceTlsEmails',
+        'enforce_tls_emails_metadata': 'enforceTlsEmailsMetadata',
         'envelope_integration_allowed': 'envelopeIntegrationAllowed',
         'envelope_integration_allowed_metadata': 'envelopeIntegrationAllowedMetadata',
         'envelope_integration_enabled': 'envelopeIntegrationEnabled',
         'envelope_integration_enabled_metadata': 'envelopeIntegrationEnabledMetadata',
-        'envelope_limits_total_document_size_allowed_in_mb': 'EnvelopeLimitsTotalDocumentSizeAllowedInMB',
-        'envelope_limits_total_document_size_allowed_in_mb_enabled': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled',
-        'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata',
-        'envelope_limits_total_document_size_allowed_in_mb_metadata': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata',
+        'envelope_limits_total_document_size_allowed_in_mb': 'envelopeLimitsTotalDocumentSizeAllowedInMB',
+        'envelope_limits_total_document_size_allowed_in_mb_enabled': 'envelopeLimitsTotalDocumentSizeAllowedInMBEnabled',
+        'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata': 'envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata',
+        'envelope_limits_total_document_size_allowed_in_mb_metadata': 'envelopeLimitsTotalDocumentSizeAllowedInMBMetadata',
         'envelope_search_mode': 'envelopeSearchMode',
         'envelope_search_mode_metadata': 'envelopeSearchModeMetadata',
         'envelope_stamping_default_value': 'envelopeStampingDefaultValue',
@@ -1136,6 +1157,8 @@ class AccountSettingsInformation(object):
         'finish_reminder_metadata': 'finishReminderMetadata',
         'guided_forms_html_allowed': 'guidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata': 'guidedFormsHtmlAllowedMetadata',
+        'guided_forms_html_conversion_policy': 'guidedFormsHtmlConversionPolicy',
+        'guided_forms_html_conversion_policy_metadata': 'guidedFormsHtmlConversionPolicyMetadata',
         'has_recipient_connect_claimed_domain': 'hasRecipientConnectClaimedDomain',
         'hide_account_address_in_co_c': 'hideAccountAddressInCoC',
         'hide_account_address_in_co_c_metadata': 'hideAccountAddressInCoCMetadata',
@@ -1211,6 +1234,7 @@ class AccountSettingsInformation(object):
         'rsa_verid_password': 'rsaVeridPassword',
         'rsa_verid_ruleset': 'rsaVeridRuleset',
         'rsa_verid_user_id': 'rsaVeridUserId',
+        'sbs_transaction_level': 'sbsTransactionLevel',
         'self_signed_recipient_email_document': 'selfSignedRecipientEmailDocument',
         'self_signed_recipient_email_document_metadata': 'selfSignedRecipientEmailDocumentMetadata',
         'self_signed_recipient_email_document_user_override': 'selfSignedRecipientEmailDocumentUserOverride',
@@ -1552,12 +1576,16 @@ class AccountSettingsInformation(object):
         self._allow_supplemental_documents_metadata = None
         self._allow_third_party_electronic_notary = None
         self._allow_third_party_electronic_notary_metadata = None
+        self._allow_transactions_workspace = None
+        self._allow_transactions_workspace_metadata = None
         self._allow_users_to_access_directory = None
         self._allow_users_to_access_directory_metadata = None
         self._allow_value_insights = None
         self._allow_value_insights_metadata = None
         self._allow_web_forms = None
         self._allow_web_forms_metadata = None
+        self._allow_whats_app_delivery = None
+        self._allow_whats_app_delivery_metadata = None
         self._anchor_population_scope = None
         self._anchor_population_scope_metadata = None
         self._anchor_tag_versioned_placement_enabled = None
@@ -1682,6 +1710,7 @@ class AccountSettingsInformation(object):
         self._enable_customer_satisfaction_metric_tracking_metadata = None
         self._enable_ds_pro = None
         self._enable_ds_pro_metadata = None
+        self._enable_enforce_tls_emails_setting_metadata = None
         self._enable_envelope_stamping_by_account_admin = None
         self._enable_envelope_stamping_by_account_admin_metadata = None
         self._enable_envelope_stamping_by_ds_admin = None
@@ -1696,6 +1725,8 @@ class AccountSettingsInformation(object):
         self._enable_id_fx_intuit_kba_metadata = None
         self._enable_id_fx_phone_authentication = None
         self._enable_id_fx_phone_authentication_metadata = None
+        self._enable_idfx_phone_auth_signature_auth_status = None
+        self._enable_idfx_phone_auth_signature_auth_status_metadata = None
         self._enable_in_browser_editor = None
         self._enable_in_browser_editor_metadata = None
         self._enable_key_terms_suggestions_by_document_type = None
@@ -1774,6 +1805,8 @@ class AccountSettingsInformation(object):
         self._enable_witnessing_metadata = None
         self._enforce_template_name_uniqueness = None
         self._enforce_template_name_uniqueness_metadata = None
+        self._enforce_tls_emails = None
+        self._enforce_tls_emails_metadata = None
         self._envelope_integration_allowed = None
         self._envelope_integration_allowed_metadata = None
         self._envelope_integration_enabled = None
@@ -1801,6 +1834,8 @@ class AccountSettingsInformation(object):
         self._finish_reminder_metadata = None
         self._guided_forms_html_allowed = None
         self._guided_forms_html_allowed_metadata = None
+        self._guided_forms_html_conversion_policy = None
+        self._guided_forms_html_conversion_policy_metadata = None
         self._has_recipient_connect_claimed_domain = None
         self._hide_account_address_in_co_c = None
         self._hide_account_address_in_co_c_metadata = None
@@ -1876,6 +1911,7 @@ class AccountSettingsInformation(object):
         self._rsa_verid_password = None
         self._rsa_verid_ruleset = None
         self._rsa_verid_user_id = None
+        self._sbs_transaction_level = None
         self._self_signed_recipient_email_document = None
         self._self_signed_recipient_email_document_metadata = None
         self._self_signed_recipient_email_document_user_override = None
@@ -2211,12 +2247,16 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_supplemental_documents_metadata'), kwargs.get('allow_supplemental_documents_metadata', None))
         setattr(self, "_{}".format('allow_third_party_electronic_notary'), kwargs.get('allow_third_party_electronic_notary', None))
         setattr(self, "_{}".format('allow_third_party_electronic_notary_metadata'), kwargs.get('allow_third_party_electronic_notary_metadata', None))
+        setattr(self, "_{}".format('allow_transactions_workspace'), kwargs.get('allow_transactions_workspace', None))
+        setattr(self, "_{}".format('allow_transactions_workspace_metadata'), kwargs.get('allow_transactions_workspace_metadata', None))
         setattr(self, "_{}".format('allow_users_to_access_directory'), kwargs.get('allow_users_to_access_directory', None))
         setattr(self, "_{}".format('allow_users_to_access_directory_metadata'), kwargs.get('allow_users_to_access_directory_metadata', None))
         setattr(self, "_{}".format('allow_value_insights'), kwargs.get('allow_value_insights', None))
         setattr(self, "_{}".format('allow_value_insights_metadata'), kwargs.get('allow_value_insights_metadata', None))
         setattr(self, "_{}".format('allow_web_forms'), kwargs.get('allow_web_forms', None))
         setattr(self, "_{}".format('allow_web_forms_metadata'), kwargs.get('allow_web_forms_metadata', None))
+        setattr(self, "_{}".format('allow_whats_app_delivery'), kwargs.get('allow_whats_app_delivery', None))
+        setattr(self, "_{}".format('allow_whats_app_delivery_metadata'), kwargs.get('allow_whats_app_delivery_metadata', None))
         setattr(self, "_{}".format('anchor_population_scope'), kwargs.get('anchor_population_scope', None))
         setattr(self, "_{}".format('anchor_population_scope_metadata'), kwargs.get('anchor_population_scope_metadata', None))
         setattr(self, "_{}".format('anchor_tag_versioned_placement_enabled'), kwargs.get('anchor_tag_versioned_placement_enabled', None))
@@ -2341,6 +2381,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_customer_satisfaction_metric_tracking_metadata'), kwargs.get('enable_customer_satisfaction_metric_tracking_metadata', None))
         setattr(self, "_{}".format('enable_ds_pro'), kwargs.get('enable_ds_pro', None))
         setattr(self, "_{}".format('enable_ds_pro_metadata'), kwargs.get('enable_ds_pro_metadata', None))
+        setattr(self, "_{}".format('enable_enforce_tls_emails_setting_metadata'), kwargs.get('enable_enforce_tls_emails_setting_metadata', None))
         setattr(self, "_{}".format('enable_envelope_stamping_by_account_admin'), kwargs.get('enable_envelope_stamping_by_account_admin', None))
         setattr(self, "_{}".format('enable_envelope_stamping_by_account_admin_metadata'), kwargs.get('enable_envelope_stamping_by_account_admin_metadata', None))
         setattr(self, "_{}".format('enable_envelope_stamping_by_ds_admin'), kwargs.get('enable_envelope_stamping_by_ds_admin', None))
@@ -2355,6 +2396,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_id_fx_intuit_kba_metadata'), kwargs.get('enable_id_fx_intuit_kba_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_phone_authentication'), kwargs.get('enable_id_fx_phone_authentication', None))
         setattr(self, "_{}".format('enable_id_fx_phone_authentication_metadata'), kwargs.get('enable_id_fx_phone_authentication_metadata', None))
+        setattr(self, "_{}".format('enable_idfx_phone_auth_signature_auth_status'), kwargs.get('enable_idfx_phone_auth_signature_auth_status', None))
+        setattr(self, "_{}".format('enable_idfx_phone_auth_signature_auth_status_metadata'), kwargs.get('enable_idfx_phone_auth_signature_auth_status_metadata', None))
         setattr(self, "_{}".format('enable_in_browser_editor'), kwargs.get('enable_in_browser_editor', None))
         setattr(self, "_{}".format('enable_in_browser_editor_metadata'), kwargs.get('enable_in_browser_editor_metadata', None))
         setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type'), kwargs.get('enable_key_terms_suggestions_by_document_type', None))
@@ -2433,6 +2476,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_witnessing_metadata'), kwargs.get('enable_witnessing_metadata', None))
         setattr(self, "_{}".format('enforce_template_name_uniqueness'), kwargs.get('enforce_template_name_uniqueness', None))
         setattr(self, "_{}".format('enforce_template_name_uniqueness_metadata'), kwargs.get('enforce_template_name_uniqueness_metadata', None))
+        setattr(self, "_{}".format('enforce_tls_emails'), kwargs.get('enforce_tls_emails', None))
+        setattr(self, "_{}".format('enforce_tls_emails_metadata'), kwargs.get('enforce_tls_emails_metadata', None))
         setattr(self, "_{}".format('envelope_integration_allowed'), kwargs.get('envelope_integration_allowed', None))
         setattr(self, "_{}".format('envelope_integration_allowed_metadata'), kwargs.get('envelope_integration_allowed_metadata', None))
         setattr(self, "_{}".format('envelope_integration_enabled'), kwargs.get('envelope_integration_enabled', None))
@@ -2460,6 +2505,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('finish_reminder_metadata'), kwargs.get('finish_reminder_metadata', None))
         setattr(self, "_{}".format('guided_forms_html_allowed'), kwargs.get('guided_forms_html_allowed', None))
         setattr(self, "_{}".format('guided_forms_html_allowed_metadata'), kwargs.get('guided_forms_html_allowed_metadata', None))
+        setattr(self, "_{}".format('guided_forms_html_conversion_policy'), kwargs.get('guided_forms_html_conversion_policy', None))
+        setattr(self, "_{}".format('guided_forms_html_conversion_policy_metadata'), kwargs.get('guided_forms_html_conversion_policy_metadata', None))
         setattr(self, "_{}".format('has_recipient_connect_claimed_domain'), kwargs.get('has_recipient_connect_claimed_domain', None))
         setattr(self, "_{}".format('hide_account_address_in_co_c'), kwargs.get('hide_account_address_in_co_c', None))
         setattr(self, "_{}".format('hide_account_address_in_co_c_metadata'), kwargs.get('hide_account_address_in_co_c_metadata', None))
@@ -2535,6 +2582,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('rsa_verid_password'), kwargs.get('rsa_verid_password', None))
         setattr(self, "_{}".format('rsa_verid_ruleset'), kwargs.get('rsa_verid_ruleset', None))
         setattr(self, "_{}".format('rsa_verid_user_id'), kwargs.get('rsa_verid_user_id', None))
+        setattr(self, "_{}".format('sbs_transaction_level'), kwargs.get('sbs_transaction_level', None))
         setattr(self, "_{}".format('self_signed_recipient_email_document'), kwargs.get('self_signed_recipient_email_document', None))
         setattr(self, "_{}".format('self_signed_recipient_email_document_metadata'), kwargs.get('self_signed_recipient_email_document_metadata', None))
         setattr(self, "_{}".format('self_signed_recipient_email_document_user_override'), kwargs.get('self_signed_recipient_email_document_user_override', None))
@@ -7120,6 +7168,50 @@ class AccountSettingsInformation(object):
         self._allow_third_party_electronic_notary_metadata = allow_third_party_electronic_notary_metadata
 
     @property
+    def allow_transactions_workspace(self):
+        """Gets the allow_transactions_workspace of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_transactions_workspace of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_transactions_workspace
+
+    @allow_transactions_workspace.setter
+    def allow_transactions_workspace(self, allow_transactions_workspace):
+        """Sets the allow_transactions_workspace of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_transactions_workspace: The allow_transactions_workspace of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_transactions_workspace = allow_transactions_workspace
+
+    @property
+    def allow_transactions_workspace_metadata(self):
+        """Gets the allow_transactions_workspace_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_transactions_workspace_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_transactions_workspace_metadata
+
+    @allow_transactions_workspace_metadata.setter
+    def allow_transactions_workspace_metadata(self, allow_transactions_workspace_metadata):
+        """Sets the allow_transactions_workspace_metadata of this AccountSettingsInformation.
+
+
+        :param allow_transactions_workspace_metadata: The allow_transactions_workspace_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_transactions_workspace_metadata = allow_transactions_workspace_metadata
+
+    @property
     def allow_users_to_access_directory(self):
         """Gets the allow_users_to_access_directory of this AccountSettingsInformation.  # noqa: E501
 
@@ -7254,6 +7346,50 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_web_forms_metadata = allow_web_forms_metadata
+
+    @property
+    def allow_whats_app_delivery(self):
+        """Gets the allow_whats_app_delivery of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_whats_app_delivery of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_whats_app_delivery
+
+    @allow_whats_app_delivery.setter
+    def allow_whats_app_delivery(self, allow_whats_app_delivery):
+        """Sets the allow_whats_app_delivery of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_whats_app_delivery: The allow_whats_app_delivery of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_whats_app_delivery = allow_whats_app_delivery
+
+    @property
+    def allow_whats_app_delivery_metadata(self):
+        """Gets the allow_whats_app_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The allow_whats_app_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_whats_app_delivery_metadata
+
+    @allow_whats_app_delivery_metadata.setter
+    def allow_whats_app_delivery_metadata(self, allow_whats_app_delivery_metadata):
+        """Sets the allow_whats_app_delivery_metadata of this AccountSettingsInformation.
+
+
+        :param allow_whats_app_delivery_metadata: The allow_whats_app_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_whats_app_delivery_metadata = allow_whats_app_delivery_metadata
 
     @property
     def anchor_population_scope(self):
@@ -10094,6 +10230,27 @@ class AccountSettingsInformation(object):
         self._enable_ds_pro_metadata = enable_ds_pro_metadata
 
     @property
+    def enable_enforce_tls_emails_setting_metadata(self):
+        """Gets the enable_enforce_tls_emails_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_enforce_tls_emails_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_enforce_tls_emails_setting_metadata
+
+    @enable_enforce_tls_emails_setting_metadata.setter
+    def enable_enforce_tls_emails_setting_metadata(self, enable_enforce_tls_emails_setting_metadata):
+        """Sets the enable_enforce_tls_emails_setting_metadata of this AccountSettingsInformation.
+
+
+        :param enable_enforce_tls_emails_setting_metadata: The enable_enforce_tls_emails_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_enforce_tls_emails_setting_metadata = enable_enforce_tls_emails_setting_metadata
+
+    @property
     def enable_envelope_stamping_by_account_admin(self):
         """Gets the enable_envelope_stamping_by_account_admin of this AccountSettingsInformation.  # noqa: E501
 
@@ -10410,6 +10567,50 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_id_fx_phone_authentication_metadata = enable_id_fx_phone_authentication_metadata
+
+    @property
+    def enable_idfx_phone_auth_signature_auth_status(self):
+        """Gets the enable_idfx_phone_auth_signature_auth_status of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_idfx_phone_auth_signature_auth_status of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_idfx_phone_auth_signature_auth_status
+
+    @enable_idfx_phone_auth_signature_auth_status.setter
+    def enable_idfx_phone_auth_signature_auth_status(self, enable_idfx_phone_auth_signature_auth_status):
+        """Sets the enable_idfx_phone_auth_signature_auth_status of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_idfx_phone_auth_signature_auth_status: The enable_idfx_phone_auth_signature_auth_status of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_idfx_phone_auth_signature_auth_status = enable_idfx_phone_auth_signature_auth_status
+
+    @property
+    def enable_idfx_phone_auth_signature_auth_status_metadata(self):
+        """Gets the enable_idfx_phone_auth_signature_auth_status_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enable_idfx_phone_auth_signature_auth_status_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_idfx_phone_auth_signature_auth_status_metadata
+
+    @enable_idfx_phone_auth_signature_auth_status_metadata.setter
+    def enable_idfx_phone_auth_signature_auth_status_metadata(self, enable_idfx_phone_auth_signature_auth_status_metadata):
+        """Sets the enable_idfx_phone_auth_signature_auth_status_metadata of this AccountSettingsInformation.
+
+
+        :param enable_idfx_phone_auth_signature_auth_status_metadata: The enable_idfx_phone_auth_signature_auth_status_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_idfx_phone_auth_signature_auth_status_metadata = enable_idfx_phone_auth_signature_auth_status_metadata
 
     @property
     def enable_in_browser_editor(self):
@@ -12200,6 +12401,50 @@ class AccountSettingsInformation(object):
         self._enforce_template_name_uniqueness_metadata = enforce_template_name_uniqueness_metadata
 
     @property
+    def enforce_tls_emails(self):
+        """Gets the enforce_tls_emails of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enforce_tls_emails of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enforce_tls_emails
+
+    @enforce_tls_emails.setter
+    def enforce_tls_emails(self, enforce_tls_emails):
+        """Sets the enforce_tls_emails of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enforce_tls_emails: The enforce_tls_emails of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enforce_tls_emails = enforce_tls_emails
+
+    @property
+    def enforce_tls_emails_metadata(self):
+        """Gets the enforce_tls_emails_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The enforce_tls_emails_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enforce_tls_emails_metadata
+
+    @enforce_tls_emails_metadata.setter
+    def enforce_tls_emails_metadata(self, enforce_tls_emails_metadata):
+        """Sets the enforce_tls_emails_metadata of this AccountSettingsInformation.
+
+
+        :param enforce_tls_emails_metadata: The enforce_tls_emails_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enforce_tls_emails_metadata = enforce_tls_emails_metadata
+
+    @property
     def envelope_integration_allowed(self):
         """Gets the envelope_integration_allowed of this AccountSettingsInformation.  # noqa: E501
 
@@ -12813,6 +13058,50 @@ class AccountSettingsInformation(object):
         """
 
         self._guided_forms_html_allowed_metadata = guided_forms_html_allowed_metadata
+
+    @property
+    def guided_forms_html_conversion_policy(self):
+        """Gets the guided_forms_html_conversion_policy of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The guided_forms_html_conversion_policy of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._guided_forms_html_conversion_policy
+
+    @guided_forms_html_conversion_policy.setter
+    def guided_forms_html_conversion_policy(self, guided_forms_html_conversion_policy):
+        """Sets the guided_forms_html_conversion_policy of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param guided_forms_html_conversion_policy: The guided_forms_html_conversion_policy of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._guided_forms_html_conversion_policy = guided_forms_html_conversion_policy
+
+    @property
+    def guided_forms_html_conversion_policy_metadata(self):
+        """Gets the guided_forms_html_conversion_policy_metadata of this AccountSettingsInformation.  # noqa: E501
+
+
+        :return: The guided_forms_html_conversion_policy_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._guided_forms_html_conversion_policy_metadata
+
+    @guided_forms_html_conversion_policy_metadata.setter
+    def guided_forms_html_conversion_policy_metadata(self, guided_forms_html_conversion_policy_metadata):
+        """Sets the guided_forms_html_conversion_policy_metadata of this AccountSettingsInformation.
+
+
+        :param guided_forms_html_conversion_policy_metadata: The guided_forms_html_conversion_policy_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._guided_forms_html_conversion_policy_metadata = guided_forms_html_conversion_policy_metadata
 
     @property
     def has_recipient_connect_claimed_domain(self):
@@ -14528,6 +14817,29 @@ class AccountSettingsInformation(object):
         """
 
         self._rsa_verid_user_id = rsa_verid_user_id
+
+    @property
+    def sbs_transaction_level(self):
+        """Gets the sbs_transaction_level of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sbs_transaction_level of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._sbs_transaction_level
+
+    @sbs_transaction_level.setter
+    def sbs_transaction_level(self, sbs_transaction_level):
+        """Sets the sbs_transaction_level of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param sbs_transaction_level: The sbs_transaction_level of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._sbs_transaction_level = sbs_transaction_level
 
     @property
     def self_signed_recipient_email_document(self):
