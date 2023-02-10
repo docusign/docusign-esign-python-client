@@ -57,6 +57,7 @@ class ConnectCustomConfiguration(object):
         'include_o_auth': 'str',
         'include_sender_accountas_custom_field': 'str',
         'include_time_zone_information': 'str',
+        'integrator_managed': 'str',
         'name': 'str',
         'password': 'str',
         'recipient_events': 'list[str]',
@@ -102,6 +103,7 @@ class ConnectCustomConfiguration(object):
         'include_o_auth': 'includeOAuth',
         'include_sender_accountas_custom_field': 'includeSenderAccountasCustomField',
         'include_time_zone_information': 'includeTimeZoneInformation',
+        'integrator_managed': 'integratorManaged',
         'name': 'name',
         'password': 'password',
         'recipient_events': 'recipientEvents',
@@ -152,6 +154,7 @@ class ConnectCustomConfiguration(object):
         self._include_o_auth = None
         self._include_sender_accountas_custom_field = None
         self._include_time_zone_information = None
+        self._integrator_managed = None
         self._name = None
         self._password = None
         self._recipient_events = None
@@ -196,6 +199,7 @@ class ConnectCustomConfiguration(object):
         setattr(self, "_{}".format('include_o_auth'), kwargs.get('include_o_auth', None))
         setattr(self, "_{}".format('include_sender_accountas_custom_field'), kwargs.get('include_sender_accountas_custom_field', None))
         setattr(self, "_{}".format('include_time_zone_information'), kwargs.get('include_time_zone_information', None))
+        setattr(self, "_{}".format('integrator_managed'), kwargs.get('integrator_managed', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('password'), kwargs.get('password', None))
         setattr(self, "_{}".format('recipient_events'), kwargs.get('recipient_events', None))
@@ -766,6 +770,29 @@ class ConnectCustomConfiguration(object):
         """
 
         self._include_time_zone_information = include_time_zone_information
+
+    @property
+    def integrator_managed(self):
+        """Gets the integrator_managed of this ConnectCustomConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The integrator_managed of this ConnectCustomConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._integrator_managed
+
+    @integrator_managed.setter
+    def integrator_managed(self, integrator_managed):
+        """Sets the integrator_managed of this ConnectCustomConfiguration.
+
+          # noqa: E501
+
+        :param integrator_managed: The integrator_managed of this ConnectCustomConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._integrator_managed = integrator_managed
 
     @property
     def name(self):

@@ -46,6 +46,7 @@ class Envelope(object):
         'auto_navigation': 'str',
         'brand_id': 'str',
         'brand_lock': 'str',
+        'burn_default_tab_data': 'str',
         'certificate_uri': 'str',
         'completed_date_time': 'str',
         'copy_recipient_data': 'str',
@@ -127,6 +128,7 @@ class Envelope(object):
         'auto_navigation': 'autoNavigation',
         'brand_id': 'brandId',
         'brand_lock': 'brandLock',
+        'burn_default_tab_data': 'burnDefaultTabData',
         'certificate_uri': 'certificateUri',
         'completed_date_time': 'completedDateTime',
         'copy_recipient_data': 'copyRecipientData',
@@ -213,6 +215,7 @@ class Envelope(object):
         self._auto_navigation = None
         self._brand_id = None
         self._brand_lock = None
+        self._burn_default_tab_data = None
         self._certificate_uri = None
         self._completed_date_time = None
         self._copy_recipient_data = None
@@ -293,6 +296,7 @@ class Envelope(object):
         setattr(self, "_{}".format('auto_navigation'), kwargs.get('auto_navigation', None))
         setattr(self, "_{}".format('brand_id'), kwargs.get('brand_id', None))
         setattr(self, "_{}".format('brand_lock'), kwargs.get('brand_lock', None))
+        setattr(self, "_{}".format('burn_default_tab_data'), kwargs.get('burn_default_tab_data', None))
         setattr(self, "_{}".format('certificate_uri'), kwargs.get('certificate_uri', None))
         setattr(self, "_{}".format('completed_date_time'), kwargs.get('completed_date_time', None))
         setattr(self, "_{}".format('copy_recipient_data'), kwargs.get('copy_recipient_data', None))
@@ -657,6 +661,29 @@ class Envelope(object):
         """
 
         self._brand_lock = brand_lock
+
+    @property
+    def burn_default_tab_data(self):
+        """Gets the burn_default_tab_data of this Envelope.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The burn_default_tab_data of this Envelope.  # noqa: E501
+        :rtype: str
+        """
+        return self._burn_default_tab_data
+
+    @burn_default_tab_data.setter
+    def burn_default_tab_data(self, burn_default_tab_data):
+        """Sets the burn_default_tab_data of this Envelope.
+
+          # noqa: E501
+
+        :param burn_default_tab_data: The burn_default_tab_data of this Envelope.  # noqa: E501
+        :type: str
+        """
+
+        self._burn_default_tab_data = burn_default_tab_data
 
     @property
     def certificate_uri(self):

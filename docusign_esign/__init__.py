@@ -138,10 +138,6 @@ from docusign_esign.models.bulk_process_result import BulkProcessResult
 from docusign_esign.models.bulk_processing_list_summaries import BulkProcessingListSummaries
 from docusign_esign.models.bulk_processing_list_summary import BulkProcessingListSummary
 from docusign_esign.models.bulk_processing_lists import BulkProcessingLists
-from docusign_esign.models.bulk_recipient import BulkRecipient
-from docusign_esign.models.bulk_recipient_signature_provider import BulkRecipientSignatureProvider
-from docusign_esign.models.bulk_recipient_tab_label import BulkRecipientTabLabel
-from docusign_esign.models.bulk_recipients_response import BulkRecipientsResponse
 from docusign_esign.models.bulk_recipients_update_response import BulkRecipientsUpdateResponse
 from docusign_esign.models.bulk_send_batch_action_request import BulkSendBatchActionRequest
 from docusign_esign.models.bulk_send_batch_error import BulkSendBatchError
@@ -161,6 +157,7 @@ from docusign_esign.models.bulk_sending_copy_tab import BulkSendingCopyTab
 from docusign_esign.models.bulk_sending_list import BulkSendingList
 from docusign_esign.models.bulk_sending_list_summaries import BulkSendingListSummaries
 from docusign_esign.models.bulk_sending_list_summary import BulkSendingListSummary
+from docusign_esign.models.bulksending_copy_doc_gen_form_field import BulksendingCopyDocGenFormField
 from docusign_esign.models.captive_recipient import CaptiveRecipient
 from docusign_esign.models.captive_recipient_information import CaptiveRecipientInformation
 from docusign_esign.models.carbon_copy import CarbonCopy
@@ -325,6 +322,7 @@ from docusign_esign.models.integrated_connect_user_info_list import IntegratedCo
 from docusign_esign.models.integrated_user_info_list import IntegratedUserInfoList
 from docusign_esign.models.intermediary import Intermediary
 from docusign_esign.models.jurisdiction import Jurisdiction
+from docusign_esign.models.jurisdiction_summary import JurisdictionSummary
 from docusign_esign.models.last_name import LastName
 from docusign_esign.models.linked_external_primary_account import LinkedExternalPrimaryAccount
 from docusign_esign.models.list import List
@@ -352,6 +350,7 @@ from docusign_esign.models.new_users_definition import NewUsersDefinition
 from docusign_esign.models.new_users_summary import NewUsersSummary
 from docusign_esign.models.notarize import Notarize
 from docusign_esign.models.notary import Notary
+from docusign_esign.models.notary_contact_details import NotaryContactDetails
 from docusign_esign.models.notary_host import NotaryHost
 from docusign_esign.models.notary_journal import NotaryJournal
 from docusign_esign.models.notary_journal_credible_witness import NotaryJournalCredibleWitness
@@ -367,6 +366,7 @@ from docusign_esign.models.notification import Notification
 from docusign_esign.models.notification_default_settings import NotificationDefaultSettings
 from docusign_esign.models.notification_defaults import NotificationDefaults
 from docusign_esign.models.number import Number
+from docusign_esign.models.numerical import Numerical
 from docusign_esign.models.oauth_access import OauthAccess
 from docusign_esign.models.offline_attributes import OfflineAttributes
 from docusign_esign.models.page import Page

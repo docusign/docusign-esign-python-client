@@ -85,6 +85,7 @@ class TabMetadata(object):
         'underline': 'str',
         'validation_message': 'str',
         'validation_pattern': 'str',
+        'validation_type': 'str',
         'width': 'str'
     }
 
@@ -141,6 +142,7 @@ class TabMetadata(object):
         'underline': 'underline',
         'validation_message': 'validationMessage',
         'validation_pattern': 'validationPattern',
+        'validation_type': 'validationType',
         'width': 'width'
     }
 
@@ -202,6 +204,7 @@ class TabMetadata(object):
         self._underline = None
         self._validation_message = None
         self._validation_pattern = None
+        self._validation_type = None
         self._width = None
         self.discriminator = None
 
@@ -257,6 +260,7 @@ class TabMetadata(object):
         setattr(self, "_{}".format('underline'), kwargs.get('underline', None))
         setattr(self, "_{}".format('validation_message'), kwargs.get('validation_message', None))
         setattr(self, "_{}".format('validation_pattern'), kwargs.get('validation_pattern', None))
+        setattr(self, "_{}".format('validation_type'), kwargs.get('validation_type', None))
         setattr(self, "_{}".format('width'), kwargs.get('width', None))
 
     @property
@@ -1454,6 +1458,29 @@ class TabMetadata(object):
         """
 
         self._validation_pattern = validation_pattern
+
+    @property
+    def validation_type(self):
+        """Gets the validation_type of this TabMetadata.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The validation_type of this TabMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._validation_type
+
+    @validation_type.setter
+    def validation_type(self, validation_type):
+        """Sets the validation_type of this TabMetadata.
+
+          # noqa: E501
+
+        :param validation_type: The validation_type of this TabMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._validation_type = validation_type
 
     @property
     def width(self):

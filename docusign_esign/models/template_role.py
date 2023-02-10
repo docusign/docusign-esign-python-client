@@ -37,6 +37,7 @@ class TemplateRole(object):
         'additional_notifications': 'list[RecipientAdditionalNotification]',
         'client_user_id': 'str',
         'default_recipient': 'str',
+        'delivery_method': 'str',
         'email': 'str',
         'email_notification': 'RecipientEmailNotification',
         'embedded_recipient_start_url': 'str',
@@ -55,6 +56,7 @@ class TemplateRole(object):
         'additional_notifications': 'additionalNotifications',
         'client_user_id': 'clientUserId',
         'default_recipient': 'defaultRecipient',
+        'delivery_method': 'deliveryMethod',
         'email': 'email',
         'email_notification': 'emailNotification',
         'embedded_recipient_start_url': 'embeddedRecipientStartURL',
@@ -78,6 +80,7 @@ class TemplateRole(object):
         self._additional_notifications = None
         self._client_user_id = None
         self._default_recipient = None
+        self._delivery_method = None
         self._email = None
         self._email_notification = None
         self._embedded_recipient_start_url = None
@@ -95,6 +98,7 @@ class TemplateRole(object):
         setattr(self, "_{}".format('additional_notifications'), kwargs.get('additional_notifications', None))
         setattr(self, "_{}".format('client_user_id'), kwargs.get('client_user_id', None))
         setattr(self, "_{}".format('default_recipient'), kwargs.get('default_recipient', None))
+        setattr(self, "_{}".format('delivery_method'), kwargs.get('delivery_method', None))
         setattr(self, "_{}".format('email'), kwargs.get('email', None))
         setattr(self, "_{}".format('email_notification'), kwargs.get('email_notification', None))
         setattr(self, "_{}".format('embedded_recipient_start_url'), kwargs.get('embedded_recipient_start_url', None))
@@ -198,6 +202,29 @@ class TemplateRole(object):
         """
 
         self._default_recipient = default_recipient
+
+    @property
+    def delivery_method(self):
+        """Gets the delivery_method of this TemplateRole.  # noqa: E501
+
+        Reserved: For DocuSign use only.  # noqa: E501
+
+        :return: The delivery_method of this TemplateRole.  # noqa: E501
+        :rtype: str
+        """
+        return self._delivery_method
+
+    @delivery_method.setter
+    def delivery_method(self, delivery_method):
+        """Sets the delivery_method of this TemplateRole.
+
+        Reserved: For DocuSign use only.  # noqa: E501
+
+        :param delivery_method: The delivery_method of this TemplateRole.  # noqa: E501
+        :type: str
+        """
+
+        self._delivery_method = delivery_method
 
     @property
     def email(self):

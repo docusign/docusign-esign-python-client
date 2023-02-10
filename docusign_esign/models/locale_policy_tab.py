@@ -45,7 +45,8 @@ class LocalePolicyTab(object):
         'initial_format': 'str',
         'name_format': 'str',
         'time_format': 'str',
-        'time_zone': 'str'
+        'time_zone': 'str',
+        'use_long_currency_format': 'str'
     }
 
     attribute_map = {
@@ -61,7 +62,8 @@ class LocalePolicyTab(object):
         'initial_format': 'initialFormat',
         'name_format': 'nameFormat',
         'time_format': 'timeFormat',
-        'time_zone': 'timeZone'
+        'time_zone': 'timeZone',
+        'use_long_currency_format': 'useLongCurrencyFormat'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -83,6 +85,7 @@ class LocalePolicyTab(object):
         self._name_format = None
         self._time_format = None
         self._time_zone = None
+        self._use_long_currency_format = None
         self.discriminator = None
 
         setattr(self, "_{}".format('address_format'), kwargs.get('address_format', None))
@@ -98,6 +101,7 @@ class LocalePolicyTab(object):
         setattr(self, "_{}".format('name_format'), kwargs.get('name_format', None))
         setattr(self, "_{}".format('time_format'), kwargs.get('time_format', None))
         setattr(self, "_{}".format('time_zone'), kwargs.get('time_zone', None))
+        setattr(self, "_{}".format('use_long_currency_format'), kwargs.get('use_long_currency_format', None))
 
     @property
     def address_format(self):
@@ -397,6 +401,29 @@ class LocalePolicyTab(object):
         """
 
         self._time_zone = time_zone
+
+    @property
+    def use_long_currency_format(self):
+        """Gets the use_long_currency_format of this LocalePolicyTab.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_long_currency_format of this LocalePolicyTab.  # noqa: E501
+        :rtype: str
+        """
+        return self._use_long_currency_format
+
+    @use_long_currency_format.setter
+    def use_long_currency_format(self, use_long_currency_format):
+        """Sets the use_long_currency_format of this LocalePolicyTab.
+
+          # noqa: E501
+
+        :param use_long_currency_format: The use_long_currency_format of this LocalePolicyTab.  # noqa: E501
+        :type: str
+        """
+
+        self._use_long_currency_format = use_long_currency_format
 
     def to_dict(self):
         """Returns the model properties as a dict"""
