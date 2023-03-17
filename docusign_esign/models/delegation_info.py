@@ -40,10 +40,10 @@ class DelegationInfo(object):
     }
 
     attribute_map = {
-        'email': 'email',
-        'name': 'name',
-        'user_authorization_id': 'userAuthorizationId',
-        'user_id': 'userId'
+        'email': 'Email',
+        'name': 'Name',
+        'user_authorization_id': 'UserAuthorizationId',
+        'user_id': 'UserId'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501

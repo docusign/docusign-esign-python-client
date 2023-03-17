@@ -1793,6 +1793,7 @@ class UserSettingsInformation(object):
     def enable_key_terms_suggestions_by_document_type_metadata(self):
         """Gets the enable_key_terms_suggestions_by_document_type_metadata of this UserSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_key_terms_suggestions_by_document_type_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -1803,6 +1804,7 @@ class UserSettingsInformation(object):
     def enable_key_terms_suggestions_by_document_type_metadata(self, enable_key_terms_suggestions_by_document_type_metadata):
         """Sets the enable_key_terms_suggestions_by_document_type_metadata of this UserSettingsInformation.
 
+          # noqa: E501
 
         :param enable_key_terms_suggestions_by_document_type_metadata: The enable_key_terms_suggestions_by_document_type_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3401,6 +3403,7 @@ class UserSettingsInformation(object):
     def web_forms_metadata(self):
         """Gets the web_forms_metadata of this UserSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The web_forms_metadata of this UserSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3411,6 +3414,7 @@ class UserSettingsInformation(object):
     def web_forms_metadata(self, web_forms_metadata):
         """Sets the web_forms_metadata of this UserSettingsInformation.
 
+          # noqa: E501
 
         :param web_forms_metadata: The web_forms_metadata of this UserSettingsInformation.  # noqa: E501
         :type: SettingsMetadata

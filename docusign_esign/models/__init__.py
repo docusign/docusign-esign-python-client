@@ -102,7 +102,6 @@ from docusign_esign.models.bulk_process_result import BulkProcessResult
 from docusign_esign.models.bulk_processing_list_summaries import BulkProcessingListSummaries
 from docusign_esign.models.bulk_processing_list_summary import BulkProcessingListSummary
 from docusign_esign.models.bulk_processing_lists import BulkProcessingLists
-from docusign_esign.models.bulk_recipients_update_response import BulkRecipientsUpdateResponse
 from docusign_esign.models.bulk_send_batch_action_request import BulkSendBatchActionRequest
 from docusign_esign.models.bulk_send_batch_error import BulkSendBatchError
 from docusign_esign.models.bulk_send_batch_request import BulkSendBatchRequest
@@ -174,7 +173,6 @@ from docusign_esign.models.correct_view_request import CorrectViewRequest
 from docusign_esign.models.country import Country
 from docusign_esign.models.credit_card_information import CreditCardInformation
 from docusign_esign.models.credit_card_types import CreditCardTypes
-from docusign_esign.models.currency import Currency
 from docusign_esign.models.currency_feature_set_price import CurrencyFeatureSetPrice
 from docusign_esign.models.currency_plan_price import CurrencyPlanPrice
 from docusign_esign.models.custom_field import CustomField
@@ -190,6 +188,9 @@ from docusign_esign.models.diagnostics_settings_information import DiagnosticsSe
 from docusign_esign.models.direct_debit_processor_information import DirectDebitProcessorInformation
 from docusign_esign.models.dob_information_input import DobInformationInput
 from docusign_esign.models.doc_gen_form_field import DocGenFormField
+from docusign_esign.models.doc_gen_form_field_request import DocGenFormFieldRequest
+from docusign_esign.models.doc_gen_form_field_response import DocGenFormFieldResponse
+from docusign_esign.models.doc_gen_form_fields import DocGenFormFields
 from docusign_esign.models.doc_gen_syntax_error import DocGenSyntaxError
 from docusign_esign.models.document import Document
 from docusign_esign.models.document_fields_information import DocumentFieldsInformation

@@ -988,6 +988,7 @@ class Company(object):
     def caption_metadata(self):
         """Gets the caption_metadata of this Company.  # noqa: E501
 
+          # noqa: E501
 
         :return: The caption_metadata of this Company.  # noqa: E501
         :rtype: PropertyMetadata
@@ -998,6 +999,7 @@ class Company(object):
     def caption_metadata(self, caption_metadata):
         """Sets the caption_metadata of this Company.
 
+          # noqa: E501
 
         :param caption_metadata: The caption_metadata of this Company.  # noqa: E501
         :type: PropertyMetadata
@@ -1285,7 +1287,7 @@ class Company(object):
     def error_details(self):
         """Gets the error_details of this Company.  # noqa: E501
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this Company.  # noqa: E501
         :rtype: ErrorDetails
@@ -1296,7 +1298,7 @@ class Company(object):
     def error_details(self, error_details):
         """Sets the error_details of this Company.
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this Company.  # noqa: E501
         :type: ErrorDetails

@@ -253,7 +253,7 @@ class TemplateRole(object):
     def email_notification(self):
         """Gets the email_notification of this TemplateRole.  # noqa: E501
 
-        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
+        A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.   # noqa: E501
 
         :return: The email_notification of this TemplateRole.  # noqa: E501
         :rtype: RecipientEmailNotification
@@ -264,7 +264,7 @@ class TemplateRole(object):
     def email_notification(self, email_notification):
         """Sets the email_notification of this TemplateRole.
 
-        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
+        A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.   # noqa: E501
 
         :param email_notification: The email_notification of this TemplateRole.  # noqa: E501
         :type: RecipientEmailNotification

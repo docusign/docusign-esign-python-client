@@ -854,6 +854,7 @@ class InitialHere(object):
     def caption_metadata(self):
         """Gets the caption_metadata of this InitialHere.  # noqa: E501
 
+          # noqa: E501
 
         :return: The caption_metadata of this InitialHere.  # noqa: E501
         :rtype: PropertyMetadata
@@ -864,6 +865,7 @@ class InitialHere(object):
     def caption_metadata(self, caption_metadata):
         """Sets the caption_metadata of this InitialHere.
 
+          # noqa: E501
 
         :param caption_metadata: The caption_metadata of this InitialHere.  # noqa: E501
         :type: PropertyMetadata
@@ -1059,7 +1061,7 @@ class InitialHere(object):
     def error_details(self):
         """Gets the error_details of this InitialHere.  # noqa: E501
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this InitialHere.  # noqa: E501
         :rtype: ErrorDetails
@@ -1070,7 +1072,7 @@ class InitialHere(object):
     def error_details(self, error_details):
         """Sets the error_details of this InitialHere.
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this InitialHere.  # noqa: E501
         :type: ErrorDetails
@@ -1565,7 +1567,7 @@ class InitialHere(object):
     def scale_value(self):
         """Gets the scale_value of this InitialHere.  # noqa: E501
 
-        Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.  # noqa: E501
+         Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.  # noqa: E501
 
         :return: The scale_value of this InitialHere.  # noqa: E501
         :rtype: str
@@ -1576,7 +1578,7 @@ class InitialHere(object):
     def scale_value(self, scale_value):
         """Sets the scale_value of this InitialHere.
 
-        Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.  # noqa: E501
+         Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.  # noqa: E501
 
         :param scale_value: The scale_value of this InitialHere.  # noqa: E501
         :type: str

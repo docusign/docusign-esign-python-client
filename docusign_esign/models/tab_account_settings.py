@@ -41,8 +41,6 @@ class TabAccountSettings(object):
         'calculated_fields_metadata': 'SettingsMetadata',
         'checkbox_tabs_enabled': 'str',
         'check_box_tabs_metadata': 'SettingsMetadata',
-        'currency_tabs_enabled': 'str',
-        'currency_tabs_metadata': 'SettingsMetadata',
         'data_field_regex_enabled': 'str',
         'data_field_regex_metadata': 'SettingsMetadata',
         'data_field_size_enabled': 'str',
@@ -55,6 +53,8 @@ class TabAccountSettings(object):
         'list_tabs_metadata': 'SettingsMetadata',
         'note_tabs_enabled': 'str',
         'note_tabs_metadata': 'SettingsMetadata',
+        'numerical_tabs_enabled': 'str',
+        'numerical_tabs_metadata': 'SettingsMetadata',
         'prefill_tabs_enabled': 'str',
         'prefill_tabs_metadata': 'SettingsMetadata',
         'radio_tabs_enabled': 'str',
@@ -88,8 +88,6 @@ class TabAccountSettings(object):
         'calculated_fields_metadata': 'calculatedFieldsMetadata',
         'checkbox_tabs_enabled': 'checkboxTabsEnabled',
         'check_box_tabs_metadata': 'checkBoxTabsMetadata',
-        'currency_tabs_enabled': 'currencyTabsEnabled',
-        'currency_tabs_metadata': 'currencyTabsMetadata',
         'data_field_regex_enabled': 'dataFieldRegexEnabled',
         'data_field_regex_metadata': 'dataFieldRegexMetadata',
         'data_field_size_enabled': 'dataFieldSizeEnabled',
@@ -102,6 +100,8 @@ class TabAccountSettings(object):
         'list_tabs_metadata': 'listTabsMetadata',
         'note_tabs_enabled': 'noteTabsEnabled',
         'note_tabs_metadata': 'noteTabsMetadata',
+        'numerical_tabs_enabled': 'numericalTabsEnabled',
+        'numerical_tabs_metadata': 'numericalTabsMetadata',
         'prefill_tabs_enabled': 'prefillTabsEnabled',
         'prefill_tabs_metadata': 'prefillTabsMetadata',
         'radio_tabs_enabled': 'radioTabsEnabled',
@@ -140,8 +140,6 @@ class TabAccountSettings(object):
         self._calculated_fields_metadata = None
         self._checkbox_tabs_enabled = None
         self._check_box_tabs_metadata = None
-        self._currency_tabs_enabled = None
-        self._currency_tabs_metadata = None
         self._data_field_regex_enabled = None
         self._data_field_regex_metadata = None
         self._data_field_size_enabled = None
@@ -154,6 +152,8 @@ class TabAccountSettings(object):
         self._list_tabs_metadata = None
         self._note_tabs_enabled = None
         self._note_tabs_metadata = None
+        self._numerical_tabs_enabled = None
+        self._numerical_tabs_metadata = None
         self._prefill_tabs_enabled = None
         self._prefill_tabs_metadata = None
         self._radio_tabs_enabled = None
@@ -186,8 +186,6 @@ class TabAccountSettings(object):
         setattr(self, "_{}".format('calculated_fields_metadata'), kwargs.get('calculated_fields_metadata', None))
         setattr(self, "_{}".format('checkbox_tabs_enabled'), kwargs.get('checkbox_tabs_enabled', None))
         setattr(self, "_{}".format('check_box_tabs_metadata'), kwargs.get('check_box_tabs_metadata', None))
-        setattr(self, "_{}".format('currency_tabs_enabled'), kwargs.get('currency_tabs_enabled', None))
-        setattr(self, "_{}".format('currency_tabs_metadata'), kwargs.get('currency_tabs_metadata', None))
         setattr(self, "_{}".format('data_field_regex_enabled'), kwargs.get('data_field_regex_enabled', None))
         setattr(self, "_{}".format('data_field_regex_metadata'), kwargs.get('data_field_regex_metadata', None))
         setattr(self, "_{}".format('data_field_size_enabled'), kwargs.get('data_field_size_enabled', None))
@@ -200,6 +198,8 @@ class TabAccountSettings(object):
         setattr(self, "_{}".format('list_tabs_metadata'), kwargs.get('list_tabs_metadata', None))
         setattr(self, "_{}".format('note_tabs_enabled'), kwargs.get('note_tabs_enabled', None))
         setattr(self, "_{}".format('note_tabs_metadata'), kwargs.get('note_tabs_metadata', None))
+        setattr(self, "_{}".format('numerical_tabs_enabled'), kwargs.get('numerical_tabs_enabled', None))
+        setattr(self, "_{}".format('numerical_tabs_metadata'), kwargs.get('numerical_tabs_metadata', None))
         setattr(self, "_{}".format('prefill_tabs_enabled'), kwargs.get('prefill_tabs_enabled', None))
         setattr(self, "_{}".format('prefill_tabs_metadata'), kwargs.get('prefill_tabs_metadata', None))
         setattr(self, "_{}".format('radio_tabs_enabled'), kwargs.get('radio_tabs_enabled', None))
@@ -406,52 +406,6 @@ class TabAccountSettings(object):
         """
 
         self._check_box_tabs_metadata = check_box_tabs_metadata
-
-    @property
-    def currency_tabs_enabled(self):
-        """Gets the currency_tabs_enabled of this TabAccountSettings.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The currency_tabs_enabled of this TabAccountSettings.  # noqa: E501
-        :rtype: str
-        """
-        return self._currency_tabs_enabled
-
-    @currency_tabs_enabled.setter
-    def currency_tabs_enabled(self, currency_tabs_enabled):
-        """Sets the currency_tabs_enabled of this TabAccountSettings.
-
-          # noqa: E501
-
-        :param currency_tabs_enabled: The currency_tabs_enabled of this TabAccountSettings.  # noqa: E501
-        :type: str
-        """
-
-        self._currency_tabs_enabled = currency_tabs_enabled
-
-    @property
-    def currency_tabs_metadata(self):
-        """Gets the currency_tabs_metadata of this TabAccountSettings.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The currency_tabs_metadata of this TabAccountSettings.  # noqa: E501
-        :rtype: SettingsMetadata
-        """
-        return self._currency_tabs_metadata
-
-    @currency_tabs_metadata.setter
-    def currency_tabs_metadata(self, currency_tabs_metadata):
-        """Sets the currency_tabs_metadata of this TabAccountSettings.
-
-          # noqa: E501
-
-        :param currency_tabs_metadata: The currency_tabs_metadata of this TabAccountSettings.  # noqa: E501
-        :type: SettingsMetadata
-        """
-
-        self._currency_tabs_metadata = currency_tabs_metadata
 
     @property
     def data_field_regex_enabled(self):
@@ -728,6 +682,52 @@ class TabAccountSettings(object):
         """
 
         self._note_tabs_metadata = note_tabs_metadata
+
+    @property
+    def numerical_tabs_enabled(self):
+        """Gets the numerical_tabs_enabled of this TabAccountSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The numerical_tabs_enabled of this TabAccountSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._numerical_tabs_enabled
+
+    @numerical_tabs_enabled.setter
+    def numerical_tabs_enabled(self, numerical_tabs_enabled):
+        """Sets the numerical_tabs_enabled of this TabAccountSettings.
+
+          # noqa: E501
+
+        :param numerical_tabs_enabled: The numerical_tabs_enabled of this TabAccountSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._numerical_tabs_enabled = numerical_tabs_enabled
+
+    @property
+    def numerical_tabs_metadata(self):
+        """Gets the numerical_tabs_metadata of this TabAccountSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The numerical_tabs_metadata of this TabAccountSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._numerical_tabs_metadata
+
+    @numerical_tabs_metadata.setter
+    def numerical_tabs_metadata(self, numerical_tabs_metadata):
+        """Sets the numerical_tabs_metadata of this TabAccountSettings.
+
+          # noqa: E501
+
+        :param numerical_tabs_metadata: The numerical_tabs_metadata of this TabAccountSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._numerical_tabs_metadata = numerical_tabs_metadata
 
     @property
     def prefill_tabs_enabled(self):

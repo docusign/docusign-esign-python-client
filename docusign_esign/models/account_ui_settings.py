@@ -240,6 +240,7 @@ class AccountUISettings(object):
     def clickwrap_schema_version_metadata(self):
         """Gets the clickwrap_schema_version_metadata of this AccountUISettings.  # noqa: E501
 
+          # noqa: E501
 
         :return: The clickwrap_schema_version_metadata of this AccountUISettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -250,6 +251,7 @@ class AccountUISettings(object):
     def clickwrap_schema_version_metadata(self, clickwrap_schema_version_metadata):
         """Sets the clickwrap_schema_version_metadata of this AccountUISettings.
 
+          # noqa: E501
 
         :param clickwrap_schema_version_metadata: The clickwrap_schema_version_metadata of this AccountUISettings.  # noqa: E501
         :type: SettingsMetadata
@@ -468,6 +470,7 @@ class AccountUISettings(object):
     def enable_legacy_sendflow_link_metadata(self):
         """Gets the enable_legacy_sendflow_link_metadata of this AccountUISettings.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_legacy_sendflow_link_metadata of this AccountUISettings.  # noqa: E501
         :rtype: SettingsMetadata
@@ -478,6 +481,7 @@ class AccountUISettings(object):
     def enable_legacy_sendflow_link_metadata(self, enable_legacy_sendflow_link_metadata):
         """Sets the enable_legacy_sendflow_link_metadata of this AccountUISettings.
 
+          # noqa: E501
 
         :param enable_legacy_sendflow_link_metadata: The enable_legacy_sendflow_link_metadata of this AccountUISettings.  # noqa: E501
         :type: SettingsMetadata

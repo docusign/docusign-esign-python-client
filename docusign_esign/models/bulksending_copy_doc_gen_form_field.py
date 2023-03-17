@@ -33,12 +33,12 @@ class BulksendingCopyDocGenFormField(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'label': 'str',
+        'name': 'str',
         'value': 'str'
     }
 
     attribute_map = {
-        'label': 'label',
+        'name': 'name',
         'value': 'value'
     }
 
@@ -48,35 +48,35 @@ class BulksendingCopyDocGenFormField(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
-        self._label = None
+        self._name = None
         self._value = None
         self.discriminator = None
 
-        setattr(self, "_{}".format('label'), kwargs.get('label', None))
+        setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('value'), kwargs.get('value', None))
 
     @property
-    def label(self):
-        """Gets the label of this BulksendingCopyDocGenFormField.  # noqa: E501
+    def name(self):
+        """Gets the name of this BulksendingCopyDocGenFormField.  # noqa: E501
 
           # noqa: E501
 
-        :return: The label of this BulksendingCopyDocGenFormField.  # noqa: E501
+        :return: The name of this BulksendingCopyDocGenFormField.  # noqa: E501
         :rtype: str
         """
-        return self._label
+        return self._name
 
-    @label.setter
-    def label(self, label):
-        """Sets the label of this BulksendingCopyDocGenFormField.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this BulksendingCopyDocGenFormField.
 
           # noqa: E501
 
-        :param label: The label of this BulksendingCopyDocGenFormField.  # noqa: E501
+        :param name: The name of this BulksendingCopyDocGenFormField.  # noqa: E501
         :type: str
         """
 
-        self._label = label
+        self._name = name
 
     @property
     def value(self):

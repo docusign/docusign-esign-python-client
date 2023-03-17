@@ -434,7 +434,7 @@ class UserInformation(object):
     def error_details(self):
         """Gets the error_details of this UserInformation.  # noqa: E501
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this UserInformation.  # noqa: E501
         :rtype: ErrorDetails
@@ -445,7 +445,7 @@ class UserInformation(object):
     def error_details(self, error_details):
         """Sets the error_details of this UserInformation.
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this UserInformation.  # noqa: E501
         :type: ErrorDetails
@@ -1147,7 +1147,7 @@ class UserInformation(object):
     def user_settings(self):
         """Gets the user_settings of this UserInformation.  # noqa: E501
 
-        The collection of settings representing the actions a user can perform. See [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation) for available settings.  # noqa: E501
+         The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.  # noqa: E501
 
         :return: The user_settings of this UserInformation.  # noqa: E501
         :rtype: UserSettingsInformation
@@ -1158,7 +1158,7 @@ class UserInformation(object):
     def user_settings(self, user_settings):
         """Sets the user_settings of this UserInformation.
 
-        The collection of settings representing the actions a user can perform. See [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation) for available settings.  # noqa: E501
+         The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.  # noqa: E501
 
         :param user_settings: The user_settings of this UserInformation.  # noqa: E501
         :type: UserSettingsInformation

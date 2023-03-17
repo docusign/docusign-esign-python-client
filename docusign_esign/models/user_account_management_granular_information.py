@@ -504,6 +504,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_joint_agreements_metadata(self):
         """Gets the can_manage_joint_agreements_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_manage_joint_agreements_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -514,6 +515,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_joint_agreements_metadata(self, can_manage_joint_agreements_metadata):
         """Sets the can_manage_joint_agreements_metadata of this UserAccountManagementGranularInformation.
 
+          # noqa: E501
 
         :param can_manage_joint_agreements_metadata: The can_manage_joint_agreements_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -686,6 +688,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_stamps_metadata(self):
         """Gets the can_manage_stamps_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The can_manage_stamps_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -696,6 +699,7 @@ class UserAccountManagementGranularInformation(object):
     def can_manage_stamps_metadata(self, can_manage_stamps_metadata):
         """Sets the can_manage_stamps_metadata of this UserAccountManagementGranularInformation.
 
+          # noqa: E501
 
         :param can_manage_stamps_metadata: The can_manage_stamps_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
         :type: SettingsMetadata

@@ -68,6 +68,7 @@ class Radio(object):
         'italic_metadata': 'PropertyMetadata',
         'locked': 'str',
         'locked_metadata': 'PropertyMetadata',
+        'merge_field_xml': 'str',
         'page_number': 'str',
         'page_number_metadata': 'PropertyMetadata',
         'required': 'str',
@@ -126,6 +127,7 @@ class Radio(object):
         'italic_metadata': 'italicMetadata',
         'locked': 'locked',
         'locked_metadata': 'lockedMetadata',
+        'merge_field_xml': 'mergeFieldXml',
         'page_number': 'pageNumber',
         'page_number_metadata': 'pageNumberMetadata',
         'required': 'required',
@@ -189,6 +191,7 @@ class Radio(object):
         self._italic_metadata = None
         self._locked = None
         self._locked_metadata = None
+        self._merge_field_xml = None
         self._page_number = None
         self._page_number_metadata = None
         self._required = None
@@ -246,6 +249,7 @@ class Radio(object):
         setattr(self, "_{}".format('italic_metadata'), kwargs.get('italic_metadata', None))
         setattr(self, "_{}".format('locked'), kwargs.get('locked', None))
         setattr(self, "_{}".format('locked_metadata'), kwargs.get('locked_metadata', None))
+        setattr(self, "_{}".format('merge_field_xml'), kwargs.get('merge_field_xml', None))
         setattr(self, "_{}".format('page_number'), kwargs.get('page_number', None))
         setattr(self, "_{}".format('page_number_metadata'), kwargs.get('page_number_metadata', None))
         setattr(self, "_{}".format('required'), kwargs.get('required', None))
@@ -800,6 +804,7 @@ class Radio(object):
     def caption_metadata(self):
         """Gets the caption_metadata of this Radio.  # noqa: E501
 
+          # noqa: E501
 
         :return: The caption_metadata of this Radio.  # noqa: E501
         :rtype: PropertyMetadata
@@ -810,6 +815,7 @@ class Radio(object):
     def caption_metadata(self, caption_metadata):
         """Sets the caption_metadata of this Radio.
 
+          # noqa: E501
 
         :param caption_metadata: The caption_metadata of this Radio.  # noqa: E501
         :type: PropertyMetadata
@@ -821,7 +827,7 @@ class Radio(object):
     def error_details(self):
         """Gets the error_details of this Radio.  # noqa: E501
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this Radio.  # noqa: E501
         :rtype: ErrorDetails
@@ -832,7 +838,7 @@ class Radio(object):
     def error_details(self, error_details):
         """Sets the error_details of this Radio.
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this Radio.  # noqa: E501
         :type: ErrorDetails
@@ -1069,6 +1075,29 @@ class Radio(object):
         """
 
         self._locked_metadata = locked_metadata
+
+    @property
+    def merge_field_xml(self):
+        """Gets the merge_field_xml of this Radio.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The merge_field_xml of this Radio.  # noqa: E501
+        :rtype: str
+        """
+        return self._merge_field_xml
+
+    @merge_field_xml.setter
+    def merge_field_xml(self, merge_field_xml):
+        """Sets the merge_field_xml of this Radio.
+
+          # noqa: E501
+
+        :param merge_field_xml: The merge_field_xml of this Radio.  # noqa: E501
+        :type: str
+        """
+
+        self._merge_field_xml = merge_field_xml
 
     @property
     def page_number(self):

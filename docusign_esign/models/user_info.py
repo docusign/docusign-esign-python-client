@@ -38,6 +38,7 @@ class UserInfo(object):
         'activation_access_code': 'str',
         'email': 'str',
         'error_details': 'ErrorDetails',
+        'ip_address': 'str',
         'login_status': 'str',
         'membership_id': 'str',
         'send_activation_email': 'str',
@@ -54,6 +55,7 @@ class UserInfo(object):
         'activation_access_code': 'activationAccessCode',
         'email': 'email',
         'error_details': 'errorDetails',
+        'ip_address': 'ipAddress',
         'login_status': 'loginStatus',
         'membership_id': 'membershipId',
         'send_activation_email': 'sendActivationEmail',
@@ -75,6 +77,7 @@ class UserInfo(object):
         self._activation_access_code = None
         self._email = None
         self._error_details = None
+        self._ip_address = None
         self._login_status = None
         self._membership_id = None
         self._send_activation_email = None
@@ -90,6 +93,7 @@ class UserInfo(object):
         setattr(self, "_{}".format('activation_access_code'), kwargs.get('activation_access_code', None))
         setattr(self, "_{}".format('email'), kwargs.get('email', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
+        setattr(self, "_{}".format('ip_address'), kwargs.get('ip_address', None))
         setattr(self, "_{}".format('login_status'), kwargs.get('login_status', None))
         setattr(self, "_{}".format('membership_id'), kwargs.get('membership_id', None))
         setattr(self, "_{}".format('send_activation_email'), kwargs.get('send_activation_email', None))
@@ -195,7 +199,7 @@ class UserInfo(object):
     def error_details(self):
         """Gets the error_details of this UserInfo.  # noqa: E501
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this UserInfo.  # noqa: E501
         :rtype: ErrorDetails
@@ -206,13 +210,36 @@ class UserInfo(object):
     def error_details(self, error_details):
         """Sets the error_details of this UserInfo.
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this UserInfo.  # noqa: E501
         :type: ErrorDetails
         """
 
         self._error_details = error_details
+
+    @property
+    def ip_address(self):
+        """Gets the ip_address of this UserInfo.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The ip_address of this UserInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._ip_address
+
+    @ip_address.setter
+    def ip_address(self, ip_address):
+        """Sets the ip_address of this UserInfo.
+
+          # noqa: E501
+
+        :param ip_address: The ip_address of this UserInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._ip_address = ip_address
 
     @property
     def login_status(self):

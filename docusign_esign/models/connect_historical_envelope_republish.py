@@ -59,6 +59,7 @@ class ConnectHistoricalEnvelopeRepublish(object):
     def config(self):
         """Gets the config of this ConnectHistoricalEnvelopeRepublish.  # noqa: E501
 
+          # noqa: E501
 
         :return: The config of this ConnectHistoricalEnvelopeRepublish.  # noqa: E501
         :rtype: ConnectCustomConfiguration
@@ -69,6 +70,7 @@ class ConnectHistoricalEnvelopeRepublish(object):
     def config(self, config):
         """Sets the config of this ConnectHistoricalEnvelopeRepublish.
 
+          # noqa: E501
 
         :param config: The config of this ConnectHistoricalEnvelopeRepublish.  # noqa: E501
         :type: ConnectCustomConfiguration

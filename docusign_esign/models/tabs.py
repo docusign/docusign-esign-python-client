@@ -41,7 +41,6 @@ class Tabs(object):
         'commission_number_tabs': 'list[CommissionNumber]',
         'commission_state_tabs': 'list[CommissionState]',
         'company_tabs': 'list[Company]',
-        'currency_tabs': 'list[Currency]',
         'date_signed_tabs': 'list[DateSigned]',
         'date_tabs': 'list[Date]',
         'decline_tabs': 'list[Decline]',
@@ -84,7 +83,6 @@ class Tabs(object):
         'commission_number_tabs': 'commissionNumberTabs',
         'commission_state_tabs': 'commissionStateTabs',
         'company_tabs': 'companyTabs',
-        'currency_tabs': 'currencyTabs',
         'date_signed_tabs': 'dateSignedTabs',
         'date_tabs': 'dateTabs',
         'decline_tabs': 'declineTabs',
@@ -132,7 +130,6 @@ class Tabs(object):
         self._commission_number_tabs = None
         self._commission_state_tabs = None
         self._company_tabs = None
-        self._currency_tabs = None
         self._date_signed_tabs = None
         self._date_tabs = None
         self._decline_tabs = None
@@ -174,7 +171,6 @@ class Tabs(object):
         setattr(self, "_{}".format('commission_number_tabs'), kwargs.get('commission_number_tabs', None))
         setattr(self, "_{}".format('commission_state_tabs'), kwargs.get('commission_state_tabs', None))
         setattr(self, "_{}".format('company_tabs'), kwargs.get('company_tabs', None))
-        setattr(self, "_{}".format('currency_tabs'), kwargs.get('currency_tabs', None))
         setattr(self, "_{}".format('date_signed_tabs'), kwargs.get('date_signed_tabs', None))
         setattr(self, "_{}".format('date_tabs'), kwargs.get('date_tabs', None))
         setattr(self, "_{}".format('decline_tabs'), kwargs.get('decline_tabs', None))
@@ -390,29 +386,6 @@ class Tabs(object):
         """
 
         self._company_tabs = company_tabs
-
-    @property
-    def currency_tabs(self):
-        """Gets the currency_tabs of this Tabs.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The currency_tabs of this Tabs.  # noqa: E501
-        :rtype: list[Currency]
-        """
-        return self._currency_tabs
-
-    @currency_tabs.setter
-    def currency_tabs(self, currency_tabs):
-        """Sets the currency_tabs of this Tabs.
-
-          # noqa: E501
-
-        :param currency_tabs: The currency_tabs of this Tabs.  # noqa: E501
-        :type: list[Currency]
-        """
-
-        self._currency_tabs = currency_tabs
 
     @property
     def date_signed_tabs(self):

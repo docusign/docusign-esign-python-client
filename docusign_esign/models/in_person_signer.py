@@ -39,6 +39,7 @@ class InPersonSigner(object):
         'allow_system_override_for_locked_recipient': 'str',
         'auto_navigation': 'str',
         'auto_responded_reason': 'str',
+        'bulk_send_v2_recipient': 'str',
         'can_sign_offline': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
@@ -135,6 +136,7 @@ class InPersonSigner(object):
         'allow_system_override_for_locked_recipient': 'allowSystemOverrideForLockedRecipient',
         'auto_navigation': 'autoNavigation',
         'auto_responded_reason': 'autoRespondedReason',
+        'bulk_send_v2_recipient': 'bulkSendV2Recipient',
         'can_sign_offline': 'canSignOffline',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
@@ -236,6 +238,7 @@ class InPersonSigner(object):
         self._allow_system_override_for_locked_recipient = None
         self._auto_navigation = None
         self._auto_responded_reason = None
+        self._bulk_send_v2_recipient = None
         self._can_sign_offline = None
         self._client_user_id = None
         self._completed_count = None
@@ -331,6 +334,7 @@ class InPersonSigner(object):
         setattr(self, "_{}".format('allow_system_override_for_locked_recipient'), kwargs.get('allow_system_override_for_locked_recipient', None))
         setattr(self, "_{}".format('auto_navigation'), kwargs.get('auto_navigation', None))
         setattr(self, "_{}".format('auto_responded_reason'), kwargs.get('auto_responded_reason', None))
+        setattr(self, "_{}".format('bulk_send_v2_recipient'), kwargs.get('bulk_send_v2_recipient', None))
         setattr(self, "_{}".format('can_sign_offline'), kwargs.get('can_sign_offline', None))
         setattr(self, "_{}".format('client_user_id'), kwargs.get('client_user_id', None))
         setattr(self, "_{}".format('completed_count'), kwargs.get('completed_count', None))
@@ -556,6 +560,29 @@ class InPersonSigner(object):
         """
 
         self._auto_responded_reason = auto_responded_reason
+
+    @property
+    def bulk_send_v2_recipient(self):
+        """Gets the bulk_send_v2_recipient of this InPersonSigner.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The bulk_send_v2_recipient of this InPersonSigner.  # noqa: E501
+        :rtype: str
+        """
+        return self._bulk_send_v2_recipient
+
+    @bulk_send_v2_recipient.setter
+    def bulk_send_v2_recipient(self, bulk_send_v2_recipient):
+        """Sets the bulk_send_v2_recipient of this InPersonSigner.
+
+          # noqa: E501
+
+        :param bulk_send_v2_recipient: The bulk_send_v2_recipient of this InPersonSigner.  # noqa: E501
+        :type: str
+        """
+
+        self._bulk_send_v2_recipient = bulk_send_v2_recipient
 
     @property
     def can_sign_offline(self):
@@ -929,7 +956,7 @@ class InPersonSigner(object):
     def email_notification(self):
         """Gets the email_notification of this InPersonSigner.  # noqa: E501
 
-        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
+        A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.   # noqa: E501
 
         :return: The email_notification of this InPersonSigner.  # noqa: E501
         :rtype: RecipientEmailNotification
@@ -940,7 +967,7 @@ class InPersonSigner(object):
     def email_notification(self, email_notification):
         """Sets the email_notification of this InPersonSigner.
 
-        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
+        A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.   # noqa: E501
 
         :param email_notification: The email_notification of this InPersonSigner.  # noqa: E501
         :type: RecipientEmailNotification
@@ -975,7 +1002,7 @@ class InPersonSigner(object):
     def error_details(self):
         """Gets the error_details of this InPersonSigner.  # noqa: E501
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this InPersonSigner.  # noqa: E501
         :rtype: ErrorDetails
@@ -986,7 +1013,7 @@ class InPersonSigner(object):
     def error_details(self, error_details):
         """Sets the error_details of this InPersonSigner.
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this InPersonSigner.  # noqa: E501
         :type: ErrorDetails

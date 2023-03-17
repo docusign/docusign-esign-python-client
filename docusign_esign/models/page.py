@@ -106,7 +106,7 @@ class Page(object):
     def error_details(self):
         """Gets the error_details of this Page.  # noqa: E501
 
-        If an error occurs, this property describes the error.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this Page.  # noqa: E501
         :rtype: ErrorDetails
@@ -117,7 +117,7 @@ class Page(object):
     def error_details(self, error_details):
         """Sets the error_details of this Page.
 
-        If an error occurs, this property describes the error.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this Page.  # noqa: E501
         :type: ErrorDetails

@@ -37,6 +37,7 @@ class FormDataItem(object):
         'list_selected_value': 'str',
         'name': 'str',
         'numerical_value': 'str',
+        'original_numerical_value': 'str',
         'original_value': 'str',
         'value': 'str'
     }
@@ -46,6 +47,7 @@ class FormDataItem(object):
         'list_selected_value': 'listSelectedValue',
         'name': 'name',
         'numerical_value': 'numericalValue',
+        'original_numerical_value': 'originalNumericalValue',
         'original_value': 'originalValue',
         'value': 'value'
     }
@@ -60,6 +62,7 @@ class FormDataItem(object):
         self._list_selected_value = None
         self._name = None
         self._numerical_value = None
+        self._original_numerical_value = None
         self._original_value = None
         self._value = None
         self.discriminator = None
@@ -68,6 +71,7 @@ class FormDataItem(object):
         setattr(self, "_{}".format('list_selected_value'), kwargs.get('list_selected_value', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('numerical_value'), kwargs.get('numerical_value', None))
+        setattr(self, "_{}".format('original_numerical_value'), kwargs.get('original_numerical_value', None))
         setattr(self, "_{}".format('original_value'), kwargs.get('original_value', None))
         setattr(self, "_{}".format('value'), kwargs.get('value', None))
 
@@ -75,7 +79,7 @@ class FormDataItem(object):
     def error_details(self):
         """Gets the error_details of this FormDataItem.  # noqa: E501
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this FormDataItem.  # noqa: E501
         :rtype: ErrorDetails
@@ -86,7 +90,7 @@ class FormDataItem(object):
     def error_details(self, error_details):
         """Sets the error_details of this FormDataItem.
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this FormDataItem.  # noqa: E501
         :type: ErrorDetails
@@ -162,6 +166,29 @@ class FormDataItem(object):
         """
 
         self._numerical_value = numerical_value
+
+    @property
+    def original_numerical_value(self):
+        """Gets the original_numerical_value of this FormDataItem.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The original_numerical_value of this FormDataItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._original_numerical_value
+
+    @original_numerical_value.setter
+    def original_numerical_value(self, original_numerical_value):
+        """Sets the original_numerical_value of this FormDataItem.
+
+          # noqa: E501
+
+        :param original_numerical_value: The original_numerical_value of this FormDataItem.  # noqa: E501
+        :type: str
+        """
+
+        self._original_numerical_value = original_numerical_value
 
     @property
     def original_value(self):
