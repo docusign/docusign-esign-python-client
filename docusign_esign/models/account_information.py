@@ -249,7 +249,7 @@ class AccountInformation(object):
     def account_settings(self):
         """Gets the account_settings of this AccountInformation.  # noqa: E501
 
-        The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.    # noqa: E501
+        The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.  # noqa: E501
 
         :return: The account_settings of this AccountInformation.  # noqa: E501
         :rtype: AccountSettingsInformation
@@ -260,7 +260,7 @@ class AccountInformation(object):
     def account_settings(self, account_settings):
         """Sets the account_settings of this AccountInformation.
 
-        The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.    # noqa: E501
+        The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.  # noqa: E501
 
         :param account_settings: The account_settings of this AccountInformation.  # noqa: E501
         :type: AccountSettingsInformation
@@ -433,6 +433,7 @@ class AccountInformation(object):
     def brands(self):
         """Gets the brands of this AccountInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The brands of this AccountInformation.  # noqa: E501
         :rtype: BrandsResponse
@@ -443,6 +444,7 @@ class AccountInformation(object):
     def brands(self, brands):
         """Sets the brands of this AccountInformation.
 
+          # noqa: E501
 
         :param brands: The brands of this AccountInformation.  # noqa: E501
         :type: BrandsResponse

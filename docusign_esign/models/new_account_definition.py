@@ -146,7 +146,7 @@ class NewAccountDefinition(object):
     def account_settings(self):
         """Gets the account_settings of this NewAccountDefinition.  # noqa: E501
 
-        The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.    # noqa: E501
+        The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.  # noqa: E501
 
         :return: The account_settings of this NewAccountDefinition.  # noqa: E501
         :rtype: AccountSettingsInformation
@@ -157,7 +157,7 @@ class NewAccountDefinition(object):
     def account_settings(self, account_settings):
         """Sets the account_settings of this NewAccountDefinition.
 
-        The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.    # noqa: E501
+        The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.  # noqa: E501
 
         :param account_settings: The account_settings of this NewAccountDefinition.  # noqa: E501
         :type: AccountSettingsInformation
@@ -491,7 +491,7 @@ class NewAccountDefinition(object):
     def social_account_information(self):
         """Gets the social_account_information of this NewAccountDefinition.  # noqa: E501
 
-        Contains properties that map a DocuSign user to a social account such as Facebook or Yahoo.  # noqa: E501
+        Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)  # noqa: E501
 
         :return: The social_account_information of this NewAccountDefinition.  # noqa: E501
         :rtype: SocialAccountInformation
@@ -502,7 +502,7 @@ class NewAccountDefinition(object):
     def social_account_information(self, social_account_information):
         """Sets the social_account_information of this NewAccountDefinition.
 
-        Contains properties that map a DocuSign user to a social account such as Facebook or Yahoo.  # noqa: E501
+        Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)  # noqa: E501
 
         :param social_account_information: The social_account_information of this NewAccountDefinition.  # noqa: E501
         :type: SocialAccountInformation

@@ -878,6 +878,7 @@ class SmartSection(object):
     def caption_metadata(self):
         """Gets the caption_metadata of this SmartSection.  # noqa: E501
 
+          # noqa: E501
 
         :return: The caption_metadata of this SmartSection.  # noqa: E501
         :rtype: PropertyMetadata
@@ -888,6 +889,7 @@ class SmartSection(object):
     def caption_metadata(self, caption_metadata):
         """Sets the caption_metadata of this SmartSection.
 
+          # noqa: E501
 
         :param caption_metadata: The caption_metadata of this SmartSection.  # noqa: E501
         :type: PropertyMetadata
@@ -1152,7 +1154,7 @@ class SmartSection(object):
     def end_position(self):
         """Gets the end_position of this SmartSection.  # noqa: E501
 
-        The last index position in the result set.   # noqa: E501
+        The last position in the result set.   # noqa: E501
 
         :return: The end_position of this SmartSection.  # noqa: E501
         :rtype: SmartSectionAnchorPosition
@@ -1163,7 +1165,7 @@ class SmartSection(object):
     def end_position(self, end_position):
         """Sets the end_position of this SmartSection.
 
-        The last index position in the result set.   # noqa: E501
+        The last position in the result set.   # noqa: E501
 
         :param end_position: The end_position of this SmartSection.  # noqa: E501
         :type: SmartSectionAnchorPosition
@@ -1175,7 +1177,7 @@ class SmartSection(object):
     def error_details(self):
         """Gets the error_details of this SmartSection.  # noqa: E501
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this SmartSection.  # noqa: E501
         :rtype: ErrorDetails
@@ -1186,7 +1188,7 @@ class SmartSection(object):
     def error_details(self, error_details):
         """Sets the error_details of this SmartSection.
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this SmartSection.  # noqa: E501
         :type: ErrorDetails
@@ -1819,7 +1821,7 @@ class SmartSection(object):
     def start_position(self):
         """Gets the start_position of this SmartSection.  # noqa: E501
 
-        The starting index position of the current result set.  # noqa: E501
+        Starting position of the current result set.  # noqa: E501
 
         :return: The start_position of this SmartSection.  # noqa: E501
         :rtype: SmartSectionAnchorPosition
@@ -1830,7 +1832,7 @@ class SmartSection(object):
     def start_position(self, start_position):
         """Sets the start_position of this SmartSection.
 
-        The starting index position of the current result set.  # noqa: E501
+        Starting position of the current result set.  # noqa: E501
 
         :param start_position: The start_position of this SmartSection.  # noqa: E501
         :type: SmartSectionAnchorPosition

@@ -41,6 +41,7 @@ class CertifiedDelivery(object):
         'agent_can_edit_name': 'str',
         'allow_system_override_for_locked_recipient': 'str',
         'auto_responded_reason': 'str',
+        'bulk_send_v2_recipient': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
         'consent_details_list': 'list[ConsentDetails]',
@@ -120,6 +121,7 @@ class CertifiedDelivery(object):
         'agent_can_edit_name': 'agentCanEditName',
         'allow_system_override_for_locked_recipient': 'allowSystemOverrideForLockedRecipient',
         'auto_responded_reason': 'autoRespondedReason',
+        'bulk_send_v2_recipient': 'bulkSendV2Recipient',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
         'consent_details_list': 'consentDetailsList',
@@ -204,6 +206,7 @@ class CertifiedDelivery(object):
         self._agent_can_edit_name = None
         self._allow_system_override_for_locked_recipient = None
         self._auto_responded_reason = None
+        self._bulk_send_v2_recipient = None
         self._client_user_id = None
         self._completed_count = None
         self._consent_details_list = None
@@ -282,6 +285,7 @@ class CertifiedDelivery(object):
         setattr(self, "_{}".format('agent_can_edit_name'), kwargs.get('agent_can_edit_name', None))
         setattr(self, "_{}".format('allow_system_override_for_locked_recipient'), kwargs.get('allow_system_override_for_locked_recipient', None))
         setattr(self, "_{}".format('auto_responded_reason'), kwargs.get('auto_responded_reason', None))
+        setattr(self, "_{}".format('bulk_send_v2_recipient'), kwargs.get('bulk_send_v2_recipient', None))
         setattr(self, "_{}".format('client_user_id'), kwargs.get('client_user_id', None))
         setattr(self, "_{}".format('completed_count'), kwargs.get('completed_count', None))
         setattr(self, "_{}".format('consent_details_list'), kwargs.get('consent_details_list', None))
@@ -534,6 +538,29 @@ class CertifiedDelivery(object):
         """
 
         self._auto_responded_reason = auto_responded_reason
+
+    @property
+    def bulk_send_v2_recipient(self):
+        """Gets the bulk_send_v2_recipient of this CertifiedDelivery.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The bulk_send_v2_recipient of this CertifiedDelivery.  # noqa: E501
+        :rtype: str
+        """
+        return self._bulk_send_v2_recipient
+
+    @bulk_send_v2_recipient.setter
+    def bulk_send_v2_recipient(self, bulk_send_v2_recipient):
+        """Sets the bulk_send_v2_recipient of this CertifiedDelivery.
+
+          # noqa: E501
+
+        :param bulk_send_v2_recipient: The bulk_send_v2_recipient of this CertifiedDelivery.  # noqa: E501
+        :type: str
+        """
+
+        self._bulk_send_v2_recipient = bulk_send_v2_recipient
 
     @property
     def client_user_id(self):
@@ -861,7 +888,7 @@ class CertifiedDelivery(object):
     def email_notification(self):
         """Gets the email_notification of this CertifiedDelivery.  # noqa: E501
 
-        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
+        A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.   # noqa: E501
 
         :return: The email_notification of this CertifiedDelivery.  # noqa: E501
         :rtype: RecipientEmailNotification
@@ -872,7 +899,7 @@ class CertifiedDelivery(object):
     def email_notification(self, email_notification):
         """Sets the email_notification of this CertifiedDelivery.
 
-        An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`.   # noqa: E501
+        A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.   # noqa: E501
 
         :param email_notification: The email_notification of this CertifiedDelivery.  # noqa: E501
         :type: RecipientEmailNotification
@@ -930,7 +957,7 @@ class CertifiedDelivery(object):
     def error_details(self):
         """Gets the error_details of this CertifiedDelivery.  # noqa: E501
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this CertifiedDelivery.  # noqa: E501
         :rtype: ErrorDetails
@@ -941,7 +968,7 @@ class CertifiedDelivery(object):
     def error_details(self, error_details):
         """Sets the error_details of this CertifiedDelivery.
 
-        This object describes errors that occur. It is only valid for responses and ignored in requests.  # noqa: E501
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this CertifiedDelivery.  # noqa: E501
         :type: ErrorDetails

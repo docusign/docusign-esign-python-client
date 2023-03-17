@@ -942,7 +942,7 @@ class EnvelopeTemplate(object):
     def custom_fields(self):
         """Gets the custom_fields of this EnvelopeTemplate.  # noqa: E501
 
-        An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.  # noqa: E501
+        An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.  # noqa: E501
 
         :return: The custom_fields of this EnvelopeTemplate.  # noqa: E501
         :rtype: CustomFields
@@ -953,7 +953,7 @@ class EnvelopeTemplate(object):
     def custom_fields(self, custom_fields):
         """Sets the custom_fields of this EnvelopeTemplate.
 
-        An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.  # noqa: E501
+        An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.  # noqa: E501
 
         :param custom_fields: The custom_fields of this EnvelopeTemplate.  # noqa: E501
         :type: CustomFields
@@ -2368,7 +2368,7 @@ class EnvelopeTemplate(object):
     def recipients(self):
         """Gets the recipients of this EnvelopeTemplate.  # noqa: E501
 
-        An array of recipient objects that provides details about the recipients of the envelope.  # noqa: E501
+        An array of powerform recipients.  # noqa: E501
 
         :return: The recipients of this EnvelopeTemplate.  # noqa: E501
         :rtype: Recipients
@@ -2379,7 +2379,7 @@ class EnvelopeTemplate(object):
     def recipients(self, recipients):
         """Sets the recipients of this EnvelopeTemplate.
 
-        An array of recipient objects that provides details about the recipients of the envelope.  # noqa: E501
+        An array of powerform recipients.  # noqa: E501
 
         :param recipients: The recipients of this EnvelopeTemplate.  # noqa: E501
         :type: Recipients

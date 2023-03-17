@@ -89,6 +89,8 @@ class AccountSettingsInformation(object):
         'allow_documents_on_signed_envelopes_metadata': 'SettingsMetadata',
         'allow_document_visibility': 'str',
         'allow_document_visibility_metadata': 'SettingsMetadata',
+        'allow_editing_envelopes_on_behalf_of_others': 'str',
+        'allow_editing_envelopes_on_behalf_of_others_metadata': 'SettingsMetadata',
         'allow_e_hanko_stamps': 'str',
         'allow_e_hanko_stamps_metadata': 'SettingsMetadata',
         'allow_e_note_e_original': 'str',
@@ -318,6 +320,7 @@ class AccountSettingsInformation(object):
         'document_retention_purge_tabs': 'str',
         'document_visibility': 'str',
         'document_visibility_metadata': 'SettingsMetadata',
+        'dss_enable_provisioning_pen_configuration_radmin_option': 'str',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'str',
         'dss_sign_29182_slide_up_bar_radmin_option': 'str',
         'email_template_version': 'str',
@@ -517,6 +520,7 @@ class AccountSettingsInformation(object):
         'in_session_enabled_metadata': 'SettingsMetadata',
         'in_session_suppress_emails': 'str',
         'in_session_suppress_emails_metadata': 'SettingsMetadata',
+        'is_connect_document_fields_enabled': 'str',
         'linked_external_primary_accounts': 'list[LinkedExternalPrimaryAccount]',
         'maximum_signing_groups': 'str',
         'maximum_signing_groups_metadata': 'SettingsMetadata',
@@ -530,6 +534,7 @@ class AccountSettingsInformation(object):
         'number_of_active_custom_stamps': 'str',
         'opt_in_mobile_signing_v02': 'str',
         'opt_in_mobile_signing_v02_metadata': 'SettingsMetadata',
+        'opt_in_universal_signatures': 'str',
         'opt_out_auto_nav_text_and_tab_color_updates': 'str',
         'opt_out_auto_nav_text_and_tab_color_updates_metadata': 'SettingsMetadata',
         'opt_out_new_platform_seal': 'str',
@@ -761,6 +766,8 @@ class AccountSettingsInformation(object):
         'allow_documents_on_signed_envelopes_metadata': 'allowDocumentsOnSignedEnvelopesMetadata',
         'allow_document_visibility': 'allowDocumentVisibility',
         'allow_document_visibility_metadata': 'allowDocumentVisibilityMetadata',
+        'allow_editing_envelopes_on_behalf_of_others': 'allowEditingEnvelopesOnBehalfOfOthers',
+        'allow_editing_envelopes_on_behalf_of_others_metadata': 'allowEditingEnvelopesOnBehalfOfOthersMetadata',
         'allow_e_hanko_stamps': 'allowEHankoStamps',
         'allow_e_hanko_stamps_metadata': 'allowEHankoStampsMetadata',
         'allow_e_note_e_original': 'allowENoteEOriginal',
@@ -990,6 +997,7 @@ class AccountSettingsInformation(object):
         'document_retention_purge_tabs': 'documentRetentionPurgeTabs',
         'document_visibility': 'documentVisibility',
         'document_visibility_metadata': 'documentVisibilityMetadata',
+        'dss_enable_provisioning_pen_configuration_radmin_option': 'dss_EnableProvisioningPenConfiguration_RadminOption',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option': 'dss_SIGN_29182_SlideUpBar_RadminOption',
         'email_template_version': 'emailTemplateVersion',
@@ -1134,10 +1142,10 @@ class AccountSettingsInformation(object):
         'envelope_integration_allowed_metadata': 'envelopeIntegrationAllowedMetadata',
         'envelope_integration_enabled': 'envelopeIntegrationEnabled',
         'envelope_integration_enabled_metadata': 'envelopeIntegrationEnabledMetadata',
-        'envelope_limits_total_document_size_allowed_in_mb': 'envelopeLimitsTotalDocumentSizeAllowedInMB',
-        'envelope_limits_total_document_size_allowed_in_mb_enabled': 'envelopeLimitsTotalDocumentSizeAllowedInMBEnabled',
-        'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata': 'envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata',
-        'envelope_limits_total_document_size_allowed_in_mb_metadata': 'envelopeLimitsTotalDocumentSizeAllowedInMBMetadata',
+        'envelope_limits_total_document_size_allowed_in_mb': 'EnvelopeLimitsTotalDocumentSizeAllowedInMB',
+        'envelope_limits_total_document_size_allowed_in_mb_enabled': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled',
+        'envelope_limits_total_document_size_allowed_in_mb_enabled_metadata': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata',
+        'envelope_limits_total_document_size_allowed_in_mb_metadata': 'EnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata',
         'envelope_search_mode': 'envelopeSearchMode',
         'envelope_search_mode_metadata': 'envelopeSearchModeMetadata',
         'envelope_stamping_default_value': 'envelopeStampingDefaultValue',
@@ -1189,6 +1197,7 @@ class AccountSettingsInformation(object):
         'in_session_enabled_metadata': 'inSessionEnabledMetadata',
         'in_session_suppress_emails': 'inSessionSuppressEmails',
         'in_session_suppress_emails_metadata': 'inSessionSuppressEmailsMetadata',
+        'is_connect_document_fields_enabled': 'isConnectDocumentFieldsEnabled',
         'linked_external_primary_accounts': 'linkedExternalPrimaryAccounts',
         'maximum_signing_groups': 'maximumSigningGroups',
         'maximum_signing_groups_metadata': 'maximumSigningGroupsMetadata',
@@ -1202,6 +1211,7 @@ class AccountSettingsInformation(object):
         'number_of_active_custom_stamps': 'numberOfActiveCustomStamps',
         'opt_in_mobile_signing_v02': 'optInMobileSigningV02',
         'opt_in_mobile_signing_v02_metadata': 'optInMobileSigningV02Metadata',
+        'opt_in_universal_signatures': 'optInUniversalSignatures',
         'opt_out_auto_nav_text_and_tab_color_updates': 'optOutAutoNavTextAndTabColorUpdates',
         'opt_out_auto_nav_text_and_tab_color_updates_metadata': 'optOutAutoNavTextAndTabColorUpdatesMetadata',
         'opt_out_new_platform_seal': 'optOutNewPlatformSeal',
@@ -1438,6 +1448,8 @@ class AccountSettingsInformation(object):
         self._allow_documents_on_signed_envelopes_metadata = None
         self._allow_document_visibility = None
         self._allow_document_visibility_metadata = None
+        self._allow_editing_envelopes_on_behalf_of_others = None
+        self._allow_editing_envelopes_on_behalf_of_others_metadata = None
         self._allow_e_hanko_stamps = None
         self._allow_e_hanko_stamps_metadata = None
         self._allow_e_note_e_original = None
@@ -1667,6 +1679,7 @@ class AccountSettingsInformation(object):
         self._document_retention_purge_tabs = None
         self._document_visibility = None
         self._document_visibility_metadata = None
+        self._dss_enable_provisioning_pen_configuration_radmin_option = None
         self._dss_sign_28411_enable_leave_page_prompt_radmin_option = None
         self._dss_sign_29182_slide_up_bar_radmin_option = None
         self._email_template_version = None
@@ -1866,6 +1879,7 @@ class AccountSettingsInformation(object):
         self._in_session_enabled_metadata = None
         self._in_session_suppress_emails = None
         self._in_session_suppress_emails_metadata = None
+        self._is_connect_document_fields_enabled = None
         self._linked_external_primary_accounts = None
         self._maximum_signing_groups = None
         self._maximum_signing_groups_metadata = None
@@ -1879,6 +1893,7 @@ class AccountSettingsInformation(object):
         self._number_of_active_custom_stamps = None
         self._opt_in_mobile_signing_v02 = None
         self._opt_in_mobile_signing_v02_metadata = None
+        self._opt_in_universal_signatures = None
         self._opt_out_auto_nav_text_and_tab_color_updates = None
         self._opt_out_auto_nav_text_and_tab_color_updates_metadata = None
         self._opt_out_new_platform_seal = None
@@ -2109,6 +2124,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_documents_on_signed_envelopes_metadata'), kwargs.get('allow_documents_on_signed_envelopes_metadata', None))
         setattr(self, "_{}".format('allow_document_visibility'), kwargs.get('allow_document_visibility', None))
         setattr(self, "_{}".format('allow_document_visibility_metadata'), kwargs.get('allow_document_visibility_metadata', None))
+        setattr(self, "_{}".format('allow_editing_envelopes_on_behalf_of_others'), kwargs.get('allow_editing_envelopes_on_behalf_of_others', None))
+        setattr(self, "_{}".format('allow_editing_envelopes_on_behalf_of_others_metadata'), kwargs.get('allow_editing_envelopes_on_behalf_of_others_metadata', None))
         setattr(self, "_{}".format('allow_e_hanko_stamps'), kwargs.get('allow_e_hanko_stamps', None))
         setattr(self, "_{}".format('allow_e_hanko_stamps_metadata'), kwargs.get('allow_e_hanko_stamps_metadata', None))
         setattr(self, "_{}".format('allow_e_note_e_original'), kwargs.get('allow_e_note_e_original', None))
@@ -2338,6 +2355,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('document_retention_purge_tabs'), kwargs.get('document_retention_purge_tabs', None))
         setattr(self, "_{}".format('document_visibility'), kwargs.get('document_visibility', None))
         setattr(self, "_{}".format('document_visibility_metadata'), kwargs.get('document_visibility_metadata', None))
+        setattr(self, "_{}".format('dss_enable_provisioning_pen_configuration_radmin_option'), kwargs.get('dss_enable_provisioning_pen_configuration_radmin_option', None))
         setattr(self, "_{}".format('dss_sign_28411_enable_leave_page_prompt_radmin_option'), kwargs.get('dss_sign_28411_enable_leave_page_prompt_radmin_option', None))
         setattr(self, "_{}".format('dss_sign_29182_slide_up_bar_radmin_option'), kwargs.get('dss_sign_29182_slide_up_bar_radmin_option', None))
         setattr(self, "_{}".format('email_template_version'), kwargs.get('email_template_version', None))
@@ -2537,6 +2555,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('in_session_enabled_metadata'), kwargs.get('in_session_enabled_metadata', None))
         setattr(self, "_{}".format('in_session_suppress_emails'), kwargs.get('in_session_suppress_emails', None))
         setattr(self, "_{}".format('in_session_suppress_emails_metadata'), kwargs.get('in_session_suppress_emails_metadata', None))
+        setattr(self, "_{}".format('is_connect_document_fields_enabled'), kwargs.get('is_connect_document_fields_enabled', None))
         setattr(self, "_{}".format('linked_external_primary_accounts'), kwargs.get('linked_external_primary_accounts', None))
         setattr(self, "_{}".format('maximum_signing_groups'), kwargs.get('maximum_signing_groups', None))
         setattr(self, "_{}".format('maximum_signing_groups_metadata'), kwargs.get('maximum_signing_groups_metadata', None))
@@ -2550,6 +2569,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('number_of_active_custom_stamps'), kwargs.get('number_of_active_custom_stamps', None))
         setattr(self, "_{}".format('opt_in_mobile_signing_v02'), kwargs.get('opt_in_mobile_signing_v02', None))
         setattr(self, "_{}".format('opt_in_mobile_signing_v02_metadata'), kwargs.get('opt_in_mobile_signing_v02_metadata', None))
+        setattr(self, "_{}".format('opt_in_universal_signatures'), kwargs.get('opt_in_universal_signatures', None))
         setattr(self, "_{}".format('opt_out_auto_nav_text_and_tab_color_updates'), kwargs.get('opt_out_auto_nav_text_and_tab_color_updates', None))
         setattr(self, "_{}".format('opt_out_auto_nav_text_and_tab_color_updates_metadata'), kwargs.get('opt_out_auto_nav_text_and_tab_color_updates_metadata', None))
         setattr(self, "_{}".format('opt_out_new_platform_seal'), kwargs.get('opt_out_new_platform_seal', None))
@@ -3325,6 +3345,7 @@ class AccountSettingsInformation(object):
     def allow_agreement_orchestration_workflows_metadata(self):
         """Gets the allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3335,6 +3356,7 @@ class AccountSettingsInformation(object):
     def allow_agreement_orchestration_workflows_metadata(self, allow_agreement_orchestration_workflows_metadata):
         """Sets the allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_agreement_orchestration_workflows_metadata: The allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -3852,6 +3874,7 @@ class AccountSettingsInformation(object):
     def allow_doc_gen_documents_metadata(self):
         """Gets the allow_doc_gen_documents_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_doc_gen_documents_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -3862,6 +3885,7 @@ class AccountSettingsInformation(object):
     def allow_doc_gen_documents_metadata(self, allow_doc_gen_documents_metadata):
         """Sets the allow_doc_gen_documents_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_doc_gen_documents_metadata: The allow_doc_gen_documents_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4006,6 +4030,52 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_document_visibility_metadata = allow_document_visibility_metadata
+
+    @property
+    def allow_editing_envelopes_on_behalf_of_others(self):
+        """Gets the allow_editing_envelopes_on_behalf_of_others of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_editing_envelopes_on_behalf_of_others of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_editing_envelopes_on_behalf_of_others
+
+    @allow_editing_envelopes_on_behalf_of_others.setter
+    def allow_editing_envelopes_on_behalf_of_others(self, allow_editing_envelopes_on_behalf_of_others):
+        """Sets the allow_editing_envelopes_on_behalf_of_others of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_editing_envelopes_on_behalf_of_others: The allow_editing_envelopes_on_behalf_of_others of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_editing_envelopes_on_behalf_of_others = allow_editing_envelopes_on_behalf_of_others
+
+    @property
+    def allow_editing_envelopes_on_behalf_of_others_metadata(self):
+        """Gets the allow_editing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_editing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_editing_envelopes_on_behalf_of_others_metadata
+
+    @allow_editing_envelopes_on_behalf_of_others_metadata.setter
+    def allow_editing_envelopes_on_behalf_of_others_metadata(self, allow_editing_envelopes_on_behalf_of_others_metadata):
+        """Sets the allow_editing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_editing_envelopes_on_behalf_of_others_metadata: The allow_editing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_editing_envelopes_on_behalf_of_others_metadata = allow_editing_envelopes_on_behalf_of_others_metadata
 
     @property
     def allow_e_hanko_stamps(self):
@@ -4586,6 +4656,7 @@ class AccountSettingsInformation(object):
     def allow_idv_for_eu_qualified_signatures_metadata(self):
         """Gets the allow_idv_for_eu_qualified_signatures_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_idv_for_eu_qualified_signatures_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4596,6 +4667,7 @@ class AccountSettingsInformation(object):
     def allow_idv_for_eu_qualified_signatures_metadata(self, allow_idv_for_eu_qualified_signatures_metadata):
         """Sets the allow_idv_for_eu_qualified_signatures_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_idv_for_eu_qualified_signatures_metadata: The allow_idv_for_eu_qualified_signatures_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4837,7 +4909,7 @@ class AccountSettingsInformation(object):
     def allow_in_person_electronic_notary_metadata(self):
         """Gets the allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
 
-        MetaData for the allowInPersonElectronicNotary flag  # noqa: E501
+        MetaData for the Account Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions  # noqa: E501
 
         :return: The allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4848,7 +4920,7 @@ class AccountSettingsInformation(object):
     def allow_in_person_electronic_notary_metadata(self, allow_in_person_electronic_notary_metadata):
         """Sets the allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.
 
-        MetaData for the allowInPersonElectronicNotary flag  # noqa: E501
+        MetaData for the Account Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions  # noqa: E501
 
         :param allow_in_person_electronic_notary_metadata: The allow_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -4952,6 +5024,7 @@ class AccountSettingsInformation(object):
     def allow_managing_envelopes_on_behalf_of_others_metadata(self):
         """Gets the allow_managing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_managing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -4962,6 +5035,7 @@ class AccountSettingsInformation(object):
     def allow_managing_envelopes_on_behalf_of_others_metadata(self, allow_managing_envelopes_on_behalf_of_others_metadata):
         """Sets the allow_managing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_managing_envelopes_on_behalf_of_others_metadata: The allow_managing_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5594,7 +5668,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_in_person_electronic_notary_metadata(self):
         """Gets the allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
 
-        MetaData for the allowOrganizationToUseInPersonElectronicNotary flag  # noqa: E501
+        MetaData for the Organization Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions  # noqa: E501
 
         :return: The allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5605,7 +5679,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_in_person_electronic_notary_metadata(self, allow_organization_to_use_in_person_electronic_notary_metadata):
         """Sets the allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.
 
-        MetaData for the allowOrganizationToUseInPersonElectronicNotary flag  # noqa: E501
+        MetaData for the Organization Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions  # noqa: E501
 
         :param allow_organization_to_use_in_person_electronic_notary_metadata: The allow_organization_to_use_in_person_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5686,6 +5760,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_third_party_electronic_notary_metadata(self):
         """Gets the allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5696,6 +5771,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_third_party_electronic_notary_metadata(self, allow_organization_to_use_third_party_electronic_notary_metadata):
         """Sets the allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_organization_to_use_third_party_electronic_notary_metadata: The allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5730,6 +5806,7 @@ class AccountSettingsInformation(object):
     def allow_participant_recipient_type_metadata(self):
         """Gets the allow_participant_recipient_type_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_participant_recipient_type_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5740,6 +5817,7 @@ class AccountSettingsInformation(object):
     def allow_participant_recipient_type_metadata(self, allow_participant_recipient_type_metadata):
         """Sets the allow_participant_recipient_type_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_participant_recipient_type_metadata: The allow_participant_recipient_type_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -5820,6 +5898,7 @@ class AccountSettingsInformation(object):
     def allow_performance_analytics_metadata(self):
         """Gets the allow_performance_analytics_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_performance_analytics_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5830,6 +5909,7 @@ class AccountSettingsInformation(object):
     def allow_performance_analytics_metadata(self, allow_performance_analytics_metadata):
         """Sets the allow_performance_analytics_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_performance_analytics_metadata: The allow_performance_analytics_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -6324,6 +6404,7 @@ class AccountSettingsInformation(object):
     def allow_sending_envelopes_on_behalf_of_others_metadata(self):
         """Gets the allow_sending_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_sending_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -6334,6 +6415,7 @@ class AccountSettingsInformation(object):
     def allow_sending_envelopes_on_behalf_of_others_metadata(self, allow_sending_envelopes_on_behalf_of_others_metadata):
         """Sets the allow_sending_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_sending_envelopes_on_behalf_of_others_metadata: The allow_sending_envelopes_on_behalf_of_others_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7150,6 +7232,7 @@ class AccountSettingsInformation(object):
     def allow_third_party_electronic_notary_metadata(self):
         """Gets the allow_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7160,6 +7243,7 @@ class AccountSettingsInformation(object):
     def allow_third_party_electronic_notary_metadata(self, allow_third_party_electronic_notary_metadata):
         """Sets the allow_third_party_electronic_notary_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_third_party_electronic_notary_metadata: The allow_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7194,6 +7278,7 @@ class AccountSettingsInformation(object):
     def allow_transactions_workspace_metadata(self):
         """Gets the allow_transactions_workspace_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_transactions_workspace_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7204,6 +7289,7 @@ class AccountSettingsInformation(object):
     def allow_transactions_workspace_metadata(self, allow_transactions_workspace_metadata):
         """Sets the allow_transactions_workspace_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_transactions_workspace_metadata: The allow_transactions_workspace_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7330,6 +7416,7 @@ class AccountSettingsInformation(object):
     def allow_web_forms_metadata(self):
         """Gets the allow_web_forms_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_web_forms_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7340,6 +7427,7 @@ class AccountSettingsInformation(object):
     def allow_web_forms_metadata(self, allow_web_forms_metadata):
         """Sets the allow_web_forms_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_web_forms_metadata: The allow_web_forms_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -7374,6 +7462,7 @@ class AccountSettingsInformation(object):
     def allow_whats_app_delivery_metadata(self):
         """Gets the allow_whats_app_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The allow_whats_app_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -7384,6 +7473,7 @@ class AccountSettingsInformation(object):
     def allow_whats_app_delivery_metadata(self, allow_whats_app_delivery_metadata):
         """Sets the allow_whats_app_delivery_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param allow_whats_app_delivery_metadata: The allow_whats_app_delivery_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9255,6 +9345,29 @@ class AccountSettingsInformation(object):
         self._document_visibility_metadata = document_visibility_metadata
 
     @property
+    def dss_enable_provisioning_pen_configuration_radmin_option(self):
+        """Gets the dss_enable_provisioning_pen_configuration_radmin_option of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The dss_enable_provisioning_pen_configuration_radmin_option of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._dss_enable_provisioning_pen_configuration_radmin_option
+
+    @dss_enable_provisioning_pen_configuration_radmin_option.setter
+    def dss_enable_provisioning_pen_configuration_radmin_option(self, dss_enable_provisioning_pen_configuration_radmin_option):
+        """Sets the dss_enable_provisioning_pen_configuration_radmin_option of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param dss_enable_provisioning_pen_configuration_radmin_option: The dss_enable_provisioning_pen_configuration_radmin_option of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._dss_enable_provisioning_pen_configuration_radmin_option = dss_enable_provisioning_pen_configuration_radmin_option
+
+    @property
     def dss_sign_28411_enable_leave_page_prompt_radmin_option(self):
         """Gets the dss_sign_28411_enable_leave_page_prompt_radmin_option of this AccountSettingsInformation.  # noqa: E501
 
@@ -9419,6 +9532,7 @@ class AccountSettingsInformation(object):
     def enable_adm_healthcare_metadata(self):
         """Gets the enable_adm_healthcare_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_adm_healthcare_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9429,6 +9543,7 @@ class AccountSettingsInformation(object):
     def enable_adm_healthcare_metadata(self, enable_adm_healthcare_metadata):
         """Sets the enable_adm_healthcare_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_adm_healthcare_metadata: The enable_adm_healthcare_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9808,6 +9923,7 @@ class AccountSettingsInformation(object):
     def enable_click_plus_conditional_content_meta_data(self):
         """Gets the enable_click_plus_conditional_content_meta_data of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_click_plus_conditional_content_meta_data of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9818,6 +9934,7 @@ class AccountSettingsInformation(object):
     def enable_click_plus_conditional_content_meta_data(self, enable_click_plus_conditional_content_meta_data):
         """Sets the enable_click_plus_conditional_content_meta_data of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_click_plus_conditional_content_meta_data: The enable_click_plus_conditional_content_meta_data of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9852,6 +9969,7 @@ class AccountSettingsInformation(object):
     def enable_click_plus_custom_fields_meta_data(self):
         """Gets the enable_click_plus_custom_fields_meta_data of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_click_plus_custom_fields_meta_data of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9862,6 +9980,7 @@ class AccountSettingsInformation(object):
     def enable_click_plus_custom_fields_meta_data(self, enable_click_plus_custom_fields_meta_data):
         """Sets the enable_click_plus_custom_fields_meta_data of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_click_plus_custom_fields_meta_data: The enable_click_plus_custom_fields_meta_data of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9896,6 +10015,7 @@ class AccountSettingsInformation(object):
     def enable_click_plus_custom_style_meta_data(self):
         """Gets the enable_click_plus_custom_style_meta_data of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_click_plus_custom_style_meta_data of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9906,6 +10026,7 @@ class AccountSettingsInformation(object):
     def enable_click_plus_custom_style_meta_data(self, enable_click_plus_custom_style_meta_data):
         """Sets the enable_click_plus_custom_style_meta_data of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_click_plus_custom_style_meta_data: The enable_click_plus_custom_style_meta_data of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9940,6 +10061,7 @@ class AccountSettingsInformation(object):
     def enable_click_plus_dynamic_content_meta_data(self):
         """Gets the enable_click_plus_dynamic_content_meta_data of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_click_plus_dynamic_content_meta_data of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9950,6 +10072,7 @@ class AccountSettingsInformation(object):
     def enable_click_plus_dynamic_content_meta_data(self, enable_click_plus_dynamic_content_meta_data):
         """Sets the enable_click_plus_dynamic_content_meta_data of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_click_plus_dynamic_content_meta_data: The enable_click_plus_dynamic_content_meta_data of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -9961,6 +10084,7 @@ class AccountSettingsInformation(object):
     def enable_click_plus_meta_data(self):
         """Gets the enable_click_plus_meta_data of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_click_plus_meta_data of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9971,6 +10095,7 @@ class AccountSettingsInformation(object):
     def enable_click_plus_meta_data(self, enable_click_plus_meta_data):
         """Sets the enable_click_plus_meta_data of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_click_plus_meta_data: The enable_click_plus_meta_data of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10120,6 +10245,7 @@ class AccountSettingsInformation(object):
     def enable_contact_suggestions_metadata(self):
         """Gets the enable_contact_suggestions_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_contact_suggestions_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10130,6 +10256,7 @@ class AccountSettingsInformation(object):
     def enable_contact_suggestions_metadata(self, enable_contact_suggestions_metadata):
         """Sets the enable_contact_suggestions_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_contact_suggestions_metadata: The enable_contact_suggestions_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10233,6 +10360,7 @@ class AccountSettingsInformation(object):
     def enable_enforce_tls_emails_setting_metadata(self):
         """Gets the enable_enforce_tls_emails_setting_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_enforce_tls_emails_setting_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10243,6 +10371,7 @@ class AccountSettingsInformation(object):
     def enable_enforce_tls_emails_setting_metadata(self, enable_enforce_tls_emails_setting_metadata):
         """Sets the enable_enforce_tls_emails_setting_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_enforce_tls_emails_setting_metadata: The enable_enforce_tls_emails_setting_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10369,6 +10498,7 @@ class AccountSettingsInformation(object):
     def enable_e_sign_api_hourly_limit_management_metadata(self):
         """Gets the enable_e_sign_api_hourly_limit_management_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_e_sign_api_hourly_limit_management_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10379,6 +10509,7 @@ class AccountSettingsInformation(object):
     def enable_e_sign_api_hourly_limit_management_metadata(self, enable_e_sign_api_hourly_limit_management_metadata):
         """Sets the enable_e_sign_api_hourly_limit_management_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_e_sign_api_hourly_limit_management_metadata: The enable_e_sign_api_hourly_limit_management_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10459,6 +10590,7 @@ class AccountSettingsInformation(object):
     def enable_id_fx_accountless_sms_auth_for_part11_metadata(self):
         """Gets the enable_id_fx_accountless_sms_auth_for_part11_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_id_fx_accountless_sms_auth_for_part11_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10469,6 +10601,7 @@ class AccountSettingsInformation(object):
     def enable_id_fx_accountless_sms_auth_for_part11_metadata(self, enable_id_fx_accountless_sms_auth_for_part11_metadata):
         """Sets the enable_id_fx_accountless_sms_auth_for_part11_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_id_fx_accountless_sms_auth_for_part11_metadata: The enable_id_fx_accountless_sms_auth_for_part11_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10595,6 +10728,7 @@ class AccountSettingsInformation(object):
     def enable_idfx_phone_auth_signature_auth_status_metadata(self):
         """Gets the enable_idfx_phone_auth_signature_auth_status_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_idfx_phone_auth_signature_auth_status_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10605,6 +10739,7 @@ class AccountSettingsInformation(object):
     def enable_idfx_phone_auth_signature_auth_status_metadata(self, enable_idfx_phone_auth_signature_auth_status_metadata):
         """Sets the enable_idfx_phone_auth_signature_auth_status_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_idfx_phone_auth_signature_auth_status_metadata: The enable_idfx_phone_auth_signature_auth_status_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10685,6 +10820,7 @@ class AccountSettingsInformation(object):
     def enable_key_terms_suggestions_by_document_type_metadata(self):
         """Gets the enable_key_terms_suggestions_by_document_type_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_key_terms_suggestions_by_document_type_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10695,6 +10831,7 @@ class AccountSettingsInformation(object):
     def enable_key_terms_suggestions_by_document_type_metadata(self, enable_key_terms_suggestions_by_document_type_metadata):
         """Sets the enable_key_terms_suggestions_by_document_type_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_key_terms_suggestions_by_document_type_metadata: The enable_key_terms_suggestions_by_document_type_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -10706,6 +10843,7 @@ class AccountSettingsInformation(object):
     def enable_participant_recipient_setting_metadata(self):
         """Gets the enable_participant_recipient_setting_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_participant_recipient_setting_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -10716,6 +10854,7 @@ class AccountSettingsInformation(object):
     def enable_participant_recipient_setting_metadata(self, enable_participant_recipient_setting_metadata):
         """Sets the enable_participant_recipient_setting_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_participant_recipient_setting_metadata: The enable_participant_recipient_setting_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11302,6 +11441,7 @@ class AccountSettingsInformation(object):
     def enable_search_site_specific_api_metadata(self):
         """Gets the enable_search_site_specific_api_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enable_search_site_specific_api_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -11312,6 +11452,7 @@ class AccountSettingsInformation(object):
     def enable_search_site_specific_api_metadata(self, enable_search_site_specific_api_metadata):
         """Sets the enable_search_site_specific_api_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enable_search_site_specific_api_metadata: The enable_search_site_specific_api_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12427,6 +12568,7 @@ class AccountSettingsInformation(object):
     def enforce_tls_emails_metadata(self):
         """Gets the enforce_tls_emails_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The enforce_tls_emails_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12437,6 +12579,7 @@ class AccountSettingsInformation(object):
     def enforce_tls_emails_metadata(self, enforce_tls_emails_metadata):
         """Sets the enforce_tls_emails_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param enforce_tls_emails_metadata: The enforce_tls_emails_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12586,6 +12729,7 @@ class AccountSettingsInformation(object):
     def envelope_limits_total_document_size_allowed_in_mb_enabled_metadata(self):
         """Gets the envelope_limits_total_document_size_allowed_in_mb_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The envelope_limits_total_document_size_allowed_in_mb_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12596,6 +12740,7 @@ class AccountSettingsInformation(object):
     def envelope_limits_total_document_size_allowed_in_mb_enabled_metadata(self, envelope_limits_total_document_size_allowed_in_mb_enabled_metadata):
         """Sets the envelope_limits_total_document_size_allowed_in_mb_enabled_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param envelope_limits_total_document_size_allowed_in_mb_enabled_metadata: The envelope_limits_total_document_size_allowed_in_mb_enabled_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12607,6 +12752,7 @@ class AccountSettingsInformation(object):
     def envelope_limits_total_document_size_allowed_in_mb_metadata(self):
         """Gets the envelope_limits_total_document_size_allowed_in_mb_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The envelope_limits_total_document_size_allowed_in_mb_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12617,6 +12763,7 @@ class AccountSettingsInformation(object):
     def envelope_limits_total_document_size_allowed_in_mb_metadata(self, envelope_limits_total_document_size_allowed_in_mb_metadata):
         """Sets the envelope_limits_total_document_size_allowed_in_mb_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param envelope_limits_total_document_size_allowed_in_mb_metadata: The envelope_limits_total_document_size_allowed_in_mb_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -12651,6 +12798,7 @@ class AccountSettingsInformation(object):
     def envelope_search_mode_metadata(self):
         """Gets the envelope_search_mode_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The envelope_search_mode_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -12661,6 +12809,7 @@ class AccountSettingsInformation(object):
     def envelope_search_mode_metadata(self, envelope_search_mode_metadata):
         """Sets the envelope_search_mode_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param envelope_search_mode_metadata: The envelope_search_mode_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13086,6 +13235,7 @@ class AccountSettingsInformation(object):
     def guided_forms_html_conversion_policy_metadata(self):
         """Gets the guided_forms_html_conversion_policy_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The guided_forms_html_conversion_policy_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13096,6 +13246,7 @@ class AccountSettingsInformation(object):
     def guided_forms_html_conversion_policy_metadata(self, guided_forms_html_conversion_policy_metadata):
         """Sets the guided_forms_html_conversion_policy_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param guided_forms_html_conversion_policy_metadata: The guided_forms_html_conversion_policy_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13498,6 +13649,7 @@ class AccountSettingsInformation(object):
     def idfx_kba_authentication_override_metadata(self):
         """Gets the idfx_kba_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The idfx_kba_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13508,6 +13660,7 @@ class AccountSettingsInformation(object):
     def idfx_kba_authentication_override_metadata(self, idfx_kba_authentication_override_metadata):
         """Sets the idfx_kba_authentication_override_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param idfx_kba_authentication_override_metadata: The idfx_kba_authentication_override_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -13792,6 +13945,29 @@ class AccountSettingsInformation(object):
         self._in_session_suppress_emails_metadata = in_session_suppress_emails_metadata
 
     @property
+    def is_connect_document_fields_enabled(self):
+        """Gets the is_connect_document_fields_enabled of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_connect_document_fields_enabled of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_connect_document_fields_enabled
+
+    @is_connect_document_fields_enabled.setter
+    def is_connect_document_fields_enabled(self, is_connect_document_fields_enabled):
+        """Sets the is_connect_document_fields_enabled of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param is_connect_document_fields_enabled: The is_connect_document_fields_enabled of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._is_connect_document_fields_enabled = is_connect_document_fields_enabled
+
+    @property
     def linked_external_primary_accounts(self):
         """Gets the linked_external_primary_accounts of this AccountSettingsInformation.  # noqa: E501
 
@@ -13956,6 +14132,7 @@ class AccountSettingsInformation(object):
     def merge_mixed_mode_results_metadata(self):
         """Gets the merge_mixed_mode_results_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The merge_mixed_mode_results_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -13966,6 +14143,7 @@ class AccountSettingsInformation(object):
     def merge_mixed_mode_results_metadata(self, merge_mixed_mode_results_metadata):
         """Sets the merge_mixed_mode_results_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param merge_mixed_mode_results_metadata: The merge_mixed_mode_results_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14089,6 +14267,29 @@ class AccountSettingsInformation(object):
         self._opt_in_mobile_signing_v02_metadata = opt_in_mobile_signing_v02_metadata
 
     @property
+    def opt_in_universal_signatures(self):
+        """Gets the opt_in_universal_signatures of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The opt_in_universal_signatures of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._opt_in_universal_signatures
+
+    @opt_in_universal_signatures.setter
+    def opt_in_universal_signatures(self, opt_in_universal_signatures):
+        """Sets the opt_in_universal_signatures of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param opt_in_universal_signatures: The opt_in_universal_signatures of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._opt_in_universal_signatures = opt_in_universal_signatures
+
+    @property
     def opt_out_auto_nav_text_and_tab_color_updates(self):
         """Gets the opt_out_auto_nav_text_and_tab_color_updates of this AccountSettingsInformation.  # noqa: E501
 
@@ -14207,6 +14408,7 @@ class AccountSettingsInformation(object):
     def pdf_max_chunked_upload_part_size_metadata(self):
         """Gets the pdf_max_chunked_upload_part_size_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The pdf_max_chunked_upload_part_size_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14217,6 +14419,7 @@ class AccountSettingsInformation(object):
     def pdf_max_chunked_upload_part_size_metadata(self, pdf_max_chunked_upload_part_size_metadata):
         """Sets the pdf_max_chunked_upload_part_size_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param pdf_max_chunked_upload_part_size_metadata: The pdf_max_chunked_upload_part_size_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14251,6 +14454,7 @@ class AccountSettingsInformation(object):
     def pdf_max_chunked_upload_total_size_metadata(self):
         """Gets the pdf_max_chunked_upload_total_size_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The pdf_max_chunked_upload_total_size_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14261,6 +14465,7 @@ class AccountSettingsInformation(object):
     def pdf_max_chunked_upload_total_size_metadata(self, pdf_max_chunked_upload_total_size_metadata):
         """Sets the pdf_max_chunked_upload_total_size_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param pdf_max_chunked_upload_total_size_metadata: The pdf_max_chunked_upload_total_size_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -14295,6 +14500,7 @@ class AccountSettingsInformation(object):
     def pdf_max_individual_upload_size_metadata(self):
         """Gets the pdf_max_individual_upload_size_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The pdf_max_individual_upload_size_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -14305,6 +14511,7 @@ class AccountSettingsInformation(object):
     def pdf_max_individual_upload_size_metadata(self, pdf_max_individual_upload_size_metadata):
         """Sets the pdf_max_individual_upload_size_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param pdf_max_individual_upload_size_metadata: The pdf_max_individual_upload_size_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -17352,6 +17559,7 @@ class AccountSettingsInformation(object):
     def use_envelope_search_mixed_mode_metadata(self):
         """Gets the use_envelope_search_mixed_mode_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The use_envelope_search_mixed_mode_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -17362,6 +17570,7 @@ class AccountSettingsInformation(object):
     def use_envelope_search_mixed_mode_metadata(self, use_envelope_search_mixed_mode_metadata):
         """Sets the use_envelope_search_mixed_mode_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param use_envelope_search_mixed_mode_metadata: The use_envelope_search_mixed_mode_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -17488,6 +17697,7 @@ class AccountSettingsInformation(object):
     def use_new_envelope_search_metadata(self):
         """Gets the use_new_envelope_search_metadata of this AccountSettingsInformation.  # noqa: E501
 
+          # noqa: E501
 
         :return: The use_new_envelope_search_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -17498,6 +17708,7 @@ class AccountSettingsInformation(object):
     def use_new_envelope_search_metadata(self, use_new_envelope_search_metadata):
         """Sets the use_new_envelope_search_metadata of this AccountSettingsInformation.
 
+          # noqa: E501
 
         :param use_new_envelope_search_metadata: The use_new_envelope_search_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata

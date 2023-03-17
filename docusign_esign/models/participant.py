@@ -39,6 +39,7 @@ class Participant(object):
         'additional_notifications': 'list[RecipientAdditionalNotification]',
         'allow_system_override_for_locked_recipient': 'str',
         'auto_responded_reason': 'str',
+        'bulk_send_v2_recipient': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
         'consent_details_list': 'list[ConsentDetails]',
@@ -116,6 +117,7 @@ class Participant(object):
         'additional_notifications': 'additionalNotifications',
         'allow_system_override_for_locked_recipient': 'allowSystemOverrideForLockedRecipient',
         'auto_responded_reason': 'autoRespondedReason',
+        'bulk_send_v2_recipient': 'bulkSendV2Recipient',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
         'consent_details_list': 'consentDetailsList',
@@ -198,6 +200,7 @@ class Participant(object):
         self._additional_notifications = None
         self._allow_system_override_for_locked_recipient = None
         self._auto_responded_reason = None
+        self._bulk_send_v2_recipient = None
         self._client_user_id = None
         self._completed_count = None
         self._consent_details_list = None
@@ -274,6 +277,7 @@ class Participant(object):
         setattr(self, "_{}".format('additional_notifications'), kwargs.get('additional_notifications', None))
         setattr(self, "_{}".format('allow_system_override_for_locked_recipient'), kwargs.get('allow_system_override_for_locked_recipient', None))
         setattr(self, "_{}".format('auto_responded_reason'), kwargs.get('auto_responded_reason', None))
+        setattr(self, "_{}".format('bulk_send_v2_recipient'), kwargs.get('bulk_send_v2_recipient', None))
         setattr(self, "_{}".format('client_user_id'), kwargs.get('client_user_id', None))
         setattr(self, "_{}".format('completed_count'), kwargs.get('completed_count', None))
         setattr(self, "_{}".format('consent_details_list'), kwargs.get('consent_details_list', None))
@@ -370,6 +374,7 @@ class Participant(object):
     def access_code_metadata(self):
         """Gets the access_code_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The access_code_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -380,6 +385,7 @@ class Participant(object):
     def access_code_metadata(self, access_code_metadata):
         """Sets the access_code_metadata of this Participant.
 
+          # noqa: E501
 
         :param access_code_metadata: The access_code_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -478,6 +484,29 @@ class Participant(object):
         """
 
         self._auto_responded_reason = auto_responded_reason
+
+    @property
+    def bulk_send_v2_recipient(self):
+        """Gets the bulk_send_v2_recipient of this Participant.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The bulk_send_v2_recipient of this Participant.  # noqa: E501
+        :rtype: str
+        """
+        return self._bulk_send_v2_recipient
+
+    @bulk_send_v2_recipient.setter
+    def bulk_send_v2_recipient(self, bulk_send_v2_recipient):
+        """Sets the bulk_send_v2_recipient of this Participant.
+
+          # noqa: E501
+
+        :param bulk_send_v2_recipient: The bulk_send_v2_recipient of this Participant.  # noqa: E501
+        :type: str
+        """
+
+        self._bulk_send_v2_recipient = bulk_send_v2_recipient
 
     @property
     def client_user_id(self):
@@ -667,6 +696,7 @@ class Participant(object):
     def delivery_method_metadata(self):
         """Gets the delivery_method_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The delivery_method_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -677,6 +707,7 @@ class Participant(object):
     def delivery_method_metadata(self, delivery_method_metadata):
         """Sets the delivery_method_metadata of this Participant.
 
+          # noqa: E501
 
         :param delivery_method_metadata: The delivery_method_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -780,6 +811,7 @@ class Participant(object):
     def email_metadata(self):
         """Gets the email_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The email_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -790,6 +822,7 @@ class Participant(object):
     def email_metadata(self, email_metadata):
         """Sets the email_metadata of this Participant.
 
+          # noqa: E501
 
         :param email_metadata: The email_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -801,6 +834,7 @@ class Participant(object):
     def email_notification(self):
         """Gets the email_notification of this Participant.  # noqa: E501
 
+        A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.   # noqa: E501
 
         :return: The email_notification of this Participant.  # noqa: E501
         :rtype: RecipientEmailNotification
@@ -811,6 +845,7 @@ class Participant(object):
     def email_notification(self, email_notification):
         """Sets the email_notification of this Participant.
 
+        A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings.   # noqa: E501
 
         :param email_notification: The email_notification of this Participant.  # noqa: E501
         :type: RecipientEmailNotification
@@ -868,6 +903,7 @@ class Participant(object):
     def error_details(self):
         """Gets the error_details of this Participant.  # noqa: E501
 
+        Array or errors.  # noqa: E501
 
         :return: The error_details of this Participant.  # noqa: E501
         :rtype: ErrorDetails
@@ -878,6 +914,7 @@ class Participant(object):
     def error_details(self, error_details):
         """Sets the error_details of this Participant.
 
+        Array or errors.  # noqa: E501
 
         :param error_details: The error_details of this Participant.  # noqa: E501
         :type: ErrorDetails
@@ -912,6 +949,7 @@ class Participant(object):
     def fax_number_metadata(self):
         """Gets the fax_number_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The fax_number_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -922,6 +960,7 @@ class Participant(object):
     def fax_number_metadata(self, fax_number_metadata):
         """Sets the fax_number_metadata of this Participant.
 
+          # noqa: E501
 
         :param fax_number_metadata: The fax_number_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -956,6 +995,7 @@ class Participant(object):
     def first_name_metadata(self):
         """Gets the first_name_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The first_name_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -966,6 +1006,7 @@ class Participant(object):
     def first_name_metadata(self, first_name_metadata):
         """Sets the first_name_metadata of this Participant.
 
+          # noqa: E501
 
         :param first_name_metadata: The first_name_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -1000,6 +1041,7 @@ class Participant(object):
     def full_name_metadata(self):
         """Gets the full_name_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The full_name_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1010,6 +1052,7 @@ class Participant(object):
     def full_name_metadata(self, full_name_metadata):
         """Sets the full_name_metadata of this Participant.
 
+          # noqa: E501
 
         :param full_name_metadata: The full_name_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -1044,6 +1087,7 @@ class Participant(object):
     def id_check_configuration_name_metadata(self):
         """Gets the id_check_configuration_name_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The id_check_configuration_name_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1054,6 +1098,7 @@ class Participant(object):
     def id_check_configuration_name_metadata(self, id_check_configuration_name_metadata):
         """Sets the id_check_configuration_name_metadata of this Participant.
 
+          # noqa: E501
 
         :param id_check_configuration_name_metadata: The id_check_configuration_name_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -1065,6 +1110,7 @@ class Participant(object):
     def id_check_information_input(self):
         """Gets the id_check_information_input of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The id_check_information_input of this Participant.  # noqa: E501
         :rtype: IdCheckInformationInput
@@ -1075,6 +1121,7 @@ class Participant(object):
     def id_check_information_input(self, id_check_information_input):
         """Sets the id_check_information_input of this Participant.
 
+          # noqa: E501
 
         :param id_check_information_input: The id_check_information_input of this Participant.  # noqa: E501
         :type: IdCheckInformationInput
@@ -1086,6 +1133,7 @@ class Participant(object):
     def identity_verification(self):
         """Gets the identity_verification of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The identity_verification of this Participant.  # noqa: E501
         :rtype: RecipientIdentityVerification
@@ -1096,6 +1144,7 @@ class Participant(object):
     def identity_verification(self, identity_verification):
         """Sets the identity_verification of this Participant.
 
+          # noqa: E501
 
         :param identity_verification: The identity_verification of this Participant.  # noqa: E501
         :type: RecipientIdentityVerification
@@ -1153,6 +1202,7 @@ class Participant(object):
     def last_name_metadata(self):
         """Gets the last_name_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The last_name_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1163,6 +1213,7 @@ class Participant(object):
     def last_name_metadata(self, last_name_metadata):
         """Sets the last_name_metadata of this Participant.
 
+          # noqa: E501
 
         :param last_name_metadata: The last_name_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -1243,6 +1294,7 @@ class Participant(object):
     def name_metadata(self):
         """Gets the name_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The name_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1253,6 +1305,7 @@ class Participant(object):
     def name_metadata(self, name_metadata):
         """Sets the name_metadata of this Participant.
 
+          # noqa: E501
 
         :param name_metadata: The name_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -1287,6 +1340,7 @@ class Participant(object):
     def note_metadata(self):
         """Gets the note_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The note_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1297,6 +1351,7 @@ class Participant(object):
     def note_metadata(self, note_metadata):
         """Sets the note_metadata of this Participant.
 
+          # noqa: E501
 
         :param note_metadata: The note_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -1354,6 +1409,7 @@ class Participant(object):
     def phone_authentication(self):
         """Gets the phone_authentication of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The phone_authentication of this Participant.  # noqa: E501
         :rtype: RecipientPhoneAuthentication
@@ -1364,6 +1420,7 @@ class Participant(object):
     def phone_authentication(self, phone_authentication):
         """Sets the phone_authentication of this Participant.
 
+          # noqa: E501
 
         :param phone_authentication: The phone_authentication of this Participant.  # noqa: E501
         :type: RecipientPhoneAuthentication
@@ -1375,6 +1432,7 @@ class Participant(object):
     def phone_number(self):
         """Gets the phone_number of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The phone_number of this Participant.  # noqa: E501
         :rtype: RecipientPhoneNumber
@@ -1385,6 +1443,7 @@ class Participant(object):
     def phone_number(self, phone_number):
         """Sets the phone_number of this Participant.
 
+          # noqa: E501
 
         :param phone_number: The phone_number of this Participant.  # noqa: E501
         :type: RecipientPhoneNumber
@@ -1419,6 +1478,7 @@ class Participant(object):
     def recipient_authentication_status(self):
         """Gets the recipient_authentication_status of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The recipient_authentication_status of this Participant.  # noqa: E501
         :rtype: AuthenticationStatus
@@ -1429,6 +1489,7 @@ class Participant(object):
     def recipient_authentication_status(self, recipient_authentication_status):
         """Sets the recipient_authentication_status of this Participant.
 
+          # noqa: E501
 
         :param recipient_authentication_status: The recipient_authentication_status of this Participant.  # noqa: E501
         :type: AuthenticationStatus
@@ -1532,6 +1593,7 @@ class Participant(object):
     def recipient_type_metadata(self):
         """Gets the recipient_type_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The recipient_type_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1542,6 +1604,7 @@ class Participant(object):
     def recipient_type_metadata(self, recipient_type_metadata):
         """Sets the recipient_type_metadata of this Participant.
 
+          # noqa: E501
 
         :param recipient_type_metadata: The recipient_type_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -1576,6 +1639,7 @@ class Participant(object):
     def require_id_lookup_metadata(self):
         """Gets the require_id_lookup_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The require_id_lookup_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1586,6 +1650,7 @@ class Participant(object):
     def require_id_lookup_metadata(self, require_id_lookup_metadata):
         """Sets the require_id_lookup_metadata of this Participant.
 
+          # noqa: E501
 
         :param require_id_lookup_metadata: The require_id_lookup_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -1643,6 +1708,7 @@ class Participant(object):
     def routing_order_metadata(self):
         """Gets the routing_order_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The routing_order_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1653,6 +1719,7 @@ class Participant(object):
     def routing_order_metadata(self, routing_order_metadata):
         """Sets the routing_order_metadata of this Participant.
 
+          # noqa: E501
 
         :param routing_order_metadata: The routing_order_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -1733,6 +1800,7 @@ class Participant(object):
     def signing_group_id_metadata(self):
         """Gets the signing_group_id_metadata of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The signing_group_id_metadata of this Participant.  # noqa: E501
         :rtype: PropertyMetadata
@@ -1743,6 +1811,7 @@ class Participant(object):
     def signing_group_id_metadata(self, signing_group_id_metadata):
         """Sets the signing_group_id_metadata of this Participant.
 
+          # noqa: E501
 
         :param signing_group_id_metadata: The signing_group_id_metadata of this Participant.  # noqa: E501
         :type: PropertyMetadata
@@ -1800,6 +1869,7 @@ class Participant(object):
     def sms_authentication(self):
         """Gets the sms_authentication of this Participant.  # noqa: E501
 
+          # noqa: E501
 
         :return: The sms_authentication of this Participant.  # noqa: E501
         :rtype: RecipientSMSAuthentication
@@ -1810,6 +1880,7 @@ class Participant(object):
     def sms_authentication(self, sms_authentication):
         """Sets the sms_authentication of this Participant.
 
+          # noqa: E501
 
         :param sms_authentication: The sms_authentication of this Participant.  # noqa: E501
         :type: RecipientSMSAuthentication

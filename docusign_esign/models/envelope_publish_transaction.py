@@ -356,6 +356,7 @@ class EnvelopePublishTransaction(object):
     def submitted_by_user_info(self):
         """Gets the submitted_by_user_info of this EnvelopePublishTransaction.  # noqa: E501
 
+          # noqa: E501
 
         :return: The submitted_by_user_info of this EnvelopePublishTransaction.  # noqa: E501
         :rtype: UserInfo
@@ -366,6 +367,7 @@ class EnvelopePublishTransaction(object):
     def submitted_by_user_info(self, submitted_by_user_info):
         """Sets the submitted_by_user_info of this EnvelopePublishTransaction.
 
+          # noqa: E501
 
         :param submitted_by_user_info: The submitted_by_user_info of this EnvelopePublishTransaction.  # noqa: E501
         :type: UserInfo
