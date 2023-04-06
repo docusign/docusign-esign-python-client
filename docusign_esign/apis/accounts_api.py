@@ -584,6 +584,230 @@ class AccountsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def create_user_authorization(self, account_id, user_id, **kwargs):
+        """
+        Creates the user authorization
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_user_authorization(account_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param UserAuthorizationCreateRequest user_authorization_create_request:
+        :return: UserAuthorization
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_user_authorization_with_http_info(account_id, user_id, **kwargs)
+        else:
+            (data) = self.create_user_authorization_with_http_info(account_id, user_id, **kwargs)
+            return data
+
+    def create_user_authorization_with_http_info(self, account_id, user_id, **kwargs):
+        """
+        Creates the user authorization
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_user_authorization_with_http_info(account_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param UserAuthorizationCreateRequest user_authorization_create_request:
+        :return: UserAuthorization
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'user_id', 'user_authorization_create_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_user_authorization" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_user_authorization`")
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `create_user_authorization`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/users/{userId}/authorization'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'user_authorization_create_request' in params:
+            body_params = params['user_authorization_create_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='UserAuthorization',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_user_authorizations(self, account_id, user_id, **kwargs):
+        """
+        Creates ot updates user authorizations
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_user_authorizations(account_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param UserAuthorizationsRequest user_authorizations_request:
+        :return: UserAuthorizationsResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_user_authorizations_with_http_info(account_id, user_id, **kwargs)
+        else:
+            (data) = self.create_user_authorizations_with_http_info(account_id, user_id, **kwargs)
+            return data
+
+    def create_user_authorizations_with_http_info(self, account_id, user_id, **kwargs):
+        """
+        Creates ot updates user authorizations
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_user_authorizations_with_http_info(account_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param UserAuthorizationsRequest user_authorizations_request:
+        :return: UserAuthorizationsResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'user_id', 'user_authorizations_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_user_authorizations" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_user_authorizations`")
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `create_user_authorizations`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/users/{userId}/authorizations'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'user_authorizations_request' in params:
+            body_params = params['user_authorizations_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='UserAuthorizationsResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def delete(self, account_id, **kwargs):
         """
         Deletes the specified account.
@@ -1693,6 +1917,233 @@ class AccountsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def delete_user_authorization(self, account_id, authorization_id, user_id, **kwargs):
+        """
+        Deletes the user authorization
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_user_authorization(account_id, authorization_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str authorization_id: (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_user_authorization_with_http_info(account_id, authorization_id, user_id, **kwargs)
+        else:
+            (data) = self.delete_user_authorization_with_http_info(account_id, authorization_id, user_id, **kwargs)
+            return data
+
+    def delete_user_authorization_with_http_info(self, account_id, authorization_id, user_id, **kwargs):
+        """
+        Deletes the user authorization
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_user_authorization_with_http_info(account_id, authorization_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str authorization_id: (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'authorization_id', 'user_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_user_authorization" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_user_authorization`")
+        # verify the required parameter 'authorization_id' is set
+        if ('authorization_id' not in params) or (params['authorization_id'] is None):
+            raise ValueError("Missing the required parameter `authorization_id` when calling `delete_user_authorization`")
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `delete_user_authorization`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/users/{userId}/authorization/{authorizationId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'authorization_id' in params:
+            path_params['authorizationId'] = params['authorization_id']
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_user_authorizations(self, account_id, user_id, **kwargs):
+        """
+        Creates ot updates user authorizations
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_user_authorizations(account_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param UserAuthorizationsDeleteRequest user_authorizations_delete_request:
+        :return: UserAuthorizationsDeleteResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_user_authorizations_with_http_info(account_id, user_id, **kwargs)
+        else:
+            (data) = self.delete_user_authorizations_with_http_info(account_id, user_id, **kwargs)
+            return data
+
+    def delete_user_authorizations_with_http_info(self, account_id, user_id, **kwargs):
+        """
+        Creates ot updates user authorizations
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_user_authorizations_with_http_info(account_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param UserAuthorizationsDeleteRequest user_authorizations_delete_request:
+        :return: UserAuthorizationsDeleteResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'user_id', 'user_authorizations_delete_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_user_authorizations" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_user_authorizations`")
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `delete_user_authorizations`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/users/{userId}/authorizations'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'user_authorizations_delete_request' in params:
+            body_params = params['user_authorizations_delete_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='UserAuthorizationsDeleteResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_account_identity_verification(self, account_id, **kwargs):
         """
         Get the list of identity verification options for an account
@@ -2345,6 +2796,138 @@ class AccountsApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='TabAccountSettings',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_agent_user_authorizations(self, account_id, user_id, **kwargs):
+        """
+        Returns the agent user authorizations
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_agent_user_authorizations(account_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param str active_only:
+        :param str count:
+        :param str email_substring:
+        :param str permissions:
+        :param str start_position:
+        :param str user_name_substring:
+        :return: UserAuthorizations
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_agent_user_authorizations_with_http_info(account_id, user_id, **kwargs)
+        else:
+            (data) = self.get_agent_user_authorizations_with_http_info(account_id, user_id, **kwargs)
+            return data
+
+    def get_agent_user_authorizations_with_http_info(self, account_id, user_id, **kwargs):
+        """
+        Returns the agent user authorizations
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_agent_user_authorizations_with_http_info(account_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param str active_only:
+        :param str count:
+        :param str email_substring:
+        :param str permissions:
+        :param str start_position:
+        :param str user_name_substring:
+        :return: UserAuthorizations
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'user_id', 'active_only', 'count', 'email_substring', 'permissions', 'start_position', 'user_name_substring']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_agent_user_authorizations" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_agent_user_authorizations`")
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `get_agent_user_authorizations`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/users/{userId}/authorizations/agent'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+        if 'active_only' in params:
+            query_params['active_only'] = params['active_only']
+        if 'count' in params:
+            query_params['count'] = params['count']
+        if 'email_substring' in params:
+            query_params['email_substring'] = params['email_substring']
+        if 'permissions' in params:
+            query_params['permissions'] = params['permissions']
+        if 'start_position' in params:
+            query_params['start_position'] = params['start_position']
+        if 'user_name_substring' in params:
+            query_params['user_name_substring'] = params['user_name_substring']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='UserAuthorizations',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -4083,6 +4666,138 @@ class AccountsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_principal_user_authorizations(self, account_id, user_id, **kwargs):
+        """
+        Returns the principal user authorizations
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_principal_user_authorizations(account_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param str active_only:
+        :param str count:
+        :param str email_substring:
+        :param str permissions:
+        :param str start_position:
+        :param str user_name_substring:
+        :return: UserAuthorizations
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_principal_user_authorizations_with_http_info(account_id, user_id, **kwargs)
+        else:
+            (data) = self.get_principal_user_authorizations_with_http_info(account_id, user_id, **kwargs)
+            return data
+
+    def get_principal_user_authorizations_with_http_info(self, account_id, user_id, **kwargs):
+        """
+        Returns the principal user authorizations
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_principal_user_authorizations_with_http_info(account_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param str active_only:
+        :param str count:
+        :param str email_substring:
+        :param str permissions:
+        :param str start_position:
+        :param str user_name_substring:
+        :return: UserAuthorizations
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'user_id', 'active_only', 'count', 'email_substring', 'permissions', 'start_position', 'user_name_substring']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_principal_user_authorizations" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_principal_user_authorizations`")
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `get_principal_user_authorizations`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/users/{userId}/authorizations'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+        if 'active_only' in params:
+            query_params['active_only'] = params['active_only']
+        if 'count' in params:
+            query_params['count'] = params['count']
+        if 'email_substring' in params:
+            query_params['email_substring'] = params['email_substring']
+        if 'permissions' in params:
+            query_params['permissions'] = params['permissions']
+        if 'start_position' in params:
+            query_params['start_position'] = params['start_position']
+        if 'user_name_substring' in params:
+            query_params['user_name_substring'] = params['user_name_substring']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='UserAuthorizations',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_provisioning(self, **kwargs):
         """
         Retrieves the account provisioning information for the account.
@@ -4274,6 +4989,121 @@ class AccountsApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='SupportedLanguages',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_user_authorization(self, account_id, authorization_id, user_id, **kwargs):
+        """
+        Returns the user authorization for a given authorization id
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_user_authorization(account_id, authorization_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str authorization_id: (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :return: UserAuthorization
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_user_authorization_with_http_info(account_id, authorization_id, user_id, **kwargs)
+        else:
+            (data) = self.get_user_authorization_with_http_info(account_id, authorization_id, user_id, **kwargs)
+            return data
+
+    def get_user_authorization_with_http_info(self, account_id, authorization_id, user_id, **kwargs):
+        """
+        Returns the user authorization for a given authorization id
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_user_authorization_with_http_info(account_id, authorization_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str authorization_id: (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :return: UserAuthorization
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'authorization_id', 'user_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_user_authorization" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_user_authorization`")
+        # verify the required parameter 'authorization_id' is set
+        if ('authorization_id' not in params) or (params['authorization_id'] is None):
+            raise ValueError("Missing the required parameter `authorization_id` when calling `get_user_authorization`")
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `get_user_authorization`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/users/{userId}/authorization/{authorizationId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'authorization_id' in params:
+            path_params['authorizationId'] = params['authorization_id']
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='UserAuthorization',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -7409,6 +8239,125 @@ class AccountsApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='AccountSharedAccess',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_user_authorization(self, account_id, authorization_id, user_id, **kwargs):
+        """
+        Updates the user authorization
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_user_authorization(account_id, authorization_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str authorization_id: (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param UserAuthorizationUpdateRequest user_authorization_update_request:
+        :return: UserAuthorization
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_user_authorization_with_http_info(account_id, authorization_id, user_id, **kwargs)
+        else:
+            (data) = self.update_user_authorization_with_http_info(account_id, authorization_id, user_id, **kwargs)
+            return data
+
+    def update_user_authorization_with_http_info(self, account_id, authorization_id, user_id, **kwargs):
+        """
+        Updates the user authorization
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_user_authorization_with_http_info(account_id, authorization_id, user_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str authorization_id: (required)
+        :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+        :param UserAuthorizationUpdateRequest user_authorization_update_request:
+        :return: UserAuthorization
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'authorization_id', 'user_id', 'user_authorization_update_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_user_authorization" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_user_authorization`")
+        # verify the required parameter 'authorization_id' is set
+        if ('authorization_id' not in params) or (params['authorization_id'] is None):
+            raise ValueError("Missing the required parameter `authorization_id` when calling `update_user_authorization`")
+        # verify the required parameter 'user_id' is set
+        if ('user_id' not in params) or (params['user_id'] is None):
+            raise ValueError("Missing the required parameter `user_id` when calling `update_user_authorization`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/users/{userId}/authorization/{authorizationId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'authorization_id' in params:
+            path_params['authorizationId'] = params['authorization_id']
+        if 'user_id' in params:
+            path_params['userId'] = params['user_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'user_authorization_update_request' in params:
+            body_params = params['user_authorization_update_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='UserAuthorization',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
