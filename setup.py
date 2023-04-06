@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages, Command, os  # noqa: H301	
 
 NAME = "docusign-esign"
-VERSION = "3.21.0"
+VERSION = "3.22.0"
 # To install the library, run the following
 #
 # python setup.py install
