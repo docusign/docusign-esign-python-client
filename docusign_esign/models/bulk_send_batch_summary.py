@@ -33,6 +33,8 @@ class BulkSendBatchSummary(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'action': 'str',
+        'action_status': 'str',
         'batch_id': 'str',
         'batch_name': 'str',
         'batch_size': 'str',
@@ -44,6 +46,8 @@ class BulkSendBatchSummary(object):
     }
 
     attribute_map = {
+        'action': 'action',
+        'action_status': 'actionStatus',
         'batch_id': 'batchId',
         'batch_name': 'batchName',
         'batch_size': 'batchSize',
@@ -60,6 +64,8 @@ class BulkSendBatchSummary(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._action = None
+        self._action_status = None
         self._batch_id = None
         self._batch_name = None
         self._batch_size = None
@@ -70,6 +76,8 @@ class BulkSendBatchSummary(object):
         self._submitted_date = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('action'), kwargs.get('action', None))
+        setattr(self, "_{}".format('action_status'), kwargs.get('action_status', None))
         setattr(self, "_{}".format('batch_id'), kwargs.get('batch_id', None))
         setattr(self, "_{}".format('batch_name'), kwargs.get('batch_name', None))
         setattr(self, "_{}".format('batch_size'), kwargs.get('batch_size', None))
@@ -78,6 +86,52 @@ class BulkSendBatchSummary(object):
         setattr(self, "_{}".format('queued'), kwargs.get('queued', None))
         setattr(self, "_{}".format('sent'), kwargs.get('sent', None))
         setattr(self, "_{}".format('submitted_date'), kwargs.get('submitted_date', None))
+
+    @property
+    def action(self):
+        """Gets the action of this BulkSendBatchSummary.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The action of this BulkSendBatchSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._action
+
+    @action.setter
+    def action(self, action):
+        """Sets the action of this BulkSendBatchSummary.
+
+          # noqa: E501
+
+        :param action: The action of this BulkSendBatchSummary.  # noqa: E501
+        :type: str
+        """
+
+        self._action = action
+
+    @property
+    def action_status(self):
+        """Gets the action_status of this BulkSendBatchSummary.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The action_status of this BulkSendBatchSummary.  # noqa: E501
+        :rtype: str
+        """
+        return self._action_status
+
+    @action_status.setter
+    def action_status(self, action_status):
+        """Sets the action_status of this BulkSendBatchSummary.
+
+          # noqa: E501
+
+        :param action_status: The action_status of this BulkSendBatchSummary.  # noqa: E501
+        :type: str
+        """
+
+        self._action_status = action_status
 
     @property
     def batch_id(self):

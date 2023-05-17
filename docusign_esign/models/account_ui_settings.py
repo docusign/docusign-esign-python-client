@@ -34,6 +34,8 @@ class AccountUISettings(object):
     """
     swagger_types = {
         'admin_message': 'AdminMessage',
+        'allow_users_to_edit_shared_access': 'str',
+        'allow_users_to_edit_shared_access_metadata': 'SettingsMetadata',
         'ask_an_admin': 'AskAnAdmin',
         'clickwrap_schema_version': 'str',
         'clickwrap_schema_version_metadata': 'SettingsMetadata',
@@ -67,6 +69,8 @@ class AccountUISettings(object):
 
     attribute_map = {
         'admin_message': 'adminMessage',
+        'allow_users_to_edit_shared_access': 'allowUsersToEditSharedAccess',
+        'allow_users_to_edit_shared_access_metadata': 'allowUsersToEditSharedAccessMetadata',
         'ask_an_admin': 'askAnAdmin',
         'clickwrap_schema_version': 'clickwrapSchemaVersion',
         'clickwrap_schema_version_metadata': 'clickwrapSchemaVersionMetadata',
@@ -105,6 +109,8 @@ class AccountUISettings(object):
         self._configuration = _configuration
 
         self._admin_message = None
+        self._allow_users_to_edit_shared_access = None
+        self._allow_users_to_edit_shared_access_metadata = None
         self._ask_an_admin = None
         self._clickwrap_schema_version = None
         self._clickwrap_schema_version_metadata = None
@@ -137,6 +143,8 @@ class AccountUISettings(object):
         self.discriminator = None
 
         setattr(self, "_{}".format('admin_message'), kwargs.get('admin_message', None))
+        setattr(self, "_{}".format('allow_users_to_edit_shared_access'), kwargs.get('allow_users_to_edit_shared_access', None))
+        setattr(self, "_{}".format('allow_users_to_edit_shared_access_metadata'), kwargs.get('allow_users_to_edit_shared_access_metadata', None))
         setattr(self, "_{}".format('ask_an_admin'), kwargs.get('ask_an_admin', None))
         setattr(self, "_{}".format('clickwrap_schema_version'), kwargs.get('clickwrap_schema_version', None))
         setattr(self, "_{}".format('clickwrap_schema_version_metadata'), kwargs.get('clickwrap_schema_version_metadata', None))
@@ -189,6 +197,52 @@ class AccountUISettings(object):
         """
 
         self._admin_message = admin_message
+
+    @property
+    def allow_users_to_edit_shared_access(self):
+        """Gets the allow_users_to_edit_shared_access of this AccountUISettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_users_to_edit_shared_access of this AccountUISettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_users_to_edit_shared_access
+
+    @allow_users_to_edit_shared_access.setter
+    def allow_users_to_edit_shared_access(self, allow_users_to_edit_shared_access):
+        """Sets the allow_users_to_edit_shared_access of this AccountUISettings.
+
+          # noqa: E501
+
+        :param allow_users_to_edit_shared_access: The allow_users_to_edit_shared_access of this AccountUISettings.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_users_to_edit_shared_access = allow_users_to_edit_shared_access
+
+    @property
+    def allow_users_to_edit_shared_access_metadata(self):
+        """Gets the allow_users_to_edit_shared_access_metadata of this AccountUISettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_users_to_edit_shared_access_metadata of this AccountUISettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_users_to_edit_shared_access_metadata
+
+    @allow_users_to_edit_shared_access_metadata.setter
+    def allow_users_to_edit_shared_access_metadata(self, allow_users_to_edit_shared_access_metadata):
+        """Sets the allow_users_to_edit_shared_access_metadata of this AccountUISettings.
+
+          # noqa: E501
+
+        :param allow_users_to_edit_shared_access_metadata: The allow_users_to_edit_shared_access_metadata of this AccountUISettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_users_to_edit_shared_access_metadata = allow_users_to_edit_shared_access_metadata
 
     @property
     def ask_an_admin(self):

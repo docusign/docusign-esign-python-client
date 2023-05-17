@@ -538,7 +538,6 @@ from docusign_esign.models.workspace_settings import WorkspaceSettings
 from docusign_esign.models.workspace_user import WorkspaceUser
 from docusign_esign.models.workspace_user_authorization import WorkspaceUserAuthorization
 from docusign_esign.models.zip import Zip
-from docusign_esign.models.date import Date
 
 
 configuration = Configuration()
