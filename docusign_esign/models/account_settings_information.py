@@ -46,6 +46,12 @@ class AccountSettingsInformation(object):
         'adopt_sig_config_metadata': 'SettingsMetadata',
         'advanced_correct': 'str',
         'advanced_correct_metadata': 'SettingsMetadata',
+        'advanced_search_enable_tab_field': 'str',
+        'advanced_search_enable_tab_field_metadata': 'SettingsMetadata',
+        'advanced_search_enable_template_id_field': 'str',
+        'advanced_search_enable_template_id_field_metadata': 'SettingsMetadata',
+        'advanced_search_enable_template_name_field': 'str',
+        'advanced_search_enable_template_name_field_metadata': 'SettingsMetadata',
         'allow_access_code_format': 'str',
         'allow_access_code_format_metadata': 'SettingsMetadata',
         'allow_account_management_granular': 'str',
@@ -152,6 +158,8 @@ class AccountSettingsInformation(object):
         'allow_open_trust_signer_certificate': 'str',
         'allow_open_trust_signer_certificate_metadata': 'SettingsMetadata',
         'allow_organization_docusign_monitor': 'str',
+        'allow_organization_docusign_monitor_lite': 'str',
+        'allow_organization_docusign_monitor_lite_metadata': 'SettingsMetadata',
         'allow_organization_docusign_monitor_metadata': 'SettingsMetadata',
         'allow_organization_domain_user_management': 'str',
         'allow_organization_domain_user_management_metadata': 'SettingsMetadata',
@@ -290,6 +298,8 @@ class AccountSettingsInformation(object):
         'convert_pdf_fields_metadata': 'SettingsMetadata',
         'data_population_scope': 'str',
         'data_population_scope_metadata': 'SettingsMetadata',
+        'default_to_advanced_envelopes_filter_form': 'str',
+        'default_to_advanced_envelopes_filter_form_metadata': 'SettingsMetadata',
         'disable_auto_template_matching': 'str',
         'disable_auto_template_matching_metadata': 'SettingsMetadata',
         'disable_mobile_app': 'str',
@@ -327,8 +337,12 @@ class AccountSettingsInformation(object):
         'email_template_version_metadata': 'SettingsMetadata',
         'enable_access_code_generator': 'str',
         'enable_access_code_generator_metadata': 'SettingsMetadata',
+        'enable_account_wide_search': 'str',
+        'enable_account_wide_search_metadata': 'SettingsMetadata',
         'enable_adm_healthcare': 'str',
         'enable_adm_healthcare_metadata': 'SettingsMetadata',
+        'enable_advanced_envelopes_search': 'str',
+        'enable_advanced_envelopes_search_metadata': 'SettingsMetadata',
         'enable_advanced_payments': 'str',
         'enable_advanced_payments_metadata': 'SettingsMetadata',
         'enable_advanced_power_forms': 'str',
@@ -362,6 +376,20 @@ class AccountSettingsInformation(object):
         'enable_contact_suggestions_metadata': 'SettingsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'str',
         'enable_customer_satisfaction_metric_tracking_metadata': 'SettingsMetadata',
+        'enable_d_sig_eu_advanced_pens': 'str',
+        'enable_d_sig_eu_advanced_pens_metadata': 'SettingsMetadata',
+        'enable_d_sig_express_pens': 'str',
+        'enable_d_sig_express_pens_metadata': 'SettingsMetadata',
+        'enable_d_sig_id_check_for_aes_pens': 'str',
+        'enable_d_sig_id_check_for_aes_pens_metadata': 'SettingsMetadata',
+        'enable_d_sig_id_check_in_person_for_qes_pens': 'str',
+        'enable_d_sig_id_check_in_person_for_qes_pens_metadata': 'SettingsMetadata',
+        'enable_d_sig_id_check_remote_for_qes_pens': 'str',
+        'enable_d_sig_id_check_remote_for_qes_pens_metadata': 'SettingsMetadata',
+        'enable_d_sig_id_verification_pens': 'str',
+        'enable_d_sig_id_verification_pens_metadata': 'SettingsMetadata',
+        'enable_d_sig_id_verification_premier_pens': 'str',
+        'enable_d_sig_id_verification_premier_pens_metadata': 'SettingsMetadata',
         'enable_ds_pro': 'str',
         'enable_ds_pro_metadata': 'SettingsMetadata',
         'enable_enforce_tls_emails_setting_metadata': 'SettingsMetadata',
@@ -684,6 +712,8 @@ class AccountSettingsInformation(object):
         'use_new_blob_for_pdf_metadata': 'SettingsMetadata',
         'use_new_envelope_search': 'str',
         'use_new_envelope_search_metadata': 'SettingsMetadata',
+        'use_new_envelope_search_only_when_searching_after_date': 'str',
+        'use_new_envelope_search_only_when_searching_after_date_metadata': 'SettingsMetadata',
         'use_safe_signer_certificates': 'str',
         'use_safe_signer_certificates_metadata': 'SettingsMetadata',
         'uses_api': 'str',
@@ -723,6 +753,12 @@ class AccountSettingsInformation(object):
         'adopt_sig_config_metadata': 'adoptSigConfigMetadata',
         'advanced_correct': 'advancedCorrect',
         'advanced_correct_metadata': 'advancedCorrectMetadata',
+        'advanced_search_enable_tab_field': 'advancedSearchEnableTabField',
+        'advanced_search_enable_tab_field_metadata': 'advancedSearchEnableTabFieldMetadata',
+        'advanced_search_enable_template_id_field': 'advancedSearchEnableTemplateIdField',
+        'advanced_search_enable_template_id_field_metadata': 'advancedSearchEnableTemplateIdFieldMetadata',
+        'advanced_search_enable_template_name_field': 'advancedSearchEnableTemplateNameField',
+        'advanced_search_enable_template_name_field_metadata': 'advancedSearchEnableTemplateNameFieldMetadata',
         'allow_access_code_format': 'allowAccessCodeFormat',
         'allow_access_code_format_metadata': 'allowAccessCodeFormatMetadata',
         'allow_account_management_granular': 'allowAccountManagementGranular',
@@ -829,6 +865,8 @@ class AccountSettingsInformation(object):
         'allow_open_trust_signer_certificate': 'allowOpenTrustSignerCertificate',
         'allow_open_trust_signer_certificate_metadata': 'allowOpenTrustSignerCertificateMetadata',
         'allow_organization_docusign_monitor': 'allowOrganizationDocusignMonitor',
+        'allow_organization_docusign_monitor_lite': 'allowOrganizationDocusignMonitorLite',
+        'allow_organization_docusign_monitor_lite_metadata': 'allowOrganizationDocusignMonitorLiteMetadata',
         'allow_organization_docusign_monitor_metadata': 'allowOrganizationDocusignMonitorMetadata',
         'allow_organization_domain_user_management': 'allowOrganizationDomainUserManagement',
         'allow_organization_domain_user_management_metadata': 'allowOrganizationDomainUserManagementMetadata',
@@ -967,6 +1005,8 @@ class AccountSettingsInformation(object):
         'convert_pdf_fields_metadata': 'convertPdfFieldsMetadata',
         'data_population_scope': 'dataPopulationScope',
         'data_population_scope_metadata': 'dataPopulationScopeMetadata',
+        'default_to_advanced_envelopes_filter_form': 'defaultToAdvancedEnvelopesFilterForm',
+        'default_to_advanced_envelopes_filter_form_metadata': 'defaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching': 'disableAutoTemplateMatching',
         'disable_auto_template_matching_metadata': 'disableAutoTemplateMatchingMetadata',
         'disable_mobile_app': 'disableMobileApp',
@@ -1004,8 +1044,12 @@ class AccountSettingsInformation(object):
         'email_template_version_metadata': 'emailTemplateVersionMetadata',
         'enable_access_code_generator': 'enableAccessCodeGenerator',
         'enable_access_code_generator_metadata': 'enableAccessCodeGeneratorMetadata',
+        'enable_account_wide_search': 'enableAccountWideSearch',
+        'enable_account_wide_search_metadata': 'enableAccountWideSearchMetadata',
         'enable_adm_healthcare': 'enableAdmHealthcare',
         'enable_adm_healthcare_metadata': 'enableAdmHealthcareMetadata',
+        'enable_advanced_envelopes_search': 'enableAdvancedEnvelopesSearch',
+        'enable_advanced_envelopes_search_metadata': 'enableAdvancedEnvelopesSearchMetadata',
         'enable_advanced_payments': 'enableAdvancedPayments',
         'enable_advanced_payments_metadata': 'enableAdvancedPaymentsMetadata',
         'enable_advanced_power_forms': 'enableAdvancedPowerForms',
@@ -1039,6 +1083,20 @@ class AccountSettingsInformation(object):
         'enable_contact_suggestions_metadata': 'enableContactSuggestionsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'enableCustomerSatisfactionMetricTracking',
         'enable_customer_satisfaction_metric_tracking_metadata': 'enableCustomerSatisfactionMetricTrackingMetadata',
+        'enable_d_sig_eu_advanced_pens': 'enableDSigEUAdvancedPens',
+        'enable_d_sig_eu_advanced_pens_metadata': 'enableDSigEUAdvancedPensMetadata',
+        'enable_d_sig_express_pens': 'enableDSigExpressPens',
+        'enable_d_sig_express_pens_metadata': 'enableDSigExpressPensMetadata',
+        'enable_d_sig_id_check_for_aes_pens': 'enableDSigIDCheckForAESPens',
+        'enable_d_sig_id_check_for_aes_pens_metadata': 'enableDSigIDCheckForAESPensMetadata',
+        'enable_d_sig_id_check_in_person_for_qes_pens': 'enableDSigIDCheckInPersonForQESPens',
+        'enable_d_sig_id_check_in_person_for_qes_pens_metadata': 'enableDSigIDCheckInPersonForQESPensMetadata',
+        'enable_d_sig_id_check_remote_for_qes_pens': 'enableDSigIDCheckRemoteForQESPens',
+        'enable_d_sig_id_check_remote_for_qes_pens_metadata': 'enableDSigIDCheckRemoteForQESPensMetadata',
+        'enable_d_sig_id_verification_pens': 'enableDSigIDVerificationPens',
+        'enable_d_sig_id_verification_pens_metadata': 'enableDSigIDVerificationPensMetadata',
+        'enable_d_sig_id_verification_premier_pens': 'enableDSigIDVerificationPremierPens',
+        'enable_d_sig_id_verification_premier_pens_metadata': 'enableDSigIDVerificationPremierPensMetadata',
         'enable_ds_pro': 'enableDSPro',
         'enable_ds_pro_metadata': 'enableDSProMetadata',
         'enable_enforce_tls_emails_setting_metadata': 'enableEnforceTlsEmailsSettingMetadata',
@@ -1361,6 +1419,8 @@ class AccountSettingsInformation(object):
         'use_new_blob_for_pdf_metadata': 'useNewBlobForPdfMetadata',
         'use_new_envelope_search': 'useNewEnvelopeSearch',
         'use_new_envelope_search_metadata': 'useNewEnvelopeSearchMetadata',
+        'use_new_envelope_search_only_when_searching_after_date': 'useNewEnvelopeSearchOnlyWhenSearchingAfterDate',
+        'use_new_envelope_search_only_when_searching_after_date_metadata': 'useNewEnvelopeSearchOnlyWhenSearchingAfterDateMetadata',
         'use_safe_signer_certificates': 'useSAFESignerCertificates',
         'use_safe_signer_certificates_metadata': 'useSAFESignerCertificatesMetadata',
         'uses_api': 'usesAPI',
@@ -1405,6 +1465,12 @@ class AccountSettingsInformation(object):
         self._adopt_sig_config_metadata = None
         self._advanced_correct = None
         self._advanced_correct_metadata = None
+        self._advanced_search_enable_tab_field = None
+        self._advanced_search_enable_tab_field_metadata = None
+        self._advanced_search_enable_template_id_field = None
+        self._advanced_search_enable_template_id_field_metadata = None
+        self._advanced_search_enable_template_name_field = None
+        self._advanced_search_enable_template_name_field_metadata = None
         self._allow_access_code_format = None
         self._allow_access_code_format_metadata = None
         self._allow_account_management_granular = None
@@ -1511,6 +1577,8 @@ class AccountSettingsInformation(object):
         self._allow_open_trust_signer_certificate = None
         self._allow_open_trust_signer_certificate_metadata = None
         self._allow_organization_docusign_monitor = None
+        self._allow_organization_docusign_monitor_lite = None
+        self._allow_organization_docusign_monitor_lite_metadata = None
         self._allow_organization_docusign_monitor_metadata = None
         self._allow_organization_domain_user_management = None
         self._allow_organization_domain_user_management_metadata = None
@@ -1649,6 +1717,8 @@ class AccountSettingsInformation(object):
         self._convert_pdf_fields_metadata = None
         self._data_population_scope = None
         self._data_population_scope_metadata = None
+        self._default_to_advanced_envelopes_filter_form = None
+        self._default_to_advanced_envelopes_filter_form_metadata = None
         self._disable_auto_template_matching = None
         self._disable_auto_template_matching_metadata = None
         self._disable_mobile_app = None
@@ -1686,8 +1756,12 @@ class AccountSettingsInformation(object):
         self._email_template_version_metadata = None
         self._enable_access_code_generator = None
         self._enable_access_code_generator_metadata = None
+        self._enable_account_wide_search = None
+        self._enable_account_wide_search_metadata = None
         self._enable_adm_healthcare = None
         self._enable_adm_healthcare_metadata = None
+        self._enable_advanced_envelopes_search = None
+        self._enable_advanced_envelopes_search_metadata = None
         self._enable_advanced_payments = None
         self._enable_advanced_payments_metadata = None
         self._enable_advanced_power_forms = None
@@ -1721,6 +1795,20 @@ class AccountSettingsInformation(object):
         self._enable_contact_suggestions_metadata = None
         self._enable_customer_satisfaction_metric_tracking = None
         self._enable_customer_satisfaction_metric_tracking_metadata = None
+        self._enable_d_sig_eu_advanced_pens = None
+        self._enable_d_sig_eu_advanced_pens_metadata = None
+        self._enable_d_sig_express_pens = None
+        self._enable_d_sig_express_pens_metadata = None
+        self._enable_d_sig_id_check_for_aes_pens = None
+        self._enable_d_sig_id_check_for_aes_pens_metadata = None
+        self._enable_d_sig_id_check_in_person_for_qes_pens = None
+        self._enable_d_sig_id_check_in_person_for_qes_pens_metadata = None
+        self._enable_d_sig_id_check_remote_for_qes_pens = None
+        self._enable_d_sig_id_check_remote_for_qes_pens_metadata = None
+        self._enable_d_sig_id_verification_pens = None
+        self._enable_d_sig_id_verification_pens_metadata = None
+        self._enable_d_sig_id_verification_premier_pens = None
+        self._enable_d_sig_id_verification_premier_pens_metadata = None
         self._enable_ds_pro = None
         self._enable_ds_pro_metadata = None
         self._enable_enforce_tls_emails_setting_metadata = None
@@ -2043,6 +2131,8 @@ class AccountSettingsInformation(object):
         self._use_new_blob_for_pdf_metadata = None
         self._use_new_envelope_search = None
         self._use_new_envelope_search_metadata = None
+        self._use_new_envelope_search_only_when_searching_after_date = None
+        self._use_new_envelope_search_only_when_searching_after_date_metadata = None
         self._use_safe_signer_certificates = None
         self._use_safe_signer_certificates_metadata = None
         self._uses_api = None
@@ -2081,6 +2171,12 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('adopt_sig_config_metadata'), kwargs.get('adopt_sig_config_metadata', None))
         setattr(self, "_{}".format('advanced_correct'), kwargs.get('advanced_correct', None))
         setattr(self, "_{}".format('advanced_correct_metadata'), kwargs.get('advanced_correct_metadata', None))
+        setattr(self, "_{}".format('advanced_search_enable_tab_field'), kwargs.get('advanced_search_enable_tab_field', None))
+        setattr(self, "_{}".format('advanced_search_enable_tab_field_metadata'), kwargs.get('advanced_search_enable_tab_field_metadata', None))
+        setattr(self, "_{}".format('advanced_search_enable_template_id_field'), kwargs.get('advanced_search_enable_template_id_field', None))
+        setattr(self, "_{}".format('advanced_search_enable_template_id_field_metadata'), kwargs.get('advanced_search_enable_template_id_field_metadata', None))
+        setattr(self, "_{}".format('advanced_search_enable_template_name_field'), kwargs.get('advanced_search_enable_template_name_field', None))
+        setattr(self, "_{}".format('advanced_search_enable_template_name_field_metadata'), kwargs.get('advanced_search_enable_template_name_field_metadata', None))
         setattr(self, "_{}".format('allow_access_code_format'), kwargs.get('allow_access_code_format', None))
         setattr(self, "_{}".format('allow_access_code_format_metadata'), kwargs.get('allow_access_code_format_metadata', None))
         setattr(self, "_{}".format('allow_account_management_granular'), kwargs.get('allow_account_management_granular', None))
@@ -2187,6 +2283,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_open_trust_signer_certificate'), kwargs.get('allow_open_trust_signer_certificate', None))
         setattr(self, "_{}".format('allow_open_trust_signer_certificate_metadata'), kwargs.get('allow_open_trust_signer_certificate_metadata', None))
         setattr(self, "_{}".format('allow_organization_docusign_monitor'), kwargs.get('allow_organization_docusign_monitor', None))
+        setattr(self, "_{}".format('allow_organization_docusign_monitor_lite'), kwargs.get('allow_organization_docusign_monitor_lite', None))
+        setattr(self, "_{}".format('allow_organization_docusign_monitor_lite_metadata'), kwargs.get('allow_organization_docusign_monitor_lite_metadata', None))
         setattr(self, "_{}".format('allow_organization_docusign_monitor_metadata'), kwargs.get('allow_organization_docusign_monitor_metadata', None))
         setattr(self, "_{}".format('allow_organization_domain_user_management'), kwargs.get('allow_organization_domain_user_management', None))
         setattr(self, "_{}".format('allow_organization_domain_user_management_metadata'), kwargs.get('allow_organization_domain_user_management_metadata', None))
@@ -2325,6 +2423,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('convert_pdf_fields_metadata'), kwargs.get('convert_pdf_fields_metadata', None))
         setattr(self, "_{}".format('data_population_scope'), kwargs.get('data_population_scope', None))
         setattr(self, "_{}".format('data_population_scope_metadata'), kwargs.get('data_population_scope_metadata', None))
+        setattr(self, "_{}".format('default_to_advanced_envelopes_filter_form'), kwargs.get('default_to_advanced_envelopes_filter_form', None))
+        setattr(self, "_{}".format('default_to_advanced_envelopes_filter_form_metadata'), kwargs.get('default_to_advanced_envelopes_filter_form_metadata', None))
         setattr(self, "_{}".format('disable_auto_template_matching'), kwargs.get('disable_auto_template_matching', None))
         setattr(self, "_{}".format('disable_auto_template_matching_metadata'), kwargs.get('disable_auto_template_matching_metadata', None))
         setattr(self, "_{}".format('disable_mobile_app'), kwargs.get('disable_mobile_app', None))
@@ -2362,8 +2462,12 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('email_template_version_metadata'), kwargs.get('email_template_version_metadata', None))
         setattr(self, "_{}".format('enable_access_code_generator'), kwargs.get('enable_access_code_generator', None))
         setattr(self, "_{}".format('enable_access_code_generator_metadata'), kwargs.get('enable_access_code_generator_metadata', None))
+        setattr(self, "_{}".format('enable_account_wide_search'), kwargs.get('enable_account_wide_search', None))
+        setattr(self, "_{}".format('enable_account_wide_search_metadata'), kwargs.get('enable_account_wide_search_metadata', None))
         setattr(self, "_{}".format('enable_adm_healthcare'), kwargs.get('enable_adm_healthcare', None))
         setattr(self, "_{}".format('enable_adm_healthcare_metadata'), kwargs.get('enable_adm_healthcare_metadata', None))
+        setattr(self, "_{}".format('enable_advanced_envelopes_search'), kwargs.get('enable_advanced_envelopes_search', None))
+        setattr(self, "_{}".format('enable_advanced_envelopes_search_metadata'), kwargs.get('enable_advanced_envelopes_search_metadata', None))
         setattr(self, "_{}".format('enable_advanced_payments'), kwargs.get('enable_advanced_payments', None))
         setattr(self, "_{}".format('enable_advanced_payments_metadata'), kwargs.get('enable_advanced_payments_metadata', None))
         setattr(self, "_{}".format('enable_advanced_power_forms'), kwargs.get('enable_advanced_power_forms', None))
@@ -2397,6 +2501,20 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_contact_suggestions_metadata'), kwargs.get('enable_contact_suggestions_metadata', None))
         setattr(self, "_{}".format('enable_customer_satisfaction_metric_tracking'), kwargs.get('enable_customer_satisfaction_metric_tracking', None))
         setattr(self, "_{}".format('enable_customer_satisfaction_metric_tracking_metadata'), kwargs.get('enable_customer_satisfaction_metric_tracking_metadata', None))
+        setattr(self, "_{}".format('enable_d_sig_eu_advanced_pens'), kwargs.get('enable_d_sig_eu_advanced_pens', None))
+        setattr(self, "_{}".format('enable_d_sig_eu_advanced_pens_metadata'), kwargs.get('enable_d_sig_eu_advanced_pens_metadata', None))
+        setattr(self, "_{}".format('enable_d_sig_express_pens'), kwargs.get('enable_d_sig_express_pens', None))
+        setattr(self, "_{}".format('enable_d_sig_express_pens_metadata'), kwargs.get('enable_d_sig_express_pens_metadata', None))
+        setattr(self, "_{}".format('enable_d_sig_id_check_for_aes_pens'), kwargs.get('enable_d_sig_id_check_for_aes_pens', None))
+        setattr(self, "_{}".format('enable_d_sig_id_check_for_aes_pens_metadata'), kwargs.get('enable_d_sig_id_check_for_aes_pens_metadata', None))
+        setattr(self, "_{}".format('enable_d_sig_id_check_in_person_for_qes_pens'), kwargs.get('enable_d_sig_id_check_in_person_for_qes_pens', None))
+        setattr(self, "_{}".format('enable_d_sig_id_check_in_person_for_qes_pens_metadata'), kwargs.get('enable_d_sig_id_check_in_person_for_qes_pens_metadata', None))
+        setattr(self, "_{}".format('enable_d_sig_id_check_remote_for_qes_pens'), kwargs.get('enable_d_sig_id_check_remote_for_qes_pens', None))
+        setattr(self, "_{}".format('enable_d_sig_id_check_remote_for_qes_pens_metadata'), kwargs.get('enable_d_sig_id_check_remote_for_qes_pens_metadata', None))
+        setattr(self, "_{}".format('enable_d_sig_id_verification_pens'), kwargs.get('enable_d_sig_id_verification_pens', None))
+        setattr(self, "_{}".format('enable_d_sig_id_verification_pens_metadata'), kwargs.get('enable_d_sig_id_verification_pens_metadata', None))
+        setattr(self, "_{}".format('enable_d_sig_id_verification_premier_pens'), kwargs.get('enable_d_sig_id_verification_premier_pens', None))
+        setattr(self, "_{}".format('enable_d_sig_id_verification_premier_pens_metadata'), kwargs.get('enable_d_sig_id_verification_premier_pens_metadata', None))
         setattr(self, "_{}".format('enable_ds_pro'), kwargs.get('enable_ds_pro', None))
         setattr(self, "_{}".format('enable_ds_pro_metadata'), kwargs.get('enable_ds_pro_metadata', None))
         setattr(self, "_{}".format('enable_enforce_tls_emails_setting_metadata'), kwargs.get('enable_enforce_tls_emails_setting_metadata', None))
@@ -2719,6 +2837,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('use_new_blob_for_pdf_metadata'), kwargs.get('use_new_blob_for_pdf_metadata', None))
         setattr(self, "_{}".format('use_new_envelope_search'), kwargs.get('use_new_envelope_search', None))
         setattr(self, "_{}".format('use_new_envelope_search_metadata'), kwargs.get('use_new_envelope_search_metadata', None))
+        setattr(self, "_{}".format('use_new_envelope_search_only_when_searching_after_date'), kwargs.get('use_new_envelope_search_only_when_searching_after_date', None))
+        setattr(self, "_{}".format('use_new_envelope_search_only_when_searching_after_date_metadata'), kwargs.get('use_new_envelope_search_only_when_searching_after_date_metadata', None))
         setattr(self, "_{}".format('use_safe_signer_certificates'), kwargs.get('use_safe_signer_certificates', None))
         setattr(self, "_{}".format('use_safe_signer_certificates_metadata'), kwargs.get('use_safe_signer_certificates_metadata', None))
         setattr(self, "_{}".format('uses_api'), kwargs.get('uses_api', None))
@@ -3041,6 +3161,144 @@ class AccountSettingsInformation(object):
         """
 
         self._advanced_correct_metadata = advanced_correct_metadata
+
+    @property
+    def advanced_search_enable_tab_field(self):
+        """Gets the advanced_search_enable_tab_field of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The advanced_search_enable_tab_field of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._advanced_search_enable_tab_field
+
+    @advanced_search_enable_tab_field.setter
+    def advanced_search_enable_tab_field(self, advanced_search_enable_tab_field):
+        """Sets the advanced_search_enable_tab_field of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param advanced_search_enable_tab_field: The advanced_search_enable_tab_field of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._advanced_search_enable_tab_field = advanced_search_enable_tab_field
+
+    @property
+    def advanced_search_enable_tab_field_metadata(self):
+        """Gets the advanced_search_enable_tab_field_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The advanced_search_enable_tab_field_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._advanced_search_enable_tab_field_metadata
+
+    @advanced_search_enable_tab_field_metadata.setter
+    def advanced_search_enable_tab_field_metadata(self, advanced_search_enable_tab_field_metadata):
+        """Sets the advanced_search_enable_tab_field_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param advanced_search_enable_tab_field_metadata: The advanced_search_enable_tab_field_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._advanced_search_enable_tab_field_metadata = advanced_search_enable_tab_field_metadata
+
+    @property
+    def advanced_search_enable_template_id_field(self):
+        """Gets the advanced_search_enable_template_id_field of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The advanced_search_enable_template_id_field of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._advanced_search_enable_template_id_field
+
+    @advanced_search_enable_template_id_field.setter
+    def advanced_search_enable_template_id_field(self, advanced_search_enable_template_id_field):
+        """Sets the advanced_search_enable_template_id_field of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param advanced_search_enable_template_id_field: The advanced_search_enable_template_id_field of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._advanced_search_enable_template_id_field = advanced_search_enable_template_id_field
+
+    @property
+    def advanced_search_enable_template_id_field_metadata(self):
+        """Gets the advanced_search_enable_template_id_field_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The advanced_search_enable_template_id_field_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._advanced_search_enable_template_id_field_metadata
+
+    @advanced_search_enable_template_id_field_metadata.setter
+    def advanced_search_enable_template_id_field_metadata(self, advanced_search_enable_template_id_field_metadata):
+        """Sets the advanced_search_enable_template_id_field_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param advanced_search_enable_template_id_field_metadata: The advanced_search_enable_template_id_field_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._advanced_search_enable_template_id_field_metadata = advanced_search_enable_template_id_field_metadata
+
+    @property
+    def advanced_search_enable_template_name_field(self):
+        """Gets the advanced_search_enable_template_name_field of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The advanced_search_enable_template_name_field of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._advanced_search_enable_template_name_field
+
+    @advanced_search_enable_template_name_field.setter
+    def advanced_search_enable_template_name_field(self, advanced_search_enable_template_name_field):
+        """Sets the advanced_search_enable_template_name_field of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param advanced_search_enable_template_name_field: The advanced_search_enable_template_name_field of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._advanced_search_enable_template_name_field = advanced_search_enable_template_name_field
+
+    @property
+    def advanced_search_enable_template_name_field_metadata(self):
+        """Gets the advanced_search_enable_template_name_field_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The advanced_search_enable_template_name_field_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._advanced_search_enable_template_name_field_metadata
+
+    @advanced_search_enable_template_name_field_metadata.setter
+    def advanced_search_enable_template_name_field_metadata(self, advanced_search_enable_template_name_field_metadata):
+        """Sets the advanced_search_enable_template_name_field_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param advanced_search_enable_template_name_field_metadata: The advanced_search_enable_template_name_field_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._advanced_search_enable_template_name_field_metadata = advanced_search_enable_template_name_field_metadata
 
     @property
     def allow_access_code_format(self):
@@ -5481,6 +5739,52 @@ class AccountSettingsInformation(object):
         self._allow_organization_docusign_monitor = allow_organization_docusign_monitor
 
     @property
+    def allow_organization_docusign_monitor_lite(self):
+        """Gets the allow_organization_docusign_monitor_lite of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_organization_docusign_monitor_lite of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_organization_docusign_monitor_lite
+
+    @allow_organization_docusign_monitor_lite.setter
+    def allow_organization_docusign_monitor_lite(self, allow_organization_docusign_monitor_lite):
+        """Sets the allow_organization_docusign_monitor_lite of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_organization_docusign_monitor_lite: The allow_organization_docusign_monitor_lite of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_organization_docusign_monitor_lite = allow_organization_docusign_monitor_lite
+
+    @property
+    def allow_organization_docusign_monitor_lite_metadata(self):
+        """Gets the allow_organization_docusign_monitor_lite_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_organization_docusign_monitor_lite_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_organization_docusign_monitor_lite_metadata
+
+    @allow_organization_docusign_monitor_lite_metadata.setter
+    def allow_organization_docusign_monitor_lite_metadata(self, allow_organization_docusign_monitor_lite_metadata):
+        """Sets the allow_organization_docusign_monitor_lite_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_organization_docusign_monitor_lite_metadata: The allow_organization_docusign_monitor_lite_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_organization_docusign_monitor_lite_metadata = allow_organization_docusign_monitor_lite_metadata
+
+    @property
     def allow_organization_docusign_monitor_metadata(self):
         """Gets the allow_organization_docusign_monitor_metadata of this AccountSettingsInformation.  # noqa: E501
 
@@ -5760,7 +6064,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_third_party_electronic_notary_metadata(self):
         """Gets the allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
 
-          # noqa: E501
+        Metadata for the org level flag that dtermines the availablity to perform Third Party Notary (3PN) actions.  # noqa: E501
 
         :return: The allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -5771,7 +6075,7 @@ class AccountSettingsInformation(object):
     def allow_organization_to_use_third_party_electronic_notary_metadata(self, allow_organization_to_use_third_party_electronic_notary_metadata):
         """Sets the allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.
 
-          # noqa: E501
+        Metadata for the org level flag that dtermines the availablity to perform Third Party Notary (3PN) actions.  # noqa: E501
 
         :param allow_organization_to_use_third_party_electronic_notary_metadata: The allow_organization_to_use_third_party_electronic_notary_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -8655,6 +8959,52 @@ class AccountSettingsInformation(object):
         self._data_population_scope_metadata = data_population_scope_metadata
 
     @property
+    def default_to_advanced_envelopes_filter_form(self):
+        """Gets the default_to_advanced_envelopes_filter_form of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The default_to_advanced_envelopes_filter_form of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_to_advanced_envelopes_filter_form
+
+    @default_to_advanced_envelopes_filter_form.setter
+    def default_to_advanced_envelopes_filter_form(self, default_to_advanced_envelopes_filter_form):
+        """Sets the default_to_advanced_envelopes_filter_form of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param default_to_advanced_envelopes_filter_form: The default_to_advanced_envelopes_filter_form of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._default_to_advanced_envelopes_filter_form = default_to_advanced_envelopes_filter_form
+
+    @property
+    def default_to_advanced_envelopes_filter_form_metadata(self):
+        """Gets the default_to_advanced_envelopes_filter_form_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The default_to_advanced_envelopes_filter_form_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._default_to_advanced_envelopes_filter_form_metadata
+
+    @default_to_advanced_envelopes_filter_form_metadata.setter
+    def default_to_advanced_envelopes_filter_form_metadata(self, default_to_advanced_envelopes_filter_form_metadata):
+        """Sets the default_to_advanced_envelopes_filter_form_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param default_to_advanced_envelopes_filter_form_metadata: The default_to_advanced_envelopes_filter_form_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._default_to_advanced_envelopes_filter_form_metadata = default_to_advanced_envelopes_filter_form_metadata
+
+    @property
     def disable_auto_template_matching(self):
         """Gets the disable_auto_template_matching of this AccountSettingsInformation.  # noqa: E501
 
@@ -9506,6 +9856,52 @@ class AccountSettingsInformation(object):
         self._enable_access_code_generator_metadata = enable_access_code_generator_metadata
 
     @property
+    def enable_account_wide_search(self):
+        """Gets the enable_account_wide_search of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_account_wide_search of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_account_wide_search
+
+    @enable_account_wide_search.setter
+    def enable_account_wide_search(self, enable_account_wide_search):
+        """Sets the enable_account_wide_search of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_account_wide_search: The enable_account_wide_search of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_account_wide_search = enable_account_wide_search
+
+    @property
+    def enable_account_wide_search_metadata(self):
+        """Gets the enable_account_wide_search_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_account_wide_search_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_account_wide_search_metadata
+
+    @enable_account_wide_search_metadata.setter
+    def enable_account_wide_search_metadata(self, enable_account_wide_search_metadata):
+        """Sets the enable_account_wide_search_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_account_wide_search_metadata: The enable_account_wide_search_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_account_wide_search_metadata = enable_account_wide_search_metadata
+
+    @property
     def enable_adm_healthcare(self):
         """Gets the enable_adm_healthcare of this AccountSettingsInformation.  # noqa: E501
 
@@ -9550,6 +9946,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_adm_healthcare_metadata = enable_adm_healthcare_metadata
+
+    @property
+    def enable_advanced_envelopes_search(self):
+        """Gets the enable_advanced_envelopes_search of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_advanced_envelopes_search of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_advanced_envelopes_search
+
+    @enable_advanced_envelopes_search.setter
+    def enable_advanced_envelopes_search(self, enable_advanced_envelopes_search):
+        """Sets the enable_advanced_envelopes_search of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_advanced_envelopes_search: The enable_advanced_envelopes_search of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_advanced_envelopes_search = enable_advanced_envelopes_search
+
+    @property
+    def enable_advanced_envelopes_search_metadata(self):
+        """Gets the enable_advanced_envelopes_search_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_advanced_envelopes_search_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_advanced_envelopes_search_metadata
+
+    @enable_advanced_envelopes_search_metadata.setter
+    def enable_advanced_envelopes_search_metadata(self, enable_advanced_envelopes_search_metadata):
+        """Sets the enable_advanced_envelopes_search_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_advanced_envelopes_search_metadata: The enable_advanced_envelopes_search_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_advanced_envelopes_search_metadata = enable_advanced_envelopes_search_metadata
 
     @property
     def enable_advanced_payments(self):
@@ -10309,6 +10751,328 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_customer_satisfaction_metric_tracking_metadata = enable_customer_satisfaction_metric_tracking_metadata
+
+    @property
+    def enable_d_sig_eu_advanced_pens(self):
+        """Gets the enable_d_sig_eu_advanced_pens of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_eu_advanced_pens of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_d_sig_eu_advanced_pens
+
+    @enable_d_sig_eu_advanced_pens.setter
+    def enable_d_sig_eu_advanced_pens(self, enable_d_sig_eu_advanced_pens):
+        """Sets the enable_d_sig_eu_advanced_pens of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_eu_advanced_pens: The enable_d_sig_eu_advanced_pens of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_d_sig_eu_advanced_pens = enable_d_sig_eu_advanced_pens
+
+    @property
+    def enable_d_sig_eu_advanced_pens_metadata(self):
+        """Gets the enable_d_sig_eu_advanced_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_eu_advanced_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_d_sig_eu_advanced_pens_metadata
+
+    @enable_d_sig_eu_advanced_pens_metadata.setter
+    def enable_d_sig_eu_advanced_pens_metadata(self, enable_d_sig_eu_advanced_pens_metadata):
+        """Sets the enable_d_sig_eu_advanced_pens_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_eu_advanced_pens_metadata: The enable_d_sig_eu_advanced_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_d_sig_eu_advanced_pens_metadata = enable_d_sig_eu_advanced_pens_metadata
+
+    @property
+    def enable_d_sig_express_pens(self):
+        """Gets the enable_d_sig_express_pens of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_express_pens of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_d_sig_express_pens
+
+    @enable_d_sig_express_pens.setter
+    def enable_d_sig_express_pens(self, enable_d_sig_express_pens):
+        """Sets the enable_d_sig_express_pens of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_express_pens: The enable_d_sig_express_pens of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_d_sig_express_pens = enable_d_sig_express_pens
+
+    @property
+    def enable_d_sig_express_pens_metadata(self):
+        """Gets the enable_d_sig_express_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_express_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_d_sig_express_pens_metadata
+
+    @enable_d_sig_express_pens_metadata.setter
+    def enable_d_sig_express_pens_metadata(self, enable_d_sig_express_pens_metadata):
+        """Sets the enable_d_sig_express_pens_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_express_pens_metadata: The enable_d_sig_express_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_d_sig_express_pens_metadata = enable_d_sig_express_pens_metadata
+
+    @property
+    def enable_d_sig_id_check_for_aes_pens(self):
+        """Gets the enable_d_sig_id_check_for_aes_pens of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_id_check_for_aes_pens of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_d_sig_id_check_for_aes_pens
+
+    @enable_d_sig_id_check_for_aes_pens.setter
+    def enable_d_sig_id_check_for_aes_pens(self, enable_d_sig_id_check_for_aes_pens):
+        """Sets the enable_d_sig_id_check_for_aes_pens of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_id_check_for_aes_pens: The enable_d_sig_id_check_for_aes_pens of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_d_sig_id_check_for_aes_pens = enable_d_sig_id_check_for_aes_pens
+
+    @property
+    def enable_d_sig_id_check_for_aes_pens_metadata(self):
+        """Gets the enable_d_sig_id_check_for_aes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_id_check_for_aes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_d_sig_id_check_for_aes_pens_metadata
+
+    @enable_d_sig_id_check_for_aes_pens_metadata.setter
+    def enable_d_sig_id_check_for_aes_pens_metadata(self, enable_d_sig_id_check_for_aes_pens_metadata):
+        """Sets the enable_d_sig_id_check_for_aes_pens_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_id_check_for_aes_pens_metadata: The enable_d_sig_id_check_for_aes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_d_sig_id_check_for_aes_pens_metadata = enable_d_sig_id_check_for_aes_pens_metadata
+
+    @property
+    def enable_d_sig_id_check_in_person_for_qes_pens(self):
+        """Gets the enable_d_sig_id_check_in_person_for_qes_pens of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_id_check_in_person_for_qes_pens of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_d_sig_id_check_in_person_for_qes_pens
+
+    @enable_d_sig_id_check_in_person_for_qes_pens.setter
+    def enable_d_sig_id_check_in_person_for_qes_pens(self, enable_d_sig_id_check_in_person_for_qes_pens):
+        """Sets the enable_d_sig_id_check_in_person_for_qes_pens of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_id_check_in_person_for_qes_pens: The enable_d_sig_id_check_in_person_for_qes_pens of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_d_sig_id_check_in_person_for_qes_pens = enable_d_sig_id_check_in_person_for_qes_pens
+
+    @property
+    def enable_d_sig_id_check_in_person_for_qes_pens_metadata(self):
+        """Gets the enable_d_sig_id_check_in_person_for_qes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_id_check_in_person_for_qes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_d_sig_id_check_in_person_for_qes_pens_metadata
+
+    @enable_d_sig_id_check_in_person_for_qes_pens_metadata.setter
+    def enable_d_sig_id_check_in_person_for_qes_pens_metadata(self, enable_d_sig_id_check_in_person_for_qes_pens_metadata):
+        """Sets the enable_d_sig_id_check_in_person_for_qes_pens_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_id_check_in_person_for_qes_pens_metadata: The enable_d_sig_id_check_in_person_for_qes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_d_sig_id_check_in_person_for_qes_pens_metadata = enable_d_sig_id_check_in_person_for_qes_pens_metadata
+
+    @property
+    def enable_d_sig_id_check_remote_for_qes_pens(self):
+        """Gets the enable_d_sig_id_check_remote_for_qes_pens of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_id_check_remote_for_qes_pens of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_d_sig_id_check_remote_for_qes_pens
+
+    @enable_d_sig_id_check_remote_for_qes_pens.setter
+    def enable_d_sig_id_check_remote_for_qes_pens(self, enable_d_sig_id_check_remote_for_qes_pens):
+        """Sets the enable_d_sig_id_check_remote_for_qes_pens of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_id_check_remote_for_qes_pens: The enable_d_sig_id_check_remote_for_qes_pens of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_d_sig_id_check_remote_for_qes_pens = enable_d_sig_id_check_remote_for_qes_pens
+
+    @property
+    def enable_d_sig_id_check_remote_for_qes_pens_metadata(self):
+        """Gets the enable_d_sig_id_check_remote_for_qes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_id_check_remote_for_qes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_d_sig_id_check_remote_for_qes_pens_metadata
+
+    @enable_d_sig_id_check_remote_for_qes_pens_metadata.setter
+    def enable_d_sig_id_check_remote_for_qes_pens_metadata(self, enable_d_sig_id_check_remote_for_qes_pens_metadata):
+        """Sets the enable_d_sig_id_check_remote_for_qes_pens_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_id_check_remote_for_qes_pens_metadata: The enable_d_sig_id_check_remote_for_qes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_d_sig_id_check_remote_for_qes_pens_metadata = enable_d_sig_id_check_remote_for_qes_pens_metadata
+
+    @property
+    def enable_d_sig_id_verification_pens(self):
+        """Gets the enable_d_sig_id_verification_pens of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_id_verification_pens of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_d_sig_id_verification_pens
+
+    @enable_d_sig_id_verification_pens.setter
+    def enable_d_sig_id_verification_pens(self, enable_d_sig_id_verification_pens):
+        """Sets the enable_d_sig_id_verification_pens of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_id_verification_pens: The enable_d_sig_id_verification_pens of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_d_sig_id_verification_pens = enable_d_sig_id_verification_pens
+
+    @property
+    def enable_d_sig_id_verification_pens_metadata(self):
+        """Gets the enable_d_sig_id_verification_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_id_verification_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_d_sig_id_verification_pens_metadata
+
+    @enable_d_sig_id_verification_pens_metadata.setter
+    def enable_d_sig_id_verification_pens_metadata(self, enable_d_sig_id_verification_pens_metadata):
+        """Sets the enable_d_sig_id_verification_pens_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_id_verification_pens_metadata: The enable_d_sig_id_verification_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_d_sig_id_verification_pens_metadata = enable_d_sig_id_verification_pens_metadata
+
+    @property
+    def enable_d_sig_id_verification_premier_pens(self):
+        """Gets the enable_d_sig_id_verification_premier_pens of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_id_verification_premier_pens of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_d_sig_id_verification_premier_pens
+
+    @enable_d_sig_id_verification_premier_pens.setter
+    def enable_d_sig_id_verification_premier_pens(self, enable_d_sig_id_verification_premier_pens):
+        """Sets the enable_d_sig_id_verification_premier_pens of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_id_verification_premier_pens: The enable_d_sig_id_verification_premier_pens of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_d_sig_id_verification_premier_pens = enable_d_sig_id_verification_premier_pens
+
+    @property
+    def enable_d_sig_id_verification_premier_pens_metadata(self):
+        """Gets the enable_d_sig_id_verification_premier_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_id_verification_premier_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_d_sig_id_verification_premier_pens_metadata
+
+    @enable_d_sig_id_verification_premier_pens_metadata.setter
+    def enable_d_sig_id_verification_premier_pens_metadata(self, enable_d_sig_id_verification_premier_pens_metadata):
+        """Sets the enable_d_sig_id_verification_premier_pens_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_id_verification_premier_pens_metadata: The enable_d_sig_id_verification_premier_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_d_sig_id_verification_premier_pens_metadata = enable_d_sig_id_verification_premier_pens_metadata
 
     @property
     def enable_ds_pro(self):
@@ -17715,6 +18479,52 @@ class AccountSettingsInformation(object):
         """
 
         self._use_new_envelope_search_metadata = use_new_envelope_search_metadata
+
+    @property
+    def use_new_envelope_search_only_when_searching_after_date(self):
+        """Gets the use_new_envelope_search_only_when_searching_after_date of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_new_envelope_search_only_when_searching_after_date of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._use_new_envelope_search_only_when_searching_after_date
+
+    @use_new_envelope_search_only_when_searching_after_date.setter
+    def use_new_envelope_search_only_when_searching_after_date(self, use_new_envelope_search_only_when_searching_after_date):
+        """Sets the use_new_envelope_search_only_when_searching_after_date of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param use_new_envelope_search_only_when_searching_after_date: The use_new_envelope_search_only_when_searching_after_date of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._use_new_envelope_search_only_when_searching_after_date = use_new_envelope_search_only_when_searching_after_date
+
+    @property
+    def use_new_envelope_search_only_when_searching_after_date_metadata(self):
+        """Gets the use_new_envelope_search_only_when_searching_after_date_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_new_envelope_search_only_when_searching_after_date_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._use_new_envelope_search_only_when_searching_after_date_metadata
+
+    @use_new_envelope_search_only_when_searching_after_date_metadata.setter
+    def use_new_envelope_search_only_when_searching_after_date_metadata(self, use_new_envelope_search_only_when_searching_after_date_metadata):
+        """Sets the use_new_envelope_search_only_when_searching_after_date_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param use_new_envelope_search_only_when_searching_after_date_metadata: The use_new_envelope_search_only_when_searching_after_date_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._use_new_envelope_search_only_when_searching_after_date_metadata = use_new_envelope_search_only_when_searching_after_date_metadata
 
     @property
     def use_safe_signer_certificates(self):
