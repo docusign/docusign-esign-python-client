@@ -37,6 +37,8 @@ class UserSettingsInformation(object):
         'admin_only': 'str',
         'admin_only_metadata': 'SettingsMetadata',
         'allow_auto_tagging': 'str',
+        'allowed_orchestration_access': 'str',
+        'allowed_orchestration_access_metadata': 'SettingsMetadata',
         'allow_envelope_transfer_to': 'str',
         'allow_envelope_transfer_to_metadata': 'SettingsMetadata',
         'allow_eseal_recipients': 'str',
@@ -49,6 +51,8 @@ class UserSettingsInformation(object):
         'allow_send_on_behalf_of_metadata': 'SettingsMetadata',
         'allow_supplemental_documents': 'str',
         'allow_supplemental_documents_metadata': 'SettingsMetadata',
+        'allow_transactions': 'str',
+        'allow_transactions_metadata': 'SettingsMetadata',
         'anchor_tag_versioned_placement_enabled': 'str',
         'api_account_wide_access': 'str',
         'api_account_wide_access_metadata': 'SettingsMetadata',
@@ -58,6 +62,12 @@ class UserSettingsInformation(object):
         'bulk_send_metadata': 'SettingsMetadata',
         'can_charge_account': 'str',
         'can_charge_account_metadata': 'SettingsMetadata',
+        'can_create_transaction': 'str',
+        'can_create_transaction_metadata': 'SettingsMetadata',
+        'can_delete_documents_in_transaction': 'str',
+        'can_delete_documents_in_transaction_metadata': 'SettingsMetadata',
+        'can_delete_transaction': 'str',
+        'can_delete_transaction_metadata': 'SettingsMetadata',
         'can_edit_shared_addressbook': 'str',
         'can_edit_shared_addressbook_metadata': 'SettingsMetadata',
         'can_lock_envelopes': 'str',
@@ -165,6 +175,8 @@ class UserSettingsInformation(object):
         'admin_only': 'adminOnly',
         'admin_only_metadata': 'adminOnlyMetadata',
         'allow_auto_tagging': 'allowAutoTagging',
+        'allowed_orchestration_access': 'allowedOrchestrationAccess',
+        'allowed_orchestration_access_metadata': 'allowedOrchestrationAccessMetadata',
         'allow_envelope_transfer_to': 'allowEnvelopeTransferTo',
         'allow_envelope_transfer_to_metadata': 'allowEnvelopeTransferToMetadata',
         'allow_eseal_recipients': 'allowEsealRecipients',
@@ -177,6 +189,8 @@ class UserSettingsInformation(object):
         'allow_send_on_behalf_of_metadata': 'allowSendOnBehalfOfMetadata',
         'allow_supplemental_documents': 'allowSupplementalDocuments',
         'allow_supplemental_documents_metadata': 'allowSupplementalDocumentsMetadata',
+        'allow_transactions': 'allowTransactions',
+        'allow_transactions_metadata': 'allowTransactionsMetadata',
         'anchor_tag_versioned_placement_enabled': 'anchorTagVersionedPlacementEnabled',
         'api_account_wide_access': 'apiAccountWideAccess',
         'api_account_wide_access_metadata': 'apiAccountWideAccessMetadata',
@@ -186,6 +200,12 @@ class UserSettingsInformation(object):
         'bulk_send_metadata': 'bulkSendMetadata',
         'can_charge_account': 'canChargeAccount',
         'can_charge_account_metadata': 'canChargeAccountMetadata',
+        'can_create_transaction': 'canCreateTransaction',
+        'can_create_transaction_metadata': 'canCreateTransactionMetadata',
+        'can_delete_documents_in_transaction': 'canDeleteDocumentsInTransaction',
+        'can_delete_documents_in_transaction_metadata': 'canDeleteDocumentsInTransactionMetadata',
+        'can_delete_transaction': 'canDeleteTransaction',
+        'can_delete_transaction_metadata': 'canDeleteTransactionMetadata',
         'can_edit_shared_addressbook': 'canEditSharedAddressbook',
         'can_edit_shared_addressbook_metadata': 'canEditSharedAddressbookMetadata',
         'can_lock_envelopes': 'canLockEnvelopes',
@@ -298,6 +318,8 @@ class UserSettingsInformation(object):
         self._admin_only = None
         self._admin_only_metadata = None
         self._allow_auto_tagging = None
+        self._allowed_orchestration_access = None
+        self._allowed_orchestration_access_metadata = None
         self._allow_envelope_transfer_to = None
         self._allow_envelope_transfer_to_metadata = None
         self._allow_eseal_recipients = None
@@ -310,6 +332,8 @@ class UserSettingsInformation(object):
         self._allow_send_on_behalf_of_metadata = None
         self._allow_supplemental_documents = None
         self._allow_supplemental_documents_metadata = None
+        self._allow_transactions = None
+        self._allow_transactions_metadata = None
         self._anchor_tag_versioned_placement_enabled = None
         self._api_account_wide_access = None
         self._api_account_wide_access_metadata = None
@@ -319,6 +343,12 @@ class UserSettingsInformation(object):
         self._bulk_send_metadata = None
         self._can_charge_account = None
         self._can_charge_account_metadata = None
+        self._can_create_transaction = None
+        self._can_create_transaction_metadata = None
+        self._can_delete_documents_in_transaction = None
+        self._can_delete_documents_in_transaction_metadata = None
+        self._can_delete_transaction = None
+        self._can_delete_transaction_metadata = None
         self._can_edit_shared_addressbook = None
         self._can_edit_shared_addressbook_metadata = None
         self._can_lock_envelopes = None
@@ -425,6 +455,8 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('admin_only'), kwargs.get('admin_only', None))
         setattr(self, "_{}".format('admin_only_metadata'), kwargs.get('admin_only_metadata', None))
         setattr(self, "_{}".format('allow_auto_tagging'), kwargs.get('allow_auto_tagging', None))
+        setattr(self, "_{}".format('allowed_orchestration_access'), kwargs.get('allowed_orchestration_access', None))
+        setattr(self, "_{}".format('allowed_orchestration_access_metadata'), kwargs.get('allowed_orchestration_access_metadata', None))
         setattr(self, "_{}".format('allow_envelope_transfer_to'), kwargs.get('allow_envelope_transfer_to', None))
         setattr(self, "_{}".format('allow_envelope_transfer_to_metadata'), kwargs.get('allow_envelope_transfer_to_metadata', None))
         setattr(self, "_{}".format('allow_eseal_recipients'), kwargs.get('allow_eseal_recipients', None))
@@ -437,6 +469,8 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('allow_send_on_behalf_of_metadata'), kwargs.get('allow_send_on_behalf_of_metadata', None))
         setattr(self, "_{}".format('allow_supplemental_documents'), kwargs.get('allow_supplemental_documents', None))
         setattr(self, "_{}".format('allow_supplemental_documents_metadata'), kwargs.get('allow_supplemental_documents_metadata', None))
+        setattr(self, "_{}".format('allow_transactions'), kwargs.get('allow_transactions', None))
+        setattr(self, "_{}".format('allow_transactions_metadata'), kwargs.get('allow_transactions_metadata', None))
         setattr(self, "_{}".format('anchor_tag_versioned_placement_enabled'), kwargs.get('anchor_tag_versioned_placement_enabled', None))
         setattr(self, "_{}".format('api_account_wide_access'), kwargs.get('api_account_wide_access', None))
         setattr(self, "_{}".format('api_account_wide_access_metadata'), kwargs.get('api_account_wide_access_metadata', None))
@@ -446,6 +480,12 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('bulk_send_metadata'), kwargs.get('bulk_send_metadata', None))
         setattr(self, "_{}".format('can_charge_account'), kwargs.get('can_charge_account', None))
         setattr(self, "_{}".format('can_charge_account_metadata'), kwargs.get('can_charge_account_metadata', None))
+        setattr(self, "_{}".format('can_create_transaction'), kwargs.get('can_create_transaction', None))
+        setattr(self, "_{}".format('can_create_transaction_metadata'), kwargs.get('can_create_transaction_metadata', None))
+        setattr(self, "_{}".format('can_delete_documents_in_transaction'), kwargs.get('can_delete_documents_in_transaction', None))
+        setattr(self, "_{}".format('can_delete_documents_in_transaction_metadata'), kwargs.get('can_delete_documents_in_transaction_metadata', None))
+        setattr(self, "_{}".format('can_delete_transaction'), kwargs.get('can_delete_transaction', None))
+        setattr(self, "_{}".format('can_delete_transaction_metadata'), kwargs.get('can_delete_transaction_metadata', None))
         setattr(self, "_{}".format('can_edit_shared_addressbook'), kwargs.get('can_edit_shared_addressbook', None))
         setattr(self, "_{}".format('can_edit_shared_addressbook_metadata'), kwargs.get('can_edit_shared_addressbook_metadata', None))
         setattr(self, "_{}".format('can_lock_envelopes'), kwargs.get('can_lock_envelopes', None))
@@ -638,6 +678,52 @@ class UserSettingsInformation(object):
         """
 
         self._allow_auto_tagging = allow_auto_tagging
+
+    @property
+    def allowed_orchestration_access(self):
+        """Gets the allowed_orchestration_access of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allowed_orchestration_access of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allowed_orchestration_access
+
+    @allowed_orchestration_access.setter
+    def allowed_orchestration_access(self, allowed_orchestration_access):
+        """Sets the allowed_orchestration_access of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param allowed_orchestration_access: The allowed_orchestration_access of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allowed_orchestration_access = allowed_orchestration_access
+
+    @property
+    def allowed_orchestration_access_metadata(self):
+        """Gets the allowed_orchestration_access_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allowed_orchestration_access_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allowed_orchestration_access_metadata
+
+    @allowed_orchestration_access_metadata.setter
+    def allowed_orchestration_access_metadata(self, allowed_orchestration_access_metadata):
+        """Sets the allowed_orchestration_access_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param allowed_orchestration_access_metadata: The allowed_orchestration_access_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allowed_orchestration_access_metadata = allowed_orchestration_access_metadata
 
     @property
     def allow_envelope_transfer_to(self):
@@ -916,6 +1002,52 @@ class UserSettingsInformation(object):
         self._allow_supplemental_documents_metadata = allow_supplemental_documents_metadata
 
     @property
+    def allow_transactions(self):
+        """Gets the allow_transactions of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_transactions of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_transactions
+
+    @allow_transactions.setter
+    def allow_transactions(self, allow_transactions):
+        """Sets the allow_transactions of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_transactions: The allow_transactions of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_transactions = allow_transactions
+
+    @property
+    def allow_transactions_metadata(self):
+        """Gets the allow_transactions_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_transactions_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_transactions_metadata
+
+    @allow_transactions_metadata.setter
+    def allow_transactions_metadata(self, allow_transactions_metadata):
+        """Sets the allow_transactions_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_transactions_metadata: The allow_transactions_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_transactions_metadata = allow_transactions_metadata
+
+    @property
     def anchor_tag_versioned_placement_enabled(self):
         """Gets the anchor_tag_versioned_placement_enabled of this UserSettingsInformation.  # noqa: E501
 
@@ -1121,6 +1253,144 @@ class UserSettingsInformation(object):
         """
 
         self._can_charge_account_metadata = can_charge_account_metadata
+
+    @property
+    def can_create_transaction(self):
+        """Gets the can_create_transaction of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_create_transaction of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_create_transaction
+
+    @can_create_transaction.setter
+    def can_create_transaction(self, can_create_transaction):
+        """Sets the can_create_transaction of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_create_transaction: The can_create_transaction of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._can_create_transaction = can_create_transaction
+
+    @property
+    def can_create_transaction_metadata(self):
+        """Gets the can_create_transaction_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_create_transaction_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_create_transaction_metadata
+
+    @can_create_transaction_metadata.setter
+    def can_create_transaction_metadata(self, can_create_transaction_metadata):
+        """Sets the can_create_transaction_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_create_transaction_metadata: The can_create_transaction_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_create_transaction_metadata = can_create_transaction_metadata
+
+    @property
+    def can_delete_documents_in_transaction(self):
+        """Gets the can_delete_documents_in_transaction of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_delete_documents_in_transaction of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_delete_documents_in_transaction
+
+    @can_delete_documents_in_transaction.setter
+    def can_delete_documents_in_transaction(self, can_delete_documents_in_transaction):
+        """Sets the can_delete_documents_in_transaction of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_delete_documents_in_transaction: The can_delete_documents_in_transaction of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._can_delete_documents_in_transaction = can_delete_documents_in_transaction
+
+    @property
+    def can_delete_documents_in_transaction_metadata(self):
+        """Gets the can_delete_documents_in_transaction_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_delete_documents_in_transaction_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_delete_documents_in_transaction_metadata
+
+    @can_delete_documents_in_transaction_metadata.setter
+    def can_delete_documents_in_transaction_metadata(self, can_delete_documents_in_transaction_metadata):
+        """Sets the can_delete_documents_in_transaction_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_delete_documents_in_transaction_metadata: The can_delete_documents_in_transaction_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_delete_documents_in_transaction_metadata = can_delete_documents_in_transaction_metadata
+
+    @property
+    def can_delete_transaction(self):
+        """Gets the can_delete_transaction of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_delete_transaction of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_delete_transaction
+
+    @can_delete_transaction.setter
+    def can_delete_transaction(self, can_delete_transaction):
+        """Sets the can_delete_transaction of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_delete_transaction: The can_delete_transaction of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._can_delete_transaction = can_delete_transaction
+
+    @property
+    def can_delete_transaction_metadata(self):
+        """Gets the can_delete_transaction_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_delete_transaction_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_delete_transaction_metadata
+
+    @can_delete_transaction_metadata.setter
+    def can_delete_transaction_metadata(self, can_delete_transaction_metadata):
+        """Sets the can_delete_transaction_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_delete_transaction_metadata: The can_delete_transaction_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_delete_transaction_metadata = can_delete_transaction_metadata
 
     @property
     def can_edit_shared_addressbook(self):

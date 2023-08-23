@@ -51,6 +51,7 @@ class EnvelopeDocument(object):
         'error_details': 'ErrorDetails',
         'include_in_download': 'str',
         'include_in_download_metadata': 'PropertyMetadata',
+        'is_ace_gen_document': 'str',
         'is_doc_gen_document': 'str',
         'name': 'str',
         'name_metadata': 'PropertyMetadata',
@@ -84,6 +85,7 @@ class EnvelopeDocument(object):
         'error_details': 'errorDetails',
         'include_in_download': 'includeInDownload',
         'include_in_download_metadata': 'includeInDownloadMetadata',
+        'is_ace_gen_document': 'isAceGenDocument',
         'is_doc_gen_document': 'isDocGenDocument',
         'name': 'name',
         'name_metadata': 'nameMetadata',
@@ -122,6 +124,7 @@ class EnvelopeDocument(object):
         self._error_details = None
         self._include_in_download = None
         self._include_in_download_metadata = None
+        self._is_ace_gen_document = None
         self._is_doc_gen_document = None
         self._name = None
         self._name_metadata = None
@@ -154,6 +157,7 @@ class EnvelopeDocument(object):
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
         setattr(self, "_{}".format('include_in_download'), kwargs.get('include_in_download', None))
         setattr(self, "_{}".format('include_in_download_metadata'), kwargs.get('include_in_download_metadata', None))
+        setattr(self, "_{}".format('is_ace_gen_document'), kwargs.get('is_ace_gen_document', None))
         setattr(self, "_{}".format('is_doc_gen_document'), kwargs.get('is_doc_gen_document', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('name_metadata'), kwargs.get('name_metadata', None))
@@ -580,6 +584,29 @@ class EnvelopeDocument(object):
         """
 
         self._include_in_download_metadata = include_in_download_metadata
+
+    @property
+    def is_ace_gen_document(self):
+        """Gets the is_ace_gen_document of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_ace_gen_document of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_ace_gen_document
+
+    @is_ace_gen_document.setter
+    def is_ace_gen_document(self, is_ace_gen_document):
+        """Sets the is_ace_gen_document of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param is_ace_gen_document: The is_ace_gen_document of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._is_ace_gen_document = is_ace_gen_document
 
     @property
     def is_doc_gen_document(self):

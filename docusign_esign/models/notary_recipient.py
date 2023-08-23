@@ -92,6 +92,7 @@ class NotaryRecipient(object):
         'notary_signer_email_sent': 'str',
         'notary_signers': 'list[str]',
         'notary_source_type': 'str',
+        'notary_third_party_partner': 'str',
         'notary_type': 'str',
         'note': 'str',
         'note_metadata': 'PropertyMetadata',
@@ -197,6 +198,7 @@ class NotaryRecipient(object):
         'notary_signer_email_sent': 'notarySignerEmailSent',
         'notary_signers': 'notarySigners',
         'notary_source_type': 'notarySourceType',
+        'notary_third_party_partner': 'notaryThirdPartyPartner',
         'notary_type': 'notaryType',
         'note': 'note',
         'note_metadata': 'noteMetadata',
@@ -307,6 +309,7 @@ class NotaryRecipient(object):
         self._notary_signer_email_sent = None
         self._notary_signers = None
         self._notary_source_type = None
+        self._notary_third_party_partner = None
         self._notary_type = None
         self._note = None
         self._note_metadata = None
@@ -411,6 +414,7 @@ class NotaryRecipient(object):
         setattr(self, "_{}".format('notary_signer_email_sent'), kwargs.get('notary_signer_email_sent', None))
         setattr(self, "_{}".format('notary_signers'), kwargs.get('notary_signers', None))
         setattr(self, "_{}".format('notary_source_type'), kwargs.get('notary_source_type', None))
+        setattr(self, "_{}".format('notary_third_party_partner'), kwargs.get('notary_third_party_partner', None))
         setattr(self, "_{}".format('notary_type'), kwargs.get('notary_type', None))
         setattr(self, "_{}".format('note'), kwargs.get('note', None))
         setattr(self, "_{}".format('note_metadata'), kwargs.get('note_metadata', None))
@@ -1811,6 +1815,29 @@ class NotaryRecipient(object):
         """
 
         self._notary_source_type = notary_source_type
+
+    @property
+    def notary_third_party_partner(self):
+        """Gets the notary_third_party_partner of this NotaryRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notary_third_party_partner of this NotaryRecipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._notary_third_party_partner
+
+    @notary_third_party_partner.setter
+    def notary_third_party_partner(self, notary_third_party_partner):
+        """Sets the notary_third_party_partner of this NotaryRecipient.
+
+          # noqa: E501
+
+        :param notary_third_party_partner: The notary_third_party_partner of this NotaryRecipient.  # noqa: E501
+        :type: str
+        """
+
+        self._notary_third_party_partner = notary_third_party_partner
 
     @property
     def notary_type(self):
