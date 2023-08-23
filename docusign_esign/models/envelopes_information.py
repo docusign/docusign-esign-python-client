@@ -36,6 +36,7 @@ class EnvelopesInformation(object):
         'continuation_token': 'str',
         'end_position': 'str',
         'envelopes': 'list[Envelope]',
+        'envelope_search_source': 'str',
         'envelope_transaction_statuses': 'list[EnvelopeTransactionStatus]',
         'folders': 'list[Folder]',
         'last_queried_date_time': 'str',
@@ -50,6 +51,7 @@ class EnvelopesInformation(object):
         'continuation_token': 'continuationToken',
         'end_position': 'endPosition',
         'envelopes': 'envelopes',
+        'envelope_search_source': 'envelopeSearchSource',
         'envelope_transaction_statuses': 'envelopeTransactionStatuses',
         'folders': 'folders',
         'last_queried_date_time': 'lastQueriedDateTime',
@@ -69,6 +71,7 @@ class EnvelopesInformation(object):
         self._continuation_token = None
         self._end_position = None
         self._envelopes = None
+        self._envelope_search_source = None
         self._envelope_transaction_statuses = None
         self._folders = None
         self._last_queried_date_time = None
@@ -82,6 +85,7 @@ class EnvelopesInformation(object):
         setattr(self, "_{}".format('continuation_token'), kwargs.get('continuation_token', None))
         setattr(self, "_{}".format('end_position'), kwargs.get('end_position', None))
         setattr(self, "_{}".format('envelopes'), kwargs.get('envelopes', None))
+        setattr(self, "_{}".format('envelope_search_source'), kwargs.get('envelope_search_source', None))
         setattr(self, "_{}".format('envelope_transaction_statuses'), kwargs.get('envelope_transaction_statuses', None))
         setattr(self, "_{}".format('folders'), kwargs.get('folders', None))
         setattr(self, "_{}".format('last_queried_date_time'), kwargs.get('last_queried_date_time', None))
@@ -159,6 +163,29 @@ class EnvelopesInformation(object):
         """
 
         self._envelopes = envelopes
+
+    @property
+    def envelope_search_source(self):
+        """Gets the envelope_search_source of this EnvelopesInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_search_source of this EnvelopesInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._envelope_search_source
+
+    @envelope_search_source.setter
+    def envelope_search_source(self, envelope_search_source):
+        """Sets the envelope_search_source of this EnvelopesInformation.
+
+          # noqa: E501
+
+        :param envelope_search_source: The envelope_search_source of this EnvelopesInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._envelope_search_source = envelope_search_source
 
     @property
     def envelope_transaction_statuses(self):

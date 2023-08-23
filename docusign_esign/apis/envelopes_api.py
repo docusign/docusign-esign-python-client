@@ -5925,7 +5925,7 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str attachment_id: (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :return: None
+        :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5953,7 +5953,7 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str attachment_id: (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :return: None
+        :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6005,7 +6005,7 @@ class EnvelopesApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
+            select_header_accept(['application/octet-stream'])
 
         # Authentication setting
         auth_settings = []
@@ -6017,7 +6017,7 @@ class EnvelopesApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type=None,
+                                        response_type='file',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -6379,7 +6379,7 @@ class EnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :param str lang_code: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+        :param str lang_code: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
         :param str lang_code2: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
         :return: ConsumerDisclosure
@@ -6409,7 +6409,7 @@ class EnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :param str lang_code: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+        :param str lang_code: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
         :param str lang_code2: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
         :return: ConsumerDisclosure
@@ -10695,6 +10695,7 @@ class EnvelopesApi(object):
         :param str powerformids:
         :param str query_budget:
         :param str requester_date_format:
+        :param str search_mode:
         :param str search_text:
         :param str start_position:
         :param str status: The list of current statuses to include in the response. By default, all envelopes found are returned. If values are specified, then of the envelopes found, only those with the current status specified are returned in the results.   Possible values are: Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut and Processing.
@@ -10751,6 +10752,7 @@ class EnvelopesApi(object):
         :param str powerformids:
         :param str query_budget:
         :param str requester_date_format:
+        :param str search_mode:
         :param str search_text:
         :param str start_position:
         :param str status: The list of current statuses to include in the response. By default, all envelopes found are returned. If values are specified, then of the envelopes found, only those with the current status specified are returned in the results.   Possible values are: Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut and Processing.
@@ -10764,7 +10766,7 @@ class EnvelopesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'ac_status', 'block', 'cdse_mode', 'continuation_token', 'count', 'custom_field', 'email', 'envelope_ids', 'exclude', 'folder_ids', 'folder_types', 'from_date', 'from_to_status', 'include', 'include_purge_information', 'intersecting_folder_ids', 'last_queried_date', 'order', 'order_by', 'powerformids', 'query_budget', 'requester_date_format', 'search_text', 'start_position', 'status', 'to_date', 'transaction_ids', 'user_filter', 'user_id', 'user_name']
+        all_params = ['account_id', 'ac_status', 'block', 'cdse_mode', 'continuation_token', 'count', 'custom_field', 'email', 'envelope_ids', 'exclude', 'folder_ids', 'folder_types', 'from_date', 'from_to_status', 'include', 'include_purge_information', 'intersecting_folder_ids', 'last_queried_date', 'order', 'order_by', 'powerformids', 'query_budget', 'requester_date_format', 'search_mode', 'search_text', 'start_position', 'status', 'to_date', 'transaction_ids', 'user_filter', 'user_id', 'user_name']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10836,6 +10838,8 @@ class EnvelopesApi(object):
             query_params['query_budget'] = params['query_budget']
         if 'requester_date_format' in params:
             query_params['requester_date_format'] = params['requester_date_format']
+        if 'search_mode' in params:
+            query_params['search_mode'] = params['search_mode']
         if 'search_text' in params:
             query_params['search_text'] = params['search_text']
         if 'start_position' in params:

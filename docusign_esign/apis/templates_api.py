@@ -2640,6 +2640,7 @@ class TemplatesApi(object):
         :param str document_id: The ID of the document being accessed. (required)
         :param str template_id: The ID of the template being accessed. (required)
         :param str encrypt:
+        :param str file_type:
         :param str show_changes:
         :return: file
                  If the method is called asynchronously,
@@ -2670,13 +2671,14 @@ class TemplatesApi(object):
         :param str document_id: The ID of the document being accessed. (required)
         :param str template_id: The ID of the template being accessed. (required)
         :param str encrypt:
+        :param str file_type:
         :param str show_changes:
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'document_id', 'template_id', 'encrypt', 'show_changes']
+        all_params = ['account_id', 'document_id', 'template_id', 'encrypt', 'file_type', 'show_changes']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2716,6 +2718,8 @@ class TemplatesApi(object):
         query_params = {}
         if 'encrypt' in params:
             query_params['encrypt'] = params['encrypt']
+        if 'file_type' in params:
+            query_params['file_type'] = params['file_type']
         if 'show_changes' in params:
             query_params['show_changes'] = params['show_changes']
 

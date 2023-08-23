@@ -53,6 +53,8 @@ class AccountRoleSettings(object):
         'allowed_address_book_access_metadata': 'SettingsMetadata',
         'allowed_clickwraps_access': 'str',
         'allowed_clickwraps_access_metadata': 'SettingsMetadata',
+        'allowed_orchestration_access': 'str',
+        'allowed_orchestration_access_metadata': 'SettingsMetadata',
         'allowed_template_access': 'str',
         'allowed_template_access_metadata': 'SettingsMetadata',
         'allowed_to_be_envelope_transfer_recipient': 'str',
@@ -71,12 +73,20 @@ class AccountRoleSettings(object):
         'allow_supplemental_documents_metadata': 'SettingsMetadata',
         'allow_tagging_in_send_and_correct': 'str',
         'allow_tagging_in_send_and_correct_metadata': 'SettingsMetadata',
+        'allow_transactions': 'str',
+        'allow_transactions_metadata': 'SettingsMetadata',
         'allow_vaulting': 'str',
         'allow_vaulting_metadata': 'SettingsMetadata',
         'allow_wet_signing_override': 'str',
         'allow_wet_signing_override_metadata': 'SettingsMetadata',
+        'can_create_transaction': 'str',
+        'can_create_transaction_metadata': 'SettingsMetadata',
         'can_create_workspaces': 'str',
         'can_create_workspaces_metadata': 'SettingsMetadata',
+        'can_delete_documents_in_transaction': 'str',
+        'can_delete_documents_in_transaction_metadata': 'SettingsMetadata',
+        'can_delete_transaction': 'str',
+        'can_delete_transaction_metadata': 'SettingsMetadata',
         'can_send_envelopes_via_sms': 'str',
         'can_send_envelopes_via_sms_metadata': 'SettingsMetadata',
         'disable_document_upload': 'str',
@@ -135,6 +145,8 @@ class AccountRoleSettings(object):
         'allowed_address_book_access_metadata': 'allowedAddressBookAccessMetadata',
         'allowed_clickwraps_access': 'allowedClickwrapsAccess',
         'allowed_clickwraps_access_metadata': 'allowedClickwrapsAccessMetadata',
+        'allowed_orchestration_access': 'allowedOrchestrationAccess',
+        'allowed_orchestration_access_metadata': 'allowedOrchestrationAccessMetadata',
         'allowed_template_access': 'allowedTemplateAccess',
         'allowed_template_access_metadata': 'allowedTemplateAccessMetadata',
         'allowed_to_be_envelope_transfer_recipient': 'allowedToBeEnvelopeTransferRecipient',
@@ -153,12 +165,20 @@ class AccountRoleSettings(object):
         'allow_supplemental_documents_metadata': 'allowSupplementalDocumentsMetadata',
         'allow_tagging_in_send_and_correct': 'allowTaggingInSendAndCorrect',
         'allow_tagging_in_send_and_correct_metadata': 'allowTaggingInSendAndCorrectMetadata',
+        'allow_transactions': 'allowTransactions',
+        'allow_transactions_metadata': 'allowTransactionsMetadata',
         'allow_vaulting': 'allowVaulting',
         'allow_vaulting_metadata': 'allowVaultingMetadata',
         'allow_wet_signing_override': 'allowWetSigningOverride',
         'allow_wet_signing_override_metadata': 'allowWetSigningOverrideMetadata',
+        'can_create_transaction': 'canCreateTransaction',
+        'can_create_transaction_metadata': 'canCreateTransactionMetadata',
         'can_create_workspaces': 'canCreateWorkspaces',
         'can_create_workspaces_metadata': 'canCreateWorkspacesMetadata',
+        'can_delete_documents_in_transaction': 'canDeleteDocumentsInTransaction',
+        'can_delete_documents_in_transaction_metadata': 'canDeleteDocumentsInTransactionMetadata',
+        'can_delete_transaction': 'canDeleteTransaction',
+        'can_delete_transaction_metadata': 'canDeleteTransactionMetadata',
         'can_send_envelopes_via_sms': 'canSendEnvelopesViaSMS',
         'can_send_envelopes_via_sms_metadata': 'canSendEnvelopesViaSMSMetadata',
         'disable_document_upload': 'disableDocumentUpload',
@@ -222,6 +242,8 @@ class AccountRoleSettings(object):
         self._allowed_address_book_access_metadata = None
         self._allowed_clickwraps_access = None
         self._allowed_clickwraps_access_metadata = None
+        self._allowed_orchestration_access = None
+        self._allowed_orchestration_access_metadata = None
         self._allowed_template_access = None
         self._allowed_template_access_metadata = None
         self._allowed_to_be_envelope_transfer_recipient = None
@@ -240,12 +262,20 @@ class AccountRoleSettings(object):
         self._allow_supplemental_documents_metadata = None
         self._allow_tagging_in_send_and_correct = None
         self._allow_tagging_in_send_and_correct_metadata = None
+        self._allow_transactions = None
+        self._allow_transactions_metadata = None
         self._allow_vaulting = None
         self._allow_vaulting_metadata = None
         self._allow_wet_signing_override = None
         self._allow_wet_signing_override_metadata = None
+        self._can_create_transaction = None
+        self._can_create_transaction_metadata = None
         self._can_create_workspaces = None
         self._can_create_workspaces_metadata = None
+        self._can_delete_documents_in_transaction = None
+        self._can_delete_documents_in_transaction_metadata = None
+        self._can_delete_transaction = None
+        self._can_delete_transaction_metadata = None
         self._can_send_envelopes_via_sms = None
         self._can_send_envelopes_via_sms_metadata = None
         self._disable_document_upload = None
@@ -303,6 +333,8 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('allowed_address_book_access_metadata'), kwargs.get('allowed_address_book_access_metadata', None))
         setattr(self, "_{}".format('allowed_clickwraps_access'), kwargs.get('allowed_clickwraps_access', None))
         setattr(self, "_{}".format('allowed_clickwraps_access_metadata'), kwargs.get('allowed_clickwraps_access_metadata', None))
+        setattr(self, "_{}".format('allowed_orchestration_access'), kwargs.get('allowed_orchestration_access', None))
+        setattr(self, "_{}".format('allowed_orchestration_access_metadata'), kwargs.get('allowed_orchestration_access_metadata', None))
         setattr(self, "_{}".format('allowed_template_access'), kwargs.get('allowed_template_access', None))
         setattr(self, "_{}".format('allowed_template_access_metadata'), kwargs.get('allowed_template_access_metadata', None))
         setattr(self, "_{}".format('allowed_to_be_envelope_transfer_recipient'), kwargs.get('allowed_to_be_envelope_transfer_recipient', None))
@@ -321,12 +353,20 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('allow_supplemental_documents_metadata'), kwargs.get('allow_supplemental_documents_metadata', None))
         setattr(self, "_{}".format('allow_tagging_in_send_and_correct'), kwargs.get('allow_tagging_in_send_and_correct', None))
         setattr(self, "_{}".format('allow_tagging_in_send_and_correct_metadata'), kwargs.get('allow_tagging_in_send_and_correct_metadata', None))
+        setattr(self, "_{}".format('allow_transactions'), kwargs.get('allow_transactions', None))
+        setattr(self, "_{}".format('allow_transactions_metadata'), kwargs.get('allow_transactions_metadata', None))
         setattr(self, "_{}".format('allow_vaulting'), kwargs.get('allow_vaulting', None))
         setattr(self, "_{}".format('allow_vaulting_metadata'), kwargs.get('allow_vaulting_metadata', None))
         setattr(self, "_{}".format('allow_wet_signing_override'), kwargs.get('allow_wet_signing_override', None))
         setattr(self, "_{}".format('allow_wet_signing_override_metadata'), kwargs.get('allow_wet_signing_override_metadata', None))
+        setattr(self, "_{}".format('can_create_transaction'), kwargs.get('can_create_transaction', None))
+        setattr(self, "_{}".format('can_create_transaction_metadata'), kwargs.get('can_create_transaction_metadata', None))
         setattr(self, "_{}".format('can_create_workspaces'), kwargs.get('can_create_workspaces', None))
         setattr(self, "_{}".format('can_create_workspaces_metadata'), kwargs.get('can_create_workspaces_metadata', None))
+        setattr(self, "_{}".format('can_delete_documents_in_transaction'), kwargs.get('can_delete_documents_in_transaction', None))
+        setattr(self, "_{}".format('can_delete_documents_in_transaction_metadata'), kwargs.get('can_delete_documents_in_transaction_metadata', None))
+        setattr(self, "_{}".format('can_delete_transaction'), kwargs.get('can_delete_transaction', None))
+        setattr(self, "_{}".format('can_delete_transaction_metadata'), kwargs.get('can_delete_transaction_metadata', None))
         setattr(self, "_{}".format('can_send_envelopes_via_sms'), kwargs.get('can_send_envelopes_via_sms', None))
         setattr(self, "_{}".format('can_send_envelopes_via_sms_metadata'), kwargs.get('can_send_envelopes_via_sms_metadata', None))
         setattr(self, "_{}".format('disable_document_upload'), kwargs.get('disable_document_upload', None))
@@ -824,6 +864,52 @@ class AccountRoleSettings(object):
         self._allowed_clickwraps_access_metadata = allowed_clickwraps_access_metadata
 
     @property
+    def allowed_orchestration_access(self):
+        """Gets the allowed_orchestration_access of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allowed_orchestration_access of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._allowed_orchestration_access
+
+    @allowed_orchestration_access.setter
+    def allowed_orchestration_access(self, allowed_orchestration_access):
+        """Sets the allowed_orchestration_access of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param allowed_orchestration_access: The allowed_orchestration_access of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._allowed_orchestration_access = allowed_orchestration_access
+
+    @property
+    def allowed_orchestration_access_metadata(self):
+        """Gets the allowed_orchestration_access_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allowed_orchestration_access_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allowed_orchestration_access_metadata
+
+    @allowed_orchestration_access_metadata.setter
+    def allowed_orchestration_access_metadata(self, allowed_orchestration_access_metadata):
+        """Sets the allowed_orchestration_access_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param allowed_orchestration_access_metadata: The allowed_orchestration_access_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allowed_orchestration_access_metadata = allowed_orchestration_access_metadata
+
+    @property
     def allowed_template_access(self):
         """Gets the allowed_template_access of this AccountRoleSettings.  # noqa: E501
 
@@ -1238,6 +1324,52 @@ class AccountRoleSettings(object):
         self._allow_tagging_in_send_and_correct_metadata = allow_tagging_in_send_and_correct_metadata
 
     @property
+    def allow_transactions(self):
+        """Gets the allow_transactions of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_transactions of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_transactions
+
+    @allow_transactions.setter
+    def allow_transactions(self, allow_transactions):
+        """Sets the allow_transactions of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param allow_transactions: The allow_transactions of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_transactions = allow_transactions
+
+    @property
+    def allow_transactions_metadata(self):
+        """Gets the allow_transactions_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_transactions_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_transactions_metadata
+
+    @allow_transactions_metadata.setter
+    def allow_transactions_metadata(self, allow_transactions_metadata):
+        """Sets the allow_transactions_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param allow_transactions_metadata: The allow_transactions_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_transactions_metadata = allow_transactions_metadata
+
+    @property
     def allow_vaulting(self):
         """Gets the allow_vaulting of this AccountRoleSettings.  # noqa: E501
 
@@ -1330,6 +1462,52 @@ class AccountRoleSettings(object):
         self._allow_wet_signing_override_metadata = allow_wet_signing_override_metadata
 
     @property
+    def can_create_transaction(self):
+        """Gets the can_create_transaction of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_create_transaction of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_create_transaction
+
+    @can_create_transaction.setter
+    def can_create_transaction(self, can_create_transaction):
+        """Sets the can_create_transaction of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_create_transaction: The can_create_transaction of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._can_create_transaction = can_create_transaction
+
+    @property
+    def can_create_transaction_metadata(self):
+        """Gets the can_create_transaction_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_create_transaction_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_create_transaction_metadata
+
+    @can_create_transaction_metadata.setter
+    def can_create_transaction_metadata(self, can_create_transaction_metadata):
+        """Sets the can_create_transaction_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_create_transaction_metadata: The can_create_transaction_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_create_transaction_metadata = can_create_transaction_metadata
+
+    @property
     def can_create_workspaces(self):
         """Gets the can_create_workspaces of this AccountRoleSettings.  # noqa: E501
 
@@ -1374,6 +1552,98 @@ class AccountRoleSettings(object):
         """
 
         self._can_create_workspaces_metadata = can_create_workspaces_metadata
+
+    @property
+    def can_delete_documents_in_transaction(self):
+        """Gets the can_delete_documents_in_transaction of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_delete_documents_in_transaction of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_delete_documents_in_transaction
+
+    @can_delete_documents_in_transaction.setter
+    def can_delete_documents_in_transaction(self, can_delete_documents_in_transaction):
+        """Sets the can_delete_documents_in_transaction of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_delete_documents_in_transaction: The can_delete_documents_in_transaction of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._can_delete_documents_in_transaction = can_delete_documents_in_transaction
+
+    @property
+    def can_delete_documents_in_transaction_metadata(self):
+        """Gets the can_delete_documents_in_transaction_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_delete_documents_in_transaction_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_delete_documents_in_transaction_metadata
+
+    @can_delete_documents_in_transaction_metadata.setter
+    def can_delete_documents_in_transaction_metadata(self, can_delete_documents_in_transaction_metadata):
+        """Sets the can_delete_documents_in_transaction_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_delete_documents_in_transaction_metadata: The can_delete_documents_in_transaction_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_delete_documents_in_transaction_metadata = can_delete_documents_in_transaction_metadata
+
+    @property
+    def can_delete_transaction(self):
+        """Gets the can_delete_transaction of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_delete_transaction of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_delete_transaction
+
+    @can_delete_transaction.setter
+    def can_delete_transaction(self, can_delete_transaction):
+        """Sets the can_delete_transaction of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_delete_transaction: The can_delete_transaction of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._can_delete_transaction = can_delete_transaction
+
+    @property
+    def can_delete_transaction_metadata(self):
+        """Gets the can_delete_transaction_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_delete_transaction_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_delete_transaction_metadata
+
+    @can_delete_transaction_metadata.setter
+    def can_delete_transaction_metadata(self, can_delete_transaction_metadata):
+        """Sets the can_delete_transaction_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_delete_transaction_metadata: The can_delete_transaction_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_delete_transaction_metadata = can_delete_transaction_metadata
 
     @property
     def can_send_envelopes_via_sms(self):

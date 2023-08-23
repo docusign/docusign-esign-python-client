@@ -41,12 +41,14 @@ class Brand(object):
         'default_brand_language': 'str',
         'email_content': 'list[BrandEmailContent]',
         'error_details': 'ErrorDetails',
+        'is_organization_brand': 'str',
         'is_overriding_company_name': 'bool',
         'is_sending_default': 'bool',
         'is_signing_default': 'bool',
         'landing_pages': 'list[NameValue]',
         'links': 'list[BrandLink]',
         'logos': 'BrandLogos',
+        'organization_brand_logo': 'str',
         'resources': 'BrandResourceUrls'
     }
 
@@ -59,12 +61,14 @@ class Brand(object):
         'default_brand_language': 'defaultBrandLanguage',
         'email_content': 'emailContent',
         'error_details': 'errorDetails',
+        'is_organization_brand': 'isOrganizationBrand',
         'is_overriding_company_name': 'isOverridingCompanyName',
         'is_sending_default': 'isSendingDefault',
         'is_signing_default': 'isSigningDefault',
         'landing_pages': 'landingPages',
         'links': 'links',
         'logos': 'logos',
+        'organization_brand_logo': 'organizationBrandLogo',
         'resources': 'resources'
     }
 
@@ -82,12 +86,14 @@ class Brand(object):
         self._default_brand_language = None
         self._email_content = None
         self._error_details = None
+        self._is_organization_brand = None
         self._is_overriding_company_name = None
         self._is_sending_default = None
         self._is_signing_default = None
         self._landing_pages = None
         self._links = None
         self._logos = None
+        self._organization_brand_logo = None
         self._resources = None
         self.discriminator = None
 
@@ -99,12 +105,14 @@ class Brand(object):
         setattr(self, "_{}".format('default_brand_language'), kwargs.get('default_brand_language', None))
         setattr(self, "_{}".format('email_content'), kwargs.get('email_content', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
+        setattr(self, "_{}".format('is_organization_brand'), kwargs.get('is_organization_brand', None))
         setattr(self, "_{}".format('is_overriding_company_name'), kwargs.get('is_overriding_company_name', None))
         setattr(self, "_{}".format('is_sending_default'), kwargs.get('is_sending_default', None))
         setattr(self, "_{}".format('is_signing_default'), kwargs.get('is_signing_default', None))
         setattr(self, "_{}".format('landing_pages'), kwargs.get('landing_pages', None))
         setattr(self, "_{}".format('links'), kwargs.get('links', None))
         setattr(self, "_{}".format('logos'), kwargs.get('logos', None))
+        setattr(self, "_{}".format('organization_brand_logo'), kwargs.get('organization_brand_logo', None))
         setattr(self, "_{}".format('resources'), kwargs.get('resources', None))
 
     @property
@@ -292,6 +300,29 @@ class Brand(object):
         self._error_details = error_details
 
     @property
+    def is_organization_brand(self):
+        """Gets the is_organization_brand of this Brand.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_organization_brand of this Brand.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_organization_brand
+
+    @is_organization_brand.setter
+    def is_organization_brand(self, is_organization_brand):
+        """Sets the is_organization_brand of this Brand.
+
+          # noqa: E501
+
+        :param is_organization_brand: The is_organization_brand of this Brand.  # noqa: E501
+        :type: str
+        """
+
+        self._is_organization_brand = is_organization_brand
+
+    @property
     def is_overriding_company_name(self):
         """Gets the is_overriding_company_name of this Brand.  # noqa: E501
 
@@ -428,6 +459,32 @@ class Brand(object):
         """
 
         self._logos = logos
+
+    @property
+    def organization_brand_logo(self):
+        """Gets the organization_brand_logo of this Brand.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The organization_brand_logo of this Brand.  # noqa: E501
+        :rtype: str
+        """
+        return self._organization_brand_logo
+
+    @organization_brand_logo.setter
+    def organization_brand_logo(self, organization_brand_logo):
+        """Sets the organization_brand_logo of this Brand.
+
+          # noqa: E501
+
+        :param organization_brand_logo: The organization_brand_logo of this Brand.  # noqa: E501
+        :type: str
+        """
+        if (self._configuration.client_side_validation and
+                organization_brand_logo is not None and not re.search(r'^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', organization_brand_logo)):  # noqa: E501
+            raise ValueError(r"Invalid value for `organization_brand_logo`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
+
+        self._organization_brand_logo = organization_brand_logo
 
     @property
     def resources(self):

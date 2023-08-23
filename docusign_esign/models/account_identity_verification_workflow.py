@@ -36,6 +36,8 @@ class AccountIdentityVerificationWorkflow(object):
         'default_description': 'str',
         'default_name': 'str',
         'input_options': 'list[AccountIdentityInputOption]',
+        'is_disabled': 'str',
+        'owner_type': 'str',
         'signature_provider': 'AccountSignatureProvider',
         'steps': 'list[AccountIdentityVerificationStep]',
         'workflow_id': 'str',
@@ -47,6 +49,8 @@ class AccountIdentityVerificationWorkflow(object):
         'default_description': 'defaultDescription',
         'default_name': 'defaultName',
         'input_options': 'inputOptions',
+        'is_disabled': 'isDisabled',
+        'owner_type': 'ownerType',
         'signature_provider': 'signatureProvider',
         'steps': 'steps',
         'workflow_id': 'workflowId',
@@ -63,6 +67,8 @@ class AccountIdentityVerificationWorkflow(object):
         self._default_description = None
         self._default_name = None
         self._input_options = None
+        self._is_disabled = None
+        self._owner_type = None
         self._signature_provider = None
         self._steps = None
         self._workflow_id = None
@@ -73,6 +79,8 @@ class AccountIdentityVerificationWorkflow(object):
         setattr(self, "_{}".format('default_description'), kwargs.get('default_description', None))
         setattr(self, "_{}".format('default_name'), kwargs.get('default_name', None))
         setattr(self, "_{}".format('input_options'), kwargs.get('input_options', None))
+        setattr(self, "_{}".format('is_disabled'), kwargs.get('is_disabled', None))
+        setattr(self, "_{}".format('owner_type'), kwargs.get('owner_type', None))
         setattr(self, "_{}".format('signature_provider'), kwargs.get('signature_provider', None))
         setattr(self, "_{}".format('steps'), kwargs.get('steps', None))
         setattr(self, "_{}".format('workflow_id'), kwargs.get('workflow_id', None))
@@ -147,6 +155,52 @@ class AccountIdentityVerificationWorkflow(object):
         """
 
         self._input_options = input_options
+
+    @property
+    def is_disabled(self):
+        """Gets the is_disabled of this AccountIdentityVerificationWorkflow.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_disabled of this AccountIdentityVerificationWorkflow.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_disabled
+
+    @is_disabled.setter
+    def is_disabled(self, is_disabled):
+        """Sets the is_disabled of this AccountIdentityVerificationWorkflow.
+
+          # noqa: E501
+
+        :param is_disabled: The is_disabled of this AccountIdentityVerificationWorkflow.  # noqa: E501
+        :type: str
+        """
+
+        self._is_disabled = is_disabled
+
+    @property
+    def owner_type(self):
+        """Gets the owner_type of this AccountIdentityVerificationWorkflow.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The owner_type of this AccountIdentityVerificationWorkflow.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner_type
+
+    @owner_type.setter
+    def owner_type(self, owner_type):
+        """Sets the owner_type of this AccountIdentityVerificationWorkflow.
+
+          # noqa: E501
+
+        :param owner_type: The owner_type of this AccountIdentityVerificationWorkflow.  # noqa: E501
+        :type: str
+        """
+
+        self._owner_type = owner_type
 
     @property
     def signature_provider(self):

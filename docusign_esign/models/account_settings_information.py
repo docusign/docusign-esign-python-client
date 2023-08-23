@@ -58,14 +58,16 @@ class AccountSettingsInformation(object):
         'allow_account_management_granular_metadata': 'SettingsMetadata',
         'allow_account_member_name_change': 'str',
         'allow_account_member_name_change_metadata': 'SettingsMetadata',
+        'allow_ace': 'str',
+        'allow_ace_metadata': 'SettingsMetadata',
         'allow_advanced_recipient_routing_conditional': 'str',
         'allow_advanced_recipient_routing_conditional_metadata': 'SettingsMetadata',
         'allow_agent_name_email_edit': 'str',
         'allow_agent_name_email_edit_metadata': 'SettingsMetadata',
         'allow_agreement_actions': 'str',
         'allow_agreement_actions_metadata': 'SettingsMetadata',
-        'allow_agreement_orchestration_workflows': 'str',
-        'allow_agreement_orchestration_workflows_metadata': 'SettingsMetadata',
+        'allow_agreement_orchestrations': 'str',
+        'allow_agreement_orchestrations_metadata': 'SettingsMetadata',
         'allow_auto_nav_settings': 'str',
         'allow_auto_nav_settings_metadata': 'SettingsMetadata',
         'allow_auto_tagging': 'str',
@@ -75,6 +77,7 @@ class AccountSettingsInformation(object):
         'allow_cd_withdraw': 'str',
         'allow_cd_withdraw_metadata': 'SettingsMetadata',
         'allow_connect_http_listener_configs': 'str',
+        'allow_connect_identity_verification_ui': 'str',
         'allow_connect_o_auth_ui': 'str',
         'allow_connect_send_finish_later': 'str',
         'allow_connect_send_finish_later_metadata': 'SettingsMetadata',
@@ -125,6 +128,8 @@ class AccountSettingsInformation(object):
         'allow_idv_for_eu_qualified_signatures_metadata': 'SettingsMetadata',
         'allow_idv_level1': 'str',
         'allow_idv_level1_metadata': 'SettingsMetadata',
+        'allow_idv_level1_trial': 'str',
+        'allow_idv_level1_trial_metadata': 'SettingsMetadata',
         'allow_idv_level2': 'str',
         'allow_idv_level2_metadata': 'SettingsMetadata',
         'allow_idv_level3': 'str',
@@ -158,8 +163,8 @@ class AccountSettingsInformation(object):
         'allow_open_trust_signer_certificate': 'str',
         'allow_open_trust_signer_certificate_metadata': 'SettingsMetadata',
         'allow_organization_docusign_monitor': 'str',
-        'allow_organization_docusign_monitor_lite': 'str',
-        'allow_organization_docusign_monitor_lite_metadata': 'SettingsMetadata',
+        'allow_organization_docusign_monitor_free': 'str',
+        'allow_organization_docusign_monitor_free_metadata': 'SettingsMetadata',
         'allow_organization_docusign_monitor_metadata': 'SettingsMetadata',
         'allow_organization_domain_user_management': 'str',
         'allow_organization_domain_user_management_metadata': 'SettingsMetadata',
@@ -239,6 +244,8 @@ class AccountSettingsInformation(object):
         'allow_third_party_electronic_notary_metadata': 'SettingsMetadata',
         'allow_transactions_workspace': 'str',
         'allow_transactions_workspace_metadata': 'SettingsMetadata',
+        'allow_transactions_workspace_original': 'str',
+        'allow_transactions_workspace_original_metadata': 'SettingsMetadata',
         'allow_users_to_access_directory': 'str',
         'allow_users_to_access_directory_metadata': 'SettingsMetadata',
         'allow_value_insights': 'str',
@@ -330,6 +337,8 @@ class AccountSettingsInformation(object):
         'document_retention_purge_tabs': 'str',
         'document_visibility': 'str',
         'document_visibility_metadata': 'SettingsMetadata',
+        'draft_envelope_retention': 'str',
+        'draft_envelope_retention_metadata': 'SettingsMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option': 'str',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'str',
         'dss_sign_29182_slide_up_bar_radmin_option': 'str',
@@ -409,6 +418,12 @@ class AccountSettingsInformation(object):
         'enable_id_fx_phone_authentication_metadata': 'SettingsMetadata',
         'enable_idfx_phone_auth_signature_auth_status': 'str',
         'enable_idfx_phone_auth_signature_auth_status_metadata': 'SettingsMetadata',
+        'enable_inbox_browse_views_powered_by_elastic_search': 'str',
+        'enable_inbox_browse_views_powered_by_elastic_search_metadata': 'SettingsMetadata',
+        'enable_inbox_relevance_sort': 'str',
+        'enable_inbox_relevance_sort_for_recent_accounts': 'str',
+        'enable_inbox_relevance_sort_for_recent_accounts_metadata': 'SettingsMetadata',
+        'enable_inbox_relevance_sort_metadata': 'SettingsMetadata',
         'enable_in_browser_editor': 'str',
         'enable_in_browser_editor_metadata': 'SettingsMetadata',
         'enable_key_terms_suggestions_by_document_type': 'str',
@@ -438,6 +453,8 @@ class AccountSettingsInformation(object):
         'enable_scheduled_release_metadata': 'SettingsMetadata',
         'enable_search': 'str',
         'enable_search_metadata': 'SettingsMetadata',
+        'enable_search_service_azure_uri': 'str',
+        'enable_search_service_azure_uri_metadata': 'SettingsMetadata',
         'enable_search_site_specific_api': 'str',
         'enable_search_site_specific_api_metadata': 'SettingsMetadata',
         'enable_search_ui': 'str',
@@ -483,6 +500,8 @@ class AccountSettingsInformation(object):
         'enable_transaction_point_metadata': 'SettingsMetadata',
         'enable_vaulting': 'str',
         'enable_vaulting_metadata': 'SettingsMetadata',
+        'enable_web_forms_separate_user_permissions': 'str',
+        'enable_web_forms_separate_user_permissions_metadata': 'SettingsMetadata',
         'enable_witnessing': 'str',
         'enable_witnessing_metadata': 'SettingsMetadata',
         'enforce_template_name_uniqueness': 'str',
@@ -714,6 +733,8 @@ class AccountSettingsInformation(object):
         'use_new_envelope_search_metadata': 'SettingsMetadata',
         'use_new_envelope_search_only_when_searching_after_date': 'str',
         'use_new_envelope_search_only_when_searching_after_date_metadata': 'SettingsMetadata',
+        'use_new_envelope_search_only_with_search_term': 'str',
+        'use_new_envelope_search_only_with_search_term_metadata': 'SettingsMetadata',
         'use_safe_signer_certificates': 'str',
         'use_safe_signer_certificates_metadata': 'SettingsMetadata',
         'uses_api': 'str',
@@ -765,14 +786,16 @@ class AccountSettingsInformation(object):
         'allow_account_management_granular_metadata': 'allowAccountManagementGranularMetadata',
         'allow_account_member_name_change': 'allowAccountMemberNameChange',
         'allow_account_member_name_change_metadata': 'allowAccountMemberNameChangeMetadata',
+        'allow_ace': 'allowACE',
+        'allow_ace_metadata': 'allowACEMetadata',
         'allow_advanced_recipient_routing_conditional': 'allowAdvancedRecipientRoutingConditional',
         'allow_advanced_recipient_routing_conditional_metadata': 'allowAdvancedRecipientRoutingConditionalMetadata',
         'allow_agent_name_email_edit': 'allowAgentNameEmailEdit',
         'allow_agent_name_email_edit_metadata': 'allowAgentNameEmailEditMetadata',
         'allow_agreement_actions': 'allowAgreementActions',
         'allow_agreement_actions_metadata': 'allowAgreementActionsMetadata',
-        'allow_agreement_orchestration_workflows': 'allowAgreementOrchestrationWorkflows',
-        'allow_agreement_orchestration_workflows_metadata': 'allowAgreementOrchestrationWorkflowsMetadata',
+        'allow_agreement_orchestrations': 'allowAgreementOrchestrations',
+        'allow_agreement_orchestrations_metadata': 'allowAgreementOrchestrationsMetadata',
         'allow_auto_nav_settings': 'allowAutoNavSettings',
         'allow_auto_nav_settings_metadata': 'allowAutoNavSettingsMetadata',
         'allow_auto_tagging': 'allowAutoTagging',
@@ -782,6 +805,7 @@ class AccountSettingsInformation(object):
         'allow_cd_withdraw': 'allowCDWithdraw',
         'allow_cd_withdraw_metadata': 'allowCDWithdrawMetadata',
         'allow_connect_http_listener_configs': 'allowConnectHttpListenerConfigs',
+        'allow_connect_identity_verification_ui': 'AllowConnectIdentityVerificationUI',
         'allow_connect_o_auth_ui': 'allowConnectOAuthUI',
         'allow_connect_send_finish_later': 'allowConnectSendFinishLater',
         'allow_connect_send_finish_later_metadata': 'allowConnectSendFinishLaterMetadata',
@@ -832,6 +856,8 @@ class AccountSettingsInformation(object):
         'allow_idv_for_eu_qualified_signatures_metadata': 'allowIDVForEUQualifiedSignaturesMetadata',
         'allow_idv_level1': 'allowIDVLevel1',
         'allow_idv_level1_metadata': 'allowIDVLevel1Metadata',
+        'allow_idv_level1_trial': 'allowIDVLevel1Trial',
+        'allow_idv_level1_trial_metadata': 'allowIDVLevel1TrialMetadata',
         'allow_idv_level2': 'allowIDVLevel2',
         'allow_idv_level2_metadata': 'allowIDVLevel2Metadata',
         'allow_idv_level3': 'allowIDVLevel3',
@@ -865,8 +891,8 @@ class AccountSettingsInformation(object):
         'allow_open_trust_signer_certificate': 'allowOpenTrustSignerCertificate',
         'allow_open_trust_signer_certificate_metadata': 'allowOpenTrustSignerCertificateMetadata',
         'allow_organization_docusign_monitor': 'allowOrganizationDocusignMonitor',
-        'allow_organization_docusign_monitor_lite': 'allowOrganizationDocusignMonitorLite',
-        'allow_organization_docusign_monitor_lite_metadata': 'allowOrganizationDocusignMonitorLiteMetadata',
+        'allow_organization_docusign_monitor_free': 'allowOrganizationDocusignMonitorFree',
+        'allow_organization_docusign_monitor_free_metadata': 'allowOrganizationDocusignMonitorFreeMetadata',
         'allow_organization_docusign_monitor_metadata': 'allowOrganizationDocusignMonitorMetadata',
         'allow_organization_domain_user_management': 'allowOrganizationDomainUserManagement',
         'allow_organization_domain_user_management_metadata': 'allowOrganizationDomainUserManagementMetadata',
@@ -946,6 +972,8 @@ class AccountSettingsInformation(object):
         'allow_third_party_electronic_notary_metadata': 'allowThirdPartyElectronicNotaryMetadata',
         'allow_transactions_workspace': 'allowTransactionsWorkspace',
         'allow_transactions_workspace_metadata': 'allowTransactionsWorkspaceMetadata',
+        'allow_transactions_workspace_original': 'allowTransactionsWorkspaceOriginal',
+        'allow_transactions_workspace_original_metadata': 'allowTransactionsWorkspaceOriginalMetadata',
         'allow_users_to_access_directory': 'allowUsersToAccessDirectory',
         'allow_users_to_access_directory_metadata': 'allowUsersToAccessDirectoryMetadata',
         'allow_value_insights': 'allowValueInsights',
@@ -1037,6 +1065,8 @@ class AccountSettingsInformation(object):
         'document_retention_purge_tabs': 'documentRetentionPurgeTabs',
         'document_visibility': 'documentVisibility',
         'document_visibility_metadata': 'documentVisibilityMetadata',
+        'draft_envelope_retention': 'draftEnvelopeRetention',
+        'draft_envelope_retention_metadata': 'draftEnvelopeRetentionMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option': 'dss_EnableProvisioningPenConfiguration_RadminOption',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option': 'dss_SIGN_29182_SlideUpBar_RadminOption',
@@ -1116,6 +1146,12 @@ class AccountSettingsInformation(object):
         'enable_id_fx_phone_authentication_metadata': 'enableIDFxPhoneAuthenticationMetadata',
         'enable_idfx_phone_auth_signature_auth_status': 'enableIdfxPhoneAuthSignatureAuthStatus',
         'enable_idfx_phone_auth_signature_auth_status_metadata': 'enableIdfxPhoneAuthSignatureAuthStatusMetadata',
+        'enable_inbox_browse_views_powered_by_elastic_search': 'enableInboxBrowseViewsPoweredByElasticSearch',
+        'enable_inbox_browse_views_powered_by_elastic_search_metadata': 'enableInboxBrowseViewsPoweredByElasticSearchMetadata',
+        'enable_inbox_relevance_sort': 'enableInboxRelevanceSort',
+        'enable_inbox_relevance_sort_for_recent_accounts': 'enableInboxRelevanceSortForRecentAccounts',
+        'enable_inbox_relevance_sort_for_recent_accounts_metadata': 'enableInboxRelevanceSortForRecentAccountsMetadata',
+        'enable_inbox_relevance_sort_metadata': 'enableInboxRelevanceSortMetadata',
         'enable_in_browser_editor': 'enableInBrowserEditor',
         'enable_in_browser_editor_metadata': 'enableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type': 'enableKeyTermsSuggestionsByDocumentType',
@@ -1145,6 +1181,8 @@ class AccountSettingsInformation(object):
         'enable_scheduled_release_metadata': 'enableScheduledReleaseMetadata',
         'enable_search': 'enableSearch',
         'enable_search_metadata': 'enableSearchMetadata',
+        'enable_search_service_azure_uri': 'enableSearchServiceAzureUri',
+        'enable_search_service_azure_uri_metadata': 'enableSearchServiceAzureUriMetadata',
         'enable_search_site_specific_api': 'enableSearchSiteSpecificApi',
         'enable_search_site_specific_api_metadata': 'enableSearchSiteSpecificApiMetadata',
         'enable_search_ui': 'enableSearchUI',
@@ -1190,6 +1228,8 @@ class AccountSettingsInformation(object):
         'enable_transaction_point_metadata': 'enableTransactionPointMetadata',
         'enable_vaulting': 'enableVaulting',
         'enable_vaulting_metadata': 'enableVaultingMetadata',
+        'enable_web_forms_separate_user_permissions': 'enableWebFormsSeparateUserPermissions',
+        'enable_web_forms_separate_user_permissions_metadata': 'enableWebFormsSeparateUserPermissionsMetadata',
         'enable_witnessing': 'enableWitnessing',
         'enable_witnessing_metadata': 'enableWitnessingMetadata',
         'enforce_template_name_uniqueness': 'enforceTemplateNameUniqueness',
@@ -1421,6 +1461,8 @@ class AccountSettingsInformation(object):
         'use_new_envelope_search_metadata': 'useNewEnvelopeSearchMetadata',
         'use_new_envelope_search_only_when_searching_after_date': 'useNewEnvelopeSearchOnlyWhenSearchingAfterDate',
         'use_new_envelope_search_only_when_searching_after_date_metadata': 'useNewEnvelopeSearchOnlyWhenSearchingAfterDateMetadata',
+        'use_new_envelope_search_only_with_search_term': 'useNewEnvelopeSearchOnlyWithSearchTerm',
+        'use_new_envelope_search_only_with_search_term_metadata': 'useNewEnvelopeSearchOnlyWithSearchTermMetadata',
         'use_safe_signer_certificates': 'useSAFESignerCertificates',
         'use_safe_signer_certificates_metadata': 'useSAFESignerCertificatesMetadata',
         'uses_api': 'usesAPI',
@@ -1477,14 +1519,16 @@ class AccountSettingsInformation(object):
         self._allow_account_management_granular_metadata = None
         self._allow_account_member_name_change = None
         self._allow_account_member_name_change_metadata = None
+        self._allow_ace = None
+        self._allow_ace_metadata = None
         self._allow_advanced_recipient_routing_conditional = None
         self._allow_advanced_recipient_routing_conditional_metadata = None
         self._allow_agent_name_email_edit = None
         self._allow_agent_name_email_edit_metadata = None
         self._allow_agreement_actions = None
         self._allow_agreement_actions_metadata = None
-        self._allow_agreement_orchestration_workflows = None
-        self._allow_agreement_orchestration_workflows_metadata = None
+        self._allow_agreement_orchestrations = None
+        self._allow_agreement_orchestrations_metadata = None
         self._allow_auto_nav_settings = None
         self._allow_auto_nav_settings_metadata = None
         self._allow_auto_tagging = None
@@ -1494,6 +1538,7 @@ class AccountSettingsInformation(object):
         self._allow_cd_withdraw = None
         self._allow_cd_withdraw_metadata = None
         self._allow_connect_http_listener_configs = None
+        self._allow_connect_identity_verification_ui = None
         self._allow_connect_o_auth_ui = None
         self._allow_connect_send_finish_later = None
         self._allow_connect_send_finish_later_metadata = None
@@ -1544,6 +1589,8 @@ class AccountSettingsInformation(object):
         self._allow_idv_for_eu_qualified_signatures_metadata = None
         self._allow_idv_level1 = None
         self._allow_idv_level1_metadata = None
+        self._allow_idv_level1_trial = None
+        self._allow_idv_level1_trial_metadata = None
         self._allow_idv_level2 = None
         self._allow_idv_level2_metadata = None
         self._allow_idv_level3 = None
@@ -1577,8 +1624,8 @@ class AccountSettingsInformation(object):
         self._allow_open_trust_signer_certificate = None
         self._allow_open_trust_signer_certificate_metadata = None
         self._allow_organization_docusign_monitor = None
-        self._allow_organization_docusign_monitor_lite = None
-        self._allow_organization_docusign_monitor_lite_metadata = None
+        self._allow_organization_docusign_monitor_free = None
+        self._allow_organization_docusign_monitor_free_metadata = None
         self._allow_organization_docusign_monitor_metadata = None
         self._allow_organization_domain_user_management = None
         self._allow_organization_domain_user_management_metadata = None
@@ -1658,6 +1705,8 @@ class AccountSettingsInformation(object):
         self._allow_third_party_electronic_notary_metadata = None
         self._allow_transactions_workspace = None
         self._allow_transactions_workspace_metadata = None
+        self._allow_transactions_workspace_original = None
+        self._allow_transactions_workspace_original_metadata = None
         self._allow_users_to_access_directory = None
         self._allow_users_to_access_directory_metadata = None
         self._allow_value_insights = None
@@ -1749,6 +1798,8 @@ class AccountSettingsInformation(object):
         self._document_retention_purge_tabs = None
         self._document_visibility = None
         self._document_visibility_metadata = None
+        self._draft_envelope_retention = None
+        self._draft_envelope_retention_metadata = None
         self._dss_enable_provisioning_pen_configuration_radmin_option = None
         self._dss_sign_28411_enable_leave_page_prompt_radmin_option = None
         self._dss_sign_29182_slide_up_bar_radmin_option = None
@@ -1828,6 +1879,12 @@ class AccountSettingsInformation(object):
         self._enable_id_fx_phone_authentication_metadata = None
         self._enable_idfx_phone_auth_signature_auth_status = None
         self._enable_idfx_phone_auth_signature_auth_status_metadata = None
+        self._enable_inbox_browse_views_powered_by_elastic_search = None
+        self._enable_inbox_browse_views_powered_by_elastic_search_metadata = None
+        self._enable_inbox_relevance_sort = None
+        self._enable_inbox_relevance_sort_for_recent_accounts = None
+        self._enable_inbox_relevance_sort_for_recent_accounts_metadata = None
+        self._enable_inbox_relevance_sort_metadata = None
         self._enable_in_browser_editor = None
         self._enable_in_browser_editor_metadata = None
         self._enable_key_terms_suggestions_by_document_type = None
@@ -1857,6 +1914,8 @@ class AccountSettingsInformation(object):
         self._enable_scheduled_release_metadata = None
         self._enable_search = None
         self._enable_search_metadata = None
+        self._enable_search_service_azure_uri = None
+        self._enable_search_service_azure_uri_metadata = None
         self._enable_search_site_specific_api = None
         self._enable_search_site_specific_api_metadata = None
         self._enable_search_ui = None
@@ -1902,6 +1961,8 @@ class AccountSettingsInformation(object):
         self._enable_transaction_point_metadata = None
         self._enable_vaulting = None
         self._enable_vaulting_metadata = None
+        self._enable_web_forms_separate_user_permissions = None
+        self._enable_web_forms_separate_user_permissions_metadata = None
         self._enable_witnessing = None
         self._enable_witnessing_metadata = None
         self._enforce_template_name_uniqueness = None
@@ -2133,6 +2194,8 @@ class AccountSettingsInformation(object):
         self._use_new_envelope_search_metadata = None
         self._use_new_envelope_search_only_when_searching_after_date = None
         self._use_new_envelope_search_only_when_searching_after_date_metadata = None
+        self._use_new_envelope_search_only_with_search_term = None
+        self._use_new_envelope_search_only_with_search_term_metadata = None
         self._use_safe_signer_certificates = None
         self._use_safe_signer_certificates_metadata = None
         self._uses_api = None
@@ -2183,14 +2246,16 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_account_management_granular_metadata'), kwargs.get('allow_account_management_granular_metadata', None))
         setattr(self, "_{}".format('allow_account_member_name_change'), kwargs.get('allow_account_member_name_change', None))
         setattr(self, "_{}".format('allow_account_member_name_change_metadata'), kwargs.get('allow_account_member_name_change_metadata', None))
+        setattr(self, "_{}".format('allow_ace'), kwargs.get('allow_ace', None))
+        setattr(self, "_{}".format('allow_ace_metadata'), kwargs.get('allow_ace_metadata', None))
         setattr(self, "_{}".format('allow_advanced_recipient_routing_conditional'), kwargs.get('allow_advanced_recipient_routing_conditional', None))
         setattr(self, "_{}".format('allow_advanced_recipient_routing_conditional_metadata'), kwargs.get('allow_advanced_recipient_routing_conditional_metadata', None))
         setattr(self, "_{}".format('allow_agent_name_email_edit'), kwargs.get('allow_agent_name_email_edit', None))
         setattr(self, "_{}".format('allow_agent_name_email_edit_metadata'), kwargs.get('allow_agent_name_email_edit_metadata', None))
         setattr(self, "_{}".format('allow_agreement_actions'), kwargs.get('allow_agreement_actions', None))
         setattr(self, "_{}".format('allow_agreement_actions_metadata'), kwargs.get('allow_agreement_actions_metadata', None))
-        setattr(self, "_{}".format('allow_agreement_orchestration_workflows'), kwargs.get('allow_agreement_orchestration_workflows', None))
-        setattr(self, "_{}".format('allow_agreement_orchestration_workflows_metadata'), kwargs.get('allow_agreement_orchestration_workflows_metadata', None))
+        setattr(self, "_{}".format('allow_agreement_orchestrations'), kwargs.get('allow_agreement_orchestrations', None))
+        setattr(self, "_{}".format('allow_agreement_orchestrations_metadata'), kwargs.get('allow_agreement_orchestrations_metadata', None))
         setattr(self, "_{}".format('allow_auto_nav_settings'), kwargs.get('allow_auto_nav_settings', None))
         setattr(self, "_{}".format('allow_auto_nav_settings_metadata'), kwargs.get('allow_auto_nav_settings_metadata', None))
         setattr(self, "_{}".format('allow_auto_tagging'), kwargs.get('allow_auto_tagging', None))
@@ -2200,6 +2265,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_cd_withdraw'), kwargs.get('allow_cd_withdraw', None))
         setattr(self, "_{}".format('allow_cd_withdraw_metadata'), kwargs.get('allow_cd_withdraw_metadata', None))
         setattr(self, "_{}".format('allow_connect_http_listener_configs'), kwargs.get('allow_connect_http_listener_configs', None))
+        setattr(self, "_{}".format('allow_connect_identity_verification_ui'), kwargs.get('allow_connect_identity_verification_ui', None))
         setattr(self, "_{}".format('allow_connect_o_auth_ui'), kwargs.get('allow_connect_o_auth_ui', None))
         setattr(self, "_{}".format('allow_connect_send_finish_later'), kwargs.get('allow_connect_send_finish_later', None))
         setattr(self, "_{}".format('allow_connect_send_finish_later_metadata'), kwargs.get('allow_connect_send_finish_later_metadata', None))
@@ -2250,6 +2316,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_idv_for_eu_qualified_signatures_metadata'), kwargs.get('allow_idv_for_eu_qualified_signatures_metadata', None))
         setattr(self, "_{}".format('allow_idv_level1'), kwargs.get('allow_idv_level1', None))
         setattr(self, "_{}".format('allow_idv_level1_metadata'), kwargs.get('allow_idv_level1_metadata', None))
+        setattr(self, "_{}".format('allow_idv_level1_trial'), kwargs.get('allow_idv_level1_trial', None))
+        setattr(self, "_{}".format('allow_idv_level1_trial_metadata'), kwargs.get('allow_idv_level1_trial_metadata', None))
         setattr(self, "_{}".format('allow_idv_level2'), kwargs.get('allow_idv_level2', None))
         setattr(self, "_{}".format('allow_idv_level2_metadata'), kwargs.get('allow_idv_level2_metadata', None))
         setattr(self, "_{}".format('allow_idv_level3'), kwargs.get('allow_idv_level3', None))
@@ -2283,8 +2351,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_open_trust_signer_certificate'), kwargs.get('allow_open_trust_signer_certificate', None))
         setattr(self, "_{}".format('allow_open_trust_signer_certificate_metadata'), kwargs.get('allow_open_trust_signer_certificate_metadata', None))
         setattr(self, "_{}".format('allow_organization_docusign_monitor'), kwargs.get('allow_organization_docusign_monitor', None))
-        setattr(self, "_{}".format('allow_organization_docusign_monitor_lite'), kwargs.get('allow_organization_docusign_monitor_lite', None))
-        setattr(self, "_{}".format('allow_organization_docusign_monitor_lite_metadata'), kwargs.get('allow_organization_docusign_monitor_lite_metadata', None))
+        setattr(self, "_{}".format('allow_organization_docusign_monitor_free'), kwargs.get('allow_organization_docusign_monitor_free', None))
+        setattr(self, "_{}".format('allow_organization_docusign_monitor_free_metadata'), kwargs.get('allow_organization_docusign_monitor_free_metadata', None))
         setattr(self, "_{}".format('allow_organization_docusign_monitor_metadata'), kwargs.get('allow_organization_docusign_monitor_metadata', None))
         setattr(self, "_{}".format('allow_organization_domain_user_management'), kwargs.get('allow_organization_domain_user_management', None))
         setattr(self, "_{}".format('allow_organization_domain_user_management_metadata'), kwargs.get('allow_organization_domain_user_management_metadata', None))
@@ -2364,6 +2432,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_third_party_electronic_notary_metadata'), kwargs.get('allow_third_party_electronic_notary_metadata', None))
         setattr(self, "_{}".format('allow_transactions_workspace'), kwargs.get('allow_transactions_workspace', None))
         setattr(self, "_{}".format('allow_transactions_workspace_metadata'), kwargs.get('allow_transactions_workspace_metadata', None))
+        setattr(self, "_{}".format('allow_transactions_workspace_original'), kwargs.get('allow_transactions_workspace_original', None))
+        setattr(self, "_{}".format('allow_transactions_workspace_original_metadata'), kwargs.get('allow_transactions_workspace_original_metadata', None))
         setattr(self, "_{}".format('allow_users_to_access_directory'), kwargs.get('allow_users_to_access_directory', None))
         setattr(self, "_{}".format('allow_users_to_access_directory_metadata'), kwargs.get('allow_users_to_access_directory_metadata', None))
         setattr(self, "_{}".format('allow_value_insights'), kwargs.get('allow_value_insights', None))
@@ -2455,6 +2525,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('document_retention_purge_tabs'), kwargs.get('document_retention_purge_tabs', None))
         setattr(self, "_{}".format('document_visibility'), kwargs.get('document_visibility', None))
         setattr(self, "_{}".format('document_visibility_metadata'), kwargs.get('document_visibility_metadata', None))
+        setattr(self, "_{}".format('draft_envelope_retention'), kwargs.get('draft_envelope_retention', None))
+        setattr(self, "_{}".format('draft_envelope_retention_metadata'), kwargs.get('draft_envelope_retention_metadata', None))
         setattr(self, "_{}".format('dss_enable_provisioning_pen_configuration_radmin_option'), kwargs.get('dss_enable_provisioning_pen_configuration_radmin_option', None))
         setattr(self, "_{}".format('dss_sign_28411_enable_leave_page_prompt_radmin_option'), kwargs.get('dss_sign_28411_enable_leave_page_prompt_radmin_option', None))
         setattr(self, "_{}".format('dss_sign_29182_slide_up_bar_radmin_option'), kwargs.get('dss_sign_29182_slide_up_bar_radmin_option', None))
@@ -2534,6 +2606,12 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_id_fx_phone_authentication_metadata'), kwargs.get('enable_id_fx_phone_authentication_metadata', None))
         setattr(self, "_{}".format('enable_idfx_phone_auth_signature_auth_status'), kwargs.get('enable_idfx_phone_auth_signature_auth_status', None))
         setattr(self, "_{}".format('enable_idfx_phone_auth_signature_auth_status_metadata'), kwargs.get('enable_idfx_phone_auth_signature_auth_status_metadata', None))
+        setattr(self, "_{}".format('enable_inbox_browse_views_powered_by_elastic_search'), kwargs.get('enable_inbox_browse_views_powered_by_elastic_search', None))
+        setattr(self, "_{}".format('enable_inbox_browse_views_powered_by_elastic_search_metadata'), kwargs.get('enable_inbox_browse_views_powered_by_elastic_search_metadata', None))
+        setattr(self, "_{}".format('enable_inbox_relevance_sort'), kwargs.get('enable_inbox_relevance_sort', None))
+        setattr(self, "_{}".format('enable_inbox_relevance_sort_for_recent_accounts'), kwargs.get('enable_inbox_relevance_sort_for_recent_accounts', None))
+        setattr(self, "_{}".format('enable_inbox_relevance_sort_for_recent_accounts_metadata'), kwargs.get('enable_inbox_relevance_sort_for_recent_accounts_metadata', None))
+        setattr(self, "_{}".format('enable_inbox_relevance_sort_metadata'), kwargs.get('enable_inbox_relevance_sort_metadata', None))
         setattr(self, "_{}".format('enable_in_browser_editor'), kwargs.get('enable_in_browser_editor', None))
         setattr(self, "_{}".format('enable_in_browser_editor_metadata'), kwargs.get('enable_in_browser_editor_metadata', None))
         setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type'), kwargs.get('enable_key_terms_suggestions_by_document_type', None))
@@ -2563,6 +2641,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_scheduled_release_metadata'), kwargs.get('enable_scheduled_release_metadata', None))
         setattr(self, "_{}".format('enable_search'), kwargs.get('enable_search', None))
         setattr(self, "_{}".format('enable_search_metadata'), kwargs.get('enable_search_metadata', None))
+        setattr(self, "_{}".format('enable_search_service_azure_uri'), kwargs.get('enable_search_service_azure_uri', None))
+        setattr(self, "_{}".format('enable_search_service_azure_uri_metadata'), kwargs.get('enable_search_service_azure_uri_metadata', None))
         setattr(self, "_{}".format('enable_search_site_specific_api'), kwargs.get('enable_search_site_specific_api', None))
         setattr(self, "_{}".format('enable_search_site_specific_api_metadata'), kwargs.get('enable_search_site_specific_api_metadata', None))
         setattr(self, "_{}".format('enable_search_ui'), kwargs.get('enable_search_ui', None))
@@ -2608,6 +2688,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_transaction_point_metadata'), kwargs.get('enable_transaction_point_metadata', None))
         setattr(self, "_{}".format('enable_vaulting'), kwargs.get('enable_vaulting', None))
         setattr(self, "_{}".format('enable_vaulting_metadata'), kwargs.get('enable_vaulting_metadata', None))
+        setattr(self, "_{}".format('enable_web_forms_separate_user_permissions'), kwargs.get('enable_web_forms_separate_user_permissions', None))
+        setattr(self, "_{}".format('enable_web_forms_separate_user_permissions_metadata'), kwargs.get('enable_web_forms_separate_user_permissions_metadata', None))
         setattr(self, "_{}".format('enable_witnessing'), kwargs.get('enable_witnessing', None))
         setattr(self, "_{}".format('enable_witnessing_metadata'), kwargs.get('enable_witnessing_metadata', None))
         setattr(self, "_{}".format('enforce_template_name_uniqueness'), kwargs.get('enforce_template_name_uniqueness', None))
@@ -2839,6 +2921,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('use_new_envelope_search_metadata'), kwargs.get('use_new_envelope_search_metadata', None))
         setattr(self, "_{}".format('use_new_envelope_search_only_when_searching_after_date'), kwargs.get('use_new_envelope_search_only_when_searching_after_date', None))
         setattr(self, "_{}".format('use_new_envelope_search_only_when_searching_after_date_metadata'), kwargs.get('use_new_envelope_search_only_when_searching_after_date_metadata', None))
+        setattr(self, "_{}".format('use_new_envelope_search_only_with_search_term'), kwargs.get('use_new_envelope_search_only_with_search_term', None))
+        setattr(self, "_{}".format('use_new_envelope_search_only_with_search_term_metadata'), kwargs.get('use_new_envelope_search_only_with_search_term_metadata', None))
         setattr(self, "_{}".format('use_safe_signer_certificates'), kwargs.get('use_safe_signer_certificates', None))
         setattr(self, "_{}".format('use_safe_signer_certificates_metadata'), kwargs.get('use_safe_signer_certificates_metadata', None))
         setattr(self, "_{}".format('uses_api'), kwargs.get('uses_api', None))
@@ -3439,6 +3523,52 @@ class AccountSettingsInformation(object):
         self._allow_account_member_name_change_metadata = allow_account_member_name_change_metadata
 
     @property
+    def allow_ace(self):
+        """Gets the allow_ace of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_ace of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_ace
+
+    @allow_ace.setter
+    def allow_ace(self, allow_ace):
+        """Sets the allow_ace of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_ace: The allow_ace of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_ace = allow_ace
+
+    @property
+    def allow_ace_metadata(self):
+        """Gets the allow_ace_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_ace_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_ace_metadata
+
+    @allow_ace_metadata.setter
+    def allow_ace_metadata(self, allow_ace_metadata):
+        """Sets the allow_ace_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_ace_metadata: The allow_ace_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_ace_metadata = allow_ace_metadata
+
+    @property
     def allow_advanced_recipient_routing_conditional(self):
         """Gets the allow_advanced_recipient_routing_conditional of this AccountSettingsInformation.  # noqa: E501
 
@@ -3577,50 +3707,50 @@ class AccountSettingsInformation(object):
         self._allow_agreement_actions_metadata = allow_agreement_actions_metadata
 
     @property
-    def allow_agreement_orchestration_workflows(self):
-        """Gets the allow_agreement_orchestration_workflows of this AccountSettingsInformation.  # noqa: E501
+    def allow_agreement_orchestrations(self):
+        """Gets the allow_agreement_orchestrations of this AccountSettingsInformation.  # noqa: E501
 
           # noqa: E501
 
-        :return: The allow_agreement_orchestration_workflows of this AccountSettingsInformation.  # noqa: E501
+        :return: The allow_agreement_orchestrations of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
         """
-        return self._allow_agreement_orchestration_workflows
+        return self._allow_agreement_orchestrations
 
-    @allow_agreement_orchestration_workflows.setter
-    def allow_agreement_orchestration_workflows(self, allow_agreement_orchestration_workflows):
-        """Sets the allow_agreement_orchestration_workflows of this AccountSettingsInformation.
+    @allow_agreement_orchestrations.setter
+    def allow_agreement_orchestrations(self, allow_agreement_orchestrations):
+        """Sets the allow_agreement_orchestrations of this AccountSettingsInformation.
 
           # noqa: E501
 
-        :param allow_agreement_orchestration_workflows: The allow_agreement_orchestration_workflows of this AccountSettingsInformation.  # noqa: E501
+        :param allow_agreement_orchestrations: The allow_agreement_orchestrations of this AccountSettingsInformation.  # noqa: E501
         :type: str
         """
 
-        self._allow_agreement_orchestration_workflows = allow_agreement_orchestration_workflows
+        self._allow_agreement_orchestrations = allow_agreement_orchestrations
 
     @property
-    def allow_agreement_orchestration_workflows_metadata(self):
-        """Gets the allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.  # noqa: E501
+    def allow_agreement_orchestrations_metadata(self):
+        """Gets the allow_agreement_orchestrations_metadata of this AccountSettingsInformation.  # noqa: E501
 
           # noqa: E501
 
-        :return: The allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.  # noqa: E501
+        :return: The allow_agreement_orchestrations_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
         """
-        return self._allow_agreement_orchestration_workflows_metadata
+        return self._allow_agreement_orchestrations_metadata
 
-    @allow_agreement_orchestration_workflows_metadata.setter
-    def allow_agreement_orchestration_workflows_metadata(self, allow_agreement_orchestration_workflows_metadata):
-        """Sets the allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.
+    @allow_agreement_orchestrations_metadata.setter
+    def allow_agreement_orchestrations_metadata(self, allow_agreement_orchestrations_metadata):
+        """Sets the allow_agreement_orchestrations_metadata of this AccountSettingsInformation.
 
           # noqa: E501
 
-        :param allow_agreement_orchestration_workflows_metadata: The allow_agreement_orchestration_workflows_metadata of this AccountSettingsInformation.  # noqa: E501
+        :param allow_agreement_orchestrations_metadata: The allow_agreement_orchestrations_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
-        self._allow_agreement_orchestration_workflows_metadata = allow_agreement_orchestration_workflows_metadata
+        self._allow_agreement_orchestrations_metadata = allow_agreement_orchestrations_metadata
 
     @property
     def allow_auto_nav_settings(self):
@@ -3828,6 +3958,29 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_connect_http_listener_configs = allow_connect_http_listener_configs
+
+    @property
+    def allow_connect_identity_verification_ui(self):
+        """Gets the allow_connect_identity_verification_ui of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_connect_identity_verification_ui of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_connect_identity_verification_ui
+
+    @allow_connect_identity_verification_ui.setter
+    def allow_connect_identity_verification_ui(self, allow_connect_identity_verification_ui):
+        """Sets the allow_connect_identity_verification_ui of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_connect_identity_verification_ui: The allow_connect_identity_verification_ui of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_connect_identity_verification_ui = allow_connect_identity_verification_ui
 
     @property
     def allow_connect_o_auth_ui(self):
@@ -4980,6 +5133,52 @@ class AccountSettingsInformation(object):
         self._allow_idv_level1_metadata = allow_idv_level1_metadata
 
     @property
+    def allow_idv_level1_trial(self):
+        """Gets the allow_idv_level1_trial of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_idv_level1_trial of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_idv_level1_trial
+
+    @allow_idv_level1_trial.setter
+    def allow_idv_level1_trial(self, allow_idv_level1_trial):
+        """Sets the allow_idv_level1_trial of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_idv_level1_trial: The allow_idv_level1_trial of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_idv_level1_trial = allow_idv_level1_trial
+
+    @property
+    def allow_idv_level1_trial_metadata(self):
+        """Gets the allow_idv_level1_trial_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_idv_level1_trial_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_idv_level1_trial_metadata
+
+    @allow_idv_level1_trial_metadata.setter
+    def allow_idv_level1_trial_metadata(self, allow_idv_level1_trial_metadata):
+        """Sets the allow_idv_level1_trial_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_idv_level1_trial_metadata: The allow_idv_level1_trial_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_idv_level1_trial_metadata = allow_idv_level1_trial_metadata
+
+    @property
     def allow_idv_level2(self):
         """Gets the allow_idv_level2 of this AccountSettingsInformation.  # noqa: E501
 
@@ -5739,50 +5938,50 @@ class AccountSettingsInformation(object):
         self._allow_organization_docusign_monitor = allow_organization_docusign_monitor
 
     @property
-    def allow_organization_docusign_monitor_lite(self):
-        """Gets the allow_organization_docusign_monitor_lite of this AccountSettingsInformation.  # noqa: E501
+    def allow_organization_docusign_monitor_free(self):
+        """Gets the allow_organization_docusign_monitor_free of this AccountSettingsInformation.  # noqa: E501
 
           # noqa: E501
 
-        :return: The allow_organization_docusign_monitor_lite of this AccountSettingsInformation.  # noqa: E501
+        :return: The allow_organization_docusign_monitor_free of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
         """
-        return self._allow_organization_docusign_monitor_lite
+        return self._allow_organization_docusign_monitor_free
 
-    @allow_organization_docusign_monitor_lite.setter
-    def allow_organization_docusign_monitor_lite(self, allow_organization_docusign_monitor_lite):
-        """Sets the allow_organization_docusign_monitor_lite of this AccountSettingsInformation.
+    @allow_organization_docusign_monitor_free.setter
+    def allow_organization_docusign_monitor_free(self, allow_organization_docusign_monitor_free):
+        """Sets the allow_organization_docusign_monitor_free of this AccountSettingsInformation.
 
           # noqa: E501
 
-        :param allow_organization_docusign_monitor_lite: The allow_organization_docusign_monitor_lite of this AccountSettingsInformation.  # noqa: E501
+        :param allow_organization_docusign_monitor_free: The allow_organization_docusign_monitor_free of this AccountSettingsInformation.  # noqa: E501
         :type: str
         """
 
-        self._allow_organization_docusign_monitor_lite = allow_organization_docusign_monitor_lite
+        self._allow_organization_docusign_monitor_free = allow_organization_docusign_monitor_free
 
     @property
-    def allow_organization_docusign_monitor_lite_metadata(self):
-        """Gets the allow_organization_docusign_monitor_lite_metadata of this AccountSettingsInformation.  # noqa: E501
+    def allow_organization_docusign_monitor_free_metadata(self):
+        """Gets the allow_organization_docusign_monitor_free_metadata of this AccountSettingsInformation.  # noqa: E501
 
           # noqa: E501
 
-        :return: The allow_organization_docusign_monitor_lite_metadata of this AccountSettingsInformation.  # noqa: E501
+        :return: The allow_organization_docusign_monitor_free_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
         """
-        return self._allow_organization_docusign_monitor_lite_metadata
+        return self._allow_organization_docusign_monitor_free_metadata
 
-    @allow_organization_docusign_monitor_lite_metadata.setter
-    def allow_organization_docusign_monitor_lite_metadata(self, allow_organization_docusign_monitor_lite_metadata):
-        """Sets the allow_organization_docusign_monitor_lite_metadata of this AccountSettingsInformation.
+    @allow_organization_docusign_monitor_free_metadata.setter
+    def allow_organization_docusign_monitor_free_metadata(self, allow_organization_docusign_monitor_free_metadata):
+        """Sets the allow_organization_docusign_monitor_free_metadata of this AccountSettingsInformation.
 
           # noqa: E501
 
-        :param allow_organization_docusign_monitor_lite_metadata: The allow_organization_docusign_monitor_lite_metadata of this AccountSettingsInformation.  # noqa: E501
+        :param allow_organization_docusign_monitor_free_metadata: The allow_organization_docusign_monitor_free_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
-        self._allow_organization_docusign_monitor_lite_metadata = allow_organization_docusign_monitor_lite_metadata
+        self._allow_organization_docusign_monitor_free_metadata = allow_organization_docusign_monitor_free_metadata
 
     @property
     def allow_organization_docusign_monitor_metadata(self):
@@ -7600,6 +7799,52 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_transactions_workspace_metadata = allow_transactions_workspace_metadata
+
+    @property
+    def allow_transactions_workspace_original(self):
+        """Gets the allow_transactions_workspace_original of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_transactions_workspace_original of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_transactions_workspace_original
+
+    @allow_transactions_workspace_original.setter
+    def allow_transactions_workspace_original(self, allow_transactions_workspace_original):
+        """Sets the allow_transactions_workspace_original of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_transactions_workspace_original: The allow_transactions_workspace_original of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_transactions_workspace_original = allow_transactions_workspace_original
+
+    @property
+    def allow_transactions_workspace_original_metadata(self):
+        """Gets the allow_transactions_workspace_original_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_transactions_workspace_original_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_transactions_workspace_original_metadata
+
+    @allow_transactions_workspace_original_metadata.setter
+    def allow_transactions_workspace_original_metadata(self, allow_transactions_workspace_original_metadata):
+        """Sets the allow_transactions_workspace_original_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_transactions_workspace_original_metadata: The allow_transactions_workspace_original_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_transactions_workspace_original_metadata = allow_transactions_workspace_original_metadata
 
     @property
     def allow_users_to_access_directory(self):
@@ -9695,6 +9940,52 @@ class AccountSettingsInformation(object):
         self._document_visibility_metadata = document_visibility_metadata
 
     @property
+    def draft_envelope_retention(self):
+        """Gets the draft_envelope_retention of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The draft_envelope_retention of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._draft_envelope_retention
+
+    @draft_envelope_retention.setter
+    def draft_envelope_retention(self, draft_envelope_retention):
+        """Sets the draft_envelope_retention of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param draft_envelope_retention: The draft_envelope_retention of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._draft_envelope_retention = draft_envelope_retention
+
+    @property
+    def draft_envelope_retention_metadata(self):
+        """Gets the draft_envelope_retention_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The draft_envelope_retention_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._draft_envelope_retention_metadata
+
+    @draft_envelope_retention_metadata.setter
+    def draft_envelope_retention_metadata(self, draft_envelope_retention_metadata):
+        """Sets the draft_envelope_retention_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param draft_envelope_retention_metadata: The draft_envelope_retention_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._draft_envelope_retention_metadata = draft_envelope_retention_metadata
+
+    @property
     def dss_enable_provisioning_pen_configuration_radmin_option(self):
         """Gets the dss_enable_provisioning_pen_configuration_radmin_option of this AccountSettingsInformation.  # noqa: E501
 
@@ -9905,7 +10196,7 @@ class AccountSettingsInformation(object):
     def enable_adm_healthcare(self):
         """Gets the enable_adm_healthcare of this AccountSettingsInformation.  # noqa: E501
 
-          # noqa: E501
+        Account Level Flag that determines the availability to use ADM Healthcare fields  # noqa: E501
 
         :return: The enable_adm_healthcare of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
@@ -9916,7 +10207,7 @@ class AccountSettingsInformation(object):
     def enable_adm_healthcare(self, enable_adm_healthcare):
         """Sets the enable_adm_healthcare of this AccountSettingsInformation.
 
-          # noqa: E501
+        Account Level Flag that determines the availability to use ADM Healthcare fields  # noqa: E501
 
         :param enable_adm_healthcare: The enable_adm_healthcare of this AccountSettingsInformation.  # noqa: E501
         :type: str
@@ -9928,7 +10219,7 @@ class AccountSettingsInformation(object):
     def enable_adm_healthcare_metadata(self):
         """Gets the enable_adm_healthcare_metadata of this AccountSettingsInformation.  # noqa: E501
 
-          # noqa: E501
+        Metadata for account Level Flag that determines the availability to use ADM Healthcare fields  # noqa: E501
 
         :return: The enable_adm_healthcare_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
@@ -9939,7 +10230,7 @@ class AccountSettingsInformation(object):
     def enable_adm_healthcare_metadata(self, enable_adm_healthcare_metadata):
         """Sets the enable_adm_healthcare_metadata of this AccountSettingsInformation.
 
-          # noqa: E501
+        Metadata for account Level Flag that determines the availability to use ADM Healthcare fields  # noqa: E501
 
         :param enable_adm_healthcare_metadata: The enable_adm_healthcare_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
@@ -11512,6 +11803,144 @@ class AccountSettingsInformation(object):
         self._enable_idfx_phone_auth_signature_auth_status_metadata = enable_idfx_phone_auth_signature_auth_status_metadata
 
     @property
+    def enable_inbox_browse_views_powered_by_elastic_search(self):
+        """Gets the enable_inbox_browse_views_powered_by_elastic_search of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_inbox_browse_views_powered_by_elastic_search of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_inbox_browse_views_powered_by_elastic_search
+
+    @enable_inbox_browse_views_powered_by_elastic_search.setter
+    def enable_inbox_browse_views_powered_by_elastic_search(self, enable_inbox_browse_views_powered_by_elastic_search):
+        """Sets the enable_inbox_browse_views_powered_by_elastic_search of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_inbox_browse_views_powered_by_elastic_search: The enable_inbox_browse_views_powered_by_elastic_search of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_inbox_browse_views_powered_by_elastic_search = enable_inbox_browse_views_powered_by_elastic_search
+
+    @property
+    def enable_inbox_browse_views_powered_by_elastic_search_metadata(self):
+        """Gets the enable_inbox_browse_views_powered_by_elastic_search_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_inbox_browse_views_powered_by_elastic_search_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_inbox_browse_views_powered_by_elastic_search_metadata
+
+    @enable_inbox_browse_views_powered_by_elastic_search_metadata.setter
+    def enable_inbox_browse_views_powered_by_elastic_search_metadata(self, enable_inbox_browse_views_powered_by_elastic_search_metadata):
+        """Sets the enable_inbox_browse_views_powered_by_elastic_search_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_inbox_browse_views_powered_by_elastic_search_metadata: The enable_inbox_browse_views_powered_by_elastic_search_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_inbox_browse_views_powered_by_elastic_search_metadata = enable_inbox_browse_views_powered_by_elastic_search_metadata
+
+    @property
+    def enable_inbox_relevance_sort(self):
+        """Gets the enable_inbox_relevance_sort of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_inbox_relevance_sort of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_inbox_relevance_sort
+
+    @enable_inbox_relevance_sort.setter
+    def enable_inbox_relevance_sort(self, enable_inbox_relevance_sort):
+        """Sets the enable_inbox_relevance_sort of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_inbox_relevance_sort: The enable_inbox_relevance_sort of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_inbox_relevance_sort = enable_inbox_relevance_sort
+
+    @property
+    def enable_inbox_relevance_sort_for_recent_accounts(self):
+        """Gets the enable_inbox_relevance_sort_for_recent_accounts of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_inbox_relevance_sort_for_recent_accounts of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_inbox_relevance_sort_for_recent_accounts
+
+    @enable_inbox_relevance_sort_for_recent_accounts.setter
+    def enable_inbox_relevance_sort_for_recent_accounts(self, enable_inbox_relevance_sort_for_recent_accounts):
+        """Sets the enable_inbox_relevance_sort_for_recent_accounts of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_inbox_relevance_sort_for_recent_accounts: The enable_inbox_relevance_sort_for_recent_accounts of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_inbox_relevance_sort_for_recent_accounts = enable_inbox_relevance_sort_for_recent_accounts
+
+    @property
+    def enable_inbox_relevance_sort_for_recent_accounts_metadata(self):
+        """Gets the enable_inbox_relevance_sort_for_recent_accounts_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_inbox_relevance_sort_for_recent_accounts_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_inbox_relevance_sort_for_recent_accounts_metadata
+
+    @enable_inbox_relevance_sort_for_recent_accounts_metadata.setter
+    def enable_inbox_relevance_sort_for_recent_accounts_metadata(self, enable_inbox_relevance_sort_for_recent_accounts_metadata):
+        """Sets the enable_inbox_relevance_sort_for_recent_accounts_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_inbox_relevance_sort_for_recent_accounts_metadata: The enable_inbox_relevance_sort_for_recent_accounts_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_inbox_relevance_sort_for_recent_accounts_metadata = enable_inbox_relevance_sort_for_recent_accounts_metadata
+
+    @property
+    def enable_inbox_relevance_sort_metadata(self):
+        """Gets the enable_inbox_relevance_sort_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_inbox_relevance_sort_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_inbox_relevance_sort_metadata
+
+    @enable_inbox_relevance_sort_metadata.setter
+    def enable_inbox_relevance_sort_metadata(self, enable_inbox_relevance_sort_metadata):
+        """Sets the enable_inbox_relevance_sort_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_inbox_relevance_sort_metadata: The enable_inbox_relevance_sort_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_inbox_relevance_sort_metadata = enable_inbox_relevance_sort_metadata
+
+    @property
     def enable_in_browser_editor(self):
         """Gets the enable_in_browser_editor of this AccountSettingsInformation.  # noqa: E501
 
@@ -12177,6 +12606,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_search_metadata = enable_search_metadata
+
+    @property
+    def enable_search_service_azure_uri(self):
+        """Gets the enable_search_service_azure_uri of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_search_service_azure_uri of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_search_service_azure_uri
+
+    @enable_search_service_azure_uri.setter
+    def enable_search_service_azure_uri(self, enable_search_service_azure_uri):
+        """Sets the enable_search_service_azure_uri of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_search_service_azure_uri: The enable_search_service_azure_uri of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_search_service_azure_uri = enable_search_service_azure_uri
+
+    @property
+    def enable_search_service_azure_uri_metadata(self):
+        """Gets the enable_search_service_azure_uri_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_search_service_azure_uri_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_search_service_azure_uri_metadata
+
+    @enable_search_service_azure_uri_metadata.setter
+    def enable_search_service_azure_uri_metadata(self, enable_search_service_azure_uri_metadata):
+        """Sets the enable_search_service_azure_uri_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_search_service_azure_uri_metadata: The enable_search_service_azure_uri_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_search_service_azure_uri_metadata = enable_search_service_azure_uri_metadata
 
     @property
     def enable_search_site_specific_api(self):
@@ -13212,6 +13687,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_vaulting_metadata = enable_vaulting_metadata
+
+    @property
+    def enable_web_forms_separate_user_permissions(self):
+        """Gets the enable_web_forms_separate_user_permissions of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_web_forms_separate_user_permissions of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_web_forms_separate_user_permissions
+
+    @enable_web_forms_separate_user_permissions.setter
+    def enable_web_forms_separate_user_permissions(self, enable_web_forms_separate_user_permissions):
+        """Sets the enable_web_forms_separate_user_permissions of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_web_forms_separate_user_permissions: The enable_web_forms_separate_user_permissions of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_web_forms_separate_user_permissions = enable_web_forms_separate_user_permissions
+
+    @property
+    def enable_web_forms_separate_user_permissions_metadata(self):
+        """Gets the enable_web_forms_separate_user_permissions_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_web_forms_separate_user_permissions_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_web_forms_separate_user_permissions_metadata
+
+    @enable_web_forms_separate_user_permissions_metadata.setter
+    def enable_web_forms_separate_user_permissions_metadata(self, enable_web_forms_separate_user_permissions_metadata):
+        """Sets the enable_web_forms_separate_user_permissions_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_web_forms_separate_user_permissions_metadata: The enable_web_forms_separate_user_permissions_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_web_forms_separate_user_permissions_metadata = enable_web_forms_separate_user_permissions_metadata
 
     @property
     def enable_witnessing(self):
@@ -18525,6 +19046,52 @@ class AccountSettingsInformation(object):
         """
 
         self._use_new_envelope_search_only_when_searching_after_date_metadata = use_new_envelope_search_only_when_searching_after_date_metadata
+
+    @property
+    def use_new_envelope_search_only_with_search_term(self):
+        """Gets the use_new_envelope_search_only_with_search_term of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_new_envelope_search_only_with_search_term of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._use_new_envelope_search_only_with_search_term
+
+    @use_new_envelope_search_only_with_search_term.setter
+    def use_new_envelope_search_only_with_search_term(self, use_new_envelope_search_only_with_search_term):
+        """Sets the use_new_envelope_search_only_with_search_term of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param use_new_envelope_search_only_with_search_term: The use_new_envelope_search_only_with_search_term of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._use_new_envelope_search_only_with_search_term = use_new_envelope_search_only_with_search_term
+
+    @property
+    def use_new_envelope_search_only_with_search_term_metadata(self):
+        """Gets the use_new_envelope_search_only_with_search_term_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The use_new_envelope_search_only_with_search_term_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._use_new_envelope_search_only_with_search_term_metadata
+
+    @use_new_envelope_search_only_with_search_term_metadata.setter
+    def use_new_envelope_search_only_with_search_term_metadata(self, use_new_envelope_search_only_with_search_term_metadata):
+        """Sets the use_new_envelope_search_only_with_search_term_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param use_new_envelope_search_only_with_search_term_metadata: The use_new_envelope_search_only_with_search_term_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._use_new_envelope_search_only_with_search_term_metadata = use_new_envelope_search_only_with_search_term_metadata
 
     @property
     def use_safe_signer_certificates(self):
