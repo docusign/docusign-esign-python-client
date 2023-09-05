@@ -480,9 +480,6 @@ class Brand(object):
         :param organization_brand_logo: The organization_brand_logo of this Brand.  # noqa: E501
         :type: str
         """
-        if (self._configuration.client_side_validation and
-                organization_brand_logo is not None and not re.search(r'^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', organization_brand_logo)):  # noqa: E501
-            raise ValueError(r"Invalid value for `organization_brand_logo`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
 
         self._organization_brand_logo = organization_brand_logo
 
