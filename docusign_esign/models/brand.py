@@ -48,7 +48,7 @@ class Brand(object):
         'landing_pages': 'list[NameValue]',
         'links': 'list[BrandLink]',
         'logos': 'BrandLogos',
-        'organization_brand_logo': 'str',
+        'organization_brand_logo': 'list[ERRORUNKNOWN]',
         'resources': 'BrandResourceUrls'
     }
 
@@ -467,7 +467,7 @@ class Brand(object):
           # noqa: E501
 
         :return: The organization_brand_logo of this Brand.  # noqa: E501
-        :rtype: str
+        :rtype: list[ERRORUNKNOWN]
         """
         return self._organization_brand_logo
 
@@ -478,7 +478,7 @@ class Brand(object):
           # noqa: E501
 
         :param organization_brand_logo: The organization_brand_logo of this Brand.  # noqa: E501
-        :type: str
+        :type: list[ERRORUNKNOWN]
         """
 
         self._organization_brand_logo = organization_brand_logo
