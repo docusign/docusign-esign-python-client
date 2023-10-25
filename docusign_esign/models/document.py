@@ -35,7 +35,6 @@ class Document(object):
     swagger_types = {
         'apply_anchor_tabs': 'str',
         'assign_tabs_to_recipient_id': 'str',
-        'authoritative_copy': 'bool',
         'display': 'str',
         'doc_gen_form_fields': 'list[DocGenFormField]',
         'document_base64': 'str',
@@ -66,7 +65,6 @@ class Document(object):
     attribute_map = {
         'apply_anchor_tabs': 'applyAnchorTabs',
         'assign_tabs_to_recipient_id': 'assignTabsToRecipientId',
-        'authoritative_copy': 'authoritativeCopy',
         'display': 'display',
         'doc_gen_form_fields': 'docGenFormFields',
         'document_base64': 'documentBase64',
@@ -102,7 +100,6 @@ class Document(object):
 
         self._apply_anchor_tabs = None
         self._assign_tabs_to_recipient_id = None
-        self._authoritative_copy = None
         self._display = None
         self._doc_gen_form_fields = None
         self._document_base64 = None
@@ -132,7 +129,6 @@ class Document(object):
 
         setattr(self, "_{}".format('apply_anchor_tabs'), kwargs.get('apply_anchor_tabs', None))
         setattr(self, "_{}".format('assign_tabs_to_recipient_id'), kwargs.get('assign_tabs_to_recipient_id', None))
-        setattr(self, "_{}".format('authoritative_copy'), kwargs.get('authoritative_copy', None))
         setattr(self, "_{}".format('display'), kwargs.get('display', None))
         setattr(self, "_{}".format('doc_gen_form_fields'), kwargs.get('doc_gen_form_fields', None))
         setattr(self, "_{}".format('document_base64'), kwargs.get('document_base64', None))
@@ -204,29 +200,6 @@ class Document(object):
         """
 
         self._assign_tabs_to_recipient_id = assign_tabs_to_recipient_id
-
-    @property
-    def authoritative_copy(self):
-        """Gets the authoritative_copy of this Document.  # noqa: E501
-
-        Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.  # noqa: E501
-
-        :return: The authoritative_copy of this Document.  # noqa: E501
-        :rtype: bool
-        """
-        return self._authoritative_copy
-
-    @authoritative_copy.setter
-    def authoritative_copy(self, authoritative_copy):
-        """Sets the authoritative_copy of this Document.
-
-        Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.  # noqa: E501
-
-        :param authoritative_copy: The authoritative_copy of this Document.  # noqa: E501
-        :type: bool
-        """
-
-        self._authoritative_copy = authoritative_copy
 
     @property
     def display(self):

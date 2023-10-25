@@ -225,10 +225,8 @@ from docusign_esign.models.diagnostics_settings_information import DiagnosticsSe
 from docusign_esign.models.direct_debit_processor_information import DirectDebitProcessorInformation
 from docusign_esign.models.dob_information_input import DobInformationInput
 from docusign_esign.models.doc_gen_form_field import DocGenFormField
-from docusign_esign.models.doc_gen_form_field_option import DocGenFormFieldOption
 from docusign_esign.models.doc_gen_form_field_request import DocGenFormFieldRequest
 from docusign_esign.models.doc_gen_form_field_response import DocGenFormFieldResponse
-from docusign_esign.models.doc_gen_form_field_validation import DocGenFormFieldValidation
 from docusign_esign.models.doc_gen_form_fields import DocGenFormFields
 from docusign_esign.models.doc_gen_syntax_error import DocGenSyntaxError
 from docusign_esign.models.document import Document
@@ -541,5 +539,6 @@ from docusign_esign.models.workspace_user import WorkspaceUser
 from docusign_esign.models.workspace_user_authorization import WorkspaceUserAuthorization
 from docusign_esign.models.zip import Zip
 from docusign_esign.models.date import Date
+
 
 configuration = Configuration()

@@ -340,7 +340,6 @@ class AccountSettingsInformation(object):
         'draft_envelope_retention': 'str',
         'draft_envelope_retention_metadata': 'SettingsMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option': 'str',
-        'dss_enable_signature_type_custom_tag_radmin_radmin_option': 'str',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'str',
         'dss_sign_29182_slide_up_bar_radmin_option': 'str',
         'email_template_version': 'str',
@@ -429,8 +428,6 @@ class AccountSettingsInformation(object):
         'enable_in_browser_editor_metadata': 'SettingsMetadata',
         'enable_key_terms_suggestions_by_document_type': 'str',
         'enable_key_terms_suggestions_by_document_type_metadata': 'SettingsMetadata',
-        'enable_large_file_support': 'str',
-        'enable_large_file_support_metadata': 'SettingsMetadata',
         'enable_participant_recipient_setting_metadata': 'SettingsMetadata',
         'enable_payment_processing': 'str',
         'enable_payment_processing_metadata': 'SettingsMetadata',
@@ -1071,7 +1068,6 @@ class AccountSettingsInformation(object):
         'draft_envelope_retention': 'draftEnvelopeRetention',
         'draft_envelope_retention_metadata': 'draftEnvelopeRetentionMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option': 'dss_EnableProvisioningPenConfiguration_RadminOption',
-        'dss_enable_signature_type_custom_tag_radmin_radmin_option': 'dss_EnableSignatureTypeCustomTagRadmin_RadminOption',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option': 'dss_SIGN_29182_SlideUpBar_RadminOption',
         'email_template_version': 'emailTemplateVersion',
@@ -1160,8 +1156,6 @@ class AccountSettingsInformation(object):
         'enable_in_browser_editor_metadata': 'enableInBrowserEditorMetadata',
         'enable_key_terms_suggestions_by_document_type': 'enableKeyTermsSuggestionsByDocumentType',
         'enable_key_terms_suggestions_by_document_type_metadata': 'enableKeyTermsSuggestionsByDocumentTypeMetadata',
-        'enable_large_file_support': 'enableLargeFileSupport',
-        'enable_large_file_support_metadata': 'enableLargeFileSupportMetadata',
         'enable_participant_recipient_setting_metadata': 'enableParticipantRecipientSettingMetadata',
         'enable_payment_processing': 'enablePaymentProcessing',
         'enable_payment_processing_metadata': 'enablePaymentProcessingMetadata',
@@ -1807,7 +1801,6 @@ class AccountSettingsInformation(object):
         self._draft_envelope_retention = None
         self._draft_envelope_retention_metadata = None
         self._dss_enable_provisioning_pen_configuration_radmin_option = None
-        self._dss_enable_signature_type_custom_tag_radmin_radmin_option = None
         self._dss_sign_28411_enable_leave_page_prompt_radmin_option = None
         self._dss_sign_29182_slide_up_bar_radmin_option = None
         self._email_template_version = None
@@ -1896,8 +1889,6 @@ class AccountSettingsInformation(object):
         self._enable_in_browser_editor_metadata = None
         self._enable_key_terms_suggestions_by_document_type = None
         self._enable_key_terms_suggestions_by_document_type_metadata = None
-        self._enable_large_file_support = None
-        self._enable_large_file_support_metadata = None
         self._enable_participant_recipient_setting_metadata = None
         self._enable_payment_processing = None
         self._enable_payment_processing_metadata = None
@@ -2537,7 +2528,6 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('draft_envelope_retention'), kwargs.get('draft_envelope_retention', None))
         setattr(self, "_{}".format('draft_envelope_retention_metadata'), kwargs.get('draft_envelope_retention_metadata', None))
         setattr(self, "_{}".format('dss_enable_provisioning_pen_configuration_radmin_option'), kwargs.get('dss_enable_provisioning_pen_configuration_radmin_option', None))
-        setattr(self, "_{}".format('dss_enable_signature_type_custom_tag_radmin_radmin_option'), kwargs.get('dss_enable_signature_type_custom_tag_radmin_radmin_option', None))
         setattr(self, "_{}".format('dss_sign_28411_enable_leave_page_prompt_radmin_option'), kwargs.get('dss_sign_28411_enable_leave_page_prompt_radmin_option', None))
         setattr(self, "_{}".format('dss_sign_29182_slide_up_bar_radmin_option'), kwargs.get('dss_sign_29182_slide_up_bar_radmin_option', None))
         setattr(self, "_{}".format('email_template_version'), kwargs.get('email_template_version', None))
@@ -2626,8 +2616,6 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_in_browser_editor_metadata'), kwargs.get('enable_in_browser_editor_metadata', None))
         setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type'), kwargs.get('enable_key_terms_suggestions_by_document_type', None))
         setattr(self, "_{}".format('enable_key_terms_suggestions_by_document_type_metadata'), kwargs.get('enable_key_terms_suggestions_by_document_type_metadata', None))
-        setattr(self, "_{}".format('enable_large_file_support'), kwargs.get('enable_large_file_support', None))
-        setattr(self, "_{}".format('enable_large_file_support_metadata'), kwargs.get('enable_large_file_support_metadata', None))
         setattr(self, "_{}".format('enable_participant_recipient_setting_metadata'), kwargs.get('enable_participant_recipient_setting_metadata', None))
         setattr(self, "_{}".format('enable_payment_processing'), kwargs.get('enable_payment_processing', None))
         setattr(self, "_{}".format('enable_payment_processing_metadata'), kwargs.get('enable_payment_processing_metadata', None))
@@ -10021,29 +10009,6 @@ class AccountSettingsInformation(object):
         self._dss_enable_provisioning_pen_configuration_radmin_option = dss_enable_provisioning_pen_configuration_radmin_option
 
     @property
-    def dss_enable_signature_type_custom_tag_radmin_radmin_option(self):
-        """Gets the dss_enable_signature_type_custom_tag_radmin_radmin_option of this AccountSettingsInformation.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The dss_enable_signature_type_custom_tag_radmin_radmin_option of this AccountSettingsInformation.  # noqa: E501
-        :rtype: str
-        """
-        return self._dss_enable_signature_type_custom_tag_radmin_radmin_option
-
-    @dss_enable_signature_type_custom_tag_radmin_radmin_option.setter
-    def dss_enable_signature_type_custom_tag_radmin_radmin_option(self, dss_enable_signature_type_custom_tag_radmin_radmin_option):
-        """Sets the dss_enable_signature_type_custom_tag_radmin_radmin_option of this AccountSettingsInformation.
-
-          # noqa: E501
-
-        :param dss_enable_signature_type_custom_tag_radmin_radmin_option: The dss_enable_signature_type_custom_tag_radmin_radmin_option of this AccountSettingsInformation.  # noqa: E501
-        :type: str
-        """
-
-        self._dss_enable_signature_type_custom_tag_radmin_radmin_option = dss_enable_signature_type_custom_tag_radmin_radmin_option
-
-    @property
     def dss_sign_28411_enable_leave_page_prompt_radmin_option(self):
         """Gets the dss_sign_28411_enable_leave_page_prompt_radmin_option of this AccountSettingsInformation.  # noqa: E501
 
@@ -12066,52 +12031,6 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_key_terms_suggestions_by_document_type_metadata = enable_key_terms_suggestions_by_document_type_metadata
-
-    @property
-    def enable_large_file_support(self):
-        """Gets the enable_large_file_support of this AccountSettingsInformation.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The enable_large_file_support of this AccountSettingsInformation.  # noqa: E501
-        :rtype: str
-        """
-        return self._enable_large_file_support
-
-    @enable_large_file_support.setter
-    def enable_large_file_support(self, enable_large_file_support):
-        """Sets the enable_large_file_support of this AccountSettingsInformation.
-
-          # noqa: E501
-
-        :param enable_large_file_support: The enable_large_file_support of this AccountSettingsInformation.  # noqa: E501
-        :type: str
-        """
-
-        self._enable_large_file_support = enable_large_file_support
-
-    @property
-    def enable_large_file_support_metadata(self):
-        """Gets the enable_large_file_support_metadata of this AccountSettingsInformation.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The enable_large_file_support_metadata of this AccountSettingsInformation.  # noqa: E501
-        :rtype: SettingsMetadata
-        """
-        return self._enable_large_file_support_metadata
-
-    @enable_large_file_support_metadata.setter
-    def enable_large_file_support_metadata(self, enable_large_file_support_metadata):
-        """Sets the enable_large_file_support_metadata of this AccountSettingsInformation.
-
-          # noqa: E501
-
-        :param enable_large_file_support_metadata: The enable_large_file_support_metadata of this AccountSettingsInformation.  # noqa: E501
-        :type: SettingsMetadata
-        """
-
-        self._enable_large_file_support_metadata = enable_large_file_support_metadata
 
     @property
     def enable_participant_recipient_setting_metadata(self):

@@ -38,8 +38,8 @@ class BulkSendBatchError(object):
     }
 
     attribute_map = {
-        'error': 'Error',
-        'error_detail': 'ErrorDetail'
+        'error': 'error',
+        'error_detail': 'errorDetail'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
