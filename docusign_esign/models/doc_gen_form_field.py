@@ -33,26 +33,18 @@ class DocGenFormField(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'description': 'str',
         'label': 'str',
         'name': 'str',
-        'options': 'list[DocGenFormFieldOption]',
-        'predefined_validation': 'str',
         'required': 'str',
         'type': 'str',
-        'validation': 'DocGenFormFieldValidation',
         'value': 'str'
     }
 
     attribute_map = {
-        'description': 'description',
         'label': 'label',
         'name': 'name',
-        'options': 'options',
-        'predefined_validation': 'predefinedValidation',
         'required': 'required',
         'type': 'type',
-        'validation': 'validation',
         'value': 'value'
     }
 
@@ -62,49 +54,18 @@ class DocGenFormField(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
-        self._description = None
         self._label = None
         self._name = None
-        self._options = None
-        self._predefined_validation = None
         self._required = None
         self._type = None
-        self._validation = None
         self._value = None
         self.discriminator = None
 
-        setattr(self, "_{}".format('description'), kwargs.get('description', None))
         setattr(self, "_{}".format('label'), kwargs.get('label', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
-        setattr(self, "_{}".format('options'), kwargs.get('options', None))
-        setattr(self, "_{}".format('predefined_validation'), kwargs.get('predefined_validation', None))
         setattr(self, "_{}".format('required'), kwargs.get('required', None))
         setattr(self, "_{}".format('type'), kwargs.get('type', None))
-        setattr(self, "_{}".format('validation'), kwargs.get('validation', None))
         setattr(self, "_{}".format('value'), kwargs.get('value', None))
-
-    @property
-    def description(self):
-        """Gets the description of this DocGenFormField.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The description of this DocGenFormField.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this DocGenFormField.
-
-          # noqa: E501
-
-        :param description: The description of this DocGenFormField.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
 
     @property
     def label(self):
@@ -153,52 +114,6 @@ class DocGenFormField(object):
         self._name = name
 
     @property
-    def options(self):
-        """Gets the options of this DocGenFormField.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The options of this DocGenFormField.  # noqa: E501
-        :rtype: list[DocGenFormFieldOption]
-        """
-        return self._options
-
-    @options.setter
-    def options(self, options):
-        """Sets the options of this DocGenFormField.
-
-          # noqa: E501
-
-        :param options: The options of this DocGenFormField.  # noqa: E501
-        :type: list[DocGenFormFieldOption]
-        """
-
-        self._options = options
-
-    @property
-    def predefined_validation(self):
-        """Gets the predefined_validation of this DocGenFormField.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The predefined_validation of this DocGenFormField.  # noqa: E501
-        :rtype: str
-        """
-        return self._predefined_validation
-
-    @predefined_validation.setter
-    def predefined_validation(self, predefined_validation):
-        """Sets the predefined_validation of this DocGenFormField.
-
-          # noqa: E501
-
-        :param predefined_validation: The predefined_validation of this DocGenFormField.  # noqa: E501
-        :type: str
-        """
-
-        self._predefined_validation = predefined_validation
-
-    @property
     def required(self):
         """Gets the required of this DocGenFormField.  # noqa: E501
 
@@ -243,29 +158,6 @@ class DocGenFormField(object):
         """
 
         self._type = type
-
-    @property
-    def validation(self):
-        """Gets the validation of this DocGenFormField.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The validation of this DocGenFormField.  # noqa: E501
-        :rtype: DocGenFormFieldValidation
-        """
-        return self._validation
-
-    @validation.setter
-    def validation(self, validation):
-        """Sets the validation of this DocGenFormField.
-
-          # noqa: E501
-
-        :param validation: The validation of this DocGenFormField.  # noqa: E501
-        :type: DocGenFormFieldValidation
-        """
-
-        self._validation = validation
 
     @property
     def value(self):

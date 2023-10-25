@@ -1567,7 +1567,7 @@ class InitialHere(object):
     def scale_value(self):
         """Gets the scale_value of this InitialHere.  # noqa: E501
 
-        Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.  # noqa: E501
+         Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.  # noqa: E501
 
         :return: The scale_value of this InitialHere.  # noqa: E501
         :rtype: str
@@ -1578,7 +1578,7 @@ class InitialHere(object):
     def scale_value(self, scale_value):
         """Sets the scale_value of this InitialHere.
 
-        Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.  # noqa: E501
+         Sets the size for the InitialHere tab. It can be value from 0.5 to 1.0, where 1.0 represents full size and 0.5 is 50% size.  # noqa: E501
 
         :param scale_value: The scale_value of this InitialHere.  # noqa: E501
         :type: str

@@ -3043,7 +3043,7 @@ class UsersApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_signature_image(self, account_id, image_type, signature_id, user_id, image_bytes, **kwargs):
+    def update_signature_image(self, account_id, image_type, signature_id, user_id, **kwargs):
         """
         Updates the user signature image or user initials image for the specified user.
         Updates the user signature image or user initials image for the specified user. The supported image formats for this file are: gif, png, jpeg, and bmp. The file must be less than 200K.  The userId property specified in the endpoint must match the authenticated user's user ID and the user must be a member of the account.  The `signatureId` parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (`signatureId`), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \"Bob Smith\" as \"Bob%20Smith\". 
@@ -3053,7 +3053,7 @@ class UsersApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_signature_image(account_id, image_type, signature_id, user_id, image_bytes, callback=callback_function)
+        >>> thread = api.update_signature_image(account_id, image_type, signature_id, user_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3062,19 +3062,18 @@ class UsersApi(object):
         :param str signature_id: The ID of the signature being accessed. (required)
         :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
         :param str transparent_png:
-        :param str image_bytes: Image content. (required)
         :return: UserSignature
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_signature_image_with_http_info(account_id, image_type, signature_id, user_id, image_bytes, **kwargs)
+            return self.update_signature_image_with_http_info(account_id, image_type, signature_id, user_id, **kwargs)
         else:
-            (data) = self.update_signature_image_with_http_info(account_id, image_type, signature_id, user_id, image_bytes, **kwargs)
+            (data) = self.update_signature_image_with_http_info(account_id, image_type, signature_id, user_id, **kwargs)
             return data
 
-    def update_signature_image_with_http_info(self, account_id, image_type, signature_id, user_id, image_bytes, **kwargs):
+    def update_signature_image_with_http_info(self, account_id, image_type, signature_id, user_id, **kwargs):
         """
         Updates the user signature image or user initials image for the specified user.
         Updates the user signature image or user initials image for the specified user. The supported image formats for this file are: gif, png, jpeg, and bmp. The file must be less than 200K.  The userId property specified in the endpoint must match the authenticated user's user ID and the user must be a member of the account.  The `signatureId` parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (`signatureId`), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \"Bob Smith\" as \"Bob%20Smith\". 
@@ -3084,7 +3083,7 @@ class UsersApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_signature_image_with_http_info(account_id, image_type, signature_id, user_id, image_bytes, callback=callback_function)
+        >>> thread = api.update_signature_image_with_http_info(account_id, image_type, signature_id, user_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
@@ -3093,13 +3092,12 @@ class UsersApi(object):
         :param str signature_id: The ID of the signature being accessed. (required)
         :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
         :param str transparent_png:
-        :param str image_bytes: Image content. (required)
         :return: UserSignature
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'image_type', 'signature_id', 'user_id', 'transparent_png', 'image_bytes']
+        all_params = ['account_id', 'image_type', 'signature_id', 'user_id', 'transparent_png']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3126,9 +3124,6 @@ class UsersApi(object):
         # verify the required parameter 'user_id' is set
         if ('user_id' not in params) or (params['user_id'] is None):
             raise ValueError("Missing the required parameter `user_id` when calling `update_signature_image`")
-        # verify the required parameter 'image_bytes' is set
-        if ('image_bytes' not in params) or (params['image_bytes'] is None):
-            raise ValueError("Missing the required parameter `image_bytes` when calling `update_signature_image`")
 
 
         collection_formats = {}
@@ -3154,8 +3149,6 @@ class UsersApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'image_bytes' in params:
-            body_params = params['image_bytes']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
