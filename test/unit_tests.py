@@ -6,11 +6,12 @@ import base64
 import os
 import subprocess
 import unittest
-from pprint import pprint
+
 from time import sleep
+from datetime import datetime
 
 import docusign_esign as docusign
-from docusign_esign import AuthenticationApi, EnvelopesApi, TemplatesApi, DiagnosticsApi, FoldersApi, ApiException
+from docusign_esign import AuthenticationApi, EnvelopesApi, TemplatesApi, DiagnosticsApi, FoldersApi, ApiException, TemplateSummary
 
 Username = os.environ.get("USER_NAME")
 IntegratorKey = os.environ.get("INTEGRATOR_KEY_JWT")
@@ -340,7 +341,7 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
-    def testCreateTemplate(self):
+    def testCreateTemplate(self) -> TemplateSummary:
         with open(SignTest1File, 'rb') as sign_file:
             file_contents = sign_file.read()
 
@@ -377,7 +378,23 @@ class SdkUnitTests(unittest.TestCase):
                                       scale_value=sign_scale_value)
 
         sign_here_tabs = [sign_here]
-        tabs = docusign.Tabs(sign_here_tabs=sign_here_tabs)
+
+        # Create a date tab somewhere on the document for the signer to know about current date
+        date_document_id = '1'
+        date_page_number = '1'
+        date_x_position = '50'
+        date_y_position = '50'
+
+        current_date_tab = docusign.Date(document_id=date_document_id,
+                                              page_number=date_page_number,
+                                              recipient_id=recipient_id,
+                                              x_position=date_x_position,
+                                              y_position=date_y_position,
+                                              value=datetime.utcnow().date())
+        date_tabs = [current_date_tab]
+
+        tabs = docusign.Tabs(sign_here_tabs=sign_here_tabs, date_tabs=date_tabs)
+
         signer = docusign.Signer(email=email,
                                  name=name,
                                  recipient_id=recipient_id,
@@ -403,6 +420,7 @@ class SdkUnitTests(unittest.TestCase):
             assert template_summary is not None
             assert template_summary.template_id is not None
 
+            return template_summary
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
@@ -853,6 +871,35 @@ class SdkUnitTests(unittest.TestCase):
             print("\nException when calling DocuSign API: %s" % e)
             assert e is None  # make the test case fail in case of an API exception
 
+    def testTemplateDocumentTabsRetrieval(self):
+
+        # Create Envelope template
+        template_summary = self.testCreateTemplate()
+        template_id = template_summary.template_id
+
+        templates_api = TemplatesApi()
+
+        # List all documents from the created template to find the documentId
+        template_documents_list_result = templates_api.list_documents(self.user_info.accounts[0].account_id, template_id)
+
+        # Check if there are no documents within the template
+        has_template_documents = template_documents_list_result is None or template_documents_list_result.template_documents is None or len(template_documents_list_result.template_documents) == 0
+        assert has_template_documents, 'No document found within created template'
+
+        document_id = template_documents_list_result.template_documents[0].document_id
+
+        try:
+            # Get list of various document tabs
+            document_tabs = templates_api.get_document_tabs(self.user_info.accounts[0].account_id, document_id, template_id)
+
+            assert document_tabs is not None
+
+        except ApiException as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
+        except Exception as e:
+            print("\nException when calling DocuSign API: %s" % e)
+            assert e is None  # make the test case fail in case of an API exception
 
 if __name__ == '__main__':
     unittest.main()
