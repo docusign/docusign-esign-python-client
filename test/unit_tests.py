@@ -883,7 +883,7 @@ class SdkUnitTests(unittest.TestCase):
         template_documents_list_result = templates_api.list_documents(self.user_info.accounts[0].account_id, template_id)
 
         # Check if there are no documents within the template
-        has_template_documents = template_documents_list_result is None or template_documents_list_result.template_documents is None or len(template_documents_list_result.template_documents) == 0
+        has_template_documents = template_documents_list_result is not None and template_documents_list_result.template_documents is not None and len(template_documents_list_result.template_documents) > 0
         assert has_template_documents, 'No document found within created template'
 
         document_id = template_documents_list_result.template_documents[0].document_id
