@@ -216,6 +216,7 @@ from docusign_esign.models.custom_field import CustomField
 from docusign_esign.models.custom_fields import CustomFields
 from docusign_esign.models.custom_fields_envelope import CustomFieldsEnvelope
 from docusign_esign.models.custom_settings_information import CustomSettingsInformation
+from docusign_esign.models.date import Date
 from docusign_esign.models.date_signed import DateSigned
 from docusign_esign.models.date_stamp_properties import DateStampProperties
 from docusign_esign.models.decline import Decline
@@ -344,7 +345,6 @@ from docusign_esign.models.member_shared_items import MemberSharedItems
 from docusign_esign.models.merge_field import MergeField
 from docusign_esign.models.mobile_notifier_configuration import MobileNotifierConfiguration
 from docusign_esign.models.mobile_notifier_configuration_information import MobileNotifierConfigurationInformation
-from docusign_esign.models.model_date import ModelDate
 from docusign_esign.models.money import Money
 from docusign_esign.models.name_value import NameValue
 from docusign_esign.models.new_account_definition import NewAccountDefinition
@@ -540,6 +540,6 @@ from docusign_esign.models.workspace_settings import WorkspaceSettings
 from docusign_esign.models.workspace_user import WorkspaceUser
 from docusign_esign.models.workspace_user_authorization import WorkspaceUserAuthorization
 from docusign_esign.models.zip import Zip
-from docusign_esign.models.date import Date
+
 
 configuration = Configuration()
