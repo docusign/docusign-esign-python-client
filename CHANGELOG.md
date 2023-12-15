@@ -3,12 +3,15 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.25.2] - eSignature API v2.1-23.3.01.02 - 2023-12-15
+### Changed
+- Added support for version v2.1-23.3.01.02 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
 ## [v3.25.1] - eSignature API v2.1-23.3.01.02 - 2023-12-14
 ### Changed
 - Added support for version v2.1-23.3.01.02 of the DocuSign ESignature API.
 - Updated the SDK release version.
-- Updated Date model.
-- Updated response.py to fix issue with Envelopes::listStatus endpoint requiring a body.  
 
 ## [v3.25.0] - eSignature API v2.1-23.3.01.02 - 2023-10-25
 ### Changed
