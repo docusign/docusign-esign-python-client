@@ -818,10 +818,10 @@ class ApiClient(object):
     def set_access_token(self, token_obj):
         """
 
-        :param token_obj: 
-        :return: 
+        :param token_obj:
+        :return:
         """
-        self.default_headers['Authorization'] = token_obj.access_token
+        self.default_headers['Authorization'] = 'Bearer %s' % (token_obj.access_token)
 
     def get_authorization_uri(self, client_id, scopes, redirect_uri, response_type, state=None):
         """
