@@ -679,6 +679,7 @@ class ApiClient(object):
             raise ArgumentException("Private key not supplied or is invalid!")
         if not user_id:
             raise ArgumentException("User Id not supplied or is invalid!")
+        # TODO: Make oauth_host_name optional and default to the instance property.
         if not oauth_host_name:
             raise ArgumentException("oAuthBasePath cannot be empty")
 
@@ -720,6 +721,7 @@ class ApiClient(object):
 
         if not private_key_bytes:
             raise ArgumentException("Private key not supplied or is invalid!")
+        # TODO: Make oauth_host_name optional and default to the instance property.
         if not oauth_host_name:
             raise ArgumentException("oAuthBasePath cannot be empty")
 
@@ -756,7 +758,7 @@ class ApiClient(object):
             raise ArgumentException("Cannot find a valid access token."
                                     " Make sure OAuth is configured before you try again.")
         if not self.oauth_host_name:
-            raise ArgumentException("oAuthBasePath cannot be empty")
+            raise ArgumentException("The oauth_host_name property has not been set")
 
         resource_path = '/oauth/userinfo'
         headers = {"Authorization": "Bearer " + access_token}
@@ -774,6 +776,8 @@ class ApiClient(object):
         """
         if not client_id or not client_secret or not code:
             raise ArgumentException
+        if not self.oauth_host_name:
+            raise ArgumentException("The oauth_host_name property has not been set")
         url = "https://{0}/oauth/token".format(self.oauth_host_name)
         integrator_and_secret_key = b"Basic " + base64.b64encode(str.encode("{}:{}".format(client_id, client_secret)))
         headers = {
@@ -804,16 +808,18 @@ class ApiClient(object):
             self.oauth_host_name = oauth_host_name
             return
 
-        if not oauth_host_name:
-            raise ArgumentException('oAuthBasePath cannot be empty')
+        if not self.base_path:
+            raise ArgumentException('Unable to infer oauth_host_name without base_path set')
 
         # Derive OAuth Base Path if not given
         if self.base_path.startswith("https://demo") or self.base_path.startswith("http://demo"):
             self.oauth_host_name = OAuth.DEMO_OAUTH_BASE_PATH
         elif self.base_path.startswith("https://stage") or self.base_path.startswith("http://stage"):
             self.oauth_host_name = OAuth.STAGE_OAUTH_BASE_PATH
-        else:
+        elif self.base_path.startswith("https://docusign") or self.base_path.startswith("http://docusign"):
             self.oauth_host_name = OAuth.PRODUCTION_OAUTH_BASE_PATH
+
+        raise ArgumentException('Unable to infer oauth_host_name from unknown base_path')
 
     def set_access_token(self, token_obj):
         """
