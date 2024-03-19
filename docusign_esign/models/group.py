@@ -33,6 +33,7 @@ class Group(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'access_type': 'str',
         'ds_group_id': 'str',
         'error_details': 'ErrorDetails',
         'group_id': 'str',
@@ -44,6 +45,7 @@ class Group(object):
     }
 
     attribute_map = {
+        'access_type': 'accessType',
         'ds_group_id': 'dsGroupId',
         'error_details': 'errorDetails',
         'group_id': 'groupId',
@@ -60,6 +62,7 @@ class Group(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._access_type = None
         self._ds_group_id = None
         self._error_details = None
         self._group_id = None
@@ -70,6 +73,7 @@ class Group(object):
         self._users_count = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('access_type'), kwargs.get('access_type', None))
         setattr(self, "_{}".format('ds_group_id'), kwargs.get('ds_group_id', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
         setattr(self, "_{}".format('group_id'), kwargs.get('group_id', None))
@@ -78,6 +82,29 @@ class Group(object):
         setattr(self, "_{}".format('permission_profile_id'), kwargs.get('permission_profile_id', None))
         setattr(self, "_{}".format('users'), kwargs.get('users', None))
         setattr(self, "_{}".format('users_count'), kwargs.get('users_count', None))
+
+    @property
+    def access_type(self):
+        """Gets the access_type of this Group.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The access_type of this Group.  # noqa: E501
+        :rtype: str
+        """
+        return self._access_type
+
+    @access_type.setter
+    def access_type(self, access_type):
+        """Sets the access_type of this Group.
+
+          # noqa: E501
+
+        :param access_type: The access_type of this Group.  # noqa: E501
+        :type: str
+        """
+
+        self._access_type = access_type
 
     @property
     def ds_group_id(self):

@@ -386,6 +386,8 @@ class AccountSettingsInformation(object):
         'enable_contact_suggestions_metadata': 'SettingsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'str',
         'enable_customer_satisfaction_metric_tracking_metadata': 'SettingsMetadata',
+        'enable_data_verification_extensions': 'str',
+        'enable_data_verification_extensions_metadata': 'SettingsMetadata',
         'enable_d_sig_eu_advanced_pens': 'str',
         'enable_d_sig_eu_advanced_pens_metadata': 'SettingsMetadata',
         'enable_d_sig_express_pens': 'str',
@@ -501,8 +503,12 @@ class AccountSettingsInformation(object):
         'enable_strike_through_metadata': 'SettingsMetadata',
         'enable_transaction_point': 'str',
         'enable_transaction_point_metadata': 'SettingsMetadata',
+        'enable_unified_repository': 'str',
+        'enable_unified_repository_metadata': 'SettingsMetadata',
         'enable_vaulting': 'str',
         'enable_vaulting_metadata': 'SettingsMetadata',
+        'enable_web_forms_runtime_ap_is': 'str',
+        'enable_web_forms_runtime_ap_is_metadata': 'SettingsMetadata',
         'enable_web_forms_separate_user_permissions': 'str',
         'enable_web_forms_separate_user_permissions_metadata': 'SettingsMetadata',
         'enable_witnessing': 'str',
@@ -536,6 +542,8 @@ class AccountSettingsInformation(object):
         'fax_out_enabled_metadata': 'SettingsMetadata',
         'finish_reminder': 'str',
         'finish_reminder_metadata': 'SettingsMetadata',
+        'forbid_adding_user_stamps': 'str',
+        'forbid_adding_user_stamps_metadata': 'SettingsMetadata',
         'guided_forms_html_allowed': 'str',
         'guided_forms_html_allowed_metadata': 'SettingsMetadata',
         'guided_forms_html_conversion_policy': 'str',
@@ -1117,6 +1125,8 @@ class AccountSettingsInformation(object):
         'enable_contact_suggestions_metadata': 'enableContactSuggestionsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'enableCustomerSatisfactionMetricTracking',
         'enable_customer_satisfaction_metric_tracking_metadata': 'enableCustomerSatisfactionMetricTrackingMetadata',
+        'enable_data_verification_extensions': 'enableDataVerificationExtensions',
+        'enable_data_verification_extensions_metadata': 'enableDataVerificationExtensionsMetadata',
         'enable_d_sig_eu_advanced_pens': 'enableDSigEUAdvancedPens',
         'enable_d_sig_eu_advanced_pens_metadata': 'enableDSigEUAdvancedPensMetadata',
         'enable_d_sig_express_pens': 'enableDSigExpressPens',
@@ -1232,8 +1242,12 @@ class AccountSettingsInformation(object):
         'enable_strike_through_metadata': 'enableStrikeThroughMetadata',
         'enable_transaction_point': 'enableTransactionPoint',
         'enable_transaction_point_metadata': 'enableTransactionPointMetadata',
+        'enable_unified_repository': 'enableUnifiedRepository',
+        'enable_unified_repository_metadata': 'enableUnifiedRepositoryMetadata',
         'enable_vaulting': 'enableVaulting',
         'enable_vaulting_metadata': 'enableVaultingMetadata',
+        'enable_web_forms_runtime_ap_is': 'enableWebFormsRuntimeAPIs',
+        'enable_web_forms_runtime_ap_is_metadata': 'enableWebFormsRuntimeAPIsMetadata',
         'enable_web_forms_separate_user_permissions': 'enableWebFormsSeparateUserPermissions',
         'enable_web_forms_separate_user_permissions_metadata': 'enableWebFormsSeparateUserPermissionsMetadata',
         'enable_witnessing': 'enableWitnessing',
@@ -1267,6 +1281,8 @@ class AccountSettingsInformation(object):
         'fax_out_enabled_metadata': 'faxOutEnabledMetadata',
         'finish_reminder': 'finishReminder',
         'finish_reminder_metadata': 'finishReminderMetadata',
+        'forbid_adding_user_stamps': 'forbidAddingUserStamps',
+        'forbid_adding_user_stamps_metadata': 'forbidAddingUserStampsMetadata',
         'guided_forms_html_allowed': 'guidedFormsHtmlAllowed',
         'guided_forms_html_allowed_metadata': 'guidedFormsHtmlAllowedMetadata',
         'guided_forms_html_conversion_policy': 'guidedFormsHtmlConversionPolicy',
@@ -1853,6 +1869,8 @@ class AccountSettingsInformation(object):
         self._enable_contact_suggestions_metadata = None
         self._enable_customer_satisfaction_metric_tracking = None
         self._enable_customer_satisfaction_metric_tracking_metadata = None
+        self._enable_data_verification_extensions = None
+        self._enable_data_verification_extensions_metadata = None
         self._enable_d_sig_eu_advanced_pens = None
         self._enable_d_sig_eu_advanced_pens_metadata = None
         self._enable_d_sig_express_pens = None
@@ -1968,8 +1986,12 @@ class AccountSettingsInformation(object):
         self._enable_strike_through_metadata = None
         self._enable_transaction_point = None
         self._enable_transaction_point_metadata = None
+        self._enable_unified_repository = None
+        self._enable_unified_repository_metadata = None
         self._enable_vaulting = None
         self._enable_vaulting_metadata = None
+        self._enable_web_forms_runtime_ap_is = None
+        self._enable_web_forms_runtime_ap_is_metadata = None
         self._enable_web_forms_separate_user_permissions = None
         self._enable_web_forms_separate_user_permissions_metadata = None
         self._enable_witnessing = None
@@ -2003,6 +2025,8 @@ class AccountSettingsInformation(object):
         self._fax_out_enabled_metadata = None
         self._finish_reminder = None
         self._finish_reminder_metadata = None
+        self._forbid_adding_user_stamps = None
+        self._forbid_adding_user_stamps_metadata = None
         self._guided_forms_html_allowed = None
         self._guided_forms_html_allowed_metadata = None
         self._guided_forms_html_conversion_policy = None
@@ -2583,6 +2607,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_contact_suggestions_metadata'), kwargs.get('enable_contact_suggestions_metadata', None))
         setattr(self, "_{}".format('enable_customer_satisfaction_metric_tracking'), kwargs.get('enable_customer_satisfaction_metric_tracking', None))
         setattr(self, "_{}".format('enable_customer_satisfaction_metric_tracking_metadata'), kwargs.get('enable_customer_satisfaction_metric_tracking_metadata', None))
+        setattr(self, "_{}".format('enable_data_verification_extensions'), kwargs.get('enable_data_verification_extensions', None))
+        setattr(self, "_{}".format('enable_data_verification_extensions_metadata'), kwargs.get('enable_data_verification_extensions_metadata', None))
         setattr(self, "_{}".format('enable_d_sig_eu_advanced_pens'), kwargs.get('enable_d_sig_eu_advanced_pens', None))
         setattr(self, "_{}".format('enable_d_sig_eu_advanced_pens_metadata'), kwargs.get('enable_d_sig_eu_advanced_pens_metadata', None))
         setattr(self, "_{}".format('enable_d_sig_express_pens'), kwargs.get('enable_d_sig_express_pens', None))
@@ -2698,8 +2724,12 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_strike_through_metadata'), kwargs.get('enable_strike_through_metadata', None))
         setattr(self, "_{}".format('enable_transaction_point'), kwargs.get('enable_transaction_point', None))
         setattr(self, "_{}".format('enable_transaction_point_metadata'), kwargs.get('enable_transaction_point_metadata', None))
+        setattr(self, "_{}".format('enable_unified_repository'), kwargs.get('enable_unified_repository', None))
+        setattr(self, "_{}".format('enable_unified_repository_metadata'), kwargs.get('enable_unified_repository_metadata', None))
         setattr(self, "_{}".format('enable_vaulting'), kwargs.get('enable_vaulting', None))
         setattr(self, "_{}".format('enable_vaulting_metadata'), kwargs.get('enable_vaulting_metadata', None))
+        setattr(self, "_{}".format('enable_web_forms_runtime_ap_is'), kwargs.get('enable_web_forms_runtime_ap_is', None))
+        setattr(self, "_{}".format('enable_web_forms_runtime_ap_is_metadata'), kwargs.get('enable_web_forms_runtime_ap_is_metadata', None))
         setattr(self, "_{}".format('enable_web_forms_separate_user_permissions'), kwargs.get('enable_web_forms_separate_user_permissions', None))
         setattr(self, "_{}".format('enable_web_forms_separate_user_permissions_metadata'), kwargs.get('enable_web_forms_separate_user_permissions_metadata', None))
         setattr(self, "_{}".format('enable_witnessing'), kwargs.get('enable_witnessing', None))
@@ -2733,6 +2763,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('fax_out_enabled_metadata'), kwargs.get('fax_out_enabled_metadata', None))
         setattr(self, "_{}".format('finish_reminder'), kwargs.get('finish_reminder', None))
         setattr(self, "_{}".format('finish_reminder_metadata'), kwargs.get('finish_reminder_metadata', None))
+        setattr(self, "_{}".format('forbid_adding_user_stamps'), kwargs.get('forbid_adding_user_stamps', None))
+        setattr(self, "_{}".format('forbid_adding_user_stamps_metadata'), kwargs.get('forbid_adding_user_stamps_metadata', None))
         setattr(self, "_{}".format('guided_forms_html_allowed'), kwargs.get('guided_forms_html_allowed', None))
         setattr(self, "_{}".format('guided_forms_html_allowed_metadata'), kwargs.get('guided_forms_html_allowed_metadata', None))
         setattr(self, "_{}".format('guided_forms_html_conversion_policy'), kwargs.get('guided_forms_html_conversion_policy', None))
@@ -11079,6 +11111,52 @@ class AccountSettingsInformation(object):
         self._enable_customer_satisfaction_metric_tracking_metadata = enable_customer_satisfaction_metric_tracking_metadata
 
     @property
+    def enable_data_verification_extensions(self):
+        """Gets the enable_data_verification_extensions of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_data_verification_extensions of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_data_verification_extensions
+
+    @enable_data_verification_extensions.setter
+    def enable_data_verification_extensions(self, enable_data_verification_extensions):
+        """Sets the enable_data_verification_extensions of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_data_verification_extensions: The enable_data_verification_extensions of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_data_verification_extensions = enable_data_verification_extensions
+
+    @property
+    def enable_data_verification_extensions_metadata(self):
+        """Gets the enable_data_verification_extensions_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_data_verification_extensions_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_data_verification_extensions_metadata
+
+    @enable_data_verification_extensions_metadata.setter
+    def enable_data_verification_extensions_metadata(self, enable_data_verification_extensions_metadata):
+        """Sets the enable_data_verification_extensions_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_data_verification_extensions_metadata: The enable_data_verification_extensions_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_data_verification_extensions_metadata = enable_data_verification_extensions_metadata
+
+    @property
     def enable_d_sig_eu_advanced_pens(self):
         """Gets the enable_d_sig_eu_advanced_pens of this AccountSettingsInformation.  # noqa: E501
 
@@ -13724,6 +13802,52 @@ class AccountSettingsInformation(object):
         self._enable_transaction_point_metadata = enable_transaction_point_metadata
 
     @property
+    def enable_unified_repository(self):
+        """Gets the enable_unified_repository of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_unified_repository of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_unified_repository
+
+    @enable_unified_repository.setter
+    def enable_unified_repository(self, enable_unified_repository):
+        """Sets the enable_unified_repository of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_unified_repository: The enable_unified_repository of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_unified_repository = enable_unified_repository
+
+    @property
+    def enable_unified_repository_metadata(self):
+        """Gets the enable_unified_repository_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_unified_repository_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_unified_repository_metadata
+
+    @enable_unified_repository_metadata.setter
+    def enable_unified_repository_metadata(self, enable_unified_repository_metadata):
+        """Sets the enable_unified_repository_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_unified_repository_metadata: The enable_unified_repository_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_unified_repository_metadata = enable_unified_repository_metadata
+
+    @property
     def enable_vaulting(self):
         """Gets the enable_vaulting of this AccountSettingsInformation.  # noqa: E501
 
@@ -13768,6 +13892,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_vaulting_metadata = enable_vaulting_metadata
+
+    @property
+    def enable_web_forms_runtime_ap_is(self):
+        """Gets the enable_web_forms_runtime_ap_is of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_web_forms_runtime_ap_is of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_web_forms_runtime_ap_is
+
+    @enable_web_forms_runtime_ap_is.setter
+    def enable_web_forms_runtime_ap_is(self, enable_web_forms_runtime_ap_is):
+        """Sets the enable_web_forms_runtime_ap_is of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_web_forms_runtime_ap_is: The enable_web_forms_runtime_ap_is of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_web_forms_runtime_ap_is = enable_web_forms_runtime_ap_is
+
+    @property
+    def enable_web_forms_runtime_ap_is_metadata(self):
+        """Gets the enable_web_forms_runtime_ap_is_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_web_forms_runtime_ap_is_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_web_forms_runtime_ap_is_metadata
+
+    @enable_web_forms_runtime_ap_is_metadata.setter
+    def enable_web_forms_runtime_ap_is_metadata(self, enable_web_forms_runtime_ap_is_metadata):
+        """Sets the enable_web_forms_runtime_ap_is_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_web_forms_runtime_ap_is_metadata: The enable_web_forms_runtime_ap_is_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_web_forms_runtime_ap_is_metadata = enable_web_forms_runtime_ap_is_metadata
 
     @property
     def enable_web_forms_separate_user_permissions(self):
@@ -14527,6 +14697,52 @@ class AccountSettingsInformation(object):
         """
 
         self._finish_reminder_metadata = finish_reminder_metadata
+
+    @property
+    def forbid_adding_user_stamps(self):
+        """Gets the forbid_adding_user_stamps of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The forbid_adding_user_stamps of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._forbid_adding_user_stamps
+
+    @forbid_adding_user_stamps.setter
+    def forbid_adding_user_stamps(self, forbid_adding_user_stamps):
+        """Sets the forbid_adding_user_stamps of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param forbid_adding_user_stamps: The forbid_adding_user_stamps of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._forbid_adding_user_stamps = forbid_adding_user_stamps
+
+    @property
+    def forbid_adding_user_stamps_metadata(self):
+        """Gets the forbid_adding_user_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The forbid_adding_user_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._forbid_adding_user_stamps_metadata
+
+    @forbid_adding_user_stamps_metadata.setter
+    def forbid_adding_user_stamps_metadata(self, forbid_adding_user_stamps_metadata):
+        """Sets the forbid_adding_user_stamps_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param forbid_adding_user_stamps_metadata: The forbid_adding_user_stamps_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._forbid_adding_user_stamps_metadata = forbid_adding_user_stamps_metadata
 
     @property
     def guided_forms_html_allowed(self):

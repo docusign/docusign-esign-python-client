@@ -39,6 +39,7 @@ class DocGenFormField(object):
         'options': 'list[DocGenFormFieldOption]',
         'predefined_validation': 'str',
         'required': 'str',
+        'row_values': 'list[DocGenFormFieldRowValue]',
         'type': 'str',
         'validation': 'DocGenFormFieldValidation',
         'value': 'str'
@@ -51,6 +52,7 @@ class DocGenFormField(object):
         'options': 'options',
         'predefined_validation': 'predefinedValidation',
         'required': 'required',
+        'row_values': 'rowValues',
         'type': 'type',
         'validation': 'validation',
         'value': 'value'
@@ -68,6 +70,7 @@ class DocGenFormField(object):
         self._options = None
         self._predefined_validation = None
         self._required = None
+        self._row_values = None
         self._type = None
         self._validation = None
         self._value = None
@@ -79,6 +82,7 @@ class DocGenFormField(object):
         setattr(self, "_{}".format('options'), kwargs.get('options', None))
         setattr(self, "_{}".format('predefined_validation'), kwargs.get('predefined_validation', None))
         setattr(self, "_{}".format('required'), kwargs.get('required', None))
+        setattr(self, "_{}".format('row_values'), kwargs.get('row_values', None))
         setattr(self, "_{}".format('type'), kwargs.get('type', None))
         setattr(self, "_{}".format('validation'), kwargs.get('validation', None))
         setattr(self, "_{}".format('value'), kwargs.get('value', None))
@@ -220,6 +224,29 @@ class DocGenFormField(object):
         """
 
         self._required = required
+
+    @property
+    def row_values(self):
+        """Gets the row_values of this DocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The row_values of this DocGenFormField.  # noqa: E501
+        :rtype: list[DocGenFormFieldRowValue]
+        """
+        return self._row_values
+
+    @row_values.setter
+    def row_values(self, row_values):
+        """Sets the row_values of this DocGenFormField.
+
+          # noqa: E501
+
+        :param row_values: The row_values of this DocGenFormField.  # noqa: E501
+        :type: list[DocGenFormFieldRowValue]
+        """
+
+        self._row_values = row_values
 
     @property
     def type(self):

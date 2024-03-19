@@ -3062,7 +3062,7 @@ class UsersApi(object):
         :param str signature_id: The ID of the signature being accessed. (required)
         :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
         :param str transparent_png:
-        :param str image_bytes: Image content. (required)
+        :param str image_bytes: Updated image content. (required)
         :return: UserSignature
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3093,7 +3093,7 @@ class UsersApi(object):
         :param str signature_id: The ID of the signature being accessed. (required)
         :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
         :param str transparent_png:
-        :param str image_bytes: Image content. (required)
+        :param str image_bytes: Updated image content. (required)
         :return: UserSignature
                  If the method is called asynchronously,
                  returns the request thread.

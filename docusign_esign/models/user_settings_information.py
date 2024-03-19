@@ -36,6 +36,8 @@ class UserSettingsInformation(object):
         'account_management_granular': 'UserAccountManagementGranularInformation',
         'admin_only': 'str',
         'admin_only_metadata': 'SettingsMetadata',
+        'allow_access_to_all_account_agreements': 'str',
+        'allow_access_to_all_account_agreements_metadata': 'SettingsMetadata',
         'allow_auto_tagging': 'str',
         'allowed_orchestration_access': 'str',
         'allowed_orchestration_access_metadata': 'SettingsMetadata',
@@ -174,6 +176,8 @@ class UserSettingsInformation(object):
         'account_management_granular': 'accountManagementGranular',
         'admin_only': 'adminOnly',
         'admin_only_metadata': 'adminOnlyMetadata',
+        'allow_access_to_all_account_agreements': 'allowAccessToAllAccountAgreements',
+        'allow_access_to_all_account_agreements_metadata': 'allowAccessToAllAccountAgreementsMetadata',
         'allow_auto_tagging': 'allowAutoTagging',
         'allowed_orchestration_access': 'allowedOrchestrationAccess',
         'allowed_orchestration_access_metadata': 'allowedOrchestrationAccessMetadata',
@@ -317,6 +321,8 @@ class UserSettingsInformation(object):
         self._account_management_granular = None
         self._admin_only = None
         self._admin_only_metadata = None
+        self._allow_access_to_all_account_agreements = None
+        self._allow_access_to_all_account_agreements_metadata = None
         self._allow_auto_tagging = None
         self._allowed_orchestration_access = None
         self._allowed_orchestration_access_metadata = None
@@ -454,6 +460,8 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('account_management_granular'), kwargs.get('account_management_granular', None))
         setattr(self, "_{}".format('admin_only'), kwargs.get('admin_only', None))
         setattr(self, "_{}".format('admin_only_metadata'), kwargs.get('admin_only_metadata', None))
+        setattr(self, "_{}".format('allow_access_to_all_account_agreements'), kwargs.get('allow_access_to_all_account_agreements', None))
+        setattr(self, "_{}".format('allow_access_to_all_account_agreements_metadata'), kwargs.get('allow_access_to_all_account_agreements_metadata', None))
         setattr(self, "_{}".format('allow_auto_tagging'), kwargs.get('allow_auto_tagging', None))
         setattr(self, "_{}".format('allowed_orchestration_access'), kwargs.get('allowed_orchestration_access', None))
         setattr(self, "_{}".format('allowed_orchestration_access_metadata'), kwargs.get('allowed_orchestration_access_metadata', None))
@@ -655,6 +663,52 @@ class UserSettingsInformation(object):
         """
 
         self._admin_only_metadata = admin_only_metadata
+
+    @property
+    def allow_access_to_all_account_agreements(self):
+        """Gets the allow_access_to_all_account_agreements of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_access_to_all_account_agreements of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_access_to_all_account_agreements
+
+    @allow_access_to_all_account_agreements.setter
+    def allow_access_to_all_account_agreements(self, allow_access_to_all_account_agreements):
+        """Sets the allow_access_to_all_account_agreements of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_access_to_all_account_agreements: The allow_access_to_all_account_agreements of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_access_to_all_account_agreements = allow_access_to_all_account_agreements
+
+    @property
+    def allow_access_to_all_account_agreements_metadata(self):
+        """Gets the allow_access_to_all_account_agreements_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_access_to_all_account_agreements_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_access_to_all_account_agreements_metadata
+
+    @allow_access_to_all_account_agreements_metadata.setter
+    def allow_access_to_all_account_agreements_metadata(self, allow_access_to_all_account_agreements_metadata):
+        """Sets the allow_access_to_all_account_agreements_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_access_to_all_account_agreements_metadata: The allow_access_to_all_account_agreements_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_access_to_all_account_agreements_metadata = allow_access_to_all_account_agreements_metadata
 
     @property
     def allow_auto_tagging(self):
