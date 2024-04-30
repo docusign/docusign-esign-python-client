@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.26.0] - eSignature API v2.1-23.4.02.00 - 2024-04-30
+### Changed
+- Revised the logic to determine the `oauth_host_name` based on the `base_path`.
+- Adjusted the minimum required `PyJWT` package version to `2.0.0`.
+- Added support for version v2.1-23.4.02.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
 ## [v3.26.0rc1] - eSignature API v2.1-23.4.02.00 - 2024-03-12
 ### Changed
 - Added support for version v2.1-23.4.02.00 of the DocuSign ESignature API.
