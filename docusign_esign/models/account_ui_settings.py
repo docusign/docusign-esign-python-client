@@ -47,6 +47,8 @@ class AccountUISettings(object):
         'enable_easy_sign_template_upload_metadata': 'SettingsMetadata',
         'enable_envelope_copy_with_data': 'str',
         'enable_envelope_copy_with_data_metadata': 'SettingsMetadata',
+        'enable_envelope_types': 'str',
+        'enable_envelope_types_metadata': 'SettingsMetadata',
         'enable_legacy_sendflow_link': 'str',
         'enable_legacy_sendflow_link_metadata': 'SettingsMetadata',
         'has_external_linked_accounts': 'str',
@@ -82,6 +84,8 @@ class AccountUISettings(object):
         'enable_easy_sign_template_upload_metadata': 'enableEasySignTemplateUploadMetadata',
         'enable_envelope_copy_with_data': 'enableEnvelopeCopyWithData',
         'enable_envelope_copy_with_data_metadata': 'enableEnvelopeCopyWithDataMetadata',
+        'enable_envelope_types': 'enableEnvelopeTypes',
+        'enable_envelope_types_metadata': 'enableEnvelopeTypesMetadata',
         'enable_legacy_sendflow_link': 'enableLegacySendflowLink',
         'enable_legacy_sendflow_link_metadata': 'enableLegacySendflowLinkMetadata',
         'has_external_linked_accounts': 'hasExternalLinkedAccounts',
@@ -122,6 +126,8 @@ class AccountUISettings(object):
         self._enable_easy_sign_template_upload_metadata = None
         self._enable_envelope_copy_with_data = None
         self._enable_envelope_copy_with_data_metadata = None
+        self._enable_envelope_types = None
+        self._enable_envelope_types_metadata = None
         self._enable_legacy_sendflow_link = None
         self._enable_legacy_sendflow_link_metadata = None
         self._has_external_linked_accounts = None
@@ -156,6 +162,8 @@ class AccountUISettings(object):
         setattr(self, "_{}".format('enable_easy_sign_template_upload_metadata'), kwargs.get('enable_easy_sign_template_upload_metadata', None))
         setattr(self, "_{}".format('enable_envelope_copy_with_data'), kwargs.get('enable_envelope_copy_with_data', None))
         setattr(self, "_{}".format('enable_envelope_copy_with_data_metadata'), kwargs.get('enable_envelope_copy_with_data_metadata', None))
+        setattr(self, "_{}".format('enable_envelope_types'), kwargs.get('enable_envelope_types', None))
+        setattr(self, "_{}".format('enable_envelope_types_metadata'), kwargs.get('enable_envelope_types_metadata', None))
         setattr(self, "_{}".format('enable_legacy_sendflow_link'), kwargs.get('enable_legacy_sendflow_link', None))
         setattr(self, "_{}".format('enable_legacy_sendflow_link_metadata'), kwargs.get('enable_legacy_sendflow_link_metadata', None))
         setattr(self, "_{}".format('has_external_linked_accounts'), kwargs.get('has_external_linked_accounts', None))
@@ -496,6 +504,52 @@ class AccountUISettings(object):
         """
 
         self._enable_envelope_copy_with_data_metadata = enable_envelope_copy_with_data_metadata
+
+    @property
+    def enable_envelope_types(self):
+        """Gets the enable_envelope_types of this AccountUISettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_envelope_types of this AccountUISettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_envelope_types
+
+    @enable_envelope_types.setter
+    def enable_envelope_types(self, enable_envelope_types):
+        """Sets the enable_envelope_types of this AccountUISettings.
+
+          # noqa: E501
+
+        :param enable_envelope_types: The enable_envelope_types of this AccountUISettings.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_envelope_types = enable_envelope_types
+
+    @property
+    def enable_envelope_types_metadata(self):
+        """Gets the enable_envelope_types_metadata of this AccountUISettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_envelope_types_metadata of this AccountUISettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_envelope_types_metadata
+
+    @enable_envelope_types_metadata.setter
+    def enable_envelope_types_metadata(self, enable_envelope_types_metadata):
+        """Sets the enable_envelope_types_metadata of this AccountUISettings.
+
+          # noqa: E501
+
+        :param enable_envelope_types_metadata: The enable_envelope_types_metadata of this AccountUISettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_envelope_types_metadata = enable_envelope_types_metadata
 
     @property
     def enable_legacy_sendflow_link(self):

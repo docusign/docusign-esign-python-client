@@ -39,6 +39,7 @@ class Group(object):
         'group_id': 'str',
         'group_name': 'str',
         'group_type': 'str',
+        'last_modified_on': 'str',
         'permission_profile_id': 'str',
         'users': 'list[UserInfo]',
         'users_count': 'str'
@@ -51,6 +52,7 @@ class Group(object):
         'group_id': 'groupId',
         'group_name': 'groupName',
         'group_type': 'groupType',
+        'last_modified_on': 'lastModifiedOn',
         'permission_profile_id': 'permissionProfileId',
         'users': 'users',
         'users_count': 'usersCount'
@@ -68,6 +70,7 @@ class Group(object):
         self._group_id = None
         self._group_name = None
         self._group_type = None
+        self._last_modified_on = None
         self._permission_profile_id = None
         self._users = None
         self._users_count = None
@@ -79,6 +82,7 @@ class Group(object):
         setattr(self, "_{}".format('group_id'), kwargs.get('group_id', None))
         setattr(self, "_{}".format('group_name'), kwargs.get('group_name', None))
         setattr(self, "_{}".format('group_type'), kwargs.get('group_type', None))
+        setattr(self, "_{}".format('last_modified_on'), kwargs.get('last_modified_on', None))
         setattr(self, "_{}".format('permission_profile_id'), kwargs.get('permission_profile_id', None))
         setattr(self, "_{}".format('users'), kwargs.get('users', None))
         setattr(self, "_{}".format('users_count'), kwargs.get('users_count', None))
@@ -220,6 +224,29 @@ class Group(object):
         """
 
         self._group_type = group_type
+
+    @property
+    def last_modified_on(self):
+        """Gets the last_modified_on of this Group.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The last_modified_on of this Group.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_modified_on
+
+    @last_modified_on.setter
+    def last_modified_on(self, last_modified_on):
+        """Sets the last_modified_on of this Group.
+
+          # noqa: E501
+
+        :param last_modified_on: The last_modified_on of this Group.  # noqa: E501
+        :type: str
+        """
+
+        self._last_modified_on = last_modified_on
 
     @property
     def permission_profile_id(self):
