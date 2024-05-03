@@ -33,6 +33,8 @@ class UserSettingsInformation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'account_agreements_access_type': 'str',
+        'account_agreements_access_type_metadata': 'SettingsMetadata',
         'account_management_granular': 'UserAccountManagementGranularInformation',
         'admin_only': 'str',
         'admin_only_metadata': 'SettingsMetadata',
@@ -62,6 +64,8 @@ class UserSettingsInformation(object):
         'api_can_export_ac_metadata': 'SettingsMetadata',
         'bulk_send': 'str',
         'bulk_send_metadata': 'SettingsMetadata',
+        'can_bulk_upload_agreements': 'str',
+        'can_bulk_upload_agreements_metadata': 'SettingsMetadata',
         'can_charge_account': 'str',
         'can_charge_account_metadata': 'SettingsMetadata',
         'can_create_transaction': 'str',
@@ -76,6 +80,8 @@ class UserSettingsInformation(object):
         'can_lock_envelopes_metadata': 'SettingsMetadata',
         'can_manage_account': 'str',
         'can_manage_account_metadata': 'SettingsMetadata',
+        'can_manage_agreement_parties': 'str',
+        'can_manage_agreement_parties_metadata': 'SettingsMetadata',
         'can_manage_distributor': 'str',
         'can_manage_distributor_metadata': 'SettingsMetadata',
         'can_manage_templates': 'str',
@@ -173,6 +179,8 @@ class UserSettingsInformation(object):
     }
 
     attribute_map = {
+        'account_agreements_access_type': 'accountAgreementsAccessType',
+        'account_agreements_access_type_metadata': 'accountAgreementsAccessTypeMetadata',
         'account_management_granular': 'accountManagementGranular',
         'admin_only': 'adminOnly',
         'admin_only_metadata': 'adminOnlyMetadata',
@@ -202,6 +210,8 @@ class UserSettingsInformation(object):
         'api_can_export_ac_metadata': 'apiCanExportACMetadata',
         'bulk_send': 'bulkSend',
         'bulk_send_metadata': 'bulkSendMetadata',
+        'can_bulk_upload_agreements': 'canBulkUploadAgreements',
+        'can_bulk_upload_agreements_metadata': 'canBulkUploadAgreementsMetadata',
         'can_charge_account': 'canChargeAccount',
         'can_charge_account_metadata': 'canChargeAccountMetadata',
         'can_create_transaction': 'canCreateTransaction',
@@ -216,6 +226,8 @@ class UserSettingsInformation(object):
         'can_lock_envelopes_metadata': 'canLockEnvelopesMetadata',
         'can_manage_account': 'canManageAccount',
         'can_manage_account_metadata': 'canManageAccountMetadata',
+        'can_manage_agreement_parties': 'canManageAgreementParties',
+        'can_manage_agreement_parties_metadata': 'canManageAgreementPartiesMetadata',
         'can_manage_distributor': 'canManageDistributor',
         'can_manage_distributor_metadata': 'canManageDistributorMetadata',
         'can_manage_templates': 'canManageTemplates',
@@ -318,6 +330,8 @@ class UserSettingsInformation(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._account_agreements_access_type = None
+        self._account_agreements_access_type_metadata = None
         self._account_management_granular = None
         self._admin_only = None
         self._admin_only_metadata = None
@@ -347,6 +361,8 @@ class UserSettingsInformation(object):
         self._api_can_export_ac_metadata = None
         self._bulk_send = None
         self._bulk_send_metadata = None
+        self._can_bulk_upload_agreements = None
+        self._can_bulk_upload_agreements_metadata = None
         self._can_charge_account = None
         self._can_charge_account_metadata = None
         self._can_create_transaction = None
@@ -361,6 +377,8 @@ class UserSettingsInformation(object):
         self._can_lock_envelopes_metadata = None
         self._can_manage_account = None
         self._can_manage_account_metadata = None
+        self._can_manage_agreement_parties = None
+        self._can_manage_agreement_parties_metadata = None
         self._can_manage_distributor = None
         self._can_manage_distributor_metadata = None
         self._can_manage_templates = None
@@ -457,6 +475,8 @@ class UserSettingsInformation(object):
         self._web_forms_metadata = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('account_agreements_access_type'), kwargs.get('account_agreements_access_type', None))
+        setattr(self, "_{}".format('account_agreements_access_type_metadata'), kwargs.get('account_agreements_access_type_metadata', None))
         setattr(self, "_{}".format('account_management_granular'), kwargs.get('account_management_granular', None))
         setattr(self, "_{}".format('admin_only'), kwargs.get('admin_only', None))
         setattr(self, "_{}".format('admin_only_metadata'), kwargs.get('admin_only_metadata', None))
@@ -486,6 +506,8 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('api_can_export_ac_metadata'), kwargs.get('api_can_export_ac_metadata', None))
         setattr(self, "_{}".format('bulk_send'), kwargs.get('bulk_send', None))
         setattr(self, "_{}".format('bulk_send_metadata'), kwargs.get('bulk_send_metadata', None))
+        setattr(self, "_{}".format('can_bulk_upload_agreements'), kwargs.get('can_bulk_upload_agreements', None))
+        setattr(self, "_{}".format('can_bulk_upload_agreements_metadata'), kwargs.get('can_bulk_upload_agreements_metadata', None))
         setattr(self, "_{}".format('can_charge_account'), kwargs.get('can_charge_account', None))
         setattr(self, "_{}".format('can_charge_account_metadata'), kwargs.get('can_charge_account_metadata', None))
         setattr(self, "_{}".format('can_create_transaction'), kwargs.get('can_create_transaction', None))
@@ -500,6 +522,8 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('can_lock_envelopes_metadata'), kwargs.get('can_lock_envelopes_metadata', None))
         setattr(self, "_{}".format('can_manage_account'), kwargs.get('can_manage_account', None))
         setattr(self, "_{}".format('can_manage_account_metadata'), kwargs.get('can_manage_account_metadata', None))
+        setattr(self, "_{}".format('can_manage_agreement_parties'), kwargs.get('can_manage_agreement_parties', None))
+        setattr(self, "_{}".format('can_manage_agreement_parties_metadata'), kwargs.get('can_manage_agreement_parties_metadata', None))
         setattr(self, "_{}".format('can_manage_distributor'), kwargs.get('can_manage_distributor', None))
         setattr(self, "_{}".format('can_manage_distributor_metadata'), kwargs.get('can_manage_distributor_metadata', None))
         setattr(self, "_{}".format('can_manage_templates'), kwargs.get('can_manage_templates', None))
@@ -594,6 +618,52 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('vaulting_mode_metadata'), kwargs.get('vaulting_mode_metadata', None))
         setattr(self, "_{}".format('web_forms'), kwargs.get('web_forms', None))
         setattr(self, "_{}".format('web_forms_metadata'), kwargs.get('web_forms_metadata', None))
+
+    @property
+    def account_agreements_access_type(self):
+        """Gets the account_agreements_access_type of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The account_agreements_access_type of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._account_agreements_access_type
+
+    @account_agreements_access_type.setter
+    def account_agreements_access_type(self, account_agreements_access_type):
+        """Sets the account_agreements_access_type of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param account_agreements_access_type: The account_agreements_access_type of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._account_agreements_access_type = account_agreements_access_type
+
+    @property
+    def account_agreements_access_type_metadata(self):
+        """Gets the account_agreements_access_type_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The account_agreements_access_type_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._account_agreements_access_type_metadata
+
+    @account_agreements_access_type_metadata.setter
+    def account_agreements_access_type_metadata(self, account_agreements_access_type_metadata):
+        """Sets the account_agreements_access_type_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param account_agreements_access_type_metadata: The account_agreements_access_type_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._account_agreements_access_type_metadata = account_agreements_access_type_metadata
 
     @property
     def account_management_granular(self):
@@ -1263,6 +1333,52 @@ class UserSettingsInformation(object):
         self._bulk_send_metadata = bulk_send_metadata
 
     @property
+    def can_bulk_upload_agreements(self):
+        """Gets the can_bulk_upload_agreements of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_bulk_upload_agreements of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_bulk_upload_agreements
+
+    @can_bulk_upload_agreements.setter
+    def can_bulk_upload_agreements(self, can_bulk_upload_agreements):
+        """Sets the can_bulk_upload_agreements of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_bulk_upload_agreements: The can_bulk_upload_agreements of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._can_bulk_upload_agreements = can_bulk_upload_agreements
+
+    @property
+    def can_bulk_upload_agreements_metadata(self):
+        """Gets the can_bulk_upload_agreements_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_bulk_upload_agreements_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_bulk_upload_agreements_metadata
+
+    @can_bulk_upload_agreements_metadata.setter
+    def can_bulk_upload_agreements_metadata(self, can_bulk_upload_agreements_metadata):
+        """Sets the can_bulk_upload_agreements_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_bulk_upload_agreements_metadata: The can_bulk_upload_agreements_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_bulk_upload_agreements_metadata = can_bulk_upload_agreements_metadata
+
+    @property
     def can_charge_account(self):
         """Gets the can_charge_account of this UserSettingsInformation.  # noqa: E501
 
@@ -1583,6 +1699,52 @@ class UserSettingsInformation(object):
         """
 
         self._can_manage_account_metadata = can_manage_account_metadata
+
+    @property
+    def can_manage_agreement_parties(self):
+        """Gets the can_manage_agreement_parties of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_manage_agreement_parties of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_manage_agreement_parties
+
+    @can_manage_agreement_parties.setter
+    def can_manage_agreement_parties(self, can_manage_agreement_parties):
+        """Sets the can_manage_agreement_parties of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_manage_agreement_parties: The can_manage_agreement_parties of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._can_manage_agreement_parties = can_manage_agreement_parties
+
+    @property
+    def can_manage_agreement_parties_metadata(self):
+        """Gets the can_manage_agreement_parties_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_manage_agreement_parties_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_manage_agreement_parties_metadata
+
+    @can_manage_agreement_parties_metadata.setter
+    def can_manage_agreement_parties_metadata(self, can_manage_agreement_parties_metadata):
+        """Sets the can_manage_agreement_parties_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param can_manage_agreement_parties_metadata: The can_manage_agreement_parties_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_manage_agreement_parties_metadata = can_manage_agreement_parties_metadata
 
     @property
     def can_manage_distributor(self):

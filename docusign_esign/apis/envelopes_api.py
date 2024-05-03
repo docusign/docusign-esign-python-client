@@ -1104,7 +1104,7 @@ class EnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :param ReturnUrlRequest return_url_request:
+        :param EnvelopeViewRequest envelope_view_request:
         :return: ViewUrl
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1132,13 +1132,13 @@ class EnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :param ReturnUrlRequest return_url_request:
+        :param EnvelopeViewRequest envelope_view_request:
         :return: ViewUrl
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'envelope_id', 'return_url_request']
+        all_params = ['account_id', 'envelope_id', 'envelope_view_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1178,8 +1178,8 @@ class EnvelopesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'return_url_request' in params:
-            body_params = params['return_url_request']
+        if 'envelope_view_request' in params:
+            body_params = params['envelope_view_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -2575,7 +2575,7 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def create_recipient_proof_file_resource_token(self, account_id, envelope_id, recipient_id, token_scopes, **kwargs):
+    def create_recipient_proof_file_resource_token(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Returns a resource token to get access to the identity events stored in the proof service related to this recipient.
         Creates a resource token for a sender. This token allows a sender to return identification data for a recipient using the [ID Evidence API](/docs/idevidence-api/).
@@ -2585,26 +2585,26 @@ class EnvelopesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_recipient_proof_file_resource_token(account_id, envelope_id, recipient_id, token_scopes, callback=callback_function)
+        >>> thread = api.create_recipient_proof_file_resource_token(account_id, envelope_id, recipient_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
-        :param str token_scopes: (required)
+        :param str token_scopes:
         :return: IdEvidenceResourceToken
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_recipient_proof_file_resource_token_with_http_info(account_id, envelope_id, recipient_id, token_scopes, **kwargs)
+            return self.create_recipient_proof_file_resource_token_with_http_info(account_id, envelope_id, recipient_id, **kwargs)
         else:
-            (data) = self.create_recipient_proof_file_resource_token_with_http_info(account_id, envelope_id, recipient_id, token_scopes, **kwargs)
+            (data) = self.create_recipient_proof_file_resource_token_with_http_info(account_id, envelope_id, recipient_id, **kwargs)
             return data
 
-    def create_recipient_proof_file_resource_token_with_http_info(self, account_id, envelope_id, recipient_id, token_scopes, **kwargs):
+    def create_recipient_proof_file_resource_token_with_http_info(self, account_id, envelope_id, recipient_id, **kwargs):
         """
         Returns a resource token to get access to the identity events stored in the proof service related to this recipient.
         Creates a resource token for a sender. This token allows a sender to return identification data for a recipient using the [ID Evidence API](/docs/idevidence-api/).
@@ -2614,14 +2614,14 @@ class EnvelopesApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_recipient_proof_file_resource_token_with_http_info(account_id, envelope_id, recipient_id, token_scopes, callback=callback_function)
+        >>> thread = api.create_recipient_proof_file_resource_token_with_http_info(account_id, envelope_id, recipient_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
-        :param str token_scopes: (required)
+        :param str token_scopes:
         :return: IdEvidenceResourceToken
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2651,9 +2651,6 @@ class EnvelopesApi(object):
         # verify the required parameter 'recipient_id' is set
         if ('recipient_id' not in params) or (params['recipient_id'] is None):
             raise ValueError("Missing the required parameter `recipient_id` when calling `create_recipient_proof_file_resource_token`")
-        # verify the required parameter 'token_scopes' is set
-        if ('token_scopes' not in params) or (params['token_scopes'] is None):
-            raise ValueError("Missing the required parameter `token_scopes` when calling `create_recipient_proof_file_resource_token`")
 
 
         collection_formats = {}
@@ -2666,10 +2663,10 @@ class EnvelopesApi(object):
             path_params['envelopeId'] = params['envelope_id']
         if 'recipient_id' in params:
             path_params['recipientId'] = params['recipient_id']
-        if 'token_scopes' in params:
-            path_params['token_scopes'] = params['token_scopes']
 
         query_params = {}
+        if 'token_scopes' in params:
+            query_params['token_scopes'] = params['token_scopes']
 
         header_params = {}
 
@@ -2943,7 +2940,7 @@ class EnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :param ReturnUrlRequest return_url_request:
+        :param EnvelopeViewRequest envelope_view_request:
         :return: ViewUrl
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2971,13 +2968,13 @@ class EnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :param ReturnUrlRequest return_url_request:
+        :param EnvelopeViewRequest envelope_view_request:
         :return: ViewUrl
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'envelope_id', 'return_url_request']
+        all_params = ['account_id', 'envelope_id', 'envelope_view_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3017,8 +3014,8 @@ class EnvelopesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'return_url_request' in params:
-            body_params = params['return_url_request']
+        if 'envelope_view_request' in params:
+            body_params = params['envelope_view_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -6381,7 +6378,7 @@ class EnvelopesApi(object):
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str lang_code: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
-        :param str lang_code2: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+        :param str lang_code2: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
         :return: ConsumerDisclosure
                  If the method is called asynchronously,
                  returns the request thread.
@@ -6411,7 +6408,7 @@ class EnvelopesApi(object):
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str lang_code: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
         :param str recipient_id: The ID of the recipient being accessed. (required)
-        :param str lang_code2: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
+        :param str lang_code2: The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language.
         :return: ConsumerDisclosure
                  If the method is called asynchronously,
                  returns the request thread.

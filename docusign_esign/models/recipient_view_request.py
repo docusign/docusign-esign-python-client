@@ -38,6 +38,7 @@ class RecipientViewRequest(object):
         'authentication_method': 'str',
         'client_ur_ls': 'RecipientTokenClientURLs',
         'client_user_id': 'str',
+        'display_format': 'str',
         'email': 'str',
         'frame_ancestors': 'list[str]',
         'message_origins': 'list[str]',
@@ -58,6 +59,7 @@ class RecipientViewRequest(object):
         'authentication_method': 'authenticationMethod',
         'client_ur_ls': 'clientURLs',
         'client_user_id': 'clientUserId',
+        'display_format': 'displayFormat',
         'email': 'email',
         'frame_ancestors': 'frameAncestors',
         'message_origins': 'messageOrigins',
@@ -83,6 +85,7 @@ class RecipientViewRequest(object):
         self._authentication_method = None
         self._client_ur_ls = None
         self._client_user_id = None
+        self._display_format = None
         self._email = None
         self._frame_ancestors = None
         self._message_origins = None
@@ -102,6 +105,7 @@ class RecipientViewRequest(object):
         setattr(self, "_{}".format('authentication_method'), kwargs.get('authentication_method', None))
         setattr(self, "_{}".format('client_ur_ls'), kwargs.get('client_ur_ls', None))
         setattr(self, "_{}".format('client_user_id'), kwargs.get('client_user_id', None))
+        setattr(self, "_{}".format('display_format'), kwargs.get('display_format', None))
         setattr(self, "_{}".format('email'), kwargs.get('email', None))
         setattr(self, "_{}".format('frame_ancestors'), kwargs.get('frame_ancestors', None))
         setattr(self, "_{}".format('message_origins'), kwargs.get('message_origins', None))
@@ -229,6 +233,29 @@ class RecipientViewRequest(object):
         """
 
         self._client_user_id = client_user_id
+
+    @property
+    def display_format(self):
+        """Gets the display_format of this RecipientViewRequest.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display_format of this RecipientViewRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_format
+
+    @display_format.setter
+    def display_format(self, display_format):
+        """Sets the display_format of this RecipientViewRequest.
+
+          # noqa: E501
+
+        :param display_format: The display_format of this RecipientViewRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._display_format = display_format
 
     @property
     def email(self):

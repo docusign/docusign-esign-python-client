@@ -248,6 +248,13 @@ from docusign_esign.models.envelope_transfer_rule import EnvelopeTransferRule
 from docusign_esign.models.envelope_transfer_rule_information import EnvelopeTransferRuleInformation
 from docusign_esign.models.envelope_transfer_rule_request import EnvelopeTransferRuleRequest
 from docusign_esign.models.envelope_update_summary import EnvelopeUpdateSummary
+from docusign_esign.models.envelope_view_document_settings import EnvelopeViewDocumentSettings
+from docusign_esign.models.envelope_view_envelope_custom_field_settings import EnvelopeViewEnvelopeCustomFieldSettings
+from docusign_esign.models.envelope_view_recipient_settings import EnvelopeViewRecipientSettings
+from docusign_esign.models.envelope_view_request import EnvelopeViewRequest
+from docusign_esign.models.envelope_view_settings import EnvelopeViewSettings
+from docusign_esign.models.envelope_view_tagger_settings import EnvelopeViewTaggerSettings
+from docusign_esign.models.envelope_view_template_settings import EnvelopeViewTemplateSettings
 from docusign_esign.models.envelopes_information import EnvelopesInformation
 from docusign_esign.models.error_details import ErrorDetails
 from docusign_esign.models.event_notification import EventNotification
@@ -341,6 +348,8 @@ from docusign_esign.models.offline_attributes import OfflineAttributes
 from docusign_esign.models.page import Page
 from docusign_esign.models.page_images import PageImages
 from docusign_esign.models.page_request import PageRequest
+from docusign_esign.models.palette_item_settings import PaletteItemSettings
+from docusign_esign.models.palette_settings import PaletteSettings
 from docusign_esign.models.participant import Participant
 from docusign_esign.models.path_extended_element import PathExtendedElement
 from docusign_esign.models.pay_pal_legacy_settings import PayPalLegacySettings
@@ -404,7 +413,6 @@ from docusign_esign.models.recipients_update_summary import RecipientsUpdateSumm
 from docusign_esign.models.referral_information import ReferralInformation
 from docusign_esign.models.reminders import Reminders
 from docusign_esign.models.resource_information import ResourceInformation
-from docusign_esign.models.return_url_request import ReturnUrlRequest
 from docusign_esign.models.scheduled_sending import ScheduledSending
 from docusign_esign.models.seal_identifier import SealIdentifier
 from docusign_esign.models.seal_sign import SealSign
@@ -460,6 +468,7 @@ from docusign_esign.models.template_shared_item import TemplateSharedItem
 from docusign_esign.models.template_summary import TemplateSummary
 from docusign_esign.models.template_tabs import TemplateTabs
 from docusign_esign.models.template_update_summary import TemplateUpdateSummary
+from docusign_esign.models.template_view_request import TemplateViewRequest
 from docusign_esign.models.text import Text
 from docusign_esign.models.text_custom_field import TextCustomField
 from docusign_esign.models.title import Title

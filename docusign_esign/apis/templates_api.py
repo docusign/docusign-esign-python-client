@@ -291,7 +291,7 @@ class TemplatesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str template_id: The ID of the template being accessed. (required)
-        :param ReturnUrlRequest return_url_request:
+        :param TemplateViewRequest template_view_request:
         :return: ViewUrl
                  If the method is called asynchronously,
                  returns the request thread.
@@ -319,13 +319,13 @@ class TemplatesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str template_id: The ID of the template being accessed. (required)
-        :param ReturnUrlRequest return_url_request:
+        :param TemplateViewRequest template_view_request:
         :return: ViewUrl
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'template_id', 'return_url_request']
+        all_params = ['account_id', 'template_id', 'template_view_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -365,8 +365,8 @@ class TemplatesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'return_url_request' in params:
-            body_params = params['return_url_request']
+        if 'template_view_request' in params:
+            body_params = params['template_view_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])

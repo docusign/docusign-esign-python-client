@@ -109,6 +109,7 @@ class Envelope(object):
         'templates_uri': 'str',
         'transaction_id': 'str',
         'use_disclosure': 'str',
+        'u_sig_state': 'str',
         'voided_date_time': 'str',
         'voided_reason': 'str',
         'workflow': 'Workflow'
@@ -191,6 +192,7 @@ class Envelope(object):
         'templates_uri': 'templatesUri',
         'transaction_id': 'transactionId',
         'use_disclosure': 'useDisclosure',
+        'u_sig_state': 'uSigState',
         'voided_date_time': 'voidedDateTime',
         'voided_reason': 'voidedReason',
         'workflow': 'workflow'
@@ -278,6 +280,7 @@ class Envelope(object):
         self._templates_uri = None
         self._transaction_id = None
         self._use_disclosure = None
+        self._u_sig_state = None
         self._voided_date_time = None
         self._voided_reason = None
         self._workflow = None
@@ -359,6 +362,7 @@ class Envelope(object):
         setattr(self, "_{}".format('templates_uri'), kwargs.get('templates_uri', None))
         setattr(self, "_{}".format('transaction_id'), kwargs.get('transaction_id', None))
         setattr(self, "_{}".format('use_disclosure'), kwargs.get('use_disclosure', None))
+        setattr(self, "_{}".format('u_sig_state'), kwargs.get('u_sig_state', None))
         setattr(self, "_{}".format('voided_date_time'), kwargs.get('voided_date_time', None))
         setattr(self, "_{}".format('voided_reason'), kwargs.get('voided_reason', None))
         setattr(self, "_{}".format('workflow'), kwargs.get('workflow', None))
@@ -2110,6 +2114,29 @@ class Envelope(object):
         """
 
         self._use_disclosure = use_disclosure
+
+    @property
+    def u_sig_state(self):
+        """Gets the u_sig_state of this Envelope.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The u_sig_state of this Envelope.  # noqa: E501
+        :rtype: str
+        """
+        return self._u_sig_state
+
+    @u_sig_state.setter
+    def u_sig_state(self, u_sig_state):
+        """Sets the u_sig_state of this Envelope.
+
+          # noqa: E501
+
+        :param u_sig_state: The u_sig_state of this Envelope.  # noqa: E501
+        :type: str
+        """
+
+        self._u_sig_state = u_sig_state
 
     @property
     def voided_date_time(self):
