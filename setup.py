@@ -47,7 +47,7 @@ setup(
     url="",
     keywords=["Swagger", "DocuSign REST API"],
     install_requires=REQUIRES,
-    packages=find_packages(),
+    packages=find_packages(exclude=["test"]),
     include_package_data=True,
     cmdclass={
         'clean': CleanCommand,
