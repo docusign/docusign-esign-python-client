@@ -84,4 +84,4 @@ The DocuSign eSignature Python Client SDK is licensed under the [MIT License](ht
 [downloads-image]: https://img.shields.io/pypi/dm/docusign_esign.svg?style=flat
 [downloads-url]: https://pypi.python.org/pypi/docusign_esign
 [travis-image]: https://img.shields.io/travis/docusign/docusign-python-client.svg?style=flat
-[travis-url]: https://travis-ci.org/docusign/docusign-python-client
+[travis-url]: https://travis-ci.org/docusign/docusign-python-client 
