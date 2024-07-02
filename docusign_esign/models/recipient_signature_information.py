@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    DocuSign REST API
+    Docusign eSignature REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+    The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.  # noqa: E501
 
     OpenAPI spec version: v2.1
     Contact: devcenter@docusign.com

@@ -1,29 +1,56 @@
-# The Official DocuSign eSignature Python Client SDK
+# The Official Docusign eSignature Python Client SDK
 
 [![PyPI version][pypi-image]][pypi-url]
 <!--[![PyPI downloads][downloads-image]][downloads-url]-->
-[![Build status][travis-image]][travis-url]
 
-[PyPI module](https://pypi.python.org/pypi/docusign_esign)
+The Docusign SDK makes integrating Docusign into your apps and websites a seamless experience.
 
-[Documentation about DocuSign APIs](https://developers.docusign.com/)
+## Table of Contents
+- [Introduction](#introduction)
+- [Installation](#installation)
+	* [Version Information](#versionInformation)
+	* [Requirements](#requirements)
+	* [Compatibility](#compatibility)
+	* [Path setup](#pathSetup)
+	* [Install via PIP](#pip)
+- [Dependencies](#dependencies)
+- [API Reference](#apiReference)
+- [Code Examples](#codeExamples)
+- [OAuth Implementations](#oauthImplementations)
+- [Changelog](#changeLog)
+- [Support](#support)
+- [License](#license)
+- [Additional Resources](#additionalResources)
 
+<a id="introduction"></a>
+## Introduction
+Integrate eSignatures into your application in minutes. The secure and award-winning Docusign eSignature API makes requesting signatures, automating forms, and tracking documents directly from your app easy.
+
+<a id="installation"></a>
+## Installation
+This client SDK is provided as open source, which enables you to customize its functionality to suit your particular use case. To do so, download or clone the repository. If the SDK’s given functionality meets your integration needs, or if you’re working through our [code examples](https://developers.docusign.com/docs/esign-rest-api/how-to/) from the [Docusign Developer Center](https://developers.docusign.com/), you merely need to install it by following the instructions below.
+
+<a id="versionInformation"></a>
+### Version Information
+- **API version**: v2.1
+- **Latest SDK version**: 5.0.0rc1
+
+<a id="requirements"></a>
 ## Requirements
 *   Python 2.7 (3.7+ recommended)
-*   Free [developer account](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
+*   Free [developer account](https://go.docusign.com/o/sandbox/?postActivateUrl=https://developers.docusign.com/)
 
+<a id="compatibility"></a>
 ## Compatibility
 *   Python 2.7+
 
-## Installation
-This SDK is provided as open source, which enables you to customize its functionality to suit your particular use case. To do so, download or clone the repository. If the SDK’s given functionality meets your integration needs, or if you’re working through our [code examples](https://developers.docusign.com/docs/esign-rest-api/how-to/) from the [DocuSign Developer Center](https://developers.docusign.com/), you merely need to install it by following the instructions below.
-
+<a id="pathSetup"></a>
 ### Path setup:
 1. Locate your Python installation, also referred to as a **site-packages** folder. This folder is usually labeled in a format of **Python{VersionNumber}**.  
     **Examples:**
     *   Unix/Linux: **/usr/lib/python2.7**
     *   Mac: **/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7**
-    *   Windows: **C:\Users{username}\AppData\Local\Programs\Python\Python37**
+    *   Windows: **C:\Users\{username}\AppData\Local\Programs\Python\Python37**
 2. Add your Python folder’s path to your system as an environment variable.  
     **Unix/Linux:**
     1. Type the following command into your console: \
@@ -43,45 +70,58 @@ This SDK is provided as open source, which enables you to customize its function
       </li>
     </ol>
 
+
 **Note:** If you are still unable to reference Python or pip via your command console, you can also add the path to the **site-packages** folder to the built-in environment variable labeled **Path**, which will take effect the next time you start your machine.
 
+<a id="pip"></a>
 ### Install via PIP:
-In your command console, type: **pip install docusign-esign**  
+In your command console, type: **pip install docusign_esign**  
     **Note:** This may require the command console to be elevated. You can accomplish this via sudo in Unix/Linux, or by running the command console as an administrator in Windows.
 
-## Dependencies
+<a id="dependencies"></a>
+## SDK Dependencies
 This client has the following external dependencies:
 *   certifi v14.05.14+
 *   six v1.8.0+
 *   python_dateutil v2.5.3+
 *   setuptools v21.0.0+
 *   urllib3 v1.15.1+
-*   jwcrypto v0.4.2+
-*   py-oauth2 v0.0.10+
+*   PyJWT v2.0.0+
+*   cryptography v2.5+
 
+<a id="apiReference"></a>
+## API Reference
+You can refer to the API reference [here](https://developers.docusign.com/docs/esign-rest-api/reference/).
+
+<a id="codeExamples"></a>
 ## Code examples
-You can find on our GitHub a self-executing package of code examples for the eSignature Python SDK, called a [Launcher](https://github.com/docusign/code-examples-python/blob/master/README.md), that demonstrates common use cases. You can also download a version preconfigured for your DocuSign developer account from [Quickstart](https://developers.docusign.com/docs/esign-rest-api/quickstart/). These examples can use either the [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) or [JSON Web Token (JWT)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) authentication workflows.
+Explore our GitHub repository for the [Launcher](https://github.com/docusign/code-examples-python/), a self-executing package housing code examples for the eSignature Python SDK. This package showcases several common use cases and their respective source files. Additionally, you can download a version preconfigured for your Docusign developer account from [Quickstart](https://developers.docusign.com/docs/esign-rest-api/quickstart/). These examples support both the [Authorization Code Grant](https://developers.docusign.com/platform/auth/authcode/) and [JSON Web Token (JWT)](https://developers.docusign.com/platform/auth/jwt/) authentication workflows.
 
 ## OAuth implementations
-For details regarding which type of OAuth grant will work best for your DocuSign integration, see [Choose OAuth Type](https://developers.docusign.com/platform/auth/choose/) in the [DocuSign Developer Center](https://developers.docusign.com/).
+For details regarding which type of OAuth grant will work best for your Docusign integration, see [Choose OAuth Type](https://developers.docusign.com/platform/auth/choose/) in the [Docusign Developer Center](https://developers.docusign.com/).
 
-For security purposes, DocuSign recommends using the [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) flow.
+For security purposes, Docusign recommends using the [Authorization Code Grant](https://developers.docusign.com/platform/auth/authcode/) flow.
 
+<a id="changeLog"></a>
+## Changelog
+You can refer to the complete changelog [here](https://github.com/docusign/docusign-esign-python-client/blob/master/CHANGELOG.md).
+
+<a id="support"></a>
 ## Support
-Log issues against this client through GitHub. We also have an [active developer community on Stack Overflow](https://stackoverflow.com/questions/tagged/docusignapi).
+Log issues against this client SDK through GitHub. You can also reach out to us through [Docusign Community](https://community.docusign.com/developer-59) and [Stack Overflow](https://stackoverflow.com/questions/tagged/docusignapi).
 
+<a id="license"></a>
 ## License
-The DocuSign eSignature Python Client SDK is licensed under the [MIT License](https://github.com/docusign/docusign-python-client/blob/master/LICENSE).
+The Docusign eSignature Python Client SDK is licensed under the [MIT License](https://github.com/docusign/docusign-esign-python-client/blob/master/LICENSE).
 
+<a id="additionalResources"></a>
 ### Additional resources
-*   [DocuSign Developer Center](https://developers.docusign.com/)
-*   [DocuSign API on Twitter](https://twitter.com/docusignapi)
-*   [DocuSign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)
-*   [DocuSign For Developers on YouTube](https://www.youtube.com/channel/UCJSJ2kMs_qeQotmw4-lX2)
+*   [Docusign Developer Center](https://developers.docusign.com/)
+*   [Docusign API on Twitter](https://twitter.com/docusignapi)
+*   [Docusign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)
+*   [Docusign For Developers on YouTube](https://www.youtube.com/channel/UCJSJ2kMs_qeQotmw4-lX2)
 
 [pypi-image]: https://img.shields.io/pypi/v/docusign_esign.svg?style=flat
 [pypi-url]: https://pypi.python.org/pypi/docusign_esign
 [downloads-image]: https://img.shields.io/pypi/dm/docusign_esign.svg?style=flat
 [downloads-url]: https://pypi.python.org/pypi/docusign_esign
-[travis-image]: https://img.shields.io/travis/docusign/docusign-python-client.svg?style=flat
-[travis-url]: https://travis-ci.org/docusign/docusign-python-client

@@ -2,9 +2,9 @@
 
 # flake8: noqa
 """
-    DocuSign REST API
+    Docusign eSignature REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+    The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.  # noqa: E501
 
     OpenAPI spec version: v2.1
     Contact: devcenter@docusign.com
@@ -116,6 +116,7 @@ from docusign_esign.models.bulk_send_response import BulkSendResponse
 from docusign_esign.models.bulk_send_test_response import BulkSendTestResponse
 from docusign_esign.models.bulk_sending_copy import BulkSendingCopy
 from docusign_esign.models.bulk_sending_copy_custom_field import BulkSendingCopyCustomField
+from docusign_esign.models.bulk_sending_copy_doc_gen_form_field_row_value import BulkSendingCopyDocGenFormFieldRowValue
 from docusign_esign.models.bulk_sending_copy_recipient import BulkSendingCopyRecipient
 from docusign_esign.models.bulk_sending_copy_tab import BulkSendingCopyTab
 from docusign_esign.models.bulk_sending_list import BulkSendingList

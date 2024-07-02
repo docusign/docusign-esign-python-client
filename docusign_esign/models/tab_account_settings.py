@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    DocuSign REST API
+    Docusign eSignature REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+    The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.  # noqa: E501
 
     OpenAPI spec version: v2.1
     Contact: devcenter@docusign.com
@@ -47,6 +47,8 @@ class TabAccountSettings(object):
         'data_field_size_metadata': 'SettingsMetadata',
         'draw_tabs_enabled': 'str',
         'draw_tabs_metadata': 'SettingsMetadata',
+        'enable_tab_agreement_details': 'str',
+        'enable_tab_agreement_details_metadata': 'SettingsMetadata',
         'first_last_email_tabs_enabled': 'str',
         'first_last_email_tabs_metadata': 'SettingsMetadata',
         'list_tabs_enabled': 'str',
@@ -94,6 +96,8 @@ class TabAccountSettings(object):
         'data_field_size_metadata': 'dataFieldSizeMetadata',
         'draw_tabs_enabled': 'drawTabsEnabled',
         'draw_tabs_metadata': 'drawTabsMetadata',
+        'enable_tab_agreement_details': 'enableTabAgreementDetails',
+        'enable_tab_agreement_details_metadata': 'enableTabAgreementDetailsMetadata',
         'first_last_email_tabs_enabled': 'firstLastEmailTabsEnabled',
         'first_last_email_tabs_metadata': 'firstLastEmailTabsMetadata',
         'list_tabs_enabled': 'listTabsEnabled',
@@ -146,6 +150,8 @@ class TabAccountSettings(object):
         self._data_field_size_metadata = None
         self._draw_tabs_enabled = None
         self._draw_tabs_metadata = None
+        self._enable_tab_agreement_details = None
+        self._enable_tab_agreement_details_metadata = None
         self._first_last_email_tabs_enabled = None
         self._first_last_email_tabs_metadata = None
         self._list_tabs_enabled = None
@@ -192,6 +198,8 @@ class TabAccountSettings(object):
         setattr(self, "_{}".format('data_field_size_metadata'), kwargs.get('data_field_size_metadata', None))
         setattr(self, "_{}".format('draw_tabs_enabled'), kwargs.get('draw_tabs_enabled', None))
         setattr(self, "_{}".format('draw_tabs_metadata'), kwargs.get('draw_tabs_metadata', None))
+        setattr(self, "_{}".format('enable_tab_agreement_details'), kwargs.get('enable_tab_agreement_details', None))
+        setattr(self, "_{}".format('enable_tab_agreement_details_metadata'), kwargs.get('enable_tab_agreement_details_metadata', None))
         setattr(self, "_{}".format('first_last_email_tabs_enabled'), kwargs.get('first_last_email_tabs_enabled', None))
         setattr(self, "_{}".format('first_last_email_tabs_metadata'), kwargs.get('first_last_email_tabs_metadata', None))
         setattr(self, "_{}".format('list_tabs_enabled'), kwargs.get('list_tabs_enabled', None))
@@ -544,6 +552,52 @@ class TabAccountSettings(object):
         """
 
         self._draw_tabs_metadata = draw_tabs_metadata
+
+    @property
+    def enable_tab_agreement_details(self):
+        """Gets the enable_tab_agreement_details of this TabAccountSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_tab_agreement_details of this TabAccountSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_tab_agreement_details
+
+    @enable_tab_agreement_details.setter
+    def enable_tab_agreement_details(self, enable_tab_agreement_details):
+        """Sets the enable_tab_agreement_details of this TabAccountSettings.
+
+          # noqa: E501
+
+        :param enable_tab_agreement_details: The enable_tab_agreement_details of this TabAccountSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_tab_agreement_details = enable_tab_agreement_details
+
+    @property
+    def enable_tab_agreement_details_metadata(self):
+        """Gets the enable_tab_agreement_details_metadata of this TabAccountSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_tab_agreement_details_metadata of this TabAccountSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_tab_agreement_details_metadata
+
+    @enable_tab_agreement_details_metadata.setter
+    def enable_tab_agreement_details_metadata(self, enable_tab_agreement_details_metadata):
+        """Sets the enable_tab_agreement_details_metadata of this TabAccountSettings.
+
+          # noqa: E501
+
+        :param enable_tab_agreement_details_metadata: The enable_tab_agreement_details_metadata of this TabAccountSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_tab_agreement_details_metadata = enable_tab_agreement_details_metadata
 
     @property
     def first_last_email_tabs_enabled(self):
