@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    DocuSign REST API
+    Docusign eSignature REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+    The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.  # noqa: E501
 
     OpenAPI spec version: v2.1
     Contact: devcenter@docusign.com
@@ -44,6 +44,7 @@ class NotaryRecipient(object):
         'auto_responded_reason': 'str',
         'bulk_recipients_uri': 'str',
         'bulk_send_v2_recipient': 'str',
+        'can_notary_correct_envelope': 'str',
         'can_sign_offline': 'str',
         'client_user_id': 'str',
         'completed_count': 'str',
@@ -150,6 +151,7 @@ class NotaryRecipient(object):
         'auto_responded_reason': 'autoRespondedReason',
         'bulk_recipients_uri': 'bulkRecipientsUri',
         'bulk_send_v2_recipient': 'bulkSendV2Recipient',
+        'can_notary_correct_envelope': 'canNotaryCorrectEnvelope',
         'can_sign_offline': 'canSignOffline',
         'client_user_id': 'clientUserId',
         'completed_count': 'completedCount',
@@ -261,6 +263,7 @@ class NotaryRecipient(object):
         self._auto_responded_reason = None
         self._bulk_recipients_uri = None
         self._bulk_send_v2_recipient = None
+        self._can_notary_correct_envelope = None
         self._can_sign_offline = None
         self._client_user_id = None
         self._completed_count = None
@@ -366,6 +369,7 @@ class NotaryRecipient(object):
         setattr(self, "_{}".format('auto_responded_reason'), kwargs.get('auto_responded_reason', None))
         setattr(self, "_{}".format('bulk_recipients_uri'), kwargs.get('bulk_recipients_uri', None))
         setattr(self, "_{}".format('bulk_send_v2_recipient'), kwargs.get('bulk_send_v2_recipient', None))
+        setattr(self, "_{}".format('can_notary_correct_envelope'), kwargs.get('can_notary_correct_envelope', None))
         setattr(self, "_{}".format('can_sign_offline'), kwargs.get('can_sign_offline', None))
         setattr(self, "_{}".format('client_user_id'), kwargs.get('client_user_id', None))
         setattr(self, "_{}".format('completed_count'), kwargs.get('completed_count', None))
@@ -711,6 +715,29 @@ class NotaryRecipient(object):
         """
 
         self._bulk_send_v2_recipient = bulk_send_v2_recipient
+
+    @property
+    def can_notary_correct_envelope(self):
+        """Gets the can_notary_correct_envelope of this NotaryRecipient.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_notary_correct_envelope of this NotaryRecipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_notary_correct_envelope
+
+    @can_notary_correct_envelope.setter
+    def can_notary_correct_envelope(self, can_notary_correct_envelope):
+        """Sets the can_notary_correct_envelope of this NotaryRecipient.
+
+          # noqa: E501
+
+        :param can_notary_correct_envelope: The can_notary_correct_envelope of this NotaryRecipient.  # noqa: E501
+        :type: str
+        """
+
+        self._can_notary_correct_envelope = can_notary_correct_envelope
 
     @property
     def can_sign_offline(self):

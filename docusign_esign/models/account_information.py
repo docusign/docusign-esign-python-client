@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    DocuSign REST API
+    Docusign eSignature REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+    The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.  # noqa: E501
 
     OpenAPI spec version: v2.1
     Contact: devcenter@docusign.com
@@ -58,6 +58,7 @@ class AccountInformation(object):
         'envelope_unit_price': 'str',
         'external_account_id': 'str',
         'forgotten_password_questions_count': 'str',
+        'free_envelope_sends_remaining_for_advanced_doc_gen': 'int',
         'is_downgrade': 'str',
         'payment_method': 'str',
         'plan_classification': 'str',
@@ -99,6 +100,7 @@ class AccountInformation(object):
         'envelope_unit_price': 'envelopeUnitPrice',
         'external_account_id': 'externalAccountId',
         'forgotten_password_questions_count': 'forgottenPasswordQuestionsCount',
+        'free_envelope_sends_remaining_for_advanced_doc_gen': 'freeEnvelopeSendsRemainingForAdvancedDocGen',
         'is_downgrade': 'isDowngrade',
         'payment_method': 'paymentMethod',
         'plan_classification': 'planClassification',
@@ -145,6 +147,7 @@ class AccountInformation(object):
         self._envelope_unit_price = None
         self._external_account_id = None
         self._forgotten_password_questions_count = None
+        self._free_envelope_sends_remaining_for_advanced_doc_gen = None
         self._is_downgrade = None
         self._payment_method = None
         self._plan_classification = None
@@ -185,6 +188,7 @@ class AccountInformation(object):
         setattr(self, "_{}".format('envelope_unit_price'), kwargs.get('envelope_unit_price', None))
         setattr(self, "_{}".format('external_account_id'), kwargs.get('external_account_id', None))
         setattr(self, "_{}".format('forgotten_password_questions_count'), kwargs.get('forgotten_password_questions_count', None))
+        setattr(self, "_{}".format('free_envelope_sends_remaining_for_advanced_doc_gen'), kwargs.get('free_envelope_sends_remaining_for_advanced_doc_gen', None))
         setattr(self, "_{}".format('is_downgrade'), kwargs.get('is_downgrade', None))
         setattr(self, "_{}".format('payment_method'), kwargs.get('payment_method', None))
         setattr(self, "_{}".format('plan_classification'), kwargs.get('plan_classification', None))
@@ -773,6 +777,29 @@ class AccountInformation(object):
         """
 
         self._forgotten_password_questions_count = forgotten_password_questions_count
+
+    @property
+    def free_envelope_sends_remaining_for_advanced_doc_gen(self):
+        """Gets the free_envelope_sends_remaining_for_advanced_doc_gen of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The free_envelope_sends_remaining_for_advanced_doc_gen of this AccountInformation.  # noqa: E501
+        :rtype: int
+        """
+        return self._free_envelope_sends_remaining_for_advanced_doc_gen
+
+    @free_envelope_sends_remaining_for_advanced_doc_gen.setter
+    def free_envelope_sends_remaining_for_advanced_doc_gen(self, free_envelope_sends_remaining_for_advanced_doc_gen):
+        """Sets the free_envelope_sends_remaining_for_advanced_doc_gen of this AccountInformation.
+
+          # noqa: E501
+
+        :param free_envelope_sends_remaining_for_advanced_doc_gen: The free_envelope_sends_remaining_for_advanced_doc_gen of this AccountInformation.  # noqa: E501
+        :type: int
+        """
+
+        self._free_envelope_sends_remaining_for_advanced_doc_gen = free_envelope_sends_remaining_for_advanced_doc_gen
 
     @property
     def is_downgrade(self):

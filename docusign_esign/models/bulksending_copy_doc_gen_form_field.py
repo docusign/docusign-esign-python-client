@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    DocuSign REST API
+    Docusign eSignature REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+    The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.  # noqa: E501
 
     OpenAPI spec version: v2.1
     Contact: devcenter@docusign.com
@@ -34,11 +34,13 @@ class BulksendingCopyDocGenFormField(object):
     """
     swagger_types = {
         'name': 'str',
+        'row_values': 'list[BulkSendingCopyDocGenFormFieldRowValue]',
         'value': 'str'
     }
 
     attribute_map = {
         'name': 'name',
+        'row_values': 'rowValues',
         'value': 'value'
     }
 
@@ -49,10 +51,12 @@ class BulksendingCopyDocGenFormField(object):
         self._configuration = _configuration
 
         self._name = None
+        self._row_values = None
         self._value = None
         self.discriminator = None
 
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
+        setattr(self, "_{}".format('row_values'), kwargs.get('row_values', None))
         setattr(self, "_{}".format('value'), kwargs.get('value', None))
 
     @property
@@ -77,6 +81,29 @@ class BulksendingCopyDocGenFormField(object):
         """
 
         self._name = name
+
+    @property
+    def row_values(self):
+        """Gets the row_values of this BulksendingCopyDocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The row_values of this BulksendingCopyDocGenFormField.  # noqa: E501
+        :rtype: list[BulkSendingCopyDocGenFormFieldRowValue]
+        """
+        return self._row_values
+
+    @row_values.setter
+    def row_values(self, row_values):
+        """Sets the row_values of this BulksendingCopyDocGenFormField.
+
+          # noqa: E501
+
+        :param row_values: The row_values of this BulksendingCopyDocGenFormField.  # noqa: E501
+        :type: list[BulkSendingCopyDocGenFormFieldRowValue]
+        """
+
+        self._row_values = row_values
 
     @property
     def value(self):

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    DocuSign REST API
+    Docusign eSignature REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+    The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.  # noqa: E501
 
     OpenAPI spec version: v2.1
     Contact: devcenter@docusign.com
@@ -310,6 +310,8 @@ class AccountSettingsInformation(object):
         'convert_pdf_fields_metadata': 'SettingsMetadata',
         'data_population_scope': 'str',
         'data_population_scope_metadata': 'SettingsMetadata',
+        'default_signing_responsive_view': 'str',
+        'default_signing_responsive_view_metadata': 'SettingsMetadata',
         'default_to_advanced_envelopes_filter_form': 'str',
         'default_to_advanced_envelopes_filter_form_metadata': 'SettingsMetadata',
         'disable_auto_template_matching': 'str',
@@ -348,6 +350,7 @@ class AccountSettingsInformation(object):
         'draft_envelope_retention_metadata': 'SettingsMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option': 'str',
         'dss_enable_signature_type_custom_tag_radmin_radmin_option': 'str',
+        'dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb': 'str',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'str',
         'dss_sign_29182_slide_up_bar_radmin_option': 'str',
         'email_template_version': 'str',
@@ -356,6 +359,8 @@ class AccountSettingsInformation(object):
         'enable_access_code_generator_metadata': 'SettingsMetadata',
         'enable_account_wide_search': 'str',
         'enable_account_wide_search_metadata': 'SettingsMetadata',
+        'enable_additional_advanced_web_forms_features': 'str',
+        'enable_additional_advanced_web_forms_features_metadata': 'SettingsMetadata',
         'enable_adm_healthcare': 'str',
         'enable_adm_healthcare_metadata': 'SettingsMetadata',
         'enable_advanced_envelopes_search': 'str',
@@ -467,8 +472,6 @@ class AccountSettingsInformation(object):
         'enable_reserved_domain_metadata': 'SettingsMetadata',
         'enable_responsive_signing': 'str',
         'enable_responsive_signing_metadata': 'SettingsMetadata',
-        'enable_save_as_envelope_custom_field_in_web_forms': 'str',
-        'enable_save_as_envelope_custom_field_in_web_forms_metadata': 'SettingsMetadata',
         'enable_scheduled_release': 'str',
         'enable_scheduled_release_metadata': 'SettingsMetadata',
         'enable_search_service_azure_uri': 'str',
@@ -1062,6 +1065,8 @@ class AccountSettingsInformation(object):
         'convert_pdf_fields_metadata': 'convertPdfFieldsMetadata',
         'data_population_scope': 'dataPopulationScope',
         'data_population_scope_metadata': 'dataPopulationScopeMetadata',
+        'default_signing_responsive_view': 'defaultSigningResponsiveView',
+        'default_signing_responsive_view_metadata': 'defaultSigningResponsiveViewMetadata',
         'default_to_advanced_envelopes_filter_form': 'defaultToAdvancedEnvelopesFilterForm',
         'default_to_advanced_envelopes_filter_form_metadata': 'defaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching': 'disableAutoTemplateMatching',
@@ -1100,6 +1105,7 @@ class AccountSettingsInformation(object):
         'draft_envelope_retention_metadata': 'draftEnvelopeRetentionMetadata',
         'dss_enable_provisioning_pen_configuration_radmin_option': 'dss_EnableProvisioningPenConfiguration_RadminOption',
         'dss_enable_signature_type_custom_tag_radmin_radmin_option': 'dss_EnableSignatureTypeCustomTagRadmin_RadminOption',
+        'dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb': 'dss_SCOREFDN_196_Rebrand_DocuSignIsNotAVerb',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option': 'dss_SIGN_29182_SlideUpBar_RadminOption',
         'email_template_version': 'emailTemplateVersion',
@@ -1108,6 +1114,8 @@ class AccountSettingsInformation(object):
         'enable_access_code_generator_metadata': 'enableAccessCodeGeneratorMetadata',
         'enable_account_wide_search': 'enableAccountWideSearch',
         'enable_account_wide_search_metadata': 'enableAccountWideSearchMetadata',
+        'enable_additional_advanced_web_forms_features': 'enableAdditionalAdvancedWebFormsFeatures',
+        'enable_additional_advanced_web_forms_features_metadata': 'enableAdditionalAdvancedWebFormsFeaturesMetadata',
         'enable_adm_healthcare': 'enableAdmHealthcare',
         'enable_adm_healthcare_metadata': 'enableAdmHealthcareMetadata',
         'enable_advanced_envelopes_search': 'enableAdvancedEnvelopesSearch',
@@ -1219,8 +1227,6 @@ class AccountSettingsInformation(object):
         'enable_reserved_domain_metadata': 'enableReservedDomainMetadata',
         'enable_responsive_signing': 'enableResponsiveSigning',
         'enable_responsive_signing_metadata': 'enableResponsiveSigningMetadata',
-        'enable_save_as_envelope_custom_field_in_web_forms': 'enableSaveAsEnvelopeCustomFieldInWebForms',
-        'enable_save_as_envelope_custom_field_in_web_forms_metadata': 'enableSaveAsEnvelopeCustomFieldInWebFormsMetadata',
         'enable_scheduled_release': 'enableScheduledRelease',
         'enable_scheduled_release_metadata': 'enableScheduledReleaseMetadata',
         'enable_search_service_azure_uri': 'enableSearchServiceAzureUri',
@@ -1819,6 +1825,8 @@ class AccountSettingsInformation(object):
         self._convert_pdf_fields_metadata = None
         self._data_population_scope = None
         self._data_population_scope_metadata = None
+        self._default_signing_responsive_view = None
+        self._default_signing_responsive_view_metadata = None
         self._default_to_advanced_envelopes_filter_form = None
         self._default_to_advanced_envelopes_filter_form_metadata = None
         self._disable_auto_template_matching = None
@@ -1857,6 +1865,7 @@ class AccountSettingsInformation(object):
         self._draft_envelope_retention_metadata = None
         self._dss_enable_provisioning_pen_configuration_radmin_option = None
         self._dss_enable_signature_type_custom_tag_radmin_radmin_option = None
+        self._dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb = None
         self._dss_sign_28411_enable_leave_page_prompt_radmin_option = None
         self._dss_sign_29182_slide_up_bar_radmin_option = None
         self._email_template_version = None
@@ -1865,6 +1874,8 @@ class AccountSettingsInformation(object):
         self._enable_access_code_generator_metadata = None
         self._enable_account_wide_search = None
         self._enable_account_wide_search_metadata = None
+        self._enable_additional_advanced_web_forms_features = None
+        self._enable_additional_advanced_web_forms_features_metadata = None
         self._enable_adm_healthcare = None
         self._enable_adm_healthcare_metadata = None
         self._enable_advanced_envelopes_search = None
@@ -1976,8 +1987,6 @@ class AccountSettingsInformation(object):
         self._enable_reserved_domain_metadata = None
         self._enable_responsive_signing = None
         self._enable_responsive_signing_metadata = None
-        self._enable_save_as_envelope_custom_field_in_web_forms = None
-        self._enable_save_as_envelope_custom_field_in_web_forms_metadata = None
         self._enable_scheduled_release = None
         self._enable_scheduled_release_metadata = None
         self._enable_search_service_azure_uri = None
@@ -2570,6 +2579,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('convert_pdf_fields_metadata'), kwargs.get('convert_pdf_fields_metadata', None))
         setattr(self, "_{}".format('data_population_scope'), kwargs.get('data_population_scope', None))
         setattr(self, "_{}".format('data_population_scope_metadata'), kwargs.get('data_population_scope_metadata', None))
+        setattr(self, "_{}".format('default_signing_responsive_view'), kwargs.get('default_signing_responsive_view', None))
+        setattr(self, "_{}".format('default_signing_responsive_view_metadata'), kwargs.get('default_signing_responsive_view_metadata', None))
         setattr(self, "_{}".format('default_to_advanced_envelopes_filter_form'), kwargs.get('default_to_advanced_envelopes_filter_form', None))
         setattr(self, "_{}".format('default_to_advanced_envelopes_filter_form_metadata'), kwargs.get('default_to_advanced_envelopes_filter_form_metadata', None))
         setattr(self, "_{}".format('disable_auto_template_matching'), kwargs.get('disable_auto_template_matching', None))
@@ -2608,6 +2619,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('draft_envelope_retention_metadata'), kwargs.get('draft_envelope_retention_metadata', None))
         setattr(self, "_{}".format('dss_enable_provisioning_pen_configuration_radmin_option'), kwargs.get('dss_enable_provisioning_pen_configuration_radmin_option', None))
         setattr(self, "_{}".format('dss_enable_signature_type_custom_tag_radmin_radmin_option'), kwargs.get('dss_enable_signature_type_custom_tag_radmin_radmin_option', None))
+        setattr(self, "_{}".format('dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb'), kwargs.get('dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb', None))
         setattr(self, "_{}".format('dss_sign_28411_enable_leave_page_prompt_radmin_option'), kwargs.get('dss_sign_28411_enable_leave_page_prompt_radmin_option', None))
         setattr(self, "_{}".format('dss_sign_29182_slide_up_bar_radmin_option'), kwargs.get('dss_sign_29182_slide_up_bar_radmin_option', None))
         setattr(self, "_{}".format('email_template_version'), kwargs.get('email_template_version', None))
@@ -2616,6 +2628,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_access_code_generator_metadata'), kwargs.get('enable_access_code_generator_metadata', None))
         setattr(self, "_{}".format('enable_account_wide_search'), kwargs.get('enable_account_wide_search', None))
         setattr(self, "_{}".format('enable_account_wide_search_metadata'), kwargs.get('enable_account_wide_search_metadata', None))
+        setattr(self, "_{}".format('enable_additional_advanced_web_forms_features'), kwargs.get('enable_additional_advanced_web_forms_features', None))
+        setattr(self, "_{}".format('enable_additional_advanced_web_forms_features_metadata'), kwargs.get('enable_additional_advanced_web_forms_features_metadata', None))
         setattr(self, "_{}".format('enable_adm_healthcare'), kwargs.get('enable_adm_healthcare', None))
         setattr(self, "_{}".format('enable_adm_healthcare_metadata'), kwargs.get('enable_adm_healthcare_metadata', None))
         setattr(self, "_{}".format('enable_advanced_envelopes_search'), kwargs.get('enable_advanced_envelopes_search', None))
@@ -2727,8 +2741,6 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_reserved_domain_metadata'), kwargs.get('enable_reserved_domain_metadata', None))
         setattr(self, "_{}".format('enable_responsive_signing'), kwargs.get('enable_responsive_signing', None))
         setattr(self, "_{}".format('enable_responsive_signing_metadata'), kwargs.get('enable_responsive_signing_metadata', None))
-        setattr(self, "_{}".format('enable_save_as_envelope_custom_field_in_web_forms'), kwargs.get('enable_save_as_envelope_custom_field_in_web_forms', None))
-        setattr(self, "_{}".format('enable_save_as_envelope_custom_field_in_web_forms_metadata'), kwargs.get('enable_save_as_envelope_custom_field_in_web_forms_metadata', None))
         setattr(self, "_{}".format('enable_scheduled_release'), kwargs.get('enable_scheduled_release', None))
         setattr(self, "_{}".format('enable_scheduled_release_metadata'), kwargs.get('enable_scheduled_release_metadata', None))
         setattr(self, "_{}".format('enable_search_service_azure_uri'), kwargs.get('enable_search_service_azure_uri', None))
@@ -9415,6 +9427,52 @@ class AccountSettingsInformation(object):
         self._data_population_scope_metadata = data_population_scope_metadata
 
     @property
+    def default_signing_responsive_view(self):
+        """Gets the default_signing_responsive_view of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The default_signing_responsive_view of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_signing_responsive_view
+
+    @default_signing_responsive_view.setter
+    def default_signing_responsive_view(self, default_signing_responsive_view):
+        """Sets the default_signing_responsive_view of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param default_signing_responsive_view: The default_signing_responsive_view of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._default_signing_responsive_view = default_signing_responsive_view
+
+    @property
+    def default_signing_responsive_view_metadata(self):
+        """Gets the default_signing_responsive_view_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The default_signing_responsive_view_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._default_signing_responsive_view_metadata
+
+    @default_signing_responsive_view_metadata.setter
+    def default_signing_responsive_view_metadata(self, default_signing_responsive_view_metadata):
+        """Sets the default_signing_responsive_view_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param default_signing_responsive_view_metadata: The default_signing_responsive_view_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._default_signing_responsive_view_metadata = default_signing_responsive_view_metadata
+
+    @property
     def default_to_advanced_envelopes_filter_form(self):
         """Gets the default_to_advanced_envelopes_filter_form of this AccountSettingsInformation.  # noqa: E501
 
@@ -10289,6 +10347,29 @@ class AccountSettingsInformation(object):
         self._dss_enable_signature_type_custom_tag_radmin_radmin_option = dss_enable_signature_type_custom_tag_radmin_radmin_option
 
     @property
+    def dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb(self):
+        """Gets the dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb
+
+    @dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb.setter
+    def dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb(self, dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb):
+        """Sets the dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb: The dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb = dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb
+
+    @property
     def dss_sign_28411_enable_leave_page_prompt_radmin_option(self):
         """Gets the dss_sign_28411_enable_leave_page_prompt_radmin_option of this AccountSettingsInformation.  # noqa: E501
 
@@ -10471,6 +10552,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_account_wide_search_metadata = enable_account_wide_search_metadata
+
+    @property
+    def enable_additional_advanced_web_forms_features(self):
+        """Gets the enable_additional_advanced_web_forms_features of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_additional_advanced_web_forms_features of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_additional_advanced_web_forms_features
+
+    @enable_additional_advanced_web_forms_features.setter
+    def enable_additional_advanced_web_forms_features(self, enable_additional_advanced_web_forms_features):
+        """Sets the enable_additional_advanced_web_forms_features of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_additional_advanced_web_forms_features: The enable_additional_advanced_web_forms_features of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_additional_advanced_web_forms_features = enable_additional_advanced_web_forms_features
+
+    @property
+    def enable_additional_advanced_web_forms_features_metadata(self):
+        """Gets the enable_additional_advanced_web_forms_features_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_additional_advanced_web_forms_features_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_additional_advanced_web_forms_features_metadata
+
+    @enable_additional_advanced_web_forms_features_metadata.setter
+    def enable_additional_advanced_web_forms_features_metadata(self, enable_additional_advanced_web_forms_features_metadata):
+        """Sets the enable_additional_advanced_web_forms_features_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_additional_advanced_web_forms_features_metadata: The enable_additional_advanced_web_forms_features_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_additional_advanced_web_forms_features_metadata = enable_additional_advanced_web_forms_features_metadata
 
     @property
     def enable_adm_healthcare(self):
@@ -13024,52 +13151,6 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_responsive_signing_metadata = enable_responsive_signing_metadata
-
-    @property
-    def enable_save_as_envelope_custom_field_in_web_forms(self):
-        """Gets the enable_save_as_envelope_custom_field_in_web_forms of this AccountSettingsInformation.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The enable_save_as_envelope_custom_field_in_web_forms of this AccountSettingsInformation.  # noqa: E501
-        :rtype: str
-        """
-        return self._enable_save_as_envelope_custom_field_in_web_forms
-
-    @enable_save_as_envelope_custom_field_in_web_forms.setter
-    def enable_save_as_envelope_custom_field_in_web_forms(self, enable_save_as_envelope_custom_field_in_web_forms):
-        """Sets the enable_save_as_envelope_custom_field_in_web_forms of this AccountSettingsInformation.
-
-          # noqa: E501
-
-        :param enable_save_as_envelope_custom_field_in_web_forms: The enable_save_as_envelope_custom_field_in_web_forms of this AccountSettingsInformation.  # noqa: E501
-        :type: str
-        """
-
-        self._enable_save_as_envelope_custom_field_in_web_forms = enable_save_as_envelope_custom_field_in_web_forms
-
-    @property
-    def enable_save_as_envelope_custom_field_in_web_forms_metadata(self):
-        """Gets the enable_save_as_envelope_custom_field_in_web_forms_metadata of this AccountSettingsInformation.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The enable_save_as_envelope_custom_field_in_web_forms_metadata of this AccountSettingsInformation.  # noqa: E501
-        :rtype: SettingsMetadata
-        """
-        return self._enable_save_as_envelope_custom_field_in_web_forms_metadata
-
-    @enable_save_as_envelope_custom_field_in_web_forms_metadata.setter
-    def enable_save_as_envelope_custom_field_in_web_forms_metadata(self, enable_save_as_envelope_custom_field_in_web_forms_metadata):
-        """Sets the enable_save_as_envelope_custom_field_in_web_forms_metadata of this AccountSettingsInformation.
-
-          # noqa: E501
-
-        :param enable_save_as_envelope_custom_field_in_web_forms_metadata: The enable_save_as_envelope_custom_field_in_web_forms_metadata of this AccountSettingsInformation.  # noqa: E501
-        :type: SettingsMetadata
-        """
-
-        self._enable_save_as_envelope_custom_field_in_web_forms_metadata = enable_save_as_envelope_custom_field_in_web_forms_metadata
 
     @property
     def enable_scheduled_release(self):

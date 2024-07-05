@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    DocuSign REST API
+    Docusign eSignature REST API
 
-    The DocuSign REST API provides you with a powerful, convenient, and simple Web services API for interacting with DocuSign.  # noqa: E501
+    The Docusign eSignature REST API provides you with a powerful, convenient, and simple Web services API for interacting with Docusign.  # noqa: E501
 
     OpenAPI spec version: v2.1
     Contact: devcenter@docusign.com
@@ -513,7 +513,7 @@ class EnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :param CorrectViewRequest correct_view_request:
+        :param EnvelopeViewRequest envelope_view_request:
         :return: ViewUrl
                  If the method is called asynchronously,
                  returns the request thread.
@@ -541,13 +541,13 @@ class EnvelopesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
-        :param CorrectViewRequest correct_view_request:
+        :param EnvelopeViewRequest envelope_view_request:
         :return: ViewUrl
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'envelope_id', 'correct_view_request']
+        all_params = ['account_id', 'envelope_id', 'envelope_view_request']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -587,8 +587,8 @@ class EnvelopesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'correct_view_request' in params:
-            body_params = params['correct_view_request']
+        if 'envelope_view_request' in params:
+            body_params = params['envelope_view_request']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -7155,6 +7155,7 @@ class EnvelopesApi(object):
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str advanced_update: When true, envelope information can be added or modified.
         :param str include:
+        :param str include_anchor_tab_locations:
         :return: Envelope
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7184,12 +7185,13 @@ class EnvelopesApi(object):
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str advanced_update: When true, envelope information can be added or modified.
         :param str include:
+        :param str include_anchor_tab_locations:
         :return: Envelope
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'envelope_id', 'advanced_update', 'include']
+        all_params = ['account_id', 'envelope_id', 'advanced_update', 'include', 'include_anchor_tab_locations']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7226,6 +7228,8 @@ class EnvelopesApi(object):
             query_params['advanced_update'] = params['advanced_update']
         if 'include' in params:
             query_params['include'] = params['include']
+        if 'include_anchor_tab_locations' in params:
+            query_params['include_anchor_tab_locations'] = params['include_anchor_tab_locations']
 
         header_params = {}
 
@@ -11622,6 +11626,7 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str advanced_update: When set to **true**, allows the caller to update recipients, tabs, custom fields, notification, email settings and other envelope attributes.
+        :param str recycle_on_void:
         :param str resend_envelope: When set to **true**, sends the specified envelope again.
         :param Envelope envelope:
         :return: EnvelopeUpdateSummary
@@ -11652,6 +11657,7 @@ class EnvelopesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
         :param str advanced_update: When set to **true**, allows the caller to update recipients, tabs, custom fields, notification, email settings and other envelope attributes.
+        :param str recycle_on_void:
         :param str resend_envelope: When set to **true**, sends the specified envelope again.
         :param Envelope envelope:
         :return: EnvelopeUpdateSummary
@@ -11659,7 +11665,7 @@ class EnvelopesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'envelope_id', 'advanced_update', 'resend_envelope', 'envelope']
+        all_params = ['account_id', 'envelope_id', 'advanced_update', 'recycle_on_void', 'resend_envelope', 'envelope']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11694,6 +11700,8 @@ class EnvelopesApi(object):
         query_params = {}
         if 'advanced_update' in params:
             query_params['advanced_update'] = params['advanced_update']
+        if 'recycle_on_void' in params:
+            query_params['recycle_on_void'] = params['recycle_on_void']
         if 'resend_envelope' in params:
             query_params['resend_envelope'] = params['resend_envelope']
 
