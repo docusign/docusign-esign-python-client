@@ -6,6 +6,7 @@ import base64
 import os
 import subprocess
 import unittest
+import tempfile
 
 from time import sleep
 from datetime import datetime
@@ -492,8 +493,10 @@ class SdkUnitTests(unittest.TestCase):
 
             file1 = envelopes_api.get_document(self.user_info.accounts[0].account_id, 'combined', self.envelope_id)
 
-            assert len(file1) > 0
-            subprocess.call('open ' + file1, shell=True)
+            temporary_file = tempfile.NamedTemporaryFile(delete=False)
+            with open(temporary_file.name + ".pdf", "wb") as f:
+                f.write(file1)
+            subprocess.call('open ' + temporary_file.name + ".pdf", shell=True)
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)
@@ -682,14 +685,22 @@ class SdkUnitTests(unittest.TestCase):
             envelope_id = envelope_summary.envelope_id
 
             file1 = envelopes_api.get_document(self.user_info.accounts[0].account_id, 'combined', envelope_id)
+            temporary_file1 = tempfile.NamedTemporaryFile(delete=False)
+            with open(temporary_file1.name + ".pdf", "wb") as f:
+                f.write(file1)
+
             assert len(file1) > 0
-            subprocess.call('open ' + file1, shell=True)
+            subprocess.call('open ' + temporary_file1.name + ".pdf", shell=True)
 
             logs_list = diag_api.list_request_logs()
             request_log_id = logs_list.api_request_logs[0].request_log_id
             file2 = diag_api.get_request_log(request_log_id)
+            temporary_file2 = tempfile.NamedTemporaryFile(delete=False)
+            with open(temporary_file2.name + ".txt", "wb") as f:
+                f.write(file2)
+
             assert len(file2) > 0
-            subprocess.call('open ' + file2, shell=True)
+            subprocess.call('open ' + temporary_file2.name + ".txt", shell=True)
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)

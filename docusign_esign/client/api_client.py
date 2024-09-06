@@ -17,7 +17,6 @@ import os
 import re
 import json
 import mimetypes
-import tempfile
 import threading
 import base64
 import math
@@ -188,7 +187,11 @@ class ApiClient(object):
                         r.data = r.data.decode('utf8', 'replace')
                     except (UnicodeDecodeError, AttributeError):
                         pass
-                return_data = self.deserialize(r, response_type)
+                
+                if response_type == "file":
+                    return_data = r.data
+                else:
+                    return_data = self.deserialize(r, response_type)
             else:
                 return_data = None
 
@@ -255,10 +258,9 @@ class ApiClient(object):
 
         :return: deserialized object.
         """
-        # handle file downloading
-        # save response body into a tmp file and return the instance
+        # handle file type response
         if response_type == "file":
-            return self.__deserialize_file(response)
+            return response.data
 
         # fetch data from response object
         try:
@@ -551,35 +553,6 @@ class ApiClient(object):
                         'Authentication token must be in `query` or `header`'
                     )
 
-    def __deserialize_file(self, response):
-        """
-        Saves response body into a file in a temporary folder,
-        using the filename from the `Content-Disposition` header if provided.
-
-        :param response:  RESTResponse.
-        :return: file path.
-        """
-        config = Configuration()
-
-        fd, path = tempfile.mkstemp(dir=config.temp_folder_path)
-        os.close(fd)
-        os.remove(path)
-
-        content_disposition = response.getheader("Content-Disposition")
-        if content_disposition:
-            filename = re.\
-                search(r'filename=[\'"]?([^\'"\s]+)[\'"]?', content_disposition).\
-                group(1)
-            curr_time = datetime.now()
-            formatted_time = curr_time.strftime('%m%d%Y_%H%M%S_%f')
-            filename = "{}_{}".format(formatted_time, filename)
-            path = os.path.join(os.path.dirname(path), filename)
-
-        with open(path, "wb") as f:
-            f.write(response.data)
-
-        return path
-
     def __deserialize_primitive(self, data, klass):
         """
         Deserializes string to primitive type.
@@ -671,9 +644,9 @@ class ApiClient(object):
                                scopes=(OAuth.SCOPE_SIGNATURE,)):
         """
         Request JWT User Token
-        :param client_id: DocuSign OAuth Client Id(AKA Integrator Key)
-        :param user_id: DocuSign user Id to be impersonated
-        :param oauth_host_name: DocuSign OAuth host name
+        :param client_id: Docusign OAuth Client Id(AKA Integrator Key)
+        :param user_id: Docusign user Id to be impersonated
+        :param oauth_host_name: Docusign OAuth host name
         :param private_key_bytes: the byte contents of the RSA private key
         :param expires_in: number of seconds remaining before the JWT assertion is considered as invalid
         :param scopes: Optional. The list of requested scopes may include (but not limited to) You can also pass any
@@ -714,8 +687,8 @@ class ApiClient(object):
                                       scopes=(OAuth.SCOPE_SIGNATURE,)):
         """
         Request JWT Application Token
-        :param client_id: DocuSign OAuth Client Id(AKA Integrator Key)
-        :param oauth_host_name: DocuSign OAuth host name
+        :param client_id: Docusign OAuth Client Id(AKA Integrator Key)
+        :param oauth_host_name: Docusign OAuth host name
         :param private_key_bytes: the byte contents of the RSA private key
         :param expires_in: number of seconds remaining before the JWT assertion is considered as invalid
         :param scopes: Optional. The list of requested scopes may include (but not limited to) You can also pass any
@@ -772,8 +745,8 @@ class ApiClient(object):
     def generate_access_token(self, client_id, client_secret, code):
         """
         GenerateAccessToken will exchange the authorization code for an access token and refresh tokens.
-        :param client_id: DocuSign OAuth Client Id(AKA Integrator Key)
-        :param client_secret: The secret key you generated when you set up the integration in DocuSign Admin console.
+        :param client_id: Docusign OAuth Client Id(AKA Integrator Key)
+        :param client_secret: The secret key you generated when you set up the integration in Docusign Admin console.
         :param code: The authorization code
         :return: OAuthToken object
         """
@@ -828,7 +801,7 @@ class ApiClient(object):
     def get_authorization_uri(self, client_id, scopes, redirect_uri, response_type, state=None):
         """
         Helper method to configure the OAuth accessCode/implicit flow parameters
-        :param client_id: DocuSign OAuth Client Id(AKA Integrator Key)
+        :param client_id: Docusign OAuth Client Id(AKA Integrator Key)
         :param scopes: The list of requested scopes.  Client applications may be scoped to a limited set of system access.
         :param redirect_uri: This determines where to deliver the response containing the authorization code
         :param response_type: Determines the response type of the authorization request, NOTE: these response types are
