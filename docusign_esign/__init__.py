@@ -199,6 +199,7 @@ from docusign_esign.models.connect_salesforce_field import ConnectSalesforceFiel
 from docusign_esign.models.connect_salesforce_object import ConnectSalesforceObject
 from docusign_esign.models.connect_user_info import ConnectUserInfo
 from docusign_esign.models.connect_user_object import ConnectUserObject
+from docusign_esign.models.connected_object_details import ConnectedObjectDetails
 from docusign_esign.models.consent_details import ConsentDetails
 from docusign_esign.models.console_view_request import ConsoleViewRequest
 from docusign_esign.models.consumer_disclosure import ConsumerDisclosure
@@ -493,6 +494,8 @@ from docusign_esign.models.tab_group import TabGroup
 from docusign_esign.models.tab_metadata import TabMetadata
 from docusign_esign.models.tab_metadata_list import TabMetadataList
 from docusign_esign.models.tabs import Tabs
+from docusign_esign.models.template_auto_match import TemplateAutoMatch
+from docusign_esign.models.template_auto_match_list import TemplateAutoMatchList
 from docusign_esign.models.template_custom_fields import TemplateCustomFields
 from docusign_esign.models.template_document_visibility_list import TemplateDocumentVisibilityList
 from docusign_esign.models.template_documents_result import TemplateDocumentsResult

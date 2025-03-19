@@ -41,6 +41,7 @@ class ExternalFolder(object):
         'next_uri': 'str',
         'previous_uri': 'str',
         'result_set_size': 'str',
+        'sky_drive_skip_token': 'str',
         'start_position': 'str',
         'total_set_size': 'str'
     }
@@ -54,6 +55,7 @@ class ExternalFolder(object):
         'next_uri': 'nextUri',
         'previous_uri': 'previousUri',
         'result_set_size': 'resultSetSize',
+        'sky_drive_skip_token': 'skyDriveSkipToken',
         'start_position': 'startPosition',
         'total_set_size': 'totalSetSize'
     }
@@ -72,6 +74,7 @@ class ExternalFolder(object):
         self._next_uri = None
         self._previous_uri = None
         self._result_set_size = None
+        self._sky_drive_skip_token = None
         self._start_position = None
         self._total_set_size = None
         self.discriminator = None
@@ -84,6 +87,7 @@ class ExternalFolder(object):
         setattr(self, "_{}".format('next_uri'), kwargs.get('next_uri', None))
         setattr(self, "_{}".format('previous_uri'), kwargs.get('previous_uri', None))
         setattr(self, "_{}".format('result_set_size'), kwargs.get('result_set_size', None))
+        setattr(self, "_{}".format('sky_drive_skip_token'), kwargs.get('sky_drive_skip_token', None))
         setattr(self, "_{}".format('start_position'), kwargs.get('start_position', None))
         setattr(self, "_{}".format('total_set_size'), kwargs.get('total_set_size', None))
 
@@ -270,6 +274,29 @@ class ExternalFolder(object):
         """
 
         self._result_set_size = result_set_size
+
+    @property
+    def sky_drive_skip_token(self):
+        """Gets the sky_drive_skip_token of this ExternalFolder.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The sky_drive_skip_token of this ExternalFolder.  # noqa: E501
+        :rtype: str
+        """
+        return self._sky_drive_skip_token
+
+    @sky_drive_skip_token.setter
+    def sky_drive_skip_token(self, sky_drive_skip_token):
+        """Sets the sky_drive_skip_token of this ExternalFolder.
+
+          # noqa: E501
+
+        :param sky_drive_skip_token: The sky_drive_skip_token of this ExternalFolder.  # noqa: E501
+        :type: str
+        """
+
+        self._sky_drive_skip_token = sky_drive_skip_token
 
     @property
     def start_position(self):

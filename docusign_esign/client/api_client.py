@@ -785,8 +785,6 @@ class ApiClient(object):
         # Derive OAuth Base Path if not given
         if self.base_path is None or self.base_path.startswith("https://demo") or self.base_path.startswith("http://demo") or self.base_path.startswith("https://apps-d") or self.base_path.startswith("http://apps-d"):
             self.oauth_host_name = OAuth.DEMO_OAUTH_BASE_PATH
-        elif self.base_path.startswith("https://stage") or self.base_path.startswith("http://stage") or self.base_path.startswith("https://apps-s") or self.base_path.startswith("http://apps-s"):
-            self.oauth_host_name = OAuth.STAGE_OAUTH_BASE_PATH
         else:
             self.oauth_host_name = OAuth.PRODUCTION_OAUTH_BASE_PATH
 

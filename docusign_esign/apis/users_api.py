@@ -1186,6 +1186,7 @@ class UsersApi(object):
         :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
         :param str additional_info: When set to **true**, the full list of user information is returned for each user in the account.
         :param str email:
+        :param str include_license:
         :return: UserInformation
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1215,12 +1216,13 @@ class UsersApi(object):
         :param str user_id: The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
         :param str additional_info: When set to **true**, the full list of user information is returned for each user in the account.
         :param str email:
+        :param str include_license:
         :return: UserInformation
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'user_id', 'additional_info', 'email']
+        all_params = ['account_id', 'user_id', 'additional_info', 'email', 'include_license']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1257,6 +1259,8 @@ class UsersApi(object):
             query_params['additional_info'] = params['additional_info']
         if 'email' in params:
             query_params['email'] = params['email']
+        if 'include_license' in params:
+            query_params['include_license'] = params['include_license']
 
         header_params = {}
 
@@ -1887,6 +1891,7 @@ class UsersApi(object):
         :param str email:
         :param str email_substring: Filters the returned user records by the email address or a sub-string of email address.
         :param str group_id: Filters user records returned by one or more group Id's.
+        :param str include_license:
         :param str include_usersettings_for_csv:
         :param str login_status:
         :param str not_group_id:
@@ -1926,6 +1931,7 @@ class UsersApi(object):
         :param str email:
         :param str email_substring: Filters the returned user records by the email address or a sub-string of email address.
         :param str group_id: Filters user records returned by one or more group Id's.
+        :param str include_license:
         :param str include_usersettings_for_csv:
         :param str login_status:
         :param str not_group_id:
@@ -1937,7 +1943,7 @@ class UsersApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'additional_info', 'alternate_admins_only', 'count', 'domain_users_only', 'email', 'email_substring', 'group_id', 'include_usersettings_for_csv', 'login_status', 'not_group_id', 'start_position', 'status', 'user_name_substring']
+        all_params = ['account_id', 'additional_info', 'alternate_admins_only', 'count', 'domain_users_only', 'email', 'email_substring', 'group_id', 'include_license', 'include_usersettings_for_csv', 'login_status', 'not_group_id', 'start_position', 'status', 'user_name_substring']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1979,6 +1985,8 @@ class UsersApi(object):
             query_params['email_substring'] = params['email_substring']
         if 'group_id' in params:
             query_params['group_id'] = params['group_id']
+        if 'include_license' in params:
+            query_params['include_license'] = params['include_license']
         if 'include_usersettings_for_csv' in params:
             query_params['include_usersettings_for_csv'] = params['include_usersettings_for_csv']
         if 'login_status' in params:

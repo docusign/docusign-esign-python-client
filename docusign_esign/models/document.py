@@ -41,6 +41,8 @@ class Document(object):
         'document_base64': 'str',
         'document_fields': 'list[NameValue]',
         'document_id': 'str',
+        'document_template_agreement_type_id': 'str',
+        'document_template_id': 'str',
         'encrypted_with_key_manager': 'str',
         'file_extension': 'str',
         'file_format_hint': 'str',
@@ -72,6 +74,8 @@ class Document(object):
         'document_base64': 'documentBase64',
         'document_fields': 'documentFields',
         'document_id': 'documentId',
+        'document_template_agreement_type_id': 'documentTemplateAgreementTypeId',
+        'document_template_id': 'documentTemplateId',
         'encrypted_with_key_manager': 'encryptedWithKeyManager',
         'file_extension': 'fileExtension',
         'file_format_hint': 'fileFormatHint',
@@ -108,6 +112,8 @@ class Document(object):
         self._document_base64 = None
         self._document_fields = None
         self._document_id = None
+        self._document_template_agreement_type_id = None
+        self._document_template_id = None
         self._encrypted_with_key_manager = None
         self._file_extension = None
         self._file_format_hint = None
@@ -138,6 +144,8 @@ class Document(object):
         setattr(self, "_{}".format('document_base64'), kwargs.get('document_base64', None))
         setattr(self, "_{}".format('document_fields'), kwargs.get('document_fields', None))
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
+        setattr(self, "_{}".format('document_template_agreement_type_id'), kwargs.get('document_template_agreement_type_id', None))
+        setattr(self, "_{}".format('document_template_id'), kwargs.get('document_template_id', None))
         setattr(self, "_{}".format('encrypted_with_key_manager'), kwargs.get('encrypted_with_key_manager', None))
         setattr(self, "_{}".format('file_extension'), kwargs.get('file_extension', None))
         setattr(self, "_{}".format('file_format_hint'), kwargs.get('file_format_hint', None))
@@ -342,6 +350,52 @@ class Document(object):
         """
 
         self._document_id = document_id
+
+    @property
+    def document_template_agreement_type_id(self):
+        """Gets the document_template_agreement_type_id of this Document.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_template_agreement_type_id of this Document.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_template_agreement_type_id
+
+    @document_template_agreement_type_id.setter
+    def document_template_agreement_type_id(self, document_template_agreement_type_id):
+        """Sets the document_template_agreement_type_id of this Document.
+
+          # noqa: E501
+
+        :param document_template_agreement_type_id: The document_template_agreement_type_id of this Document.  # noqa: E501
+        :type: str
+        """
+
+        self._document_template_agreement_type_id = document_template_agreement_type_id
+
+    @property
+    def document_template_id(self):
+        """Gets the document_template_id of this Document.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_template_id of this Document.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_template_id
+
+    @document_template_id.setter
+    def document_template_id(self, document_template_id):
+        """Sets the document_template_id of this Document.
+
+          # noqa: E501
+
+        :param document_template_id: The document_template_id of this Document.  # noqa: E501
+        :type: str
+        """
+
+        self._document_template_id = document_template_id
 
     @property
     def encrypted_with_key_manager(self):
