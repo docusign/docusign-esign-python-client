@@ -51,6 +51,7 @@ class Participant(object):
         'delivery_method_metadata': 'PropertyMetadata',
         'designator_id': 'str',
         'designator_id_guid': 'str',
+        'document_template_id': 'str',
         'document_visibility': 'list[DocumentVisibility]',
         'email': 'str',
         'email_metadata': 'PropertyMetadata',
@@ -107,7 +108,8 @@ class Participant(object):
         'template_locked': 'str',
         'template_required': 'str',
         'total_tab_count': 'str',
-        'user_id': 'str'
+        'user_id': 'str',
+        'web_form_recipient_view_id': 'str'
     }
 
     attribute_map = {
@@ -129,6 +131,7 @@ class Participant(object):
         'delivery_method_metadata': 'deliveryMethodMetadata',
         'designator_id': 'designatorId',
         'designator_id_guid': 'designatorIdGuid',
+        'document_template_id': 'documentTemplateId',
         'document_visibility': 'documentVisibility',
         'email': 'email',
         'email_metadata': 'emailMetadata',
@@ -185,7 +188,8 @@ class Participant(object):
         'template_locked': 'templateLocked',
         'template_required': 'templateRequired',
         'total_tab_count': 'totalTabCount',
-        'user_id': 'userId'
+        'user_id': 'userId',
+        'web_form_recipient_view_id': 'webFormRecipientViewId'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -212,6 +216,7 @@ class Participant(object):
         self._delivery_method_metadata = None
         self._designator_id = None
         self._designator_id_guid = None
+        self._document_template_id = None
         self._document_visibility = None
         self._email = None
         self._email_metadata = None
@@ -269,6 +274,7 @@ class Participant(object):
         self._template_required = None
         self._total_tab_count = None
         self._user_id = None
+        self._web_form_recipient_view_id = None
         self.discriminator = None
 
         setattr(self, "_{}".format('access_code'), kwargs.get('access_code', None))
@@ -289,6 +295,7 @@ class Participant(object):
         setattr(self, "_{}".format('delivery_method_metadata'), kwargs.get('delivery_method_metadata', None))
         setattr(self, "_{}".format('designator_id'), kwargs.get('designator_id', None))
         setattr(self, "_{}".format('designator_id_guid'), kwargs.get('designator_id_guid', None))
+        setattr(self, "_{}".format('document_template_id'), kwargs.get('document_template_id', None))
         setattr(self, "_{}".format('document_visibility'), kwargs.get('document_visibility', None))
         setattr(self, "_{}".format('email'), kwargs.get('email', None))
         setattr(self, "_{}".format('email_metadata'), kwargs.get('email_metadata', None))
@@ -346,6 +353,7 @@ class Participant(object):
         setattr(self, "_{}".format('template_required'), kwargs.get('template_required', None))
         setattr(self, "_{}".format('total_tab_count'), kwargs.get('total_tab_count', None))
         setattr(self, "_{}".format('user_id'), kwargs.get('user_id', None))
+        setattr(self, "_{}".format('web_form_recipient_view_id'), kwargs.get('web_form_recipient_view_id', None))
 
     @property
     def access_code(self):
@@ -760,6 +768,29 @@ class Participant(object):
         """
 
         self._designator_id_guid = designator_id_guid
+
+    @property
+    def document_template_id(self):
+        """Gets the document_template_id of this Participant.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_template_id of this Participant.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_template_id
+
+    @document_template_id.setter
+    def document_template_id(self, document_template_id):
+        """Sets the document_template_id of this Participant.
+
+          # noqa: E501
+
+        :param document_template_id: The document_template_id of this Participant.  # noqa: E501
+        :type: str
+        """
+
+        self._document_template_id = document_template_id
 
     @property
     def document_visibility(self):
@@ -2071,6 +2102,29 @@ class Participant(object):
         """
 
         self._user_id = user_id
+
+    @property
+    def web_form_recipient_view_id(self):
+        """Gets the web_form_recipient_view_id of this Participant.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The web_form_recipient_view_id of this Participant.  # noqa: E501
+        :rtype: str
+        """
+        return self._web_form_recipient_view_id
+
+    @web_form_recipient_view_id.setter
+    def web_form_recipient_view_id(self, web_form_recipient_view_id):
+        """Sets the web_form_recipient_view_id of this Participant.
+
+          # noqa: E501
+
+        :param web_form_recipient_view_id: The web_form_recipient_view_id of this Participant.  # noqa: E501
+        :type: str
+        """
+
+        self._web_form_recipient_view_id = web_form_recipient_view_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

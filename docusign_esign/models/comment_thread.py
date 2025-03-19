@@ -62,6 +62,7 @@ class CommentThread(object):
         'conditional_parent_label_metadata': 'PropertyMetadata',
         'conditional_parent_value': 'str',
         'conditional_parent_value_metadata': 'PropertyMetadata',
+        'connected_object_details': 'ConnectedObjectDetails',
         'custom_tab_id': 'str',
         'custom_tab_id_metadata': 'PropertyMetadata',
         'document_id': 'str',
@@ -96,6 +97,7 @@ class CommentThread(object):
         'source': 'str',
         'status': 'str',
         'status_metadata': 'PropertyMetadata',
+        'tab_fully_qualified_path': 'str',
         'tab_group_labels': 'list[str]',
         'tab_group_labels_metadata': 'PropertyMetadata',
         'tab_id': 'str',
@@ -115,6 +117,7 @@ class CommentThread(object):
         'tool_tip_metadata': 'PropertyMetadata',
         'underline': 'str',
         'underline_metadata': 'PropertyMetadata',
+        'warning_details': 'ErrorDetails',
         'width': 'str',
         'width_metadata': 'PropertyMetadata',
         'x_position': 'str',
@@ -153,6 +156,7 @@ class CommentThread(object):
         'conditional_parent_label_metadata': 'conditionalParentLabelMetadata',
         'conditional_parent_value': 'conditionalParentValue',
         'conditional_parent_value_metadata': 'conditionalParentValueMetadata',
+        'connected_object_details': 'connectedObjectDetails',
         'custom_tab_id': 'customTabId',
         'custom_tab_id_metadata': 'customTabIdMetadata',
         'document_id': 'documentId',
@@ -187,6 +191,7 @@ class CommentThread(object):
         'source': 'source',
         'status': 'status',
         'status_metadata': 'statusMetadata',
+        'tab_fully_qualified_path': 'tabFullyQualifiedPath',
         'tab_group_labels': 'tabGroupLabels',
         'tab_group_labels_metadata': 'tabGroupLabelsMetadata',
         'tab_id': 'tabId',
@@ -206,6 +211,7 @@ class CommentThread(object):
         'tool_tip_metadata': 'toolTipMetadata',
         'underline': 'underline',
         'underline_metadata': 'underlineMetadata',
+        'warning_details': 'warningDetails',
         'width': 'width',
         'width_metadata': 'widthMetadata',
         'x_position': 'xPosition',
@@ -249,6 +255,7 @@ class CommentThread(object):
         self._conditional_parent_label_metadata = None
         self._conditional_parent_value = None
         self._conditional_parent_value_metadata = None
+        self._connected_object_details = None
         self._custom_tab_id = None
         self._custom_tab_id_metadata = None
         self._document_id = None
@@ -283,6 +290,7 @@ class CommentThread(object):
         self._source = None
         self._status = None
         self._status_metadata = None
+        self._tab_fully_qualified_path = None
         self._tab_group_labels = None
         self._tab_group_labels_metadata = None
         self._tab_id = None
@@ -302,6 +310,7 @@ class CommentThread(object):
         self._tool_tip_metadata = None
         self._underline = None
         self._underline_metadata = None
+        self._warning_details = None
         self._width = None
         self._width_metadata = None
         self._x_position = None
@@ -339,6 +348,7 @@ class CommentThread(object):
         setattr(self, "_{}".format('conditional_parent_label_metadata'), kwargs.get('conditional_parent_label_metadata', None))
         setattr(self, "_{}".format('conditional_parent_value'), kwargs.get('conditional_parent_value', None))
         setattr(self, "_{}".format('conditional_parent_value_metadata'), kwargs.get('conditional_parent_value_metadata', None))
+        setattr(self, "_{}".format('connected_object_details'), kwargs.get('connected_object_details', None))
         setattr(self, "_{}".format('custom_tab_id'), kwargs.get('custom_tab_id', None))
         setattr(self, "_{}".format('custom_tab_id_metadata'), kwargs.get('custom_tab_id_metadata', None))
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
@@ -373,6 +383,7 @@ class CommentThread(object):
         setattr(self, "_{}".format('source'), kwargs.get('source', None))
         setattr(self, "_{}".format('status'), kwargs.get('status', None))
         setattr(self, "_{}".format('status_metadata'), kwargs.get('status_metadata', None))
+        setattr(self, "_{}".format('tab_fully_qualified_path'), kwargs.get('tab_fully_qualified_path', None))
         setattr(self, "_{}".format('tab_group_labels'), kwargs.get('tab_group_labels', None))
         setattr(self, "_{}".format('tab_group_labels_metadata'), kwargs.get('tab_group_labels_metadata', None))
         setattr(self, "_{}".format('tab_id'), kwargs.get('tab_id', None))
@@ -392,6 +403,7 @@ class CommentThread(object):
         setattr(self, "_{}".format('tool_tip_metadata'), kwargs.get('tool_tip_metadata', None))
         setattr(self, "_{}".format('underline'), kwargs.get('underline', None))
         setattr(self, "_{}".format('underline_metadata'), kwargs.get('underline_metadata', None))
+        setattr(self, "_{}".format('warning_details'), kwargs.get('warning_details', None))
         setattr(self, "_{}".format('width'), kwargs.get('width', None))
         setattr(self, "_{}".format('width_metadata'), kwargs.get('width_metadata', None))
         setattr(self, "_{}".format('x_position'), kwargs.get('x_position', None))
@@ -1065,6 +1077,29 @@ class CommentThread(object):
         """
 
         self._conditional_parent_value_metadata = conditional_parent_value_metadata
+
+    @property
+    def connected_object_details(self):
+        """Gets the connected_object_details of this CommentThread.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The connected_object_details of this CommentThread.  # noqa: E501
+        :rtype: ConnectedObjectDetails
+        """
+        return self._connected_object_details
+
+    @connected_object_details.setter
+    def connected_object_details(self, connected_object_details):
+        """Sets the connected_object_details of this CommentThread.
+
+          # noqa: E501
+
+        :param connected_object_details: The connected_object_details of this CommentThread.  # noqa: E501
+        :type: ConnectedObjectDetails
+        """
+
+        self._connected_object_details = connected_object_details
 
     @property
     def custom_tab_id(self):
@@ -1849,6 +1884,29 @@ class CommentThread(object):
         self._status_metadata = status_metadata
 
     @property
+    def tab_fully_qualified_path(self):
+        """Gets the tab_fully_qualified_path of this CommentThread.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tab_fully_qualified_path of this CommentThread.  # noqa: E501
+        :rtype: str
+        """
+        return self._tab_fully_qualified_path
+
+    @tab_fully_qualified_path.setter
+    def tab_fully_qualified_path(self, tab_fully_qualified_path):
+        """Sets the tab_fully_qualified_path of this CommentThread.
+
+          # noqa: E501
+
+        :param tab_fully_qualified_path: The tab_fully_qualified_path of this CommentThread.  # noqa: E501
+        :type: str
+        """
+
+        self._tab_fully_qualified_path = tab_fully_qualified_path
+
+    @property
     def tab_group_labels(self):
         """Gets the tab_group_labels of this CommentThread.  # noqa: E501
 
@@ -2284,6 +2342,29 @@ class CommentThread(object):
         """
 
         self._underline_metadata = underline_metadata
+
+    @property
+    def warning_details(self):
+        """Gets the warning_details of this CommentThread.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The warning_details of this CommentThread.  # noqa: E501
+        :rtype: ErrorDetails
+        """
+        return self._warning_details
+
+    @warning_details.setter
+    def warning_details(self, warning_details):
+        """Sets the warning_details of this CommentThread.
+
+          # noqa: E501
+
+        :param warning_details: The warning_details of this CommentThread.  # noqa: E501
+        :type: ErrorDetails
+        """
+
+        self._warning_details = warning_details
 
     @property
     def width(self):

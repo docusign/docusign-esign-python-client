@@ -33,10 +33,13 @@ class DocGenFormField(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'connected_object_details': 'ConnectedObjectDetails',
         'description': 'str',
+        'fully_qualified_path': 'str',
         'label': 'str',
         'name': 'str',
         'options': 'list[DocGenFormFieldOption]',
+        'order': 'str',
         'predefined_validation': 'str',
         'required': 'str',
         'row_values': 'list[DocGenFormFieldRowValue]',
@@ -46,10 +49,13 @@ class DocGenFormField(object):
     }
 
     attribute_map = {
+        'connected_object_details': 'connectedObjectDetails',
         'description': 'description',
+        'fully_qualified_path': 'fullyQualifiedPath',
         'label': 'label',
         'name': 'name',
         'options': 'options',
+        'order': 'order',
         'predefined_validation': 'predefinedValidation',
         'required': 'required',
         'row_values': 'rowValues',
@@ -64,10 +70,13 @@ class DocGenFormField(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._connected_object_details = None
         self._description = None
+        self._fully_qualified_path = None
         self._label = None
         self._name = None
         self._options = None
+        self._order = None
         self._predefined_validation = None
         self._required = None
         self._row_values = None
@@ -76,16 +85,42 @@ class DocGenFormField(object):
         self._value = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('connected_object_details'), kwargs.get('connected_object_details', None))
         setattr(self, "_{}".format('description'), kwargs.get('description', None))
+        setattr(self, "_{}".format('fully_qualified_path'), kwargs.get('fully_qualified_path', None))
         setattr(self, "_{}".format('label'), kwargs.get('label', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('options'), kwargs.get('options', None))
+        setattr(self, "_{}".format('order'), kwargs.get('order', None))
         setattr(self, "_{}".format('predefined_validation'), kwargs.get('predefined_validation', None))
         setattr(self, "_{}".format('required'), kwargs.get('required', None))
         setattr(self, "_{}".format('row_values'), kwargs.get('row_values', None))
         setattr(self, "_{}".format('type'), kwargs.get('type', None))
         setattr(self, "_{}".format('validation'), kwargs.get('validation', None))
         setattr(self, "_{}".format('value'), kwargs.get('value', None))
+
+    @property
+    def connected_object_details(self):
+        """Gets the connected_object_details of this DocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The connected_object_details of this DocGenFormField.  # noqa: E501
+        :rtype: ConnectedObjectDetails
+        """
+        return self._connected_object_details
+
+    @connected_object_details.setter
+    def connected_object_details(self, connected_object_details):
+        """Sets the connected_object_details of this DocGenFormField.
+
+          # noqa: E501
+
+        :param connected_object_details: The connected_object_details of this DocGenFormField.  # noqa: E501
+        :type: ConnectedObjectDetails
+        """
+
+        self._connected_object_details = connected_object_details
 
     @property
     def description(self):
@@ -109,6 +144,29 @@ class DocGenFormField(object):
         """
 
         self._description = description
+
+    @property
+    def fully_qualified_path(self):
+        """Gets the fully_qualified_path of this DocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The fully_qualified_path of this DocGenFormField.  # noqa: E501
+        :rtype: str
+        """
+        return self._fully_qualified_path
+
+    @fully_qualified_path.setter
+    def fully_qualified_path(self, fully_qualified_path):
+        """Sets the fully_qualified_path of this DocGenFormField.
+
+          # noqa: E501
+
+        :param fully_qualified_path: The fully_qualified_path of this DocGenFormField.  # noqa: E501
+        :type: str
+        """
+
+        self._fully_qualified_path = fully_qualified_path
 
     @property
     def label(self):
@@ -178,6 +236,29 @@ class DocGenFormField(object):
         """
 
         self._options = options
+
+    @property
+    def order(self):
+        """Gets the order of this DocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The order of this DocGenFormField.  # noqa: E501
+        :rtype: str
+        """
+        return self._order
+
+    @order.setter
+    def order(self, order):
+        """Sets the order of this DocGenFormField.
+
+          # noqa: E501
+
+        :param order: The order of this DocGenFormField.  # noqa: E501
+        :type: str
+        """
+
+        self._order = order
 
     @property
     def predefined_validation(self):

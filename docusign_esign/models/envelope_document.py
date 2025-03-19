@@ -48,11 +48,16 @@ class EnvelopeDocument(object):
         'document_fields': 'list[NameValue]',
         'document_id': 'str',
         'document_id_guid': 'str',
+        'document_template_agreement_type_id': 'str',
+        'document_template_id': 'str',
         'error_details': 'ErrorDetails',
+        'has_digital_signature': 'str',
         'include_in_download': 'str',
         'include_in_download_metadata': 'PropertyMetadata',
         'is_ace_gen_document': 'str',
         'is_doc_gen_document': 'str',
+        'is_externally_available': 'str',
+        'is_flattened': 'str',
         'name': 'str',
         'name_metadata': 'PropertyMetadata',
         'order': 'str',
@@ -82,11 +87,16 @@ class EnvelopeDocument(object):
         'document_fields': 'documentFields',
         'document_id': 'documentId',
         'document_id_guid': 'documentIdGuid',
+        'document_template_agreement_type_id': 'documentTemplateAgreementTypeId',
+        'document_template_id': 'documentTemplateId',
         'error_details': 'errorDetails',
+        'has_digital_signature': 'hasDigitalSignature',
         'include_in_download': 'includeInDownload',
         'include_in_download_metadata': 'includeInDownloadMetadata',
         'is_ace_gen_document': 'isAceGenDocument',
         'is_doc_gen_document': 'isDocGenDocument',
+        'is_externally_available': 'isExternallyAvailable',
+        'is_flattened': 'isFlattened',
         'name': 'name',
         'name_metadata': 'nameMetadata',
         'order': 'order',
@@ -121,11 +131,16 @@ class EnvelopeDocument(object):
         self._document_fields = None
         self._document_id = None
         self._document_id_guid = None
+        self._document_template_agreement_type_id = None
+        self._document_template_id = None
         self._error_details = None
+        self._has_digital_signature = None
         self._include_in_download = None
         self._include_in_download_metadata = None
         self._is_ace_gen_document = None
         self._is_doc_gen_document = None
+        self._is_externally_available = None
+        self._is_flattened = None
         self._name = None
         self._name_metadata = None
         self._order = None
@@ -154,11 +169,16 @@ class EnvelopeDocument(object):
         setattr(self, "_{}".format('document_fields'), kwargs.get('document_fields', None))
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
         setattr(self, "_{}".format('document_id_guid'), kwargs.get('document_id_guid', None))
+        setattr(self, "_{}".format('document_template_agreement_type_id'), kwargs.get('document_template_agreement_type_id', None))
+        setattr(self, "_{}".format('document_template_id'), kwargs.get('document_template_id', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
+        setattr(self, "_{}".format('has_digital_signature'), kwargs.get('has_digital_signature', None))
         setattr(self, "_{}".format('include_in_download'), kwargs.get('include_in_download', None))
         setattr(self, "_{}".format('include_in_download_metadata'), kwargs.get('include_in_download_metadata', None))
         setattr(self, "_{}".format('is_ace_gen_document'), kwargs.get('is_ace_gen_document', None))
         setattr(self, "_{}".format('is_doc_gen_document'), kwargs.get('is_doc_gen_document', None))
+        setattr(self, "_{}".format('is_externally_available'), kwargs.get('is_externally_available', None))
+        setattr(self, "_{}".format('is_flattened'), kwargs.get('is_flattened', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('name_metadata'), kwargs.get('name_metadata', None))
         setattr(self, "_{}".format('order'), kwargs.get('order', None))
@@ -517,6 +537,52 @@ class EnvelopeDocument(object):
         self._document_id_guid = document_id_guid
 
     @property
+    def document_template_agreement_type_id(self):
+        """Gets the document_template_agreement_type_id of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_template_agreement_type_id of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_template_agreement_type_id
+
+    @document_template_agreement_type_id.setter
+    def document_template_agreement_type_id(self, document_template_agreement_type_id):
+        """Sets the document_template_agreement_type_id of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param document_template_agreement_type_id: The document_template_agreement_type_id of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._document_template_agreement_type_id = document_template_agreement_type_id
+
+    @property
+    def document_template_id(self):
+        """Gets the document_template_id of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The document_template_id of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_template_id
+
+    @document_template_id.setter
+    def document_template_id(self, document_template_id):
+        """Sets the document_template_id of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param document_template_id: The document_template_id of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._document_template_id = document_template_id
+
+    @property
     def error_details(self):
         """Gets the error_details of this EnvelopeDocument.  # noqa: E501
 
@@ -538,6 +604,29 @@ class EnvelopeDocument(object):
         """
 
         self._error_details = error_details
+
+    @property
+    def has_digital_signature(self):
+        """Gets the has_digital_signature of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The has_digital_signature of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._has_digital_signature
+
+    @has_digital_signature.setter
+    def has_digital_signature(self, has_digital_signature):
+        """Sets the has_digital_signature of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param has_digital_signature: The has_digital_signature of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._has_digital_signature = has_digital_signature
 
     @property
     def include_in_download(self):
@@ -630,6 +719,52 @@ class EnvelopeDocument(object):
         """
 
         self._is_doc_gen_document = is_doc_gen_document
+
+    @property
+    def is_externally_available(self):
+        """Gets the is_externally_available of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_externally_available of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_externally_available
+
+    @is_externally_available.setter
+    def is_externally_available(self, is_externally_available):
+        """Sets the is_externally_available of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param is_externally_available: The is_externally_available of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._is_externally_available = is_externally_available
+
+    @property
+    def is_flattened(self):
+        """Gets the is_flattened of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_flattened of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_flattened
+
+    @is_flattened.setter
+    def is_flattened(self, is_flattened):
+        """Sets the is_flattened of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param is_flattened: The is_flattened of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._is_flattened = is_flattened
 
     @property
     def name(self):

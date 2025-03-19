@@ -57,6 +57,7 @@ class Radio(object):
         'bold_metadata': 'PropertyMetadata',
         'caption': 'str',
         'caption_metadata': 'PropertyMetadata',
+        'connected_object_details': 'ConnectedObjectDetails',
         'error_details': 'ErrorDetails',
         'font': 'str',
         'font_color': 'str',
@@ -77,6 +78,7 @@ class Radio(object):
         'selected_metadata': 'PropertyMetadata',
         'status': 'str',
         'status_metadata': 'PropertyMetadata',
+        'tab_fully_qualified_path': 'str',
         'tab_id': 'str',
         'tab_id_metadata': 'PropertyMetadata',
         'tab_order': 'str',
@@ -116,6 +118,7 @@ class Radio(object):
         'bold_metadata': 'boldMetadata',
         'caption': 'caption',
         'caption_metadata': 'captionMetadata',
+        'connected_object_details': 'connectedObjectDetails',
         'error_details': 'errorDetails',
         'font': 'font',
         'font_color': 'fontColor',
@@ -136,6 +139,7 @@ class Radio(object):
         'selected_metadata': 'selectedMetadata',
         'status': 'status',
         'status_metadata': 'statusMetadata',
+        'tab_fully_qualified_path': 'tabFullyQualifiedPath',
         'tab_id': 'tabId',
         'tab_id_metadata': 'tabIdMetadata',
         'tab_order': 'tabOrder',
@@ -180,6 +184,7 @@ class Radio(object):
         self._bold_metadata = None
         self._caption = None
         self._caption_metadata = None
+        self._connected_object_details = None
         self._error_details = None
         self._font = None
         self._font_color = None
@@ -200,6 +205,7 @@ class Radio(object):
         self._selected_metadata = None
         self._status = None
         self._status_metadata = None
+        self._tab_fully_qualified_path = None
         self._tab_id = None
         self._tab_id_metadata = None
         self._tab_order = None
@@ -238,6 +244,7 @@ class Radio(object):
         setattr(self, "_{}".format('bold_metadata'), kwargs.get('bold_metadata', None))
         setattr(self, "_{}".format('caption'), kwargs.get('caption', None))
         setattr(self, "_{}".format('caption_metadata'), kwargs.get('caption_metadata', None))
+        setattr(self, "_{}".format('connected_object_details'), kwargs.get('connected_object_details', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
         setattr(self, "_{}".format('font'), kwargs.get('font', None))
         setattr(self, "_{}".format('font_color'), kwargs.get('font_color', None))
@@ -258,6 +265,7 @@ class Radio(object):
         setattr(self, "_{}".format('selected_metadata'), kwargs.get('selected_metadata', None))
         setattr(self, "_{}".format('status'), kwargs.get('status', None))
         setattr(self, "_{}".format('status_metadata'), kwargs.get('status_metadata', None))
+        setattr(self, "_{}".format('tab_fully_qualified_path'), kwargs.get('tab_fully_qualified_path', None))
         setattr(self, "_{}".format('tab_id'), kwargs.get('tab_id', None))
         setattr(self, "_{}".format('tab_id_metadata'), kwargs.get('tab_id_metadata', None))
         setattr(self, "_{}".format('tab_order'), kwargs.get('tab_order', None))
@@ -824,6 +832,29 @@ class Radio(object):
         self._caption_metadata = caption_metadata
 
     @property
+    def connected_object_details(self):
+        """Gets the connected_object_details of this Radio.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The connected_object_details of this Radio.  # noqa: E501
+        :rtype: ConnectedObjectDetails
+        """
+        return self._connected_object_details
+
+    @connected_object_details.setter
+    def connected_object_details(self, connected_object_details):
+        """Sets the connected_object_details of this Radio.
+
+          # noqa: E501
+
+        :param connected_object_details: The connected_object_details of this Radio.  # noqa: E501
+        :type: ConnectedObjectDetails
+        """
+
+        self._connected_object_details = connected_object_details
+
+    @property
     def error_details(self):
         """Gets the error_details of this Radio.  # noqa: E501
 
@@ -1282,6 +1313,29 @@ class Radio(object):
         """
 
         self._status_metadata = status_metadata
+
+    @property
+    def tab_fully_qualified_path(self):
+        """Gets the tab_fully_qualified_path of this Radio.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tab_fully_qualified_path of this Radio.  # noqa: E501
+        :rtype: str
+        """
+        return self._tab_fully_qualified_path
+
+    @tab_fully_qualified_path.setter
+    def tab_fully_qualified_path(self, tab_fully_qualified_path):
+        """Sets the tab_fully_qualified_path of this Radio.
+
+          # noqa: E501
+
+        :param tab_fully_qualified_path: The tab_fully_qualified_path of this Radio.  # noqa: E501
+        :type: str
+        """
+
+        self._tab_fully_qualified_path = tab_fully_qualified_path
 
     @property
     def tab_id(self):

@@ -88,6 +88,7 @@ class EnvelopeTemplate(object):
         'folder_name': 'str',
         'folders': 'list[Folder]',
         'has_comments': 'str',
+        'has_document_template_library': 'str',
         'has_form_data_changed': 'str',
         'has_wav_file': 'str',
         'holder': 'str',
@@ -195,6 +196,7 @@ class EnvelopeTemplate(object):
         'folder_name': 'folderName',
         'folders': 'folders',
         'has_comments': 'hasComments',
+        'has_document_template_library': 'hasDocumentTemplateLibrary',
         'has_form_data_changed': 'hasFormDataChanged',
         'has_wav_file': 'hasWavFile',
         'holder': 'holder',
@@ -307,6 +309,7 @@ class EnvelopeTemplate(object):
         self._folder_name = None
         self._folders = None
         self._has_comments = None
+        self._has_document_template_library = None
         self._has_form_data_changed = None
         self._has_wav_file = None
         self._holder = None
@@ -413,6 +416,7 @@ class EnvelopeTemplate(object):
         setattr(self, "_{}".format('folder_name'), kwargs.get('folder_name', None))
         setattr(self, "_{}".format('folders'), kwargs.get('folders', None))
         setattr(self, "_{}".format('has_comments'), kwargs.get('has_comments', None))
+        setattr(self, "_{}".format('has_document_template_library'), kwargs.get('has_document_template_library', None))
         setattr(self, "_{}".format('has_form_data_changed'), kwargs.get('has_form_data_changed', None))
         setattr(self, "_{}".format('has_wav_file'), kwargs.get('has_wav_file', None))
         setattr(self, "_{}".format('holder'), kwargs.get('holder', None))
@@ -1727,6 +1731,29 @@ class EnvelopeTemplate(object):
         """
 
         self._has_comments = has_comments
+
+    @property
+    def has_document_template_library(self):
+        """Gets the has_document_template_library of this EnvelopeTemplate.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The has_document_template_library of this EnvelopeTemplate.  # noqa: E501
+        :rtype: str
+        """
+        return self._has_document_template_library
+
+    @has_document_template_library.setter
+    def has_document_template_library(self, has_document_template_library):
+        """Sets the has_document_template_library of this EnvelopeTemplate.
+
+          # noqa: E501
+
+        :param has_document_template_library: The has_document_template_library of this EnvelopeTemplate.  # noqa: E501
+        :type: str
+        """
+
+        self._has_document_template_library = has_document_template_library
 
     @property
     def has_form_data_changed(self):

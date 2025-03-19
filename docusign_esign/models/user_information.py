@@ -51,10 +51,14 @@ class UserInformation(object):
         'initials_image_uri': 'str',
         'is_admin': 'str',
         'is_alternate_admin': 'str',
+        'is_managed_by_scim': 'str',
+        'is_membership_managed_by_scim': 'str',
         'is_nar_enabled': 'str',
         'job_title': 'str',
         'last_login': 'str',
         'last_name': 'str',
+        'license_status': 'str',
+        'license_type': 'str',
         'login_status': 'str',
         'middle_name': 'str',
         'password': 'str',
@@ -98,10 +102,14 @@ class UserInformation(object):
         'initials_image_uri': 'initialsImageUri',
         'is_admin': 'isAdmin',
         'is_alternate_admin': 'isAlternateAdmin',
+        'is_managed_by_scim': 'isManagedByScim',
+        'is_membership_managed_by_scim': 'isMembershipManagedByScim',
         'is_nar_enabled': 'isNAREnabled',
         'job_title': 'jobTitle',
         'last_login': 'lastLogin',
         'last_name': 'lastName',
+        'license_status': 'licenseStatus',
+        'license_type': 'licenseType',
         'login_status': 'loginStatus',
         'middle_name': 'middleName',
         'password': 'password',
@@ -150,10 +158,14 @@ class UserInformation(object):
         self._initials_image_uri = None
         self._is_admin = None
         self._is_alternate_admin = None
+        self._is_managed_by_scim = None
+        self._is_membership_managed_by_scim = None
         self._is_nar_enabled = None
         self._job_title = None
         self._last_login = None
         self._last_name = None
+        self._license_status = None
+        self._license_type = None
         self._login_status = None
         self._middle_name = None
         self._password = None
@@ -196,10 +208,14 @@ class UserInformation(object):
         setattr(self, "_{}".format('initials_image_uri'), kwargs.get('initials_image_uri', None))
         setattr(self, "_{}".format('is_admin'), kwargs.get('is_admin', None))
         setattr(self, "_{}".format('is_alternate_admin'), kwargs.get('is_alternate_admin', None))
+        setattr(self, "_{}".format('is_managed_by_scim'), kwargs.get('is_managed_by_scim', None))
+        setattr(self, "_{}".format('is_membership_managed_by_scim'), kwargs.get('is_membership_managed_by_scim', None))
         setattr(self, "_{}".format('is_nar_enabled'), kwargs.get('is_nar_enabled', None))
         setattr(self, "_{}".format('job_title'), kwargs.get('job_title', None))
         setattr(self, "_{}".format('last_login'), kwargs.get('last_login', None))
         setattr(self, "_{}".format('last_name'), kwargs.get('last_name', None))
+        setattr(self, "_{}".format('license_status'), kwargs.get('license_status', None))
+        setattr(self, "_{}".format('license_type'), kwargs.get('license_type', None))
         setattr(self, "_{}".format('login_status'), kwargs.get('login_status', None))
         setattr(self, "_{}".format('middle_name'), kwargs.get('middle_name', None))
         setattr(self, "_{}".format('password'), kwargs.get('password', None))
@@ -638,6 +654,52 @@ class UserInformation(object):
         self._is_alternate_admin = is_alternate_admin
 
     @property
+    def is_managed_by_scim(self):
+        """Gets the is_managed_by_scim of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_managed_by_scim of this UserInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_managed_by_scim
+
+    @is_managed_by_scim.setter
+    def is_managed_by_scim(self, is_managed_by_scim):
+        """Sets the is_managed_by_scim of this UserInformation.
+
+          # noqa: E501
+
+        :param is_managed_by_scim: The is_managed_by_scim of this UserInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._is_managed_by_scim = is_managed_by_scim
+
+    @property
+    def is_membership_managed_by_scim(self):
+        """Gets the is_membership_managed_by_scim of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_membership_managed_by_scim of this UserInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_membership_managed_by_scim
+
+    @is_membership_managed_by_scim.setter
+    def is_membership_managed_by_scim(self, is_membership_managed_by_scim):
+        """Sets the is_membership_managed_by_scim of this UserInformation.
+
+          # noqa: E501
+
+        :param is_membership_managed_by_scim: The is_membership_managed_by_scim of this UserInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._is_membership_managed_by_scim = is_membership_managed_by_scim
+
+    @property
     def is_nar_enabled(self):
         """Gets the is_nar_enabled of this UserInformation.  # noqa: E501
 
@@ -728,6 +790,52 @@ class UserInformation(object):
         """
 
         self._last_name = last_name
+
+    @property
+    def license_status(self):
+        """Gets the license_status of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The license_status of this UserInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_status
+
+    @license_status.setter
+    def license_status(self, license_status):
+        """Sets the license_status of this UserInformation.
+
+          # noqa: E501
+
+        :param license_status: The license_status of this UserInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._license_status = license_status
+
+    @property
+    def license_type(self):
+        """Gets the license_type of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The license_type of this UserInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_type
+
+    @license_type.setter
+    def license_type(self, license_type):
+        """Sets the license_type of this UserInformation.
+
+          # noqa: E501
+
+        :param license_type: The license_type of this UserInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._license_type = license_type
 
     @property
     def login_status(self):

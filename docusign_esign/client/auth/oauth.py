@@ -33,8 +33,6 @@ class OAuth(object):
     DEMO_OAUTH_BASE_PATH = "account-d.docusign.com"
     #  Production server base path
     PRODUCTION_OAUTH_BASE_PATH = "account.docusign.com"
-    #  Stage server base path
-    STAGE_OAUTH_BASE_PATH = "account-s.docusign.com"
     #   JWT Grant Type
     GRANT_TYPE_JWT = "urn:ietf:params:oauth:grant-type:jwt-bearer"
 

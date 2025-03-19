@@ -39,6 +39,8 @@ class AccountUISettings(object):
         'ask_an_admin': 'AskAnAdmin',
         'clickwrap_schema_version': 'str',
         'clickwrap_schema_version_metadata': 'SettingsMetadata',
+        'disable_web_app_access': 'str',
+        'disable_web_app_access_metadata': 'SettingsMetadata',
         'enable_admin_message': 'str',
         'enable_admin_message_metadata': 'SettingsMetadata',
         'enable_easy_sign_can_use_multi_template_apply': 'str',
@@ -76,6 +78,8 @@ class AccountUISettings(object):
         'ask_an_admin': 'askAnAdmin',
         'clickwrap_schema_version': 'clickwrapSchemaVersion',
         'clickwrap_schema_version_metadata': 'clickwrapSchemaVersionMetadata',
+        'disable_web_app_access': 'disableWebAppAccess',
+        'disable_web_app_access_metadata': 'disableWebAppAccessMetadata',
         'enable_admin_message': 'enableAdminMessage',
         'enable_admin_message_metadata': 'enableAdminMessageMetadata',
         'enable_easy_sign_can_use_multi_template_apply': 'enableEasySignCanUseMultiTemplateApply',
@@ -118,6 +122,8 @@ class AccountUISettings(object):
         self._ask_an_admin = None
         self._clickwrap_schema_version = None
         self._clickwrap_schema_version_metadata = None
+        self._disable_web_app_access = None
+        self._disable_web_app_access_metadata = None
         self._enable_admin_message = None
         self._enable_admin_message_metadata = None
         self._enable_easy_sign_can_use_multi_template_apply = None
@@ -154,6 +160,8 @@ class AccountUISettings(object):
         setattr(self, "_{}".format('ask_an_admin'), kwargs.get('ask_an_admin', None))
         setattr(self, "_{}".format('clickwrap_schema_version'), kwargs.get('clickwrap_schema_version', None))
         setattr(self, "_{}".format('clickwrap_schema_version_metadata'), kwargs.get('clickwrap_schema_version_metadata', None))
+        setattr(self, "_{}".format('disable_web_app_access'), kwargs.get('disable_web_app_access', None))
+        setattr(self, "_{}".format('disable_web_app_access_metadata'), kwargs.get('disable_web_app_access_metadata', None))
         setattr(self, "_{}".format('enable_admin_message'), kwargs.get('enable_admin_message', None))
         setattr(self, "_{}".format('enable_admin_message_metadata'), kwargs.get('enable_admin_message_metadata', None))
         setattr(self, "_{}".format('enable_easy_sign_can_use_multi_template_apply'), kwargs.get('enable_easy_sign_can_use_multi_template_apply', None))
@@ -320,6 +328,52 @@ class AccountUISettings(object):
         """
 
         self._clickwrap_schema_version_metadata = clickwrap_schema_version_metadata
+
+    @property
+    def disable_web_app_access(self):
+        """Gets the disable_web_app_access of this AccountUISettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The disable_web_app_access of this AccountUISettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._disable_web_app_access
+
+    @disable_web_app_access.setter
+    def disable_web_app_access(self, disable_web_app_access):
+        """Sets the disable_web_app_access of this AccountUISettings.
+
+          # noqa: E501
+
+        :param disable_web_app_access: The disable_web_app_access of this AccountUISettings.  # noqa: E501
+        :type: str
+        """
+
+        self._disable_web_app_access = disable_web_app_access
+
+    @property
+    def disable_web_app_access_metadata(self):
+        """Gets the disable_web_app_access_metadata of this AccountUISettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The disable_web_app_access_metadata of this AccountUISettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._disable_web_app_access_metadata
+
+    @disable_web_app_access_metadata.setter
+    def disable_web_app_access_metadata(self, disable_web_app_access_metadata):
+        """Sets the disable_web_app_access_metadata of this AccountUISettings.
+
+          # noqa: E501
+
+        :param disable_web_app_access_metadata: The disable_web_app_access_metadata of this AccountUISettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._disable_web_app_access_metadata = disable_web_app_access_metadata
 
     @property
     def enable_admin_message(self):

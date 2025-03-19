@@ -41,6 +41,8 @@ class UserSettingsInformation(object):
         'allow_access_to_all_account_agreements': 'str',
         'allow_access_to_all_account_agreements_metadata': 'SettingsMetadata',
         'allow_auto_tagging': 'str',
+        'allowed_document_template_library_access': 'str',
+        'allowed_document_template_library_access_metadata': 'SettingsMetadata',
         'allowed_orchestration_access': 'str',
         'allowed_orchestration_access_metadata': 'SettingsMetadata',
         'allow_envelope_transfer_to': 'str',
@@ -119,6 +121,10 @@ class UserSettingsInformation(object):
         'enable_vaulting': 'str',
         'enable_vaulting_metadata': 'SettingsMetadata',
         'express_send_only': 'str',
+        'is_managed_by_scim': 'str',
+        'is_managed_by_scim_metadata': 'SettingsMetadata',
+        'is_membership_managed_by_scim': 'str',
+        'is_membership_managed_by_scim_metadata': 'SettingsMetadata',
         'locale': 'str',
         'locale_metadata': 'SettingsMetadata',
         'locale_policy': 'LocalePolicy',
@@ -187,6 +193,8 @@ class UserSettingsInformation(object):
         'allow_access_to_all_account_agreements': 'allowAccessToAllAccountAgreements',
         'allow_access_to_all_account_agreements_metadata': 'allowAccessToAllAccountAgreementsMetadata',
         'allow_auto_tagging': 'allowAutoTagging',
+        'allowed_document_template_library_access': 'allowedDocumentTemplateLibraryAccess',
+        'allowed_document_template_library_access_metadata': 'allowedDocumentTemplateLibraryAccessMetadata',
         'allowed_orchestration_access': 'allowedOrchestrationAccess',
         'allowed_orchestration_access_metadata': 'allowedOrchestrationAccessMetadata',
         'allow_envelope_transfer_to': 'allowEnvelopeTransferTo',
@@ -265,6 +273,10 @@ class UserSettingsInformation(object):
         'enable_vaulting': 'enableVaulting',
         'enable_vaulting_metadata': 'enableVaultingMetadata',
         'express_send_only': 'expressSendOnly',
+        'is_managed_by_scim': 'isManagedByScim',
+        'is_managed_by_scim_metadata': 'isManagedByScimMetadata',
+        'is_membership_managed_by_scim': 'isMembershipManagedByScim',
+        'is_membership_managed_by_scim_metadata': 'isMembershipManagedByScimMetadata',
         'locale': 'locale',
         'locale_metadata': 'localeMetadata',
         'locale_policy': 'localePolicy',
@@ -338,6 +350,8 @@ class UserSettingsInformation(object):
         self._allow_access_to_all_account_agreements = None
         self._allow_access_to_all_account_agreements_metadata = None
         self._allow_auto_tagging = None
+        self._allowed_document_template_library_access = None
+        self._allowed_document_template_library_access_metadata = None
         self._allowed_orchestration_access = None
         self._allowed_orchestration_access_metadata = None
         self._allow_envelope_transfer_to = None
@@ -416,6 +430,10 @@ class UserSettingsInformation(object):
         self._enable_vaulting = None
         self._enable_vaulting_metadata = None
         self._express_send_only = None
+        self._is_managed_by_scim = None
+        self._is_managed_by_scim_metadata = None
+        self._is_membership_managed_by_scim = None
+        self._is_membership_managed_by_scim_metadata = None
         self._locale = None
         self._locale_metadata = None
         self._locale_policy = None
@@ -483,6 +501,8 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('allow_access_to_all_account_agreements'), kwargs.get('allow_access_to_all_account_agreements', None))
         setattr(self, "_{}".format('allow_access_to_all_account_agreements_metadata'), kwargs.get('allow_access_to_all_account_agreements_metadata', None))
         setattr(self, "_{}".format('allow_auto_tagging'), kwargs.get('allow_auto_tagging', None))
+        setattr(self, "_{}".format('allowed_document_template_library_access'), kwargs.get('allowed_document_template_library_access', None))
+        setattr(self, "_{}".format('allowed_document_template_library_access_metadata'), kwargs.get('allowed_document_template_library_access_metadata', None))
         setattr(self, "_{}".format('allowed_orchestration_access'), kwargs.get('allowed_orchestration_access', None))
         setattr(self, "_{}".format('allowed_orchestration_access_metadata'), kwargs.get('allowed_orchestration_access_metadata', None))
         setattr(self, "_{}".format('allow_envelope_transfer_to'), kwargs.get('allow_envelope_transfer_to', None))
@@ -561,6 +581,10 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('enable_vaulting'), kwargs.get('enable_vaulting', None))
         setattr(self, "_{}".format('enable_vaulting_metadata'), kwargs.get('enable_vaulting_metadata', None))
         setattr(self, "_{}".format('express_send_only'), kwargs.get('express_send_only', None))
+        setattr(self, "_{}".format('is_managed_by_scim'), kwargs.get('is_managed_by_scim', None))
+        setattr(self, "_{}".format('is_managed_by_scim_metadata'), kwargs.get('is_managed_by_scim_metadata', None))
+        setattr(self, "_{}".format('is_membership_managed_by_scim'), kwargs.get('is_membership_managed_by_scim', None))
+        setattr(self, "_{}".format('is_membership_managed_by_scim_metadata'), kwargs.get('is_membership_managed_by_scim_metadata', None))
         setattr(self, "_{}".format('locale'), kwargs.get('locale', None))
         setattr(self, "_{}".format('locale_metadata'), kwargs.get('locale_metadata', None))
         setattr(self, "_{}".format('locale_policy'), kwargs.get('locale_policy', None))
@@ -802,6 +826,52 @@ class UserSettingsInformation(object):
         """
 
         self._allow_auto_tagging = allow_auto_tagging
+
+    @property
+    def allowed_document_template_library_access(self):
+        """Gets the allowed_document_template_library_access of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allowed_document_template_library_access of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allowed_document_template_library_access
+
+    @allowed_document_template_library_access.setter
+    def allowed_document_template_library_access(self, allowed_document_template_library_access):
+        """Sets the allowed_document_template_library_access of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param allowed_document_template_library_access: The allowed_document_template_library_access of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allowed_document_template_library_access = allowed_document_template_library_access
+
+    @property
+    def allowed_document_template_library_access_metadata(self):
+        """Gets the allowed_document_template_library_access_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allowed_document_template_library_access_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allowed_document_template_library_access_metadata
+
+    @allowed_document_template_library_access_metadata.setter
+    def allowed_document_template_library_access_metadata(self, allowed_document_template_library_access_metadata):
+        """Sets the allowed_document_template_library_access_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param allowed_document_template_library_access_metadata: The allowed_document_template_library_access_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allowed_document_template_library_access_metadata = allowed_document_template_library_access_metadata
 
     @property
     def allowed_orchestration_access(self):
@@ -2596,6 +2666,98 @@ class UserSettingsInformation(object):
         """
 
         self._express_send_only = express_send_only
+
+    @property
+    def is_managed_by_scim(self):
+        """Gets the is_managed_by_scim of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_managed_by_scim of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_managed_by_scim
+
+    @is_managed_by_scim.setter
+    def is_managed_by_scim(self, is_managed_by_scim):
+        """Sets the is_managed_by_scim of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param is_managed_by_scim: The is_managed_by_scim of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._is_managed_by_scim = is_managed_by_scim
+
+    @property
+    def is_managed_by_scim_metadata(self):
+        """Gets the is_managed_by_scim_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_managed_by_scim_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._is_managed_by_scim_metadata
+
+    @is_managed_by_scim_metadata.setter
+    def is_managed_by_scim_metadata(self, is_managed_by_scim_metadata):
+        """Sets the is_managed_by_scim_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param is_managed_by_scim_metadata: The is_managed_by_scim_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._is_managed_by_scim_metadata = is_managed_by_scim_metadata
+
+    @property
+    def is_membership_managed_by_scim(self):
+        """Gets the is_membership_managed_by_scim of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_membership_managed_by_scim of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_membership_managed_by_scim
+
+    @is_membership_managed_by_scim.setter
+    def is_membership_managed_by_scim(self, is_membership_managed_by_scim):
+        """Sets the is_membership_managed_by_scim of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param is_membership_managed_by_scim: The is_membership_managed_by_scim of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._is_membership_managed_by_scim = is_membership_managed_by_scim
+
+    @property
+    def is_membership_managed_by_scim_metadata(self):
+        """Gets the is_membership_managed_by_scim_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_membership_managed_by_scim_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._is_membership_managed_by_scim_metadata
+
+    @is_membership_managed_by_scim_metadata.setter
+    def is_membership_managed_by_scim_metadata(self, is_membership_managed_by_scim_metadata):
+        """Sets the is_membership_managed_by_scim_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param is_membership_managed_by_scim_metadata: The is_membership_managed_by_scim_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._is_membership_managed_by_scim_metadata = is_membership_managed_by_scim_metadata
 
     @property
     def locale(self):

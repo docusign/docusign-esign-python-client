@@ -36,8 +36,12 @@ class LinkedExternalPrimaryAccount(object):
         'account_name': 'str',
         'configuration_id': 'str',
         'email': 'str',
+        'exempt_members_of_same_account_from_auth': 'str',
         'link_id': 'str',
         'pdf_field_handling_option': 'str',
+        'pdf_field_handling_prefill_tab_permission': 'str',
+        'pdf_field_handling_standard_input_tab_permission': 'str',
+        'pdf_field_handling_standard_tab_permission': 'str',
         'recipient_auth_requirements': 'ExternalPrimaryAccountRecipientAuthRequirements',
         'status': 'str',
         'user_id': 'str'
@@ -47,8 +51,12 @@ class LinkedExternalPrimaryAccount(object):
         'account_name': 'accountName',
         'configuration_id': 'configurationId',
         'email': 'email',
+        'exempt_members_of_same_account_from_auth': 'exemptMembersOfSameAccountFromAuth',
         'link_id': 'linkId',
         'pdf_field_handling_option': 'pdfFieldHandlingOption',
+        'pdf_field_handling_prefill_tab_permission': 'pdfFieldHandlingPrefillTabPermission',
+        'pdf_field_handling_standard_input_tab_permission': 'pdfFieldHandlingStandardInputTabPermission',
+        'pdf_field_handling_standard_tab_permission': 'pdfFieldHandlingStandardTabPermission',
         'recipient_auth_requirements': 'recipientAuthRequirements',
         'status': 'status',
         'user_id': 'userId'
@@ -63,8 +71,12 @@ class LinkedExternalPrimaryAccount(object):
         self._account_name = None
         self._configuration_id = None
         self._email = None
+        self._exempt_members_of_same_account_from_auth = None
         self._link_id = None
         self._pdf_field_handling_option = None
+        self._pdf_field_handling_prefill_tab_permission = None
+        self._pdf_field_handling_standard_input_tab_permission = None
+        self._pdf_field_handling_standard_tab_permission = None
         self._recipient_auth_requirements = None
         self._status = None
         self._user_id = None
@@ -73,8 +85,12 @@ class LinkedExternalPrimaryAccount(object):
         setattr(self, "_{}".format('account_name'), kwargs.get('account_name', None))
         setattr(self, "_{}".format('configuration_id'), kwargs.get('configuration_id', None))
         setattr(self, "_{}".format('email'), kwargs.get('email', None))
+        setattr(self, "_{}".format('exempt_members_of_same_account_from_auth'), kwargs.get('exempt_members_of_same_account_from_auth', None))
         setattr(self, "_{}".format('link_id'), kwargs.get('link_id', None))
         setattr(self, "_{}".format('pdf_field_handling_option'), kwargs.get('pdf_field_handling_option', None))
+        setattr(self, "_{}".format('pdf_field_handling_prefill_tab_permission'), kwargs.get('pdf_field_handling_prefill_tab_permission', None))
+        setattr(self, "_{}".format('pdf_field_handling_standard_input_tab_permission'), kwargs.get('pdf_field_handling_standard_input_tab_permission', None))
+        setattr(self, "_{}".format('pdf_field_handling_standard_tab_permission'), kwargs.get('pdf_field_handling_standard_tab_permission', None))
         setattr(self, "_{}".format('recipient_auth_requirements'), kwargs.get('recipient_auth_requirements', None))
         setattr(self, "_{}".format('status'), kwargs.get('status', None))
         setattr(self, "_{}".format('user_id'), kwargs.get('user_id', None))
@@ -149,6 +165,29 @@ class LinkedExternalPrimaryAccount(object):
         self._email = email
 
     @property
+    def exempt_members_of_same_account_from_auth(self):
+        """Gets the exempt_members_of_same_account_from_auth of this LinkedExternalPrimaryAccount.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The exempt_members_of_same_account_from_auth of this LinkedExternalPrimaryAccount.  # noqa: E501
+        :rtype: str
+        """
+        return self._exempt_members_of_same_account_from_auth
+
+    @exempt_members_of_same_account_from_auth.setter
+    def exempt_members_of_same_account_from_auth(self, exempt_members_of_same_account_from_auth):
+        """Sets the exempt_members_of_same_account_from_auth of this LinkedExternalPrimaryAccount.
+
+          # noqa: E501
+
+        :param exempt_members_of_same_account_from_auth: The exempt_members_of_same_account_from_auth of this LinkedExternalPrimaryAccount.  # noqa: E501
+        :type: str
+        """
+
+        self._exempt_members_of_same_account_from_auth = exempt_members_of_same_account_from_auth
+
+    @property
     def link_id(self):
         """Gets the link_id of this LinkedExternalPrimaryAccount.  # noqa: E501
 
@@ -193,6 +232,75 @@ class LinkedExternalPrimaryAccount(object):
         """
 
         self._pdf_field_handling_option = pdf_field_handling_option
+
+    @property
+    def pdf_field_handling_prefill_tab_permission(self):
+        """Gets the pdf_field_handling_prefill_tab_permission of this LinkedExternalPrimaryAccount.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pdf_field_handling_prefill_tab_permission of this LinkedExternalPrimaryAccount.  # noqa: E501
+        :rtype: str
+        """
+        return self._pdf_field_handling_prefill_tab_permission
+
+    @pdf_field_handling_prefill_tab_permission.setter
+    def pdf_field_handling_prefill_tab_permission(self, pdf_field_handling_prefill_tab_permission):
+        """Sets the pdf_field_handling_prefill_tab_permission of this LinkedExternalPrimaryAccount.
+
+          # noqa: E501
+
+        :param pdf_field_handling_prefill_tab_permission: The pdf_field_handling_prefill_tab_permission of this LinkedExternalPrimaryAccount.  # noqa: E501
+        :type: str
+        """
+
+        self._pdf_field_handling_prefill_tab_permission = pdf_field_handling_prefill_tab_permission
+
+    @property
+    def pdf_field_handling_standard_input_tab_permission(self):
+        """Gets the pdf_field_handling_standard_input_tab_permission of this LinkedExternalPrimaryAccount.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pdf_field_handling_standard_input_tab_permission of this LinkedExternalPrimaryAccount.  # noqa: E501
+        :rtype: str
+        """
+        return self._pdf_field_handling_standard_input_tab_permission
+
+    @pdf_field_handling_standard_input_tab_permission.setter
+    def pdf_field_handling_standard_input_tab_permission(self, pdf_field_handling_standard_input_tab_permission):
+        """Sets the pdf_field_handling_standard_input_tab_permission of this LinkedExternalPrimaryAccount.
+
+          # noqa: E501
+
+        :param pdf_field_handling_standard_input_tab_permission: The pdf_field_handling_standard_input_tab_permission of this LinkedExternalPrimaryAccount.  # noqa: E501
+        :type: str
+        """
+
+        self._pdf_field_handling_standard_input_tab_permission = pdf_field_handling_standard_input_tab_permission
+
+    @property
+    def pdf_field_handling_standard_tab_permission(self):
+        """Gets the pdf_field_handling_standard_tab_permission of this LinkedExternalPrimaryAccount.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pdf_field_handling_standard_tab_permission of this LinkedExternalPrimaryAccount.  # noqa: E501
+        :rtype: str
+        """
+        return self._pdf_field_handling_standard_tab_permission
+
+    @pdf_field_handling_standard_tab_permission.setter
+    def pdf_field_handling_standard_tab_permission(self, pdf_field_handling_standard_tab_permission):
+        """Sets the pdf_field_handling_standard_tab_permission of this LinkedExternalPrimaryAccount.
+
+          # noqa: E501
+
+        :param pdf_field_handling_standard_tab_permission: The pdf_field_handling_standard_tab_permission of this LinkedExternalPrimaryAccount.  # noqa: E501
+        :type: str
+        """
+
+        self._pdf_field_handling_standard_tab_permission = pdf_field_handling_standard_tab_permission
 
     @property
     def recipient_auth_requirements(self):
