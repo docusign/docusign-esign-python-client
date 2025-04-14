@@ -530,6 +530,7 @@ class CloudStorageApi(object):
         :param str order: An optional value that sets the direction order used to sort the item list.   Valid values are:   * asc = ascending sort order * desc = descending sort order 
         :param str order_by: An optional value that sets the file attribute used to sort the item list.   Valid values are:   * modified * name  
         :param str search_text:
+        :param str sky_drive_skip_token:
         :param str start_position: Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.  
         :return: ExternalFolder
                  If the method is called asynchronously,
@@ -566,13 +567,14 @@ class CloudStorageApi(object):
         :param str order: An optional value that sets the direction order used to sort the item list.   Valid values are:   * asc = ascending sort order * desc = descending sort order 
         :param str order_by: An optional value that sets the file attribute used to sort the item list.   Valid values are:   * modified * name  
         :param str search_text:
+        :param str sky_drive_skip_token:
         :param str start_position: Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.  
         :return: ExternalFolder
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'folder_id', 'service_id', 'user_id', 'cloud_storage_folder_path', 'cloud_storage_folderid_plain', 'count', 'order', 'order_by', 'search_text', 'start_position']
+        all_params = ['account_id', 'folder_id', 'service_id', 'user_id', 'cloud_storage_folder_path', 'cloud_storage_folderid_plain', 'count', 'order', 'order_by', 'search_text', 'sky_drive_skip_token', 'start_position']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -627,6 +629,8 @@ class CloudStorageApi(object):
             query_params['order_by'] = params['order_by']
         if 'search_text' in params:
             query_params['search_text'] = params['search_text']
+        if 'sky_drive_skip_token' in params:
+            query_params['sky_drive_skip_token'] = params['sky_drive_skip_token']
         if 'start_position' in params:
             query_params['start_position'] = params['start_position']
 

@@ -39,6 +39,7 @@ class Group(object):
         'group_id': 'str',
         'group_name': 'str',
         'group_type': 'str',
+        'is_managed_by_scim': 'str',
         'last_modified_on': 'str',
         'permission_profile_id': 'str',
         'users': 'list[UserInfo]',
@@ -52,6 +53,7 @@ class Group(object):
         'group_id': 'groupId',
         'group_name': 'groupName',
         'group_type': 'groupType',
+        'is_managed_by_scim': 'isManagedByScim',
         'last_modified_on': 'lastModifiedOn',
         'permission_profile_id': 'permissionProfileId',
         'users': 'users',
@@ -70,6 +72,7 @@ class Group(object):
         self._group_id = None
         self._group_name = None
         self._group_type = None
+        self._is_managed_by_scim = None
         self._last_modified_on = None
         self._permission_profile_id = None
         self._users = None
@@ -82,6 +85,7 @@ class Group(object):
         setattr(self, "_{}".format('group_id'), kwargs.get('group_id', None))
         setattr(self, "_{}".format('group_name'), kwargs.get('group_name', None))
         setattr(self, "_{}".format('group_type'), kwargs.get('group_type', None))
+        setattr(self, "_{}".format('is_managed_by_scim'), kwargs.get('is_managed_by_scim', None))
         setattr(self, "_{}".format('last_modified_on'), kwargs.get('last_modified_on', None))
         setattr(self, "_{}".format('permission_profile_id'), kwargs.get('permission_profile_id', None))
         setattr(self, "_{}".format('users'), kwargs.get('users', None))
@@ -224,6 +228,29 @@ class Group(object):
         """
 
         self._group_type = group_type
+
+    @property
+    def is_managed_by_scim(self):
+        """Gets the is_managed_by_scim of this Group.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_managed_by_scim of this Group.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_managed_by_scim
+
+    @is_managed_by_scim.setter
+    def is_managed_by_scim(self, is_managed_by_scim):
+        """Sets the is_managed_by_scim of this Group.
+
+          # noqa: E501
+
+        :param is_managed_by_scim: The is_managed_by_scim of this Group.  # noqa: E501
+        :type: str
+        """
+
+        self._is_managed_by_scim = is_managed_by_scim
 
     @property
     def last_modified_on(self):

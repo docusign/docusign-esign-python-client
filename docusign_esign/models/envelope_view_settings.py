@@ -43,6 +43,7 @@ class EnvelopeViewSettings(object):
         'show_back_button': 'str',
         'show_discard_action': 'str',
         'show_header_actions': 'str',
+        'show_sign_now': 'str',
         'starting_screen': 'str',
         'tagger_settings': 'EnvelopeViewTaggerSettings',
         'template_settings': 'EnvelopeViewTemplateSettings'
@@ -59,6 +60,7 @@ class EnvelopeViewSettings(object):
         'show_back_button': 'showBackButton',
         'show_discard_action': 'showDiscardAction',
         'show_header_actions': 'showHeaderActions',
+        'show_sign_now': 'showSignNow',
         'starting_screen': 'startingScreen',
         'tagger_settings': 'taggerSettings',
         'template_settings': 'templateSettings'
@@ -80,6 +82,7 @@ class EnvelopeViewSettings(object):
         self._show_back_button = None
         self._show_discard_action = None
         self._show_header_actions = None
+        self._show_sign_now = None
         self._starting_screen = None
         self._tagger_settings = None
         self._template_settings = None
@@ -95,6 +98,7 @@ class EnvelopeViewSettings(object):
         setattr(self, "_{}".format('show_back_button'), kwargs.get('show_back_button', None))
         setattr(self, "_{}".format('show_discard_action'), kwargs.get('show_discard_action', None))
         setattr(self, "_{}".format('show_header_actions'), kwargs.get('show_header_actions', None))
+        setattr(self, "_{}".format('show_sign_now'), kwargs.get('show_sign_now', None))
         setattr(self, "_{}".format('starting_screen'), kwargs.get('starting_screen', None))
         setattr(self, "_{}".format('tagger_settings'), kwargs.get('tagger_settings', None))
         setattr(self, "_{}".format('template_settings'), kwargs.get('template_settings', None))
@@ -328,6 +332,29 @@ class EnvelopeViewSettings(object):
         """
 
         self._show_header_actions = show_header_actions
+
+    @property
+    def show_sign_now(self):
+        """Gets the show_sign_now of this EnvelopeViewSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The show_sign_now of this EnvelopeViewSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._show_sign_now
+
+    @show_sign_now.setter
+    def show_sign_now(self, show_sign_now):
+        """Sets the show_sign_now of this EnvelopeViewSettings.
+
+          # noqa: E501
+
+        :param show_sign_now: The show_sign_now of this EnvelopeViewSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._show_sign_now = show_sign_now
 
     @property
     def starting_screen(self):

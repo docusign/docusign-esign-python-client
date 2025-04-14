@@ -46,7 +46,7 @@ class Brand(object):
         'is_sending_default': 'bool',
         'is_signing_default': 'bool',
         'landing_pages': 'list[NameValue]',
-        'links': 'list[BrandLink]',
+        'links': 'str',
         'logos': 'BrandLogos',
         'organization_brand_logo': 'str',
         'resources': 'BrandResourceUrls'
@@ -421,7 +421,7 @@ class Brand(object):
           # noqa: E501
 
         :return: The links of this Brand.  # noqa: E501
-        :rtype: list[BrandLink]
+        :rtype: str
         """
         return self._links
 
@@ -432,7 +432,7 @@ class Brand(object):
           # noqa: E501
 
         :param links: The links of this Brand.  # noqa: E501
-        :type: list[BrandLink]
+        :type: str
         """
 
         self._links = links

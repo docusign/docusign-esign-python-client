@@ -718,11 +718,13 @@ class PowerFormsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str count:
         :param str from_date:
         :param str order:
         :param str order_by:
         :param str search_fields:
         :param str search_text:
+        :param str start_position:
         :param str to_date:
         :return: PowerFormsResponse
                  If the method is called asynchronously,
@@ -750,18 +752,20 @@ class PowerFormsApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str count:
         :param str from_date:
         :param str order:
         :param str order_by:
         :param str search_fields:
         :param str search_text:
+        :param str start_position:
         :param str to_date:
         :return: PowerFormsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'from_date', 'order', 'order_by', 'search_fields', 'search_text', 'to_date']
+        all_params = ['account_id', 'count', 'from_date', 'order', 'order_by', 'search_fields', 'search_text', 'start_position', 'to_date']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -789,6 +793,8 @@ class PowerFormsApi(object):
             path_params['accountId'] = params['account_id']
 
         query_params = {}
+        if 'count' in params:
+            query_params['count'] = params['count']
         if 'from_date' in params:
             query_params['from_date'] = params['from_date']
         if 'order' in params:
@@ -799,6 +805,8 @@ class PowerFormsApi(object):
             query_params['search_fields'] = params['search_fields']
         if 'search_text' in params:
             query_params['search_text'] = params['search_text']
+        if 'start_position' in params:
+            query_params['start_position'] = params['start_position']
         if 'to_date' in params:
             query_params['to_date'] = params['to_date']
 
