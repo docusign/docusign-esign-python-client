@@ -33,6 +33,8 @@ class DateSigned(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'agreement_attribute': 'str',
+        'agreement_attribute_locked': 'str',
         'anchor_allow_white_space_in_characters': 'str',
         'anchor_allow_white_space_in_characters_metadata': 'PropertyMetadata',
         'anchor_case_sensitive': 'str',
@@ -61,11 +63,13 @@ class DateSigned(object):
         'conditional_parent_label_metadata': 'PropertyMetadata',
         'conditional_parent_value': 'str',
         'conditional_parent_value_metadata': 'PropertyMetadata',
+        'connected_object_details': 'ConnectedObjectDetails',
         'custom_tab_id': 'str',
         'custom_tab_id_metadata': 'PropertyMetadata',
         'document_id': 'str',
         'document_id_metadata': 'PropertyMetadata',
         'error_details': 'ErrorDetails',
+        'extension_data': 'ExtensionData',
         'font': 'str',
         'font_color': 'str',
         'font_color_metadata': 'PropertyMetadata',
@@ -97,6 +101,7 @@ class DateSigned(object):
         'source': 'str',
         'status': 'str',
         'status_metadata': 'PropertyMetadata',
+        'tab_fully_qualified_path': 'str',
         'tab_group_labels': 'list[str]',
         'tab_group_labels_metadata': 'PropertyMetadata',
         'tab_id': 'str',
@@ -117,6 +122,7 @@ class DateSigned(object):
         'underline_metadata': 'PropertyMetadata',
         'value': 'str',
         'value_metadata': 'PropertyMetadata',
+        'warning_details': 'ErrorDetails',
         'width': 'str',
         'width_metadata': 'PropertyMetadata',
         'x_position': 'str',
@@ -126,6 +132,8 @@ class DateSigned(object):
     }
 
     attribute_map = {
+        'agreement_attribute': 'agreementAttribute',
+        'agreement_attribute_locked': 'agreementAttributeLocked',
         'anchor_allow_white_space_in_characters': 'anchorAllowWhiteSpaceInCharacters',
         'anchor_allow_white_space_in_characters_metadata': 'anchorAllowWhiteSpaceInCharactersMetadata',
         'anchor_case_sensitive': 'anchorCaseSensitive',
@@ -154,11 +162,13 @@ class DateSigned(object):
         'conditional_parent_label_metadata': 'conditionalParentLabelMetadata',
         'conditional_parent_value': 'conditionalParentValue',
         'conditional_parent_value_metadata': 'conditionalParentValueMetadata',
+        'connected_object_details': 'connectedObjectDetails',
         'custom_tab_id': 'customTabId',
         'custom_tab_id_metadata': 'customTabIdMetadata',
         'document_id': 'documentId',
         'document_id_metadata': 'documentIdMetadata',
         'error_details': 'errorDetails',
+        'extension_data': 'extensionData',
         'font': 'font',
         'font_color': 'fontColor',
         'font_color_metadata': 'fontColorMetadata',
@@ -190,6 +200,7 @@ class DateSigned(object):
         'source': 'source',
         'status': 'status',
         'status_metadata': 'statusMetadata',
+        'tab_fully_qualified_path': 'tabFullyQualifiedPath',
         'tab_group_labels': 'tabGroupLabels',
         'tab_group_labels_metadata': 'tabGroupLabelsMetadata',
         'tab_id': 'tabId',
@@ -210,6 +221,7 @@ class DateSigned(object):
         'underline_metadata': 'underlineMetadata',
         'value': 'value',
         'value_metadata': 'valueMetadata',
+        'warning_details': 'warningDetails',
         'width': 'width',
         'width_metadata': 'widthMetadata',
         'x_position': 'xPosition',
@@ -224,6 +236,8 @@ class DateSigned(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._agreement_attribute = None
+        self._agreement_attribute_locked = None
         self._anchor_allow_white_space_in_characters = None
         self._anchor_allow_white_space_in_characters_metadata = None
         self._anchor_case_sensitive = None
@@ -252,11 +266,13 @@ class DateSigned(object):
         self._conditional_parent_label_metadata = None
         self._conditional_parent_value = None
         self._conditional_parent_value_metadata = None
+        self._connected_object_details = None
         self._custom_tab_id = None
         self._custom_tab_id_metadata = None
         self._document_id = None
         self._document_id_metadata = None
         self._error_details = None
+        self._extension_data = None
         self._font = None
         self._font_color = None
         self._font_color_metadata = None
@@ -288,6 +304,7 @@ class DateSigned(object):
         self._source = None
         self._status = None
         self._status_metadata = None
+        self._tab_fully_qualified_path = None
         self._tab_group_labels = None
         self._tab_group_labels_metadata = None
         self._tab_id = None
@@ -308,6 +325,7 @@ class DateSigned(object):
         self._underline_metadata = None
         self._value = None
         self._value_metadata = None
+        self._warning_details = None
         self._width = None
         self._width_metadata = None
         self._x_position = None
@@ -316,6 +334,8 @@ class DateSigned(object):
         self._y_position_metadata = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('agreement_attribute'), kwargs.get('agreement_attribute', None))
+        setattr(self, "_{}".format('agreement_attribute_locked'), kwargs.get('agreement_attribute_locked', None))
         setattr(self, "_{}".format('anchor_allow_white_space_in_characters'), kwargs.get('anchor_allow_white_space_in_characters', None))
         setattr(self, "_{}".format('anchor_allow_white_space_in_characters_metadata'), kwargs.get('anchor_allow_white_space_in_characters_metadata', None))
         setattr(self, "_{}".format('anchor_case_sensitive'), kwargs.get('anchor_case_sensitive', None))
@@ -344,11 +364,13 @@ class DateSigned(object):
         setattr(self, "_{}".format('conditional_parent_label_metadata'), kwargs.get('conditional_parent_label_metadata', None))
         setattr(self, "_{}".format('conditional_parent_value'), kwargs.get('conditional_parent_value', None))
         setattr(self, "_{}".format('conditional_parent_value_metadata'), kwargs.get('conditional_parent_value_metadata', None))
+        setattr(self, "_{}".format('connected_object_details'), kwargs.get('connected_object_details', None))
         setattr(self, "_{}".format('custom_tab_id'), kwargs.get('custom_tab_id', None))
         setattr(self, "_{}".format('custom_tab_id_metadata'), kwargs.get('custom_tab_id_metadata', None))
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
         setattr(self, "_{}".format('document_id_metadata'), kwargs.get('document_id_metadata', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
+        setattr(self, "_{}".format('extension_data'), kwargs.get('extension_data', None))
         setattr(self, "_{}".format('font'), kwargs.get('font', None))
         setattr(self, "_{}".format('font_color'), kwargs.get('font_color', None))
         setattr(self, "_{}".format('font_color_metadata'), kwargs.get('font_color_metadata', None))
@@ -380,6 +402,7 @@ class DateSigned(object):
         setattr(self, "_{}".format('source'), kwargs.get('source', None))
         setattr(self, "_{}".format('status'), kwargs.get('status', None))
         setattr(self, "_{}".format('status_metadata'), kwargs.get('status_metadata', None))
+        setattr(self, "_{}".format('tab_fully_qualified_path'), kwargs.get('tab_fully_qualified_path', None))
         setattr(self, "_{}".format('tab_group_labels'), kwargs.get('tab_group_labels', None))
         setattr(self, "_{}".format('tab_group_labels_metadata'), kwargs.get('tab_group_labels_metadata', None))
         setattr(self, "_{}".format('tab_id'), kwargs.get('tab_id', None))
@@ -400,12 +423,59 @@ class DateSigned(object):
         setattr(self, "_{}".format('underline_metadata'), kwargs.get('underline_metadata', None))
         setattr(self, "_{}".format('value'), kwargs.get('value', None))
         setattr(self, "_{}".format('value_metadata'), kwargs.get('value_metadata', None))
+        setattr(self, "_{}".format('warning_details'), kwargs.get('warning_details', None))
         setattr(self, "_{}".format('width'), kwargs.get('width', None))
         setattr(self, "_{}".format('width_metadata'), kwargs.get('width_metadata', None))
         setattr(self, "_{}".format('x_position'), kwargs.get('x_position', None))
         setattr(self, "_{}".format('x_position_metadata'), kwargs.get('x_position_metadata', None))
         setattr(self, "_{}".format('y_position'), kwargs.get('y_position', None))
         setattr(self, "_{}".format('y_position_metadata'), kwargs.get('y_position_metadata', None))
+
+    @property
+    def agreement_attribute(self):
+        """Gets the agreement_attribute of this DateSigned.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The agreement_attribute of this DateSigned.  # noqa: E501
+        :rtype: str
+        """
+        return self._agreement_attribute
+
+    @agreement_attribute.setter
+    def agreement_attribute(self, agreement_attribute):
+        """Sets the agreement_attribute of this DateSigned.
+
+          # noqa: E501
+
+        :param agreement_attribute: The agreement_attribute of this DateSigned.  # noqa: E501
+        :type: str
+        """
+
+        self._agreement_attribute = agreement_attribute
+
+    @property
+    def agreement_attribute_locked(self):
+        """Gets the agreement_attribute_locked of this DateSigned.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The agreement_attribute_locked of this DateSigned.  # noqa: E501
+        :rtype: str
+        """
+        return self._agreement_attribute_locked
+
+    @agreement_attribute_locked.setter
+    def agreement_attribute_locked(self, agreement_attribute_locked):
+        """Sets the agreement_attribute_locked of this DateSigned.
+
+          # noqa: E501
+
+        :param agreement_attribute_locked: The agreement_attribute_locked of this DateSigned.  # noqa: E501
+        :type: str
+        """
+
+        self._agreement_attribute_locked = agreement_attribute_locked
 
     @property
     def anchor_allow_white_space_in_characters(self):
@@ -1052,6 +1122,29 @@ class DateSigned(object):
         self._conditional_parent_value_metadata = conditional_parent_value_metadata
 
     @property
+    def connected_object_details(self):
+        """Gets the connected_object_details of this DateSigned.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The connected_object_details of this DateSigned.  # noqa: E501
+        :rtype: ConnectedObjectDetails
+        """
+        return self._connected_object_details
+
+    @connected_object_details.setter
+    def connected_object_details(self, connected_object_details):
+        """Sets the connected_object_details of this DateSigned.
+
+          # noqa: E501
+
+        :param connected_object_details: The connected_object_details of this DateSigned.  # noqa: E501
+        :type: ConnectedObjectDetails
+        """
+
+        self._connected_object_details = connected_object_details
+
+    @property
     def custom_tab_id(self):
         """Gets the custom_tab_id of this DateSigned.  # noqa: E501
 
@@ -1165,6 +1258,29 @@ class DateSigned(object):
         """
 
         self._error_details = error_details
+
+    @property
+    def extension_data(self):
+        """Gets the extension_data of this DateSigned.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The extension_data of this DateSigned.  # noqa: E501
+        :rtype: ExtensionData
+        """
+        return self._extension_data
+
+    @extension_data.setter
+    def extension_data(self, extension_data):
+        """Sets the extension_data of this DateSigned.
+
+          # noqa: E501
+
+        :param extension_data: The extension_data of this DateSigned.  # noqa: E501
+        :type: ExtensionData
+        """
+
+        self._extension_data = extension_data
 
     @property
     def font(self):
@@ -1880,6 +1996,29 @@ class DateSigned(object):
         self._status_metadata = status_metadata
 
     @property
+    def tab_fully_qualified_path(self):
+        """Gets the tab_fully_qualified_path of this DateSigned.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The tab_fully_qualified_path of this DateSigned.  # noqa: E501
+        :rtype: str
+        """
+        return self._tab_fully_qualified_path
+
+    @tab_fully_qualified_path.setter
+    def tab_fully_qualified_path(self, tab_fully_qualified_path):
+        """Sets the tab_fully_qualified_path of this DateSigned.
+
+          # noqa: E501
+
+        :param tab_fully_qualified_path: The tab_fully_qualified_path of this DateSigned.  # noqa: E501
+        :type: str
+        """
+
+        self._tab_fully_qualified_path = tab_fully_qualified_path
+
+    @property
     def tab_group_labels(self):
         """Gets the tab_group_labels of this DateSigned.  # noqa: E501
 
@@ -2338,6 +2477,29 @@ class DateSigned(object):
         """
 
         self._value_metadata = value_metadata
+
+    @property
+    def warning_details(self):
+        """Gets the warning_details of this DateSigned.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The warning_details of this DateSigned.  # noqa: E501
+        :rtype: ErrorDetails
+        """
+        return self._warning_details
+
+    @warning_details.setter
+    def warning_details(self, warning_details):
+        """Sets the warning_details of this DateSigned.
+
+          # noqa: E501
+
+        :param warning_details: The warning_details of this DateSigned.  # noqa: E501
+        :type: ErrorDetails
+        """
+
+        self._warning_details = warning_details
 
     @property
     def width(self):

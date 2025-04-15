@@ -35,12 +35,14 @@ class RecipientIdentityInputOption(object):
     swagger_types = {
         'name': 'str',
         'phone_number_list': 'list[RecipientIdentityPhoneNumber]',
+        'string_value': 'str',
         'value_type': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'phone_number_list': 'phoneNumberList',
+        'string_value': 'stringValue',
         'value_type': 'valueType'
     }
 
@@ -52,11 +54,13 @@ class RecipientIdentityInputOption(object):
 
         self._name = None
         self._phone_number_list = None
+        self._string_value = None
         self._value_type = None
         self.discriminator = None
 
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('phone_number_list'), kwargs.get('phone_number_list', None))
+        setattr(self, "_{}".format('string_value'), kwargs.get('string_value', None))
         setattr(self, "_{}".format('value_type'), kwargs.get('value_type', None))
 
     @property
@@ -104,6 +108,29 @@ class RecipientIdentityInputOption(object):
         """
 
         self._phone_number_list = phone_number_list
+
+    @property
+    def string_value(self):
+        """Gets the string_value of this RecipientIdentityInputOption.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The string_value of this RecipientIdentityInputOption.  # noqa: E501
+        :rtype: str
+        """
+        return self._string_value
+
+    @string_value.setter
+    def string_value(self, string_value):
+        """Sets the string_value of this RecipientIdentityInputOption.
+
+          # noqa: E501
+
+        :param string_value: The string_value of this RecipientIdentityInputOption.  # noqa: E501
+        :type: str
+        """
+
+        self._string_value = string_value
 
     @property
     def value_type(self):

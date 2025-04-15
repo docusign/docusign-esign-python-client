@@ -37,6 +37,8 @@ class NewUser(object):
         'created_date_time': 'str',
         'email': 'str',
         'error_details': 'ErrorDetails',
+        'license_status': 'str',
+        'license_type': 'str',
         'membership_id': 'str',
         'permission_profile_id': 'str',
         'permission_profile_name': 'str',
@@ -51,6 +53,8 @@ class NewUser(object):
         'created_date_time': 'createdDateTime',
         'email': 'email',
         'error_details': 'errorDetails',
+        'license_status': 'licenseStatus',
+        'license_type': 'licenseType',
         'membership_id': 'membershipId',
         'permission_profile_id': 'permissionProfileId',
         'permission_profile_name': 'permissionProfileName',
@@ -70,6 +74,8 @@ class NewUser(object):
         self._created_date_time = None
         self._email = None
         self._error_details = None
+        self._license_status = None
+        self._license_type = None
         self._membership_id = None
         self._permission_profile_id = None
         self._permission_profile_name = None
@@ -83,6 +89,8 @@ class NewUser(object):
         setattr(self, "_{}".format('created_date_time'), kwargs.get('created_date_time', None))
         setattr(self, "_{}".format('email'), kwargs.get('email', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
+        setattr(self, "_{}".format('license_status'), kwargs.get('license_status', None))
+        setattr(self, "_{}".format('license_type'), kwargs.get('license_type', None))
         setattr(self, "_{}".format('membership_id'), kwargs.get('membership_id', None))
         setattr(self, "_{}".format('permission_profile_id'), kwargs.get('permission_profile_id', None))
         setattr(self, "_{}".format('permission_profile_name'), kwargs.get('permission_profile_name', None))
@@ -182,6 +190,52 @@ class NewUser(object):
         """
 
         self._error_details = error_details
+
+    @property
+    def license_status(self):
+        """Gets the license_status of this NewUser.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The license_status of this NewUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_status
+
+    @license_status.setter
+    def license_status(self, license_status):
+        """Sets the license_status of this NewUser.
+
+          # noqa: E501
+
+        :param license_status: The license_status of this NewUser.  # noqa: E501
+        :type: str
+        """
+
+        self._license_status = license_status
+
+    @property
+    def license_type(self):
+        """Gets the license_type of this NewUser.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The license_type of this NewUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_type
+
+    @license_type.setter
+    def license_type(self, license_type):
+        """Sets the license_type of this NewUser.
+
+          # noqa: E501
+
+        :param license_type: The license_type of this NewUser.  # noqa: E501
+        :type: str
+        """
+
+        self._license_type = license_type
 
     @property
     def membership_id(self):

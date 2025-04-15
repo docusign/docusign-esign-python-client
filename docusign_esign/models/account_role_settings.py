@@ -53,6 +53,8 @@ class AccountRoleSettings(object):
         'allowed_address_book_access_metadata': 'SettingsMetadata',
         'allowed_clickwraps_access': 'str',
         'allowed_clickwraps_access_metadata': 'SettingsMetadata',
+        'allowed_document_template_library_access': 'str',
+        'allowed_document_template_library_access_metadata': 'SettingsMetadata',
         'allowed_orchestration_access': 'str',
         'allowed_orchestration_access_metadata': 'SettingsMetadata',
         'allowed_template_access': 'str',
@@ -145,6 +147,8 @@ class AccountRoleSettings(object):
         'allowed_address_book_access_metadata': 'allowedAddressBookAccessMetadata',
         'allowed_clickwraps_access': 'allowedClickwrapsAccess',
         'allowed_clickwraps_access_metadata': 'allowedClickwrapsAccessMetadata',
+        'allowed_document_template_library_access': 'allowedDocumentTemplateLibraryAccess',
+        'allowed_document_template_library_access_metadata': 'allowedDocumentTemplateLibraryAccessMetadata',
         'allowed_orchestration_access': 'allowedOrchestrationAccess',
         'allowed_orchestration_access_metadata': 'allowedOrchestrationAccessMetadata',
         'allowed_template_access': 'allowedTemplateAccess',
@@ -242,6 +246,8 @@ class AccountRoleSettings(object):
         self._allowed_address_book_access_metadata = None
         self._allowed_clickwraps_access = None
         self._allowed_clickwraps_access_metadata = None
+        self._allowed_document_template_library_access = None
+        self._allowed_document_template_library_access_metadata = None
         self._allowed_orchestration_access = None
         self._allowed_orchestration_access_metadata = None
         self._allowed_template_access = None
@@ -333,6 +339,8 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('allowed_address_book_access_metadata'), kwargs.get('allowed_address_book_access_metadata', None))
         setattr(self, "_{}".format('allowed_clickwraps_access'), kwargs.get('allowed_clickwraps_access', None))
         setattr(self, "_{}".format('allowed_clickwraps_access_metadata'), kwargs.get('allowed_clickwraps_access_metadata', None))
+        setattr(self, "_{}".format('allowed_document_template_library_access'), kwargs.get('allowed_document_template_library_access', None))
+        setattr(self, "_{}".format('allowed_document_template_library_access_metadata'), kwargs.get('allowed_document_template_library_access_metadata', None))
         setattr(self, "_{}".format('allowed_orchestration_access'), kwargs.get('allowed_orchestration_access', None))
         setattr(self, "_{}".format('allowed_orchestration_access_metadata'), kwargs.get('allowed_orchestration_access_metadata', None))
         setattr(self, "_{}".format('allowed_template_access'), kwargs.get('allowed_template_access', None))
@@ -862,6 +870,52 @@ class AccountRoleSettings(object):
         """
 
         self._allowed_clickwraps_access_metadata = allowed_clickwraps_access_metadata
+
+    @property
+    def allowed_document_template_library_access(self):
+        """Gets the allowed_document_template_library_access of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allowed_document_template_library_access of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._allowed_document_template_library_access
+
+    @allowed_document_template_library_access.setter
+    def allowed_document_template_library_access(self, allowed_document_template_library_access):
+        """Sets the allowed_document_template_library_access of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param allowed_document_template_library_access: The allowed_document_template_library_access of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._allowed_document_template_library_access = allowed_document_template_library_access
+
+    @property
+    def allowed_document_template_library_access_metadata(self):
+        """Gets the allowed_document_template_library_access_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allowed_document_template_library_access_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allowed_document_template_library_access_metadata
+
+    @allowed_document_template_library_access_metadata.setter
+    def allowed_document_template_library_access_metadata(self, allowed_document_template_library_access_metadata):
+        """Sets the allowed_document_template_library_access_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param allowed_document_template_library_access_metadata: The allowed_document_template_library_access_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allowed_document_template_library_access_metadata = allowed_document_template_library_access_metadata
 
     @property
     def allowed_orchestration_access(self):
