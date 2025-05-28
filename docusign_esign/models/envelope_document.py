@@ -34,6 +34,8 @@ class EnvelopeDocument(object):
     """
     swagger_types = {
         'added_recipient_ids': 'list[str]',
+        'agreement_type': 'str',
+        'agreement_type_source': 'str',
         'attachment_tab_id': 'str',
         'authoritative_copy': 'str',
         'authoritative_copy_metadata': 'PropertyMetadata',
@@ -48,7 +50,6 @@ class EnvelopeDocument(object):
         'document_fields': 'list[NameValue]',
         'document_id': 'str',
         'document_id_guid': 'str',
-        'document_template_agreement_type_id': 'str',
         'document_template_id': 'str',
         'error_details': 'ErrorDetails',
         'has_digital_signature': 'str',
@@ -73,6 +74,8 @@ class EnvelopeDocument(object):
 
     attribute_map = {
         'added_recipient_ids': 'addedRecipientIds',
+        'agreement_type': 'agreementType',
+        'agreement_type_source': 'agreementTypeSource',
         'attachment_tab_id': 'attachmentTabId',
         'authoritative_copy': 'authoritativeCopy',
         'authoritative_copy_metadata': 'authoritativeCopyMetadata',
@@ -87,7 +90,6 @@ class EnvelopeDocument(object):
         'document_fields': 'documentFields',
         'document_id': 'documentId',
         'document_id_guid': 'documentIdGuid',
-        'document_template_agreement_type_id': 'documentTemplateAgreementTypeId',
         'document_template_id': 'documentTemplateId',
         'error_details': 'errorDetails',
         'has_digital_signature': 'hasDigitalSignature',
@@ -117,6 +119,8 @@ class EnvelopeDocument(object):
         self._configuration = _configuration
 
         self._added_recipient_ids = None
+        self._agreement_type = None
+        self._agreement_type_source = None
         self._attachment_tab_id = None
         self._authoritative_copy = None
         self._authoritative_copy_metadata = None
@@ -131,7 +135,6 @@ class EnvelopeDocument(object):
         self._document_fields = None
         self._document_id = None
         self._document_id_guid = None
-        self._document_template_agreement_type_id = None
         self._document_template_id = None
         self._error_details = None
         self._has_digital_signature = None
@@ -155,6 +158,8 @@ class EnvelopeDocument(object):
         self.discriminator = None
 
         setattr(self, "_{}".format('added_recipient_ids'), kwargs.get('added_recipient_ids', None))
+        setattr(self, "_{}".format('agreement_type'), kwargs.get('agreement_type', None))
+        setattr(self, "_{}".format('agreement_type_source'), kwargs.get('agreement_type_source', None))
         setattr(self, "_{}".format('attachment_tab_id'), kwargs.get('attachment_tab_id', None))
         setattr(self, "_{}".format('authoritative_copy'), kwargs.get('authoritative_copy', None))
         setattr(self, "_{}".format('authoritative_copy_metadata'), kwargs.get('authoritative_copy_metadata', None))
@@ -169,7 +174,6 @@ class EnvelopeDocument(object):
         setattr(self, "_{}".format('document_fields'), kwargs.get('document_fields', None))
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
         setattr(self, "_{}".format('document_id_guid'), kwargs.get('document_id_guid', None))
-        setattr(self, "_{}".format('document_template_agreement_type_id'), kwargs.get('document_template_agreement_type_id', None))
         setattr(self, "_{}".format('document_template_id'), kwargs.get('document_template_id', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
         setattr(self, "_{}".format('has_digital_signature'), kwargs.get('has_digital_signature', None))
@@ -213,6 +217,52 @@ class EnvelopeDocument(object):
         """
 
         self._added_recipient_ids = added_recipient_ids
+
+    @property
+    def agreement_type(self):
+        """Gets the agreement_type of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The agreement_type of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._agreement_type
+
+    @agreement_type.setter
+    def agreement_type(self, agreement_type):
+        """Sets the agreement_type of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param agreement_type: The agreement_type of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._agreement_type = agreement_type
+
+    @property
+    def agreement_type_source(self):
+        """Gets the agreement_type_source of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The agreement_type_source of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._agreement_type_source
+
+    @agreement_type_source.setter
+    def agreement_type_source(self, agreement_type_source):
+        """Sets the agreement_type_source of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param agreement_type_source: The agreement_type_source of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._agreement_type_source = agreement_type_source
 
     @property
     def attachment_tab_id(self):
@@ -535,29 +585,6 @@ class EnvelopeDocument(object):
         """
 
         self._document_id_guid = document_id_guid
-
-    @property
-    def document_template_agreement_type_id(self):
-        """Gets the document_template_agreement_type_id of this EnvelopeDocument.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The document_template_agreement_type_id of this EnvelopeDocument.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_template_agreement_type_id
-
-    @document_template_agreement_type_id.setter
-    def document_template_agreement_type_id(self, document_template_agreement_type_id):
-        """Sets the document_template_agreement_type_id of this EnvelopeDocument.
-
-          # noqa: E501
-
-        :param document_template_agreement_type_id: The document_template_agreement_type_id of this EnvelopeDocument.  # noqa: E501
-        :type: str
-        """
-
-        self._document_template_agreement_type_id = document_template_agreement_type_id
 
     @property
     def document_template_id(self):

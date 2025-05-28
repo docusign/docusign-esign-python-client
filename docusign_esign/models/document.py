@@ -37,11 +37,11 @@ class Document(object):
         'assign_tabs_to_recipient_id': 'str',
         'authoritative_copy': 'bool',
         'display': 'str',
+        'doc_gen_document_status': 'str',
         'doc_gen_form_fields': 'list[DocGenFormField]',
         'document_base64': 'str',
         'document_fields': 'list[NameValue]',
         'document_id': 'str',
-        'document_template_agreement_type_id': 'str',
         'document_template_id': 'str',
         'encrypted_with_key_manager': 'str',
         'file_extension': 'str',
@@ -70,11 +70,11 @@ class Document(object):
         'assign_tabs_to_recipient_id': 'assignTabsToRecipientId',
         'authoritative_copy': 'authoritativeCopy',
         'display': 'display',
+        'doc_gen_document_status': 'docGenDocumentStatus',
         'doc_gen_form_fields': 'docGenFormFields',
         'document_base64': 'documentBase64',
         'document_fields': 'documentFields',
         'document_id': 'documentId',
-        'document_template_agreement_type_id': 'documentTemplateAgreementTypeId',
         'document_template_id': 'documentTemplateId',
         'encrypted_with_key_manager': 'encryptedWithKeyManager',
         'file_extension': 'fileExtension',
@@ -108,11 +108,11 @@ class Document(object):
         self._assign_tabs_to_recipient_id = None
         self._authoritative_copy = None
         self._display = None
+        self._doc_gen_document_status = None
         self._doc_gen_form_fields = None
         self._document_base64 = None
         self._document_fields = None
         self._document_id = None
-        self._document_template_agreement_type_id = None
         self._document_template_id = None
         self._encrypted_with_key_manager = None
         self._file_extension = None
@@ -140,11 +140,11 @@ class Document(object):
         setattr(self, "_{}".format('assign_tabs_to_recipient_id'), kwargs.get('assign_tabs_to_recipient_id', None))
         setattr(self, "_{}".format('authoritative_copy'), kwargs.get('authoritative_copy', None))
         setattr(self, "_{}".format('display'), kwargs.get('display', None))
+        setattr(self, "_{}".format('doc_gen_document_status'), kwargs.get('doc_gen_document_status', None))
         setattr(self, "_{}".format('doc_gen_form_fields'), kwargs.get('doc_gen_form_fields', None))
         setattr(self, "_{}".format('document_base64'), kwargs.get('document_base64', None))
         setattr(self, "_{}".format('document_fields'), kwargs.get('document_fields', None))
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
-        setattr(self, "_{}".format('document_template_agreement_type_id'), kwargs.get('document_template_agreement_type_id', None))
         setattr(self, "_{}".format('document_template_id'), kwargs.get('document_template_id', None))
         setattr(self, "_{}".format('encrypted_with_key_manager'), kwargs.get('encrypted_with_key_manager', None))
         setattr(self, "_{}".format('file_extension'), kwargs.get('file_extension', None))
@@ -260,6 +260,29 @@ class Document(object):
         self._display = display
 
     @property
+    def doc_gen_document_status(self):
+        """Gets the doc_gen_document_status of this Document.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The doc_gen_document_status of this Document.  # noqa: E501
+        :rtype: str
+        """
+        return self._doc_gen_document_status
+
+    @doc_gen_document_status.setter
+    def doc_gen_document_status(self, doc_gen_document_status):
+        """Sets the doc_gen_document_status of this Document.
+
+          # noqa: E501
+
+        :param doc_gen_document_status: The doc_gen_document_status of this Document.  # noqa: E501
+        :type: str
+        """
+
+        self._doc_gen_document_status = doc_gen_document_status
+
+    @property
     def doc_gen_form_fields(self):
         """Gets the doc_gen_form_fields of this Document.  # noqa: E501
 
@@ -350,29 +373,6 @@ class Document(object):
         """
 
         self._document_id = document_id
-
-    @property
-    def document_template_agreement_type_id(self):
-        """Gets the document_template_agreement_type_id of this Document.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The document_template_agreement_type_id of this Document.  # noqa: E501
-        :rtype: str
-        """
-        return self._document_template_agreement_type_id
-
-    @document_template_agreement_type_id.setter
-    def document_template_agreement_type_id(self, document_template_agreement_type_id):
-        """Sets the document_template_agreement_type_id of this Document.
-
-          # noqa: E501
-
-        :param document_template_agreement_type_id: The document_template_agreement_type_id of this Document.  # noqa: E501
-        :type: str
-        """
-
-        self._document_template_agreement_type_id = document_template_agreement_type_id
 
     @property
     def document_template_id(self):
