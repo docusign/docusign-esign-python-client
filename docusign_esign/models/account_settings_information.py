@@ -76,6 +76,8 @@ class AccountSettingsInformation(object):
         'allow_bulk_send_metadata': 'SettingsMetadata',
         'allow_cd_withdraw': 'str',
         'allow_cd_withdraw_metadata': 'SettingsMetadata',
+        'allow_connect_agreement_ui': 'str',
+        'allow_connect_agreement_ui_metadata': 'SettingsMetadata',
         'allow_connect_authoritative_copy_ready_event_ui': 'str',
         'allow_connect_envelope_removed_event': 'str',
         'allow_connect_extension_ui': 'str',
@@ -313,6 +315,8 @@ class AccountSettingsInformation(object):
         'consumer_disclosure_frequency_metadata': 'SettingsMetadata',
         'convert_pdf_fields': 'str',
         'convert_pdf_fields_metadata': 'SettingsMetadata',
+        'custom_extraction_plan_levels': 'str',
+        'custom_extraction_plan_levels_metadata': 'SettingsMetadata',
         'data_population_scope': 'str',
         'data_population_scope_metadata': 'SettingsMetadata',
         'default_signing_responsive_view': 'str',
@@ -321,6 +325,8 @@ class AccountSettingsInformation(object):
         'default_to_advanced_envelopes_filter_form_metadata': 'SettingsMetadata',
         'disable_auto_template_matching': 'str',
         'disable_auto_template_matching_metadata': 'SettingsMetadata',
+        'disable_legacy_shared_envelopes': 'str',
+        'disable_legacy_shared_envelopes_metadata': 'SettingsMetadata',
         'disable_mobile_app': 'str',
         'disable_mobile_app_metadata': 'SettingsMetadata',
         'disable_mobile_push_notifications': 'str',
@@ -376,8 +382,14 @@ class AccountSettingsInformation(object):
         'enable_agreement_actions_for_clm_metadata': 'SettingsMetadata',
         'enable_agreement_actions_for_e_sign': 'str',
         'enable_agreement_actions_for_e_sign_metadata': 'SettingsMetadata',
+        'enable_agreement_desk_advanced': 'str',
+        'enable_agreement_desk_advanced_meta_data': 'SettingsMetadata',
         'enable_ai_contract_review': 'str',
         'enable_ai_contract_review_metadata': 'SettingsMetadata',
+        'enable_ai_suggested_fields_advanced': 'str',
+        'enable_ai_suggested_fields_advanced_metadata': 'SettingsMetadata',
+        'enable_ai_suggested_fields_basic': 'str',
+        'enable_ai_suggested_fields_basic_metadata': 'SettingsMetadata',
         'enable_auto_nav': 'str',
         'enable_auto_nav_metadata': 'SettingsMetadata',
         'enable_batch_update_envelope_types': 'str',
@@ -405,8 +417,8 @@ class AccountSettingsInformation(object):
         'enable_contact_suggestions_metadata': 'SettingsMetadata',
         'enable_content_search': 'str',
         'enable_content_search_metadata': 'SettingsMetadata',
-        'enable_coupa_core': 'str',
-        'enable_coupa_core_meta_data': 'SettingsMetadata',
+        'enable_coupa_core_extension': 'str',
+        'enable_coupa_core_extension_metadata': 'SettingsMetadata',
         'enable_custom_data_verification_extensions': 'str',
         'enable_custom_data_verification_extensions_metadata': 'SettingsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'str',
@@ -440,6 +452,10 @@ class AccountSettingsInformation(object):
         'enable_e_sign_api_hourly_limit_management_metadata': 'SettingsMetadata',
         'enable_esign_communities': 'str',
         'enable_esign_communities_metadata': 'SettingsMetadata',
+        'enable_esign_task_list': 'str',
+        'enable_esign_task_list_metadata': 'SettingsMetadata',
+        'enable_generation_with3_p_integration': 'str',
+        'enable_generation_with3_p_integration_meta_data': 'SettingsMetadata',
         'enable_id_fx_accountless_sms_auth_for_part11': 'str',
         'enable_id_fx_accountless_sms_auth_for_part11_metadata': 'SettingsMetadata',
         'enable_id_fx_intuit_kba': 'str',
@@ -462,8 +478,12 @@ class AccountSettingsInformation(object):
         'enable_legacy_shared_envelopes_metadata': 'SettingsMetadata',
         'enable_license_management': 'str',
         'enable_license_management_metadata': 'SettingsMetadata',
+        'enable_microsoft_dynamics365_extension': 'str',
+        'enable_microsoft_dynamics365_extension_metadata': 'SettingsMetadata',
         'enable_multi_user_repository_features': 'str',
         'enable_multi_user_repository_features_metadata': 'SettingsMetadata',
+        'enable_navigator_for_hr': 'str',
+        'enable_navigator_for_hr_metadata': 'SettingsMetadata',
         'enable_navigator_partial_ingestion': 'str',
         'enable_navigator_partial_ingestion_metadata': 'SettingsMetadata',
         'enable_navigator_trial': 'str',
@@ -493,6 +513,8 @@ class AccountSettingsInformation(object):
         'enable_reserved_domain_metadata': 'SettingsMetadata',
         'enable_responsive_signing': 'str',
         'enable_responsive_signing_metadata': 'SettingsMetadata',
+        'enable_sap_ariba_extension': 'str',
+        'enable_sap_ariba_extension_meta_data': 'SettingsMetadata',
         'enable_scheduled_release': 'str',
         'enable_scheduled_release_metadata': 'SettingsMetadata',
         'enable_search_service_azure_uri': 'str',
@@ -513,6 +535,10 @@ class AccountSettingsInformation(object):
         'enable_sequential_signing_ui_metadata': 'SettingsMetadata',
         'enable_signer_attachments': 'str',
         'enable_signer_attachments_metadata': 'SettingsMetadata',
+        'enable_signing_ai_features_plan': 'str',
+        'enable_signing_ai_features_plan_metadata': 'SettingsMetadata',
+        'enable_signing_ai_features_setting': 'str',
+        'enable_signing_ai_features_setting_metadata': 'SettingsMetadata',
         'enable_signing_extension_comments': 'str',
         'enable_signing_extension_comments_metadata': 'SettingsMetadata',
         'enable_signing_extension_conversations': 'str',
@@ -538,6 +564,8 @@ class AccountSettingsInformation(object):
         'enable_social_id_login_metadata': 'SettingsMetadata',
         'enable_strike_through': 'str',
         'enable_strike_through_metadata': 'SettingsMetadata',
+        'enable_tickets': 'str',
+        'enable_tickets_meta_data': 'SettingsMetadata',
         'enable_transaction_point': 'str',
         'enable_transaction_point_metadata': 'SettingsMetadata',
         'enable_unified_repository': 'str',
@@ -623,6 +651,8 @@ class AccountSettingsInformation(object):
         'isv_oem_embed': 'str',
         'isv_oem_embed_meta_data': 'SettingsMetadata',
         'linked_external_primary_accounts': 'list[LinkedExternalPrimaryAccount]',
+        'maestro_plan_levels': 'str',
+        'maestro_plan_levels_metadata': 'SettingsMetadata',
         'maximum_signing_groups': 'str',
         'maximum_signing_groups_metadata': 'SettingsMetadata',
         'maximum_users_per_signing_group': 'str',
@@ -864,6 +894,8 @@ class AccountSettingsInformation(object):
         'allow_bulk_send_metadata': 'allowBulkSendMetadata',
         'allow_cd_withdraw': 'allowCDWithdraw',
         'allow_cd_withdraw_metadata': 'allowCDWithdrawMetadata',
+        'allow_connect_agreement_ui': 'allowConnectAgreementUI',
+        'allow_connect_agreement_ui_metadata': 'allowConnectAgreementUIMetadata',
         'allow_connect_authoritative_copy_ready_event_ui': 'allowConnectAuthoritativeCopyReadyEventUI',
         'allow_connect_envelope_removed_event': 'allowConnectEnvelopeRemovedEvent',
         'allow_connect_extension_ui': 'allowConnectExtensionUI',
@@ -1101,6 +1133,8 @@ class AccountSettingsInformation(object):
         'consumer_disclosure_frequency_metadata': 'consumerDisclosureFrequencyMetadata',
         'convert_pdf_fields': 'convertPdfFields',
         'convert_pdf_fields_metadata': 'convertPdfFieldsMetadata',
+        'custom_extraction_plan_levels': 'customExtractionPlanLevels',
+        'custom_extraction_plan_levels_metadata': 'customExtractionPlanLevelsMetadata',
         'data_population_scope': 'dataPopulationScope',
         'data_population_scope_metadata': 'dataPopulationScopeMetadata',
         'default_signing_responsive_view': 'defaultSigningResponsiveView',
@@ -1109,6 +1143,8 @@ class AccountSettingsInformation(object):
         'default_to_advanced_envelopes_filter_form_metadata': 'defaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching': 'disableAutoTemplateMatching',
         'disable_auto_template_matching_metadata': 'disableAutoTemplateMatchingMetadata',
+        'disable_legacy_shared_envelopes': 'disableLegacySharedEnvelopes',
+        'disable_legacy_shared_envelopes_metadata': 'disableLegacySharedEnvelopesMetadata',
         'disable_mobile_app': 'disableMobileApp',
         'disable_mobile_app_metadata': 'disableMobileAppMetadata',
         'disable_mobile_push_notifications': 'disableMobilePushNotifications',
@@ -1164,8 +1200,14 @@ class AccountSettingsInformation(object):
         'enable_agreement_actions_for_clm_metadata': 'enableAgreementActionsForCLMMetadata',
         'enable_agreement_actions_for_e_sign': 'enableAgreementActionsForESign',
         'enable_agreement_actions_for_e_sign_metadata': 'enableAgreementActionsForESignMetadata',
+        'enable_agreement_desk_advanced': 'enableAgreementDeskAdvanced',
+        'enable_agreement_desk_advanced_meta_data': 'enableAgreementDeskAdvancedMetaData',
         'enable_ai_contract_review': 'enableAIContractReview',
         'enable_ai_contract_review_metadata': 'enableAIContractReviewMetadata',
+        'enable_ai_suggested_fields_advanced': 'enableAISuggestedFieldsAdvanced',
+        'enable_ai_suggested_fields_advanced_metadata': 'enableAISuggestedFieldsAdvancedMetadata',
+        'enable_ai_suggested_fields_basic': 'enableAISuggestedFieldsBasic',
+        'enable_ai_suggested_fields_basic_metadata': 'enableAISuggestedFieldsBasicMetadata',
         'enable_auto_nav': 'enableAutoNav',
         'enable_auto_nav_metadata': 'enableAutoNavMetadata',
         'enable_batch_update_envelope_types': 'enableBatchUpdateEnvelopeTypes',
@@ -1193,8 +1235,8 @@ class AccountSettingsInformation(object):
         'enable_contact_suggestions_metadata': 'enableContactSuggestionsMetadata',
         'enable_content_search': 'enableContentSearch',
         'enable_content_search_metadata': 'enableContentSearchMetadata',
-        'enable_coupa_core': 'enableCoupaCore',
-        'enable_coupa_core_meta_data': 'enableCoupaCoreMetaData',
+        'enable_coupa_core_extension': 'enableCoupaCoreExtension',
+        'enable_coupa_core_extension_metadata': 'enableCoupaCoreExtensionMetadata',
         'enable_custom_data_verification_extensions': 'enableCustomDataVerificationExtensions',
         'enable_custom_data_verification_extensions_metadata': 'enableCustomDataVerificationExtensionsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'enableCustomerSatisfactionMetricTracking',
@@ -1228,6 +1270,10 @@ class AccountSettingsInformation(object):
         'enable_e_sign_api_hourly_limit_management_metadata': 'enableESignAPIHourlyLimitManagementMetadata',
         'enable_esign_communities': 'enableEsignCommunities',
         'enable_esign_communities_metadata': 'enableEsignCommunitiesMetadata',
+        'enable_esign_task_list': 'enableEsignTaskList',
+        'enable_esign_task_list_metadata': 'enableEsignTaskListMetadata',
+        'enable_generation_with3_p_integration': 'enableGenerationWith3PIntegration',
+        'enable_generation_with3_p_integration_meta_data': 'enableGenerationWith3PIntegrationMetaData',
         'enable_id_fx_accountless_sms_auth_for_part11': 'enableIDFxAccountlessSMSAuthForPart11',
         'enable_id_fx_accountless_sms_auth_for_part11_metadata': 'enableIDFxAccountlessSMSAuthForPart11Metadata',
         'enable_id_fx_intuit_kba': 'enableIDFxIntuitKBA',
@@ -1250,8 +1296,12 @@ class AccountSettingsInformation(object):
         'enable_legacy_shared_envelopes_metadata': 'enableLegacySharedEnvelopesMetadata',
         'enable_license_management': 'enableLicenseManagement',
         'enable_license_management_metadata': 'enableLicenseManagementMetadata',
+        'enable_microsoft_dynamics365_extension': 'enableMicrosoftDynamics365Extension',
+        'enable_microsoft_dynamics365_extension_metadata': 'enableMicrosoftDynamics365ExtensionMetadata',
         'enable_multi_user_repository_features': 'enableMultiUserRepositoryFeatures',
         'enable_multi_user_repository_features_metadata': 'enableMultiUserRepositoryFeaturesMetadata',
+        'enable_navigator_for_hr': 'enableNavigatorForHR',
+        'enable_navigator_for_hr_metadata': 'enableNavigatorForHRMetadata',
         'enable_navigator_partial_ingestion': 'enableNavigatorPartialIngestion',
         'enable_navigator_partial_ingestion_metadata': 'enableNavigatorPartialIngestionMetadata',
         'enable_navigator_trial': 'enableNavigatorTrial',
@@ -1281,6 +1331,8 @@ class AccountSettingsInformation(object):
         'enable_reserved_domain_metadata': 'enableReservedDomainMetadata',
         'enable_responsive_signing': 'enableResponsiveSigning',
         'enable_responsive_signing_metadata': 'enableResponsiveSigningMetadata',
+        'enable_sap_ariba_extension': 'enableSAPAribaExtension',
+        'enable_sap_ariba_extension_meta_data': 'enableSAPAribaExtensionMetaData',
         'enable_scheduled_release': 'enableScheduledRelease',
         'enable_scheduled_release_metadata': 'enableScheduledReleaseMetadata',
         'enable_search_service_azure_uri': 'enableSearchServiceAzureUri',
@@ -1301,6 +1353,10 @@ class AccountSettingsInformation(object):
         'enable_sequential_signing_ui_metadata': 'enableSequentialSigningUIMetadata',
         'enable_signer_attachments': 'enableSignerAttachments',
         'enable_signer_attachments_metadata': 'enableSignerAttachmentsMetadata',
+        'enable_signing_ai_features_plan': 'EnableSigningAIFeaturesPlan',
+        'enable_signing_ai_features_plan_metadata': 'EnableSigningAIFeaturesPlanMetadata',
+        'enable_signing_ai_features_setting': 'enableSigningAIFeaturesSetting',
+        'enable_signing_ai_features_setting_metadata': 'enableSigningAIFeaturesSettingMetadata',
         'enable_signing_extension_comments': 'enableSigningExtensionComments',
         'enable_signing_extension_comments_metadata': 'enableSigningExtensionCommentsMetadata',
         'enable_signing_extension_conversations': 'enableSigningExtensionConversations',
@@ -1326,6 +1382,8 @@ class AccountSettingsInformation(object):
         'enable_social_id_login_metadata': 'enableSocialIdLoginMetadata',
         'enable_strike_through': 'enableStrikeThrough',
         'enable_strike_through_metadata': 'enableStrikeThroughMetadata',
+        'enable_tickets': 'enableTickets',
+        'enable_tickets_meta_data': 'enableTicketsMetaData',
         'enable_transaction_point': 'enableTransactionPoint',
         'enable_transaction_point_metadata': 'enableTransactionPointMetadata',
         'enable_unified_repository': 'enableUnifiedRepository',
@@ -1411,6 +1469,8 @@ class AccountSettingsInformation(object):
         'isv_oem_embed': 'isvOemEmbed',
         'isv_oem_embed_meta_data': 'isvOemEmbedMetaData',
         'linked_external_primary_accounts': 'linkedExternalPrimaryAccounts',
+        'maestro_plan_levels': 'maestroPlanLevels',
+        'maestro_plan_levels_metadata': 'maestroPlanLevelsMetadata',
         'maximum_signing_groups': 'maximumSigningGroups',
         'maximum_signing_groups_metadata': 'maximumSigningGroupsMetadata',
         'maximum_users_per_signing_group': 'maximumUsersPerSigningGroup',
@@ -1657,6 +1717,8 @@ class AccountSettingsInformation(object):
         self._allow_bulk_send_metadata = None
         self._allow_cd_withdraw = None
         self._allow_cd_withdraw_metadata = None
+        self._allow_connect_agreement_ui = None
+        self._allow_connect_agreement_ui_metadata = None
         self._allow_connect_authoritative_copy_ready_event_ui = None
         self._allow_connect_envelope_removed_event = None
         self._allow_connect_extension_ui = None
@@ -1894,6 +1956,8 @@ class AccountSettingsInformation(object):
         self._consumer_disclosure_frequency_metadata = None
         self._convert_pdf_fields = None
         self._convert_pdf_fields_metadata = None
+        self._custom_extraction_plan_levels = None
+        self._custom_extraction_plan_levels_metadata = None
         self._data_population_scope = None
         self._data_population_scope_metadata = None
         self._default_signing_responsive_view = None
@@ -1902,6 +1966,8 @@ class AccountSettingsInformation(object):
         self._default_to_advanced_envelopes_filter_form_metadata = None
         self._disable_auto_template_matching = None
         self._disable_auto_template_matching_metadata = None
+        self._disable_legacy_shared_envelopes = None
+        self._disable_legacy_shared_envelopes_metadata = None
         self._disable_mobile_app = None
         self._disable_mobile_app_metadata = None
         self._disable_mobile_push_notifications = None
@@ -1957,8 +2023,14 @@ class AccountSettingsInformation(object):
         self._enable_agreement_actions_for_clm_metadata = None
         self._enable_agreement_actions_for_e_sign = None
         self._enable_agreement_actions_for_e_sign_metadata = None
+        self._enable_agreement_desk_advanced = None
+        self._enable_agreement_desk_advanced_meta_data = None
         self._enable_ai_contract_review = None
         self._enable_ai_contract_review_metadata = None
+        self._enable_ai_suggested_fields_advanced = None
+        self._enable_ai_suggested_fields_advanced_metadata = None
+        self._enable_ai_suggested_fields_basic = None
+        self._enable_ai_suggested_fields_basic_metadata = None
         self._enable_auto_nav = None
         self._enable_auto_nav_metadata = None
         self._enable_batch_update_envelope_types = None
@@ -1986,8 +2058,8 @@ class AccountSettingsInformation(object):
         self._enable_contact_suggestions_metadata = None
         self._enable_content_search = None
         self._enable_content_search_metadata = None
-        self._enable_coupa_core = None
-        self._enable_coupa_core_meta_data = None
+        self._enable_coupa_core_extension = None
+        self._enable_coupa_core_extension_metadata = None
         self._enable_custom_data_verification_extensions = None
         self._enable_custom_data_verification_extensions_metadata = None
         self._enable_customer_satisfaction_metric_tracking = None
@@ -2021,6 +2093,10 @@ class AccountSettingsInformation(object):
         self._enable_e_sign_api_hourly_limit_management_metadata = None
         self._enable_esign_communities = None
         self._enable_esign_communities_metadata = None
+        self._enable_esign_task_list = None
+        self._enable_esign_task_list_metadata = None
+        self._enable_generation_with3_p_integration = None
+        self._enable_generation_with3_p_integration_meta_data = None
         self._enable_id_fx_accountless_sms_auth_for_part11 = None
         self._enable_id_fx_accountless_sms_auth_for_part11_metadata = None
         self._enable_id_fx_intuit_kba = None
@@ -2043,8 +2119,12 @@ class AccountSettingsInformation(object):
         self._enable_legacy_shared_envelopes_metadata = None
         self._enable_license_management = None
         self._enable_license_management_metadata = None
+        self._enable_microsoft_dynamics365_extension = None
+        self._enable_microsoft_dynamics365_extension_metadata = None
         self._enable_multi_user_repository_features = None
         self._enable_multi_user_repository_features_metadata = None
+        self._enable_navigator_for_hr = None
+        self._enable_navigator_for_hr_metadata = None
         self._enable_navigator_partial_ingestion = None
         self._enable_navigator_partial_ingestion_metadata = None
         self._enable_navigator_trial = None
@@ -2074,6 +2154,8 @@ class AccountSettingsInformation(object):
         self._enable_reserved_domain_metadata = None
         self._enable_responsive_signing = None
         self._enable_responsive_signing_metadata = None
+        self._enable_sap_ariba_extension = None
+        self._enable_sap_ariba_extension_meta_data = None
         self._enable_scheduled_release = None
         self._enable_scheduled_release_metadata = None
         self._enable_search_service_azure_uri = None
@@ -2094,6 +2176,10 @@ class AccountSettingsInformation(object):
         self._enable_sequential_signing_ui_metadata = None
         self._enable_signer_attachments = None
         self._enable_signer_attachments_metadata = None
+        self._enable_signing_ai_features_plan = None
+        self._enable_signing_ai_features_plan_metadata = None
+        self._enable_signing_ai_features_setting = None
+        self._enable_signing_ai_features_setting_metadata = None
         self._enable_signing_extension_comments = None
         self._enable_signing_extension_comments_metadata = None
         self._enable_signing_extension_conversations = None
@@ -2119,6 +2205,8 @@ class AccountSettingsInformation(object):
         self._enable_social_id_login_metadata = None
         self._enable_strike_through = None
         self._enable_strike_through_metadata = None
+        self._enable_tickets = None
+        self._enable_tickets_meta_data = None
         self._enable_transaction_point = None
         self._enable_transaction_point_metadata = None
         self._enable_unified_repository = None
@@ -2204,6 +2292,8 @@ class AccountSettingsInformation(object):
         self._isv_oem_embed = None
         self._isv_oem_embed_meta_data = None
         self._linked_external_primary_accounts = None
+        self._maestro_plan_levels = None
+        self._maestro_plan_levels_metadata = None
         self._maximum_signing_groups = None
         self._maximum_signing_groups_metadata = None
         self._maximum_users_per_signing_group = None
@@ -2444,6 +2534,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_bulk_send_metadata'), kwargs.get('allow_bulk_send_metadata', None))
         setattr(self, "_{}".format('allow_cd_withdraw'), kwargs.get('allow_cd_withdraw', None))
         setattr(self, "_{}".format('allow_cd_withdraw_metadata'), kwargs.get('allow_cd_withdraw_metadata', None))
+        setattr(self, "_{}".format('allow_connect_agreement_ui'), kwargs.get('allow_connect_agreement_ui', None))
+        setattr(self, "_{}".format('allow_connect_agreement_ui_metadata'), kwargs.get('allow_connect_agreement_ui_metadata', None))
         setattr(self, "_{}".format('allow_connect_authoritative_copy_ready_event_ui'), kwargs.get('allow_connect_authoritative_copy_ready_event_ui', None))
         setattr(self, "_{}".format('allow_connect_envelope_removed_event'), kwargs.get('allow_connect_envelope_removed_event', None))
         setattr(self, "_{}".format('allow_connect_extension_ui'), kwargs.get('allow_connect_extension_ui', None))
@@ -2681,6 +2773,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('consumer_disclosure_frequency_metadata'), kwargs.get('consumer_disclosure_frequency_metadata', None))
         setattr(self, "_{}".format('convert_pdf_fields'), kwargs.get('convert_pdf_fields', None))
         setattr(self, "_{}".format('convert_pdf_fields_metadata'), kwargs.get('convert_pdf_fields_metadata', None))
+        setattr(self, "_{}".format('custom_extraction_plan_levels'), kwargs.get('custom_extraction_plan_levels', None))
+        setattr(self, "_{}".format('custom_extraction_plan_levels_metadata'), kwargs.get('custom_extraction_plan_levels_metadata', None))
         setattr(self, "_{}".format('data_population_scope'), kwargs.get('data_population_scope', None))
         setattr(self, "_{}".format('data_population_scope_metadata'), kwargs.get('data_population_scope_metadata', None))
         setattr(self, "_{}".format('default_signing_responsive_view'), kwargs.get('default_signing_responsive_view', None))
@@ -2689,6 +2783,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('default_to_advanced_envelopes_filter_form_metadata'), kwargs.get('default_to_advanced_envelopes_filter_form_metadata', None))
         setattr(self, "_{}".format('disable_auto_template_matching'), kwargs.get('disable_auto_template_matching', None))
         setattr(self, "_{}".format('disable_auto_template_matching_metadata'), kwargs.get('disable_auto_template_matching_metadata', None))
+        setattr(self, "_{}".format('disable_legacy_shared_envelopes'), kwargs.get('disable_legacy_shared_envelopes', None))
+        setattr(self, "_{}".format('disable_legacy_shared_envelopes_metadata'), kwargs.get('disable_legacy_shared_envelopes_metadata', None))
         setattr(self, "_{}".format('disable_mobile_app'), kwargs.get('disable_mobile_app', None))
         setattr(self, "_{}".format('disable_mobile_app_metadata'), kwargs.get('disable_mobile_app_metadata', None))
         setattr(self, "_{}".format('disable_mobile_push_notifications'), kwargs.get('disable_mobile_push_notifications', None))
@@ -2744,8 +2840,14 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_agreement_actions_for_clm_metadata'), kwargs.get('enable_agreement_actions_for_clm_metadata', None))
         setattr(self, "_{}".format('enable_agreement_actions_for_e_sign'), kwargs.get('enable_agreement_actions_for_e_sign', None))
         setattr(self, "_{}".format('enable_agreement_actions_for_e_sign_metadata'), kwargs.get('enable_agreement_actions_for_e_sign_metadata', None))
+        setattr(self, "_{}".format('enable_agreement_desk_advanced'), kwargs.get('enable_agreement_desk_advanced', None))
+        setattr(self, "_{}".format('enable_agreement_desk_advanced_meta_data'), kwargs.get('enable_agreement_desk_advanced_meta_data', None))
         setattr(self, "_{}".format('enable_ai_contract_review'), kwargs.get('enable_ai_contract_review', None))
         setattr(self, "_{}".format('enable_ai_contract_review_metadata'), kwargs.get('enable_ai_contract_review_metadata', None))
+        setattr(self, "_{}".format('enable_ai_suggested_fields_advanced'), kwargs.get('enable_ai_suggested_fields_advanced', None))
+        setattr(self, "_{}".format('enable_ai_suggested_fields_advanced_metadata'), kwargs.get('enable_ai_suggested_fields_advanced_metadata', None))
+        setattr(self, "_{}".format('enable_ai_suggested_fields_basic'), kwargs.get('enable_ai_suggested_fields_basic', None))
+        setattr(self, "_{}".format('enable_ai_suggested_fields_basic_metadata'), kwargs.get('enable_ai_suggested_fields_basic_metadata', None))
         setattr(self, "_{}".format('enable_auto_nav'), kwargs.get('enable_auto_nav', None))
         setattr(self, "_{}".format('enable_auto_nav_metadata'), kwargs.get('enable_auto_nav_metadata', None))
         setattr(self, "_{}".format('enable_batch_update_envelope_types'), kwargs.get('enable_batch_update_envelope_types', None))
@@ -2773,8 +2875,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_contact_suggestions_metadata'), kwargs.get('enable_contact_suggestions_metadata', None))
         setattr(self, "_{}".format('enable_content_search'), kwargs.get('enable_content_search', None))
         setattr(self, "_{}".format('enable_content_search_metadata'), kwargs.get('enable_content_search_metadata', None))
-        setattr(self, "_{}".format('enable_coupa_core'), kwargs.get('enable_coupa_core', None))
-        setattr(self, "_{}".format('enable_coupa_core_meta_data'), kwargs.get('enable_coupa_core_meta_data', None))
+        setattr(self, "_{}".format('enable_coupa_core_extension'), kwargs.get('enable_coupa_core_extension', None))
+        setattr(self, "_{}".format('enable_coupa_core_extension_metadata'), kwargs.get('enable_coupa_core_extension_metadata', None))
         setattr(self, "_{}".format('enable_custom_data_verification_extensions'), kwargs.get('enable_custom_data_verification_extensions', None))
         setattr(self, "_{}".format('enable_custom_data_verification_extensions_metadata'), kwargs.get('enable_custom_data_verification_extensions_metadata', None))
         setattr(self, "_{}".format('enable_customer_satisfaction_metric_tracking'), kwargs.get('enable_customer_satisfaction_metric_tracking', None))
@@ -2808,6 +2910,10 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_e_sign_api_hourly_limit_management_metadata'), kwargs.get('enable_e_sign_api_hourly_limit_management_metadata', None))
         setattr(self, "_{}".format('enable_esign_communities'), kwargs.get('enable_esign_communities', None))
         setattr(self, "_{}".format('enable_esign_communities_metadata'), kwargs.get('enable_esign_communities_metadata', None))
+        setattr(self, "_{}".format('enable_esign_task_list'), kwargs.get('enable_esign_task_list', None))
+        setattr(self, "_{}".format('enable_esign_task_list_metadata'), kwargs.get('enable_esign_task_list_metadata', None))
+        setattr(self, "_{}".format('enable_generation_with3_p_integration'), kwargs.get('enable_generation_with3_p_integration', None))
+        setattr(self, "_{}".format('enable_generation_with3_p_integration_meta_data'), kwargs.get('enable_generation_with3_p_integration_meta_data', None))
         setattr(self, "_{}".format('enable_id_fx_accountless_sms_auth_for_part11'), kwargs.get('enable_id_fx_accountless_sms_auth_for_part11', None))
         setattr(self, "_{}".format('enable_id_fx_accountless_sms_auth_for_part11_metadata'), kwargs.get('enable_id_fx_accountless_sms_auth_for_part11_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_intuit_kba'), kwargs.get('enable_id_fx_intuit_kba', None))
@@ -2830,8 +2936,12 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_legacy_shared_envelopes_metadata'), kwargs.get('enable_legacy_shared_envelopes_metadata', None))
         setattr(self, "_{}".format('enable_license_management'), kwargs.get('enable_license_management', None))
         setattr(self, "_{}".format('enable_license_management_metadata'), kwargs.get('enable_license_management_metadata', None))
+        setattr(self, "_{}".format('enable_microsoft_dynamics365_extension'), kwargs.get('enable_microsoft_dynamics365_extension', None))
+        setattr(self, "_{}".format('enable_microsoft_dynamics365_extension_metadata'), kwargs.get('enable_microsoft_dynamics365_extension_metadata', None))
         setattr(self, "_{}".format('enable_multi_user_repository_features'), kwargs.get('enable_multi_user_repository_features', None))
         setattr(self, "_{}".format('enable_multi_user_repository_features_metadata'), kwargs.get('enable_multi_user_repository_features_metadata', None))
+        setattr(self, "_{}".format('enable_navigator_for_hr'), kwargs.get('enable_navigator_for_hr', None))
+        setattr(self, "_{}".format('enable_navigator_for_hr_metadata'), kwargs.get('enable_navigator_for_hr_metadata', None))
         setattr(self, "_{}".format('enable_navigator_partial_ingestion'), kwargs.get('enable_navigator_partial_ingestion', None))
         setattr(self, "_{}".format('enable_navigator_partial_ingestion_metadata'), kwargs.get('enable_navigator_partial_ingestion_metadata', None))
         setattr(self, "_{}".format('enable_navigator_trial'), kwargs.get('enable_navigator_trial', None))
@@ -2861,6 +2971,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_reserved_domain_metadata'), kwargs.get('enable_reserved_domain_metadata', None))
         setattr(self, "_{}".format('enable_responsive_signing'), kwargs.get('enable_responsive_signing', None))
         setattr(self, "_{}".format('enable_responsive_signing_metadata'), kwargs.get('enable_responsive_signing_metadata', None))
+        setattr(self, "_{}".format('enable_sap_ariba_extension'), kwargs.get('enable_sap_ariba_extension', None))
+        setattr(self, "_{}".format('enable_sap_ariba_extension_meta_data'), kwargs.get('enable_sap_ariba_extension_meta_data', None))
         setattr(self, "_{}".format('enable_scheduled_release'), kwargs.get('enable_scheduled_release', None))
         setattr(self, "_{}".format('enable_scheduled_release_metadata'), kwargs.get('enable_scheduled_release_metadata', None))
         setattr(self, "_{}".format('enable_search_service_azure_uri'), kwargs.get('enable_search_service_azure_uri', None))
@@ -2881,6 +2993,10 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_sequential_signing_ui_metadata'), kwargs.get('enable_sequential_signing_ui_metadata', None))
         setattr(self, "_{}".format('enable_signer_attachments'), kwargs.get('enable_signer_attachments', None))
         setattr(self, "_{}".format('enable_signer_attachments_metadata'), kwargs.get('enable_signer_attachments_metadata', None))
+        setattr(self, "_{}".format('enable_signing_ai_features_plan'), kwargs.get('enable_signing_ai_features_plan', None))
+        setattr(self, "_{}".format('enable_signing_ai_features_plan_metadata'), kwargs.get('enable_signing_ai_features_plan_metadata', None))
+        setattr(self, "_{}".format('enable_signing_ai_features_setting'), kwargs.get('enable_signing_ai_features_setting', None))
+        setattr(self, "_{}".format('enable_signing_ai_features_setting_metadata'), kwargs.get('enable_signing_ai_features_setting_metadata', None))
         setattr(self, "_{}".format('enable_signing_extension_comments'), kwargs.get('enable_signing_extension_comments', None))
         setattr(self, "_{}".format('enable_signing_extension_comments_metadata'), kwargs.get('enable_signing_extension_comments_metadata', None))
         setattr(self, "_{}".format('enable_signing_extension_conversations'), kwargs.get('enable_signing_extension_conversations', None))
@@ -2906,6 +3022,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_social_id_login_metadata'), kwargs.get('enable_social_id_login_metadata', None))
         setattr(self, "_{}".format('enable_strike_through'), kwargs.get('enable_strike_through', None))
         setattr(self, "_{}".format('enable_strike_through_metadata'), kwargs.get('enable_strike_through_metadata', None))
+        setattr(self, "_{}".format('enable_tickets'), kwargs.get('enable_tickets', None))
+        setattr(self, "_{}".format('enable_tickets_meta_data'), kwargs.get('enable_tickets_meta_data', None))
         setattr(self, "_{}".format('enable_transaction_point'), kwargs.get('enable_transaction_point', None))
         setattr(self, "_{}".format('enable_transaction_point_metadata'), kwargs.get('enable_transaction_point_metadata', None))
         setattr(self, "_{}".format('enable_unified_repository'), kwargs.get('enable_unified_repository', None))
@@ -2991,6 +3109,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('isv_oem_embed'), kwargs.get('isv_oem_embed', None))
         setattr(self, "_{}".format('isv_oem_embed_meta_data'), kwargs.get('isv_oem_embed_meta_data', None))
         setattr(self, "_{}".format('linked_external_primary_accounts'), kwargs.get('linked_external_primary_accounts', None))
+        setattr(self, "_{}".format('maestro_plan_levels'), kwargs.get('maestro_plan_levels', None))
+        setattr(self, "_{}".format('maestro_plan_levels_metadata'), kwargs.get('maestro_plan_levels_metadata', None))
         setattr(self, "_{}".format('maximum_signing_groups'), kwargs.get('maximum_signing_groups', None))
         setattr(self, "_{}".format('maximum_signing_groups_metadata'), kwargs.get('maximum_signing_groups_metadata', None))
         setattr(self, "_{}".format('maximum_users_per_signing_group'), kwargs.get('maximum_users_per_signing_group', None))
@@ -4175,6 +4295,52 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_cd_withdraw_metadata = allow_cd_withdraw_metadata
+
+    @property
+    def allow_connect_agreement_ui(self):
+        """Gets the allow_connect_agreement_ui of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_connect_agreement_ui of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_connect_agreement_ui
+
+    @allow_connect_agreement_ui.setter
+    def allow_connect_agreement_ui(self, allow_connect_agreement_ui):
+        """Sets the allow_connect_agreement_ui of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_connect_agreement_ui: The allow_connect_agreement_ui of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_connect_agreement_ui = allow_connect_agreement_ui
+
+    @property
+    def allow_connect_agreement_ui_metadata(self):
+        """Gets the allow_connect_agreement_ui_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_connect_agreement_ui_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_connect_agreement_ui_metadata
+
+    @allow_connect_agreement_ui_metadata.setter
+    def allow_connect_agreement_ui_metadata(self, allow_connect_agreement_ui_metadata):
+        """Sets the allow_connect_agreement_ui_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_connect_agreement_ui_metadata: The allow_connect_agreement_ui_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_connect_agreement_ui_metadata = allow_connect_agreement_ui_metadata
 
     @property
     def allow_connect_authoritative_copy_ready_event_ui(self):
@@ -9628,6 +9794,52 @@ class AccountSettingsInformation(object):
         self._convert_pdf_fields_metadata = convert_pdf_fields_metadata
 
     @property
+    def custom_extraction_plan_levels(self):
+        """Gets the custom_extraction_plan_levels of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_extraction_plan_levels of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._custom_extraction_plan_levels
+
+    @custom_extraction_plan_levels.setter
+    def custom_extraction_plan_levels(self, custom_extraction_plan_levels):
+        """Sets the custom_extraction_plan_levels of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param custom_extraction_plan_levels: The custom_extraction_plan_levels of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._custom_extraction_plan_levels = custom_extraction_plan_levels
+
+    @property
+    def custom_extraction_plan_levels_metadata(self):
+        """Gets the custom_extraction_plan_levels_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The custom_extraction_plan_levels_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._custom_extraction_plan_levels_metadata
+
+    @custom_extraction_plan_levels_metadata.setter
+    def custom_extraction_plan_levels_metadata(self, custom_extraction_plan_levels_metadata):
+        """Sets the custom_extraction_plan_levels_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param custom_extraction_plan_levels_metadata: The custom_extraction_plan_levels_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._custom_extraction_plan_levels_metadata = custom_extraction_plan_levels_metadata
+
+    @property
     def data_population_scope(self):
         """Gets the data_population_scope of this AccountSettingsInformation.  # noqa: E501
 
@@ -9810,6 +10022,52 @@ class AccountSettingsInformation(object):
         """
 
         self._disable_auto_template_matching_metadata = disable_auto_template_matching_metadata
+
+    @property
+    def disable_legacy_shared_envelopes(self):
+        """Gets the disable_legacy_shared_envelopes of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The disable_legacy_shared_envelopes of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._disable_legacy_shared_envelopes
+
+    @disable_legacy_shared_envelopes.setter
+    def disable_legacy_shared_envelopes(self, disable_legacy_shared_envelopes):
+        """Sets the disable_legacy_shared_envelopes of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param disable_legacy_shared_envelopes: The disable_legacy_shared_envelopes of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._disable_legacy_shared_envelopes = disable_legacy_shared_envelopes
+
+    @property
+    def disable_legacy_shared_envelopes_metadata(self):
+        """Gets the disable_legacy_shared_envelopes_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The disable_legacy_shared_envelopes_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._disable_legacy_shared_envelopes_metadata
+
+    @disable_legacy_shared_envelopes_metadata.setter
+    def disable_legacy_shared_envelopes_metadata(self, disable_legacy_shared_envelopes_metadata):
+        """Sets the disable_legacy_shared_envelopes_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param disable_legacy_shared_envelopes_metadata: The disable_legacy_shared_envelopes_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._disable_legacy_shared_envelopes_metadata = disable_legacy_shared_envelopes_metadata
 
     @property
     def disable_mobile_app(self):
@@ -11077,6 +11335,52 @@ class AccountSettingsInformation(object):
         self._enable_agreement_actions_for_e_sign_metadata = enable_agreement_actions_for_e_sign_metadata
 
     @property
+    def enable_agreement_desk_advanced(self):
+        """Gets the enable_agreement_desk_advanced of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_agreement_desk_advanced of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_agreement_desk_advanced
+
+    @enable_agreement_desk_advanced.setter
+    def enable_agreement_desk_advanced(self, enable_agreement_desk_advanced):
+        """Sets the enable_agreement_desk_advanced of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_agreement_desk_advanced: The enable_agreement_desk_advanced of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_agreement_desk_advanced = enable_agreement_desk_advanced
+
+    @property
+    def enable_agreement_desk_advanced_meta_data(self):
+        """Gets the enable_agreement_desk_advanced_meta_data of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_agreement_desk_advanced_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_agreement_desk_advanced_meta_data
+
+    @enable_agreement_desk_advanced_meta_data.setter
+    def enable_agreement_desk_advanced_meta_data(self, enable_agreement_desk_advanced_meta_data):
+        """Sets the enable_agreement_desk_advanced_meta_data of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_agreement_desk_advanced_meta_data: The enable_agreement_desk_advanced_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_agreement_desk_advanced_meta_data = enable_agreement_desk_advanced_meta_data
+
+    @property
     def enable_ai_contract_review(self):
         """Gets the enable_ai_contract_review of this AccountSettingsInformation.  # noqa: E501
 
@@ -11121,6 +11425,98 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_ai_contract_review_metadata = enable_ai_contract_review_metadata
+
+    @property
+    def enable_ai_suggested_fields_advanced(self):
+        """Gets the enable_ai_suggested_fields_advanced of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ai_suggested_fields_advanced of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_ai_suggested_fields_advanced
+
+    @enable_ai_suggested_fields_advanced.setter
+    def enable_ai_suggested_fields_advanced(self, enable_ai_suggested_fields_advanced):
+        """Sets the enable_ai_suggested_fields_advanced of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ai_suggested_fields_advanced: The enable_ai_suggested_fields_advanced of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_ai_suggested_fields_advanced = enable_ai_suggested_fields_advanced
+
+    @property
+    def enable_ai_suggested_fields_advanced_metadata(self):
+        """Gets the enable_ai_suggested_fields_advanced_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ai_suggested_fields_advanced_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_ai_suggested_fields_advanced_metadata
+
+    @enable_ai_suggested_fields_advanced_metadata.setter
+    def enable_ai_suggested_fields_advanced_metadata(self, enable_ai_suggested_fields_advanced_metadata):
+        """Sets the enable_ai_suggested_fields_advanced_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ai_suggested_fields_advanced_metadata: The enable_ai_suggested_fields_advanced_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_ai_suggested_fields_advanced_metadata = enable_ai_suggested_fields_advanced_metadata
+
+    @property
+    def enable_ai_suggested_fields_basic(self):
+        """Gets the enable_ai_suggested_fields_basic of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ai_suggested_fields_basic of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_ai_suggested_fields_basic
+
+    @enable_ai_suggested_fields_basic.setter
+    def enable_ai_suggested_fields_basic(self, enable_ai_suggested_fields_basic):
+        """Sets the enable_ai_suggested_fields_basic of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ai_suggested_fields_basic: The enable_ai_suggested_fields_basic of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_ai_suggested_fields_basic = enable_ai_suggested_fields_basic
+
+    @property
+    def enable_ai_suggested_fields_basic_metadata(self):
+        """Gets the enable_ai_suggested_fields_basic_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ai_suggested_fields_basic_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_ai_suggested_fields_basic_metadata
+
+    @enable_ai_suggested_fields_basic_metadata.setter
+    def enable_ai_suggested_fields_basic_metadata(self, enable_ai_suggested_fields_basic_metadata):
+        """Sets the enable_ai_suggested_fields_basic_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ai_suggested_fields_basic_metadata: The enable_ai_suggested_fields_basic_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_ai_suggested_fields_basic_metadata = enable_ai_suggested_fields_basic_metadata
 
     @property
     def enable_auto_nav(self):
@@ -11744,50 +12140,50 @@ class AccountSettingsInformation(object):
         self._enable_content_search_metadata = enable_content_search_metadata
 
     @property
-    def enable_coupa_core(self):
-        """Gets the enable_coupa_core of this AccountSettingsInformation.  # noqa: E501
+    def enable_coupa_core_extension(self):
+        """Gets the enable_coupa_core_extension of this AccountSettingsInformation.  # noqa: E501
 
           # noqa: E501
 
-        :return: The enable_coupa_core of this AccountSettingsInformation.  # noqa: E501
+        :return: The enable_coupa_core_extension of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
         """
-        return self._enable_coupa_core
+        return self._enable_coupa_core_extension
 
-    @enable_coupa_core.setter
-    def enable_coupa_core(self, enable_coupa_core):
-        """Sets the enable_coupa_core of this AccountSettingsInformation.
+    @enable_coupa_core_extension.setter
+    def enable_coupa_core_extension(self, enable_coupa_core_extension):
+        """Sets the enable_coupa_core_extension of this AccountSettingsInformation.
 
           # noqa: E501
 
-        :param enable_coupa_core: The enable_coupa_core of this AccountSettingsInformation.  # noqa: E501
+        :param enable_coupa_core_extension: The enable_coupa_core_extension of this AccountSettingsInformation.  # noqa: E501
         :type: str
         """
 
-        self._enable_coupa_core = enable_coupa_core
+        self._enable_coupa_core_extension = enable_coupa_core_extension
 
     @property
-    def enable_coupa_core_meta_data(self):
-        """Gets the enable_coupa_core_meta_data of this AccountSettingsInformation.  # noqa: E501
+    def enable_coupa_core_extension_metadata(self):
+        """Gets the enable_coupa_core_extension_metadata of this AccountSettingsInformation.  # noqa: E501
 
           # noqa: E501
 
-        :return: The enable_coupa_core_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :return: The enable_coupa_core_extension_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
         """
-        return self._enable_coupa_core_meta_data
+        return self._enable_coupa_core_extension_metadata
 
-    @enable_coupa_core_meta_data.setter
-    def enable_coupa_core_meta_data(self, enable_coupa_core_meta_data):
-        """Sets the enable_coupa_core_meta_data of this AccountSettingsInformation.
+    @enable_coupa_core_extension_metadata.setter
+    def enable_coupa_core_extension_metadata(self, enable_coupa_core_extension_metadata):
+        """Sets the enable_coupa_core_extension_metadata of this AccountSettingsInformation.
 
           # noqa: E501
 
-        :param enable_coupa_core_meta_data: The enable_coupa_core_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :param enable_coupa_core_extension_metadata: The enable_coupa_core_extension_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
-        self._enable_coupa_core_meta_data = enable_coupa_core_meta_data
+        self._enable_coupa_core_extension_metadata = enable_coupa_core_extension_metadata
 
     @property
     def enable_custom_data_verification_extensions(self):
@@ -12549,6 +12945,98 @@ class AccountSettingsInformation(object):
         self._enable_esign_communities_metadata = enable_esign_communities_metadata
 
     @property
+    def enable_esign_task_list(self):
+        """Gets the enable_esign_task_list of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_esign_task_list of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_esign_task_list
+
+    @enable_esign_task_list.setter
+    def enable_esign_task_list(self, enable_esign_task_list):
+        """Sets the enable_esign_task_list of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_esign_task_list: The enable_esign_task_list of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_esign_task_list = enable_esign_task_list
+
+    @property
+    def enable_esign_task_list_metadata(self):
+        """Gets the enable_esign_task_list_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_esign_task_list_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_esign_task_list_metadata
+
+    @enable_esign_task_list_metadata.setter
+    def enable_esign_task_list_metadata(self, enable_esign_task_list_metadata):
+        """Sets the enable_esign_task_list_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_esign_task_list_metadata: The enable_esign_task_list_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_esign_task_list_metadata = enable_esign_task_list_metadata
+
+    @property
+    def enable_generation_with3_p_integration(self):
+        """Gets the enable_generation_with3_p_integration of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_generation_with3_p_integration of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_generation_with3_p_integration
+
+    @enable_generation_with3_p_integration.setter
+    def enable_generation_with3_p_integration(self, enable_generation_with3_p_integration):
+        """Sets the enable_generation_with3_p_integration of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_generation_with3_p_integration: The enable_generation_with3_p_integration of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_generation_with3_p_integration = enable_generation_with3_p_integration
+
+    @property
+    def enable_generation_with3_p_integration_meta_data(self):
+        """Gets the enable_generation_with3_p_integration_meta_data of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_generation_with3_p_integration_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_generation_with3_p_integration_meta_data
+
+    @enable_generation_with3_p_integration_meta_data.setter
+    def enable_generation_with3_p_integration_meta_data(self, enable_generation_with3_p_integration_meta_data):
+        """Sets the enable_generation_with3_p_integration_meta_data of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_generation_with3_p_integration_meta_data: The enable_generation_with3_p_integration_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_generation_with3_p_integration_meta_data = enable_generation_with3_p_integration_meta_data
+
+    @property
     def enable_id_fx_accountless_sms_auth_for_part11(self):
         """Gets the enable_id_fx_accountless_sms_auth_for_part11 of this AccountSettingsInformation.  # noqa: E501
 
@@ -13055,6 +13543,52 @@ class AccountSettingsInformation(object):
         self._enable_license_management_metadata = enable_license_management_metadata
 
     @property
+    def enable_microsoft_dynamics365_extension(self):
+        """Gets the enable_microsoft_dynamics365_extension of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_microsoft_dynamics365_extension of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_microsoft_dynamics365_extension
+
+    @enable_microsoft_dynamics365_extension.setter
+    def enable_microsoft_dynamics365_extension(self, enable_microsoft_dynamics365_extension):
+        """Sets the enable_microsoft_dynamics365_extension of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_microsoft_dynamics365_extension: The enable_microsoft_dynamics365_extension of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_microsoft_dynamics365_extension = enable_microsoft_dynamics365_extension
+
+    @property
+    def enable_microsoft_dynamics365_extension_metadata(self):
+        """Gets the enable_microsoft_dynamics365_extension_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_microsoft_dynamics365_extension_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_microsoft_dynamics365_extension_metadata
+
+    @enable_microsoft_dynamics365_extension_metadata.setter
+    def enable_microsoft_dynamics365_extension_metadata(self, enable_microsoft_dynamics365_extension_metadata):
+        """Sets the enable_microsoft_dynamics365_extension_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_microsoft_dynamics365_extension_metadata: The enable_microsoft_dynamics365_extension_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_microsoft_dynamics365_extension_metadata = enable_microsoft_dynamics365_extension_metadata
+
+    @property
     def enable_multi_user_repository_features(self):
         """Gets the enable_multi_user_repository_features of this AccountSettingsInformation.  # noqa: E501
 
@@ -13099,6 +13633,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_multi_user_repository_features_metadata = enable_multi_user_repository_features_metadata
+
+    @property
+    def enable_navigator_for_hr(self):
+        """Gets the enable_navigator_for_hr of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_navigator_for_hr of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_navigator_for_hr
+
+    @enable_navigator_for_hr.setter
+    def enable_navigator_for_hr(self, enable_navigator_for_hr):
+        """Sets the enable_navigator_for_hr of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_navigator_for_hr: The enable_navigator_for_hr of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_navigator_for_hr = enable_navigator_for_hr
+
+    @property
+    def enable_navigator_for_hr_metadata(self):
+        """Gets the enable_navigator_for_hr_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_navigator_for_hr_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_navigator_for_hr_metadata
+
+    @enable_navigator_for_hr_metadata.setter
+    def enable_navigator_for_hr_metadata(self, enable_navigator_for_hr_metadata):
+        """Sets the enable_navigator_for_hr_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_navigator_for_hr_metadata: The enable_navigator_for_hr_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_navigator_for_hr_metadata = enable_navigator_for_hr_metadata
 
     @property
     def enable_navigator_partial_ingestion(self):
@@ -13768,6 +14348,52 @@ class AccountSettingsInformation(object):
         self._enable_responsive_signing_metadata = enable_responsive_signing_metadata
 
     @property
+    def enable_sap_ariba_extension(self):
+        """Gets the enable_sap_ariba_extension of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_sap_ariba_extension of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_sap_ariba_extension
+
+    @enable_sap_ariba_extension.setter
+    def enable_sap_ariba_extension(self, enable_sap_ariba_extension):
+        """Sets the enable_sap_ariba_extension of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_sap_ariba_extension: The enable_sap_ariba_extension of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_sap_ariba_extension = enable_sap_ariba_extension
+
+    @property
+    def enable_sap_ariba_extension_meta_data(self):
+        """Gets the enable_sap_ariba_extension_meta_data of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_sap_ariba_extension_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_sap_ariba_extension_meta_data
+
+    @enable_sap_ariba_extension_meta_data.setter
+    def enable_sap_ariba_extension_meta_data(self, enable_sap_ariba_extension_meta_data):
+        """Sets the enable_sap_ariba_extension_meta_data of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_sap_ariba_extension_meta_data: The enable_sap_ariba_extension_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_sap_ariba_extension_meta_data = enable_sap_ariba_extension_meta_data
+
+    @property
     def enable_scheduled_release(self):
         """Gets the enable_scheduled_release of this AccountSettingsInformation.  # noqa: E501
 
@@ -14226,6 +14852,98 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_signer_attachments_metadata = enable_signer_attachments_metadata
+
+    @property
+    def enable_signing_ai_features_plan(self):
+        """Gets the enable_signing_ai_features_plan of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_signing_ai_features_plan of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_signing_ai_features_plan
+
+    @enable_signing_ai_features_plan.setter
+    def enable_signing_ai_features_plan(self, enable_signing_ai_features_plan):
+        """Sets the enable_signing_ai_features_plan of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_signing_ai_features_plan: The enable_signing_ai_features_plan of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_signing_ai_features_plan = enable_signing_ai_features_plan
+
+    @property
+    def enable_signing_ai_features_plan_metadata(self):
+        """Gets the enable_signing_ai_features_plan_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_signing_ai_features_plan_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_signing_ai_features_plan_metadata
+
+    @enable_signing_ai_features_plan_metadata.setter
+    def enable_signing_ai_features_plan_metadata(self, enable_signing_ai_features_plan_metadata):
+        """Sets the enable_signing_ai_features_plan_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_signing_ai_features_plan_metadata: The enable_signing_ai_features_plan_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_signing_ai_features_plan_metadata = enable_signing_ai_features_plan_metadata
+
+    @property
+    def enable_signing_ai_features_setting(self):
+        """Gets the enable_signing_ai_features_setting of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_signing_ai_features_setting of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_signing_ai_features_setting
+
+    @enable_signing_ai_features_setting.setter
+    def enable_signing_ai_features_setting(self, enable_signing_ai_features_setting):
+        """Sets the enable_signing_ai_features_setting of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_signing_ai_features_setting: The enable_signing_ai_features_setting of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_signing_ai_features_setting = enable_signing_ai_features_setting
+
+    @property
+    def enable_signing_ai_features_setting_metadata(self):
+        """Gets the enable_signing_ai_features_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_signing_ai_features_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_signing_ai_features_setting_metadata
+
+    @enable_signing_ai_features_setting_metadata.setter
+    def enable_signing_ai_features_setting_metadata(self, enable_signing_ai_features_setting_metadata):
+        """Sets the enable_signing_ai_features_setting_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_signing_ai_features_setting_metadata: The enable_signing_ai_features_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_signing_ai_features_setting_metadata = enable_signing_ai_features_setting_metadata
 
     @property
     def enable_signing_extension_comments(self):
@@ -14801,6 +15519,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_strike_through_metadata = enable_strike_through_metadata
+
+    @property
+    def enable_tickets(self):
+        """Gets the enable_tickets of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_tickets of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_tickets
+
+    @enable_tickets.setter
+    def enable_tickets(self, enable_tickets):
+        """Sets the enable_tickets of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_tickets: The enable_tickets of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_tickets = enable_tickets
+
+    @property
+    def enable_tickets_meta_data(self):
+        """Gets the enable_tickets_meta_data of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_tickets_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_tickets_meta_data
+
+    @enable_tickets_meta_data.setter
+    def enable_tickets_meta_data(self, enable_tickets_meta_data):
+        """Sets the enable_tickets_meta_data of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_tickets_meta_data: The enable_tickets_meta_data of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_tickets_meta_data = enable_tickets_meta_data
 
     @property
     def enable_transaction_point(self):
@@ -16756,6 +17520,52 @@ class AccountSettingsInformation(object):
         """
 
         self._linked_external_primary_accounts = linked_external_primary_accounts
+
+    @property
+    def maestro_plan_levels(self):
+        """Gets the maestro_plan_levels of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The maestro_plan_levels of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._maestro_plan_levels
+
+    @maestro_plan_levels.setter
+    def maestro_plan_levels(self, maestro_plan_levels):
+        """Sets the maestro_plan_levels of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param maestro_plan_levels: The maestro_plan_levels of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._maestro_plan_levels = maestro_plan_levels
+
+    @property
+    def maestro_plan_levels_metadata(self):
+        """Gets the maestro_plan_levels_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The maestro_plan_levels_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._maestro_plan_levels_metadata
+
+    @maestro_plan_levels_metadata.setter
+    def maestro_plan_levels_metadata(self, maestro_plan_levels_metadata):
+        """Sets the maestro_plan_levels_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param maestro_plan_levels_metadata: The maestro_plan_levels_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._maestro_plan_levels_metadata = maestro_plan_levels_metadata
 
     @property
     def maximum_signing_groups(self):

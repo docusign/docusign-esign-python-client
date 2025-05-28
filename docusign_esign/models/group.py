@@ -39,9 +39,10 @@ class Group(object):
         'group_id': 'str',
         'group_name': 'str',
         'group_type': 'str',
-        'is_managed_by_scim': 'str',
+        'is_managed_by_scim': 'bool',
         'last_modified_on': 'str',
         'permission_profile_id': 'str',
+        'user_group_type': 'str',
         'users': 'list[UserInfo]',
         'users_count': 'str'
     }
@@ -56,6 +57,7 @@ class Group(object):
         'is_managed_by_scim': 'isManagedByScim',
         'last_modified_on': 'lastModifiedOn',
         'permission_profile_id': 'permissionProfileId',
+        'user_group_type': 'userGroupType',
         'users': 'users',
         'users_count': 'usersCount'
     }
@@ -75,6 +77,7 @@ class Group(object):
         self._is_managed_by_scim = None
         self._last_modified_on = None
         self._permission_profile_id = None
+        self._user_group_type = None
         self._users = None
         self._users_count = None
         self.discriminator = None
@@ -88,6 +91,7 @@ class Group(object):
         setattr(self, "_{}".format('is_managed_by_scim'), kwargs.get('is_managed_by_scim', None))
         setattr(self, "_{}".format('last_modified_on'), kwargs.get('last_modified_on', None))
         setattr(self, "_{}".format('permission_profile_id'), kwargs.get('permission_profile_id', None))
+        setattr(self, "_{}".format('user_group_type'), kwargs.get('user_group_type', None))
         setattr(self, "_{}".format('users'), kwargs.get('users', None))
         setattr(self, "_{}".format('users_count'), kwargs.get('users_count', None))
 
@@ -236,7 +240,7 @@ class Group(object):
           # noqa: E501
 
         :return: The is_managed_by_scim of this Group.  # noqa: E501
-        :rtype: str
+        :rtype: bool
         """
         return self._is_managed_by_scim
 
@@ -247,7 +251,7 @@ class Group(object):
           # noqa: E501
 
         :param is_managed_by_scim: The is_managed_by_scim of this Group.  # noqa: E501
-        :type: str
+        :type: bool
         """
 
         self._is_managed_by_scim = is_managed_by_scim
@@ -297,6 +301,29 @@ class Group(object):
         """
 
         self._permission_profile_id = permission_profile_id
+
+    @property
+    def user_group_type(self):
+        """Gets the user_group_type of this Group.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The user_group_type of this Group.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_group_type
+
+    @user_group_type.setter
+    def user_group_type(self, user_group_type):
+        """Sets the user_group_type of this Group.
+
+          # noqa: E501
+
+        :param user_group_type: The user_group_type of this Group.  # noqa: E501
+        :type: str
+        """
+
+        self._user_group_type = user_group_type
 
     @property
     def users(self):

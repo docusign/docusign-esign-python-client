@@ -60,6 +60,7 @@ class AccountInformation(object):
         'forgotten_password_questions_count': 'str',
         'free_envelope_sends_remaining_for_advanced_doc_gen': 'int',
         'is_downgrade': 'str',
+        'is_free_to_trial_eligible': 'str',
         'payment_method': 'str',
         'plan_classification': 'str',
         'plan_end_date': 'str',
@@ -102,6 +103,7 @@ class AccountInformation(object):
         'forgotten_password_questions_count': 'forgottenPasswordQuestionsCount',
         'free_envelope_sends_remaining_for_advanced_doc_gen': 'freeEnvelopeSendsRemainingForAdvancedDocGen',
         'is_downgrade': 'isDowngrade',
+        'is_free_to_trial_eligible': 'isFreeToTrialEligible',
         'payment_method': 'paymentMethod',
         'plan_classification': 'planClassification',
         'plan_end_date': 'planEndDate',
@@ -149,6 +151,7 @@ class AccountInformation(object):
         self._forgotten_password_questions_count = None
         self._free_envelope_sends_remaining_for_advanced_doc_gen = None
         self._is_downgrade = None
+        self._is_free_to_trial_eligible = None
         self._payment_method = None
         self._plan_classification = None
         self._plan_end_date = None
@@ -190,6 +193,7 @@ class AccountInformation(object):
         setattr(self, "_{}".format('forgotten_password_questions_count'), kwargs.get('forgotten_password_questions_count', None))
         setattr(self, "_{}".format('free_envelope_sends_remaining_for_advanced_doc_gen'), kwargs.get('free_envelope_sends_remaining_for_advanced_doc_gen', None))
         setattr(self, "_{}".format('is_downgrade'), kwargs.get('is_downgrade', None))
+        setattr(self, "_{}".format('is_free_to_trial_eligible'), kwargs.get('is_free_to_trial_eligible', None))
         setattr(self, "_{}".format('payment_method'), kwargs.get('payment_method', None))
         setattr(self, "_{}".format('plan_classification'), kwargs.get('plan_classification', None))
         setattr(self, "_{}".format('plan_end_date'), kwargs.get('plan_end_date', None))
@@ -823,6 +827,29 @@ class AccountInformation(object):
         """
 
         self._is_downgrade = is_downgrade
+
+    @property
+    def is_free_to_trial_eligible(self):
+        """Gets the is_free_to_trial_eligible of this AccountInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_free_to_trial_eligible of this AccountInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_free_to_trial_eligible
+
+    @is_free_to_trial_eligible.setter
+    def is_free_to_trial_eligible(self, is_free_to_trial_eligible):
+        """Sets the is_free_to_trial_eligible of this AccountInformation.
+
+          # noqa: E501
+
+        :param is_free_to_trial_eligible: The is_free_to_trial_eligible of this AccountInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._is_free_to_trial_eligible = is_free_to_trial_eligible
 
     @property
     def payment_method(self):
