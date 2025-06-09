@@ -78,7 +78,9 @@ class TabAccountSettings(object):
         'tab_text_formatting_enabled': 'str',
         'tab_text_formatting_metadata': 'SettingsMetadata',
         'text_tabs_enabled': 'str',
-        'text_tabs_metadata': 'SettingsMetadata'
+        'text_tabs_metadata': 'SettingsMetadata',
+        'uri_tabs_enabled': 'str',
+        'uri_tabs_metadata': 'SettingsMetadata'
     }
 
     attribute_map = {
@@ -127,7 +129,9 @@ class TabAccountSettings(object):
         'tab_text_formatting_enabled': 'tabTextFormattingEnabled',
         'tab_text_formatting_metadata': 'tabTextFormattingMetadata',
         'text_tabs_enabled': 'textTabsEnabled',
-        'text_tabs_metadata': 'textTabsMetadata'
+        'text_tabs_metadata': 'textTabsMetadata',
+        'uri_tabs_enabled': 'uriTabsEnabled',
+        'uri_tabs_metadata': 'uriTabsMetadata'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -182,6 +186,8 @@ class TabAccountSettings(object):
         self._tab_text_formatting_metadata = None
         self._text_tabs_enabled = None
         self._text_tabs_metadata = None
+        self._uri_tabs_enabled = None
+        self._uri_tabs_metadata = None
         self.discriminator = None
 
         setattr(self, "_{}".format('allow_tab_order'), kwargs.get('allow_tab_order', None))
@@ -230,6 +236,8 @@ class TabAccountSettings(object):
         setattr(self, "_{}".format('tab_text_formatting_metadata'), kwargs.get('tab_text_formatting_metadata', None))
         setattr(self, "_{}".format('text_tabs_enabled'), kwargs.get('text_tabs_enabled', None))
         setattr(self, "_{}".format('text_tabs_metadata'), kwargs.get('text_tabs_metadata', None))
+        setattr(self, "_{}".format('uri_tabs_enabled'), kwargs.get('uri_tabs_enabled', None))
+        setattr(self, "_{}".format('uri_tabs_metadata'), kwargs.get('uri_tabs_metadata', None))
 
     @property
     def allow_tab_order(self):
@@ -1288,6 +1296,52 @@ class TabAccountSettings(object):
         """
 
         self._text_tabs_metadata = text_tabs_metadata
+
+    @property
+    def uri_tabs_enabled(self):
+        """Gets the uri_tabs_enabled of this TabAccountSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The uri_tabs_enabled of this TabAccountSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._uri_tabs_enabled
+
+    @uri_tabs_enabled.setter
+    def uri_tabs_enabled(self, uri_tabs_enabled):
+        """Sets the uri_tabs_enabled of this TabAccountSettings.
+
+          # noqa: E501
+
+        :param uri_tabs_enabled: The uri_tabs_enabled of this TabAccountSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._uri_tabs_enabled = uri_tabs_enabled
+
+    @property
+    def uri_tabs_metadata(self):
+        """Gets the uri_tabs_metadata of this TabAccountSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The uri_tabs_metadata of this TabAccountSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._uri_tabs_metadata
+
+    @uri_tabs_metadata.setter
+    def uri_tabs_metadata(self, uri_tabs_metadata):
+        """Sets the uri_tabs_metadata of this TabAccountSettings.
+
+          # noqa: E501
+
+        :param uri_tabs_metadata: The uri_tabs_metadata of this TabAccountSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._uri_tabs_metadata = uri_tabs_metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

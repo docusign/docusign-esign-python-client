@@ -3971,6 +3971,7 @@ class TemplatesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str template_id: The ID of the template being accessed. (required)
+        :param str include_agreement_type:
         :param str include_tabs:
         :return: TemplateDocumentsResult
                  If the method is called asynchronously,
@@ -3999,13 +4000,14 @@ class TemplatesApi(object):
             for asynchronous request. (optional)
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str template_id: The ID of the template being accessed. (required)
+        :param str include_agreement_type:
         :param str include_tabs:
         :return: TemplateDocumentsResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'template_id', 'include_tabs']
+        all_params = ['account_id', 'template_id', 'include_agreement_type', 'include_tabs']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4038,6 +4040,8 @@ class TemplatesApi(object):
             path_params['templateId'] = params['template_id']
 
         query_params = {}
+        if 'include_agreement_type' in params:
+            query_params['include_agreement_type'] = params['include_agreement_type']
         if 'include_tabs' in params:
             query_params['include_tabs'] = params['include_tabs']
 

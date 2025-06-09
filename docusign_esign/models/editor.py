@@ -80,6 +80,7 @@ class Editor(object):
         'note_metadata': 'PropertyMetadata',
         'phone_authentication': 'RecipientPhoneAuthentication',
         'phone_number': 'RecipientPhoneNumber',
+        'proof_file': 'RecipientProofFile',
         'recipient_attachments': 'list[RecipientAttachment]',
         'recipient_authentication_status': 'AuthenticationStatus',
         'recipient_feature_metadata': 'list[FeatureAvailableMetadata]',
@@ -158,6 +159,7 @@ class Editor(object):
         'note_metadata': 'noteMetadata',
         'phone_authentication': 'phoneAuthentication',
         'phone_number': 'phoneNumber',
+        'proof_file': 'proofFile',
         'recipient_attachments': 'recipientAttachments',
         'recipient_authentication_status': 'recipientAuthenticationStatus',
         'recipient_feature_metadata': 'recipientFeatureMetadata',
@@ -241,6 +243,7 @@ class Editor(object):
         self._note_metadata = None
         self._phone_authentication = None
         self._phone_number = None
+        self._proof_file = None
         self._recipient_attachments = None
         self._recipient_authentication_status = None
         self._recipient_feature_metadata = None
@@ -318,6 +321,7 @@ class Editor(object):
         setattr(self, "_{}".format('note_metadata'), kwargs.get('note_metadata', None))
         setattr(self, "_{}".format('phone_authentication'), kwargs.get('phone_authentication', None))
         setattr(self, "_{}".format('phone_number'), kwargs.get('phone_number', None))
+        setattr(self, "_{}".format('proof_file'), kwargs.get('proof_file', None))
         setattr(self, "_{}".format('recipient_attachments'), kwargs.get('recipient_attachments', None))
         setattr(self, "_{}".format('recipient_authentication_status'), kwargs.get('recipient_authentication_status', None))
         setattr(self, "_{}".format('recipient_feature_metadata'), kwargs.get('recipient_feature_metadata', None))
@@ -1427,6 +1431,29 @@ class Editor(object):
         """
 
         self._phone_number = phone_number
+
+    @property
+    def proof_file(self):
+        """Gets the proof_file of this Editor.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The proof_file of this Editor.  # noqa: E501
+        :rtype: RecipientProofFile
+        """
+        return self._proof_file
+
+    @proof_file.setter
+    def proof_file(self, proof_file):
+        """Sets the proof_file of this Editor.
+
+          # noqa: E501
+
+        :param proof_file: The proof_file of this Editor.  # noqa: E501
+        :type: RecipientProofFile
+        """
+
+        self._proof_file = proof_file
 
     @property
     def recipient_attachments(self):

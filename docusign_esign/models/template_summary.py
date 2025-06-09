@@ -37,7 +37,6 @@ class TemplateSummary(object):
         'document_id': 'str',
         'document_name': 'str',
         'error_details': 'ErrorDetails',
-        'has_document_template_library': 'str',
         'name': 'str',
         'template_id': 'str',
         'template_match': 'TemplateMatch',
@@ -49,7 +48,6 @@ class TemplateSummary(object):
         'document_id': 'documentId',
         'document_name': 'documentName',
         'error_details': 'errorDetails',
-        'has_document_template_library': 'hasDocumentTemplateLibrary',
         'name': 'name',
         'template_id': 'templateId',
         'template_match': 'templateMatch',
@@ -66,7 +64,6 @@ class TemplateSummary(object):
         self._document_id = None
         self._document_name = None
         self._error_details = None
-        self._has_document_template_library = None
         self._name = None
         self._template_id = None
         self._template_match = None
@@ -77,7 +74,6 @@ class TemplateSummary(object):
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
         setattr(self, "_{}".format('document_name'), kwargs.get('document_name', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
-        setattr(self, "_{}".format('has_document_template_library'), kwargs.get('has_document_template_library', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('template_id'), kwargs.get('template_id', None))
         setattr(self, "_{}".format('template_match'), kwargs.get('template_match', None))
@@ -174,29 +170,6 @@ class TemplateSummary(object):
         """
 
         self._error_details = error_details
-
-    @property
-    def has_document_template_library(self):
-        """Gets the has_document_template_library of this TemplateSummary.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The has_document_template_library of this TemplateSummary.  # noqa: E501
-        :rtype: str
-        """
-        return self._has_document_template_library
-
-    @has_document_template_library.setter
-    def has_document_template_library(self, has_document_template_library):
-        """Sets the has_document_template_library of this TemplateSummary.
-
-          # noqa: E501
-
-        :param has_document_template_library: The has_document_template_library of this TemplateSummary.  # noqa: E501
-        :type: str
-        """
-
-        self._has_document_template_library = has_document_template_library
 
     @property
     def name(self):
