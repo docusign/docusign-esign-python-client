@@ -386,6 +386,8 @@ class AccountSettingsInformation(object):
         'enable_agreement_desk_advanced_meta_data': 'SettingsMetadata',
         'enable_ai_contract_review': 'str',
         'enable_ai_contract_review_metadata': 'SettingsMetadata',
+        'enable_ai_sender_message': 'str',
+        'enable_ai_sender_message_metadata': 'SettingsMetadata',
         'enable_ai_suggested_fields_advanced': 'str',
         'enable_ai_suggested_fields_advanced_metadata': 'SettingsMetadata',
         'enable_ai_suggested_fields_basic': 'str',
@@ -1204,6 +1206,8 @@ class AccountSettingsInformation(object):
         'enable_agreement_desk_advanced_meta_data': 'enableAgreementDeskAdvancedMetaData',
         'enable_ai_contract_review': 'enableAIContractReview',
         'enable_ai_contract_review_metadata': 'enableAIContractReviewMetadata',
+        'enable_ai_sender_message': 'enableAISenderMessage',
+        'enable_ai_sender_message_metadata': 'enableAISenderMessageMetadata',
         'enable_ai_suggested_fields_advanced': 'enableAISuggestedFieldsAdvanced',
         'enable_ai_suggested_fields_advanced_metadata': 'enableAISuggestedFieldsAdvancedMetadata',
         'enable_ai_suggested_fields_basic': 'enableAISuggestedFieldsBasic',
@@ -2027,6 +2031,8 @@ class AccountSettingsInformation(object):
         self._enable_agreement_desk_advanced_meta_data = None
         self._enable_ai_contract_review = None
         self._enable_ai_contract_review_metadata = None
+        self._enable_ai_sender_message = None
+        self._enable_ai_sender_message_metadata = None
         self._enable_ai_suggested_fields_advanced = None
         self._enable_ai_suggested_fields_advanced_metadata = None
         self._enable_ai_suggested_fields_basic = None
@@ -2844,6 +2850,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_agreement_desk_advanced_meta_data'), kwargs.get('enable_agreement_desk_advanced_meta_data', None))
         setattr(self, "_{}".format('enable_ai_contract_review'), kwargs.get('enable_ai_contract_review', None))
         setattr(self, "_{}".format('enable_ai_contract_review_metadata'), kwargs.get('enable_ai_contract_review_metadata', None))
+        setattr(self, "_{}".format('enable_ai_sender_message'), kwargs.get('enable_ai_sender_message', None))
+        setattr(self, "_{}".format('enable_ai_sender_message_metadata'), kwargs.get('enable_ai_sender_message_metadata', None))
         setattr(self, "_{}".format('enable_ai_suggested_fields_advanced'), kwargs.get('enable_ai_suggested_fields_advanced', None))
         setattr(self, "_{}".format('enable_ai_suggested_fields_advanced_metadata'), kwargs.get('enable_ai_suggested_fields_advanced_metadata', None))
         setattr(self, "_{}".format('enable_ai_suggested_fields_basic'), kwargs.get('enable_ai_suggested_fields_basic', None))
@@ -11425,6 +11433,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_ai_contract_review_metadata = enable_ai_contract_review_metadata
+
+    @property
+    def enable_ai_sender_message(self):
+        """Gets the enable_ai_sender_message of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ai_sender_message of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_ai_sender_message
+
+    @enable_ai_sender_message.setter
+    def enable_ai_sender_message(self, enable_ai_sender_message):
+        """Sets the enable_ai_sender_message of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ai_sender_message: The enable_ai_sender_message of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_ai_sender_message = enable_ai_sender_message
+
+    @property
+    def enable_ai_sender_message_metadata(self):
+        """Gets the enable_ai_sender_message_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ai_sender_message_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_ai_sender_message_metadata
+
+    @enable_ai_sender_message_metadata.setter
+    def enable_ai_sender_message_metadata(self, enable_ai_sender_message_metadata):
+        """Sets the enable_ai_sender_message_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ai_sender_message_metadata: The enable_ai_sender_message_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_ai_sender_message_metadata = enable_ai_sender_message_metadata
 
     @property
     def enable_ai_suggested_fields_advanced(self):
