@@ -60,6 +60,7 @@ class ConnectCustomConfiguration(object):
         'integrator_managed': 'str',
         'name': 'str',
         'password': 'str',
+        'pause_publish': 'str',
         'recipient_events': 'list[str]',
         'require_mutual_tls': 'str',
         'requires_acknowledgement': 'str',
@@ -106,6 +107,7 @@ class ConnectCustomConfiguration(object):
         'integrator_managed': 'integratorManaged',
         'name': 'name',
         'password': 'password',
+        'pause_publish': 'pausePublish',
         'recipient_events': 'recipientEvents',
         'require_mutual_tls': 'requireMutualTls',
         'requires_acknowledgement': 'requiresAcknowledgement',
@@ -157,6 +159,7 @@ class ConnectCustomConfiguration(object):
         self._integrator_managed = None
         self._name = None
         self._password = None
+        self._pause_publish = None
         self._recipient_events = None
         self._require_mutual_tls = None
         self._requires_acknowledgement = None
@@ -202,6 +205,7 @@ class ConnectCustomConfiguration(object):
         setattr(self, "_{}".format('integrator_managed'), kwargs.get('integrator_managed', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('password'), kwargs.get('password', None))
+        setattr(self, "_{}".format('pause_publish'), kwargs.get('pause_publish', None))
         setattr(self, "_{}".format('recipient_events'), kwargs.get('recipient_events', None))
         setattr(self, "_{}".format('require_mutual_tls'), kwargs.get('require_mutual_tls', None))
         setattr(self, "_{}".format('requires_acknowledgement'), kwargs.get('requires_acknowledgement', None))
@@ -839,6 +843,29 @@ class ConnectCustomConfiguration(object):
         """
 
         self._password = password
+
+    @property
+    def pause_publish(self):
+        """Gets the pause_publish of this ConnectCustomConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The pause_publish of this ConnectCustomConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._pause_publish
+
+    @pause_publish.setter
+    def pause_publish(self, pause_publish):
+        """Sets the pause_publish of this ConnectCustomConfiguration.
+
+          # noqa: E501
+
+        :param pause_publish: The pause_publish of this ConnectCustomConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._pause_publish = pause_publish
 
     @property
     def recipient_events(self):

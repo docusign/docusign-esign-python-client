@@ -36,7 +36,7 @@ class ConnectOAuthConfig(object):
         'authorization_server_url': 'str',
         'client_id': 'str',
         'client_secret': 'str',
-        'custom_parameters': 'str',
+        'custom_parameters': 'dict(str, str)',
         'scope': 'str'
     }
 
@@ -143,7 +143,7 @@ class ConnectOAuthConfig(object):
           # noqa: E501
 
         :return: The custom_parameters of this ConnectOAuthConfig.  # noqa: E501
-        :rtype: str
+        :rtype: dict(str, str)
         """
         return self._custom_parameters
 
@@ -154,7 +154,7 @@ class ConnectOAuthConfig(object):
           # noqa: E501
 
         :param custom_parameters: The custom_parameters of this ConnectOAuthConfig.  # noqa: E501
-        :type: str
+        :type: dict(str, str)
         """
 
         self._custom_parameters = custom_parameters
