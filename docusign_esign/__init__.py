@@ -511,7 +511,9 @@ from docusign_esign.models.template_shared_item import TemplateSharedItem
 from docusign_esign.models.template_summary import TemplateSummary
 from docusign_esign.models.template_tabs import TemplateTabs
 from docusign_esign.models.template_update_summary import TemplateUpdateSummary
+from docusign_esign.models.template_view_recipient_settings import TemplateViewRecipientSettings
 from docusign_esign.models.template_view_request import TemplateViewRequest
+from docusign_esign.models.template_view_settings import TemplateViewSettings
 from docusign_esign.models.text import Text
 from docusign_esign.models.text_custom_field import TextCustomField
 from docusign_esign.models.title import Title

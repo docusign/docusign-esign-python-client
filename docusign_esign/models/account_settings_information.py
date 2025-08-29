@@ -321,6 +321,8 @@ class AccountSettingsInformation(object):
         'data_population_scope_metadata': 'SettingsMetadata',
         'default_signing_responsive_view': 'str',
         'default_signing_responsive_view_metadata': 'SettingsMetadata',
+        'default_signing_responsive_view_use_grade': 'str',
+        'default_signing_responsive_view_use_grade_metadata': 'SettingsMetadata',
         'default_to_advanced_envelopes_filter_form': 'str',
         'default_to_advanced_envelopes_filter_form_metadata': 'SettingsMetadata',
         'disable_auto_template_matching': 'str',
@@ -443,6 +445,10 @@ class AccountSettingsInformation(object):
         'enable_d_sig_id_verification_pens_metadata': 'SettingsMetadata',
         'enable_d_sig_id_verification_premier_pens': 'str',
         'enable_d_sig_id_verification_premier_pens_metadata': 'SettingsMetadata',
+        'enable_d_sig_pen_group_eu_qes': 'str',
+        'enable_d_sig_pen_group_eu_qes_metadata': 'SettingsMetadata',
+        'enable_d_sig_plg_eu_qes_pens': 'str',
+        'enable_d_sig_plg_eu_qes_pens_metadata': 'SettingsMetadata',
         'enable_ds_pro': 'str',
         'enable_ds_pro_metadata': 'SettingsMetadata',
         'enable_enforce_tls_emails_setting_metadata': 'SettingsMetadata',
@@ -1141,6 +1147,8 @@ class AccountSettingsInformation(object):
         'data_population_scope_metadata': 'dataPopulationScopeMetadata',
         'default_signing_responsive_view': 'defaultSigningResponsiveView',
         'default_signing_responsive_view_metadata': 'defaultSigningResponsiveViewMetadata',
+        'default_signing_responsive_view_use_grade': 'defaultSigningResponsiveViewUseGrade',
+        'default_signing_responsive_view_use_grade_metadata': 'defaultSigningResponsiveViewUseGradeMetadata',
         'default_to_advanced_envelopes_filter_form': 'defaultToAdvancedEnvelopesFilterForm',
         'default_to_advanced_envelopes_filter_form_metadata': 'defaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching': 'disableAutoTemplateMatching',
@@ -1263,6 +1271,10 @@ class AccountSettingsInformation(object):
         'enable_d_sig_id_verification_pens_metadata': 'enableDSigIDVerificationPensMetadata',
         'enable_d_sig_id_verification_premier_pens': 'enableDSigIDVerificationPremierPens',
         'enable_d_sig_id_verification_premier_pens_metadata': 'enableDSigIDVerificationPremierPensMetadata',
+        'enable_d_sig_pen_group_eu_qes': 'enableDSigPenGroupEuQes',
+        'enable_d_sig_pen_group_eu_qes_metadata': 'enableDSigPenGroupEuQesMetadata',
+        'enable_d_sig_plg_eu_qes_pens': 'enableDSigPlgEuQesPens',
+        'enable_d_sig_plg_eu_qes_pens_metadata': 'enableDSigPlgEuQesPensMetadata',
         'enable_ds_pro': 'enableDSPro',
         'enable_ds_pro_metadata': 'enableDSProMetadata',
         'enable_enforce_tls_emails_setting_metadata': 'enableEnforceTlsEmailsSettingMetadata',
@@ -1357,8 +1369,8 @@ class AccountSettingsInformation(object):
         'enable_sequential_signing_ui_metadata': 'enableSequentialSigningUIMetadata',
         'enable_signer_attachments': 'enableSignerAttachments',
         'enable_signer_attachments_metadata': 'enableSignerAttachmentsMetadata',
-        'enable_signing_ai_features_plan': 'EnableSigningAIFeaturesPlan',
-        'enable_signing_ai_features_plan_metadata': 'EnableSigningAIFeaturesPlanMetadata',
+        'enable_signing_ai_features_plan': 'enableSigningAIFeaturesPlan',
+        'enable_signing_ai_features_plan_metadata': 'enableSigningAIFeaturesPlanMetadata',
         'enable_signing_ai_features_setting': 'enableSigningAIFeaturesSetting',
         'enable_signing_ai_features_setting_metadata': 'enableSigningAIFeaturesSettingMetadata',
         'enable_signing_extension_comments': 'enableSigningExtensionComments',
@@ -1966,6 +1978,8 @@ class AccountSettingsInformation(object):
         self._data_population_scope_metadata = None
         self._default_signing_responsive_view = None
         self._default_signing_responsive_view_metadata = None
+        self._default_signing_responsive_view_use_grade = None
+        self._default_signing_responsive_view_use_grade_metadata = None
         self._default_to_advanced_envelopes_filter_form = None
         self._default_to_advanced_envelopes_filter_form_metadata = None
         self._disable_auto_template_matching = None
@@ -2088,6 +2102,10 @@ class AccountSettingsInformation(object):
         self._enable_d_sig_id_verification_pens_metadata = None
         self._enable_d_sig_id_verification_premier_pens = None
         self._enable_d_sig_id_verification_premier_pens_metadata = None
+        self._enable_d_sig_pen_group_eu_qes = None
+        self._enable_d_sig_pen_group_eu_qes_metadata = None
+        self._enable_d_sig_plg_eu_qes_pens = None
+        self._enable_d_sig_plg_eu_qes_pens_metadata = None
         self._enable_ds_pro = None
         self._enable_ds_pro_metadata = None
         self._enable_enforce_tls_emails_setting_metadata = None
@@ -2785,6 +2803,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('data_population_scope_metadata'), kwargs.get('data_population_scope_metadata', None))
         setattr(self, "_{}".format('default_signing_responsive_view'), kwargs.get('default_signing_responsive_view', None))
         setattr(self, "_{}".format('default_signing_responsive_view_metadata'), kwargs.get('default_signing_responsive_view_metadata', None))
+        setattr(self, "_{}".format('default_signing_responsive_view_use_grade'), kwargs.get('default_signing_responsive_view_use_grade', None))
+        setattr(self, "_{}".format('default_signing_responsive_view_use_grade_metadata'), kwargs.get('default_signing_responsive_view_use_grade_metadata', None))
         setattr(self, "_{}".format('default_to_advanced_envelopes_filter_form'), kwargs.get('default_to_advanced_envelopes_filter_form', None))
         setattr(self, "_{}".format('default_to_advanced_envelopes_filter_form_metadata'), kwargs.get('default_to_advanced_envelopes_filter_form_metadata', None))
         setattr(self, "_{}".format('disable_auto_template_matching'), kwargs.get('disable_auto_template_matching', None))
@@ -2907,6 +2927,10 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_d_sig_id_verification_pens_metadata'), kwargs.get('enable_d_sig_id_verification_pens_metadata', None))
         setattr(self, "_{}".format('enable_d_sig_id_verification_premier_pens'), kwargs.get('enable_d_sig_id_verification_premier_pens', None))
         setattr(self, "_{}".format('enable_d_sig_id_verification_premier_pens_metadata'), kwargs.get('enable_d_sig_id_verification_premier_pens_metadata', None))
+        setattr(self, "_{}".format('enable_d_sig_pen_group_eu_qes'), kwargs.get('enable_d_sig_pen_group_eu_qes', None))
+        setattr(self, "_{}".format('enable_d_sig_pen_group_eu_qes_metadata'), kwargs.get('enable_d_sig_pen_group_eu_qes_metadata', None))
+        setattr(self, "_{}".format('enable_d_sig_plg_eu_qes_pens'), kwargs.get('enable_d_sig_plg_eu_qes_pens', None))
+        setattr(self, "_{}".format('enable_d_sig_plg_eu_qes_pens_metadata'), kwargs.get('enable_d_sig_plg_eu_qes_pens_metadata', None))
         setattr(self, "_{}".format('enable_ds_pro'), kwargs.get('enable_ds_pro', None))
         setattr(self, "_{}".format('enable_ds_pro_metadata'), kwargs.get('enable_ds_pro_metadata', None))
         setattr(self, "_{}".format('enable_enforce_tls_emails_setting_metadata'), kwargs.get('enable_enforce_tls_emails_setting_metadata', None))
@@ -9940,6 +9964,52 @@ class AccountSettingsInformation(object):
         self._default_signing_responsive_view_metadata = default_signing_responsive_view_metadata
 
     @property
+    def default_signing_responsive_view_use_grade(self):
+        """Gets the default_signing_responsive_view_use_grade of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The default_signing_responsive_view_use_grade of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_signing_responsive_view_use_grade
+
+    @default_signing_responsive_view_use_grade.setter
+    def default_signing_responsive_view_use_grade(self, default_signing_responsive_view_use_grade):
+        """Sets the default_signing_responsive_view_use_grade of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param default_signing_responsive_view_use_grade: The default_signing_responsive_view_use_grade of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._default_signing_responsive_view_use_grade = default_signing_responsive_view_use_grade
+
+    @property
+    def default_signing_responsive_view_use_grade_metadata(self):
+        """Gets the default_signing_responsive_view_use_grade_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The default_signing_responsive_view_use_grade_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._default_signing_responsive_view_use_grade_metadata
+
+    @default_signing_responsive_view_use_grade_metadata.setter
+    def default_signing_responsive_view_use_grade_metadata(self, default_signing_responsive_view_use_grade_metadata):
+        """Sets the default_signing_responsive_view_use_grade_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param default_signing_responsive_view_use_grade_metadata: The default_signing_responsive_view_use_grade_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._default_signing_responsive_view_use_grade_metadata = default_signing_responsive_view_use_grade_metadata
+
+    @property
     def default_to_advanced_envelopes_filter_form(self):
         """Gets the default_to_advanced_envelopes_filter_form of this AccountSettingsInformation.  # noqa: E501
 
@@ -12744,6 +12814,98 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_d_sig_id_verification_premier_pens_metadata = enable_d_sig_id_verification_premier_pens_metadata
+
+    @property
+    def enable_d_sig_pen_group_eu_qes(self):
+        """Gets the enable_d_sig_pen_group_eu_qes of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_pen_group_eu_qes of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_d_sig_pen_group_eu_qes
+
+    @enable_d_sig_pen_group_eu_qes.setter
+    def enable_d_sig_pen_group_eu_qes(self, enable_d_sig_pen_group_eu_qes):
+        """Sets the enable_d_sig_pen_group_eu_qes of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_pen_group_eu_qes: The enable_d_sig_pen_group_eu_qes of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_d_sig_pen_group_eu_qes = enable_d_sig_pen_group_eu_qes
+
+    @property
+    def enable_d_sig_pen_group_eu_qes_metadata(self):
+        """Gets the enable_d_sig_pen_group_eu_qes_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_pen_group_eu_qes_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_d_sig_pen_group_eu_qes_metadata
+
+    @enable_d_sig_pen_group_eu_qes_metadata.setter
+    def enable_d_sig_pen_group_eu_qes_metadata(self, enable_d_sig_pen_group_eu_qes_metadata):
+        """Sets the enable_d_sig_pen_group_eu_qes_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_pen_group_eu_qes_metadata: The enable_d_sig_pen_group_eu_qes_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_d_sig_pen_group_eu_qes_metadata = enable_d_sig_pen_group_eu_qes_metadata
+
+    @property
+    def enable_d_sig_plg_eu_qes_pens(self):
+        """Gets the enable_d_sig_plg_eu_qes_pens of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_plg_eu_qes_pens of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_d_sig_plg_eu_qes_pens
+
+    @enable_d_sig_plg_eu_qes_pens.setter
+    def enable_d_sig_plg_eu_qes_pens(self, enable_d_sig_plg_eu_qes_pens):
+        """Sets the enable_d_sig_plg_eu_qes_pens of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_plg_eu_qes_pens: The enable_d_sig_plg_eu_qes_pens of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_d_sig_plg_eu_qes_pens = enable_d_sig_plg_eu_qes_pens
+
+    @property
+    def enable_d_sig_plg_eu_qes_pens_metadata(self):
+        """Gets the enable_d_sig_plg_eu_qes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_d_sig_plg_eu_qes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_d_sig_plg_eu_qes_pens_metadata
+
+    @enable_d_sig_plg_eu_qes_pens_metadata.setter
+    def enable_d_sig_plg_eu_qes_pens_metadata(self, enable_d_sig_plg_eu_qes_pens_metadata):
+        """Sets the enable_d_sig_plg_eu_qes_pens_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_d_sig_plg_eu_qes_pens_metadata: The enable_d_sig_plg_eu_qes_pens_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_d_sig_plg_eu_qes_pens_metadata = enable_d_sig_plg_eu_qes_pens_metadata
 
     @property
     def enable_ds_pro(self):
