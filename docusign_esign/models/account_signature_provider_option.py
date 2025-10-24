@@ -34,14 +34,18 @@ class AccountSignatureProviderOption(object):
     """
     swagger_types = {
         'signature_provider_option_display_name': 'str',
+        'signature_provider_option_hint_override_value': 'str',
         'signature_provider_option_id': 'str',
-        'signature_provider_option_name': 'str'
+        'signature_provider_option_name': 'str',
+        'signature_provider_option_regex_validation_pattern': 'str'
     }
 
     attribute_map = {
         'signature_provider_option_display_name': 'signatureProviderOptionDisplayName',
+        'signature_provider_option_hint_override_value': 'signatureProviderOptionHintOverrideValue',
         'signature_provider_option_id': 'signatureProviderOptionId',
-        'signature_provider_option_name': 'signatureProviderOptionName'
+        'signature_provider_option_name': 'signatureProviderOptionName',
+        'signature_provider_option_regex_validation_pattern': 'signatureProviderOptionRegexValidationPattern'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -51,13 +55,17 @@ class AccountSignatureProviderOption(object):
         self._configuration = _configuration
 
         self._signature_provider_option_display_name = None
+        self._signature_provider_option_hint_override_value = None
         self._signature_provider_option_id = None
         self._signature_provider_option_name = None
+        self._signature_provider_option_regex_validation_pattern = None
         self.discriminator = None
 
         setattr(self, "_{}".format('signature_provider_option_display_name'), kwargs.get('signature_provider_option_display_name', None))
+        setattr(self, "_{}".format('signature_provider_option_hint_override_value'), kwargs.get('signature_provider_option_hint_override_value', None))
         setattr(self, "_{}".format('signature_provider_option_id'), kwargs.get('signature_provider_option_id', None))
         setattr(self, "_{}".format('signature_provider_option_name'), kwargs.get('signature_provider_option_name', None))
+        setattr(self, "_{}".format('signature_provider_option_regex_validation_pattern'), kwargs.get('signature_provider_option_regex_validation_pattern', None))
 
     @property
     def signature_provider_option_display_name(self):
@@ -81,6 +89,29 @@ class AccountSignatureProviderOption(object):
         """
 
         self._signature_provider_option_display_name = signature_provider_option_display_name
+
+    @property
+    def signature_provider_option_hint_override_value(self):
+        """Gets the signature_provider_option_hint_override_value of this AccountSignatureProviderOption.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_provider_option_hint_override_value of this AccountSignatureProviderOption.  # noqa: E501
+        :rtype: str
+        """
+        return self._signature_provider_option_hint_override_value
+
+    @signature_provider_option_hint_override_value.setter
+    def signature_provider_option_hint_override_value(self, signature_provider_option_hint_override_value):
+        """Sets the signature_provider_option_hint_override_value of this AccountSignatureProviderOption.
+
+          # noqa: E501
+
+        :param signature_provider_option_hint_override_value: The signature_provider_option_hint_override_value of this AccountSignatureProviderOption.  # noqa: E501
+        :type: str
+        """
+
+        self._signature_provider_option_hint_override_value = signature_provider_option_hint_override_value
 
     @property
     def signature_provider_option_id(self):
@@ -127,6 +158,29 @@ class AccountSignatureProviderOption(object):
         """
 
         self._signature_provider_option_name = signature_provider_option_name
+
+    @property
+    def signature_provider_option_regex_validation_pattern(self):
+        """Gets the signature_provider_option_regex_validation_pattern of this AccountSignatureProviderOption.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signature_provider_option_regex_validation_pattern of this AccountSignatureProviderOption.  # noqa: E501
+        :rtype: str
+        """
+        return self._signature_provider_option_regex_validation_pattern
+
+    @signature_provider_option_regex_validation_pattern.setter
+    def signature_provider_option_regex_validation_pattern(self, signature_provider_option_regex_validation_pattern):
+        """Sets the signature_provider_option_regex_validation_pattern of this AccountSignatureProviderOption.
+
+          # noqa: E501
+
+        :param signature_provider_option_regex_validation_pattern: The signature_provider_option_regex_validation_pattern of this AccountSignatureProviderOption.  # noqa: E501
+        :type: str
+        """
+
+        self._signature_provider_option_regex_validation_pattern = signature_provider_option_regex_validation_pattern
 
     def to_dict(self):
         """Returns the model properties as a dict"""

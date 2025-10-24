@@ -79,6 +79,7 @@ class AccountSettingsInformation(object):
         'allow_connect_agreement_ui': 'str',
         'allow_connect_agreement_ui_metadata': 'SettingsMetadata',
         'allow_connect_authoritative_copy_ready_event_ui': 'str',
+        'allow_connect_envelope_reminder_sent_event_ui': 'str',
         'allow_connect_envelope_removed_event': 'str',
         'allow_connect_extension_ui': 'str',
         'allow_connect_http_listener_configs': 'str',
@@ -327,6 +328,8 @@ class AccountSettingsInformation(object):
         'default_to_advanced_envelopes_filter_form_metadata': 'SettingsMetadata',
         'disable_auto_template_matching': 'str',
         'disable_auto_template_matching_metadata': 'SettingsMetadata',
+        'disable_legacy_kba': 'str',
+        'disable_legacy_kba_metadata': 'SettingsMetadata',
         'disable_legacy_shared_envelopes': 'str',
         'disable_legacy_shared_envelopes_metadata': 'SettingsMetadata',
         'disable_mobile_app': 'str',
@@ -390,10 +393,10 @@ class AccountSettingsInformation(object):
         'enable_ai_contract_review_metadata': 'SettingsMetadata',
         'enable_ai_sender_message': 'str',
         'enable_ai_sender_message_metadata': 'SettingsMetadata',
-        'enable_ai_suggested_fields_advanced': 'str',
-        'enable_ai_suggested_fields_advanced_metadata': 'SettingsMetadata',
-        'enable_ai_suggested_fields_basic': 'str',
-        'enable_ai_suggested_fields_basic_metadata': 'SettingsMetadata',
+        'enable_ai_suggested_fields': 'str',
+        'enable_ai_suggested_fields_auto_place': 'str',
+        'enable_ai_suggested_fields_auto_place_metadata': 'SettingsMetadata',
+        'enable_ai_suggested_fields_metadata': 'SettingsMetadata',
         'enable_auto_nav': 'str',
         'enable_auto_nav_metadata': 'SettingsMetadata',
         'enable_batch_update_envelope_types': 'str',
@@ -402,6 +405,8 @@ class AccountSettingsInformation(object):
         'enable_bcc_dummy_link_metadata': 'SettingsMetadata',
         'enable_calculated_fields': 'str',
         'enable_calculated_fields_metadata': 'SettingsMetadata',
+        'enable_cfr_rapid_signing_embedded_auth': 'str',
+        'enable_cfr_rapid_signing_embedded_auth_metadata': 'SettingsMetadata',
         'enable_click_plus': 'str',
         'enable_click_plus_conditional_content': 'str',
         'enable_click_plus_conditional_content_meta_data': 'SettingsMetadata',
@@ -490,6 +495,12 @@ class AccountSettingsInformation(object):
         'enable_microsoft_dynamics365_extension_metadata': 'SettingsMetadata',
         'enable_multi_user_repository_features': 'str',
         'enable_multi_user_repository_features_metadata': 'SettingsMetadata',
+        'enable_navigator_api_data_in': 'str',
+        'enable_navigator_api_data_in_metadata': 'SettingsMetadata',
+        'enable_navigator_api_data_out': 'str',
+        'enable_navigator_api_data_out_metadata': 'SettingsMetadata',
+        'enable_navigator_api_utilities': 'str',
+        'enable_navigator_api_utilities_metadata': 'SettingsMetadata',
         'enable_navigator_for_hr': 'str',
         'enable_navigator_for_hr_metadata': 'SettingsMetadata',
         'enable_navigator_partial_ingestion': 'str',
@@ -905,6 +916,7 @@ class AccountSettingsInformation(object):
         'allow_connect_agreement_ui': 'allowConnectAgreementUI',
         'allow_connect_agreement_ui_metadata': 'allowConnectAgreementUIMetadata',
         'allow_connect_authoritative_copy_ready_event_ui': 'allowConnectAuthoritativeCopyReadyEventUI',
+        'allow_connect_envelope_reminder_sent_event_ui': 'allowConnectEnvelopeReminderSentEventUI',
         'allow_connect_envelope_removed_event': 'allowConnectEnvelopeRemovedEvent',
         'allow_connect_extension_ui': 'allowConnectExtensionUI',
         'allow_connect_http_listener_configs': 'allowConnectHttpListenerConfigs',
@@ -1153,6 +1165,8 @@ class AccountSettingsInformation(object):
         'default_to_advanced_envelopes_filter_form_metadata': 'defaultToAdvancedEnvelopesFilterFormMetadata',
         'disable_auto_template_matching': 'disableAutoTemplateMatching',
         'disable_auto_template_matching_metadata': 'disableAutoTemplateMatchingMetadata',
+        'disable_legacy_kba': 'disableLegacyKba',
+        'disable_legacy_kba_metadata': 'disableLegacyKbaMetadata',
         'disable_legacy_shared_envelopes': 'disableLegacySharedEnvelopes',
         'disable_legacy_shared_envelopes_metadata': 'disableLegacySharedEnvelopesMetadata',
         'disable_mobile_app': 'disableMobileApp',
@@ -1216,10 +1230,10 @@ class AccountSettingsInformation(object):
         'enable_ai_contract_review_metadata': 'enableAIContractReviewMetadata',
         'enable_ai_sender_message': 'enableAISenderMessage',
         'enable_ai_sender_message_metadata': 'enableAISenderMessageMetadata',
-        'enable_ai_suggested_fields_advanced': 'enableAISuggestedFieldsAdvanced',
-        'enable_ai_suggested_fields_advanced_metadata': 'enableAISuggestedFieldsAdvancedMetadata',
-        'enable_ai_suggested_fields_basic': 'enableAISuggestedFieldsBasic',
-        'enable_ai_suggested_fields_basic_metadata': 'enableAISuggestedFieldsBasicMetadata',
+        'enable_ai_suggested_fields': 'enableAISuggestedFields',
+        'enable_ai_suggested_fields_auto_place': 'enableAISuggestedFieldsAutoPlace',
+        'enable_ai_suggested_fields_auto_place_metadata': 'enableAISuggestedFieldsAutoPlaceMetadata',
+        'enable_ai_suggested_fields_metadata': 'enableAISuggestedFieldsMetadata',
         'enable_auto_nav': 'enableAutoNav',
         'enable_auto_nav_metadata': 'enableAutoNavMetadata',
         'enable_batch_update_envelope_types': 'enableBatchUpdateEnvelopeTypes',
@@ -1228,6 +1242,8 @@ class AccountSettingsInformation(object):
         'enable_bcc_dummy_link_metadata': 'enableBccDummyLinkMetadata',
         'enable_calculated_fields': 'enableCalculatedFields',
         'enable_calculated_fields_metadata': 'enableCalculatedFieldsMetadata',
+        'enable_cfr_rapid_signing_embedded_auth': 'enableCFRRapidSigningEmbeddedAuth',
+        'enable_cfr_rapid_signing_embedded_auth_metadata': 'enableCFRRapidSigningEmbeddedAuthMetadata',
         'enable_click_plus': 'enableClickPlus',
         'enable_click_plus_conditional_content': 'enableClickPlusConditionalContent',
         'enable_click_plus_conditional_content_meta_data': 'enableClickPlusConditionalContentMetaData',
@@ -1316,6 +1332,12 @@ class AccountSettingsInformation(object):
         'enable_microsoft_dynamics365_extension_metadata': 'enableMicrosoftDynamics365ExtensionMetadata',
         'enable_multi_user_repository_features': 'enableMultiUserRepositoryFeatures',
         'enable_multi_user_repository_features_metadata': 'enableMultiUserRepositoryFeaturesMetadata',
+        'enable_navigator_api_data_in': 'enableNavigatorAPIDataIn',
+        'enable_navigator_api_data_in_metadata': 'enableNavigatorAPIDataInMetadata',
+        'enable_navigator_api_data_out': 'enableNavigatorAPIDataOut',
+        'enable_navigator_api_data_out_metadata': 'enableNavigatorAPIDataOutMetadata',
+        'enable_navigator_api_utilities': 'enableNavigatorAPIUtilities',
+        'enable_navigator_api_utilities_metadata': 'enableNavigatorAPIUtilitiesMetadata',
         'enable_navigator_for_hr': 'enableNavigatorForHR',
         'enable_navigator_for_hr_metadata': 'enableNavigatorForHRMetadata',
         'enable_navigator_partial_ingestion': 'enableNavigatorPartialIngestion',
@@ -1736,6 +1758,7 @@ class AccountSettingsInformation(object):
         self._allow_connect_agreement_ui = None
         self._allow_connect_agreement_ui_metadata = None
         self._allow_connect_authoritative_copy_ready_event_ui = None
+        self._allow_connect_envelope_reminder_sent_event_ui = None
         self._allow_connect_envelope_removed_event = None
         self._allow_connect_extension_ui = None
         self._allow_connect_http_listener_configs = None
@@ -1984,6 +2007,8 @@ class AccountSettingsInformation(object):
         self._default_to_advanced_envelopes_filter_form_metadata = None
         self._disable_auto_template_matching = None
         self._disable_auto_template_matching_metadata = None
+        self._disable_legacy_kba = None
+        self._disable_legacy_kba_metadata = None
         self._disable_legacy_shared_envelopes = None
         self._disable_legacy_shared_envelopes_metadata = None
         self._disable_mobile_app = None
@@ -2047,10 +2072,10 @@ class AccountSettingsInformation(object):
         self._enable_ai_contract_review_metadata = None
         self._enable_ai_sender_message = None
         self._enable_ai_sender_message_metadata = None
-        self._enable_ai_suggested_fields_advanced = None
-        self._enable_ai_suggested_fields_advanced_metadata = None
-        self._enable_ai_suggested_fields_basic = None
-        self._enable_ai_suggested_fields_basic_metadata = None
+        self._enable_ai_suggested_fields = None
+        self._enable_ai_suggested_fields_auto_place = None
+        self._enable_ai_suggested_fields_auto_place_metadata = None
+        self._enable_ai_suggested_fields_metadata = None
         self._enable_auto_nav = None
         self._enable_auto_nav_metadata = None
         self._enable_batch_update_envelope_types = None
@@ -2059,6 +2084,8 @@ class AccountSettingsInformation(object):
         self._enable_bcc_dummy_link_metadata = None
         self._enable_calculated_fields = None
         self._enable_calculated_fields_metadata = None
+        self._enable_cfr_rapid_signing_embedded_auth = None
+        self._enable_cfr_rapid_signing_embedded_auth_metadata = None
         self._enable_click_plus = None
         self._enable_click_plus_conditional_content = None
         self._enable_click_plus_conditional_content_meta_data = None
@@ -2147,6 +2174,12 @@ class AccountSettingsInformation(object):
         self._enable_microsoft_dynamics365_extension_metadata = None
         self._enable_multi_user_repository_features = None
         self._enable_multi_user_repository_features_metadata = None
+        self._enable_navigator_api_data_in = None
+        self._enable_navigator_api_data_in_metadata = None
+        self._enable_navigator_api_data_out = None
+        self._enable_navigator_api_data_out_metadata = None
+        self._enable_navigator_api_utilities = None
+        self._enable_navigator_api_utilities_metadata = None
         self._enable_navigator_for_hr = None
         self._enable_navigator_for_hr_metadata = None
         self._enable_navigator_partial_ingestion = None
@@ -2561,6 +2594,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_connect_agreement_ui'), kwargs.get('allow_connect_agreement_ui', None))
         setattr(self, "_{}".format('allow_connect_agreement_ui_metadata'), kwargs.get('allow_connect_agreement_ui_metadata', None))
         setattr(self, "_{}".format('allow_connect_authoritative_copy_ready_event_ui'), kwargs.get('allow_connect_authoritative_copy_ready_event_ui', None))
+        setattr(self, "_{}".format('allow_connect_envelope_reminder_sent_event_ui'), kwargs.get('allow_connect_envelope_reminder_sent_event_ui', None))
         setattr(self, "_{}".format('allow_connect_envelope_removed_event'), kwargs.get('allow_connect_envelope_removed_event', None))
         setattr(self, "_{}".format('allow_connect_extension_ui'), kwargs.get('allow_connect_extension_ui', None))
         setattr(self, "_{}".format('allow_connect_http_listener_configs'), kwargs.get('allow_connect_http_listener_configs', None))
@@ -2809,6 +2843,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('default_to_advanced_envelopes_filter_form_metadata'), kwargs.get('default_to_advanced_envelopes_filter_form_metadata', None))
         setattr(self, "_{}".format('disable_auto_template_matching'), kwargs.get('disable_auto_template_matching', None))
         setattr(self, "_{}".format('disable_auto_template_matching_metadata'), kwargs.get('disable_auto_template_matching_metadata', None))
+        setattr(self, "_{}".format('disable_legacy_kba'), kwargs.get('disable_legacy_kba', None))
+        setattr(self, "_{}".format('disable_legacy_kba_metadata'), kwargs.get('disable_legacy_kba_metadata', None))
         setattr(self, "_{}".format('disable_legacy_shared_envelopes'), kwargs.get('disable_legacy_shared_envelopes', None))
         setattr(self, "_{}".format('disable_legacy_shared_envelopes_metadata'), kwargs.get('disable_legacy_shared_envelopes_metadata', None))
         setattr(self, "_{}".format('disable_mobile_app'), kwargs.get('disable_mobile_app', None))
@@ -2872,10 +2908,10 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_ai_contract_review_metadata'), kwargs.get('enable_ai_contract_review_metadata', None))
         setattr(self, "_{}".format('enable_ai_sender_message'), kwargs.get('enable_ai_sender_message', None))
         setattr(self, "_{}".format('enable_ai_sender_message_metadata'), kwargs.get('enable_ai_sender_message_metadata', None))
-        setattr(self, "_{}".format('enable_ai_suggested_fields_advanced'), kwargs.get('enable_ai_suggested_fields_advanced', None))
-        setattr(self, "_{}".format('enable_ai_suggested_fields_advanced_metadata'), kwargs.get('enable_ai_suggested_fields_advanced_metadata', None))
-        setattr(self, "_{}".format('enable_ai_suggested_fields_basic'), kwargs.get('enable_ai_suggested_fields_basic', None))
-        setattr(self, "_{}".format('enable_ai_suggested_fields_basic_metadata'), kwargs.get('enable_ai_suggested_fields_basic_metadata', None))
+        setattr(self, "_{}".format('enable_ai_suggested_fields'), kwargs.get('enable_ai_suggested_fields', None))
+        setattr(self, "_{}".format('enable_ai_suggested_fields_auto_place'), kwargs.get('enable_ai_suggested_fields_auto_place', None))
+        setattr(self, "_{}".format('enable_ai_suggested_fields_auto_place_metadata'), kwargs.get('enable_ai_suggested_fields_auto_place_metadata', None))
+        setattr(self, "_{}".format('enable_ai_suggested_fields_metadata'), kwargs.get('enable_ai_suggested_fields_metadata', None))
         setattr(self, "_{}".format('enable_auto_nav'), kwargs.get('enable_auto_nav', None))
         setattr(self, "_{}".format('enable_auto_nav_metadata'), kwargs.get('enable_auto_nav_metadata', None))
         setattr(self, "_{}".format('enable_batch_update_envelope_types'), kwargs.get('enable_batch_update_envelope_types', None))
@@ -2884,6 +2920,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_bcc_dummy_link_metadata'), kwargs.get('enable_bcc_dummy_link_metadata', None))
         setattr(self, "_{}".format('enable_calculated_fields'), kwargs.get('enable_calculated_fields', None))
         setattr(self, "_{}".format('enable_calculated_fields_metadata'), kwargs.get('enable_calculated_fields_metadata', None))
+        setattr(self, "_{}".format('enable_cfr_rapid_signing_embedded_auth'), kwargs.get('enable_cfr_rapid_signing_embedded_auth', None))
+        setattr(self, "_{}".format('enable_cfr_rapid_signing_embedded_auth_metadata'), kwargs.get('enable_cfr_rapid_signing_embedded_auth_metadata', None))
         setattr(self, "_{}".format('enable_click_plus'), kwargs.get('enable_click_plus', None))
         setattr(self, "_{}".format('enable_click_plus_conditional_content'), kwargs.get('enable_click_plus_conditional_content', None))
         setattr(self, "_{}".format('enable_click_plus_conditional_content_meta_data'), kwargs.get('enable_click_plus_conditional_content_meta_data', None))
@@ -2972,6 +3010,12 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_microsoft_dynamics365_extension_metadata'), kwargs.get('enable_microsoft_dynamics365_extension_metadata', None))
         setattr(self, "_{}".format('enable_multi_user_repository_features'), kwargs.get('enable_multi_user_repository_features', None))
         setattr(self, "_{}".format('enable_multi_user_repository_features_metadata'), kwargs.get('enable_multi_user_repository_features_metadata', None))
+        setattr(self, "_{}".format('enable_navigator_api_data_in'), kwargs.get('enable_navigator_api_data_in', None))
+        setattr(self, "_{}".format('enable_navigator_api_data_in_metadata'), kwargs.get('enable_navigator_api_data_in_metadata', None))
+        setattr(self, "_{}".format('enable_navigator_api_data_out'), kwargs.get('enable_navigator_api_data_out', None))
+        setattr(self, "_{}".format('enable_navigator_api_data_out_metadata'), kwargs.get('enable_navigator_api_data_out_metadata', None))
+        setattr(self, "_{}".format('enable_navigator_api_utilities'), kwargs.get('enable_navigator_api_utilities', None))
+        setattr(self, "_{}".format('enable_navigator_api_utilities_metadata'), kwargs.get('enable_navigator_api_utilities_metadata', None))
         setattr(self, "_{}".format('enable_navigator_for_hr'), kwargs.get('enable_navigator_for_hr', None))
         setattr(self, "_{}".format('enable_navigator_for_hr_metadata'), kwargs.get('enable_navigator_for_hr_metadata', None))
         setattr(self, "_{}".format('enable_navigator_partial_ingestion'), kwargs.get('enable_navigator_partial_ingestion', None))
@@ -4396,6 +4440,29 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_connect_authoritative_copy_ready_event_ui = allow_connect_authoritative_copy_ready_event_ui
+
+    @property
+    def allow_connect_envelope_reminder_sent_event_ui(self):
+        """Gets the allow_connect_envelope_reminder_sent_event_ui of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_connect_envelope_reminder_sent_event_ui of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_connect_envelope_reminder_sent_event_ui
+
+    @allow_connect_envelope_reminder_sent_event_ui.setter
+    def allow_connect_envelope_reminder_sent_event_ui(self, allow_connect_envelope_reminder_sent_event_ui):
+        """Sets the allow_connect_envelope_reminder_sent_event_ui of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_connect_envelope_reminder_sent_event_ui: The allow_connect_envelope_reminder_sent_event_ui of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_connect_envelope_reminder_sent_event_ui = allow_connect_envelope_reminder_sent_event_ui
 
     @property
     def allow_connect_envelope_removed_event(self):
@@ -10102,6 +10169,52 @@ class AccountSettingsInformation(object):
         self._disable_auto_template_matching_metadata = disable_auto_template_matching_metadata
 
     @property
+    def disable_legacy_kba(self):
+        """Gets the disable_legacy_kba of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The disable_legacy_kba of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._disable_legacy_kba
+
+    @disable_legacy_kba.setter
+    def disable_legacy_kba(self, disable_legacy_kba):
+        """Sets the disable_legacy_kba of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param disable_legacy_kba: The disable_legacy_kba of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._disable_legacy_kba = disable_legacy_kba
+
+    @property
+    def disable_legacy_kba_metadata(self):
+        """Gets the disable_legacy_kba_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The disable_legacy_kba_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._disable_legacy_kba_metadata
+
+    @disable_legacy_kba_metadata.setter
+    def disable_legacy_kba_metadata(self, disable_legacy_kba_metadata):
+        """Sets the disable_legacy_kba_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param disable_legacy_kba_metadata: The disable_legacy_kba_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._disable_legacy_kba_metadata = disable_legacy_kba_metadata
+
+    @property
     def disable_legacy_shared_envelopes(self):
         """Gets the disable_legacy_shared_envelopes of this AccountSettingsInformation.  # noqa: E501
 
@@ -11551,96 +11664,96 @@ class AccountSettingsInformation(object):
         self._enable_ai_sender_message_metadata = enable_ai_sender_message_metadata
 
     @property
-    def enable_ai_suggested_fields_advanced(self):
-        """Gets the enable_ai_suggested_fields_advanced of this AccountSettingsInformation.  # noqa: E501
+    def enable_ai_suggested_fields(self):
+        """Gets the enable_ai_suggested_fields of this AccountSettingsInformation.  # noqa: E501
 
           # noqa: E501
 
-        :return: The enable_ai_suggested_fields_advanced of this AccountSettingsInformation.  # noqa: E501
+        :return: The enable_ai_suggested_fields of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
         """
-        return self._enable_ai_suggested_fields_advanced
+        return self._enable_ai_suggested_fields
 
-    @enable_ai_suggested_fields_advanced.setter
-    def enable_ai_suggested_fields_advanced(self, enable_ai_suggested_fields_advanced):
-        """Sets the enable_ai_suggested_fields_advanced of this AccountSettingsInformation.
+    @enable_ai_suggested_fields.setter
+    def enable_ai_suggested_fields(self, enable_ai_suggested_fields):
+        """Sets the enable_ai_suggested_fields of this AccountSettingsInformation.
 
           # noqa: E501
 
-        :param enable_ai_suggested_fields_advanced: The enable_ai_suggested_fields_advanced of this AccountSettingsInformation.  # noqa: E501
+        :param enable_ai_suggested_fields: The enable_ai_suggested_fields of this AccountSettingsInformation.  # noqa: E501
         :type: str
         """
 
-        self._enable_ai_suggested_fields_advanced = enable_ai_suggested_fields_advanced
+        self._enable_ai_suggested_fields = enable_ai_suggested_fields
 
     @property
-    def enable_ai_suggested_fields_advanced_metadata(self):
-        """Gets the enable_ai_suggested_fields_advanced_metadata of this AccountSettingsInformation.  # noqa: E501
+    def enable_ai_suggested_fields_auto_place(self):
+        """Gets the enable_ai_suggested_fields_auto_place of this AccountSettingsInformation.  # noqa: E501
 
           # noqa: E501
 
-        :return: The enable_ai_suggested_fields_advanced_metadata of this AccountSettingsInformation.  # noqa: E501
-        :rtype: SettingsMetadata
-        """
-        return self._enable_ai_suggested_fields_advanced_metadata
-
-    @enable_ai_suggested_fields_advanced_metadata.setter
-    def enable_ai_suggested_fields_advanced_metadata(self, enable_ai_suggested_fields_advanced_metadata):
-        """Sets the enable_ai_suggested_fields_advanced_metadata of this AccountSettingsInformation.
-
-          # noqa: E501
-
-        :param enable_ai_suggested_fields_advanced_metadata: The enable_ai_suggested_fields_advanced_metadata of this AccountSettingsInformation.  # noqa: E501
-        :type: SettingsMetadata
-        """
-
-        self._enable_ai_suggested_fields_advanced_metadata = enable_ai_suggested_fields_advanced_metadata
-
-    @property
-    def enable_ai_suggested_fields_basic(self):
-        """Gets the enable_ai_suggested_fields_basic of this AccountSettingsInformation.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The enable_ai_suggested_fields_basic of this AccountSettingsInformation.  # noqa: E501
+        :return: The enable_ai_suggested_fields_auto_place of this AccountSettingsInformation.  # noqa: E501
         :rtype: str
         """
-        return self._enable_ai_suggested_fields_basic
+        return self._enable_ai_suggested_fields_auto_place
 
-    @enable_ai_suggested_fields_basic.setter
-    def enable_ai_suggested_fields_basic(self, enable_ai_suggested_fields_basic):
-        """Sets the enable_ai_suggested_fields_basic of this AccountSettingsInformation.
+    @enable_ai_suggested_fields_auto_place.setter
+    def enable_ai_suggested_fields_auto_place(self, enable_ai_suggested_fields_auto_place):
+        """Sets the enable_ai_suggested_fields_auto_place of this AccountSettingsInformation.
 
           # noqa: E501
 
-        :param enable_ai_suggested_fields_basic: The enable_ai_suggested_fields_basic of this AccountSettingsInformation.  # noqa: E501
+        :param enable_ai_suggested_fields_auto_place: The enable_ai_suggested_fields_auto_place of this AccountSettingsInformation.  # noqa: E501
         :type: str
         """
 
-        self._enable_ai_suggested_fields_basic = enable_ai_suggested_fields_basic
+        self._enable_ai_suggested_fields_auto_place = enable_ai_suggested_fields_auto_place
 
     @property
-    def enable_ai_suggested_fields_basic_metadata(self):
-        """Gets the enable_ai_suggested_fields_basic_metadata of this AccountSettingsInformation.  # noqa: E501
+    def enable_ai_suggested_fields_auto_place_metadata(self):
+        """Gets the enable_ai_suggested_fields_auto_place_metadata of this AccountSettingsInformation.  # noqa: E501
 
           # noqa: E501
 
-        :return: The enable_ai_suggested_fields_basic_metadata of this AccountSettingsInformation.  # noqa: E501
+        :return: The enable_ai_suggested_fields_auto_place_metadata of this AccountSettingsInformation.  # noqa: E501
         :rtype: SettingsMetadata
         """
-        return self._enable_ai_suggested_fields_basic_metadata
+        return self._enable_ai_suggested_fields_auto_place_metadata
 
-    @enable_ai_suggested_fields_basic_metadata.setter
-    def enable_ai_suggested_fields_basic_metadata(self, enable_ai_suggested_fields_basic_metadata):
-        """Sets the enable_ai_suggested_fields_basic_metadata of this AccountSettingsInformation.
+    @enable_ai_suggested_fields_auto_place_metadata.setter
+    def enable_ai_suggested_fields_auto_place_metadata(self, enable_ai_suggested_fields_auto_place_metadata):
+        """Sets the enable_ai_suggested_fields_auto_place_metadata of this AccountSettingsInformation.
 
           # noqa: E501
 
-        :param enable_ai_suggested_fields_basic_metadata: The enable_ai_suggested_fields_basic_metadata of this AccountSettingsInformation.  # noqa: E501
+        :param enable_ai_suggested_fields_auto_place_metadata: The enable_ai_suggested_fields_auto_place_metadata of this AccountSettingsInformation.  # noqa: E501
         :type: SettingsMetadata
         """
 
-        self._enable_ai_suggested_fields_basic_metadata = enable_ai_suggested_fields_basic_metadata
+        self._enable_ai_suggested_fields_auto_place_metadata = enable_ai_suggested_fields_auto_place_metadata
+
+    @property
+    def enable_ai_suggested_fields_metadata(self):
+        """Gets the enable_ai_suggested_fields_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ai_suggested_fields_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_ai_suggested_fields_metadata
+
+    @enable_ai_suggested_fields_metadata.setter
+    def enable_ai_suggested_fields_metadata(self, enable_ai_suggested_fields_metadata):
+        """Sets the enable_ai_suggested_fields_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ai_suggested_fields_metadata: The enable_ai_suggested_fields_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_ai_suggested_fields_metadata = enable_ai_suggested_fields_metadata
 
     @property
     def enable_auto_nav(self):
@@ -11825,6 +11938,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_calculated_fields_metadata = enable_calculated_fields_metadata
+
+    @property
+    def enable_cfr_rapid_signing_embedded_auth(self):
+        """Gets the enable_cfr_rapid_signing_embedded_auth of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_cfr_rapid_signing_embedded_auth of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_cfr_rapid_signing_embedded_auth
+
+    @enable_cfr_rapid_signing_embedded_auth.setter
+    def enable_cfr_rapid_signing_embedded_auth(self, enable_cfr_rapid_signing_embedded_auth):
+        """Sets the enable_cfr_rapid_signing_embedded_auth of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_cfr_rapid_signing_embedded_auth: The enable_cfr_rapid_signing_embedded_auth of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_cfr_rapid_signing_embedded_auth = enable_cfr_rapid_signing_embedded_auth
+
+    @property
+    def enable_cfr_rapid_signing_embedded_auth_metadata(self):
+        """Gets the enable_cfr_rapid_signing_embedded_auth_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_cfr_rapid_signing_embedded_auth_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_cfr_rapid_signing_embedded_auth_metadata
+
+    @enable_cfr_rapid_signing_embedded_auth_metadata.setter
+    def enable_cfr_rapid_signing_embedded_auth_metadata(self, enable_cfr_rapid_signing_embedded_auth_metadata):
+        """Sets the enable_cfr_rapid_signing_embedded_auth_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_cfr_rapid_signing_embedded_auth_metadata: The enable_cfr_rapid_signing_embedded_auth_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_cfr_rapid_signing_embedded_auth_metadata = enable_cfr_rapid_signing_embedded_auth_metadata
 
     @property
     def enable_click_plus(self):
@@ -13849,6 +14008,144 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_multi_user_repository_features_metadata = enable_multi_user_repository_features_metadata
+
+    @property
+    def enable_navigator_api_data_in(self):
+        """Gets the enable_navigator_api_data_in of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_navigator_api_data_in of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_navigator_api_data_in
+
+    @enable_navigator_api_data_in.setter
+    def enable_navigator_api_data_in(self, enable_navigator_api_data_in):
+        """Sets the enable_navigator_api_data_in of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_navigator_api_data_in: The enable_navigator_api_data_in of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_navigator_api_data_in = enable_navigator_api_data_in
+
+    @property
+    def enable_navigator_api_data_in_metadata(self):
+        """Gets the enable_navigator_api_data_in_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_navigator_api_data_in_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_navigator_api_data_in_metadata
+
+    @enable_navigator_api_data_in_metadata.setter
+    def enable_navigator_api_data_in_metadata(self, enable_navigator_api_data_in_metadata):
+        """Sets the enable_navigator_api_data_in_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_navigator_api_data_in_metadata: The enable_navigator_api_data_in_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_navigator_api_data_in_metadata = enable_navigator_api_data_in_metadata
+
+    @property
+    def enable_navigator_api_data_out(self):
+        """Gets the enable_navigator_api_data_out of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_navigator_api_data_out of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_navigator_api_data_out
+
+    @enable_navigator_api_data_out.setter
+    def enable_navigator_api_data_out(self, enable_navigator_api_data_out):
+        """Sets the enable_navigator_api_data_out of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_navigator_api_data_out: The enable_navigator_api_data_out of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_navigator_api_data_out = enable_navigator_api_data_out
+
+    @property
+    def enable_navigator_api_data_out_metadata(self):
+        """Gets the enable_navigator_api_data_out_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_navigator_api_data_out_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_navigator_api_data_out_metadata
+
+    @enable_navigator_api_data_out_metadata.setter
+    def enable_navigator_api_data_out_metadata(self, enable_navigator_api_data_out_metadata):
+        """Sets the enable_navigator_api_data_out_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_navigator_api_data_out_metadata: The enable_navigator_api_data_out_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_navigator_api_data_out_metadata = enable_navigator_api_data_out_metadata
+
+    @property
+    def enable_navigator_api_utilities(self):
+        """Gets the enable_navigator_api_utilities of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_navigator_api_utilities of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_navigator_api_utilities
+
+    @enable_navigator_api_utilities.setter
+    def enable_navigator_api_utilities(self, enable_navigator_api_utilities):
+        """Sets the enable_navigator_api_utilities of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_navigator_api_utilities: The enable_navigator_api_utilities of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_navigator_api_utilities = enable_navigator_api_utilities
+
+    @property
+    def enable_navigator_api_utilities_metadata(self):
+        """Gets the enable_navigator_api_utilities_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_navigator_api_utilities_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_navigator_api_utilities_metadata
+
+    @enable_navigator_api_utilities_metadata.setter
+    def enable_navigator_api_utilities_metadata(self, enable_navigator_api_utilities_metadata):
+        """Sets the enable_navigator_api_utilities_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_navigator_api_utilities_metadata: The enable_navigator_api_utilities_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_navigator_api_utilities_metadata = enable_navigator_api_utilities_metadata
 
     @property
     def enable_navigator_for_hr(self):

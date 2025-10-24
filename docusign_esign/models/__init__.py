@@ -88,6 +88,7 @@ from docusign_esign.models.billing_price import BillingPrice
 from docusign_esign.models.brand import Brand
 from docusign_esign.models.brand_email_content import BrandEmailContent
 from docusign_esign.models.brand_link import BrandLink
+from docusign_esign.models.brand_logo_ids import BrandLogoIds
 from docusign_esign.models.brand_logos import BrandLogos
 from docusign_esign.models.brand_request import BrandRequest
 from docusign_esign.models.brand_resource_urls import BrandResourceUrls

@@ -42,6 +42,7 @@ class ConnectCustomConfiguration(object):
         'delivery_mode': 'str',
         'disabled_by': 'str',
         'enable_log': 'str',
+        'enable_o_auth_per_configuration': 'str',
         'envelope_events': 'list[str]',
         'event_data': 'ConnectEventData',
         'events': 'list[str]',
@@ -59,6 +60,7 @@ class ConnectCustomConfiguration(object):
         'include_time_zone_information': 'str',
         'integrator_managed': 'str',
         'name': 'str',
+        'o_auth_configuration': 'ConnectOAuthConfig',
         'password': 'str',
         'pause_publish': 'str',
         'recipient_events': 'list[str]',
@@ -89,6 +91,7 @@ class ConnectCustomConfiguration(object):
         'delivery_mode': 'deliveryMode',
         'disabled_by': 'disabledBy',
         'enable_log': 'enableLog',
+        'enable_o_auth_per_configuration': 'enableOAuthPerConfiguration',
         'envelope_events': 'envelopeEvents',
         'event_data': 'eventData',
         'events': 'events',
@@ -106,6 +109,7 @@ class ConnectCustomConfiguration(object):
         'include_time_zone_information': 'includeTimeZoneInformation',
         'integrator_managed': 'integratorManaged',
         'name': 'name',
+        'o_auth_configuration': 'oAuthConfiguration',
         'password': 'password',
         'pause_publish': 'pausePublish',
         'recipient_events': 'recipientEvents',
@@ -141,6 +145,7 @@ class ConnectCustomConfiguration(object):
         self._delivery_mode = None
         self._disabled_by = None
         self._enable_log = None
+        self._enable_o_auth_per_configuration = None
         self._envelope_events = None
         self._event_data = None
         self._events = None
@@ -158,6 +163,7 @@ class ConnectCustomConfiguration(object):
         self._include_time_zone_information = None
         self._integrator_managed = None
         self._name = None
+        self._o_auth_configuration = None
         self._password = None
         self._pause_publish = None
         self._recipient_events = None
@@ -187,6 +193,7 @@ class ConnectCustomConfiguration(object):
         setattr(self, "_{}".format('delivery_mode'), kwargs.get('delivery_mode', None))
         setattr(self, "_{}".format('disabled_by'), kwargs.get('disabled_by', None))
         setattr(self, "_{}".format('enable_log'), kwargs.get('enable_log', None))
+        setattr(self, "_{}".format('enable_o_auth_per_configuration'), kwargs.get('enable_o_auth_per_configuration', None))
         setattr(self, "_{}".format('envelope_events'), kwargs.get('envelope_events', None))
         setattr(self, "_{}".format('event_data'), kwargs.get('event_data', None))
         setattr(self, "_{}".format('events'), kwargs.get('events', None))
@@ -204,6 +211,7 @@ class ConnectCustomConfiguration(object):
         setattr(self, "_{}".format('include_time_zone_information'), kwargs.get('include_time_zone_information', None))
         setattr(self, "_{}".format('integrator_managed'), kwargs.get('integrator_managed', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
+        setattr(self, "_{}".format('o_auth_configuration'), kwargs.get('o_auth_configuration', None))
         setattr(self, "_{}".format('password'), kwargs.get('password', None))
         setattr(self, "_{}".format('pause_publish'), kwargs.get('pause_publish', None))
         setattr(self, "_{}".format('recipient_events'), kwargs.get('recipient_events', None))
@@ -429,6 +437,29 @@ class ConnectCustomConfiguration(object):
         """
 
         self._enable_log = enable_log
+
+    @property
+    def enable_o_auth_per_configuration(self):
+        """Gets the enable_o_auth_per_configuration of this ConnectCustomConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_o_auth_per_configuration of this ConnectCustomConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_o_auth_per_configuration
+
+    @enable_o_auth_per_configuration.setter
+    def enable_o_auth_per_configuration(self, enable_o_auth_per_configuration):
+        """Sets the enable_o_auth_per_configuration of this ConnectCustomConfiguration.
+
+          # noqa: E501
+
+        :param enable_o_auth_per_configuration: The enable_o_auth_per_configuration of this ConnectCustomConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_o_auth_per_configuration = enable_o_auth_per_configuration
 
     @property
     def envelope_events(self):
@@ -820,6 +851,29 @@ class ConnectCustomConfiguration(object):
         """
 
         self._name = name
+
+    @property
+    def o_auth_configuration(self):
+        """Gets the o_auth_configuration of this ConnectCustomConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The o_auth_configuration of this ConnectCustomConfiguration.  # noqa: E501
+        :rtype: ConnectOAuthConfig
+        """
+        return self._o_auth_configuration
+
+    @o_auth_configuration.setter
+    def o_auth_configuration(self, o_auth_configuration):
+        """Sets the o_auth_configuration of this ConnectCustomConfiguration.
+
+          # noqa: E501
+
+        :param o_auth_configuration: The o_auth_configuration of this ConnectCustomConfiguration.  # noqa: E501
+        :type: ConnectOAuthConfig
+        """
+
+        self._o_auth_configuration = o_auth_configuration
 
     @property
     def password(self):
