@@ -97,6 +97,7 @@ class EnvelopeTemplate(object):
         'is_doc_gen_template': 'str',
         'is_dynamic_envelope': 'str',
         'is_signature_provider_envelope': 'str',
+        'is_ticket_related_envelope': 'str',
         'last_modified': 'str',
         'last_modified_by': 'UserInfo',
         'last_modified_date_time': 'str',
@@ -204,6 +205,7 @@ class EnvelopeTemplate(object):
         'is_doc_gen_template': 'isDocGenTemplate',
         'is_dynamic_envelope': 'isDynamicEnvelope',
         'is_signature_provider_envelope': 'isSignatureProviderEnvelope',
+        'is_ticket_related_envelope': 'isTicketRelatedEnvelope',
         'last_modified': 'lastModified',
         'last_modified_by': 'lastModifiedBy',
         'last_modified_date_time': 'lastModifiedDateTime',
@@ -316,6 +318,7 @@ class EnvelopeTemplate(object):
         self._is_doc_gen_template = None
         self._is_dynamic_envelope = None
         self._is_signature_provider_envelope = None
+        self._is_ticket_related_envelope = None
         self._last_modified = None
         self._last_modified_by = None
         self._last_modified_date_time = None
@@ -422,6 +425,7 @@ class EnvelopeTemplate(object):
         setattr(self, "_{}".format('is_doc_gen_template'), kwargs.get('is_doc_gen_template', None))
         setattr(self, "_{}".format('is_dynamic_envelope'), kwargs.get('is_dynamic_envelope', None))
         setattr(self, "_{}".format('is_signature_provider_envelope'), kwargs.get('is_signature_provider_envelope', None))
+        setattr(self, "_{}".format('is_ticket_related_envelope'), kwargs.get('is_ticket_related_envelope', None))
         setattr(self, "_{}".format('last_modified'), kwargs.get('last_modified', None))
         setattr(self, "_{}".format('last_modified_by'), kwargs.get('last_modified_by', None))
         setattr(self, "_{}".format('last_modified_date_time'), kwargs.get('last_modified_date_time', None))
@@ -1934,6 +1938,29 @@ class EnvelopeTemplate(object):
         """
 
         self._is_signature_provider_envelope = is_signature_provider_envelope
+
+    @property
+    def is_ticket_related_envelope(self):
+        """Gets the is_ticket_related_envelope of this EnvelopeTemplate.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_ticket_related_envelope of this EnvelopeTemplate.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_ticket_related_envelope
+
+    @is_ticket_related_envelope.setter
+    def is_ticket_related_envelope(self, is_ticket_related_envelope):
+        """Sets the is_ticket_related_envelope of this EnvelopeTemplate.
+
+          # noqa: E501
+
+        :param is_ticket_related_envelope: The is_ticket_related_envelope of this EnvelopeTemplate.  # noqa: E501
+        :type: str
+        """
+
+        self._is_ticket_related_envelope = is_ticket_related_envelope
 
     @property
     def last_modified(self):

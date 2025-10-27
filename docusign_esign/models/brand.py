@@ -47,6 +47,7 @@ class Brand(object):
         'is_signing_default': 'bool',
         'landing_pages': 'list[NameValue]',
         'links': 'list[BrandLink]',
+        'logo_ids': 'BrandLogoIds',
         'logos': 'BrandLogos',
         'organization_brand_logo': 'str',
         'resources': 'BrandResourceUrls'
@@ -67,6 +68,7 @@ class Brand(object):
         'is_signing_default': 'isSigningDefault',
         'landing_pages': 'landingPages',
         'links': 'links',
+        'logo_ids': 'logoIds',
         'logos': 'logos',
         'organization_brand_logo': 'organizationBrandLogo',
         'resources': 'resources'
@@ -92,6 +94,7 @@ class Brand(object):
         self._is_signing_default = None
         self._landing_pages = None
         self._links = None
+        self._logo_ids = None
         self._logos = None
         self._organization_brand_logo = None
         self._resources = None
@@ -111,6 +114,7 @@ class Brand(object):
         setattr(self, "_{}".format('is_signing_default'), kwargs.get('is_signing_default', None))
         setattr(self, "_{}".format('landing_pages'), kwargs.get('landing_pages', None))
         setattr(self, "_{}".format('links'), kwargs.get('links', None))
+        setattr(self, "_{}".format('logo_ids'), kwargs.get('logo_ids', None))
         setattr(self, "_{}".format('logos'), kwargs.get('logos', None))
         setattr(self, "_{}".format('organization_brand_logo'), kwargs.get('organization_brand_logo', None))
         setattr(self, "_{}".format('resources'), kwargs.get('resources', None))
@@ -436,6 +440,29 @@ class Brand(object):
         """
 
         self._links = links
+
+    @property
+    def logo_ids(self):
+        """Gets the logo_ids of this Brand.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The logo_ids of this Brand.  # noqa: E501
+        :rtype: BrandLogoIds
+        """
+        return self._logo_ids
+
+    @logo_ids.setter
+    def logo_ids(self, logo_ids):
+        """Sets the logo_ids of this Brand.
+
+          # noqa: E501
+
+        :param logo_ids: The logo_ids of this Brand.  # noqa: E501
+        :type: BrandLogoIds
+        """
+
+        self._logo_ids = logo_ids
 
     @property
     def logos(self):

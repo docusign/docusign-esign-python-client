@@ -93,6 +93,7 @@ class EnvelopeDefinition(object):
         'is21_cfr_part11': 'str',
         'is_dynamic_envelope': 'str',
         'is_signature_provider_envelope': 'str',
+        'is_ticket_related_envelope': 'str',
         'last_modified_date_time': 'str',
         'location': 'str',
         'lock_information': 'LockInformation',
@@ -187,6 +188,7 @@ class EnvelopeDefinition(object):
         'is21_cfr_part11': 'is21CFRPart11',
         'is_dynamic_envelope': 'isDynamicEnvelope',
         'is_signature_provider_envelope': 'isSignatureProviderEnvelope',
+        'is_ticket_related_envelope': 'isTicketRelatedEnvelope',
         'last_modified_date_time': 'lastModifiedDateTime',
         'location': 'location',
         'lock_information': 'lockInformation',
@@ -286,6 +288,7 @@ class EnvelopeDefinition(object):
         self._is21_cfr_part11 = None
         self._is_dynamic_envelope = None
         self._is_signature_provider_envelope = None
+        self._is_ticket_related_envelope = None
         self._last_modified_date_time = None
         self._location = None
         self._lock_information = None
@@ -379,6 +382,7 @@ class EnvelopeDefinition(object):
         setattr(self, "_{}".format('is21_cfr_part11'), kwargs.get('is21_cfr_part11', None))
         setattr(self, "_{}".format('is_dynamic_envelope'), kwargs.get('is_dynamic_envelope', None))
         setattr(self, "_{}".format('is_signature_provider_envelope'), kwargs.get('is_signature_provider_envelope', None))
+        setattr(self, "_{}".format('is_ticket_related_envelope'), kwargs.get('is_ticket_related_envelope', None))
         setattr(self, "_{}".format('last_modified_date_time'), kwargs.get('last_modified_date_time', None))
         setattr(self, "_{}".format('location'), kwargs.get('location', None))
         setattr(self, "_{}".format('lock_information'), kwargs.get('lock_information', None))
@@ -1790,6 +1794,29 @@ class EnvelopeDefinition(object):
         """
 
         self._is_signature_provider_envelope = is_signature_provider_envelope
+
+    @property
+    def is_ticket_related_envelope(self):
+        """Gets the is_ticket_related_envelope of this EnvelopeDefinition.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_ticket_related_envelope of this EnvelopeDefinition.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_ticket_related_envelope
+
+    @is_ticket_related_envelope.setter
+    def is_ticket_related_envelope(self, is_ticket_related_envelope):
+        """Sets the is_ticket_related_envelope of this EnvelopeDefinition.
+
+          # noqa: E501
+
+        :param is_ticket_related_envelope: The is_ticket_related_envelope of this EnvelopeDefinition.  # noqa: E501
+        :type: str
+        """
+
+        self._is_ticket_related_envelope = is_ticket_related_envelope
 
     @property
     def last_modified_date_time(self):
