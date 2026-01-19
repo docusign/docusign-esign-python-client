@@ -33,24 +33,24 @@ This client SDK is provided as open source, which enables you to customize its f
 <a id="versionInformation"></a>
 ### Version Information
 - **API version**: v2.1
-- **Latest SDK version**: 5.4.0
+- **Latest SDK version**: 6.0.0rc1
 
 <a id="requirements"></a>
 ## Requirements
-*   Python 2.7 (3.7+ recommended)
+*   Python 3.9+
 *   Free [developer account](https://go.docusign.com/o/sandbox/?postActivateUrl=https://developers.docusign.com/)
 
 <a id="compatibility"></a>
 ## Compatibility
-*   Python 2.7+
+*   Python 3.9+
 
 <a id="pathSetup"></a>
 ### Path setup:
 1. Locate your Python installation, also referred to as a **site-packages** folder. This folder is usually labeled in a format of **Python{VersionNumber}**.  
     **Examples:**
-    *   Unix/Linux: **/usr/lib/python2.7**
-    *   Mac: **/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7**
-    *   Windows: **C:\Users\{username}\AppData\Local\Programs\Python\Python37**
+    *   Unix/Linux: **/usr/lib/python3.9**
+    *   Mac: **/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9**
+    *   Windows: **C:\Users\{username}\AppData\Local\Programs\Python\Python39**
 2. Add your Python folder’s path to your system as an environment variable.  
     **Unix/Linux:**
     1. Type the following command into your console: \
@@ -85,7 +85,7 @@ This client has the following external dependencies:
 *   six v1.8.0+
 *   python_dateutil v2.5.3+
 *   setuptools v21.0.0+
-*   urllib3 v1.15.1+
+*   urllib3 v2.6.0+
 *   PyJWT v2.0.0+
 *   cryptography v2.5+
 
