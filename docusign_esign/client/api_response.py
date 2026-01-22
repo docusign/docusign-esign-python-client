@@ -55,7 +55,7 @@ class RESTResponse(io.IOBase):
 
 class RESTClientObject(object):
 
-    def __init__(self, pools_size=4, maxsize=None, configuration=None):
+    def __init__(self, pools_size=4, maxsize=None, configuration=None, connection_pool_kwargs=None):
         # urllib3.PoolManager will pass all kw parameters to connectionpool
         # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/poolmanager.py#L75  # noqa: E501
         # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/connectionpool.py#L680  # noqa: E501
@@ -81,6 +81,8 @@ class RESTClientObject(object):
         addition_pool_args = {}
         if configuration.assert_hostname is not None:
             addition_pool_args['assert_hostname'] = configuration.assert_hostname  # noqa: E501
+        if connection_pool_kwargs is not None:
+            addition_pool_args.update(connection_pool_kwargs)
 
         if maxsize is None:
             if configuration.connection_pool_maxsize is not None:
