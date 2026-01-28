@@ -24,6 +24,7 @@ from docusign_esign.models.account_identity_verification_response import Account
 from docusign_esign.models.account_identity_verification_step import AccountIdentityVerificationStep
 from docusign_esign.models.account_identity_verification_workflow import AccountIdentityVerificationWorkflow
 from docusign_esign.models.account_information import AccountInformation
+from docusign_esign.models.account_management_granular import AccountManagementGranular
 from docusign_esign.models.account_minimum_password_length import AccountMinimumPasswordLength
 from docusign_esign.models.account_notification import AccountNotification
 from docusign_esign.models.account_password_expire_password_days import AccountPasswordExpirePasswordDays
@@ -343,6 +344,7 @@ from docusign_esign.models.notary_jurisdiction_list import NotaryJurisdictionLis
 from docusign_esign.models.notary_recipient import NotaryRecipient
 from docusign_esign.models.notary_result import NotaryResult
 from docusign_esign.models.notary_seal import NotarySeal
+from docusign_esign.models.notary_witness import NotaryWitness
 from docusign_esign.models.note import Note
 from docusign_esign.models.notification import Notification
 from docusign_esign.models.notification_default_settings import NotificationDefaultSettings

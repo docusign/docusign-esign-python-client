@@ -142,6 +142,8 @@ class AccountSettingsInformation(object):
         'allow_idv_level3_metadata': 'SettingsMetadata',
         'allow_idv_platform': 'str',
         'allow_idv_platform_metadata': 'SettingsMetadata',
+        'allow_idv_risk_assessment': 'str',
+        'allow_idv_risk_assessment_metadata': 'SettingsMetadata',
         'allow_in_person': 'str',
         'allow_in_person_electronic_notary': 'str',
         'allow_in_person_electronic_notary_metadata': 'SettingsMetadata',
@@ -507,6 +509,8 @@ class AccountSettingsInformation(object):
         'enable_navigator_partial_ingestion_metadata': 'SettingsMetadata',
         'enable_navigator_trial': 'str',
         'enable_navigator_trial_metadata': 'SettingsMetadata',
+        'enable_notary_on_demand_witness': 'str',
+        'enable_notary_on_demand_witness_metadata': 'SettingsMetadata',
         'enable_obligation_management': 'str',
         'enable_obligation_management_metadata': 'SettingsMetadata',
         'enable_participant_recipient_setting_metadata': 'SettingsMetadata',
@@ -979,6 +983,8 @@ class AccountSettingsInformation(object):
         'allow_idv_level3_metadata': 'allowIDVLevel3Metadata',
         'allow_idv_platform': 'allowIDVPlatform',
         'allow_idv_platform_metadata': 'allowIDVPlatformMetadata',
+        'allow_idv_risk_assessment': 'allowIdvRiskAssessment',
+        'allow_idv_risk_assessment_metadata': 'allowIdvRiskAssessmentMetadata',
         'allow_in_person': 'allowInPerson',
         'allow_in_person_electronic_notary': 'allowInPersonElectronicNotary',
         'allow_in_person_electronic_notary_metadata': 'allowInPersonElectronicNotaryMetadata',
@@ -1344,6 +1350,8 @@ class AccountSettingsInformation(object):
         'enable_navigator_partial_ingestion_metadata': 'enableNavigatorPartialIngestionMetadata',
         'enable_navigator_trial': 'enableNavigatorTrial',
         'enable_navigator_trial_metadata': 'enableNavigatorTrialMetadata',
+        'enable_notary_on_demand_witness': 'enableNotaryOnDemandWitness',
+        'enable_notary_on_demand_witness_metadata': 'enableNotaryOnDemandWitnessMetadata',
         'enable_obligation_management': 'enableObligationManagement',
         'enable_obligation_management_metadata': 'enableObligationManagementMetadata',
         'enable_participant_recipient_setting_metadata': 'enableParticipantRecipientSettingMetadata',
@@ -1391,7 +1399,7 @@ class AccountSettingsInformation(object):
         'enable_sequential_signing_ui_metadata': 'enableSequentialSigningUIMetadata',
         'enable_signer_attachments': 'enableSignerAttachments',
         'enable_signer_attachments_metadata': 'enableSignerAttachmentsMetadata',
-        'enable_signing_ai_features_plan': 'enableSigningAIFeaturesPlan',
+        'enable_signing_ai_features_plan': 'EnableSigningAIFeaturesPlan',
         'enable_signing_ai_features_plan_metadata': 'enableSigningAIFeaturesPlanMetadata',
         'enable_signing_ai_features_setting': 'enableSigningAIFeaturesSetting',
         'enable_signing_ai_features_setting_metadata': 'enableSigningAIFeaturesSettingMetadata',
@@ -1821,6 +1829,8 @@ class AccountSettingsInformation(object):
         self._allow_idv_level3_metadata = None
         self._allow_idv_platform = None
         self._allow_idv_platform_metadata = None
+        self._allow_idv_risk_assessment = None
+        self._allow_idv_risk_assessment_metadata = None
         self._allow_in_person = None
         self._allow_in_person_electronic_notary = None
         self._allow_in_person_electronic_notary_metadata = None
@@ -2186,6 +2196,8 @@ class AccountSettingsInformation(object):
         self._enable_navigator_partial_ingestion_metadata = None
         self._enable_navigator_trial = None
         self._enable_navigator_trial_metadata = None
+        self._enable_notary_on_demand_witness = None
+        self._enable_notary_on_demand_witness_metadata = None
         self._enable_obligation_management = None
         self._enable_obligation_management_metadata = None
         self._enable_participant_recipient_setting_metadata = None
@@ -2657,6 +2669,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_idv_level3_metadata'), kwargs.get('allow_idv_level3_metadata', None))
         setattr(self, "_{}".format('allow_idv_platform'), kwargs.get('allow_idv_platform', None))
         setattr(self, "_{}".format('allow_idv_platform_metadata'), kwargs.get('allow_idv_platform_metadata', None))
+        setattr(self, "_{}".format('allow_idv_risk_assessment'), kwargs.get('allow_idv_risk_assessment', None))
+        setattr(self, "_{}".format('allow_idv_risk_assessment_metadata'), kwargs.get('allow_idv_risk_assessment_metadata', None))
         setattr(self, "_{}".format('allow_in_person'), kwargs.get('allow_in_person', None))
         setattr(self, "_{}".format('allow_in_person_electronic_notary'), kwargs.get('allow_in_person_electronic_notary', None))
         setattr(self, "_{}".format('allow_in_person_electronic_notary_metadata'), kwargs.get('allow_in_person_electronic_notary_metadata', None))
@@ -3022,6 +3036,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_navigator_partial_ingestion_metadata'), kwargs.get('enable_navigator_partial_ingestion_metadata', None))
         setattr(self, "_{}".format('enable_navigator_trial'), kwargs.get('enable_navigator_trial', None))
         setattr(self, "_{}".format('enable_navigator_trial_metadata'), kwargs.get('enable_navigator_trial_metadata', None))
+        setattr(self, "_{}".format('enable_notary_on_demand_witness'), kwargs.get('enable_notary_on_demand_witness', None))
+        setattr(self, "_{}".format('enable_notary_on_demand_witness_metadata'), kwargs.get('enable_notary_on_demand_witness_metadata', None))
         setattr(self, "_{}".format('enable_obligation_management'), kwargs.get('enable_obligation_management', None))
         setattr(self, "_{}".format('enable_obligation_management_metadata'), kwargs.get('enable_obligation_management_metadata', None))
         setattr(self, "_{}".format('enable_participant_recipient_setting_metadata'), kwargs.get('enable_participant_recipient_setting_metadata', None))
@@ -5889,6 +5905,52 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_idv_platform_metadata = allow_idv_platform_metadata
+
+    @property
+    def allow_idv_risk_assessment(self):
+        """Gets the allow_idv_risk_assessment of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_idv_risk_assessment of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_idv_risk_assessment
+
+    @allow_idv_risk_assessment.setter
+    def allow_idv_risk_assessment(self, allow_idv_risk_assessment):
+        """Sets the allow_idv_risk_assessment of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_idv_risk_assessment: The allow_idv_risk_assessment of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_idv_risk_assessment = allow_idv_risk_assessment
+
+    @property
+    def allow_idv_risk_assessment_metadata(self):
+        """Gets the allow_idv_risk_assessment_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_idv_risk_assessment_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_idv_risk_assessment_metadata
+
+    @allow_idv_risk_assessment_metadata.setter
+    def allow_idv_risk_assessment_metadata(self, allow_idv_risk_assessment_metadata):
+        """Sets the allow_idv_risk_assessment_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_idv_risk_assessment_metadata: The allow_idv_risk_assessment_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_idv_risk_assessment_metadata = allow_idv_risk_assessment_metadata
 
     @property
     def allow_in_person(self):
@@ -14284,6 +14346,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_navigator_trial_metadata = enable_navigator_trial_metadata
+
+    @property
+    def enable_notary_on_demand_witness(self):
+        """Gets the enable_notary_on_demand_witness of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_notary_on_demand_witness of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_notary_on_demand_witness
+
+    @enable_notary_on_demand_witness.setter
+    def enable_notary_on_demand_witness(self, enable_notary_on_demand_witness):
+        """Sets the enable_notary_on_demand_witness of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_notary_on_demand_witness: The enable_notary_on_demand_witness of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_notary_on_demand_witness = enable_notary_on_demand_witness
+
+    @property
+    def enable_notary_on_demand_witness_metadata(self):
+        """Gets the enable_notary_on_demand_witness_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_notary_on_demand_witness_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_notary_on_demand_witness_metadata
+
+    @enable_notary_on_demand_witness_metadata.setter
+    def enable_notary_on_demand_witness_metadata(self, enable_notary_on_demand_witness_metadata):
+        """Sets the enable_notary_on_demand_witness_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_notary_on_demand_witness_metadata: The enable_notary_on_demand_witness_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_notary_on_demand_witness_metadata = enable_notary_on_demand_witness_metadata
 
     @property
     def enable_obligation_management(self):
