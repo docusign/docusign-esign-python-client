@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v6.0.0] - eSignature API v2.1-25.4.01.00 - 2026-01-27
+### Changed
+- Added support for version v2.1-25.4.01.00 of the DocuSign ESignature API.
+- Dropped support for Python 3.8 and lower versions.
+- Updated deprecated urllib3 usage so users can upgrade to urllib3 2.6.0+ (fixes CVE-2025-66471).
+- Updated the SDK release version.
+
 ## [v6.0.0rc1] - eSignature API v2.1-25.3.01.00 - 2026-01-13
 ### Changed
 - Added support for version v2.1-25.3.01.00 of the DocuSign ESignature API.

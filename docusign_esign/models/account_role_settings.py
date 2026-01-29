@@ -33,6 +33,9 @@ class AccountRoleSettings(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'account_agreements_access_type': 'str',
+        'account_agreements_access_type_metadata': 'SettingsMetadata',
+        'account_management_granular': 'AccountManagementGranular',
         'allow_account_management': 'str',
         'allow_account_management_metadata': 'SettingsMetadata',
         'allow_api_access': 'str',
@@ -81,6 +84,8 @@ class AccountRoleSettings(object):
         'allow_vaulting_metadata': 'SettingsMetadata',
         'allow_wet_signing_override': 'str',
         'allow_wet_signing_override_metadata': 'SettingsMetadata',
+        'can_bulk_upload_agreements': 'str',
+        'can_bulk_upload_agreements_metadata': 'SettingsMetadata',
         'can_create_transaction': 'str',
         'can_create_transaction_metadata': 'SettingsMetadata',
         'can_create_workspaces': 'str',
@@ -89,6 +94,10 @@ class AccountRoleSettings(object):
         'can_delete_documents_in_transaction_metadata': 'SettingsMetadata',
         'can_delete_transaction': 'str',
         'can_delete_transaction_metadata': 'SettingsMetadata',
+        'can_manage_agreement_desk_request': 'str',
+        'can_manage_agreement_desk_request_metadata': 'SettingsMetadata',
+        'can_manage_agreement_desk_request_setting': 'str',
+        'can_manage_agreement_desk_request_setting_metadata': 'SettingsMetadata',
         'can_send_envelopes_via_sms': 'str',
         'can_send_envelopes_via_sms_metadata': 'SettingsMetadata',
         'disable_document_upload': 'str',
@@ -105,6 +114,8 @@ class AccountRoleSettings(object):
         'enable_sequential_signing_interface_metadata': 'SettingsMetadata',
         'enable_transaction_point_integration': 'str',
         'enable_transaction_point_integration_metadata': 'SettingsMetadata',
+        'playbook_access': 'str',
+        'playbook_access_metadata': 'SettingsMetadata',
         'power_form_role': 'str',
         'power_form_role_metadata': 'SettingsMetadata',
         'receive_completed_self_signed_documents_as_email_links': 'str',
@@ -127,6 +138,9 @@ class AccountRoleSettings(object):
     }
 
     attribute_map = {
+        'account_agreements_access_type': 'accountAgreementsAccessType',
+        'account_agreements_access_type_metadata': 'accountAgreementsAccessTypeMetadata',
+        'account_management_granular': 'accountManagementGranular',
         'allow_account_management': 'allowAccountManagement',
         'allow_account_management_metadata': 'allowAccountManagementMetadata',
         'allow_api_access': 'allowApiAccess',
@@ -175,6 +189,8 @@ class AccountRoleSettings(object):
         'allow_vaulting_metadata': 'allowVaultingMetadata',
         'allow_wet_signing_override': 'allowWetSigningOverride',
         'allow_wet_signing_override_metadata': 'allowWetSigningOverrideMetadata',
+        'can_bulk_upload_agreements': 'canBulkUploadAgreements',
+        'can_bulk_upload_agreements_metadata': 'canBulkUploadAgreementsMetadata',
         'can_create_transaction': 'canCreateTransaction',
         'can_create_transaction_metadata': 'canCreateTransactionMetadata',
         'can_create_workspaces': 'canCreateWorkspaces',
@@ -183,6 +199,10 @@ class AccountRoleSettings(object):
         'can_delete_documents_in_transaction_metadata': 'canDeleteDocumentsInTransactionMetadata',
         'can_delete_transaction': 'canDeleteTransaction',
         'can_delete_transaction_metadata': 'canDeleteTransactionMetadata',
+        'can_manage_agreement_desk_request': 'canManageAgreementDeskRequest',
+        'can_manage_agreement_desk_request_metadata': 'canManageAgreementDeskRequestMetadata',
+        'can_manage_agreement_desk_request_setting': 'canManageAgreementDeskRequestSetting',
+        'can_manage_agreement_desk_request_setting_metadata': 'canManageAgreementDeskRequestSettingMetadata',
         'can_send_envelopes_via_sms': 'canSendEnvelopesViaSMS',
         'can_send_envelopes_via_sms_metadata': 'canSendEnvelopesViaSMSMetadata',
         'disable_document_upload': 'disableDocumentUpload',
@@ -199,6 +219,8 @@ class AccountRoleSettings(object):
         'enable_sequential_signing_interface_metadata': 'enableSequentialSigningInterfaceMetadata',
         'enable_transaction_point_integration': 'enableTransactionPointIntegration',
         'enable_transaction_point_integration_metadata': 'enableTransactionPointIntegrationMetadata',
+        'playbook_access': 'playbookAccess',
+        'playbook_access_metadata': 'playbookAccessMetadata',
         'power_form_role': 'powerFormRole',
         'power_form_role_metadata': 'powerFormRoleMetadata',
         'receive_completed_self_signed_documents_as_email_links': 'receiveCompletedSelfSignedDocumentsAsEmailLinks',
@@ -226,6 +248,9 @@ class AccountRoleSettings(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._account_agreements_access_type = None
+        self._account_agreements_access_type_metadata = None
+        self._account_management_granular = None
         self._allow_account_management = None
         self._allow_account_management_metadata = None
         self._allow_api_access = None
@@ -274,6 +299,8 @@ class AccountRoleSettings(object):
         self._allow_vaulting_metadata = None
         self._allow_wet_signing_override = None
         self._allow_wet_signing_override_metadata = None
+        self._can_bulk_upload_agreements = None
+        self._can_bulk_upload_agreements_metadata = None
         self._can_create_transaction = None
         self._can_create_transaction_metadata = None
         self._can_create_workspaces = None
@@ -282,6 +309,10 @@ class AccountRoleSettings(object):
         self._can_delete_documents_in_transaction_metadata = None
         self._can_delete_transaction = None
         self._can_delete_transaction_metadata = None
+        self._can_manage_agreement_desk_request = None
+        self._can_manage_agreement_desk_request_metadata = None
+        self._can_manage_agreement_desk_request_setting = None
+        self._can_manage_agreement_desk_request_setting_metadata = None
         self._can_send_envelopes_via_sms = None
         self._can_send_envelopes_via_sms_metadata = None
         self._disable_document_upload = None
@@ -298,6 +329,8 @@ class AccountRoleSettings(object):
         self._enable_sequential_signing_interface_metadata = None
         self._enable_transaction_point_integration = None
         self._enable_transaction_point_integration_metadata = None
+        self._playbook_access = None
+        self._playbook_access_metadata = None
         self._power_form_role = None
         self._power_form_role_metadata = None
         self._receive_completed_self_signed_documents_as_email_links = None
@@ -319,6 +352,9 @@ class AccountRoleSettings(object):
         self._web_forms_metadata = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('account_agreements_access_type'), kwargs.get('account_agreements_access_type', None))
+        setattr(self, "_{}".format('account_agreements_access_type_metadata'), kwargs.get('account_agreements_access_type_metadata', None))
+        setattr(self, "_{}".format('account_management_granular'), kwargs.get('account_management_granular', None))
         setattr(self, "_{}".format('allow_account_management'), kwargs.get('allow_account_management', None))
         setattr(self, "_{}".format('allow_account_management_metadata'), kwargs.get('allow_account_management_metadata', None))
         setattr(self, "_{}".format('allow_api_access'), kwargs.get('allow_api_access', None))
@@ -367,6 +403,8 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('allow_vaulting_metadata'), kwargs.get('allow_vaulting_metadata', None))
         setattr(self, "_{}".format('allow_wet_signing_override'), kwargs.get('allow_wet_signing_override', None))
         setattr(self, "_{}".format('allow_wet_signing_override_metadata'), kwargs.get('allow_wet_signing_override_metadata', None))
+        setattr(self, "_{}".format('can_bulk_upload_agreements'), kwargs.get('can_bulk_upload_agreements', None))
+        setattr(self, "_{}".format('can_bulk_upload_agreements_metadata'), kwargs.get('can_bulk_upload_agreements_metadata', None))
         setattr(self, "_{}".format('can_create_transaction'), kwargs.get('can_create_transaction', None))
         setattr(self, "_{}".format('can_create_transaction_metadata'), kwargs.get('can_create_transaction_metadata', None))
         setattr(self, "_{}".format('can_create_workspaces'), kwargs.get('can_create_workspaces', None))
@@ -375,6 +413,10 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('can_delete_documents_in_transaction_metadata'), kwargs.get('can_delete_documents_in_transaction_metadata', None))
         setattr(self, "_{}".format('can_delete_transaction'), kwargs.get('can_delete_transaction', None))
         setattr(self, "_{}".format('can_delete_transaction_metadata'), kwargs.get('can_delete_transaction_metadata', None))
+        setattr(self, "_{}".format('can_manage_agreement_desk_request'), kwargs.get('can_manage_agreement_desk_request', None))
+        setattr(self, "_{}".format('can_manage_agreement_desk_request_metadata'), kwargs.get('can_manage_agreement_desk_request_metadata', None))
+        setattr(self, "_{}".format('can_manage_agreement_desk_request_setting'), kwargs.get('can_manage_agreement_desk_request_setting', None))
+        setattr(self, "_{}".format('can_manage_agreement_desk_request_setting_metadata'), kwargs.get('can_manage_agreement_desk_request_setting_metadata', None))
         setattr(self, "_{}".format('can_send_envelopes_via_sms'), kwargs.get('can_send_envelopes_via_sms', None))
         setattr(self, "_{}".format('can_send_envelopes_via_sms_metadata'), kwargs.get('can_send_envelopes_via_sms_metadata', None))
         setattr(self, "_{}".format('disable_document_upload'), kwargs.get('disable_document_upload', None))
@@ -391,6 +433,8 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('enable_sequential_signing_interface_metadata'), kwargs.get('enable_sequential_signing_interface_metadata', None))
         setattr(self, "_{}".format('enable_transaction_point_integration'), kwargs.get('enable_transaction_point_integration', None))
         setattr(self, "_{}".format('enable_transaction_point_integration_metadata'), kwargs.get('enable_transaction_point_integration_metadata', None))
+        setattr(self, "_{}".format('playbook_access'), kwargs.get('playbook_access', None))
+        setattr(self, "_{}".format('playbook_access_metadata'), kwargs.get('playbook_access_metadata', None))
         setattr(self, "_{}".format('power_form_role'), kwargs.get('power_form_role', None))
         setattr(self, "_{}".format('power_form_role_metadata'), kwargs.get('power_form_role_metadata', None))
         setattr(self, "_{}".format('receive_completed_self_signed_documents_as_email_links'), kwargs.get('receive_completed_self_signed_documents_as_email_links', None))
@@ -410,6 +454,75 @@ class AccountRoleSettings(object):
         setattr(self, "_{}".format('vaulting_mode_metadata'), kwargs.get('vaulting_mode_metadata', None))
         setattr(self, "_{}".format('web_forms'), kwargs.get('web_forms', None))
         setattr(self, "_{}".format('web_forms_metadata'), kwargs.get('web_forms_metadata', None))
+
+    @property
+    def account_agreements_access_type(self):
+        """Gets the account_agreements_access_type of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The account_agreements_access_type of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._account_agreements_access_type
+
+    @account_agreements_access_type.setter
+    def account_agreements_access_type(self, account_agreements_access_type):
+        """Sets the account_agreements_access_type of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param account_agreements_access_type: The account_agreements_access_type of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._account_agreements_access_type = account_agreements_access_type
+
+    @property
+    def account_agreements_access_type_metadata(self):
+        """Gets the account_agreements_access_type_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The account_agreements_access_type_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._account_agreements_access_type_metadata
+
+    @account_agreements_access_type_metadata.setter
+    def account_agreements_access_type_metadata(self, account_agreements_access_type_metadata):
+        """Sets the account_agreements_access_type_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param account_agreements_access_type_metadata: The account_agreements_access_type_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._account_agreements_access_type_metadata = account_agreements_access_type_metadata
+
+    @property
+    def account_management_granular(self):
+        """Gets the account_management_granular of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The account_management_granular of this AccountRoleSettings.  # noqa: E501
+        :rtype: AccountManagementGranular
+        """
+        return self._account_management_granular
+
+    @account_management_granular.setter
+    def account_management_granular(self, account_management_granular):
+        """Sets the account_management_granular of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param account_management_granular: The account_management_granular of this AccountRoleSettings.  # noqa: E501
+        :type: AccountManagementGranular
+        """
+
+        self._account_management_granular = account_management_granular
 
     @property
     def allow_account_management(self):
@@ -1516,6 +1629,52 @@ class AccountRoleSettings(object):
         self._allow_wet_signing_override_metadata = allow_wet_signing_override_metadata
 
     @property
+    def can_bulk_upload_agreements(self):
+        """Gets the can_bulk_upload_agreements of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_bulk_upload_agreements of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_bulk_upload_agreements
+
+    @can_bulk_upload_agreements.setter
+    def can_bulk_upload_agreements(self, can_bulk_upload_agreements):
+        """Sets the can_bulk_upload_agreements of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_bulk_upload_agreements: The can_bulk_upload_agreements of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._can_bulk_upload_agreements = can_bulk_upload_agreements
+
+    @property
+    def can_bulk_upload_agreements_metadata(self):
+        """Gets the can_bulk_upload_agreements_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_bulk_upload_agreements_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_bulk_upload_agreements_metadata
+
+    @can_bulk_upload_agreements_metadata.setter
+    def can_bulk_upload_agreements_metadata(self, can_bulk_upload_agreements_metadata):
+        """Sets the can_bulk_upload_agreements_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_bulk_upload_agreements_metadata: The can_bulk_upload_agreements_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_bulk_upload_agreements_metadata = can_bulk_upload_agreements_metadata
+
+    @property
     def can_create_transaction(self):
         """Gets the can_create_transaction of this AccountRoleSettings.  # noqa: E501
 
@@ -1698,6 +1857,98 @@ class AccountRoleSettings(object):
         """
 
         self._can_delete_transaction_metadata = can_delete_transaction_metadata
+
+    @property
+    def can_manage_agreement_desk_request(self):
+        """Gets the can_manage_agreement_desk_request of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_manage_agreement_desk_request of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_manage_agreement_desk_request
+
+    @can_manage_agreement_desk_request.setter
+    def can_manage_agreement_desk_request(self, can_manage_agreement_desk_request):
+        """Sets the can_manage_agreement_desk_request of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_manage_agreement_desk_request: The can_manage_agreement_desk_request of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._can_manage_agreement_desk_request = can_manage_agreement_desk_request
+
+    @property
+    def can_manage_agreement_desk_request_metadata(self):
+        """Gets the can_manage_agreement_desk_request_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_manage_agreement_desk_request_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_manage_agreement_desk_request_metadata
+
+    @can_manage_agreement_desk_request_metadata.setter
+    def can_manage_agreement_desk_request_metadata(self, can_manage_agreement_desk_request_metadata):
+        """Sets the can_manage_agreement_desk_request_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_manage_agreement_desk_request_metadata: The can_manage_agreement_desk_request_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_manage_agreement_desk_request_metadata = can_manage_agreement_desk_request_metadata
+
+    @property
+    def can_manage_agreement_desk_request_setting(self):
+        """Gets the can_manage_agreement_desk_request_setting of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_manage_agreement_desk_request_setting of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_manage_agreement_desk_request_setting
+
+    @can_manage_agreement_desk_request_setting.setter
+    def can_manage_agreement_desk_request_setting(self, can_manage_agreement_desk_request_setting):
+        """Sets the can_manage_agreement_desk_request_setting of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_manage_agreement_desk_request_setting: The can_manage_agreement_desk_request_setting of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._can_manage_agreement_desk_request_setting = can_manage_agreement_desk_request_setting
+
+    @property
+    def can_manage_agreement_desk_request_setting_metadata(self):
+        """Gets the can_manage_agreement_desk_request_setting_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_manage_agreement_desk_request_setting_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_manage_agreement_desk_request_setting_metadata
+
+    @can_manage_agreement_desk_request_setting_metadata.setter
+    def can_manage_agreement_desk_request_setting_metadata(self, can_manage_agreement_desk_request_setting_metadata):
+        """Sets the can_manage_agreement_desk_request_setting_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param can_manage_agreement_desk_request_setting_metadata: The can_manage_agreement_desk_request_setting_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_manage_agreement_desk_request_setting_metadata = can_manage_agreement_desk_request_setting_metadata
 
     @property
     def can_send_envelopes_via_sms(self):
@@ -2066,6 +2317,52 @@ class AccountRoleSettings(object):
         """
 
         self._enable_transaction_point_integration_metadata = enable_transaction_point_integration_metadata
+
+    @property
+    def playbook_access(self):
+        """Gets the playbook_access of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The playbook_access of this AccountRoleSettings.  # noqa: E501
+        :rtype: str
+        """
+        return self._playbook_access
+
+    @playbook_access.setter
+    def playbook_access(self, playbook_access):
+        """Sets the playbook_access of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param playbook_access: The playbook_access of this AccountRoleSettings.  # noqa: E501
+        :type: str
+        """
+
+        self._playbook_access = playbook_access
+
+    @property
+    def playbook_access_metadata(self):
+        """Gets the playbook_access_metadata of this AccountRoleSettings.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The playbook_access_metadata of this AccountRoleSettings.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._playbook_access_metadata
+
+    @playbook_access_metadata.setter
+    def playbook_access_metadata(self, playbook_access_metadata):
+        """Sets the playbook_access_metadata of this AccountRoleSettings.
+
+          # noqa: E501
+
+        :param playbook_access_metadata: The playbook_access_metadata of this AccountRoleSettings.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._playbook_access_metadata = playbook_access_metadata
 
     @property
     def power_form_role(self):

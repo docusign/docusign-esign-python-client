@@ -56,6 +56,7 @@ class RadioGroup(object):
         'shared_metadata': 'PropertyMetadata',
         'share_to_recipients': 'str',
         'share_to_recipients_metadata': 'PropertyMetadata',
+        'source': 'str',
         'tab_type': 'str',
         'tab_type_metadata': 'PropertyMetadata',
         'template_locked': 'str',
@@ -92,6 +93,7 @@ class RadioGroup(object):
         'shared_metadata': 'sharedMetadata',
         'share_to_recipients': 'shareToRecipients',
         'share_to_recipients_metadata': 'shareToRecipientsMetadata',
+        'source': 'source',
         'tab_type': 'tabType',
         'tab_type_metadata': 'tabTypeMetadata',
         'template_locked': 'templateLocked',
@@ -133,6 +135,7 @@ class RadioGroup(object):
         self._shared_metadata = None
         self._share_to_recipients = None
         self._share_to_recipients_metadata = None
+        self._source = None
         self._tab_type = None
         self._tab_type_metadata = None
         self._template_locked = None
@@ -168,6 +171,7 @@ class RadioGroup(object):
         setattr(self, "_{}".format('shared_metadata'), kwargs.get('shared_metadata', None))
         setattr(self, "_{}".format('share_to_recipients'), kwargs.get('share_to_recipients', None))
         setattr(self, "_{}".format('share_to_recipients_metadata'), kwargs.get('share_to_recipients_metadata', None))
+        setattr(self, "_{}".format('source'), kwargs.get('source', None))
         setattr(self, "_{}".format('tab_type'), kwargs.get('tab_type', None))
         setattr(self, "_{}".format('tab_type_metadata'), kwargs.get('tab_type_metadata', None))
         setattr(self, "_{}".format('template_locked'), kwargs.get('template_locked', None))
@@ -707,6 +711,29 @@ class RadioGroup(object):
         """
 
         self._share_to_recipients_metadata = share_to_recipients_metadata
+
+    @property
+    def source(self):
+        """Gets the source of this RadioGroup.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The source of this RadioGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """Sets the source of this RadioGroup.
+
+          # noqa: E501
+
+        :param source: The source of this RadioGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._source = source
 
     @property
     def tab_type(self):

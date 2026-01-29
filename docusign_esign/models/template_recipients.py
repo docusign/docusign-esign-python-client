@@ -42,6 +42,7 @@ class TemplateRecipients(object):
         'in_person_signers': 'list[InPersonSigner]',
         'intermediaries': 'list[Intermediary]',
         'notaries': 'list[NotaryRecipient]',
+        'notary_witnesses': 'list[NotaryWitness]',
         'participants': 'list[Participant]',
         'recipient_count': 'str',
         'seals': 'list[SealSign]',
@@ -59,6 +60,7 @@ class TemplateRecipients(object):
         'in_person_signers': 'inPersonSigners',
         'intermediaries': 'intermediaries',
         'notaries': 'notaries',
+        'notary_witnesses': 'notaryWitnesses',
         'participants': 'participants',
         'recipient_count': 'recipientCount',
         'seals': 'seals',
@@ -81,6 +83,7 @@ class TemplateRecipients(object):
         self._in_person_signers = None
         self._intermediaries = None
         self._notaries = None
+        self._notary_witnesses = None
         self._participants = None
         self._recipient_count = None
         self._seals = None
@@ -97,6 +100,7 @@ class TemplateRecipients(object):
         setattr(self, "_{}".format('in_person_signers'), kwargs.get('in_person_signers', None))
         setattr(self, "_{}".format('intermediaries'), kwargs.get('intermediaries', None))
         setattr(self, "_{}".format('notaries'), kwargs.get('notaries', None))
+        setattr(self, "_{}".format('notary_witnesses'), kwargs.get('notary_witnesses', None))
         setattr(self, "_{}".format('participants'), kwargs.get('participants', None))
         setattr(self, "_{}".format('recipient_count'), kwargs.get('recipient_count', None))
         setattr(self, "_{}".format('seals'), kwargs.get('seals', None))
@@ -309,6 +313,29 @@ class TemplateRecipients(object):
         """
 
         self._notaries = notaries
+
+    @property
+    def notary_witnesses(self):
+        """Gets the notary_witnesses of this TemplateRecipients.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The notary_witnesses of this TemplateRecipients.  # noqa: E501
+        :rtype: list[NotaryWitness]
+        """
+        return self._notary_witnesses
+
+    @notary_witnesses.setter
+    def notary_witnesses(self, notary_witnesses):
+        """Sets the notary_witnesses of this TemplateRecipients.
+
+          # noqa: E501
+
+        :param notary_witnesses: The notary_witnesses of this TemplateRecipients.  # noqa: E501
+        :type: list[NotaryWitness]
+        """
+
+        self._notary_witnesses = notary_witnesses
 
     @property
     def participants(self):

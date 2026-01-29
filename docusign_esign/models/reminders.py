@@ -33,12 +33,14 @@ class Reminders(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'maximum_reminder_count': 'str',
         'reminder_delay': 'str',
         'reminder_enabled': 'str',
         'reminder_frequency': 'str'
     }
 
     attribute_map = {
+        'maximum_reminder_count': 'maximumReminderCount',
         'reminder_delay': 'reminderDelay',
         'reminder_enabled': 'reminderEnabled',
         'reminder_frequency': 'reminderFrequency'
@@ -50,14 +52,39 @@ class Reminders(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._maximum_reminder_count = None
         self._reminder_delay = None
         self._reminder_enabled = None
         self._reminder_frequency = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('maximum_reminder_count'), kwargs.get('maximum_reminder_count', None))
         setattr(self, "_{}".format('reminder_delay'), kwargs.get('reminder_delay', None))
         setattr(self, "_{}".format('reminder_enabled'), kwargs.get('reminder_enabled', None))
         setattr(self, "_{}".format('reminder_frequency'), kwargs.get('reminder_frequency', None))
+
+    @property
+    def maximum_reminder_count(self):
+        """Gets the maximum_reminder_count of this Reminders.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The maximum_reminder_count of this Reminders.  # noqa: E501
+        :rtype: str
+        """
+        return self._maximum_reminder_count
+
+    @maximum_reminder_count.setter
+    def maximum_reminder_count(self, maximum_reminder_count):
+        """Sets the maximum_reminder_count of this Reminders.
+
+          # noqa: E501
+
+        :param maximum_reminder_count: The maximum_reminder_count of this Reminders.  # noqa: E501
+        :type: str
+        """
+
+        self._maximum_reminder_count = maximum_reminder_count
 
     @property
     def reminder_delay(self):

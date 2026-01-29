@@ -7156,6 +7156,7 @@ class EnvelopesApi(object):
         :param str advanced_update: When true, envelope information can be added or modified.
         :param str include:
         :param str include_anchor_tab_locations:
+        :param str user_id:
         :return: Envelope
                  If the method is called asynchronously,
                  returns the request thread.
@@ -7186,12 +7187,13 @@ class EnvelopesApi(object):
         :param str advanced_update: When true, envelope information can be added or modified.
         :param str include:
         :param str include_anchor_tab_locations:
+        :param str user_id:
         :return: Envelope
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'envelope_id', 'advanced_update', 'include', 'include_anchor_tab_locations']
+        all_params = ['account_id', 'envelope_id', 'advanced_update', 'include', 'include_anchor_tab_locations', 'user_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7230,6 +7232,8 @@ class EnvelopesApi(object):
             query_params['include'] = params['include']
         if 'include_anchor_tab_locations' in params:
             query_params['include_anchor_tab_locations'] = params['include_anchor_tab_locations']
+        if 'user_id' in params:
+            query_params['user_id'] = params['user_id']
 
         header_params = {}
 
