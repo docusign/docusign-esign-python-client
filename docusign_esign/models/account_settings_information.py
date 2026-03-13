@@ -74,6 +74,8 @@ class AccountSettingsInformation(object):
         'allow_auto_tagging_metadata': 'SettingsMetadata',
         'allow_bulk_send': 'str',
         'allow_bulk_send_metadata': 'SettingsMetadata',
+        'allow_byoidv': 'str',
+        'allow_byoidv_metadata': 'SettingsMetadata',
         'allow_cd_withdraw': 'str',
         'allow_cd_withdraw_metadata': 'SettingsMetadata',
         'allow_connect_agreement_ui': 'str',
@@ -130,6 +132,10 @@ class AccountSettingsInformation(object):
         'allow_external_linked_accounts_metadata': 'SettingsMetadata',
         'allow_external_signature_pad': 'str',
         'allow_external_signature_pad_metadata': 'SettingsMetadata',
+        'allow_fed_ramp_idv_level1': 'str',
+        'allow_fed_ramp_idv_level1_metadata': 'SettingsMetadata',
+        'allow_fed_ramp_idv_level2': 'str',
+        'allow_fed_ramp_idv_level2_metadata': 'SettingsMetadata',
         'allow_idv_for_eu_qualified_signatures': 'str',
         'allow_idv_for_eu_qualified_signatures_metadata': 'SettingsMetadata',
         'allow_idv_level1': 'str',
@@ -364,7 +370,6 @@ class AccountSettingsInformation(object):
         'document_visibility_metadata': 'SettingsMetadata',
         'draft_envelope_retention': 'str',
         'draft_envelope_retention_metadata': 'SettingsMetadata',
-        'dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb': 'str',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'str',
         'dss_sign_29182_slide_up_bar_radmin_option': 'str',
         'email_template_version': 'str',
@@ -505,6 +510,8 @@ class AccountSettingsInformation(object):
         'enable_navigator_api_utilities_metadata': 'SettingsMetadata',
         'enable_navigator_for_hr': 'str',
         'enable_navigator_for_hr_metadata': 'SettingsMetadata',
+        'enable_navigator_hierarchy_ai': 'str',
+        'enable_navigator_hierarchy_ai_metadata': 'SettingsMetadata',
         'enable_navigator_partial_ingestion': 'str',
         'enable_navigator_partial_ingestion_metadata': 'SettingsMetadata',
         'enable_navigator_trial': 'str',
@@ -560,8 +567,6 @@ class AccountSettingsInformation(object):
         'enable_signer_attachments_metadata': 'SettingsMetadata',
         'enable_signing_ai_features_plan': 'str',
         'enable_signing_ai_features_plan_metadata': 'SettingsMetadata',
-        'enable_signing_ai_features_setting': 'str',
-        'enable_signing_ai_features_setting_metadata': 'SettingsMetadata',
         'enable_signing_extension_comments': 'str',
         'enable_signing_extension_comments_metadata': 'SettingsMetadata',
         'enable_signing_extension_conversations': 'str',
@@ -915,6 +920,8 @@ class AccountSettingsInformation(object):
         'allow_auto_tagging_metadata': 'allowAutoTaggingMetadata',
         'allow_bulk_send': 'allowBulkSend',
         'allow_bulk_send_metadata': 'allowBulkSendMetadata',
+        'allow_byoidv': 'allowBYOIDV',
+        'allow_byoidv_metadata': 'allowBYOIDVMetadata',
         'allow_cd_withdraw': 'allowCDWithdraw',
         'allow_cd_withdraw_metadata': 'allowCDWithdrawMetadata',
         'allow_connect_agreement_ui': 'allowConnectAgreementUI',
@@ -971,6 +978,10 @@ class AccountSettingsInformation(object):
         'allow_external_linked_accounts_metadata': 'allowExternalLinkedAccountsMetadata',
         'allow_external_signature_pad': 'allowExternalSignaturePad',
         'allow_external_signature_pad_metadata': 'allowExternalSignaturePadMetadata',
+        'allow_fed_ramp_idv_level1': 'allowFedRampIDVLevel1',
+        'allow_fed_ramp_idv_level1_metadata': 'allowFedRampIDVLevel1Metadata',
+        'allow_fed_ramp_idv_level2': 'allowFedRampIDVLevel2',
+        'allow_fed_ramp_idv_level2_metadata': 'allowFedRampIDVLevel2Metadata',
         'allow_idv_for_eu_qualified_signatures': 'allowIDVForEUQualifiedSignatures',
         'allow_idv_for_eu_qualified_signatures_metadata': 'allowIDVForEUQualifiedSignaturesMetadata',
         'allow_idv_level1': 'allowIDVLevel1',
@@ -1205,7 +1216,6 @@ class AccountSettingsInformation(object):
         'document_visibility_metadata': 'documentVisibilityMetadata',
         'draft_envelope_retention': 'draftEnvelopeRetention',
         'draft_envelope_retention_metadata': 'draftEnvelopeRetentionMetadata',
-        'dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb': 'dss_SCOREFDN_196_Rebrand_DocuSignIsNotAVerb',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
         'dss_sign_29182_slide_up_bar_radmin_option': 'dss_SIGN_29182_SlideUpBar_RadminOption',
         'email_template_version': 'emailTemplateVersion',
@@ -1346,6 +1356,8 @@ class AccountSettingsInformation(object):
         'enable_navigator_api_utilities_metadata': 'enableNavigatorAPIUtilitiesMetadata',
         'enable_navigator_for_hr': 'enableNavigatorForHR',
         'enable_navigator_for_hr_metadata': 'enableNavigatorForHRMetadata',
+        'enable_navigator_hierarchy_ai': 'enableNavigatorHierarchyAI',
+        'enable_navigator_hierarchy_ai_metadata': 'enableNavigatorHierarchyAIMetadata',
         'enable_navigator_partial_ingestion': 'enableNavigatorPartialIngestion',
         'enable_navigator_partial_ingestion_metadata': 'enableNavigatorPartialIngestionMetadata',
         'enable_navigator_trial': 'enableNavigatorTrial',
@@ -1399,10 +1411,8 @@ class AccountSettingsInformation(object):
         'enable_sequential_signing_ui_metadata': 'enableSequentialSigningUIMetadata',
         'enable_signer_attachments': 'enableSignerAttachments',
         'enable_signer_attachments_metadata': 'enableSignerAttachmentsMetadata',
-        'enable_signing_ai_features_plan': 'EnableSigningAIFeaturesPlan',
+        'enable_signing_ai_features_plan': 'enableSigningAIFeaturesPlan',
         'enable_signing_ai_features_plan_metadata': 'enableSigningAIFeaturesPlanMetadata',
-        'enable_signing_ai_features_setting': 'enableSigningAIFeaturesSetting',
-        'enable_signing_ai_features_setting_metadata': 'enableSigningAIFeaturesSettingMetadata',
         'enable_signing_extension_comments': 'enableSigningExtensionComments',
         'enable_signing_extension_comments_metadata': 'enableSigningExtensionCommentsMetadata',
         'enable_signing_extension_conversations': 'enableSigningExtensionConversations',
@@ -1761,6 +1771,8 @@ class AccountSettingsInformation(object):
         self._allow_auto_tagging_metadata = None
         self._allow_bulk_send = None
         self._allow_bulk_send_metadata = None
+        self._allow_byoidv = None
+        self._allow_byoidv_metadata = None
         self._allow_cd_withdraw = None
         self._allow_cd_withdraw_metadata = None
         self._allow_connect_agreement_ui = None
@@ -1817,6 +1829,10 @@ class AccountSettingsInformation(object):
         self._allow_external_linked_accounts_metadata = None
         self._allow_external_signature_pad = None
         self._allow_external_signature_pad_metadata = None
+        self._allow_fed_ramp_idv_level1 = None
+        self._allow_fed_ramp_idv_level1_metadata = None
+        self._allow_fed_ramp_idv_level2 = None
+        self._allow_fed_ramp_idv_level2_metadata = None
         self._allow_idv_for_eu_qualified_signatures = None
         self._allow_idv_for_eu_qualified_signatures_metadata = None
         self._allow_idv_level1 = None
@@ -2051,7 +2067,6 @@ class AccountSettingsInformation(object):
         self._document_visibility_metadata = None
         self._draft_envelope_retention = None
         self._draft_envelope_retention_metadata = None
-        self._dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb = None
         self._dss_sign_28411_enable_leave_page_prompt_radmin_option = None
         self._dss_sign_29182_slide_up_bar_radmin_option = None
         self._email_template_version = None
@@ -2192,6 +2207,8 @@ class AccountSettingsInformation(object):
         self._enable_navigator_api_utilities_metadata = None
         self._enable_navigator_for_hr = None
         self._enable_navigator_for_hr_metadata = None
+        self._enable_navigator_hierarchy_ai = None
+        self._enable_navigator_hierarchy_ai_metadata = None
         self._enable_navigator_partial_ingestion = None
         self._enable_navigator_partial_ingestion_metadata = None
         self._enable_navigator_trial = None
@@ -2247,8 +2264,6 @@ class AccountSettingsInformation(object):
         self._enable_signer_attachments_metadata = None
         self._enable_signing_ai_features_plan = None
         self._enable_signing_ai_features_plan_metadata = None
-        self._enable_signing_ai_features_setting = None
-        self._enable_signing_ai_features_setting_metadata = None
         self._enable_signing_extension_comments = None
         self._enable_signing_extension_comments_metadata = None
         self._enable_signing_extension_conversations = None
@@ -2601,6 +2616,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_auto_tagging_metadata'), kwargs.get('allow_auto_tagging_metadata', None))
         setattr(self, "_{}".format('allow_bulk_send'), kwargs.get('allow_bulk_send', None))
         setattr(self, "_{}".format('allow_bulk_send_metadata'), kwargs.get('allow_bulk_send_metadata', None))
+        setattr(self, "_{}".format('allow_byoidv'), kwargs.get('allow_byoidv', None))
+        setattr(self, "_{}".format('allow_byoidv_metadata'), kwargs.get('allow_byoidv_metadata', None))
         setattr(self, "_{}".format('allow_cd_withdraw'), kwargs.get('allow_cd_withdraw', None))
         setattr(self, "_{}".format('allow_cd_withdraw_metadata'), kwargs.get('allow_cd_withdraw_metadata', None))
         setattr(self, "_{}".format('allow_connect_agreement_ui'), kwargs.get('allow_connect_agreement_ui', None))
@@ -2657,6 +2674,10 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_external_linked_accounts_metadata'), kwargs.get('allow_external_linked_accounts_metadata', None))
         setattr(self, "_{}".format('allow_external_signature_pad'), kwargs.get('allow_external_signature_pad', None))
         setattr(self, "_{}".format('allow_external_signature_pad_metadata'), kwargs.get('allow_external_signature_pad_metadata', None))
+        setattr(self, "_{}".format('allow_fed_ramp_idv_level1'), kwargs.get('allow_fed_ramp_idv_level1', None))
+        setattr(self, "_{}".format('allow_fed_ramp_idv_level1_metadata'), kwargs.get('allow_fed_ramp_idv_level1_metadata', None))
+        setattr(self, "_{}".format('allow_fed_ramp_idv_level2'), kwargs.get('allow_fed_ramp_idv_level2', None))
+        setattr(self, "_{}".format('allow_fed_ramp_idv_level2_metadata'), kwargs.get('allow_fed_ramp_idv_level2_metadata', None))
         setattr(self, "_{}".format('allow_idv_for_eu_qualified_signatures'), kwargs.get('allow_idv_for_eu_qualified_signatures', None))
         setattr(self, "_{}".format('allow_idv_for_eu_qualified_signatures_metadata'), kwargs.get('allow_idv_for_eu_qualified_signatures_metadata', None))
         setattr(self, "_{}".format('allow_idv_level1'), kwargs.get('allow_idv_level1', None))
@@ -2891,7 +2912,6 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('document_visibility_metadata'), kwargs.get('document_visibility_metadata', None))
         setattr(self, "_{}".format('draft_envelope_retention'), kwargs.get('draft_envelope_retention', None))
         setattr(self, "_{}".format('draft_envelope_retention_metadata'), kwargs.get('draft_envelope_retention_metadata', None))
-        setattr(self, "_{}".format('dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb'), kwargs.get('dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb', None))
         setattr(self, "_{}".format('dss_sign_28411_enable_leave_page_prompt_radmin_option'), kwargs.get('dss_sign_28411_enable_leave_page_prompt_radmin_option', None))
         setattr(self, "_{}".format('dss_sign_29182_slide_up_bar_radmin_option'), kwargs.get('dss_sign_29182_slide_up_bar_radmin_option', None))
         setattr(self, "_{}".format('email_template_version'), kwargs.get('email_template_version', None))
@@ -3032,6 +3052,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_navigator_api_utilities_metadata'), kwargs.get('enable_navigator_api_utilities_metadata', None))
         setattr(self, "_{}".format('enable_navigator_for_hr'), kwargs.get('enable_navigator_for_hr', None))
         setattr(self, "_{}".format('enable_navigator_for_hr_metadata'), kwargs.get('enable_navigator_for_hr_metadata', None))
+        setattr(self, "_{}".format('enable_navigator_hierarchy_ai'), kwargs.get('enable_navigator_hierarchy_ai', None))
+        setattr(self, "_{}".format('enable_navigator_hierarchy_ai_metadata'), kwargs.get('enable_navigator_hierarchy_ai_metadata', None))
         setattr(self, "_{}".format('enable_navigator_partial_ingestion'), kwargs.get('enable_navigator_partial_ingestion', None))
         setattr(self, "_{}".format('enable_navigator_partial_ingestion_metadata'), kwargs.get('enable_navigator_partial_ingestion_metadata', None))
         setattr(self, "_{}".format('enable_navigator_trial'), kwargs.get('enable_navigator_trial', None))
@@ -3087,8 +3109,6 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_signer_attachments_metadata'), kwargs.get('enable_signer_attachments_metadata', None))
         setattr(self, "_{}".format('enable_signing_ai_features_plan'), kwargs.get('enable_signing_ai_features_plan', None))
         setattr(self, "_{}".format('enable_signing_ai_features_plan_metadata'), kwargs.get('enable_signing_ai_features_plan_metadata', None))
-        setattr(self, "_{}".format('enable_signing_ai_features_setting'), kwargs.get('enable_signing_ai_features_setting', None))
-        setattr(self, "_{}".format('enable_signing_ai_features_setting_metadata'), kwargs.get('enable_signing_ai_features_setting_metadata', None))
         setattr(self, "_{}".format('enable_signing_extension_comments'), kwargs.get('enable_signing_extension_comments', None))
         setattr(self, "_{}".format('enable_signing_extension_comments_metadata'), kwargs.get('enable_signing_extension_comments_metadata', None))
         setattr(self, "_{}".format('enable_signing_extension_conversations'), kwargs.get('enable_signing_extension_conversations', None))
@@ -4341,6 +4361,52 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_bulk_send_metadata = allow_bulk_send_metadata
+
+    @property
+    def allow_byoidv(self):
+        """Gets the allow_byoidv of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_byoidv of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_byoidv
+
+    @allow_byoidv.setter
+    def allow_byoidv(self, allow_byoidv):
+        """Sets the allow_byoidv of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_byoidv: The allow_byoidv of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_byoidv = allow_byoidv
+
+    @property
+    def allow_byoidv_metadata(self):
+        """Gets the allow_byoidv_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_byoidv_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_byoidv_metadata
+
+    @allow_byoidv_metadata.setter
+    def allow_byoidv_metadata(self, allow_byoidv_metadata):
+        """Sets the allow_byoidv_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_byoidv_metadata: The allow_byoidv_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_byoidv_metadata = allow_byoidv_metadata
 
     @property
     def allow_cd_withdraw(self):
@@ -5629,6 +5695,98 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_external_signature_pad_metadata = allow_external_signature_pad_metadata
+
+    @property
+    def allow_fed_ramp_idv_level1(self):
+        """Gets the allow_fed_ramp_idv_level1 of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_fed_ramp_idv_level1 of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_fed_ramp_idv_level1
+
+    @allow_fed_ramp_idv_level1.setter
+    def allow_fed_ramp_idv_level1(self, allow_fed_ramp_idv_level1):
+        """Sets the allow_fed_ramp_idv_level1 of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_fed_ramp_idv_level1: The allow_fed_ramp_idv_level1 of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_fed_ramp_idv_level1 = allow_fed_ramp_idv_level1
+
+    @property
+    def allow_fed_ramp_idv_level1_metadata(self):
+        """Gets the allow_fed_ramp_idv_level1_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_fed_ramp_idv_level1_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_fed_ramp_idv_level1_metadata
+
+    @allow_fed_ramp_idv_level1_metadata.setter
+    def allow_fed_ramp_idv_level1_metadata(self, allow_fed_ramp_idv_level1_metadata):
+        """Sets the allow_fed_ramp_idv_level1_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_fed_ramp_idv_level1_metadata: The allow_fed_ramp_idv_level1_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_fed_ramp_idv_level1_metadata = allow_fed_ramp_idv_level1_metadata
+
+    @property
+    def allow_fed_ramp_idv_level2(self):
+        """Gets the allow_fed_ramp_idv_level2 of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_fed_ramp_idv_level2 of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_fed_ramp_idv_level2
+
+    @allow_fed_ramp_idv_level2.setter
+    def allow_fed_ramp_idv_level2(self, allow_fed_ramp_idv_level2):
+        """Sets the allow_fed_ramp_idv_level2 of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_fed_ramp_idv_level2: The allow_fed_ramp_idv_level2 of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_fed_ramp_idv_level2 = allow_fed_ramp_idv_level2
+
+    @property
+    def allow_fed_ramp_idv_level2_metadata(self):
+        """Gets the allow_fed_ramp_idv_level2_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_fed_ramp_idv_level2_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._allow_fed_ramp_idv_level2_metadata
+
+    @allow_fed_ramp_idv_level2_metadata.setter
+    def allow_fed_ramp_idv_level2_metadata(self, allow_fed_ramp_idv_level2_metadata):
+        """Sets the allow_fed_ramp_idv_level2_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_fed_ramp_idv_level2_metadata: The allow_fed_ramp_idv_level2_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._allow_fed_ramp_idv_level2_metadata = allow_fed_ramp_idv_level2_metadata
 
     @property
     def allow_idv_for_eu_qualified_signatures(self):
@@ -11013,29 +11171,6 @@ class AccountSettingsInformation(object):
         self._draft_envelope_retention_metadata = draft_envelope_retention_metadata
 
     @property
-    def dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb(self):
-        """Gets the dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb of this AccountSettingsInformation.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb of this AccountSettingsInformation.  # noqa: E501
-        :rtype: str
-        """
-        return self._dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb
-
-    @dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb.setter
-    def dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb(self, dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb):
-        """Sets the dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb of this AccountSettingsInformation.
-
-          # noqa: E501
-
-        :param dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb: The dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb of this AccountSettingsInformation.  # noqa: E501
-        :type: str
-        """
-
-        self._dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb = dss_scorefdn_196_rebrand_docu_sign_is_not_a_verb
-
-    @property
     def dss_sign_28411_enable_leave_page_prompt_radmin_option(self):
         """Gets the dss_sign_28411_enable_leave_page_prompt_radmin_option of this AccountSettingsInformation.  # noqa: E501
 
@@ -14256,6 +14391,52 @@ class AccountSettingsInformation(object):
         self._enable_navigator_for_hr_metadata = enable_navigator_for_hr_metadata
 
     @property
+    def enable_navigator_hierarchy_ai(self):
+        """Gets the enable_navigator_hierarchy_ai of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_navigator_hierarchy_ai of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_navigator_hierarchy_ai
+
+    @enable_navigator_hierarchy_ai.setter
+    def enable_navigator_hierarchy_ai(self, enable_navigator_hierarchy_ai):
+        """Sets the enable_navigator_hierarchy_ai of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_navigator_hierarchy_ai: The enable_navigator_hierarchy_ai of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_navigator_hierarchy_ai = enable_navigator_hierarchy_ai
+
+    @property
+    def enable_navigator_hierarchy_ai_metadata(self):
+        """Gets the enable_navigator_hierarchy_ai_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_navigator_hierarchy_ai_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_navigator_hierarchy_ai_metadata
+
+    @enable_navigator_hierarchy_ai_metadata.setter
+    def enable_navigator_hierarchy_ai_metadata(self, enable_navigator_hierarchy_ai_metadata):
+        """Sets the enable_navigator_hierarchy_ai_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_navigator_hierarchy_ai_metadata: The enable_navigator_hierarchy_ai_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_navigator_hierarchy_ai_metadata = enable_navigator_hierarchy_ai_metadata
+
+    @property
     def enable_navigator_partial_ingestion(self):
         """Gets the enable_navigator_partial_ingestion of this AccountSettingsInformation.  # noqa: E501
 
@@ -15519,52 +15700,6 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_signing_ai_features_plan_metadata = enable_signing_ai_features_plan_metadata
-
-    @property
-    def enable_signing_ai_features_setting(self):
-        """Gets the enable_signing_ai_features_setting of this AccountSettingsInformation.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The enable_signing_ai_features_setting of this AccountSettingsInformation.  # noqa: E501
-        :rtype: str
-        """
-        return self._enable_signing_ai_features_setting
-
-    @enable_signing_ai_features_setting.setter
-    def enable_signing_ai_features_setting(self, enable_signing_ai_features_setting):
-        """Sets the enable_signing_ai_features_setting of this AccountSettingsInformation.
-
-          # noqa: E501
-
-        :param enable_signing_ai_features_setting: The enable_signing_ai_features_setting of this AccountSettingsInformation.  # noqa: E501
-        :type: str
-        """
-
-        self._enable_signing_ai_features_setting = enable_signing_ai_features_setting
-
-    @property
-    def enable_signing_ai_features_setting_metadata(self):
-        """Gets the enable_signing_ai_features_setting_metadata of this AccountSettingsInformation.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The enable_signing_ai_features_setting_metadata of this AccountSettingsInformation.  # noqa: E501
-        :rtype: SettingsMetadata
-        """
-        return self._enable_signing_ai_features_setting_metadata
-
-    @enable_signing_ai_features_setting_metadata.setter
-    def enable_signing_ai_features_setting_metadata(self, enable_signing_ai_features_setting_metadata):
-        """Sets the enable_signing_ai_features_setting_metadata of this AccountSettingsInformation.
-
-          # noqa: E501
-
-        :param enable_signing_ai_features_setting_metadata: The enable_signing_ai_features_setting_metadata of this AccountSettingsInformation.  # noqa: E501
-        :type: SettingsMetadata
-        """
-
-        self._enable_signing_ai_features_setting_metadata = enable_signing_ai_features_setting_metadata
 
     @property
     def enable_signing_extension_comments(self):
