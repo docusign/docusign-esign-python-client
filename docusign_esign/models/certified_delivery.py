@@ -101,6 +101,7 @@ class CertifiedDelivery(object):
         'signing_group_id': 'str',
         'signing_group_id_metadata': 'PropertyMetadata',
         'signing_group_name': 'str',
+        'signing_group_type': 'str',
         'signing_group_users': 'list[UserInfo]',
         'sms_authentication': 'RecipientSMSAuthentication',
         'social_authentications': 'list[SocialAuthentication]',
@@ -183,6 +184,7 @@ class CertifiedDelivery(object):
         'signing_group_id': 'signingGroupId',
         'signing_group_id_metadata': 'signingGroupIdMetadata',
         'signing_group_name': 'signingGroupName',
+        'signing_group_type': 'signingGroupType',
         'signing_group_users': 'signingGroupUsers',
         'sms_authentication': 'smsAuthentication',
         'social_authentications': 'socialAuthentications',
@@ -270,6 +272,7 @@ class CertifiedDelivery(object):
         self._signing_group_id = None
         self._signing_group_id_metadata = None
         self._signing_group_name = None
+        self._signing_group_type = None
         self._signing_group_users = None
         self._sms_authentication = None
         self._social_authentications = None
@@ -351,6 +354,7 @@ class CertifiedDelivery(object):
         setattr(self, "_{}".format('signing_group_id'), kwargs.get('signing_group_id', None))
         setattr(self, "_{}".format('signing_group_id_metadata'), kwargs.get('signing_group_id_metadata', None))
         setattr(self, "_{}".format('signing_group_name'), kwargs.get('signing_group_name', None))
+        setattr(self, "_{}".format('signing_group_type'), kwargs.get('signing_group_type', None))
         setattr(self, "_{}".format('signing_group_users'), kwargs.get('signing_group_users', None))
         setattr(self, "_{}".format('sms_authentication'), kwargs.get('sms_authentication', None))
         setattr(self, "_{}".format('social_authentications'), kwargs.get('social_authentications', None))
@@ -1926,6 +1930,29 @@ class CertifiedDelivery(object):
         """
 
         self._signing_group_name = signing_group_name
+
+    @property
+    def signing_group_type(self):
+        """Gets the signing_group_type of this CertifiedDelivery.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signing_group_type of this CertifiedDelivery.  # noqa: E501
+        :rtype: str
+        """
+        return self._signing_group_type
+
+    @signing_group_type.setter
+    def signing_group_type(self, signing_group_type):
+        """Sets the signing_group_type of this CertifiedDelivery.
+
+          # noqa: E501
+
+        :param signing_group_type: The signing_group_type of this CertifiedDelivery.  # noqa: E501
+        :type: str
+        """
+
+        self._signing_group_type = signing_group_type
 
     @property
     def signing_group_users(self):

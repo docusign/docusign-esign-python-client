@@ -202,6 +202,7 @@ from docusign_esign.models.doc_gen_form_field_response import DocGenFormFieldRes
 from docusign_esign.models.doc_gen_form_field_row_value import DocGenFormFieldRowValue
 from docusign_esign.models.doc_gen_form_field_validation import DocGenFormFieldValidation
 from docusign_esign.models.doc_gen_form_fields import DocGenFormFields
+from docusign_esign.models.doc_gen_format import DocGenFormat
 from docusign_esign.models.doc_gen_syntax_error import DocGenSyntaxError
 from docusign_esign.models.document import Document
 from docusign_esign.models.document_fields_information import DocumentFieldsInformation
@@ -262,6 +263,10 @@ from docusign_esign.models.envelope_view_settings import EnvelopeViewSettings
 from docusign_esign.models.envelope_view_tagger_settings import EnvelopeViewTaggerSettings
 from docusign_esign.models.envelope_view_template_settings import EnvelopeViewTemplateSettings
 from docusign_esign.models.envelopes_information import EnvelopesInformation
+from docusign_esign.models.envelopes_shares_request import EnvelopesSharesRequest
+from docusign_esign.models.envelopes_shares_request_item import EnvelopesSharesRequestItem
+from docusign_esign.models.envelopes_shares_response import EnvelopesSharesResponse
+from docusign_esign.models.envelopes_shares_response_item import EnvelopesSharesResponseItem
 from docusign_esign.models.error_details import ErrorDetails
 from docusign_esign.models.event_notification import EventNotification
 from docusign_esign.models.event_result import EventResult

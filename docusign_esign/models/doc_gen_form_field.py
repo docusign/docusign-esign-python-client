@@ -35,12 +35,15 @@ class DocGenFormField(object):
     swagger_types = {
         'connected_object_details': 'ConnectedObjectDetails',
         'description': 'str',
+        'format': 'DocGenFormat',
         'fully_qualified_path': 'str',
+        'hidden': 'str',
         'label': 'str',
         'name': 'str',
         'options': 'list[DocGenFormFieldOption]',
         'order': 'str',
         'predefined_validation': 'str',
+        'read_only': 'str',
         'required': 'str',
         'row_values': 'list[DocGenFormFieldRowValue]',
         'type': 'str',
@@ -51,12 +54,15 @@ class DocGenFormField(object):
     attribute_map = {
         'connected_object_details': 'connectedObjectDetails',
         'description': 'description',
+        'format': 'format',
         'fully_qualified_path': 'fullyQualifiedPath',
+        'hidden': 'hidden',
         'label': 'label',
         'name': 'name',
         'options': 'options',
         'order': 'order',
         'predefined_validation': 'predefinedValidation',
+        'read_only': 'readOnly',
         'required': 'required',
         'row_values': 'rowValues',
         'type': 'type',
@@ -72,12 +78,15 @@ class DocGenFormField(object):
 
         self._connected_object_details = None
         self._description = None
+        self._format = None
         self._fully_qualified_path = None
+        self._hidden = None
         self._label = None
         self._name = None
         self._options = None
         self._order = None
         self._predefined_validation = None
+        self._read_only = None
         self._required = None
         self._row_values = None
         self._type = None
@@ -87,12 +96,15 @@ class DocGenFormField(object):
 
         setattr(self, "_{}".format('connected_object_details'), kwargs.get('connected_object_details', None))
         setattr(self, "_{}".format('description'), kwargs.get('description', None))
+        setattr(self, "_{}".format('format'), kwargs.get('format', None))
         setattr(self, "_{}".format('fully_qualified_path'), kwargs.get('fully_qualified_path', None))
+        setattr(self, "_{}".format('hidden'), kwargs.get('hidden', None))
         setattr(self, "_{}".format('label'), kwargs.get('label', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
         setattr(self, "_{}".format('options'), kwargs.get('options', None))
         setattr(self, "_{}".format('order'), kwargs.get('order', None))
         setattr(self, "_{}".format('predefined_validation'), kwargs.get('predefined_validation', None))
+        setattr(self, "_{}".format('read_only'), kwargs.get('read_only', None))
         setattr(self, "_{}".format('required'), kwargs.get('required', None))
         setattr(self, "_{}".format('row_values'), kwargs.get('row_values', None))
         setattr(self, "_{}".format('type'), kwargs.get('type', None))
@@ -146,6 +158,29 @@ class DocGenFormField(object):
         self._description = description
 
     @property
+    def format(self):
+        """Gets the format of this DocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The format of this DocGenFormField.  # noqa: E501
+        :rtype: DocGenFormat
+        """
+        return self._format
+
+    @format.setter
+    def format(self, format):
+        """Sets the format of this DocGenFormField.
+
+          # noqa: E501
+
+        :param format: The format of this DocGenFormField.  # noqa: E501
+        :type: DocGenFormat
+        """
+
+        self._format = format
+
+    @property
     def fully_qualified_path(self):
         """Gets the fully_qualified_path of this DocGenFormField.  # noqa: E501
 
@@ -167,6 +202,29 @@ class DocGenFormField(object):
         """
 
         self._fully_qualified_path = fully_qualified_path
+
+    @property
+    def hidden(self):
+        """Gets the hidden of this DocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The hidden of this DocGenFormField.  # noqa: E501
+        :rtype: str
+        """
+        return self._hidden
+
+    @hidden.setter
+    def hidden(self, hidden):
+        """Sets the hidden of this DocGenFormField.
+
+          # noqa: E501
+
+        :param hidden: The hidden of this DocGenFormField.  # noqa: E501
+        :type: str
+        """
+
+        self._hidden = hidden
 
     @property
     def label(self):
@@ -282,6 +340,29 @@ class DocGenFormField(object):
         """
 
         self._predefined_validation = predefined_validation
+
+    @property
+    def read_only(self):
+        """Gets the read_only of this DocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The read_only of this DocGenFormField.  # noqa: E501
+        :rtype: str
+        """
+        return self._read_only
+
+    @read_only.setter
+    def read_only(self, read_only):
+        """Sets the read_only of this DocGenFormField.
+
+          # noqa: E501
+
+        :param read_only: The read_only of this DocGenFormField.  # noqa: E501
+        :type: str
+        """
+
+        self._read_only = read_only
 
     @property
     def required(self):
