@@ -57,6 +57,7 @@ class EnvelopeDocument(object):
         'include_in_download_metadata': 'PropertyMetadata',
         'is_ace_gen_document': 'str',
         'is_doc_gen_document': 'str',
+        'is_edited': 'str',
         'is_externally_available': 'str',
         'is_flattened': 'str',
         'name': 'str',
@@ -97,6 +98,7 @@ class EnvelopeDocument(object):
         'include_in_download_metadata': 'includeInDownloadMetadata',
         'is_ace_gen_document': 'isAceGenDocument',
         'is_doc_gen_document': 'isDocGenDocument',
+        'is_edited': 'isEdited',
         'is_externally_available': 'isExternallyAvailable',
         'is_flattened': 'isFlattened',
         'name': 'name',
@@ -142,6 +144,7 @@ class EnvelopeDocument(object):
         self._include_in_download_metadata = None
         self._is_ace_gen_document = None
         self._is_doc_gen_document = None
+        self._is_edited = None
         self._is_externally_available = None
         self._is_flattened = None
         self._name = None
@@ -181,6 +184,7 @@ class EnvelopeDocument(object):
         setattr(self, "_{}".format('include_in_download_metadata'), kwargs.get('include_in_download_metadata', None))
         setattr(self, "_{}".format('is_ace_gen_document'), kwargs.get('is_ace_gen_document', None))
         setattr(self, "_{}".format('is_doc_gen_document'), kwargs.get('is_doc_gen_document', None))
+        setattr(self, "_{}".format('is_edited'), kwargs.get('is_edited', None))
         setattr(self, "_{}".format('is_externally_available'), kwargs.get('is_externally_available', None))
         setattr(self, "_{}".format('is_flattened'), kwargs.get('is_flattened', None))
         setattr(self, "_{}".format('name'), kwargs.get('name', None))
@@ -746,6 +750,29 @@ class EnvelopeDocument(object):
         """
 
         self._is_doc_gen_document = is_doc_gen_document
+
+    @property
+    def is_edited(self):
+        """Gets the is_edited of this EnvelopeDocument.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_edited of this EnvelopeDocument.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_edited
+
+    @is_edited.setter
+    def is_edited(self, is_edited):
+        """Sets the is_edited of this EnvelopeDocument.
+
+          # noqa: E501
+
+        :param is_edited: The is_edited of this EnvelopeDocument.  # noqa: E501
+        :type: str
+        """
+
+        self._is_edited = is_edited
 
     @property
     def is_externally_available(self):

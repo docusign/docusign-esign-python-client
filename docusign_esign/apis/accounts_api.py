@@ -3741,6 +3741,215 @@ class AccountsApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_completion_rate_for_template(self, account_id, template_id, **kwargs):
+        """
+        Gets completion rate for the template
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_completion_rate_for_template(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :return: TemplateCompletionRateResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_completion_rate_for_template_with_http_info(account_id, template_id, **kwargs)
+        else:
+            (data) = self.get_completion_rate_for_template_with_http_info(account_id, template_id, **kwargs)
+            return data
+
+    def get_completion_rate_for_template_with_http_info(self, account_id, template_id, **kwargs):
+        """
+        Gets completion rate for the template
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_completion_rate_for_template_with_http_info(account_id, template_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str template_id: The ID of the template being accessed. (required)
+        :return: TemplateCompletionRateResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'template_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_completion_rate_for_template" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_completion_rate_for_template`")
+        # verify the required parameter 'template_id' is set
+        if ('template_id' not in params) or (params['template_id'] is None):
+            raise ValueError("Missing the required parameter `template_id` when calling `get_completion_rate_for_template`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/{templateId}/insights/completionRate'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'template_id' in params:
+            path_params['templateId'] = params['template_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='TemplateCompletionRateResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_completion_rate_for_template_owner(self, account_id, **kwargs):
+        """
+        Gets completion rate for the user
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_completion_rate_for_template_owner(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :return: UserCompletionRateResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_completion_rate_for_template_owner_with_http_info(account_id, **kwargs)
+        else:
+            (data) = self.get_completion_rate_for_template_owner_with_http_info(account_id, **kwargs)
+            return data
+
+    def get_completion_rate_for_template_owner_with_http_info(self, account_id, **kwargs):
+        """
+        Gets completion rate for the user
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_completion_rate_for_template_owner_with_http_info(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :return: UserCompletionRateResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_completion_rate_for_template_owner" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_completion_rate_for_template_owner`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/templates/insights/completionRate'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='UserCompletionRateResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_consumer_disclosure(self, account_id, lang_code, **kwargs):
         """
         Gets the Electronic Record and Signature Disclosure.
@@ -5655,113 +5864,6 @@ class AccountsApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='PermissionProfileInformation',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def list_recipient_names_by_email(self, account_id, **kwargs):
-        """
-        Gets recipient names associated with an email address.
-        Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.list_recipient_names_by_email(account_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str account_id: The external account number (int) or account ID Guid. (required)
-        :param str email: The email address for the user
-        :return: RecipientNamesResponse
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.list_recipient_names_by_email_with_http_info(account_id, **kwargs)
-        else:
-            (data) = self.list_recipient_names_by_email_with_http_info(account_id, **kwargs)
-            return data
-
-    def list_recipient_names_by_email_with_http_info(self, account_id, **kwargs):
-        """
-        Gets recipient names associated with an email address.
-        Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.list_recipient_names_by_email_with_http_info(account_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param str account_id: The external account number (int) or account ID Guid. (required)
-        :param str email: The email address for the user
-        :return: RecipientNamesResponse
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['account_id', 'email']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method list_recipient_names_by_email" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'account_id' is set
-        if ('account_id' not in params) or (params['account_id'] is None):
-            raise ValueError("Missing the required parameter `account_id` when calling `list_recipient_names_by_email`")
-
-
-        collection_formats = {}
-
-        resource_path = '/v2.1/accounts/{accountId}/recipient_names'.replace('{format}', 'json')
-        path_params = {}
-        if 'account_id' in params:
-            path_params['accountId'] = params['account_id']
-
-        query_params = {}
-        if 'email' in params:
-            query_params['email'] = params['email']
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json'])
-
-        # Authentication setting
-        auth_settings = []
-
-        return self.api_client.call_api(resource_path, 'GET',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='RecipientNamesResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

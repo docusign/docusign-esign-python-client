@@ -10380,6 +10380,7 @@ class EnvelopesApi(object):
         :param str include_agreement_type:
         :param str include_docgen_formfields:
         :param str include_document_size:
+        :param str include_is_edited:
         :param str include_metadata:
         :param str include_tabs:
         :param str recipient_id:
@@ -10415,6 +10416,7 @@ class EnvelopesApi(object):
         :param str include_agreement_type:
         :param str include_docgen_formfields:
         :param str include_document_size:
+        :param str include_is_edited:
         :param str include_metadata:
         :param str include_tabs:
         :param str recipient_id:
@@ -10424,7 +10426,7 @@ class EnvelopesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'envelope_id', 'documents_by_userid', 'include_agreement_type', 'include_docgen_formfields', 'include_document_size', 'include_metadata', 'include_tabs', 'recipient_id', 'shared_user_id']
+        all_params = ['account_id', 'envelope_id', 'documents_by_userid', 'include_agreement_type', 'include_docgen_formfields', 'include_document_size', 'include_is_edited', 'include_metadata', 'include_tabs', 'recipient_id', 'shared_user_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10465,6 +10467,8 @@ class EnvelopesApi(object):
             query_params['include_docgen_formfields'] = params['include_docgen_formfields']
         if 'include_document_size' in params:
             query_params['include_document_size'] = params['include_document_size']
+        if 'include_is_edited' in params:
+            query_params['include_is_edited'] = params['include_is_edited']
         if 'include_metadata' in params:
             query_params['include_metadata'] = params['include_metadata']
         if 'include_tabs' in params:

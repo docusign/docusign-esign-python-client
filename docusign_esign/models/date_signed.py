@@ -116,6 +116,7 @@ class DateSigned(object):
         'template_locked_metadata': 'PropertyMetadata',
         'template_required': 'str',
         'template_required_metadata': 'PropertyMetadata',
+        'timestamp_standardized': 'str',
         'tooltip': 'str',
         'tool_tip_metadata': 'PropertyMetadata',
         'underline': 'str',
@@ -215,6 +216,7 @@ class DateSigned(object):
         'template_locked_metadata': 'templateLockedMetadata',
         'template_required': 'templateRequired',
         'template_required_metadata': 'templateRequiredMetadata',
+        'timestamp_standardized': 'timestampStandardized',
         'tooltip': 'tooltip',
         'tool_tip_metadata': 'toolTipMetadata',
         'underline': 'underline',
@@ -319,6 +321,7 @@ class DateSigned(object):
         self._template_locked_metadata = None
         self._template_required = None
         self._template_required_metadata = None
+        self._timestamp_standardized = None
         self._tooltip = None
         self._tool_tip_metadata = None
         self._underline = None
@@ -417,6 +420,7 @@ class DateSigned(object):
         setattr(self, "_{}".format('template_locked_metadata'), kwargs.get('template_locked_metadata', None))
         setattr(self, "_{}".format('template_required'), kwargs.get('template_required', None))
         setattr(self, "_{}".format('template_required_metadata'), kwargs.get('template_required_metadata', None))
+        setattr(self, "_{}".format('timestamp_standardized'), kwargs.get('timestamp_standardized', None))
         setattr(self, "_{}".format('tooltip'), kwargs.get('tooltip', None))
         setattr(self, "_{}".format('tool_tip_metadata'), kwargs.get('tool_tip_metadata', None))
         setattr(self, "_{}".format('underline'), kwargs.get('underline', None))
@@ -2339,6 +2343,29 @@ class DateSigned(object):
         """
 
         self._template_required_metadata = template_required_metadata
+
+    @property
+    def timestamp_standardized(self):
+        """Gets the timestamp_standardized of this DateSigned.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The timestamp_standardized of this DateSigned.  # noqa: E501
+        :rtype: str
+        """
+        return self._timestamp_standardized
+
+    @timestamp_standardized.setter
+    def timestamp_standardized(self, timestamp_standardized):
+        """Sets the timestamp_standardized of this DateSigned.
+
+          # noqa: E501
+
+        :param timestamp_standardized: The timestamp_standardized of this DateSigned.  # noqa: E501
+        :type: str
+        """
+
+        self._timestamp_standardized = timestamp_standardized
 
     @property
     def tooltip(self):
