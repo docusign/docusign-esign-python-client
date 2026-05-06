@@ -36,14 +36,16 @@ class Reminders(object):
         'maximum_reminder_count': 'str',
         'reminder_delay': 'str',
         'reminder_enabled': 'str',
-        'reminder_frequency': 'str'
+        'reminder_frequency': 'str',
+        'smart_reminder_enabled': 'str'
     }
 
     attribute_map = {
         'maximum_reminder_count': 'maximumReminderCount',
         'reminder_delay': 'reminderDelay',
         'reminder_enabled': 'reminderEnabled',
-        'reminder_frequency': 'reminderFrequency'
+        'reminder_frequency': 'reminderFrequency',
+        'smart_reminder_enabled': 'smartReminderEnabled'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -56,12 +58,14 @@ class Reminders(object):
         self._reminder_delay = None
         self._reminder_enabled = None
         self._reminder_frequency = None
+        self._smart_reminder_enabled = None
         self.discriminator = None
 
         setattr(self, "_{}".format('maximum_reminder_count'), kwargs.get('maximum_reminder_count', None))
         setattr(self, "_{}".format('reminder_delay'), kwargs.get('reminder_delay', None))
         setattr(self, "_{}".format('reminder_enabled'), kwargs.get('reminder_enabled', None))
         setattr(self, "_{}".format('reminder_frequency'), kwargs.get('reminder_frequency', None))
+        setattr(self, "_{}".format('smart_reminder_enabled'), kwargs.get('smart_reminder_enabled', None))
 
     @property
     def maximum_reminder_count(self):
@@ -154,6 +158,29 @@ class Reminders(object):
         """
 
         self._reminder_frequency = reminder_frequency
+
+    @property
+    def smart_reminder_enabled(self):
+        """Gets the smart_reminder_enabled of this Reminders.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The smart_reminder_enabled of this Reminders.  # noqa: E501
+        :rtype: str
+        """
+        return self._smart_reminder_enabled
+
+    @smart_reminder_enabled.setter
+    def smart_reminder_enabled(self, smart_reminder_enabled):
+        """Sets the smart_reminder_enabled of this Reminders.
+
+          # noqa: E501
+
+        :param smart_reminder_enabled: The smart_reminder_enabled of this Reminders.  # noqa: E501
+        :type: str
+        """
+
+        self._smart_reminder_enabled = smart_reminder_enabled
 
     def to_dict(self):
         """Returns the model properties as a dict"""

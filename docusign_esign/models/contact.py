@@ -33,6 +33,7 @@ class Contact(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'can_manage': 'str',
         'cloud_provider': 'str',
         'cloud_provider_container_id': 'str',
         'contact_id': 'str',
@@ -51,6 +52,7 @@ class Contact(object):
     }
 
     attribute_map = {
+        'can_manage': 'canManage',
         'cloud_provider': 'cloudProvider',
         'cloud_provider_container_id': 'cloudProviderContainerId',
         'contact_id': 'contactId',
@@ -74,6 +76,7 @@ class Contact(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._can_manage = None
         self._cloud_provider = None
         self._cloud_provider_container_id = None
         self._contact_id = None
@@ -91,6 +94,7 @@ class Contact(object):
         self._signing_group_name = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('can_manage'), kwargs.get('can_manage', None))
         setattr(self, "_{}".format('cloud_provider'), kwargs.get('cloud_provider', None))
         setattr(self, "_{}".format('cloud_provider_container_id'), kwargs.get('cloud_provider_container_id', None))
         setattr(self, "_{}".format('contact_id'), kwargs.get('contact_id', None))
@@ -106,6 +110,29 @@ class Contact(object):
         setattr(self, "_{}".format('shared'), kwargs.get('shared', None))
         setattr(self, "_{}".format('signing_group'), kwargs.get('signing_group', None))
         setattr(self, "_{}".format('signing_group_name'), kwargs.get('signing_group_name', None))
+
+    @property
+    def can_manage(self):
+        """Gets the can_manage of this Contact.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_manage of this Contact.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_manage
+
+    @can_manage.setter
+    def can_manage(self, can_manage):
+        """Sets the can_manage of this Contact.
+
+          # noqa: E501
+
+        :param can_manage: The can_manage of this Contact.  # noqa: E501
+        :type: str
+        """
+
+        self._can_manage = can_manage
 
     @property
     def cloud_provider(self):

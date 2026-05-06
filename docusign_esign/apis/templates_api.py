@@ -3972,6 +3972,7 @@ class TemplatesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str template_id: The ID of the template being accessed. (required)
         :param str include_agreement_type:
+        :param str include_is_edited:
         :param str include_tabs:
         :return: TemplateDocumentsResult
                  If the method is called asynchronously,
@@ -4001,13 +4002,14 @@ class TemplatesApi(object):
         :param str account_id: The external account number (int) or account ID Guid. (required)
         :param str template_id: The ID of the template being accessed. (required)
         :param str include_agreement_type:
+        :param str include_is_edited:
         :param str include_tabs:
         :return: TemplateDocumentsResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'template_id', 'include_agreement_type', 'include_tabs']
+        all_params = ['account_id', 'template_id', 'include_agreement_type', 'include_is_edited', 'include_tabs']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4042,6 +4044,8 @@ class TemplatesApi(object):
         query_params = {}
         if 'include_agreement_type' in params:
             query_params['include_agreement_type'] = params['include_agreement_type']
+        if 'include_is_edited' in params:
+            query_params['include_is_edited'] = params['include_is_edited']
         if 'include_tabs' in params:
             query_params['include_tabs'] = params['include_tabs']
 
@@ -4344,6 +4348,7 @@ class TemplatesApi(object):
         :param str include: A comma separated list of additional template attributes to include in the response. Valid values are: recipients, folders, documents, custom_fields, and notifications.
         :param str is_deleted_template_only:
         :param str is_download:
+        :param str link_configuration_id:
         :param str modified_from_date:
         :param str modified_to_date:
         :param str order: Sets the direction order used to sort the list. Valid values are: -asc = ascending sort order (a to z)  -desc = descending sort order (z to a)
@@ -4393,6 +4398,7 @@ class TemplatesApi(object):
         :param str include: A comma separated list of additional template attributes to include in the response. Valid values are: recipients, folders, documents, custom_fields, and notifications.
         :param str is_deleted_template_only:
         :param str is_download:
+        :param str link_configuration_id:
         :param str modified_from_date:
         :param str modified_to_date:
         :param str order: Sets the direction order used to sort the list. Valid values are: -asc = ascending sort order (a to z)  -desc = descending sort order (z to a)
@@ -4412,7 +4418,7 @@ class TemplatesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['account_id', 'count', 'created_from_date', 'created_to_date', 'folder_ids', 'folder_types', 'from_date', 'include', 'is_deleted_template_only', 'is_download', 'modified_from_date', 'modified_to_date', 'order', 'order_by', 'search_fields', 'search_text', 'shared_by_me', 'start_position', 'template_ids', 'to_date', 'used_from_date', 'used_to_date', 'user_filter', 'user_id']
+        all_params = ['account_id', 'count', 'created_from_date', 'created_to_date', 'folder_ids', 'folder_types', 'from_date', 'include', 'is_deleted_template_only', 'is_download', 'link_configuration_id', 'modified_from_date', 'modified_to_date', 'order', 'order_by', 'search_fields', 'search_text', 'shared_by_me', 'start_position', 'template_ids', 'to_date', 'used_from_date', 'used_to_date', 'user_filter', 'user_id']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4458,6 +4464,8 @@ class TemplatesApi(object):
             query_params['is_deleted_template_only'] = params['is_deleted_template_only']
         if 'is_download' in params:
             query_params['is_download'] = params['is_download']
+        if 'link_configuration_id' in params:
+            query_params['link_configuration_id'] = params['link_configuration_id']
         if 'modified_from_date' in params:
             query_params['modified_from_date'] = params['modified_from_date']
         if 'modified_to_date' in params:

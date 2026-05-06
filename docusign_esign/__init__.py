@@ -442,7 +442,6 @@ from docusign_esign.models.recipient_group import RecipientGroup
 from docusign_esign.models.recipient_identity_input_option import RecipientIdentityInputOption
 from docusign_esign.models.recipient_identity_phone_number import RecipientIdentityPhoneNumber
 from docusign_esign.models.recipient_identity_verification import RecipientIdentityVerification
-from docusign_esign.models.recipient_names_response import RecipientNamesResponse
 from docusign_esign.models.recipient_option import RecipientOption
 from docusign_esign.models.recipient_phone_authentication import RecipientPhoneAuthentication
 from docusign_esign.models.recipient_phone_number import RecipientPhoneNumber
@@ -467,6 +466,7 @@ from docusign_esign.models.seal_identifier import SealIdentifier
 from docusign_esign.models.seal_sign import SealSign
 from docusign_esign.models.seat_discount import SeatDiscount
 from docusign_esign.models.sender_company import SenderCompany
+from docusign_esign.models.sender_completion_info import SenderCompletionInfo
 from docusign_esign.models.sender_email_notifications import SenderEmailNotifications
 from docusign_esign.models.sender_name import SenderName
 from docusign_esign.models.server_template import ServerTemplate
@@ -507,6 +507,8 @@ from docusign_esign.models.tab_metadata_list import TabMetadataList
 from docusign_esign.models.tabs import Tabs
 from docusign_esign.models.template_auto_match import TemplateAutoMatch
 from docusign_esign.models.template_auto_match_list import TemplateAutoMatchList
+from docusign_esign.models.template_completion_info import TemplateCompletionInfo
+from docusign_esign.models.template_completion_rate_response import TemplateCompletionRateResponse
 from docusign_esign.models.template_custom_fields import TemplateCustomFields
 from docusign_esign.models.template_document_visibility_list import TemplateDocumentVisibilityList
 from docusign_esign.models.template_documents_result import TemplateDocumentsResult
@@ -538,6 +540,7 @@ from docusign_esign.models.user_authorizations_delete_request import UserAuthori
 from docusign_esign.models.user_authorizations_delete_response import UserAuthorizationsDeleteResponse
 from docusign_esign.models.user_authorizations_request import UserAuthorizationsRequest
 from docusign_esign.models.user_authorizations_response import UserAuthorizationsResponse
+from docusign_esign.models.user_completion_rate_response import UserCompletionRateResponse
 from docusign_esign.models.user_info import UserInfo
 from docusign_esign.models.user_info_list import UserInfoList
 from docusign_esign.models.user_information import UserInformation

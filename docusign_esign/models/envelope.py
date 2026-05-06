@@ -106,7 +106,6 @@ class Envelope(object):
         'signing_location': 'str',
         'status': 'str',
         'status_changed_date_time': 'str',
-        'status_date_time': 'str',
         'templates_uri': 'str',
         'transaction_id': 'str',
         'use_disclosure': 'str',
@@ -190,7 +189,6 @@ class Envelope(object):
         'signing_location': 'signingLocation',
         'status': 'status',
         'status_changed_date_time': 'statusChangedDateTime',
-        'status_date_time': 'statusDateTime',
         'templates_uri': 'templatesUri',
         'transaction_id': 'transactionId',
         'use_disclosure': 'useDisclosure',
@@ -279,7 +277,6 @@ class Envelope(object):
         self._signing_location = None
         self._status = None
         self._status_changed_date_time = None
-        self._status_date_time = None
         self._templates_uri = None
         self._transaction_id = None
         self._use_disclosure = None
@@ -362,7 +359,6 @@ class Envelope(object):
         setattr(self, "_{}".format('signing_location'), kwargs.get('signing_location', None))
         setattr(self, "_{}".format('status'), kwargs.get('status', None))
         setattr(self, "_{}".format('status_changed_date_time'), kwargs.get('status_changed_date_time', None))
-        setattr(self, "_{}".format('status_date_time'), kwargs.get('status_date_time', None))
         setattr(self, "_{}".format('templates_uri'), kwargs.get('templates_uri', None))
         setattr(self, "_{}".format('transaction_id'), kwargs.get('transaction_id', None))
         setattr(self, "_{}".format('use_disclosure'), kwargs.get('use_disclosure', None))
@@ -2049,29 +2045,6 @@ class Envelope(object):
         """
 
         self._status_changed_date_time = status_changed_date_time
-
-    @property
-    def status_date_time(self):
-        """Gets the status_date_time of this Envelope.  # noqa: E501
-
-          # noqa: E501
-
-        :return: The status_date_time of this Envelope.  # noqa: E501
-        :rtype: str
-        """
-        return self._status_date_time
-
-    @status_date_time.setter
-    def status_date_time(self, status_date_time):
-        """Sets the status_date_time of this Envelope.
-
-          # noqa: E501
-
-        :param status_date_time: The status_date_time of this Envelope.  # noqa: E501
-        :type: str
-        """
-
-        self._status_date_time = status_date_time
 
     @property
     def templates_uri(self):

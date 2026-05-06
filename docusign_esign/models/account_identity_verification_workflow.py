@@ -35,6 +35,7 @@ class AccountIdentityVerificationWorkflow(object):
     swagger_types = {
         'default_description': 'str',
         'default_name': 'str',
+        'display_order': 'str',
         'input_options': 'list[AccountIdentityInputOption]',
         'is_disabled': 'str',
         'owner_type': 'str',
@@ -48,6 +49,7 @@ class AccountIdentityVerificationWorkflow(object):
     attribute_map = {
         'default_description': 'defaultDescription',
         'default_name': 'defaultName',
+        'display_order': 'displayOrder',
         'input_options': 'inputOptions',
         'is_disabled': 'isDisabled',
         'owner_type': 'ownerType',
@@ -66,6 +68,7 @@ class AccountIdentityVerificationWorkflow(object):
 
         self._default_description = None
         self._default_name = None
+        self._display_order = None
         self._input_options = None
         self._is_disabled = None
         self._owner_type = None
@@ -78,6 +81,7 @@ class AccountIdentityVerificationWorkflow(object):
 
         setattr(self, "_{}".format('default_description'), kwargs.get('default_description', None))
         setattr(self, "_{}".format('default_name'), kwargs.get('default_name', None))
+        setattr(self, "_{}".format('display_order'), kwargs.get('display_order', None))
         setattr(self, "_{}".format('input_options'), kwargs.get('input_options', None))
         setattr(self, "_{}".format('is_disabled'), kwargs.get('is_disabled', None))
         setattr(self, "_{}".format('owner_type'), kwargs.get('owner_type', None))
@@ -132,6 +136,29 @@ class AccountIdentityVerificationWorkflow(object):
         """
 
         self._default_name = default_name
+
+    @property
+    def display_order(self):
+        """Gets the display_order of this AccountIdentityVerificationWorkflow.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The display_order of this AccountIdentityVerificationWorkflow.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_order
+
+    @display_order.setter
+    def display_order(self, display_order):
+        """Sets the display_order of this AccountIdentityVerificationWorkflow.
+
+          # noqa: E501
+
+        :param display_order: The display_order of this AccountIdentityVerificationWorkflow.  # noqa: E501
+        :type: str
+        """
+
+        self._display_order = display_order
 
     @property
     def input_options(self):

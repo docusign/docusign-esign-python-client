@@ -410,6 +410,8 @@ class AccountSettingsInformation(object):
         'enable_batch_update_envelope_types_metadata': 'SettingsMetadata',
         'enable_bcc_dummy_link': 'str',
         'enable_bcc_dummy_link_metadata': 'SettingsMetadata',
+        'enable_cac_piv_signature_group': 'str',
+        'enable_cac_piv_signature_group_metadata': 'SettingsMetadata',
         'enable_calculated_fields': 'str',
         'enable_calculated_fields_metadata': 'SettingsMetadata',
         'enable_cfr_rapid_signing_embedded_auth': 'str',
@@ -435,6 +437,8 @@ class AccountSettingsInformation(object):
         'enable_content_search_metadata': 'SettingsMetadata',
         'enable_coupa_core_extension': 'str',
         'enable_coupa_core_extension_metadata': 'SettingsMetadata',
+        'enable_coupa_iam_connector': 'str',
+        'enable_coupa_iam_connector_metadata': 'SettingsMetadata',
         'enable_custom_data_verification_extensions': 'str',
         'enable_custom_data_verification_extensions_metadata': 'SettingsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'str',
@@ -476,6 +480,12 @@ class AccountSettingsInformation(object):
         'enable_esign_task_list_metadata': 'SettingsMetadata',
         'enable_generation_with3_p_integration': 'str',
         'enable_generation_with3_p_integration_meta_data': 'SettingsMetadata',
+        'enable_greenhouse_app': 'str',
+        'enable_greenhouse_app_metadata': 'SettingsMetadata',
+        'enable_i9_on_demand': 'str',
+        'enable_i9_on_demand_metadata': 'SettingsMetadata',
+        'enable_iam_clause_library': 'str',
+        'enable_iam_clause_library_metadata': 'SettingsMetadata',
         'enable_id_fx_accountless_sms_auth_for_part11': 'str',
         'enable_id_fx_accountless_sms_auth_for_part11_metadata': 'SettingsMetadata',
         'enable_id_fx_intuit_kba': 'str',
@@ -608,6 +618,8 @@ class AccountSettingsInformation(object):
         'enable_witnessing_metadata': 'SettingsMetadata',
         'enable_workday_financials_extension': 'str',
         'enable_workday_financials_extension_meta_data': 'SettingsMetadata',
+        'enable_workday_hr_app': 'str',
+        'enable_workday_hr_app_metadata': 'SettingsMetadata',
         'enforce_template_name_uniqueness': 'str',
         'enforce_template_name_uniqueness_metadata': 'SettingsMetadata',
         'enforce_tls_emails': 'str',
@@ -1256,6 +1268,8 @@ class AccountSettingsInformation(object):
         'enable_batch_update_envelope_types_metadata': 'enableBatchUpdateEnvelopeTypesMetadata',
         'enable_bcc_dummy_link': 'enableBccDummyLink',
         'enable_bcc_dummy_link_metadata': 'enableBccDummyLinkMetadata',
+        'enable_cac_piv_signature_group': 'enableCacPivSignatureGroup',
+        'enable_cac_piv_signature_group_metadata': 'enableCacPivSignatureGroupMetadata',
         'enable_calculated_fields': 'enableCalculatedFields',
         'enable_calculated_fields_metadata': 'enableCalculatedFieldsMetadata',
         'enable_cfr_rapid_signing_embedded_auth': 'enableCFRRapidSigningEmbeddedAuth',
@@ -1281,6 +1295,8 @@ class AccountSettingsInformation(object):
         'enable_content_search_metadata': 'enableContentSearchMetadata',
         'enable_coupa_core_extension': 'enableCoupaCoreExtension',
         'enable_coupa_core_extension_metadata': 'enableCoupaCoreExtensionMetadata',
+        'enable_coupa_iam_connector': 'enableCoupaIAMConnector',
+        'enable_coupa_iam_connector_metadata': 'enableCoupaIAMConnectorMetadata',
         'enable_custom_data_verification_extensions': 'enableCustomDataVerificationExtensions',
         'enable_custom_data_verification_extensions_metadata': 'enableCustomDataVerificationExtensionsMetadata',
         'enable_customer_satisfaction_metric_tracking': 'enableCustomerSatisfactionMetricTracking',
@@ -1322,6 +1338,12 @@ class AccountSettingsInformation(object):
         'enable_esign_task_list_metadata': 'enableEsignTaskListMetadata',
         'enable_generation_with3_p_integration': 'enableGenerationWith3PIntegration',
         'enable_generation_with3_p_integration_meta_data': 'enableGenerationWith3PIntegrationMetaData',
+        'enable_greenhouse_app': 'enableGreenhouseApp',
+        'enable_greenhouse_app_metadata': 'enableGreenhouseAppMetadata',
+        'enable_i9_on_demand': 'enableI9OnDemand',
+        'enable_i9_on_demand_metadata': 'enableI9OnDemandMetadata',
+        'enable_iam_clause_library': 'enableIAMClauseLibrary',
+        'enable_iam_clause_library_metadata': 'enableIAMClauseLibraryMetadata',
         'enable_id_fx_accountless_sms_auth_for_part11': 'enableIDFxAccountlessSMSAuthForPart11',
         'enable_id_fx_accountless_sms_auth_for_part11_metadata': 'enableIDFxAccountlessSMSAuthForPart11Metadata',
         'enable_id_fx_intuit_kba': 'enableIDFxIntuitKBA',
@@ -1454,6 +1476,8 @@ class AccountSettingsInformation(object):
         'enable_witnessing_metadata': 'enableWitnessingMetadata',
         'enable_workday_financials_extension': 'enableWorkdayFinancialsExtension',
         'enable_workday_financials_extension_meta_data': 'enableWorkdayFinancialsExtensionMetaData',
+        'enable_workday_hr_app': 'enableWorkdayHRApp',
+        'enable_workday_hr_app_metadata': 'enableWorkdayHRAppMetadata',
         'enforce_template_name_uniqueness': 'enforceTemplateNameUniqueness',
         'enforce_template_name_uniqueness_metadata': 'enforceTemplateNameUniquenessMetadata',
         'enforce_tls_emails': 'enforceTlsEmails',
@@ -2107,6 +2131,8 @@ class AccountSettingsInformation(object):
         self._enable_batch_update_envelope_types_metadata = None
         self._enable_bcc_dummy_link = None
         self._enable_bcc_dummy_link_metadata = None
+        self._enable_cac_piv_signature_group = None
+        self._enable_cac_piv_signature_group_metadata = None
         self._enable_calculated_fields = None
         self._enable_calculated_fields_metadata = None
         self._enable_cfr_rapid_signing_embedded_auth = None
@@ -2132,6 +2158,8 @@ class AccountSettingsInformation(object):
         self._enable_content_search_metadata = None
         self._enable_coupa_core_extension = None
         self._enable_coupa_core_extension_metadata = None
+        self._enable_coupa_iam_connector = None
+        self._enable_coupa_iam_connector_metadata = None
         self._enable_custom_data_verification_extensions = None
         self._enable_custom_data_verification_extensions_metadata = None
         self._enable_customer_satisfaction_metric_tracking = None
@@ -2173,6 +2201,12 @@ class AccountSettingsInformation(object):
         self._enable_esign_task_list_metadata = None
         self._enable_generation_with3_p_integration = None
         self._enable_generation_with3_p_integration_meta_data = None
+        self._enable_greenhouse_app = None
+        self._enable_greenhouse_app_metadata = None
+        self._enable_i9_on_demand = None
+        self._enable_i9_on_demand_metadata = None
+        self._enable_iam_clause_library = None
+        self._enable_iam_clause_library_metadata = None
         self._enable_id_fx_accountless_sms_auth_for_part11 = None
         self._enable_id_fx_accountless_sms_auth_for_part11_metadata = None
         self._enable_id_fx_intuit_kba = None
@@ -2305,6 +2339,8 @@ class AccountSettingsInformation(object):
         self._enable_witnessing_metadata = None
         self._enable_workday_financials_extension = None
         self._enable_workday_financials_extension_meta_data = None
+        self._enable_workday_hr_app = None
+        self._enable_workday_hr_app_metadata = None
         self._enforce_template_name_uniqueness = None
         self._enforce_template_name_uniqueness_metadata = None
         self._enforce_tls_emails = None
@@ -2952,6 +2988,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_batch_update_envelope_types_metadata'), kwargs.get('enable_batch_update_envelope_types_metadata', None))
         setattr(self, "_{}".format('enable_bcc_dummy_link'), kwargs.get('enable_bcc_dummy_link', None))
         setattr(self, "_{}".format('enable_bcc_dummy_link_metadata'), kwargs.get('enable_bcc_dummy_link_metadata', None))
+        setattr(self, "_{}".format('enable_cac_piv_signature_group'), kwargs.get('enable_cac_piv_signature_group', None))
+        setattr(self, "_{}".format('enable_cac_piv_signature_group_metadata'), kwargs.get('enable_cac_piv_signature_group_metadata', None))
         setattr(self, "_{}".format('enable_calculated_fields'), kwargs.get('enable_calculated_fields', None))
         setattr(self, "_{}".format('enable_calculated_fields_metadata'), kwargs.get('enable_calculated_fields_metadata', None))
         setattr(self, "_{}".format('enable_cfr_rapid_signing_embedded_auth'), kwargs.get('enable_cfr_rapid_signing_embedded_auth', None))
@@ -2977,6 +3015,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_content_search_metadata'), kwargs.get('enable_content_search_metadata', None))
         setattr(self, "_{}".format('enable_coupa_core_extension'), kwargs.get('enable_coupa_core_extension', None))
         setattr(self, "_{}".format('enable_coupa_core_extension_metadata'), kwargs.get('enable_coupa_core_extension_metadata', None))
+        setattr(self, "_{}".format('enable_coupa_iam_connector'), kwargs.get('enable_coupa_iam_connector', None))
+        setattr(self, "_{}".format('enable_coupa_iam_connector_metadata'), kwargs.get('enable_coupa_iam_connector_metadata', None))
         setattr(self, "_{}".format('enable_custom_data_verification_extensions'), kwargs.get('enable_custom_data_verification_extensions', None))
         setattr(self, "_{}".format('enable_custom_data_verification_extensions_metadata'), kwargs.get('enable_custom_data_verification_extensions_metadata', None))
         setattr(self, "_{}".format('enable_customer_satisfaction_metric_tracking'), kwargs.get('enable_customer_satisfaction_metric_tracking', None))
@@ -3018,6 +3058,12 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_esign_task_list_metadata'), kwargs.get('enable_esign_task_list_metadata', None))
         setattr(self, "_{}".format('enable_generation_with3_p_integration'), kwargs.get('enable_generation_with3_p_integration', None))
         setattr(self, "_{}".format('enable_generation_with3_p_integration_meta_data'), kwargs.get('enable_generation_with3_p_integration_meta_data', None))
+        setattr(self, "_{}".format('enable_greenhouse_app'), kwargs.get('enable_greenhouse_app', None))
+        setattr(self, "_{}".format('enable_greenhouse_app_metadata'), kwargs.get('enable_greenhouse_app_metadata', None))
+        setattr(self, "_{}".format('enable_i9_on_demand'), kwargs.get('enable_i9_on_demand', None))
+        setattr(self, "_{}".format('enable_i9_on_demand_metadata'), kwargs.get('enable_i9_on_demand_metadata', None))
+        setattr(self, "_{}".format('enable_iam_clause_library'), kwargs.get('enable_iam_clause_library', None))
+        setattr(self, "_{}".format('enable_iam_clause_library_metadata'), kwargs.get('enable_iam_clause_library_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_accountless_sms_auth_for_part11'), kwargs.get('enable_id_fx_accountless_sms_auth_for_part11', None))
         setattr(self, "_{}".format('enable_id_fx_accountless_sms_auth_for_part11_metadata'), kwargs.get('enable_id_fx_accountless_sms_auth_for_part11_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_intuit_kba'), kwargs.get('enable_id_fx_intuit_kba', None))
@@ -3150,6 +3196,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_witnessing_metadata'), kwargs.get('enable_witnessing_metadata', None))
         setattr(self, "_{}".format('enable_workday_financials_extension'), kwargs.get('enable_workday_financials_extension', None))
         setattr(self, "_{}".format('enable_workday_financials_extension_meta_data'), kwargs.get('enable_workday_financials_extension_meta_data', None))
+        setattr(self, "_{}".format('enable_workday_hr_app'), kwargs.get('enable_workday_hr_app', None))
+        setattr(self, "_{}".format('enable_workday_hr_app_metadata'), kwargs.get('enable_workday_hr_app_metadata', None))
         setattr(self, "_{}".format('enforce_template_name_uniqueness'), kwargs.get('enforce_template_name_uniqueness', None))
         setattr(self, "_{}".format('enforce_template_name_uniqueness_metadata'), kwargs.get('enforce_template_name_uniqueness_metadata', None))
         setattr(self, "_{}".format('enforce_tls_emails'), kwargs.get('enforce_tls_emails', None))
@@ -12091,6 +12139,52 @@ class AccountSettingsInformation(object):
         self._enable_bcc_dummy_link_metadata = enable_bcc_dummy_link_metadata
 
     @property
+    def enable_cac_piv_signature_group(self):
+        """Gets the enable_cac_piv_signature_group of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_cac_piv_signature_group of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_cac_piv_signature_group
+
+    @enable_cac_piv_signature_group.setter
+    def enable_cac_piv_signature_group(self, enable_cac_piv_signature_group):
+        """Sets the enable_cac_piv_signature_group of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_cac_piv_signature_group: The enable_cac_piv_signature_group of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_cac_piv_signature_group = enable_cac_piv_signature_group
+
+    @property
+    def enable_cac_piv_signature_group_metadata(self):
+        """Gets the enable_cac_piv_signature_group_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_cac_piv_signature_group_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_cac_piv_signature_group_metadata
+
+    @enable_cac_piv_signature_group_metadata.setter
+    def enable_cac_piv_signature_group_metadata(self, enable_cac_piv_signature_group_metadata):
+        """Sets the enable_cac_piv_signature_group_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_cac_piv_signature_group_metadata: The enable_cac_piv_signature_group_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_cac_piv_signature_group_metadata = enable_cac_piv_signature_group_metadata
+
+    @property
     def enable_calculated_fields(self):
         """Gets the enable_calculated_fields of this AccountSettingsInformation.  # noqa: E501
 
@@ -12664,6 +12758,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_coupa_core_extension_metadata = enable_coupa_core_extension_metadata
+
+    @property
+    def enable_coupa_iam_connector(self):
+        """Gets the enable_coupa_iam_connector of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_coupa_iam_connector of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_coupa_iam_connector
+
+    @enable_coupa_iam_connector.setter
+    def enable_coupa_iam_connector(self, enable_coupa_iam_connector):
+        """Sets the enable_coupa_iam_connector of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_coupa_iam_connector: The enable_coupa_iam_connector of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_coupa_iam_connector = enable_coupa_iam_connector
+
+    @property
+    def enable_coupa_iam_connector_metadata(self):
+        """Gets the enable_coupa_iam_connector_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_coupa_iam_connector_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_coupa_iam_connector_metadata
+
+    @enable_coupa_iam_connector_metadata.setter
+    def enable_coupa_iam_connector_metadata(self, enable_coupa_iam_connector_metadata):
+        """Sets the enable_coupa_iam_connector_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_coupa_iam_connector_metadata: The enable_coupa_iam_connector_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_coupa_iam_connector_metadata = enable_coupa_iam_connector_metadata
 
     @property
     def enable_custom_data_verification_extensions(self):
@@ -13607,6 +13747,144 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_generation_with3_p_integration_meta_data = enable_generation_with3_p_integration_meta_data
+
+    @property
+    def enable_greenhouse_app(self):
+        """Gets the enable_greenhouse_app of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_greenhouse_app of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_greenhouse_app
+
+    @enable_greenhouse_app.setter
+    def enable_greenhouse_app(self, enable_greenhouse_app):
+        """Sets the enable_greenhouse_app of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_greenhouse_app: The enable_greenhouse_app of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_greenhouse_app = enable_greenhouse_app
+
+    @property
+    def enable_greenhouse_app_metadata(self):
+        """Gets the enable_greenhouse_app_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_greenhouse_app_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_greenhouse_app_metadata
+
+    @enable_greenhouse_app_metadata.setter
+    def enable_greenhouse_app_metadata(self, enable_greenhouse_app_metadata):
+        """Sets the enable_greenhouse_app_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_greenhouse_app_metadata: The enable_greenhouse_app_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_greenhouse_app_metadata = enable_greenhouse_app_metadata
+
+    @property
+    def enable_i9_on_demand(self):
+        """Gets the enable_i9_on_demand of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_i9_on_demand of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_i9_on_demand
+
+    @enable_i9_on_demand.setter
+    def enable_i9_on_demand(self, enable_i9_on_demand):
+        """Sets the enable_i9_on_demand of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_i9_on_demand: The enable_i9_on_demand of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_i9_on_demand = enable_i9_on_demand
+
+    @property
+    def enable_i9_on_demand_metadata(self):
+        """Gets the enable_i9_on_demand_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_i9_on_demand_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_i9_on_demand_metadata
+
+    @enable_i9_on_demand_metadata.setter
+    def enable_i9_on_demand_metadata(self, enable_i9_on_demand_metadata):
+        """Sets the enable_i9_on_demand_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_i9_on_demand_metadata: The enable_i9_on_demand_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_i9_on_demand_metadata = enable_i9_on_demand_metadata
+
+    @property
+    def enable_iam_clause_library(self):
+        """Gets the enable_iam_clause_library of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_iam_clause_library of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_iam_clause_library
+
+    @enable_iam_clause_library.setter
+    def enable_iam_clause_library(self, enable_iam_clause_library):
+        """Sets the enable_iam_clause_library of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_iam_clause_library: The enable_iam_clause_library of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_iam_clause_library = enable_iam_clause_library
+
+    @property
+    def enable_iam_clause_library_metadata(self):
+        """Gets the enable_iam_clause_library_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_iam_clause_library_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_iam_clause_library_metadata
+
+    @enable_iam_clause_library_metadata.setter
+    def enable_iam_clause_library_metadata(self, enable_iam_clause_library_metadata):
+        """Sets the enable_iam_clause_library_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_iam_clause_library_metadata: The enable_iam_clause_library_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_iam_clause_library_metadata = enable_iam_clause_library_metadata
 
     @property
     def enable_id_fx_accountless_sms_auth_for_part11(self):
@@ -16643,6 +16921,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_workday_financials_extension_meta_data = enable_workday_financials_extension_meta_data
+
+    @property
+    def enable_workday_hr_app(self):
+        """Gets the enable_workday_hr_app of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_workday_hr_app of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_workday_hr_app
+
+    @enable_workday_hr_app.setter
+    def enable_workday_hr_app(self, enable_workday_hr_app):
+        """Sets the enable_workday_hr_app of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_workday_hr_app: The enable_workday_hr_app of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_workday_hr_app = enable_workday_hr_app
+
+    @property
+    def enable_workday_hr_app_metadata(self):
+        """Gets the enable_workday_hr_app_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_workday_hr_app_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_workday_hr_app_metadata
+
+    @enable_workday_hr_app_metadata.setter
+    def enable_workday_hr_app_metadata(self, enable_workday_hr_app_metadata):
+        """Sets the enable_workday_hr_app_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_workday_hr_app_metadata: The enable_workday_hr_app_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_workday_hr_app_metadata = enable_workday_hr_app_metadata
 
     @property
     def enforce_template_name_uniqueness(self):
