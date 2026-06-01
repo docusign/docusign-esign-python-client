@@ -772,12 +772,19 @@ class SdkUnitTests(unittest.TestCase):
             recipients = envelopes_api.list_recipients(account_id=self.user_info.accounts[0].account_id,
                                                        envelope_id=created_envelope.envelope_id)
 
+            manager_signer = None
+            for signer in recipients.signers:
+                if signer.role_name == template_role_name:
+                    manager_signer = signer
+                    break
+
+            assert manager_signer is not None
+
             tabs = envelopes_api.list_tabs(account_id=self.user_info.accounts[0].account_id,
                                            envelope_id=created_envelope.envelope_id,
-                                           recipient_id=recipients.signers[2].recipient_id)
-            list_tabs = tabs.list_tabs
+                                           recipient_id=manager_signer.recipient_id)
 
-            assert list_tabs is not None
+            assert tabs is not None
 
         except ApiException as e:
             print("\nException when calling DocuSign API: %s" % e)

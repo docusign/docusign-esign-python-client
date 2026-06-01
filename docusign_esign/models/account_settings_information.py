@@ -42,6 +42,7 @@ class AccountSettingsInformation(object):
         'account_name_metadata': 'SettingsMetadata',
         'account_notification': 'AccountNotification',
         'account_ui_settings': 'AccountUISettings',
+        'additional_settings': 'list[AdditionalSetting]',
         'adopt_sig_config': 'str',
         'adopt_sig_config_metadata': 'SettingsMetadata',
         'advanced_correct': 'str',
@@ -52,6 +53,8 @@ class AccountSettingsInformation(object):
         'advanced_search_enable_template_id_field_metadata': 'SettingsMetadata',
         'advanced_search_enable_template_name_field': 'str',
         'advanced_search_enable_template_name_field_metadata': 'SettingsMetadata',
+        'ai_assisted_web_form_creation_level': 'str',
+        'ai_assisted_web_form_creation_level_metadata': 'SettingsMetadata',
         'allow_access_code_format': 'str',
         'allow_access_code_format_metadata': 'SettingsMetadata',
         'allow_account_management_granular': 'str',
@@ -486,6 +489,8 @@ class AccountSettingsInformation(object):
         'enable_i9_on_demand_metadata': 'SettingsMetadata',
         'enable_iam_clause_library': 'str',
         'enable_iam_clause_library_metadata': 'SettingsMetadata',
+        'enable_ia_mfor_x_embedded_ux': 'str',
+        'enable_ia_mfor_x_embedded_ux_metadata': 'SettingsMetadata',
         'enable_id_fx_accountless_sms_auth_for_part11': 'str',
         'enable_id_fx_accountless_sms_auth_for_part11_metadata': 'SettingsMetadata',
         'enable_id_fx_intuit_kba': 'str',
@@ -553,6 +558,8 @@ class AccountSettingsInformation(object):
         'enable_reserved_domain_metadata': 'SettingsMetadata',
         'enable_responsive_signing': 'str',
         'enable_responsive_signing_metadata': 'SettingsMetadata',
+        'enable_reviewer_events_setting': 'str',
+        'enable_reviewer_events_setting_metadata': 'SettingsMetadata',
         'enable_sap_ariba_extension': 'str',
         'enable_sap_ariba_extension_meta_data': 'SettingsMetadata',
         'enable_scheduled_release': 'str',
@@ -900,6 +907,7 @@ class AccountSettingsInformation(object):
         'account_name_metadata': 'accountNameMetadata',
         'account_notification': 'accountNotification',
         'account_ui_settings': 'accountUISettings',
+        'additional_settings': 'additionalSettings',
         'adopt_sig_config': 'adoptSigConfig',
         'adopt_sig_config_metadata': 'adoptSigConfigMetadata',
         'advanced_correct': 'advancedCorrect',
@@ -910,6 +918,8 @@ class AccountSettingsInformation(object):
         'advanced_search_enable_template_id_field_metadata': 'advancedSearchEnableTemplateIdFieldMetadata',
         'advanced_search_enable_template_name_field': 'advancedSearchEnableTemplateNameField',
         'advanced_search_enable_template_name_field_metadata': 'advancedSearchEnableTemplateNameFieldMetadata',
+        'ai_assisted_web_form_creation_level': 'aiAssistedWebFormCreationLevel',
+        'ai_assisted_web_form_creation_level_metadata': 'aiAssistedWebFormCreationLevelMetadata',
         'allow_access_code_format': 'allowAccessCodeFormat',
         'allow_access_code_format_metadata': 'allowAccessCodeFormatMetadata',
         'allow_account_management_granular': 'allowAccountManagementGranular',
@@ -1344,6 +1354,8 @@ class AccountSettingsInformation(object):
         'enable_i9_on_demand_metadata': 'enableI9OnDemandMetadata',
         'enable_iam_clause_library': 'enableIAMClauseLibrary',
         'enable_iam_clause_library_metadata': 'enableIAMClauseLibraryMetadata',
+        'enable_ia_mfor_x_embedded_ux': 'enableIAMforXEmbeddedUX',
+        'enable_ia_mfor_x_embedded_ux_metadata': 'enableIAMforXEmbeddedUXMetadata',
         'enable_id_fx_accountless_sms_auth_for_part11': 'enableIDFxAccountlessSMSAuthForPart11',
         'enable_id_fx_accountless_sms_auth_for_part11_metadata': 'enableIDFxAccountlessSMSAuthForPart11Metadata',
         'enable_id_fx_intuit_kba': 'enableIDFxIntuitKBA',
@@ -1411,6 +1423,8 @@ class AccountSettingsInformation(object):
         'enable_reserved_domain_metadata': 'enableReservedDomainMetadata',
         'enable_responsive_signing': 'enableResponsiveSigning',
         'enable_responsive_signing_metadata': 'enableResponsiveSigningMetadata',
+        'enable_reviewer_events_setting': 'enableReviewerEventsSetting',
+        'enable_reviewer_events_setting_metadata': 'enableReviewerEventsSettingMetadata',
         'enable_sap_ariba_extension': 'enableSAPAribaExtension',
         'enable_sap_ariba_extension_meta_data': 'enableSAPAribaExtensionMetaData',
         'enable_scheduled_release': 'enableScheduledRelease',
@@ -1763,6 +1777,7 @@ class AccountSettingsInformation(object):
         self._account_name_metadata = None
         self._account_notification = None
         self._account_ui_settings = None
+        self._additional_settings = None
         self._adopt_sig_config = None
         self._adopt_sig_config_metadata = None
         self._advanced_correct = None
@@ -1773,6 +1788,8 @@ class AccountSettingsInformation(object):
         self._advanced_search_enable_template_id_field_metadata = None
         self._advanced_search_enable_template_name_field = None
         self._advanced_search_enable_template_name_field_metadata = None
+        self._ai_assisted_web_form_creation_level = None
+        self._ai_assisted_web_form_creation_level_metadata = None
         self._allow_access_code_format = None
         self._allow_access_code_format_metadata = None
         self._allow_account_management_granular = None
@@ -2207,6 +2224,8 @@ class AccountSettingsInformation(object):
         self._enable_i9_on_demand_metadata = None
         self._enable_iam_clause_library = None
         self._enable_iam_clause_library_metadata = None
+        self._enable_ia_mfor_x_embedded_ux = None
+        self._enable_ia_mfor_x_embedded_ux_metadata = None
         self._enable_id_fx_accountless_sms_auth_for_part11 = None
         self._enable_id_fx_accountless_sms_auth_for_part11_metadata = None
         self._enable_id_fx_intuit_kba = None
@@ -2274,6 +2293,8 @@ class AccountSettingsInformation(object):
         self._enable_reserved_domain_metadata = None
         self._enable_responsive_signing = None
         self._enable_responsive_signing_metadata = None
+        self._enable_reviewer_events_setting = None
+        self._enable_reviewer_events_setting_metadata = None
         self._enable_sap_ariba_extension = None
         self._enable_sap_ariba_extension_meta_data = None
         self._enable_scheduled_release = None
@@ -2620,6 +2641,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('account_name_metadata'), kwargs.get('account_name_metadata', None))
         setattr(self, "_{}".format('account_notification'), kwargs.get('account_notification', None))
         setattr(self, "_{}".format('account_ui_settings'), kwargs.get('account_ui_settings', None))
+        setattr(self, "_{}".format('additional_settings'), kwargs.get('additional_settings', None))
         setattr(self, "_{}".format('adopt_sig_config'), kwargs.get('adopt_sig_config', None))
         setattr(self, "_{}".format('adopt_sig_config_metadata'), kwargs.get('adopt_sig_config_metadata', None))
         setattr(self, "_{}".format('advanced_correct'), kwargs.get('advanced_correct', None))
@@ -2630,6 +2652,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('advanced_search_enable_template_id_field_metadata'), kwargs.get('advanced_search_enable_template_id_field_metadata', None))
         setattr(self, "_{}".format('advanced_search_enable_template_name_field'), kwargs.get('advanced_search_enable_template_name_field', None))
         setattr(self, "_{}".format('advanced_search_enable_template_name_field_metadata'), kwargs.get('advanced_search_enable_template_name_field_metadata', None))
+        setattr(self, "_{}".format('ai_assisted_web_form_creation_level'), kwargs.get('ai_assisted_web_form_creation_level', None))
+        setattr(self, "_{}".format('ai_assisted_web_form_creation_level_metadata'), kwargs.get('ai_assisted_web_form_creation_level_metadata', None))
         setattr(self, "_{}".format('allow_access_code_format'), kwargs.get('allow_access_code_format', None))
         setattr(self, "_{}".format('allow_access_code_format_metadata'), kwargs.get('allow_access_code_format_metadata', None))
         setattr(self, "_{}".format('allow_account_management_granular'), kwargs.get('allow_account_management_granular', None))
@@ -3064,6 +3088,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_i9_on_demand_metadata'), kwargs.get('enable_i9_on_demand_metadata', None))
         setattr(self, "_{}".format('enable_iam_clause_library'), kwargs.get('enable_iam_clause_library', None))
         setattr(self, "_{}".format('enable_iam_clause_library_metadata'), kwargs.get('enable_iam_clause_library_metadata', None))
+        setattr(self, "_{}".format('enable_ia_mfor_x_embedded_ux'), kwargs.get('enable_ia_mfor_x_embedded_ux', None))
+        setattr(self, "_{}".format('enable_ia_mfor_x_embedded_ux_metadata'), kwargs.get('enable_ia_mfor_x_embedded_ux_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_accountless_sms_auth_for_part11'), kwargs.get('enable_id_fx_accountless_sms_auth_for_part11', None))
         setattr(self, "_{}".format('enable_id_fx_accountless_sms_auth_for_part11_metadata'), kwargs.get('enable_id_fx_accountless_sms_auth_for_part11_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_intuit_kba'), kwargs.get('enable_id_fx_intuit_kba', None))
@@ -3131,6 +3157,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_reserved_domain_metadata'), kwargs.get('enable_reserved_domain_metadata', None))
         setattr(self, "_{}".format('enable_responsive_signing'), kwargs.get('enable_responsive_signing', None))
         setattr(self, "_{}".format('enable_responsive_signing_metadata'), kwargs.get('enable_responsive_signing_metadata', None))
+        setattr(self, "_{}".format('enable_reviewer_events_setting'), kwargs.get('enable_reviewer_events_setting', None))
+        setattr(self, "_{}".format('enable_reviewer_events_setting_metadata'), kwargs.get('enable_reviewer_events_setting_metadata', None))
         setattr(self, "_{}".format('enable_sap_ariba_extension'), kwargs.get('enable_sap_ariba_extension', None))
         setattr(self, "_{}".format('enable_sap_ariba_extension_meta_data'), kwargs.get('enable_sap_ariba_extension_meta_data', None))
         setattr(self, "_{}".format('enable_scheduled_release'), kwargs.get('enable_scheduled_release', None))
@@ -3675,6 +3703,29 @@ class AccountSettingsInformation(object):
         self._account_ui_settings = account_ui_settings
 
     @property
+    def additional_settings(self):
+        """Gets the additional_settings of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The additional_settings of this AccountSettingsInformation.  # noqa: E501
+        :rtype: list[AdditionalSetting]
+        """
+        return self._additional_settings
+
+    @additional_settings.setter
+    def additional_settings(self, additional_settings):
+        """Sets the additional_settings of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param additional_settings: The additional_settings of this AccountSettingsInformation.  # noqa: E501
+        :type: list[AdditionalSetting]
+        """
+
+        self._additional_settings = additional_settings
+
+    @property
     def adopt_sig_config(self):
         """Gets the adopt_sig_config of this AccountSettingsInformation.  # noqa: E501
 
@@ -3903,6 +3954,52 @@ class AccountSettingsInformation(object):
         """
 
         self._advanced_search_enable_template_name_field_metadata = advanced_search_enable_template_name_field_metadata
+
+    @property
+    def ai_assisted_web_form_creation_level(self):
+        """Gets the ai_assisted_web_form_creation_level of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The ai_assisted_web_form_creation_level of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._ai_assisted_web_form_creation_level
+
+    @ai_assisted_web_form_creation_level.setter
+    def ai_assisted_web_form_creation_level(self, ai_assisted_web_form_creation_level):
+        """Sets the ai_assisted_web_form_creation_level of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param ai_assisted_web_form_creation_level: The ai_assisted_web_form_creation_level of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._ai_assisted_web_form_creation_level = ai_assisted_web_form_creation_level
+
+    @property
+    def ai_assisted_web_form_creation_level_metadata(self):
+        """Gets the ai_assisted_web_form_creation_level_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The ai_assisted_web_form_creation_level_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._ai_assisted_web_form_creation_level_metadata
+
+    @ai_assisted_web_form_creation_level_metadata.setter
+    def ai_assisted_web_form_creation_level_metadata(self, ai_assisted_web_form_creation_level_metadata):
+        """Sets the ai_assisted_web_form_creation_level_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param ai_assisted_web_form_creation_level_metadata: The ai_assisted_web_form_creation_level_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._ai_assisted_web_form_creation_level_metadata = ai_assisted_web_form_creation_level_metadata
 
     @property
     def allow_access_code_format(self):
@@ -13887,6 +13984,52 @@ class AccountSettingsInformation(object):
         self._enable_iam_clause_library_metadata = enable_iam_clause_library_metadata
 
     @property
+    def enable_ia_mfor_x_embedded_ux(self):
+        """Gets the enable_ia_mfor_x_embedded_ux of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ia_mfor_x_embedded_ux of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_ia_mfor_x_embedded_ux
+
+    @enable_ia_mfor_x_embedded_ux.setter
+    def enable_ia_mfor_x_embedded_ux(self, enable_ia_mfor_x_embedded_ux):
+        """Sets the enable_ia_mfor_x_embedded_ux of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ia_mfor_x_embedded_ux: The enable_ia_mfor_x_embedded_ux of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_ia_mfor_x_embedded_ux = enable_ia_mfor_x_embedded_ux
+
+    @property
+    def enable_ia_mfor_x_embedded_ux_metadata(self):
+        """Gets the enable_ia_mfor_x_embedded_ux_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ia_mfor_x_embedded_ux_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_ia_mfor_x_embedded_ux_metadata
+
+    @enable_ia_mfor_x_embedded_ux_metadata.setter
+    def enable_ia_mfor_x_embedded_ux_metadata(self, enable_ia_mfor_x_embedded_ux_metadata):
+        """Sets the enable_ia_mfor_x_embedded_ux_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ia_mfor_x_embedded_ux_metadata: The enable_ia_mfor_x_embedded_ux_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_ia_mfor_x_embedded_ux_metadata = enable_ia_mfor_x_embedded_ux_metadata
+
+    @property
     def enable_id_fx_accountless_sms_auth_for_part11(self):
         """Gets the enable_id_fx_accountless_sms_auth_for_part11 of this AccountSettingsInformation.  # noqa: E501
 
@@ -15426,6 +15569,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_responsive_signing_metadata = enable_responsive_signing_metadata
+
+    @property
+    def enable_reviewer_events_setting(self):
+        """Gets the enable_reviewer_events_setting of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_reviewer_events_setting of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_reviewer_events_setting
+
+    @enable_reviewer_events_setting.setter
+    def enable_reviewer_events_setting(self, enable_reviewer_events_setting):
+        """Sets the enable_reviewer_events_setting of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_reviewer_events_setting: The enable_reviewer_events_setting of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_reviewer_events_setting = enable_reviewer_events_setting
+
+    @property
+    def enable_reviewer_events_setting_metadata(self):
+        """Gets the enable_reviewer_events_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_reviewer_events_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_reviewer_events_setting_metadata
+
+    @enable_reviewer_events_setting_metadata.setter
+    def enable_reviewer_events_setting_metadata(self, enable_reviewer_events_setting_metadata):
+        """Sets the enable_reviewer_events_setting_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_reviewer_events_setting_metadata: The enable_reviewer_events_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_reviewer_events_setting_metadata = enable_reviewer_events_setting_metadata
 
     @property
     def enable_sap_ariba_extension(self):

@@ -610,7 +610,7 @@ class GroupsApi(object):
         :param str group_id: The ID of the group being accessed. (required)
         :param str count: Number of records to return. The number must be greater than 1 and less than or equal to 100. 
         :param str start_position: Starting value for the list.
-        :return: UsersResponse
+        :return: GroupUsersResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -639,7 +639,7 @@ class GroupsApi(object):
         :param str group_id: The ID of the group being accessed. (required)
         :param str count: Number of records to return. The number must be greater than 1 and less than or equal to 100. 
         :param str start_position: Starting value for the list.
-        :return: UsersResponse
+        :return: GroupUsersResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -702,7 +702,7 @@ class GroupsApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='UsersResponse',
+                                        response_type='GroupUsersResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

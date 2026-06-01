@@ -49,6 +49,7 @@ class TabGroup(object):
         'anchor_string_metadata': 'PropertyMetadata',
         'anchor_tab_processor_version': 'str',
         'anchor_tab_processor_version_metadata': 'PropertyMetadata',
+        'anchor_tab_scope': 'str',
         'anchor_units': 'str',
         'anchor_units_metadata': 'PropertyMetadata',
         'anchor_x_offset': 'str',
@@ -141,6 +142,7 @@ class TabGroup(object):
         'anchor_string_metadata': 'anchorStringMetadata',
         'anchor_tab_processor_version': 'anchorTabProcessorVersion',
         'anchor_tab_processor_version_metadata': 'anchorTabProcessorVersionMetadata',
+        'anchor_tab_scope': 'anchorTabScope',
         'anchor_units': 'anchorUnits',
         'anchor_units_metadata': 'anchorUnitsMetadata',
         'anchor_x_offset': 'anchorXOffset',
@@ -238,6 +240,7 @@ class TabGroup(object):
         self._anchor_string_metadata = None
         self._anchor_tab_processor_version = None
         self._anchor_tab_processor_version_metadata = None
+        self._anchor_tab_scope = None
         self._anchor_units = None
         self._anchor_units_metadata = None
         self._anchor_x_offset = None
@@ -329,6 +332,7 @@ class TabGroup(object):
         setattr(self, "_{}".format('anchor_string_metadata'), kwargs.get('anchor_string_metadata', None))
         setattr(self, "_{}".format('anchor_tab_processor_version'), kwargs.get('anchor_tab_processor_version', None))
         setattr(self, "_{}".format('anchor_tab_processor_version_metadata'), kwargs.get('anchor_tab_processor_version_metadata', None))
+        setattr(self, "_{}".format('anchor_tab_scope'), kwargs.get('anchor_tab_scope', None))
         setattr(self, "_{}".format('anchor_units'), kwargs.get('anchor_units', None))
         setattr(self, "_{}".format('anchor_units_metadata'), kwargs.get('anchor_units_metadata', None))
         setattr(self, "_{}".format('anchor_x_offset'), kwargs.get('anchor_x_offset', None))
@@ -770,6 +774,29 @@ class TabGroup(object):
         """
 
         self._anchor_tab_processor_version_metadata = anchor_tab_processor_version_metadata
+
+    @property
+    def anchor_tab_scope(self):
+        """Gets the anchor_tab_scope of this TabGroup.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The anchor_tab_scope of this TabGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._anchor_tab_scope
+
+    @anchor_tab_scope.setter
+    def anchor_tab_scope(self, anchor_tab_scope):
+        """Sets the anchor_tab_scope of this TabGroup.
+
+          # noqa: E501
+
+        :param anchor_tab_scope: The anchor_tab_scope of this TabGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._anchor_tab_scope = anchor_tab_scope
 
     @property
     def anchor_units(self):

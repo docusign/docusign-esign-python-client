@@ -33,7 +33,7 @@ class EnvelopesSharesResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'shares': 'list[EnvelopesSharesResponseItem]'
+        'shares': 'list[EnvelopesShareResponse]'
     }
 
     attribute_map = {
@@ -58,7 +58,7 @@ class EnvelopesSharesResponse(object):
           # noqa: E501
 
         :return: The shares of this EnvelopesSharesResponse.  # noqa: E501
-        :rtype: list[EnvelopesSharesResponseItem]
+        :rtype: list[EnvelopesShareResponse]
         """
         return self._shares
 
@@ -69,7 +69,7 @@ class EnvelopesSharesResponse(object):
           # noqa: E501
 
         :param shares: The shares of this EnvelopesSharesResponse.  # noqa: E501
-        :type: list[EnvelopesSharesResponseItem]
+        :type: list[EnvelopesShareResponse]
         """
 
         self._shares = shares

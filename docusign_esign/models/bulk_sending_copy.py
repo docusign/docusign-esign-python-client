@@ -37,6 +37,7 @@ class BulkSendingCopy(object):
         'doc_gen_form_fields': 'list[BulksendingCopyDocGenFormField]',
         'email_blurb': 'str',
         'email_subject': 'str',
+        'prefill_tabs': 'list[BulkSendingCopyPrefillTab]',
         'recipients': 'list[BulkSendingCopyRecipient]'
     }
 
@@ -45,6 +46,7 @@ class BulkSendingCopy(object):
         'doc_gen_form_fields': 'docGenFormFields',
         'email_blurb': 'emailBlurb',
         'email_subject': 'emailSubject',
+        'prefill_tabs': 'prefillTabs',
         'recipients': 'recipients'
     }
 
@@ -58,6 +60,7 @@ class BulkSendingCopy(object):
         self._doc_gen_form_fields = None
         self._email_blurb = None
         self._email_subject = None
+        self._prefill_tabs = None
         self._recipients = None
         self.discriminator = None
 
@@ -65,6 +68,7 @@ class BulkSendingCopy(object):
         setattr(self, "_{}".format('doc_gen_form_fields'), kwargs.get('doc_gen_form_fields', None))
         setattr(self, "_{}".format('email_blurb'), kwargs.get('email_blurb', None))
         setattr(self, "_{}".format('email_subject'), kwargs.get('email_subject', None))
+        setattr(self, "_{}".format('prefill_tabs'), kwargs.get('prefill_tabs', None))
         setattr(self, "_{}".format('recipients'), kwargs.get('recipients', None))
 
     @property
@@ -158,6 +162,29 @@ class BulkSendingCopy(object):
         """
 
         self._email_subject = email_subject
+
+    @property
+    def prefill_tabs(self):
+        """Gets the prefill_tabs of this BulkSendingCopy.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The prefill_tabs of this BulkSendingCopy.  # noqa: E501
+        :rtype: list[BulkSendingCopyPrefillTab]
+        """
+        return self._prefill_tabs
+
+    @prefill_tabs.setter
+    def prefill_tabs(self, prefill_tabs):
+        """Sets the prefill_tabs of this BulkSendingCopy.
+
+          # noqa: E501
+
+        :param prefill_tabs: The prefill_tabs of this BulkSendingCopy.  # noqa: E501
+        :type: list[BulkSendingCopyPrefillTab]
+        """
+
+        self._prefill_tabs = prefill_tabs
 
     @property
     def recipients(self):

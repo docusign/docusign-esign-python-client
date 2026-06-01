@@ -83,6 +83,7 @@ from docusign_esign.models.account_signature_providers import AccountSignaturePr
 from docusign_esign.models.account_signatures_information import AccountSignaturesInformation
 from docusign_esign.models.account_ui_settings import AccountUISettings
 from docusign_esign.models.add_on import AddOn
+from docusign_esign.models.additional_setting import AdditionalSetting
 from docusign_esign.models.address_information import AddressInformation
 from docusign_esign.models.address_information_input import AddressInformationInput
 from docusign_esign.models.admin_message import AdminMessage
@@ -155,6 +156,7 @@ from docusign_esign.models.bulk_send_test_response import BulkSendTestResponse
 from docusign_esign.models.bulk_sending_copy import BulkSendingCopy
 from docusign_esign.models.bulk_sending_copy_custom_field import BulkSendingCopyCustomField
 from docusign_esign.models.bulk_sending_copy_doc_gen_form_field_row_value import BulkSendingCopyDocGenFormFieldRowValue
+from docusign_esign.models.bulk_sending_copy_prefill_tab import BulkSendingCopyPrefillTab
 from docusign_esign.models.bulk_sending_copy_recipient import BulkSendingCopyRecipient
 from docusign_esign.models.bulk_sending_copy_tab import BulkSendingCopyTab
 from docusign_esign.models.bulk_sending_list import BulkSendingList
@@ -299,10 +301,11 @@ from docusign_esign.models.envelope_view_settings import EnvelopeViewSettings
 from docusign_esign.models.envelope_view_tagger_settings import EnvelopeViewTaggerSettings
 from docusign_esign.models.envelope_view_template_settings import EnvelopeViewTemplateSettings
 from docusign_esign.models.envelopes_information import EnvelopesInformation
+from docusign_esign.models.envelopes_share_permission_request import EnvelopesSharePermissionRequest
+from docusign_esign.models.envelopes_share_request import EnvelopesShareRequest
+from docusign_esign.models.envelopes_share_response import EnvelopesShareResponse
 from docusign_esign.models.envelopes_shares_request import EnvelopesSharesRequest
-from docusign_esign.models.envelopes_shares_request_item import EnvelopesSharesRequestItem
 from docusign_esign.models.envelopes_shares_response import EnvelopesSharesResponse
-from docusign_esign.models.envelopes_shares_response_item import EnvelopesSharesResponseItem
 from docusign_esign.models.error_details import ErrorDetails
 from docusign_esign.models.event_notification import EventNotification
 from docusign_esign.models.event_result import EventResult
@@ -335,6 +338,8 @@ from docusign_esign.models.full_name import FullName
 from docusign_esign.models.graphics_context import GraphicsContext
 from docusign_esign.models.group import Group
 from docusign_esign.models.group_information import GroupInformation
+from docusign_esign.models.group_user_info import GroupUserInfo
+from docusign_esign.models.group_users_response import GroupUsersResponse
 from docusign_esign.models.id_check_configuration import IdCheckConfiguration
 from docusign_esign.models.id_check_information_input import IdCheckInformationInput
 from docusign_esign.models.id_check_security_step import IdCheckSecurityStep
