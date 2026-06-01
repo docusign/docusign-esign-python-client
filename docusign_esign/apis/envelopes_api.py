@@ -372,6 +372,10 @@ class EnvelopesApi(object):
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
 
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['multipart/form-data'])
+
         # Authentication setting
         auth_settings = []
 
@@ -4983,6 +4987,233 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def delete_envelopes_share(self, account_id, envelope_id, share_id, **kwargs):
+        """
+        Deletes a single envelope share
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_envelopes_share(account_id, envelope_id, share_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str share_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_envelopes_share_with_http_info(account_id, envelope_id, share_id, **kwargs)
+        else:
+            (data) = self.delete_envelopes_share_with_http_info(account_id, envelope_id, share_id, **kwargs)
+            return data
+
+    def delete_envelopes_share_with_http_info(self, account_id, envelope_id, share_id, **kwargs):
+        """
+        Deletes a single envelope share
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_envelopes_share_with_http_info(account_id, envelope_id, share_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str share_id: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'share_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_envelopes_share" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_envelopes_share`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `delete_envelopes_share`")
+        # verify the required parameter 'share_id' is set
+        if ('share_id' not in params) or (params['share_id'] is None):
+            raise ValueError("Missing the required parameter `share_id` when calling `delete_envelopes_share`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'share_id' in params:
+            path_params['shareId'] = params['share_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def delete_envelopes_shares(self, account_id, envelope_id, **kwargs):
+        """
+        Deletes existing envelopes shares
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_envelopes_shares(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param EnvelopesSharesRequest envelopes_shares_request:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.delete_envelopes_shares_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.delete_envelopes_shares_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def delete_envelopes_shares_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Deletes existing envelopes shares
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.delete_envelopes_shares_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param EnvelopesSharesRequest envelopes_shares_request:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'envelopes_shares_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_envelopes_shares" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `delete_envelopes_shares`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `delete_envelopes_shares`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'envelopes_shares_request' in params:
+            body_params = params['envelopes_shares_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'DELETE',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def delete_lock(self, account_id, envelope_id, **kwargs):
         """
         Deletes an envelope lock.
@@ -9344,6 +9575,143 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_shared_envelopes(self, account_id, **kwargs):
+        """
+        Returns a filtered list of shared envelopes.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_shared_envelopes(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str count:
+        :param str from_date:
+        :param str include:
+        :param str order:
+        :param str order_by:
+        :param str search_text:
+        :param str start_position:
+        :param str status:
+        :param str to_date:
+        :return: EnvelopesInformation
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_shared_envelopes_with_http_info(account_id, **kwargs)
+        else:
+            (data) = self.get_shared_envelopes_with_http_info(account_id, **kwargs)
+            return data
+
+    def get_shared_envelopes_with_http_info(self, account_id, **kwargs):
+        """
+        Returns a filtered list of shared envelopes.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_shared_envelopes_with_http_info(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str count:
+        :param str from_date:
+        :param str include:
+        :param str order:
+        :param str order_by:
+        :param str search_text:
+        :param str start_position:
+        :param str status:
+        :param str to_date:
+        :return: EnvelopesInformation
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'count', 'from_date', 'include', 'order', 'order_by', 'search_text', 'start_position', 'status', 'to_date']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_shared_envelopes" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_shared_envelopes`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/shared'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+
+        query_params = {}
+        if 'count' in params:
+            query_params['count'] = params['count']
+        if 'from_date' in params:
+            query_params['from_date'] = params['from_date']
+        if 'include' in params:
+            query_params['include'] = params['include']
+        if 'order' in params:
+            query_params['order'] = params['order']
+        if 'order_by' in params:
+            query_params['order_by'] = params['order_by']
+        if 'search_text' in params:
+            query_params['search_text'] = params['search_text']
+        if 'start_position' in params:
+            query_params['start_position'] = params['start_position']
+        if 'status' in params:
+            query_params['status'] = params['status']
+        if 'to_date' in params:
+            query_params['to_date'] = params['to_date']
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='EnvelopesInformation',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_tabs_blob(self, account_id, envelope_id, **kwargs):
         """
         Get encrypted tabs for envelope.
@@ -13604,6 +13972,237 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='WorkflowStep',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_envelopes_share(self, account_id, envelope_id, share_id, **kwargs):
+        """
+        Updates a single envelope share
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_envelopes_share(account_id, envelope_id, share_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str share_id: (required)
+        :param EnvelopesSharePermissionRequest envelopes_share_permission_request:
+        :return: EnvelopesShareResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_envelopes_share_with_http_info(account_id, envelope_id, share_id, **kwargs)
+        else:
+            (data) = self.update_envelopes_share_with_http_info(account_id, envelope_id, share_id, **kwargs)
+            return data
+
+    def update_envelopes_share_with_http_info(self, account_id, envelope_id, share_id, **kwargs):
+        """
+        Updates a single envelope share
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_envelopes_share_with_http_info(account_id, envelope_id, share_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str share_id: (required)
+        :param EnvelopesSharePermissionRequest envelopes_share_permission_request:
+        :return: EnvelopesShareResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'share_id', 'envelopes_share_permission_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_envelopes_share" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_envelopes_share`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `update_envelopes_share`")
+        # verify the required parameter 'share_id' is set
+        if ('share_id' not in params) or (params['share_id'] is None):
+            raise ValueError("Missing the required parameter `share_id` when calling `update_envelopes_share`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'share_id' in params:
+            path_params['shareId'] = params['share_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'envelopes_share_permission_request' in params:
+            body_params = params['envelopes_share_permission_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='EnvelopesShareResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def update_envelopes_shares(self, account_id, envelope_id, **kwargs):
+        """
+        Updates existing envelopes shares
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_envelopes_shares(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param EnvelopesSharesRequest envelopes_shares_request:
+        :return: EnvelopesSharesResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.update_envelopes_shares_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.update_envelopes_shares_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def update_envelopes_shares_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Updates existing envelopes shares
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.update_envelopes_shares_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param EnvelopesSharesRequest envelopes_shares_request:
+        :return: EnvelopesSharesResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'envelopes_shares_request']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_envelopes_shares" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `update_envelopes_shares`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `update_envelopes_shares`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'envelopes_shares_request' in params:
+            body_params = params['envelopes_shares_request']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'PUT',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='EnvelopesSharesResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

@@ -34,6 +34,7 @@ class DocGenFormField(object):
     """
     swagger_types = {
         'connected_object_details': 'ConnectedObjectDetails',
+        'default_value': 'str',
         'description': 'str',
         'format': 'DocGenFormat',
         'fully_qualified_path': 'str',
@@ -53,6 +54,7 @@ class DocGenFormField(object):
 
     attribute_map = {
         'connected_object_details': 'connectedObjectDetails',
+        'default_value': 'defaultValue',
         'description': 'description',
         'format': 'format',
         'fully_qualified_path': 'fullyQualifiedPath',
@@ -77,6 +79,7 @@ class DocGenFormField(object):
         self._configuration = _configuration
 
         self._connected_object_details = None
+        self._default_value = None
         self._description = None
         self._format = None
         self._fully_qualified_path = None
@@ -95,6 +98,7 @@ class DocGenFormField(object):
         self.discriminator = None
 
         setattr(self, "_{}".format('connected_object_details'), kwargs.get('connected_object_details', None))
+        setattr(self, "_{}".format('default_value'), kwargs.get('default_value', None))
         setattr(self, "_{}".format('description'), kwargs.get('description', None))
         setattr(self, "_{}".format('format'), kwargs.get('format', None))
         setattr(self, "_{}".format('fully_qualified_path'), kwargs.get('fully_qualified_path', None))
@@ -133,6 +137,29 @@ class DocGenFormField(object):
         """
 
         self._connected_object_details = connected_object_details
+
+    @property
+    def default_value(self):
+        """Gets the default_value of this DocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The default_value of this DocGenFormField.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_value
+
+    @default_value.setter
+    def default_value(self, default_value):
+        """Sets the default_value of this DocGenFormField.
+
+          # noqa: E501
+
+        :param default_value: The default_value of this DocGenFormField.  # noqa: E501
+        :type: str
+        """
+
+        self._default_value = default_value
 
     @property
     def description(self):
