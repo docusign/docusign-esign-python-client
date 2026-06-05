@@ -3,10 +3,28 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [v10.0.0rc1] - eSignature API v2.1-26.2.00.00 - 2026-06-01
+## [v8.0.0rc1] - eSignature API v2.1-26.2.00.00 - 2026-06-04
+### Breaking Changes
+- Groups API: ListGroupUsers, ListGroupUsersAsync, and their WithHttpInfo variants now return GroupUsersResponse
+  instead of UsersResponse. Update any code that depends on the previous return type.
+
+### Added
+- Envelopes API: New envelope sharing methods:
+    - UpdateEnvelopesShares / DeleteEnvelopesShares — bulk update or delete shares on an envelope.
+    - UpdateEnvelopesShare / DeleteEnvelopesShare — update or delete a single envelope share by shareId.
+    - GetSharedEnvelopes — retrieve a filtered list of shared envelopes.
+  - Models: AdditionalSetting, BulkSendingCopyPrefillTab, EnvelopesSharePermissionRequest, EnvelopesShareRequest,
+  EnvelopesShareResponse, EnvelopesSharesRequest, EnvelopesSharesResponse, GroupUserInfo, GroupUsersResponse.
+  - BulkSendingCopy: Added PrefillTabs property to support pre-populating tab values per bulk send copy.
+  - AccountSettingsInformation: Added AdditionalSettings, AiAssistedWebFormCreationLevel, EnableIAMforXEmbeddedUX, and
+  EnableReviewerEventsSetting properties (each with corresponding metadata).
+
 ### Changed
-- Added support for version v2.1-26.2.00.00 of the DocuSign ESignature API.
-- Updated the SDK release version.
+
+- Added AnchorTabScope property to all tab model types (Approve, Checkbox, Company, Date, Email, FormulaTab, List,
+  Number, Radio, Ssn, Text, Zip, and others).
+  - Added support for version v2.1-26.2.00.00 of the DocuSign eSignature API.
+  - Updated the SDK release version to 8.0.0.rc1
 
 ## [v7.0.0rc1] - eSignature API v2.1-26.1.02.00 - 2026-05-05
 ## [v7.0.0rc1] - eSignature API v2.1-26.1.02.00 - 2026-05-04
