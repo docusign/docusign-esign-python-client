@@ -29,6 +29,9 @@ class ApiException(Exception):
             self.reason = reason
             self.body = None
             self.headers = None
+            self.trace_token = None
+            self.timestamp = None
+            self.response = None
 
     def __str__(self):
         """
