@@ -69,12 +69,12 @@ class ApiClient(object):
 
     OAUTH_TYPES = (OAuthToken.__name__, OAuthUserInfo.__name__, Account.__name__, Organization.__name__, Link.__name__)
 
-    def __init__(self, host=None, header_name=None, header_value=None, cookie=None, oauth_host_name=None, base_path=None):
+    def __init__(self, host=None, header_name=None, header_value=None, cookie=None, oauth_host_name=None, base_path=None, configuration=None):
         """
         Constructor of the class.
         """
 
-        config = Configuration()
+        config = configuration if configuration is not None else Configuration()
         self.rest_client = RESTClientObject(configuration=config)
         self.default_headers = {'X-DocuSign-SDK': 'Python'}
         if header_name is not None:
