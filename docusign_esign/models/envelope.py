@@ -66,6 +66,7 @@ class Envelope(object):
         'enable_wet_sign': 'str',
         'enforce_signer_visibility': 'str',
         'envelope_attachments': 'list[Attachment]',
+        'envelope_classification': 'str',
         'envelope_custom_metadata': 'EnvelopeCustomMetadata',
         'envelope_documents': 'list[EnvelopeDocument]',
         'envelope_id': 'str',
@@ -112,6 +113,7 @@ class Envelope(object):
         'u_sig_state': 'str',
         'voided_date_time': 'str',
         'voided_reason': 'str',
+        'watermark_language': 'str',
         'workflow': 'Workflow'
     }
 
@@ -149,6 +151,7 @@ class Envelope(object):
         'enable_wet_sign': 'enableWetSign',
         'enforce_signer_visibility': 'enforceSignerVisibility',
         'envelope_attachments': 'envelopeAttachments',
+        'envelope_classification': 'envelopeClassification',
         'envelope_custom_metadata': 'envelopeCustomMetadata',
         'envelope_documents': 'envelopeDocuments',
         'envelope_id': 'envelopeId',
@@ -195,6 +198,7 @@ class Envelope(object):
         'u_sig_state': 'uSigState',
         'voided_date_time': 'voidedDateTime',
         'voided_reason': 'voidedReason',
+        'watermark_language': 'watermarkLanguage',
         'workflow': 'workflow'
     }
 
@@ -237,6 +241,7 @@ class Envelope(object):
         self._enable_wet_sign = None
         self._enforce_signer_visibility = None
         self._envelope_attachments = None
+        self._envelope_classification = None
         self._envelope_custom_metadata = None
         self._envelope_documents = None
         self._envelope_id = None
@@ -283,6 +288,7 @@ class Envelope(object):
         self._u_sig_state = None
         self._voided_date_time = None
         self._voided_reason = None
+        self._watermark_language = None
         self._workflow = None
         self.discriminator = None
 
@@ -319,6 +325,7 @@ class Envelope(object):
         setattr(self, "_{}".format('enable_wet_sign'), kwargs.get('enable_wet_sign', None))
         setattr(self, "_{}".format('enforce_signer_visibility'), kwargs.get('enforce_signer_visibility', None))
         setattr(self, "_{}".format('envelope_attachments'), kwargs.get('envelope_attachments', None))
+        setattr(self, "_{}".format('envelope_classification'), kwargs.get('envelope_classification', None))
         setattr(self, "_{}".format('envelope_custom_metadata'), kwargs.get('envelope_custom_metadata', None))
         setattr(self, "_{}".format('envelope_documents'), kwargs.get('envelope_documents', None))
         setattr(self, "_{}".format('envelope_id'), kwargs.get('envelope_id', None))
@@ -365,6 +372,7 @@ class Envelope(object):
         setattr(self, "_{}".format('u_sig_state'), kwargs.get('u_sig_state', None))
         setattr(self, "_{}".format('voided_date_time'), kwargs.get('voided_date_time', None))
         setattr(self, "_{}".format('voided_reason'), kwargs.get('voided_reason', None))
+        setattr(self, "_{}".format('watermark_language'), kwargs.get('watermark_language', None))
         setattr(self, "_{}".format('workflow'), kwargs.get('workflow', None))
 
     @property
@@ -1125,6 +1133,29 @@ class Envelope(object):
         """
 
         self._envelope_attachments = envelope_attachments
+
+    @property
+    def envelope_classification(self):
+        """Gets the envelope_classification of this Envelope.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_classification of this Envelope.  # noqa: E501
+        :rtype: str
+        """
+        return self._envelope_classification
+
+    @envelope_classification.setter
+    def envelope_classification(self, envelope_classification):
+        """Sets the envelope_classification of this Envelope.
+
+          # noqa: E501
+
+        :param envelope_classification: The envelope_classification of this Envelope.  # noqa: E501
+        :type: str
+        """
+
+        self._envelope_classification = envelope_classification
 
     @property
     def envelope_custom_metadata(self):
@@ -2183,6 +2214,29 @@ class Envelope(object):
         """
 
         self._voided_reason = voided_reason
+
+    @property
+    def watermark_language(self):
+        """Gets the watermark_language of this Envelope.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The watermark_language of this Envelope.  # noqa: E501
+        :rtype: str
+        """
+        return self._watermark_language
+
+    @watermark_language.setter
+    def watermark_language(self, watermark_language):
+        """Sets the watermark_language of this Envelope.
+
+          # noqa: E501
+
+        :param watermark_language: The watermark_language of this Envelope.  # noqa: E501
+        :type: str
+        """
+
+        self._watermark_language = watermark_language
 
     @property
     def workflow(self):

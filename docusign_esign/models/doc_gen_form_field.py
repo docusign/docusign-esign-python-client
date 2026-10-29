@@ -33,18 +33,20 @@ class DocGenFormField(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'children': 'list[DocGenFormField]',
         'connected_object_details': 'ConnectedObjectDetails',
         'default_value': 'str',
         'description': 'str',
+        'filter': 'object',
         'format': 'DocGenFormat',
         'fully_qualified_path': 'str',
-        'hidden': 'str',
+        'hidden': 'bool',
         'label': 'str',
         'name': 'str',
         'options': 'list[DocGenFormFieldOption]',
         'order': 'str',
         'predefined_validation': 'str',
-        'read_only': 'str',
+        'read_only': 'bool',
         'required': 'str',
         'row_values': 'list[DocGenFormFieldRowValue]',
         'type': 'str',
@@ -53,9 +55,11 @@ class DocGenFormField(object):
     }
 
     attribute_map = {
+        'children': 'children',
         'connected_object_details': 'connectedObjectDetails',
         'default_value': 'defaultValue',
         'description': 'description',
+        'filter': 'filter',
         'format': 'format',
         'fully_qualified_path': 'fullyQualifiedPath',
         'hidden': 'hidden',
@@ -78,9 +82,11 @@ class DocGenFormField(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._children = None
         self._connected_object_details = None
         self._default_value = None
         self._description = None
+        self._filter = None
         self._format = None
         self._fully_qualified_path = None
         self._hidden = None
@@ -97,9 +103,11 @@ class DocGenFormField(object):
         self._value = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('children'), kwargs.get('children', None))
         setattr(self, "_{}".format('connected_object_details'), kwargs.get('connected_object_details', None))
         setattr(self, "_{}".format('default_value'), kwargs.get('default_value', None))
         setattr(self, "_{}".format('description'), kwargs.get('description', None))
+        setattr(self, "_{}".format('filter'), kwargs.get('filter', None))
         setattr(self, "_{}".format('format'), kwargs.get('format', None))
         setattr(self, "_{}".format('fully_qualified_path'), kwargs.get('fully_qualified_path', None))
         setattr(self, "_{}".format('hidden'), kwargs.get('hidden', None))
@@ -114,6 +122,29 @@ class DocGenFormField(object):
         setattr(self, "_{}".format('type'), kwargs.get('type', None))
         setattr(self, "_{}".format('validation'), kwargs.get('validation', None))
         setattr(self, "_{}".format('value'), kwargs.get('value', None))
+
+    @property
+    def children(self):
+        """Gets the children of this DocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The children of this DocGenFormField.  # noqa: E501
+        :rtype: list[DocGenFormField]
+        """
+        return self._children
+
+    @children.setter
+    def children(self, children):
+        """Sets the children of this DocGenFormField.
+
+          # noqa: E501
+
+        :param children: The children of this DocGenFormField.  # noqa: E501
+        :type: list[DocGenFormField]
+        """
+
+        self._children = children
 
     @property
     def connected_object_details(self):
@@ -185,6 +216,29 @@ class DocGenFormField(object):
         self._description = description
 
     @property
+    def filter(self):
+        """Gets the filter of this DocGenFormField.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The filter of this DocGenFormField.  # noqa: E501
+        :rtype: object
+        """
+        return self._filter
+
+    @filter.setter
+    def filter(self, filter):
+        """Sets the filter of this DocGenFormField.
+
+          # noqa: E501
+
+        :param filter: The filter of this DocGenFormField.  # noqa: E501
+        :type: object
+        """
+
+        self._filter = filter
+
+    @property
     def format(self):
         """Gets the format of this DocGenFormField.  # noqa: E501
 
@@ -237,7 +291,7 @@ class DocGenFormField(object):
           # noqa: E501
 
         :return: The hidden of this DocGenFormField.  # noqa: E501
-        :rtype: str
+        :rtype: bool
         """
         return self._hidden
 
@@ -248,7 +302,7 @@ class DocGenFormField(object):
           # noqa: E501
 
         :param hidden: The hidden of this DocGenFormField.  # noqa: E501
-        :type: str
+        :type: bool
         """
 
         self._hidden = hidden
@@ -375,7 +429,7 @@ class DocGenFormField(object):
           # noqa: E501
 
         :return: The read_only of this DocGenFormField.  # noqa: E501
-        :rtype: str
+        :rtype: bool
         """
         return self._read_only
 
@@ -386,7 +440,7 @@ class DocGenFormField(object):
           # noqa: E501
 
         :param read_only: The read_only of this DocGenFormField.  # noqa: E501
-        :type: str
+        :type: bool
         """
 
         self._read_only = read_only

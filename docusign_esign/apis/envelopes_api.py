@@ -283,6 +283,111 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def create_archive_metadata_envelopes(self, account_id, **kwargs):
+        """
+        Add metadata in the form of GenAndSend to existing envelopes in docusign.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_archive_metadata_envelopes(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: EnvelopeArchiveSummary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_archive_metadata_envelopes_with_http_info(account_id, **kwargs)
+        else:
+            (data) = self.create_archive_metadata_envelopes_with_http_info(account_id, **kwargs)
+            return data
+
+    def create_archive_metadata_envelopes_with_http_info(self, account_id, **kwargs):
+        """
+        Add metadata in the form of GenAndSend to existing envelopes in docusign.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_archive_metadata_envelopes_with_http_info(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: EnvelopeArchiveSummary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_gen_and_send']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_archive_metadata_envelopes" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_archive_metadata_envelopes`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/archive_metadata'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'envelope_gen_and_send' in params:
+            body_params = params['envelope_gen_and_send']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='EnvelopeArchiveSummary',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def create_chunked_upload(self, account_id, **kwargs):
         """
         Initiate a new ChunkedUpload.
@@ -371,10 +476,6 @@ class EnvelopesApi(object):
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = []
@@ -2120,6 +2221,426 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def create_gen_and_archive_envelopes(self, account_id, **kwargs):
+        """
+        Generates the document using DocuSign Spring CM template then returns the html content of the document.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_gen_and_archive_envelopes(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_gen_and_archive_envelopes_with_http_info(account_id, **kwargs)
+        else:
+            (data) = self.create_gen_and_archive_envelopes_with_http_info(account_id, **kwargs)
+            return data
+
+    def create_gen_and_archive_envelopes_with_http_info(self, account_id, **kwargs):
+        """
+        Generates the document using DocuSign Spring CM template then returns the html content of the document.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_gen_and_archive_envelopes_with_http_info(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_gen_and_send']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_gen_and_archive_envelopes" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_gen_and_archive_envelopes`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/generate_and_archive'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'envelope_gen_and_send' in params:
+            body_params = params['envelope_gen_and_send']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['text/plain'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='file',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_gen_and_convert_envelopes(self, account_id, **kwargs):
+        """
+        Generates the document using DocuSign Spring CM template then returns the content of the document based on the return document type.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_gen_and_convert_envelopes(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_gen_and_convert_envelopes_with_http_info(account_id, **kwargs)
+        else:
+            (data) = self.create_gen_and_convert_envelopes_with_http_info(account_id, **kwargs)
+            return data
+
+    def create_gen_and_convert_envelopes_with_http_info(self, account_id, **kwargs):
+        """
+        Generates the document using DocuSign Spring CM template then returns the content of the document based on the return document type.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_gen_and_convert_envelopes_with_http_info(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_gen_and_send']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_gen_and_convert_envelopes" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_gen_and_convert_envelopes`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/generate_and_convert'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'envelope_gen_and_send' in params:
+            body_params = params['envelope_gen_and_send']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['text/plain'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='file',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_gen_and_convert_multi_envelopes(self, account_id, **kwargs):
+        """
+        Generates multiple document using DocuSign Spring CM template then returns the content of the document based on the return document type.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_gen_and_convert_multi_envelopes(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: GeneratedDocumentsResult
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_gen_and_convert_multi_envelopes_with_http_info(account_id, **kwargs)
+        else:
+            (data) = self.create_gen_and_convert_multi_envelopes_with_http_info(account_id, **kwargs)
+            return data
+
+    def create_gen_and_convert_multi_envelopes_with_http_info(self, account_id, **kwargs):
+        """
+        Generates multiple document using DocuSign Spring CM template then returns the content of the document based on the return document type.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_gen_and_convert_multi_envelopes_with_http_info(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: GeneratedDocumentsResult
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_gen_and_send']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_gen_and_convert_multi_envelopes" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_gen_and_convert_multi_envelopes`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/generate_and_convert_multi'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'envelope_gen_and_send' in params:
+            body_params = params['envelope_gen_and_send']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='GeneratedDocumentsResult',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_gen_and_send_envelopes(self, account_id, **kwargs):
+        """
+        Generates the documents for an envelope using DocuSign Spring CM then creates the envelope.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_gen_and_send_envelopes(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: EnvelopeSummary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_gen_and_send_envelopes_with_http_info(account_id, **kwargs)
+        else:
+            (data) = self.create_gen_and_send_envelopes_with_http_info(account_id, **kwargs)
+            return data
+
+    def create_gen_and_send_envelopes_with_http_info(self, account_id, **kwargs):
+        """
+        Generates the documents for an envelope using DocuSign Spring CM then creates the envelope.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_gen_and_send_envelopes_with_http_info(account_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: EnvelopeSummary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_gen_and_send']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_gen_and_send_envelopes" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_gen_and_send_envelopes`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/generate_and_send'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'envelope_gen_and_send' in params:
+            body_params = params['envelope_gen_and_send']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='EnvelopeSummary',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def create_historical_envelope_publish_transaction(self, account_id, **kwargs):
         """
         Submits a batch of historical envelopes for republish to an adhoc config.
@@ -2218,6 +2739,118 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='EnvelopePublishTransaction',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def create_link_metadata_envelopes(self, account_id, envelope_id, **kwargs):
+        """
+        Add metadata in the form of GenAndSend to existing envelopes in docusign.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_link_metadata_envelopes(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: EnvelopeSummary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.create_link_metadata_envelopes_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.create_link_metadata_envelopes_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def create_link_metadata_envelopes_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Add metadata in the form of GenAndSend to existing envelopes in docusign.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.create_link_metadata_envelopes_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param EnvelopeGenAndSend envelope_gen_and_send:
+        :return: EnvelopeSummary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'envelope_gen_and_send']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_link_metadata_envelopes" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `create_link_metadata_envelopes`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `create_link_metadata_envelopes`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/archive_metadata'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'envelope_gen_and_send' in params:
+            body_params = params['envelope_gen_and_send']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='EnvelopeSummary',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -6248,6 +6881,114 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_archive_document(self, account_id, document_id, **kwargs):
+        """
+        Return generated html document from archive.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_archive_document(account_id, document_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str document_id: The ID of the document being accessed. (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_archive_document_with_http_info(account_id, document_id, **kwargs)
+        else:
+            (data) = self.get_archive_document_with_http_info(account_id, document_id, **kwargs)
+            return data
+
+    def get_archive_document_with_http_info(self, account_id, document_id, **kwargs):
+        """
+        Return generated html document from archive.
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_archive_document_with_http_info(account_id, document_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str document_id: The ID of the document being accessed. (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'document_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_archive_document" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_archive_document`")
+        # verify the required parameter 'document_id' is set
+        if ('document_id' not in params) or (params['document_id'] is None):
+            raise ValueError("Missing the required parameter `document_id` when calling `get_archive_document`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/archivedocuments/{documentId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'document_id' in params:
+            path_params['documentId'] = params['document_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['text/plain'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='file',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_attachment(self, account_id, attachment_id, envelope_id, **kwargs):
         """
         Retrieves an attachment from the envelope.
@@ -8056,6 +8797,114 @@ class EnvelopesApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
+    def get_envelope_permission(self, account_id, envelope_id, **kwargs):
+        """
+        Gets the permission level the calling user has for an envelope
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelope_permission(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: EnvelopesSharePermissionResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_envelope_permission_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_envelope_permission_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_envelope_permission_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Gets the permission level the calling user has for an envelope
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelope_permission_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: EnvelopesSharePermissionResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_envelope_permission" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_envelope_permission`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_envelope_permission`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/permission'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='EnvelopesSharePermissionResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
     def get_envelope_scheduled_sending_definition(self, account_id, envelope_id, **kwargs):
         """
         Returns the scheduled sending rules for an envelope's workflow definition.
@@ -8493,6 +9342,229 @@ class EnvelopesApi(object):
                                         post_params=form_params,
                                         files=local_var_files,
                                         response_type='WorkflowStep',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_envelopes_share(self, account_id, envelope_id, share_id, **kwargs):
+        """
+        Gets a single envelope share by shareId
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelopes_share(account_id, envelope_id, share_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str share_id: (required)
+        :return: EnvelopesShareResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_envelopes_share_with_http_info(account_id, envelope_id, share_id, **kwargs)
+        else:
+            (data) = self.get_envelopes_share_with_http_info(account_id, envelope_id, share_id, **kwargs)
+            return data
+
+    def get_envelopes_share_with_http_info(self, account_id, envelope_id, share_id, **kwargs):
+        """
+        Gets a single envelope share by shareId
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelopes_share_with_http_info(account_id, envelope_id, share_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :param str share_id: (required)
+        :return: EnvelopesShareResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id', 'share_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_envelopes_share" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_envelopes_share`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_envelopes_share`")
+        # verify the required parameter 'share_id' is set
+        if ('share_id' not in params) or (params['share_id'] is None):
+            raise ValueError("Missing the required parameter `share_id` when calling `get_envelopes_share`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+        if 'share_id' in params:
+            path_params['shareId'] = params['share_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='EnvelopesShareResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def get_envelopes_shares(self, account_id, envelope_id, **kwargs):
+        """
+        Gets all shares for an envelope
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelopes_shares(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: EnvelopesSharesResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.get_envelopes_shares_with_http_info(account_id, envelope_id, **kwargs)
+        else:
+            (data) = self.get_envelopes_shares_with_http_info(account_id, envelope_id, **kwargs)
+            return data
+
+    def get_envelopes_shares_with_http_info(self, account_id, envelope_id, **kwargs):
+        """
+        Gets all shares for an envelope
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.get_envelopes_shares_with_http_info(account_id, envelope_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str account_id: The external account number (int) or account ID Guid. (required)
+        :param str envelope_id: The envelopeId Guid of the envelope being accessed. (required)
+        :return: EnvelopesSharesResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['account_id', 'envelope_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_envelopes_shares" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'account_id' is set
+        if ('account_id' not in params) or (params['account_id'] is None):
+            raise ValueError("Missing the required parameter `account_id` when calling `get_envelopes_shares`")
+        # verify the required parameter 'envelope_id' is set
+        if ('envelope_id' not in params) or (params['envelope_id'] is None):
+            raise ValueError("Missing the required parameter `envelope_id` when calling `get_envelopes_shares`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares'.replace('{format}', 'json')
+        path_params = {}
+        if 'account_id' in params:
+            path_params['accountId'] = params['account_id']
+        if 'envelope_id' in params:
+            path_params['envelopeId'] = params['envelope_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['application/json'])
+
+        # Authentication setting
+        auth_settings = []
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='EnvelopesSharesResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

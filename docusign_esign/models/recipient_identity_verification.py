@@ -33,6 +33,7 @@ class RecipientIdentityVerification(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'has_auto_attached_risk_assessment': 'str',
         'input_options': 'list[RecipientIdentityInputOption]',
         'workflow_id': 'str',
         'workflow_id_metadata': 'PropertyMetadata',
@@ -40,6 +41,7 @@ class RecipientIdentityVerification(object):
     }
 
     attribute_map = {
+        'has_auto_attached_risk_assessment': 'hasAutoAttachedRiskAssessment',
         'input_options': 'inputOptions',
         'workflow_id': 'workflowId',
         'workflow_id_metadata': 'workflowIdMetadata',
@@ -52,16 +54,41 @@ class RecipientIdentityVerification(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._has_auto_attached_risk_assessment = None
         self._input_options = None
         self._workflow_id = None
         self._workflow_id_metadata = None
         self._workflow_label = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('has_auto_attached_risk_assessment'), kwargs.get('has_auto_attached_risk_assessment', None))
         setattr(self, "_{}".format('input_options'), kwargs.get('input_options', None))
         setattr(self, "_{}".format('workflow_id'), kwargs.get('workflow_id', None))
         setattr(self, "_{}".format('workflow_id_metadata'), kwargs.get('workflow_id_metadata', None))
         setattr(self, "_{}".format('workflow_label'), kwargs.get('workflow_label', None))
+
+    @property
+    def has_auto_attached_risk_assessment(self):
+        """Gets the has_auto_attached_risk_assessment of this RecipientIdentityVerification.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The has_auto_attached_risk_assessment of this RecipientIdentityVerification.  # noqa: E501
+        :rtype: str
+        """
+        return self._has_auto_attached_risk_assessment
+
+    @has_auto_attached_risk_assessment.setter
+    def has_auto_attached_risk_assessment(self, has_auto_attached_risk_assessment):
+        """Sets the has_auto_attached_risk_assessment of this RecipientIdentityVerification.
+
+          # noqa: E501
+
+        :param has_auto_attached_risk_assessment: The has_auto_attached_risk_assessment of this RecipientIdentityVerification.  # noqa: E501
+        :type: str
+        """
+
+        self._has_auto_attached_risk_assessment = has_auto_attached_risk_assessment
 
     @property
     def input_options(self):

@@ -59,7 +59,8 @@ class AccountManagementGranular(object):
         'allow_manage_stamps_metadata': 'SettingsMetadata',
         'allow_manage_users': 'str',
         'allow_manage_users_metadata': 'SettingsMetadata',
-        'allow_view_users': 'str'
+        'allow_view_users': 'str',
+        'view_only_account_admin_pages': 'str'
     }
 
     attribute_map = {
@@ -89,7 +90,8 @@ class AccountManagementGranular(object):
         'allow_manage_stamps_metadata': 'allowManageStampsMetadata',
         'allow_manage_users': 'allowManageUsers',
         'allow_manage_users_metadata': 'allowManageUsersMetadata',
-        'allow_view_users': 'allowViewUsers'
+        'allow_view_users': 'allowViewUsers',
+        'view_only_account_admin_pages': 'viewOnlyAccountAdminPages'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -125,6 +127,7 @@ class AccountManagementGranular(object):
         self._allow_manage_users = None
         self._allow_manage_users_metadata = None
         self._allow_view_users = None
+        self._view_only_account_admin_pages = None
         self.discriminator = None
 
         setattr(self, "_{}".format('allow_manage_account_security_settings'), kwargs.get('allow_manage_account_security_settings', None))
@@ -154,6 +157,7 @@ class AccountManagementGranular(object):
         setattr(self, "_{}".format('allow_manage_users'), kwargs.get('allow_manage_users', None))
         setattr(self, "_{}".format('allow_manage_users_metadata'), kwargs.get('allow_manage_users_metadata', None))
         setattr(self, "_{}".format('allow_view_users'), kwargs.get('allow_view_users', None))
+        setattr(self, "_{}".format('view_only_account_admin_pages'), kwargs.get('view_only_account_admin_pages', None))
 
     @property
     def allow_manage_account_security_settings(self):
@@ -775,6 +779,29 @@ class AccountManagementGranular(object):
         """
 
         self._allow_view_users = allow_view_users
+
+    @property
+    def view_only_account_admin_pages(self):
+        """Gets the view_only_account_admin_pages of this AccountManagementGranular.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The view_only_account_admin_pages of this AccountManagementGranular.  # noqa: E501
+        :rtype: str
+        """
+        return self._view_only_account_admin_pages
+
+    @view_only_account_admin_pages.setter
+    def view_only_account_admin_pages(self, view_only_account_admin_pages):
+        """Sets the view_only_account_admin_pages of this AccountManagementGranular.
+
+          # noqa: E501
+
+        :param view_only_account_admin_pages: The view_only_account_admin_pages of this AccountManagementGranular.  # noqa: E501
+        :type: str
+        """
+
+        self._view_only_account_admin_pages = view_only_account_admin_pages
 
     def to_dict(self):
         """Returns the model properties as a dict"""

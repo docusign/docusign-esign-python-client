@@ -71,6 +71,7 @@ class EnvelopeTemplate(object):
         'enable_wet_sign': 'str',
         'enforce_signer_visibility': 'str',
         'envelope_attachments': 'list[Attachment]',
+        'envelope_classification': 'str',
         'envelope_custom_metadata': 'EnvelopeCustomMetadata',
         'envelope_documents': 'list[EnvelopeDocument]',
         'envelope_id': 'str',
@@ -87,6 +88,7 @@ class EnvelopeTemplate(object):
         'folder_ids': 'list[str]',
         'folder_name': 'str',
         'folders': 'list[Folder]',
+        'has_authorized_signatory_recipient': 'str',
         'has_comments': 'str',
         'has_form_data_changed': 'str',
         'has_wav_file': 'str',
@@ -136,6 +138,7 @@ class EnvelopeTemplate(object):
         'u_sig_state': 'str',
         'voided_date_time': 'str',
         'voided_reason': 'str',
+        'watermark_language': 'str',
         'workflow': 'Workflow'
     }
 
@@ -178,6 +181,7 @@ class EnvelopeTemplate(object):
         'enable_wet_sign': 'enableWetSign',
         'enforce_signer_visibility': 'enforceSignerVisibility',
         'envelope_attachments': 'envelopeAttachments',
+        'envelope_classification': 'envelopeClassification',
         'envelope_custom_metadata': 'envelopeCustomMetadata',
         'envelope_documents': 'envelopeDocuments',
         'envelope_id': 'envelopeId',
@@ -194,6 +198,7 @@ class EnvelopeTemplate(object):
         'folder_ids': 'folderIds',
         'folder_name': 'folderName',
         'folders': 'folders',
+        'has_authorized_signatory_recipient': 'hasAuthorizedSignatoryRecipient',
         'has_comments': 'hasComments',
         'has_form_data_changed': 'hasFormDataChanged',
         'has_wav_file': 'hasWavFile',
@@ -243,6 +248,7 @@ class EnvelopeTemplate(object):
         'u_sig_state': 'uSigState',
         'voided_date_time': 'voidedDateTime',
         'voided_reason': 'voidedReason',
+        'watermark_language': 'watermarkLanguage',
         'workflow': 'workflow'
     }
 
@@ -290,6 +296,7 @@ class EnvelopeTemplate(object):
         self._enable_wet_sign = None
         self._enforce_signer_visibility = None
         self._envelope_attachments = None
+        self._envelope_classification = None
         self._envelope_custom_metadata = None
         self._envelope_documents = None
         self._envelope_id = None
@@ -306,6 +313,7 @@ class EnvelopeTemplate(object):
         self._folder_ids = None
         self._folder_name = None
         self._folders = None
+        self._has_authorized_signatory_recipient = None
         self._has_comments = None
         self._has_form_data_changed = None
         self._has_wav_file = None
@@ -355,6 +363,7 @@ class EnvelopeTemplate(object):
         self._u_sig_state = None
         self._voided_date_time = None
         self._voided_reason = None
+        self._watermark_language = None
         self._workflow = None
         self.discriminator = None
 
@@ -396,6 +405,7 @@ class EnvelopeTemplate(object):
         setattr(self, "_{}".format('enable_wet_sign'), kwargs.get('enable_wet_sign', None))
         setattr(self, "_{}".format('enforce_signer_visibility'), kwargs.get('enforce_signer_visibility', None))
         setattr(self, "_{}".format('envelope_attachments'), kwargs.get('envelope_attachments', None))
+        setattr(self, "_{}".format('envelope_classification'), kwargs.get('envelope_classification', None))
         setattr(self, "_{}".format('envelope_custom_metadata'), kwargs.get('envelope_custom_metadata', None))
         setattr(self, "_{}".format('envelope_documents'), kwargs.get('envelope_documents', None))
         setattr(self, "_{}".format('envelope_id'), kwargs.get('envelope_id', None))
@@ -412,6 +422,7 @@ class EnvelopeTemplate(object):
         setattr(self, "_{}".format('folder_ids'), kwargs.get('folder_ids', None))
         setattr(self, "_{}".format('folder_name'), kwargs.get('folder_name', None))
         setattr(self, "_{}".format('folders'), kwargs.get('folders', None))
+        setattr(self, "_{}".format('has_authorized_signatory_recipient'), kwargs.get('has_authorized_signatory_recipient', None))
         setattr(self, "_{}".format('has_comments'), kwargs.get('has_comments', None))
         setattr(self, "_{}".format('has_form_data_changed'), kwargs.get('has_form_data_changed', None))
         setattr(self, "_{}".format('has_wav_file'), kwargs.get('has_wav_file', None))
@@ -461,6 +472,7 @@ class EnvelopeTemplate(object):
         setattr(self, "_{}".format('u_sig_state'), kwargs.get('u_sig_state', None))
         setattr(self, "_{}".format('voided_date_time'), kwargs.get('voided_date_time', None))
         setattr(self, "_{}".format('voided_reason'), kwargs.get('voided_reason', None))
+        setattr(self, "_{}".format('watermark_language'), kwargs.get('watermark_language', None))
         setattr(self, "_{}".format('workflow'), kwargs.get('workflow', None))
 
     @property
@@ -1338,6 +1350,29 @@ class EnvelopeTemplate(object):
         self._envelope_attachments = envelope_attachments
 
     @property
+    def envelope_classification(self):
+        """Gets the envelope_classification of this EnvelopeTemplate.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The envelope_classification of this EnvelopeTemplate.  # noqa: E501
+        :rtype: str
+        """
+        return self._envelope_classification
+
+    @envelope_classification.setter
+    def envelope_classification(self, envelope_classification):
+        """Sets the envelope_classification of this EnvelopeTemplate.
+
+          # noqa: E501
+
+        :param envelope_classification: The envelope_classification of this EnvelopeTemplate.  # noqa: E501
+        :type: str
+        """
+
+        self._envelope_classification = envelope_classification
+
+    @property
     def envelope_custom_metadata(self):
         """Gets the envelope_custom_metadata of this EnvelopeTemplate.  # noqa: E501
 
@@ -1704,6 +1739,29 @@ class EnvelopeTemplate(object):
         """
 
         self._folders = folders
+
+    @property
+    def has_authorized_signatory_recipient(self):
+        """Gets the has_authorized_signatory_recipient of this EnvelopeTemplate.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The has_authorized_signatory_recipient of this EnvelopeTemplate.  # noqa: E501
+        :rtype: str
+        """
+        return self._has_authorized_signatory_recipient
+
+    @has_authorized_signatory_recipient.setter
+    def has_authorized_signatory_recipient(self, has_authorized_signatory_recipient):
+        """Sets the has_authorized_signatory_recipient of this EnvelopeTemplate.
+
+          # noqa: E501
+
+        :param has_authorized_signatory_recipient: The has_authorized_signatory_recipient of this EnvelopeTemplate.  # noqa: E501
+        :type: str
+        """
+
+        self._has_authorized_signatory_recipient = has_authorized_signatory_recipient
 
     @property
     def has_comments(self):
@@ -2831,6 +2889,29 @@ class EnvelopeTemplate(object):
         """
 
         self._voided_reason = voided_reason
+
+    @property
+    def watermark_language(self):
+        """Gets the watermark_language of this EnvelopeTemplate.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The watermark_language of this EnvelopeTemplate.  # noqa: E501
+        :rtype: str
+        """
+        return self._watermark_language
+
+    @watermark_language.setter
+    def watermark_language(self, watermark_language):
+        """Sets the watermark_language of this EnvelopeTemplate.
+
+          # noqa: E501
+
+        :param watermark_language: The watermark_language of this EnvelopeTemplate.  # noqa: E501
+        :type: str
+        """
+
+        self._watermark_language = watermark_language
 
     @property
     def workflow(self):

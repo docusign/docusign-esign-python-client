@@ -48,6 +48,9 @@ class TemplateRole(object):
         'role_name': 'str',
         'routing_order': 'str',
         'signing_group_id': 'str',
+        'signing_group_name': 'str',
+        'signing_group_type': 'str',
+        'signing_group_users': 'list[UserInfo]',
         'tabs': 'Tabs'
     }
 
@@ -67,6 +70,9 @@ class TemplateRole(object):
         'role_name': 'roleName',
         'routing_order': 'routingOrder',
         'signing_group_id': 'signingGroupId',
+        'signing_group_name': 'signingGroupName',
+        'signing_group_type': 'signingGroupType',
+        'signing_group_users': 'signingGroupUsers',
         'tabs': 'tabs'
     }
 
@@ -91,6 +97,9 @@ class TemplateRole(object):
         self._role_name = None
         self._routing_order = None
         self._signing_group_id = None
+        self._signing_group_name = None
+        self._signing_group_type = None
+        self._signing_group_users = None
         self._tabs = None
         self.discriminator = None
 
@@ -109,6 +118,9 @@ class TemplateRole(object):
         setattr(self, "_{}".format('role_name'), kwargs.get('role_name', None))
         setattr(self, "_{}".format('routing_order'), kwargs.get('routing_order', None))
         setattr(self, "_{}".format('signing_group_id'), kwargs.get('signing_group_id', None))
+        setattr(self, "_{}".format('signing_group_name'), kwargs.get('signing_group_name', None))
+        setattr(self, "_{}".format('signing_group_type'), kwargs.get('signing_group_type', None))
+        setattr(self, "_{}".format('signing_group_users'), kwargs.get('signing_group_users', None))
         setattr(self, "_{}".format('tabs'), kwargs.get('tabs', None))
 
     @property
@@ -455,6 +467,75 @@ class TemplateRole(object):
         """
 
         self._signing_group_id = signing_group_id
+
+    @property
+    def signing_group_name(self):
+        """Gets the signing_group_name of this TemplateRole.  # noqa: E501
+
+        The display name for the signing group.   Maximum Length: 100 characters.   # noqa: E501
+
+        :return: The signing_group_name of this TemplateRole.  # noqa: E501
+        :rtype: str
+        """
+        return self._signing_group_name
+
+    @signing_group_name.setter
+    def signing_group_name(self, signing_group_name):
+        """Sets the signing_group_name of this TemplateRole.
+
+        The display name for the signing group.   Maximum Length: 100 characters.   # noqa: E501
+
+        :param signing_group_name: The signing_group_name of this TemplateRole.  # noqa: E501
+        :type: str
+        """
+
+        self._signing_group_name = signing_group_name
+
+    @property
+    def signing_group_type(self):
+        """Gets the signing_group_type of this TemplateRole.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The signing_group_type of this TemplateRole.  # noqa: E501
+        :rtype: str
+        """
+        return self._signing_group_type
+
+    @signing_group_type.setter
+    def signing_group_type(self, signing_group_type):
+        """Sets the signing_group_type of this TemplateRole.
+
+          # noqa: E501
+
+        :param signing_group_type: The signing_group_type of this TemplateRole.  # noqa: E501
+        :type: str
+        """
+
+        self._signing_group_type = signing_group_type
+
+    @property
+    def signing_group_users(self):
+        """Gets the signing_group_users of this TemplateRole.  # noqa: E501
+
+        A complex type that contains information about users in the signing group.  # noqa: E501
+
+        :return: The signing_group_users of this TemplateRole.  # noqa: E501
+        :rtype: list[UserInfo]
+        """
+        return self._signing_group_users
+
+    @signing_group_users.setter
+    def signing_group_users(self, signing_group_users):
+        """Sets the signing_group_users of this TemplateRole.
+
+        A complex type that contains information about users in the signing group.  # noqa: E501
+
+        :param signing_group_users: The signing_group_users of this TemplateRole.  # noqa: E501
+        :type: list[UserInfo]
+        """
+
+        self._signing_group_users = signing_group_users
 
     @property
     def tabs(self):

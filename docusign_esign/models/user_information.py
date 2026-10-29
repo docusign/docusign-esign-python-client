@@ -59,6 +59,7 @@ class UserInformation(object):
         'last_name': 'str',
         'license_status': 'str',
         'license_type': 'str',
+        'license_types': 'list[str]',
         'login_status': 'str',
         'middle_name': 'str',
         'password': 'str',
@@ -110,6 +111,7 @@ class UserInformation(object):
         'last_name': 'lastName',
         'license_status': 'licenseStatus',
         'license_type': 'licenseType',
+        'license_types': 'licenseTypes',
         'login_status': 'loginStatus',
         'middle_name': 'middleName',
         'password': 'password',
@@ -166,6 +168,7 @@ class UserInformation(object):
         self._last_name = None
         self._license_status = None
         self._license_type = None
+        self._license_types = None
         self._login_status = None
         self._middle_name = None
         self._password = None
@@ -216,6 +219,7 @@ class UserInformation(object):
         setattr(self, "_{}".format('last_name'), kwargs.get('last_name', None))
         setattr(self, "_{}".format('license_status'), kwargs.get('license_status', None))
         setattr(self, "_{}".format('license_type'), kwargs.get('license_type', None))
+        setattr(self, "_{}".format('license_types'), kwargs.get('license_types', None))
         setattr(self, "_{}".format('login_status'), kwargs.get('login_status', None))
         setattr(self, "_{}".format('middle_name'), kwargs.get('middle_name', None))
         setattr(self, "_{}".format('password'), kwargs.get('password', None))
@@ -836,6 +840,29 @@ class UserInformation(object):
         """
 
         self._license_type = license_type
+
+    @property
+    def license_types(self):
+        """Gets the license_types of this UserInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The license_types of this UserInformation.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._license_types
+
+    @license_types.setter
+    def license_types(self, license_types):
+        """Sets the license_types of this UserInformation.
+
+          # noqa: E501
+
+        :param license_types: The license_types of this UserInformation.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._license_types = license_types
 
     @property
     def login_status(self):

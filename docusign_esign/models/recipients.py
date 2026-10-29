@@ -34,6 +34,7 @@ class Recipients(object):
     """
     swagger_types = {
         'agents': 'list[Agent]',
+        'authorized_signatories': 'list[AuthorizedSignatory]',
         'carbon_copies': 'list[CarbonCopy]',
         'certified_deliveries': 'list[CertifiedDelivery]',
         'current_routing_order': 'str',
@@ -52,6 +53,7 @@ class Recipients(object):
 
     attribute_map = {
         'agents': 'agents',
+        'authorized_signatories': 'authorizedSignatories',
         'carbon_copies': 'carbonCopies',
         'certified_deliveries': 'certifiedDeliveries',
         'current_routing_order': 'currentRoutingOrder',
@@ -75,6 +77,7 @@ class Recipients(object):
         self._configuration = _configuration
 
         self._agents = None
+        self._authorized_signatories = None
         self._carbon_copies = None
         self._certified_deliveries = None
         self._current_routing_order = None
@@ -92,6 +95,7 @@ class Recipients(object):
         self.discriminator = None
 
         setattr(self, "_{}".format('agents'), kwargs.get('agents', None))
+        setattr(self, "_{}".format('authorized_signatories'), kwargs.get('authorized_signatories', None))
         setattr(self, "_{}".format('carbon_copies'), kwargs.get('carbon_copies', None))
         setattr(self, "_{}".format('certified_deliveries'), kwargs.get('certified_deliveries', None))
         setattr(self, "_{}".format('current_routing_order'), kwargs.get('current_routing_order', None))
@@ -129,6 +133,29 @@ class Recipients(object):
         """
 
         self._agents = agents
+
+    @property
+    def authorized_signatories(self):
+        """Gets the authorized_signatories of this Recipients.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The authorized_signatories of this Recipients.  # noqa: E501
+        :rtype: list[AuthorizedSignatory]
+        """
+        return self._authorized_signatories
+
+    @authorized_signatories.setter
+    def authorized_signatories(self, authorized_signatories):
+        """Sets the authorized_signatories of this Recipients.
+
+          # noqa: E501
+
+        :param authorized_signatories: The authorized_signatories of this Recipients.  # noqa: E501
+        :type: list[AuthorizedSignatory]
+        """
+
+        self._authorized_signatories = authorized_signatories
 
     @property
     def carbon_copies(self):
