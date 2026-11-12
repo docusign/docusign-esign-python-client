@@ -30,6 +30,7 @@ from .apis.email_archive_api import EmailArchiveApi
 from .apis.envelopes_api import EnvelopesApi
 from .apis.folders_api import FoldersApi
 from .apis.groups_api import GroupsApi
+from .apis.insights_api import InsightsApi
 from .apis.notary_api import NotaryApi
 from .apis.organizations_api import OrganizationsApi
 from .apis.power_forms_api import PowerFormsApi
@@ -98,6 +99,7 @@ from docusign_esign.models.attachment import Attachment
 from docusign_esign.models.authentication_method import AuthenticationMethod
 from docusign_esign.models.authentication_status import AuthenticationStatus
 from docusign_esign.models.authorization_user import AuthorizationUser
+from docusign_esign.models.authorized_signatory import AuthorizedSignatory
 from docusign_esign.models.bcc_email_address import BccEmailAddress
 from docusign_esign.models.bcc_email_archive import BccEmailArchive
 from docusign_esign.models.bcc_email_archive_history import BccEmailArchiveHistory
@@ -233,6 +235,8 @@ from docusign_esign.models.delegation_info import DelegationInfo
 from docusign_esign.models.diagnostics_settings_information import DiagnosticsSettingsInformation
 from docusign_esign.models.direct_debit_processor_information import DirectDebitProcessorInformation
 from docusign_esign.models.dob_information_input import DobInformationInput
+from docusign_esign.models.doc_gen_conditional_operation_base import DocGenConditionalOperationBase
+from docusign_esign.models.doc_gen_conditional_rule import DocGenConditionalRule
 from docusign_esign.models.doc_gen_form_field import DocGenFormField
 from docusign_esign.models.doc_gen_form_field_option import DocGenFormFieldOption
 from docusign_esign.models.doc_gen_form_field_request import DocGenFormFieldRequest
@@ -266,6 +270,7 @@ from docusign_esign.models.email import Email
 from docusign_esign.models.email_address import EmailAddress
 from docusign_esign.models.email_settings import EmailSettings
 from docusign_esign.models.envelope import Envelope
+from docusign_esign.models.envelope_archive_summary import EnvelopeArchiveSummary
 from docusign_esign.models.envelope_attachment import EnvelopeAttachment
 from docusign_esign.models.envelope_attachments_request import EnvelopeAttachmentsRequest
 from docusign_esign.models.envelope_attachments_result import EnvelopeAttachmentsResult
@@ -278,6 +283,8 @@ from docusign_esign.models.envelope_document import EnvelopeDocument
 from docusign_esign.models.envelope_documents_result import EnvelopeDocumentsResult
 from docusign_esign.models.envelope_event import EnvelopeEvent
 from docusign_esign.models.envelope_form_data import EnvelopeFormData
+from docusign_esign.models.envelope_gen_and_send import EnvelopeGenAndSend
+from docusign_esign.models.envelope_gen_and_send_properties import EnvelopeGenAndSendProperties
 from docusign_esign.models.envelope_id import EnvelopeId
 from docusign_esign.models.envelope_ids_request import EnvelopeIdsRequest
 from docusign_esign.models.envelope_metadata import EnvelopeMetadata
@@ -302,6 +309,7 @@ from docusign_esign.models.envelope_view_tagger_settings import EnvelopeViewTagg
 from docusign_esign.models.envelope_view_template_settings import EnvelopeViewTemplateSettings
 from docusign_esign.models.envelopes_information import EnvelopesInformation
 from docusign_esign.models.envelopes_share_permission_request import EnvelopesSharePermissionRequest
+from docusign_esign.models.envelopes_share_permission_response import EnvelopesSharePermissionResponse
 from docusign_esign.models.envelopes_share_request import EnvelopesShareRequest
 from docusign_esign.models.envelopes_share_response import EnvelopesShareResponse
 from docusign_esign.models.envelopes_shares_request import EnvelopesSharesRequest
@@ -310,6 +318,8 @@ from docusign_esign.models.error_details import ErrorDetails
 from docusign_esign.models.event_notification import EventNotification
 from docusign_esign.models.event_result import EventResult
 from docusign_esign.models.expirations import Expirations
+from docusign_esign.models.extend_payment_configuration import ExtendPaymentConfiguration
+from docusign_esign.models.extend_payment_line_item import ExtendPaymentLineItem
 from docusign_esign.models.extension_data import ExtensionData
 from docusign_esign.models.external_doc_service_error_details import ExternalDocServiceErrorDetails
 from docusign_esign.models.external_document_sources import ExternalDocumentSources
@@ -335,6 +345,8 @@ from docusign_esign.models.forgotten_password_information import ForgottenPasswo
 from docusign_esign.models.form_data_item import FormDataItem
 from docusign_esign.models.formula_tab import FormulaTab
 from docusign_esign.models.full_name import FullName
+from docusign_esign.models.generated_document import GeneratedDocument
+from docusign_esign.models.generated_documents_result import GeneratedDocumentsResult
 from docusign_esign.models.graphics_context import GraphicsContext
 from docusign_esign.models.group import Group
 from docusign_esign.models.group_information import GroupInformation
@@ -407,6 +419,7 @@ from docusign_esign.models.palette_settings import PaletteSettings
 from docusign_esign.models.participant import Participant
 from docusign_esign.models.path_extended_element import PathExtendedElement
 from docusign_esign.models.pay_pal_legacy_settings import PayPalLegacySettings
+from docusign_esign.models.payment_audit_event import PaymentAuditEvent
 from docusign_esign.models.payment_details import PaymentDetails
 from docusign_esign.models.payment_gateway_account import PaymentGatewayAccount
 from docusign_esign.models.payment_gateway_account_setting import PaymentGatewayAccountSetting
@@ -463,6 +476,9 @@ from docusign_esign.models.recipient_update_response import RecipientUpdateRespo
 from docusign_esign.models.recipient_view_request import RecipientViewRequest
 from docusign_esign.models.recipients import Recipients
 from docusign_esign.models.recipients_update_summary import RecipientsUpdateSummary
+from docusign_esign.models.recommendation_info import RecommendationInfo
+from docusign_esign.models.recommendations_list_request import RecommendationsListRequest
+from docusign_esign.models.recommendations_list_response import RecommendationsListResponse
 from docusign_esign.models.referral_information import ReferralInformation
 from docusign_esign.models.reminders import Reminders
 from docusign_esign.models.resource_information import ResourceInformation

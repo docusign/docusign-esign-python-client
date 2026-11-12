@@ -35,13 +35,15 @@ class EnvelopesShareRequest(object):
     swagger_types = {
         'agent_user': 'AuthorizationUser',
         'custom_message': 'str',
-        'permission': 'str'
+        'permission': 'str',
+        'share_id': 'str'
     }
 
     attribute_map = {
         'agent_user': 'agentUser',
         'custom_message': 'customMessage',
-        'permission': 'permission'
+        'permission': 'permission',
+        'share_id': 'shareId'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -53,11 +55,13 @@ class EnvelopesShareRequest(object):
         self._agent_user = None
         self._custom_message = None
         self._permission = None
+        self._share_id = None
         self.discriminator = None
 
         setattr(self, "_{}".format('agent_user'), kwargs.get('agent_user', None))
         setattr(self, "_{}".format('custom_message'), kwargs.get('custom_message', None))
         setattr(self, "_{}".format('permission'), kwargs.get('permission', None))
+        setattr(self, "_{}".format('share_id'), kwargs.get('share_id', None))
 
     @property
     def agent_user(self):
@@ -127,6 +131,29 @@ class EnvelopesShareRequest(object):
         """
 
         self._permission = permission
+
+    @property
+    def share_id(self):
+        """Gets the share_id of this EnvelopesShareRequest.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The share_id of this EnvelopesShareRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._share_id
+
+    @share_id.setter
+    def share_id(self, share_id):
+        """Sets the share_id of this EnvelopesShareRequest.
+
+          # noqa: E501
+
+        :param share_id: The share_id of this EnvelopesShareRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._share_id = share_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

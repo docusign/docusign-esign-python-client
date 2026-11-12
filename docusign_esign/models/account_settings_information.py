@@ -93,6 +93,7 @@ class AccountSettingsInformation(object):
         'allow_connect_send_finish_later': 'str',
         'allow_connect_send_finish_later_metadata': 'SettingsMetadata',
         'allow_connect_unified_payload_ui': 'str',
+        'allow_connect_workspace_upload_request_ui': 'str',
         'allow_consumer_disclosure_override': 'str',
         'allow_consumer_disclosure_override_metadata': 'SettingsMetadata',
         'allow_data_download': 'str',
@@ -371,6 +372,8 @@ class AccountSettingsInformation(object):
         'document_retention_purge_tabs': 'str',
         'document_visibility': 'str',
         'document_visibility_metadata': 'SettingsMetadata',
+        'docusign_pdf': 'str',
+        'docusign_pdf_metadata': 'SettingsMetadata',
         'draft_envelope_retention': 'str',
         'draft_envelope_retention_metadata': 'SettingsMetadata',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'str',
@@ -399,6 +402,8 @@ class AccountSettingsInformation(object):
         'enable_agreement_actions_for_e_sign_metadata': 'SettingsMetadata',
         'enable_agreement_desk_advanced': 'str',
         'enable_agreement_desk_advanced_meta_data': 'SettingsMetadata',
+        'enable_ai_agents': 'str',
+        'enable_ai_agents_metadata': 'SettingsMetadata',
         'enable_ai_contract_review': 'str',
         'enable_ai_contract_review_metadata': 'SettingsMetadata',
         'enable_ai_sender_message': 'str',
@@ -481,6 +486,8 @@ class AccountSettingsInformation(object):
         'enable_esign_communities_metadata': 'SettingsMetadata',
         'enable_esign_task_list': 'str',
         'enable_esign_task_list_metadata': 'SettingsMetadata',
+        'enable_gen_and_api': 'str',
+        'enable_gen_and_api_metadata': 'SettingsMetadata',
         'enable_generation_with3_p_integration': 'str',
         'enable_generation_with3_p_integration_meta_data': 'SettingsMetadata',
         'enable_greenhouse_app': 'str',
@@ -489,6 +496,8 @@ class AccountSettingsInformation(object):
         'enable_i9_on_demand_metadata': 'SettingsMetadata',
         'enable_iam_clause_library': 'str',
         'enable_iam_clause_library_metadata': 'SettingsMetadata',
+        'enable_iam_data_connector': 'str',
+        'enable_iam_data_connector_metadata': 'SettingsMetadata',
         'enable_ia_mfor_x_embedded_ux': 'str',
         'enable_ia_mfor_x_embedded_ux_metadata': 'SettingsMetadata',
         'enable_id_fx_accountless_sms_auth_for_part11': 'str',
@@ -535,6 +544,7 @@ class AccountSettingsInformation(object):
         'enable_notary_on_demand_witness_metadata': 'SettingsMetadata',
         'enable_obligation_management': 'str',
         'enable_obligation_management_metadata': 'SettingsMetadata',
+        'enable_owner_insights_and_recommendations_setting_metadata': 'SettingsMetadata',
         'enable_participant_recipient_setting_metadata': 'SettingsMetadata',
         'enable_payment_processing': 'str',
         'enable_payment_processing_metadata': 'SettingsMetadata',
@@ -568,6 +578,7 @@ class AccountSettingsInformation(object):
         'enable_search_service_azure_uri_metadata': 'SettingsMetadata',
         'enable_search_site_specific_api': 'str',
         'enable_search_site_specific_api_metadata': 'SettingsMetadata',
+        'enable_sender_insights_and_recommendations_setting_metadata': 'SettingsMetadata',
         'enable_sending_tags_font_settings': 'str',
         'enable_sending_tags_font_settings_metadata': 'SettingsMetadata',
         'enable_send_to_agent': 'str',
@@ -958,6 +969,7 @@ class AccountSettingsInformation(object):
         'allow_connect_send_finish_later': 'allowConnectSendFinishLater',
         'allow_connect_send_finish_later_metadata': 'allowConnectSendFinishLaterMetadata',
         'allow_connect_unified_payload_ui': 'allowConnectUnifiedPayloadUI',
+        'allow_connect_workspace_upload_request_ui': 'allowConnectWorkspaceUploadRequestUI',
         'allow_consumer_disclosure_override': 'allowConsumerDisclosureOverride',
         'allow_consumer_disclosure_override_metadata': 'allowConsumerDisclosureOverrideMetadata',
         'allow_data_download': 'allowDataDownload',
@@ -1236,6 +1248,8 @@ class AccountSettingsInformation(object):
         'document_retention_purge_tabs': 'documentRetentionPurgeTabs',
         'document_visibility': 'documentVisibility',
         'document_visibility_metadata': 'documentVisibilityMetadata',
+        'docusign_pdf': 'docusignPDF',
+        'docusign_pdf_metadata': 'docusignPDFMetadata',
         'draft_envelope_retention': 'draftEnvelopeRetention',
         'draft_envelope_retention_metadata': 'draftEnvelopeRetentionMetadata',
         'dss_sign_28411_enable_leave_page_prompt_radmin_option': 'dss_SIGN_28411_EnableLeavePagePrompt_RadminOption',
@@ -1264,6 +1278,8 @@ class AccountSettingsInformation(object):
         'enable_agreement_actions_for_e_sign_metadata': 'enableAgreementActionsForESignMetadata',
         'enable_agreement_desk_advanced': 'enableAgreementDeskAdvanced',
         'enable_agreement_desk_advanced_meta_data': 'enableAgreementDeskAdvancedMetaData',
+        'enable_ai_agents': 'enableAIAgents',
+        'enable_ai_agents_metadata': 'enableAIAgentsMetadata',
         'enable_ai_contract_review': 'enableAIContractReview',
         'enable_ai_contract_review_metadata': 'enableAIContractReviewMetadata',
         'enable_ai_sender_message': 'enableAISenderMessage',
@@ -1346,6 +1362,8 @@ class AccountSettingsInformation(object):
         'enable_esign_communities_metadata': 'enableEsignCommunitiesMetadata',
         'enable_esign_task_list': 'enableEsignTaskList',
         'enable_esign_task_list_metadata': 'enableEsignTaskListMetadata',
+        'enable_gen_and_api': 'enableGenAndAPI',
+        'enable_gen_and_api_metadata': 'enableGenAndAPIMetadata',
         'enable_generation_with3_p_integration': 'enableGenerationWith3PIntegration',
         'enable_generation_with3_p_integration_meta_data': 'enableGenerationWith3PIntegrationMetaData',
         'enable_greenhouse_app': 'enableGreenhouseApp',
@@ -1354,6 +1372,8 @@ class AccountSettingsInformation(object):
         'enable_i9_on_demand_metadata': 'enableI9OnDemandMetadata',
         'enable_iam_clause_library': 'enableIAMClauseLibrary',
         'enable_iam_clause_library_metadata': 'enableIAMClauseLibraryMetadata',
+        'enable_iam_data_connector': 'enableIAMDataConnector',
+        'enable_iam_data_connector_metadata': 'enableIAMDataConnectorMetadata',
         'enable_ia_mfor_x_embedded_ux': 'enableIAMforXEmbeddedUX',
         'enable_ia_mfor_x_embedded_ux_metadata': 'enableIAMforXEmbeddedUXMetadata',
         'enable_id_fx_accountless_sms_auth_for_part11': 'enableIDFxAccountlessSMSAuthForPart11',
@@ -1400,6 +1420,7 @@ class AccountSettingsInformation(object):
         'enable_notary_on_demand_witness_metadata': 'enableNotaryOnDemandWitnessMetadata',
         'enable_obligation_management': 'enableObligationManagement',
         'enable_obligation_management_metadata': 'enableObligationManagementMetadata',
+        'enable_owner_insights_and_recommendations_setting_metadata': 'enableOwnerInsightsAndRecommendationsSettingMetadata',
         'enable_participant_recipient_setting_metadata': 'enableParticipantRecipientSettingMetadata',
         'enable_payment_processing': 'enablePaymentProcessing',
         'enable_payment_processing_metadata': 'enablePaymentProcessingMetadata',
@@ -1433,6 +1454,7 @@ class AccountSettingsInformation(object):
         'enable_search_service_azure_uri_metadata': 'enableSearchServiceAzureUriMetadata',
         'enable_search_site_specific_api': 'enableSearchSiteSpecificApi',
         'enable_search_site_specific_api_metadata': 'enableSearchSiteSpecificApiMetadata',
+        'enable_sender_insights_and_recommendations_setting_metadata': 'enableSenderInsightsAndRecommendationsSettingMetadata',
         'enable_sending_tags_font_settings': 'enableSendingTagsFontSettings',
         'enable_sending_tags_font_settings_metadata': 'enableSendingTagsFontSettingsMetadata',
         'enable_send_to_agent': 'enableSendToAgent',
@@ -1828,6 +1850,7 @@ class AccountSettingsInformation(object):
         self._allow_connect_send_finish_later = None
         self._allow_connect_send_finish_later_metadata = None
         self._allow_connect_unified_payload_ui = None
+        self._allow_connect_workspace_upload_request_ui = None
         self._allow_consumer_disclosure_override = None
         self._allow_consumer_disclosure_override_metadata = None
         self._allow_data_download = None
@@ -2106,6 +2129,8 @@ class AccountSettingsInformation(object):
         self._document_retention_purge_tabs = None
         self._document_visibility = None
         self._document_visibility_metadata = None
+        self._docusign_pdf = None
+        self._docusign_pdf_metadata = None
         self._draft_envelope_retention = None
         self._draft_envelope_retention_metadata = None
         self._dss_sign_28411_enable_leave_page_prompt_radmin_option = None
@@ -2134,6 +2159,8 @@ class AccountSettingsInformation(object):
         self._enable_agreement_actions_for_e_sign_metadata = None
         self._enable_agreement_desk_advanced = None
         self._enable_agreement_desk_advanced_meta_data = None
+        self._enable_ai_agents = None
+        self._enable_ai_agents_metadata = None
         self._enable_ai_contract_review = None
         self._enable_ai_contract_review_metadata = None
         self._enable_ai_sender_message = None
@@ -2216,6 +2243,8 @@ class AccountSettingsInformation(object):
         self._enable_esign_communities_metadata = None
         self._enable_esign_task_list = None
         self._enable_esign_task_list_metadata = None
+        self._enable_gen_and_api = None
+        self._enable_gen_and_api_metadata = None
         self._enable_generation_with3_p_integration = None
         self._enable_generation_with3_p_integration_meta_data = None
         self._enable_greenhouse_app = None
@@ -2224,6 +2253,8 @@ class AccountSettingsInformation(object):
         self._enable_i9_on_demand_metadata = None
         self._enable_iam_clause_library = None
         self._enable_iam_clause_library_metadata = None
+        self._enable_iam_data_connector = None
+        self._enable_iam_data_connector_metadata = None
         self._enable_ia_mfor_x_embedded_ux = None
         self._enable_ia_mfor_x_embedded_ux_metadata = None
         self._enable_id_fx_accountless_sms_auth_for_part11 = None
@@ -2270,6 +2301,7 @@ class AccountSettingsInformation(object):
         self._enable_notary_on_demand_witness_metadata = None
         self._enable_obligation_management = None
         self._enable_obligation_management_metadata = None
+        self._enable_owner_insights_and_recommendations_setting_metadata = None
         self._enable_participant_recipient_setting_metadata = None
         self._enable_payment_processing = None
         self._enable_payment_processing_metadata = None
@@ -2303,6 +2335,7 @@ class AccountSettingsInformation(object):
         self._enable_search_service_azure_uri_metadata = None
         self._enable_search_site_specific_api = None
         self._enable_search_site_specific_api_metadata = None
+        self._enable_sender_insights_and_recommendations_setting_metadata = None
         self._enable_sending_tags_font_settings = None
         self._enable_sending_tags_font_settings_metadata = None
         self._enable_send_to_agent = None
@@ -2692,6 +2725,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('allow_connect_send_finish_later'), kwargs.get('allow_connect_send_finish_later', None))
         setattr(self, "_{}".format('allow_connect_send_finish_later_metadata'), kwargs.get('allow_connect_send_finish_later_metadata', None))
         setattr(self, "_{}".format('allow_connect_unified_payload_ui'), kwargs.get('allow_connect_unified_payload_ui', None))
+        setattr(self, "_{}".format('allow_connect_workspace_upload_request_ui'), kwargs.get('allow_connect_workspace_upload_request_ui', None))
         setattr(self, "_{}".format('allow_consumer_disclosure_override'), kwargs.get('allow_consumer_disclosure_override', None))
         setattr(self, "_{}".format('allow_consumer_disclosure_override_metadata'), kwargs.get('allow_consumer_disclosure_override_metadata', None))
         setattr(self, "_{}".format('allow_data_download'), kwargs.get('allow_data_download', None))
@@ -2970,6 +3004,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('document_retention_purge_tabs'), kwargs.get('document_retention_purge_tabs', None))
         setattr(self, "_{}".format('document_visibility'), kwargs.get('document_visibility', None))
         setattr(self, "_{}".format('document_visibility_metadata'), kwargs.get('document_visibility_metadata', None))
+        setattr(self, "_{}".format('docusign_pdf'), kwargs.get('docusign_pdf', None))
+        setattr(self, "_{}".format('docusign_pdf_metadata'), kwargs.get('docusign_pdf_metadata', None))
         setattr(self, "_{}".format('draft_envelope_retention'), kwargs.get('draft_envelope_retention', None))
         setattr(self, "_{}".format('draft_envelope_retention_metadata'), kwargs.get('draft_envelope_retention_metadata', None))
         setattr(self, "_{}".format('dss_sign_28411_enable_leave_page_prompt_radmin_option'), kwargs.get('dss_sign_28411_enable_leave_page_prompt_radmin_option', None))
@@ -2998,6 +3034,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_agreement_actions_for_e_sign_metadata'), kwargs.get('enable_agreement_actions_for_e_sign_metadata', None))
         setattr(self, "_{}".format('enable_agreement_desk_advanced'), kwargs.get('enable_agreement_desk_advanced', None))
         setattr(self, "_{}".format('enable_agreement_desk_advanced_meta_data'), kwargs.get('enable_agreement_desk_advanced_meta_data', None))
+        setattr(self, "_{}".format('enable_ai_agents'), kwargs.get('enable_ai_agents', None))
+        setattr(self, "_{}".format('enable_ai_agents_metadata'), kwargs.get('enable_ai_agents_metadata', None))
         setattr(self, "_{}".format('enable_ai_contract_review'), kwargs.get('enable_ai_contract_review', None))
         setattr(self, "_{}".format('enable_ai_contract_review_metadata'), kwargs.get('enable_ai_contract_review_metadata', None))
         setattr(self, "_{}".format('enable_ai_sender_message'), kwargs.get('enable_ai_sender_message', None))
@@ -3080,6 +3118,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_esign_communities_metadata'), kwargs.get('enable_esign_communities_metadata', None))
         setattr(self, "_{}".format('enable_esign_task_list'), kwargs.get('enable_esign_task_list', None))
         setattr(self, "_{}".format('enable_esign_task_list_metadata'), kwargs.get('enable_esign_task_list_metadata', None))
+        setattr(self, "_{}".format('enable_gen_and_api'), kwargs.get('enable_gen_and_api', None))
+        setattr(self, "_{}".format('enable_gen_and_api_metadata'), kwargs.get('enable_gen_and_api_metadata', None))
         setattr(self, "_{}".format('enable_generation_with3_p_integration'), kwargs.get('enable_generation_with3_p_integration', None))
         setattr(self, "_{}".format('enable_generation_with3_p_integration_meta_data'), kwargs.get('enable_generation_with3_p_integration_meta_data', None))
         setattr(self, "_{}".format('enable_greenhouse_app'), kwargs.get('enable_greenhouse_app', None))
@@ -3088,6 +3128,8 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_i9_on_demand_metadata'), kwargs.get('enable_i9_on_demand_metadata', None))
         setattr(self, "_{}".format('enable_iam_clause_library'), kwargs.get('enable_iam_clause_library', None))
         setattr(self, "_{}".format('enable_iam_clause_library_metadata'), kwargs.get('enable_iam_clause_library_metadata', None))
+        setattr(self, "_{}".format('enable_iam_data_connector'), kwargs.get('enable_iam_data_connector', None))
+        setattr(self, "_{}".format('enable_iam_data_connector_metadata'), kwargs.get('enable_iam_data_connector_metadata', None))
         setattr(self, "_{}".format('enable_ia_mfor_x_embedded_ux'), kwargs.get('enable_ia_mfor_x_embedded_ux', None))
         setattr(self, "_{}".format('enable_ia_mfor_x_embedded_ux_metadata'), kwargs.get('enable_ia_mfor_x_embedded_ux_metadata', None))
         setattr(self, "_{}".format('enable_id_fx_accountless_sms_auth_for_part11'), kwargs.get('enable_id_fx_accountless_sms_auth_for_part11', None))
@@ -3134,6 +3176,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_notary_on_demand_witness_metadata'), kwargs.get('enable_notary_on_demand_witness_metadata', None))
         setattr(self, "_{}".format('enable_obligation_management'), kwargs.get('enable_obligation_management', None))
         setattr(self, "_{}".format('enable_obligation_management_metadata'), kwargs.get('enable_obligation_management_metadata', None))
+        setattr(self, "_{}".format('enable_owner_insights_and_recommendations_setting_metadata'), kwargs.get('enable_owner_insights_and_recommendations_setting_metadata', None))
         setattr(self, "_{}".format('enable_participant_recipient_setting_metadata'), kwargs.get('enable_participant_recipient_setting_metadata', None))
         setattr(self, "_{}".format('enable_payment_processing'), kwargs.get('enable_payment_processing', None))
         setattr(self, "_{}".format('enable_payment_processing_metadata'), kwargs.get('enable_payment_processing_metadata', None))
@@ -3167,6 +3210,7 @@ class AccountSettingsInformation(object):
         setattr(self, "_{}".format('enable_search_service_azure_uri_metadata'), kwargs.get('enable_search_service_azure_uri_metadata', None))
         setattr(self, "_{}".format('enable_search_site_specific_api'), kwargs.get('enable_search_site_specific_api', None))
         setattr(self, "_{}".format('enable_search_site_specific_api_metadata'), kwargs.get('enable_search_site_specific_api_metadata', None))
+        setattr(self, "_{}".format('enable_sender_insights_and_recommendations_setting_metadata'), kwargs.get('enable_sender_insights_and_recommendations_setting_metadata', None))
         setattr(self, "_{}".format('enable_sending_tags_font_settings'), kwargs.get('enable_sending_tags_font_settings', None))
         setattr(self, "_{}".format('enable_sending_tags_font_settings_metadata'), kwargs.get('enable_sending_tags_font_settings_metadata', None))
         setattr(self, "_{}".format('enable_send_to_agent'), kwargs.get('enable_send_to_agent', None))
@@ -4874,6 +4918,29 @@ class AccountSettingsInformation(object):
         """
 
         self._allow_connect_unified_payload_ui = allow_connect_unified_payload_ui
+
+    @property
+    def allow_connect_workspace_upload_request_ui(self):
+        """Gets the allow_connect_workspace_upload_request_ui of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The allow_connect_workspace_upload_request_ui of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._allow_connect_workspace_upload_request_ui
+
+    @allow_connect_workspace_upload_request_ui.setter
+    def allow_connect_workspace_upload_request_ui(self, allow_connect_workspace_upload_request_ui):
+        """Sets the allow_connect_workspace_upload_request_ui of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param allow_connect_workspace_upload_request_ui: The allow_connect_workspace_upload_request_ui of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._allow_connect_workspace_upload_request_ui = allow_connect_workspace_upload_request_ui
 
     @property
     def allow_consumer_disclosure_override(self):
@@ -11270,6 +11337,52 @@ class AccountSettingsInformation(object):
         self._document_visibility_metadata = document_visibility_metadata
 
     @property
+    def docusign_pdf(self):
+        """Gets the docusign_pdf of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The docusign_pdf of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._docusign_pdf
+
+    @docusign_pdf.setter
+    def docusign_pdf(self, docusign_pdf):
+        """Sets the docusign_pdf of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param docusign_pdf: The docusign_pdf of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._docusign_pdf = docusign_pdf
+
+    @property
+    def docusign_pdf_metadata(self):
+        """Gets the docusign_pdf_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The docusign_pdf_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._docusign_pdf_metadata
+
+    @docusign_pdf_metadata.setter
+    def docusign_pdf_metadata(self, docusign_pdf_metadata):
+        """Sets the docusign_pdf_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param docusign_pdf_metadata: The docusign_pdf_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._docusign_pdf_metadata = docusign_pdf_metadata
+
+    @property
     def draft_envelope_retention(self):
         """Gets the draft_envelope_retention of this AccountSettingsInformation.  # noqa: E501
 
@@ -11912,6 +12025,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_agreement_desk_advanced_meta_data = enable_agreement_desk_advanced_meta_data
+
+    @property
+    def enable_ai_agents(self):
+        """Gets the enable_ai_agents of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ai_agents of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_ai_agents
+
+    @enable_ai_agents.setter
+    def enable_ai_agents(self, enable_ai_agents):
+        """Sets the enable_ai_agents of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ai_agents: The enable_ai_agents of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_ai_agents = enable_ai_agents
+
+    @property
+    def enable_ai_agents_metadata(self):
+        """Gets the enable_ai_agents_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_ai_agents_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_ai_agents_metadata
+
+    @enable_ai_agents_metadata.setter
+    def enable_ai_agents_metadata(self, enable_ai_agents_metadata):
+        """Sets the enable_ai_agents_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_ai_agents_metadata: The enable_ai_agents_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_ai_agents_metadata = enable_ai_agents_metadata
 
     @property
     def enable_ai_contract_review(self):
@@ -13800,6 +13959,52 @@ class AccountSettingsInformation(object):
         self._enable_esign_task_list_metadata = enable_esign_task_list_metadata
 
     @property
+    def enable_gen_and_api(self):
+        """Gets the enable_gen_and_api of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_gen_and_api of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_gen_and_api
+
+    @enable_gen_and_api.setter
+    def enable_gen_and_api(self, enable_gen_and_api):
+        """Sets the enable_gen_and_api of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_gen_and_api: The enable_gen_and_api of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_gen_and_api = enable_gen_and_api
+
+    @property
+    def enable_gen_and_api_metadata(self):
+        """Gets the enable_gen_and_api_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_gen_and_api_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_gen_and_api_metadata
+
+    @enable_gen_and_api_metadata.setter
+    def enable_gen_and_api_metadata(self, enable_gen_and_api_metadata):
+        """Sets the enable_gen_and_api_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_gen_and_api_metadata: The enable_gen_and_api_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_gen_and_api_metadata = enable_gen_and_api_metadata
+
+    @property
     def enable_generation_with3_p_integration(self):
         """Gets the enable_generation_with3_p_integration of this AccountSettingsInformation.  # noqa: E501
 
@@ -13982,6 +14187,52 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_iam_clause_library_metadata = enable_iam_clause_library_metadata
+
+    @property
+    def enable_iam_data_connector(self):
+        """Gets the enable_iam_data_connector of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_iam_data_connector of this AccountSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_iam_data_connector
+
+    @enable_iam_data_connector.setter
+    def enable_iam_data_connector(self, enable_iam_data_connector):
+        """Sets the enable_iam_data_connector of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_iam_data_connector: The enable_iam_data_connector of this AccountSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_iam_data_connector = enable_iam_data_connector
+
+    @property
+    def enable_iam_data_connector_metadata(self):
+        """Gets the enable_iam_data_connector_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_iam_data_connector_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_iam_data_connector_metadata
+
+    @enable_iam_data_connector_metadata.setter
+    def enable_iam_data_connector_metadata(self, enable_iam_data_connector_metadata):
+        """Sets the enable_iam_data_connector_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_iam_data_connector_metadata: The enable_iam_data_connector_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_iam_data_connector_metadata = enable_iam_data_connector_metadata
 
     @property
     def enable_ia_mfor_x_embedded_ux(self):
@@ -15042,6 +15293,29 @@ class AccountSettingsInformation(object):
         self._enable_obligation_management_metadata = enable_obligation_management_metadata
 
     @property
+    def enable_owner_insights_and_recommendations_setting_metadata(self):
+        """Gets the enable_owner_insights_and_recommendations_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_owner_insights_and_recommendations_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_owner_insights_and_recommendations_setting_metadata
+
+    @enable_owner_insights_and_recommendations_setting_metadata.setter
+    def enable_owner_insights_and_recommendations_setting_metadata(self, enable_owner_insights_and_recommendations_setting_metadata):
+        """Sets the enable_owner_insights_and_recommendations_setting_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_owner_insights_and_recommendations_setting_metadata: The enable_owner_insights_and_recommendations_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_owner_insights_and_recommendations_setting_metadata = enable_owner_insights_and_recommendations_setting_metadata
+
+    @property
     def enable_participant_recipient_setting_metadata(self):
         """Gets the enable_participant_recipient_setting_metadata of this AccountSettingsInformation.  # noqa: E501
 
@@ -15799,6 +16073,29 @@ class AccountSettingsInformation(object):
         """
 
         self._enable_search_site_specific_api_metadata = enable_search_site_specific_api_metadata
+
+    @property
+    def enable_sender_insights_and_recommendations_setting_metadata(self):
+        """Gets the enable_sender_insights_and_recommendations_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The enable_sender_insights_and_recommendations_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._enable_sender_insights_and_recommendations_setting_metadata
+
+    @enable_sender_insights_and_recommendations_setting_metadata.setter
+    def enable_sender_insights_and_recommendations_setting_metadata(self, enable_sender_insights_and_recommendations_setting_metadata):
+        """Sets the enable_sender_insights_and_recommendations_setting_metadata of this AccountSettingsInformation.
+
+          # noqa: E501
+
+        :param enable_sender_insights_and_recommendations_setting_metadata: The enable_sender_insights_and_recommendations_setting_metadata of this AccountSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._enable_sender_insights_and_recommendations_setting_metadata = enable_sender_insights_and_recommendations_setting_metadata
 
     @property
     def enable_sending_tags_font_settings(self):

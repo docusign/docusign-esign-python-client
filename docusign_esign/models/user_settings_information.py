@@ -125,6 +125,10 @@ class UserSettingsInformation(object):
         'is_managed_by_scim_metadata': 'SettingsMetadata',
         'is_membership_managed_by_scim': 'str',
         'is_membership_managed_by_scim_metadata': 'SettingsMetadata',
+        'is_membership_redacted': 'str',
+        'is_membership_redacted_metadata': 'SettingsMetadata',
+        'is_user_redacted': 'str',
+        'is_user_redacted_metadata': 'SettingsMetadata',
         'locale': 'str',
         'locale_metadata': 'SettingsMetadata',
         'locale_policy': 'LocalePolicy',
@@ -142,6 +146,8 @@ class UserSettingsInformation(object):
         'power_form_mode_metadata': 'SettingsMetadata',
         'recipient_viewed_notification': 'str',
         'recipient_viewed_notification_metadata': 'SettingsMetadata',
+        'redact_at_metadata': 'SettingsMetadata',
+        'redact_membership_at': 'str',
         'seal_identifiers': 'list[SealIdentifier]',
         'self_signed_recipient_email_document': 'str',
         'self_signed_recipient_email_document_metadata': 'SettingsMetadata',
@@ -277,6 +283,10 @@ class UserSettingsInformation(object):
         'is_managed_by_scim_metadata': 'isManagedByScimMetadata',
         'is_membership_managed_by_scim': 'isMembershipManagedByScim',
         'is_membership_managed_by_scim_metadata': 'isMembershipManagedByScimMetadata',
+        'is_membership_redacted': 'isMembershipRedacted',
+        'is_membership_redacted_metadata': 'isMembershipRedactedMetadata',
+        'is_user_redacted': 'isUserRedacted',
+        'is_user_redacted_metadata': 'isUserRedactedMetadata',
         'locale': 'locale',
         'locale_metadata': 'localeMetadata',
         'locale_policy': 'localePolicy',
@@ -294,6 +304,8 @@ class UserSettingsInformation(object):
         'power_form_mode_metadata': 'powerFormModeMetadata',
         'recipient_viewed_notification': 'recipientViewedNotification',
         'recipient_viewed_notification_metadata': 'recipientViewedNotificationMetadata',
+        'redact_at_metadata': 'redactAtMetadata',
+        'redact_membership_at': 'redactMembershipAt',
         'seal_identifiers': 'sealIdentifiers',
         'self_signed_recipient_email_document': 'selfSignedRecipientEmailDocument',
         'self_signed_recipient_email_document_metadata': 'selfSignedRecipientEmailDocumentMetadata',
@@ -434,6 +446,10 @@ class UserSettingsInformation(object):
         self._is_managed_by_scim_metadata = None
         self._is_membership_managed_by_scim = None
         self._is_membership_managed_by_scim_metadata = None
+        self._is_membership_redacted = None
+        self._is_membership_redacted_metadata = None
+        self._is_user_redacted = None
+        self._is_user_redacted_metadata = None
         self._locale = None
         self._locale_metadata = None
         self._locale_policy = None
@@ -451,6 +467,8 @@ class UserSettingsInformation(object):
         self._power_form_mode_metadata = None
         self._recipient_viewed_notification = None
         self._recipient_viewed_notification_metadata = None
+        self._redact_at_metadata = None
+        self._redact_membership_at = None
         self._seal_identifiers = None
         self._self_signed_recipient_email_document = None
         self._self_signed_recipient_email_document_metadata = None
@@ -585,6 +603,10 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('is_managed_by_scim_metadata'), kwargs.get('is_managed_by_scim_metadata', None))
         setattr(self, "_{}".format('is_membership_managed_by_scim'), kwargs.get('is_membership_managed_by_scim', None))
         setattr(self, "_{}".format('is_membership_managed_by_scim_metadata'), kwargs.get('is_membership_managed_by_scim_metadata', None))
+        setattr(self, "_{}".format('is_membership_redacted'), kwargs.get('is_membership_redacted', None))
+        setattr(self, "_{}".format('is_membership_redacted_metadata'), kwargs.get('is_membership_redacted_metadata', None))
+        setattr(self, "_{}".format('is_user_redacted'), kwargs.get('is_user_redacted', None))
+        setattr(self, "_{}".format('is_user_redacted_metadata'), kwargs.get('is_user_redacted_metadata', None))
         setattr(self, "_{}".format('locale'), kwargs.get('locale', None))
         setattr(self, "_{}".format('locale_metadata'), kwargs.get('locale_metadata', None))
         setattr(self, "_{}".format('locale_policy'), kwargs.get('locale_policy', None))
@@ -602,6 +624,8 @@ class UserSettingsInformation(object):
         setattr(self, "_{}".format('power_form_mode_metadata'), kwargs.get('power_form_mode_metadata', None))
         setattr(self, "_{}".format('recipient_viewed_notification'), kwargs.get('recipient_viewed_notification', None))
         setattr(self, "_{}".format('recipient_viewed_notification_metadata'), kwargs.get('recipient_viewed_notification_metadata', None))
+        setattr(self, "_{}".format('redact_at_metadata'), kwargs.get('redact_at_metadata', None))
+        setattr(self, "_{}".format('redact_membership_at'), kwargs.get('redact_membership_at', None))
         setattr(self, "_{}".format('seal_identifiers'), kwargs.get('seal_identifiers', None))
         setattr(self, "_{}".format('self_signed_recipient_email_document'), kwargs.get('self_signed_recipient_email_document', None))
         setattr(self, "_{}".format('self_signed_recipient_email_document_metadata'), kwargs.get('self_signed_recipient_email_document_metadata', None))
@@ -2760,6 +2784,98 @@ class UserSettingsInformation(object):
         self._is_membership_managed_by_scim_metadata = is_membership_managed_by_scim_metadata
 
     @property
+    def is_membership_redacted(self):
+        """Gets the is_membership_redacted of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_membership_redacted of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_membership_redacted
+
+    @is_membership_redacted.setter
+    def is_membership_redacted(self, is_membership_redacted):
+        """Sets the is_membership_redacted of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param is_membership_redacted: The is_membership_redacted of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._is_membership_redacted = is_membership_redacted
+
+    @property
+    def is_membership_redacted_metadata(self):
+        """Gets the is_membership_redacted_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_membership_redacted_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._is_membership_redacted_metadata
+
+    @is_membership_redacted_metadata.setter
+    def is_membership_redacted_metadata(self, is_membership_redacted_metadata):
+        """Sets the is_membership_redacted_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param is_membership_redacted_metadata: The is_membership_redacted_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._is_membership_redacted_metadata = is_membership_redacted_metadata
+
+    @property
+    def is_user_redacted(self):
+        """Gets the is_user_redacted of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_user_redacted of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_user_redacted
+
+    @is_user_redacted.setter
+    def is_user_redacted(self, is_user_redacted):
+        """Sets the is_user_redacted of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param is_user_redacted: The is_user_redacted of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._is_user_redacted = is_user_redacted
+
+    @property
+    def is_user_redacted_metadata(self):
+        """Gets the is_user_redacted_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The is_user_redacted_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._is_user_redacted_metadata
+
+    @is_user_redacted_metadata.setter
+    def is_user_redacted_metadata(self, is_user_redacted_metadata):
+        """Sets the is_user_redacted_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param is_user_redacted_metadata: The is_user_redacted_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._is_user_redacted_metadata = is_user_redacted_metadata
+
+    @property
     def locale(self):
         """Gets the locale of this UserSettingsInformation.  # noqa: E501
 
@@ -3149,6 +3265,52 @@ class UserSettingsInformation(object):
         """
 
         self._recipient_viewed_notification_metadata = recipient_viewed_notification_metadata
+
+    @property
+    def redact_at_metadata(self):
+        """Gets the redact_at_metadata of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The redact_at_metadata of this UserSettingsInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._redact_at_metadata
+
+    @redact_at_metadata.setter
+    def redact_at_metadata(self, redact_at_metadata):
+        """Sets the redact_at_metadata of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param redact_at_metadata: The redact_at_metadata of this UserSettingsInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._redact_at_metadata = redact_at_metadata
+
+    @property
+    def redact_membership_at(self):
+        """Gets the redact_membership_at of this UserSettingsInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The redact_membership_at of this UserSettingsInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._redact_membership_at
+
+    @redact_membership_at.setter
+    def redact_membership_at(self, redact_membership_at):
+        """Sets the redact_membership_at of this UserSettingsInformation.
+
+          # noqa: E501
+
+        :param redact_membership_at: The redact_membership_at of this UserSettingsInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._redact_membership_at = redact_membership_at
 
     @property
     def seal_identifiers(self):

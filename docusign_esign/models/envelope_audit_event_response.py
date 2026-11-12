@@ -33,11 +33,13 @@ class EnvelopeAuditEventResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'audit_events': 'list[EnvelopeAuditEvent]'
+        'audit_events': 'list[EnvelopeAuditEvent]',
+        'payment_events': 'list[PaymentAuditEvent]'
     }
 
     attribute_map = {
-        'audit_events': 'auditEvents'
+        'audit_events': 'auditEvents',
+        'payment_events': 'paymentEvents'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -47,9 +49,11 @@ class EnvelopeAuditEventResponse(object):
         self._configuration = _configuration
 
         self._audit_events = None
+        self._payment_events = None
         self.discriminator = None
 
         setattr(self, "_{}".format('audit_events'), kwargs.get('audit_events', None))
+        setattr(self, "_{}".format('payment_events'), kwargs.get('payment_events', None))
 
     @property
     def audit_events(self):
@@ -73,6 +77,29 @@ class EnvelopeAuditEventResponse(object):
         """
 
         self._audit_events = audit_events
+
+    @property
+    def payment_events(self):
+        """Gets the payment_events of this EnvelopeAuditEventResponse.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The payment_events of this EnvelopeAuditEventResponse.  # noqa: E501
+        :rtype: list[PaymentAuditEvent]
+        """
+        return self._payment_events
+
+    @payment_events.setter
+    def payment_events(self, payment_events):
+        """Sets the payment_events of this EnvelopeAuditEventResponse.
+
+          # noqa: E501
+
+        :param payment_events: The payment_events of this EnvelopeAuditEventResponse.  # noqa: E501
+        :type: list[PaymentAuditEvent]
+        """
+
+        self._payment_events = payment_events
 
     def to_dict(self):
         """Returns the model properties as a dict"""

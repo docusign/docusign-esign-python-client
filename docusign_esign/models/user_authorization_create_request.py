@@ -36,14 +36,18 @@ class UserAuthorizationCreateRequest(object):
         'agent_user': 'AuthorizationUser',
         'end_date': 'str',
         'permission': 'str',
-        'start_date': 'str'
+        'start_date': 'str',
+        'task_source': 'str',
+        'task_type': 'str'
     }
 
     attribute_map = {
         'agent_user': 'agentUser',
         'end_date': 'endDate',
         'permission': 'permission',
-        'start_date': 'startDate'
+        'start_date': 'startDate',
+        'task_source': 'taskSource',
+        'task_type': 'taskType'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -56,12 +60,16 @@ class UserAuthorizationCreateRequest(object):
         self._end_date = None
         self._permission = None
         self._start_date = None
+        self._task_source = None
+        self._task_type = None
         self.discriminator = None
 
         setattr(self, "_{}".format('agent_user'), kwargs.get('agent_user', None))
         setattr(self, "_{}".format('end_date'), kwargs.get('end_date', None))
         setattr(self, "_{}".format('permission'), kwargs.get('permission', None))
         setattr(self, "_{}".format('start_date'), kwargs.get('start_date', None))
+        setattr(self, "_{}".format('task_source'), kwargs.get('task_source', None))
+        setattr(self, "_{}".format('task_type'), kwargs.get('task_type', None))
 
     @property
     def agent_user(self):
@@ -154,6 +162,52 @@ class UserAuthorizationCreateRequest(object):
         """
 
         self._start_date = start_date
+
+    @property
+    def task_source(self):
+        """Gets the task_source of this UserAuthorizationCreateRequest.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The task_source of this UserAuthorizationCreateRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._task_source
+
+    @task_source.setter
+    def task_source(self, task_source):
+        """Sets the task_source of this UserAuthorizationCreateRequest.
+
+          # noqa: E501
+
+        :param task_source: The task_source of this UserAuthorizationCreateRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._task_source = task_source
+
+    @property
+    def task_type(self):
+        """Gets the task_type of this UserAuthorizationCreateRequest.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The task_type of this UserAuthorizationCreateRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._task_type
+
+    @task_type.setter
+    def task_type(self, task_type):
+        """Sets the task_type of this UserAuthorizationCreateRequest.
+
+          # noqa: E501
+
+        :param task_type: The task_type of this UserAuthorizationCreateRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._task_type = task_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v8.0.0] - eSignature API v2.1-26.3.01.02 - 2026-10-16
+### Changed
+- Added support for version v2.1-26.3.01.02 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
 ## [v8.0.0rc1] - eSignature API v2.1-26.2.00.00 - 2026-06-04
 ### Breaking Changes
 - Groups API: ListGroupUsers, ListGroupUsersAsync, and their WithHttpInfo variants now return GroupUsersResponse

@@ -33,6 +33,7 @@ class DocGenFormFields(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'doc_gen_conditional_rules': 'list[DocGenConditionalRule]',
         'doc_gen_document_status': 'str',
         'doc_gen_errors': 'list[DocGenSyntaxError]',
         'doc_gen_form_field_list': 'list[DocGenFormField]',
@@ -40,6 +41,7 @@ class DocGenFormFields(object):
     }
 
     attribute_map = {
+        'doc_gen_conditional_rules': 'docGenConditionalRules',
         'doc_gen_document_status': 'docGenDocumentStatus',
         'doc_gen_errors': 'docGenErrors',
         'doc_gen_form_field_list': 'docGenFormFieldList',
@@ -52,16 +54,41 @@ class DocGenFormFields(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._doc_gen_conditional_rules = None
         self._doc_gen_document_status = None
         self._doc_gen_errors = None
         self._doc_gen_form_field_list = None
         self._document_id = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('doc_gen_conditional_rules'), kwargs.get('doc_gen_conditional_rules', None))
         setattr(self, "_{}".format('doc_gen_document_status'), kwargs.get('doc_gen_document_status', None))
         setattr(self, "_{}".format('doc_gen_errors'), kwargs.get('doc_gen_errors', None))
         setattr(self, "_{}".format('doc_gen_form_field_list'), kwargs.get('doc_gen_form_field_list', None))
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
+
+    @property
+    def doc_gen_conditional_rules(self):
+        """Gets the doc_gen_conditional_rules of this DocGenFormFields.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The doc_gen_conditional_rules of this DocGenFormFields.  # noqa: E501
+        :rtype: list[DocGenConditionalRule]
+        """
+        return self._doc_gen_conditional_rules
+
+    @doc_gen_conditional_rules.setter
+    def doc_gen_conditional_rules(self, doc_gen_conditional_rules):
+        """Sets the doc_gen_conditional_rules of this DocGenFormFields.
+
+          # noqa: E501
+
+        :param doc_gen_conditional_rules: The doc_gen_conditional_rules of this DocGenFormFields.  # noqa: E501
+        :type: list[DocGenConditionalRule]
+        """
+
+        self._doc_gen_conditional_rules = doc_gen_conditional_rules
 
     @property
     def doc_gen_document_status(self):

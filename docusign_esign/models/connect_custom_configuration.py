@@ -69,6 +69,7 @@ class ConnectCustomConfiguration(object):
         'salesforce_api_version': 'str',
         'salesforce_authcode': 'str',
         'salesforce_call_back_url': 'str',
+        'salesforce_code_verifier': 'str',
         'salesforce_documents_as_content_files': 'str',
         'sender_override': 'str',
         'sender_selectable_items': 'list[str]',
@@ -118,6 +119,7 @@ class ConnectCustomConfiguration(object):
         'salesforce_api_version': 'salesforceApiVersion',
         'salesforce_authcode': 'salesforceAuthcode',
         'salesforce_call_back_url': 'salesforceCallBackUrl',
+        'salesforce_code_verifier': 'salesforceCodeVerifier',
         'salesforce_documents_as_content_files': 'salesforceDocumentsAsContentFiles',
         'sender_override': 'senderOverride',
         'sender_selectable_items': 'senderSelectableItems',
@@ -172,6 +174,7 @@ class ConnectCustomConfiguration(object):
         self._salesforce_api_version = None
         self._salesforce_authcode = None
         self._salesforce_call_back_url = None
+        self._salesforce_code_verifier = None
         self._salesforce_documents_as_content_files = None
         self._sender_override = None
         self._sender_selectable_items = None
@@ -220,6 +223,7 @@ class ConnectCustomConfiguration(object):
         setattr(self, "_{}".format('salesforce_api_version'), kwargs.get('salesforce_api_version', None))
         setattr(self, "_{}".format('salesforce_authcode'), kwargs.get('salesforce_authcode', None))
         setattr(self, "_{}".format('salesforce_call_back_url'), kwargs.get('salesforce_call_back_url', None))
+        setattr(self, "_{}".format('salesforce_code_verifier'), kwargs.get('salesforce_code_verifier', None))
         setattr(self, "_{}".format('salesforce_documents_as_content_files'), kwargs.get('salesforce_documents_as_content_files', None))
         setattr(self, "_{}".format('sender_override'), kwargs.get('sender_override', None))
         setattr(self, "_{}".format('sender_selectable_items'), kwargs.get('sender_selectable_items', None))
@@ -1058,6 +1062,29 @@ class ConnectCustomConfiguration(object):
         """
 
         self._salesforce_call_back_url = salesforce_call_back_url
+
+    @property
+    def salesforce_code_verifier(self):
+        """Gets the salesforce_code_verifier of this ConnectCustomConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The salesforce_code_verifier of this ConnectCustomConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._salesforce_code_verifier
+
+    @salesforce_code_verifier.setter
+    def salesforce_code_verifier(self, salesforce_code_verifier):
+        """Sets the salesforce_code_verifier of this ConnectCustomConfiguration.
+
+          # noqa: E501
+
+        :param salesforce_code_verifier: The salesforce_code_verifier of this ConnectCustomConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._salesforce_code_verifier = salesforce_code_verifier
 
     @property
     def salesforce_documents_as_content_files(self):

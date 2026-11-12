@@ -33,15 +33,21 @@ class EnvelopePurgeConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'apply_purge_policy_for_unaccounted_recipients': 'str',
         'purge_envelopes': 'str',
+        'purge_envelopes_received': 'str',
         'redact_pii': 'str',
+        'redact_pii_received': 'str',
         'remove_tabs_and_envelope_attachments': 'str',
         'retention_days': 'str'
     }
 
     attribute_map = {
+        'apply_purge_policy_for_unaccounted_recipients': 'applyPurgePolicyForUnaccountedRecipients',
         'purge_envelopes': 'purgeEnvelopes',
+        'purge_envelopes_received': 'purgeEnvelopesReceived',
         'redact_pii': 'redactPII',
+        'redact_pii_received': 'redactPIIReceived',
         'remove_tabs_and_envelope_attachments': 'removeTabsAndEnvelopeAttachments',
         'retention_days': 'retentionDays'
     }
@@ -52,16 +58,45 @@ class EnvelopePurgeConfiguration(object):
             _configuration = Configuration()
         self._configuration = _configuration
 
+        self._apply_purge_policy_for_unaccounted_recipients = None
         self._purge_envelopes = None
+        self._purge_envelopes_received = None
         self._redact_pii = None
+        self._redact_pii_received = None
         self._remove_tabs_and_envelope_attachments = None
         self._retention_days = None
         self.discriminator = None
 
+        setattr(self, "_{}".format('apply_purge_policy_for_unaccounted_recipients'), kwargs.get('apply_purge_policy_for_unaccounted_recipients', None))
         setattr(self, "_{}".format('purge_envelopes'), kwargs.get('purge_envelopes', None))
+        setattr(self, "_{}".format('purge_envelopes_received'), kwargs.get('purge_envelopes_received', None))
         setattr(self, "_{}".format('redact_pii'), kwargs.get('redact_pii', None))
+        setattr(self, "_{}".format('redact_pii_received'), kwargs.get('redact_pii_received', None))
         setattr(self, "_{}".format('remove_tabs_and_envelope_attachments'), kwargs.get('remove_tabs_and_envelope_attachments', None))
         setattr(self, "_{}".format('retention_days'), kwargs.get('retention_days', None))
+
+    @property
+    def apply_purge_policy_for_unaccounted_recipients(self):
+        """Gets the apply_purge_policy_for_unaccounted_recipients of this EnvelopePurgeConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The apply_purge_policy_for_unaccounted_recipients of this EnvelopePurgeConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._apply_purge_policy_for_unaccounted_recipients
+
+    @apply_purge_policy_for_unaccounted_recipients.setter
+    def apply_purge_policy_for_unaccounted_recipients(self, apply_purge_policy_for_unaccounted_recipients):
+        """Sets the apply_purge_policy_for_unaccounted_recipients of this EnvelopePurgeConfiguration.
+
+          # noqa: E501
+
+        :param apply_purge_policy_for_unaccounted_recipients: The apply_purge_policy_for_unaccounted_recipients of this EnvelopePurgeConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._apply_purge_policy_for_unaccounted_recipients = apply_purge_policy_for_unaccounted_recipients
 
     @property
     def purge_envelopes(self):
@@ -87,6 +122,29 @@ class EnvelopePurgeConfiguration(object):
         self._purge_envelopes = purge_envelopes
 
     @property
+    def purge_envelopes_received(self):
+        """Gets the purge_envelopes_received of this EnvelopePurgeConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The purge_envelopes_received of this EnvelopePurgeConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._purge_envelopes_received
+
+    @purge_envelopes_received.setter
+    def purge_envelopes_received(self, purge_envelopes_received):
+        """Sets the purge_envelopes_received of this EnvelopePurgeConfiguration.
+
+          # noqa: E501
+
+        :param purge_envelopes_received: The purge_envelopes_received of this EnvelopePurgeConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._purge_envelopes_received = purge_envelopes_received
+
+    @property
     def redact_pii(self):
         """Gets the redact_pii of this EnvelopePurgeConfiguration.  # noqa: E501
 
@@ -108,6 +166,29 @@ class EnvelopePurgeConfiguration(object):
         """
 
         self._redact_pii = redact_pii
+
+    @property
+    def redact_pii_received(self):
+        """Gets the redact_pii_received of this EnvelopePurgeConfiguration.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The redact_pii_received of this EnvelopePurgeConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._redact_pii_received
+
+    @redact_pii_received.setter
+    def redact_pii_received(self, redact_pii_received):
+        """Sets the redact_pii_received of this EnvelopePurgeConfiguration.
+
+          # noqa: E501
+
+        :param redact_pii_received: The redact_pii_received of this EnvelopePurgeConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._redact_pii_received = redact_pii_received
 
     @property
     def remove_tabs_and_envelope_attachments(self):

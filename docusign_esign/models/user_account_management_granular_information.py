@@ -59,6 +59,8 @@ class UserAccountManagementGranularInformation(object):
         'can_manage_stamps_metadata': 'SettingsMetadata',
         'can_manage_users': 'str',
         'can_manage_users_metadata': 'SettingsMetadata',
+        'can_view_only_account_admin_pages': 'str',
+        'can_view_only_account_admin_pages_metadata': 'SettingsMetadata',
         'can_view_users': 'str'
     }
 
@@ -89,6 +91,8 @@ class UserAccountManagementGranularInformation(object):
         'can_manage_stamps_metadata': 'canManageStampsMetadata',
         'can_manage_users': 'canManageUsers',
         'can_manage_users_metadata': 'canManageUsersMetadata',
+        'can_view_only_account_admin_pages': 'canViewOnlyAccountAdminPages',
+        'can_view_only_account_admin_pages_metadata': 'canViewOnlyAccountAdminPagesMetadata',
         'can_view_users': 'canViewUsers'
     }
 
@@ -124,6 +128,8 @@ class UserAccountManagementGranularInformation(object):
         self._can_manage_stamps_metadata = None
         self._can_manage_users = None
         self._can_manage_users_metadata = None
+        self._can_view_only_account_admin_pages = None
+        self._can_view_only_account_admin_pages_metadata = None
         self._can_view_users = None
         self.discriminator = None
 
@@ -153,6 +159,8 @@ class UserAccountManagementGranularInformation(object):
         setattr(self, "_{}".format('can_manage_stamps_metadata'), kwargs.get('can_manage_stamps_metadata', None))
         setattr(self, "_{}".format('can_manage_users'), kwargs.get('can_manage_users', None))
         setattr(self, "_{}".format('can_manage_users_metadata'), kwargs.get('can_manage_users_metadata', None))
+        setattr(self, "_{}".format('can_view_only_account_admin_pages'), kwargs.get('can_view_only_account_admin_pages', None))
+        setattr(self, "_{}".format('can_view_only_account_admin_pages_metadata'), kwargs.get('can_view_only_account_admin_pages_metadata', None))
         setattr(self, "_{}".format('can_view_users'), kwargs.get('can_view_users', None))
 
     @property
@@ -752,6 +760,52 @@ class UserAccountManagementGranularInformation(object):
         """
 
         self._can_manage_users_metadata = can_manage_users_metadata
+
+    @property
+    def can_view_only_account_admin_pages(self):
+        """Gets the can_view_only_account_admin_pages of this UserAccountManagementGranularInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_view_only_account_admin_pages of this UserAccountManagementGranularInformation.  # noqa: E501
+        :rtype: str
+        """
+        return self._can_view_only_account_admin_pages
+
+    @can_view_only_account_admin_pages.setter
+    def can_view_only_account_admin_pages(self, can_view_only_account_admin_pages):
+        """Sets the can_view_only_account_admin_pages of this UserAccountManagementGranularInformation.
+
+          # noqa: E501
+
+        :param can_view_only_account_admin_pages: The can_view_only_account_admin_pages of this UserAccountManagementGranularInformation.  # noqa: E501
+        :type: str
+        """
+
+        self._can_view_only_account_admin_pages = can_view_only_account_admin_pages
+
+    @property
+    def can_view_only_account_admin_pages_metadata(self):
+        """Gets the can_view_only_account_admin_pages_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The can_view_only_account_admin_pages_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+        :rtype: SettingsMetadata
+        """
+        return self._can_view_only_account_admin_pages_metadata
+
+    @can_view_only_account_admin_pages_metadata.setter
+    def can_view_only_account_admin_pages_metadata(self, can_view_only_account_admin_pages_metadata):
+        """Sets the can_view_only_account_admin_pages_metadata of this UserAccountManagementGranularInformation.
+
+          # noqa: E501
+
+        :param can_view_only_account_admin_pages_metadata: The can_view_only_account_admin_pages_metadata of this UserAccountManagementGranularInformation.  # noqa: E501
+        :type: SettingsMetadata
+        """
+
+        self._can_view_only_account_admin_pages_metadata = can_view_only_account_admin_pages_metadata
 
     @property
     def can_view_users(self):

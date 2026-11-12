@@ -17,6 +17,7 @@ from .email_archive_api import EmailArchiveApi
 from .envelopes_api import EnvelopesApi
 from .folders_api import FoldersApi
 from .groups_api import GroupsApi
+from .insights_api import InsightsApi
 from .notary_api import NotaryApi
 from .organizations_api import OrganizationsApi
 from .power_forms_api import PowerFormsApi

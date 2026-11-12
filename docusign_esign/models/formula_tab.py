@@ -74,6 +74,7 @@ class FormulaTab(object):
         'document_id': 'str',
         'document_id_metadata': 'PropertyMetadata',
         'error_details': 'ErrorDetails',
+        'extend_payment_configuration': 'ExtendPaymentConfiguration',
         'extension_data': 'ExtensionData',
         'font': 'str',
         'font_color': 'str',
@@ -209,6 +210,7 @@ class FormulaTab(object):
         'document_id': 'documentId',
         'document_id_metadata': 'documentIdMetadata',
         'error_details': 'errorDetails',
+        'extend_payment_configuration': 'extendPaymentConfiguration',
         'extension_data': 'extensionData',
         'font': 'font',
         'font_color': 'fontColor',
@@ -349,6 +351,7 @@ class FormulaTab(object):
         self._document_id = None
         self._document_id_metadata = None
         self._error_details = None
+        self._extend_payment_configuration = None
         self._extension_data = None
         self._font = None
         self._font_color = None
@@ -483,6 +486,7 @@ class FormulaTab(object):
         setattr(self, "_{}".format('document_id'), kwargs.get('document_id', None))
         setattr(self, "_{}".format('document_id_metadata'), kwargs.get('document_id_metadata', None))
         setattr(self, "_{}".format('error_details'), kwargs.get('error_details', None))
+        setattr(self, "_{}".format('extend_payment_configuration'), kwargs.get('extend_payment_configuration', None))
         setattr(self, "_{}".format('extension_data'), kwargs.get('extension_data', None))
         setattr(self, "_{}".format('font'), kwargs.get('font', None))
         setattr(self, "_{}".format('font_color'), kwargs.get('font_color', None))
@@ -1517,6 +1521,29 @@ class FormulaTab(object):
         """
 
         self._error_details = error_details
+
+    @property
+    def extend_payment_configuration(self):
+        """Gets the extend_payment_configuration of this FormulaTab.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The extend_payment_configuration of this FormulaTab.  # noqa: E501
+        :rtype: ExtendPaymentConfiguration
+        """
+        return self._extend_payment_configuration
+
+    @extend_payment_configuration.setter
+    def extend_payment_configuration(self, extend_payment_configuration):
+        """Sets the extend_payment_configuration of this FormulaTab.
+
+          # noqa: E501
+
+        :param extend_payment_configuration: The extend_payment_configuration of this FormulaTab.  # noqa: E501
+        :type: ExtendPaymentConfiguration
+        """
+
+        self._extend_payment_configuration = extend_payment_configuration
 
     @property
     def extension_data(self):

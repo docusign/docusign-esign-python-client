@@ -33,11 +33,13 @@ class UserAuthorizationsRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'authorizations': 'list[UserAuthorizationCreateRequestWithId]'
+        'authorizations': 'list[UserAuthorizationCreateRequestWithId]',
+        'send_notification': 'str'
     }
 
     attribute_map = {
-        'authorizations': 'authorizations'
+        'authorizations': 'authorizations',
+        'send_notification': 'sendNotification'
     }
 
     def __init__(self, _configuration=None, **kwargs):  # noqa: E501
@@ -47,9 +49,11 @@ class UserAuthorizationsRequest(object):
         self._configuration = _configuration
 
         self._authorizations = None
+        self._send_notification = None
         self.discriminator = None
 
         setattr(self, "_{}".format('authorizations'), kwargs.get('authorizations', None))
+        setattr(self, "_{}".format('send_notification'), kwargs.get('send_notification', None))
 
     @property
     def authorizations(self):
@@ -73,6 +77,29 @@ class UserAuthorizationsRequest(object):
         """
 
         self._authorizations = authorizations
+
+    @property
+    def send_notification(self):
+        """Gets the send_notification of this UserAuthorizationsRequest.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The send_notification of this UserAuthorizationsRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._send_notification
+
+    @send_notification.setter
+    def send_notification(self, send_notification):
+        """Sets the send_notification of this UserAuthorizationsRequest.
+
+          # noqa: E501
+
+        :param send_notification: The send_notification of this UserAuthorizationsRequest.  # noqa: E501
+        :type: str
+        """
+
+        self._send_notification = send_notification
 
     def to_dict(self):
         """Returns the model properties as a dict"""
