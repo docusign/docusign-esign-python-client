@@ -27,7 +27,7 @@ from time import time
 
 # python 2 and python 3 compatibility library
 from six import PY3, integer_types, iteritems, text_type
-from six.moves.urllib.parse import quote
+from six.moves.urllib.parse import quote, urlencode
 
 from docusign_esign import client
 from docusign_esign import models
@@ -812,10 +812,15 @@ class ApiClient(object):
         if not self.oauth_host_name:
             self.oauth_host_name = self.get_oauth_host_name()
         scopes = " ".join(scopes) if scopes else ""
-        uri = "https://{}/oauth/auth?response_type={}&scope={}&client_id={}&redirect_uri={}"
+        parameters = [
+            ("response_type", response_type),
+            ("scope", scopes),
+            ("client_id", client_id),
+            ("redirect_uri", redirect_uri),
+        ]
         if state:
-            uri += "&state={}"
-        return uri.format(self.oauth_host_name, response_type, quote(scopes), client_id, redirect_uri, state)
+            parameters.append(("state", state))
+        return "https://{}/oauth/auth?{}".format(self.oauth_host_name, urlencode(parameters))
 
     def get_oauth_host_name(self):
         """
